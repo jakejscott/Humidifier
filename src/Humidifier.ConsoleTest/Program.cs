@@ -155,7 +155,7 @@ namespace Humidifier.ConsoleTest
             stack.Add("Ec2Instance", new EC2.Instance
             {
                 ImageId = Fn.FindInMap("RegionMap", Fn.Ref("AWS::Region"), "64"),
-                InstanceType = "m1.small",
+                InstanceType = Fn.If("CreateProdResources", "t2.micro", "t2.large"),
                 UserData = Fn.Base64(
                     @"#!/bin/bash -e
                     wget https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chef_11.6.2-1.ubuntu.12.04_amd64.deb
@@ -291,7 +291,6 @@ namespace Humidifier.ConsoleTest
             var fnSplit = Fn.Split("|", "a|b|c");
             var fnSub = Fn.Sub("${AWS::StackName}-${AWS::Region}-bucket");
             var fnSelectSplit = Fn.Select("1", Fn.Split("|", "a|b|c"));
-
 
             // Because JSON doesn't allow newlines, there's a known hack where you can join multiple lines together using Fn::Join
             var fnBase64 = Fn.Base64(Fn.Join("",

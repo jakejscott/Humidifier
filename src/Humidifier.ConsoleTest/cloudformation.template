@@ -91,7 +91,13 @@
             "64"
           ]
         },
-        "InstanceType": "m1.small",
+        "InstanceType": {
+          "Fn::If": [
+            "CreateProdResources",
+            "t2.micro",
+            "t2.large"
+          ]
+        },
         "UserData": {
           "Fn::Base64": "#!/bin/bash -e\r\nwget https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chef_11.6.2-1.ubuntu.12.04_amd64.deb\r\ndpkg -i chef_11.6.2-1.ubuntu.12.04_amd64.deb\r\n"
         }
