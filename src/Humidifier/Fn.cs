@@ -8,7 +8,7 @@ namespace Humidifier
         public static FnBase64 Base64(dynamic valueToEncode) => new FnBase64(valueToEncode);
         public static FnJoin Join(string seperator, params dynamic[] parameters) => new FnJoin(seperator, parameters);
         public static FnRef Ref(string reference) => new FnRef(reference);
-        public static FnGetAtt GetAttr(string logicalNameOfResource, string attributeNmae) => new FnGetAtt(logicalNameOfResource, attributeNmae);
+        public static FnGetAtt GetAtt(string logicalNameOfResource, string attributeNmae) => new FnGetAtt(logicalNameOfResource, attributeNmae);
         public static FnSub Sub(string input, Dictionary<string, dynamic> variables = null) => new FnSub(input, variables);
         public static FnImportValue ImportValue(dynamic sharedValueToImport) => new FnImportValue(sharedValueToImport);
         public static FnSplit Split(string delimiter, dynamic sourceString) => new FnSplit(delimiter, sourceString);

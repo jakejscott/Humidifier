@@ -31,6 +31,9 @@ namespace Humidifier.Json
             settings.Converters.Add(new FnGetAZsConverter());
             settings.Converters.Add(new FnFindInMapConverter());
             settings.Converters.Add(new FnBase64Converter());
+
+
+            settings.Converters.Add(new ConditionConverter());
         }
 
         public string Serialize(Stack stack)
@@ -48,22 +51,32 @@ namespace Humidifier.Json
                 Transform = stack.Transform,
                 Parameters = stack.Parameters,
                 Mappings = stack.Mappings,
-                Outputs = stack.Outputs
+                Outputs = stack.Outputs,
+                Conditions = stack.Conditions
             };
 
             if (stack.Resources != null && stack.Resources.Any())
             {
                 stackJson.Resources = new Dictionary<string, ResourceJson>();
 
-                foreach (var kvp in stack.Resources)
+                foreach (KeyValuePair<string, Resource> kvp in stack.Resources)
                 {
+                    var resource = kvp.Value;
+
                     var typeInfo = kvp.Value.GetType();
                     var awsTypeName = typeInfo.Namespace.Replace("Humidifier.", "AWS::") + "::" + typeInfo.Name;
+
+                    string condition = null;
+                    if (stack.ResourceConditions.ContainsKey(kvp.Key))
+                    {
+                        condition = stack.ResourceConditions[kvp.Key];
+                    }
 
                     var resourceJson = new ResourceJson
                     {
                         Type = awsTypeName,
-                        Properties = kvp.Value
+                        Condition = condition,
+                        Properties = resource
                     };
 
                     stackJson.Resources.Add(kvp.Key, resourceJson);
@@ -82,11 +95,13 @@ namespace Humidifier.Json
             public Dictionary<string, ResourceJson> Resources { get; set; }
             public Dictionary<string, Output> Outputs { get; set; }
             public Dictionary<string, Mapping> Mappings { get; set; }
+            public Dictionary<string, Condition> Conditions { get; set; }
         }
 
         private class ResourceJson
         {
             public string Type { get; set; }
+            public string Condition { get; set; }
             public Resource Properties { get; set; }
         }
 

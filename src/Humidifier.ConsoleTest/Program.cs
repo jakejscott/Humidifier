@@ -1,14 +1,17 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using Humidifier.Json;
 using Humidifier.Lambda.FunctionPropertyTypes;
 using Humidifier.SSM.AssociationPropertyTypes;
+using Newtonsoft.Json.Linq;
+using Environment = Humidifier.Lambda.FunctionPropertyTypes.Environment;
 
 namespace Humidifier.ConsoleTest
 {
     public static class Program
     {
-        // TODO: AutomationServiceRole is a IAM.Role so we should be able to say: Fn.GetAttr("AutomationServiceRole", IAM.Role.Attributes.Arn)
+        // TODO: AutomationServiceRole is a IAM.Role so we should be able to say: Fn.GetAtt("AutomationServiceRole", IAM.Role.Attributes.Arn)
 
         public static void Main(string[] args)
         {
@@ -38,16 +41,14 @@ namespace Humidifier.ConsoleTest
             // Mappings
             //
 
-            var regionMap = new Mapping
+            stack.Add("RegionMap", new Mapping
             {
                 ["us-east-1"] = new Dictionary<string, string> { ["32"] = "ami-6411e20d", ["64"] = "ami-7a11e213" },
                 ["us-west-1"] = new Dictionary<string, string> { ["32"] = "ami-c9c7978c", ["64"] = "ami-cfc7978a" },
                 ["ue-west-1"] = new Dictionary<string, string> { ["32"] = "ami-37c2f643", ["64"] = "ami-31c2f645" },
                 ["ap-southeast-1"] = new Dictionary<string, string> { ["32"] = "ami-66f28c34", ["64"] = "ami-60f28c32" },
                 ["ap-northeast-1"] = new Dictionary<string, string> { ["32"] = "ami-9c03a89d", ["64"] = "ami-a003a8a1" }
-            };
-
-            stack.Mappings.Add("RegionMap", regionMap);
+            });
 
             //
             // Parameter
@@ -86,6 +87,12 @@ namespace Humidifier.ConsoleTest
             });
 
             //
+            // Conditions
+            //
+
+            stack.Add("CreateProdResources", new Condition(JObject.Parse("{'Fn::Equals' : [{'Ref' : 'Environment'}, 'prod']}")));
+
+            //
             // Outputs
             //
             stack.Add("DeploymentBucket", new Output
@@ -96,19 +103,19 @@ namespace Humidifier.ConsoleTest
                 Description = Fn.Sub("BucketName: ${BucketName}, DomainName: ${DomainName}", new Dictionary<string, dynamic>
                 {
                     ["BucketName"] = Fn.Ref("DeploymentBucket"),
-                    ["DomainName"] = Fn.GetAttr("DeploymentBucket", "DomainName")
+                    ["DomainName"] = Fn.GetAtt("DeploymentBucket", "DomainName")
                 })
             });
 
             stack.Add("AutomationServiceRole", new Output
             {
-                Value = Fn.GetAttr("AutomationServiceRole", "Arn"),
+                Value = Fn.GetAtt("AutomationServiceRole", "Arn"),
                 Export = new { Name = Fn.Sub("${AWS::StackName}-AutomationServiceRole") }
             });
 
             stack.Add("KmsKeyArn", new Output
             {
-                Value = Fn.GetAttr("KmsKey", "Arn"),
+                Value = Fn.GetAtt("KmsKey", "Arn"),
                 Export = new { Name = Fn.Sub("${AWS::StackName}-KmsKeyArn") }
             });
 
@@ -122,6 +129,14 @@ namespace Humidifier.ConsoleTest
             //
             // Resources
             //
+
+            stack.Add("Volume", new EC2.Volume
+            {
+                Size = 100,
+                AvailabilityZone = Fn.GetAtt("Ec2Instance", "AvailabilityZone")
+            },
+            condition: "CreateProdResources"); // Condition example
+
 
             stack.Add("VPC", new EC2.VPC
             {
@@ -142,7 +157,7 @@ namespace Humidifier.ConsoleTest
                 AvailabilityZone = Fn.Select("0", Fn.GetAZs(Fn.Ref("AWS::Region")))
             });
 
-            stack.Add("Ec2InstanceV1", new EC2.Instance
+            stack.Add("Ec2Instance", new EC2.Instance
             {
                 ImageId = Fn.FindInMap("RegionMap", Fn.Ref("AWS::Region"), "64"),
                 InstanceType = "m1.small",
@@ -151,17 +166,6 @@ namespace Humidifier.ConsoleTest
                     wget https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chef_11.6.2-1.ubuntu.12.04_amd64.deb
                     dpkg -i chef_11.6.2-1.ubuntu.12.04_amd64.deb"
                 )
-            });
-
-            stack.Add("Ec2InstanceV2", new EC2.Instance
-            {
-                ImageId = Fn.FindInMap("RegionMap", Fn.Ref("AWS::Region"), "64"),
-                InstanceType = "m1.small",
-                UserData = Fn.Base64(Fn.Join("",
-                    "#!/bin/bash -e\n",
-                    "wget https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chef_11.6.2-1.ubuntu.12.04_amd64.deb\n",
-                    "dpkg -i chef_11.6.2-1.ubuntu.12.04_amd64.deb\n"
-                ))
             });
 
             stack.Add("AutomationServiceRole", new IAM.Role
@@ -198,7 +202,7 @@ namespace Humidifier.ConsoleTest
                             Effect = "Allow",
                             Principal = new
                             {
-                               AWS = Fn.GetAttr("AutomationServiceRole", "Arn")
+                               AWS = Fn.GetAtt("AutomationServiceRole", "Arn")
                             },
                             Action = "s3:*",
                             Resource = new[]
@@ -283,7 +287,7 @@ namespace Humidifier.ConsoleTest
         private static void FnExamples()
         {
             var fnFindInMap = Fn.FindInMap("RegionMap", Fn.Ref("AWS::Region"), "64");
-            var fnGetAtt = Fn.GetAttr("MyElb", "DNSName");
+            var fnGetAtt = Fn.GetAtt("MyElb", "DNSName");
             var fnGetAZs = Fn.GetAZs("us-east-2");
             var fnImportValue = Fn.ImportValue(Fn.Sub("${NetworkStackNameParameter}-SubnetID"));
             var fnJoin = Fn.Join("", "arn:aws:s3:::", Fn.Ref("DeployBucket"), "/*");

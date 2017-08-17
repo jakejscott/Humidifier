@@ -9,13 +9,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Humidifier.CodeGen", "Humid
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Humidifier.ConsoleTest", "Humidifier.ConsoleTest\Humidifier.ConsoleTest.csproj", "{6262AC22-3F5B-4A27-B47C-1FC29AD99ECD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Humidifier.Json", "Humidifier.Json\Humidifier.Json.csproj", "{174C333D-ED8B-46F4-9923-FADE60A16B3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Humidifier.Json", "Humidifier.Json\Humidifier.Json.csproj", "{174C333D-ED8B-46F4-9923-FADE60A16B3A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{09E80980-4CE4-458C-BBD1-6E5BED65F15E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{E1291986-6679-4F59-A21C-110CA8499D39}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Humidifier.Tests", "Humidifier.Tests\Humidifier.Tests.csproj", "{77BFDEB6-505D-4255-89A6-09AA2F1D2BA5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C48B0A1F-80D3-48E4-BFE3-04D1914A6B84}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
