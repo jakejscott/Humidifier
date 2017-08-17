@@ -49,6 +49,7 @@ namespace Humidifier.Json
             {
                 AWSTemplateFormatVersion = stack.AWSTemplateFormatVersion,
                 Transform = stack.Transform,
+                Description = stack.Description,
                 Parameters = stack.Parameters,
                 Mappings = stack.Mappings,
                 Outputs = stack.Outputs,
@@ -89,6 +90,7 @@ namespace Humidifier.Json
         private class StackJson
         {
             public string AWSTemplateFormatVersion { get; set; }
+            public string Description { get; set; }
             public string Transform { get; set; }
 
             public Dictionary<string, Parameter> Parameters { get; set; }

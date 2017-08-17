@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Humidifier
+﻿namespace Humidifier
 {
     public class Output
     {
