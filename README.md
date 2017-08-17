@@ -13,8 +13,6 @@ Stacks are represented by the Humidifier.Stack class. Resources are represented 
 using System.Collections.Generic;
 using System.IO;
 using Humidifier.Json;
-using Humidifier.Lambda.FunctionPropertyTypes;
-using Humidifier.SSM.AssociationPropertyTypes;
 
 namespace Humidifier.ConsoleTest
 {
@@ -37,25 +35,6 @@ namespace Humidifier.ConsoleTest
                 AWSTemplateFormatVersion = "2010-09-09",
                 Description = "Description"
             };
-
-            //
-            // Mappings
-            //
-
-            var regionMap = new Mapping
-            {
-                ["us-east-1"] = new Dictionary<string, string> { ["32"] = "ami-6411e20d", ["64"] = "ami-7a11e213" },
-                ["us-west-1"] = new Dictionary<string, string> { ["32"] = "ami-c9c7978c", ["64"] = "ami-cfc7978a" },
-                ["ue-west-1"] = new Dictionary<string, string> { ["32"] = "ami-37c2f643", ["64"] = "ami-31c2f645" },
-                ["ap-southeast-1"] = new Dictionary<string, string> { ["32"] = "ami-66f28c34", ["64"] = "ami-60f28c32" },
-                ["ap-northeast-1"] = new Dictionary<string, string> { ["32"] = "ami-9c03a89d", ["64"] = "ami-a003a8a1" }
-            };
-
-            stack.Mappings.Add("RegionMap", regionMap);
-
-            //
-            // Parameters
-            //
 
             stack.Add("Environment", new Parameter
             {
@@ -82,50 +61,6 @@ namespace Humidifier.ConsoleTest
                 Type = "String",
                 MinLength = 3
             });
-
-            stack.Add("SubnetIds", new Parameter
-            {
-                Type = "String",
-                MinLength = 3
-            });
-
-            //
-            // Outputs
-            //
-
-            stack.Add("DeploymentBucket", new Output
-            {
-                Value = Fn.Ref("DeploymentBucket"),
-                Export = new { Name = Fn.Sub("${AWS::StackName}-DeploymentBucket") },
-
-                Description = Fn.Sub("BucketName: ${BucketName}, DomainName: ${DomainName}", new Dictionary<string, dynamic>
-                {
-                    ["BucketName"] = Fn.Ref("DeploymentBucket"),
-                    ["DomainName"] = Fn.GetAttr("DeploymentBucket", "DomainName")
-                })
-            });
-
-            stack.Add("AutomationServiceRole", new Output
-            {
-                Value = Fn.GetAttr("AutomationServiceRole", "Arn"),
-                Export = new { Name = Fn.Sub("${AWS::StackName}-AutomationServiceRole") }
-            });
-
-            stack.Add("KmsKeyArn", new Output
-            {
-                Value = Fn.GetAttr("KmsKey", "Arn"),
-                Export = new { Name = Fn.Sub("${AWS::StackName}-KmsKeyArn") }
-            });
-
-            stack.Add("MonitoringSnsTopicArn", new Output
-            {
-                Value = Fn.Ref("MonitoringSnsTopic"),
-                Export = new { Name = Fn.Sub("${AWS::StackName}-MonitoringSnsTopicArn") }
-            });
-
-            //
-            // Resources
-            //
 
             stack.Add("VPC", new EC2.VPC
             {
@@ -173,11 +108,7 @@ namespace Humidifier.ConsoleTest
                 }
             });
 
-            stack.Add("DeploymentBucket", new S3.Bucket
-            {
-                BucketName = Fn.Ref("AWS::StackName")
-            });
-
+            stack.Add("DeploymentBucket", new S3.Bucket { BucketName = Fn.Ref("AWS::StackName") });
             stack.Add("DeploymentBucketPolicy", new S3.BucketPolicy
             {
                 Bucket = Fn.Ref("DeploymentBucket"),
@@ -231,7 +162,7 @@ namespace Humidifier.ConsoleTest
                 DisplayName = Fn.Ref("AWS::StackName"),
                 Subscription = new List<SNS.Subscription>
                 {
-                    new SNS.Subscription {Endpoint = "team@example.com", Protocol = "email"}
+                    new SNS.Subscription { Endpoint = "team@example.com", Protocol = "email" }
                 }
             });
 
@@ -270,6 +201,17 @@ namespace Humidifier.ConsoleTest
                 }
             });
 
+            var regionMap = new Mapping
+            {
+                ["us-east-1"] = new Dictionary<string, string> { ["32"] = "ami-6411e20d", ["64"] = "ami-7a11e213" },
+                ["us-west-1"] = new Dictionary<string, string> { ["32"] = "ami-c9c7978c", ["64"] = "ami-cfc7978a" },
+                ["ue-west-1"] = new Dictionary<string, string> { ["32"] = "ami-37c2f643", ["64"] = "ami-31c2f645" },
+                ["ap-southeast-1"] = new Dictionary<string, string> { ["32"] = "ami-66f28c34", ["64"] = "ami-60f28c32" },
+                ["ap-northeast-1"] = new Dictionary<string, string> { ["32"] = "ami-9c03a89d", ["64"] = "ami-a003a8a1" }
+            };
+
+            stack.Mappings.Add("RegionMap", regionMap);
+
             return stack;
         }
     }
@@ -279,27 +221,49 @@ namespace Humidifier.ConsoleTest
 
 ### Functions
 
-````csharp
+You can use CFN intrinsic functions and references using Fn.[name]. Those will build appropriate structures that know how to be dumped to CFN syntax appropriately.
+
+```csharp
 Fn.FindInMap("RegionMap", Fn.Ref("AWS::Region"), "64");
+```
 
+```csharp
 Fn.GetAttr("MyElb", "DNSName");
+```
 
+```csharp
 Fn.GetAZs("us-east-2");
+```
 
+```csharp
 Fn.ImportValue(Fn.Sub("${NetworkStackNameParameter}-SubnetID"));
+```
 
+```csharp
 Fn.Join("", "arn:aws:s3:::", Fn.Ref("DeployBucket"), "/*");
+```
 
+```csharp
 Fn.Ref("BucketName");
+```
 
+```csharp
 Fn.Select("1", new[] { "a", "b", "c" });
+```
 
+```csharp
 Fn.Split("|", "a|b|c");
+```
 
+```csharp
 Fn.Sub("${AWS::StackName}-${AWS::Region}-bucket");
+```
 
+```csharp
 Fn.Select("1", Fn.Split("|", "a|b|c"));
+```
 
+```csharp
 // Because JSON doesn't allow newlines, there's a known hack where you can join multiple lines together using Fn::Join
 var fnBase64 = Fn.Base64(Fn.Join("",
     "#!/bin/bash -e\n",
@@ -316,4 +280,3 @@ var altBase64 = Fn.Base64(
     dpkg -i chef_11.6.2-1.ubuntu.12.04_amd64.deb"
 );
 ````
-
