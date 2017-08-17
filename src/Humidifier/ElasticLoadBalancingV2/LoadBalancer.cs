@@ -5,6 +5,15 @@ namespace Humidifier.ElasticLoadBalancingV2
 
     public class LoadBalancer : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string CanonicalHostedZoneID =  "CanonicalHostedZoneID" ;
+            public static string DNSName =  "DNSName" ;
+            public static string LoadBalancerFullName =  "LoadBalancerFullName" ;
+            public static string LoadBalancerName =  "LoadBalancerName" ;
+            public static string SecurityGroups =  "SecurityGroups" ;
+        }
+
         /// <summary>
         /// IpAddressType
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-ipaddresstype

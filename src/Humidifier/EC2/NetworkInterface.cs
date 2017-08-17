@@ -5,6 +5,12 @@ namespace Humidifier.EC2
 
     public class NetworkInterface : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string PrimaryPrivateIpAddress =  "PrimaryPrivateIpAddress" ;
+            public static string SecondaryPrivateIpAddresses =  "SecondaryPrivateIpAddresses" ;
+        }
+
         /// <summary>
         /// Description
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html#cfn-awsec2networkinterface-description

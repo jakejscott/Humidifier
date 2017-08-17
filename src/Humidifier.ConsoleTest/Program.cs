@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using Humidifier.Json;
 using Humidifier.Lambda.FunctionPropertyTypes;
-using Humidifier.SSM.AssociationPropertyTypes;
 using Newtonsoft.Json.Linq;
-using Environment = Humidifier.Lambda.FunctionPropertyTypes.Environment;
 
 namespace Humidifier.ConsoleTest
 {
     public static class Program
     {
-        // TODO: AutomationServiceRole is a IAM.Role so we should be able to say: Fn.GetAtt("AutomationServiceRole", IAM.Role.Attributes.Arn)
-
         public static void Main(string[] args)
         {
             Stack stack = BuildStack();
@@ -103,19 +98,19 @@ namespace Humidifier.ConsoleTest
                 Description = Fn.Sub("BucketName: ${BucketName}, DomainName: ${DomainName}", new Dictionary<string, dynamic>
                 {
                     ["BucketName"] = Fn.Ref("DeploymentBucket"),
-                    ["DomainName"] = Fn.GetAtt("DeploymentBucket", "DomainName")
+                    ["DomainName"] = Fn.GetAtt("DeploymentBucket", S3.Bucket.Attributes.DomainName)
                 })
             });
 
             stack.Add("AutomationServiceRole", new Output
             {
-                Value = Fn.GetAtt("AutomationServiceRole", "Arn"),
+                Value = Fn.GetAtt("AutomationServiceRole", IAM.Role.Attributes.Arn),
                 Export = new { Name = Fn.Sub("${AWS::StackName}-AutomationServiceRole") }
             });
 
             stack.Add("KmsKeyArn", new Output
             {
-                Value = Fn.GetAtt("KmsKey", "Arn"),
+                Value = Fn.GetAtt("KmsKey", KMS.Key.Attributes.Arn),
                 Export = new { Name = Fn.Sub("${AWS::StackName}-KmsKeyArn") }
             });
 
@@ -133,7 +128,7 @@ namespace Humidifier.ConsoleTest
             stack.Add("Volume", new EC2.Volume
             {
                 Size = 100,
-                AvailabilityZone = Fn.GetAtt("Ec2Instance", "AvailabilityZone")
+                AvailabilityZone = Fn.GetAtt("Ec2Instance", EC2.Instance.Attributes.AvailabilityZone)
             },
             condition: "CreateProdResources"); // Condition example
 
@@ -177,7 +172,7 @@ namespace Humidifier.ConsoleTest
                         new Statement
                         {
                             Effect = "Allow",
-                            Principal = new {Service = "cloudformation.amazonaws.com"},
+                            Principal = new { Service = "cloudformation.amazonaws.com" },
                             Action = "sts:AssumeRole"
                         }
                     }
@@ -202,7 +197,7 @@ namespace Humidifier.ConsoleTest
                             Effect = "Allow",
                             Principal = new
                             {
-                               AWS = Fn.GetAtt("AutomationServiceRole", "Arn")
+                               AWS = Fn.GetAtt("AutomationServiceRole", IAM.Role.Attributes.Arn)
                             },
                             Action = "s3:*",
                             Resource = new[]
@@ -242,7 +237,7 @@ namespace Humidifier.ConsoleTest
                 DisplayName = Fn.Ref("AWS::StackName"),
                 Subscription = new List<SNS.Subscription>
                 {
-                    new SNS.Subscription {Endpoint = "team@example.com", Protocol = "email"}
+                    new SNS.Subscription { Endpoint = "team@example.com", Protocol = "email" }
                 }
             });
 
@@ -287,7 +282,7 @@ namespace Humidifier.ConsoleTest
         private static void FnExamples()
         {
             var fnFindInMap = Fn.FindInMap("RegionMap", Fn.Ref("AWS::Region"), "64");
-            var fnGetAtt = Fn.GetAtt("MyElb", "DNSName");
+            var fnGetAtt = Fn.GetAtt("MyElb", ElasticLoadBalancing.LoadBalancer.Attributes.DNSName);
             var fnGetAZs = Fn.GetAZs("us-east-2");
             var fnImportValue = Fn.ImportValue(Fn.Sub("${NetworkStackNameParameter}-SubnetID"));
             var fnJoin = Fn.Join("", "arn:aws:s3:::", Fn.Ref("DeployBucket"), "/*");

@@ -5,6 +5,13 @@ namespace Humidifier.Cognito
 
     public class UserPool : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string ProviderName =  "ProviderName" ;
+            public static string ProviderURL =  "ProviderURL" ;
+            public static string Arn =  "Arn" ;
+        }
+
         /// <summary>
         /// UserPoolTags
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-userpooltags

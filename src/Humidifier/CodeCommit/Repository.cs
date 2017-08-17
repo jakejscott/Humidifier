@@ -5,6 +5,14 @@ namespace Humidifier.CodeCommit
 
     public class Repository : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string CloneUrlHttp =  "CloneUrlHttp" ;
+            public static string CloneUrlSsh =  "CloneUrlSsh" ;
+            public static string Arn =  "Arn" ;
+            public static string Name =  "Name" ;
+        }
+
         /// <summary>
         /// RepositoryName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codecommit-repository.html#cfn-codecommit-repository-repositoryname

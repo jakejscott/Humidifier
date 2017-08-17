@@ -5,6 +5,11 @@ namespace Humidifier.Lambda
 
     public class Version : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string Version =  "Version" ;
+        }
+
         /// <summary>
         /// CodeSha256
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html#cfn-lambda-version-codesha256

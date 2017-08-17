@@ -5,6 +5,12 @@ namespace Humidifier.EC2
 
     public class Subnet : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string AvailabilityZone =  "AvailabilityZone" ;
+            public static string Ipv6CidrBlocks =  "Ipv6CidrBlocks" ;
+        }
+
         /// <summary>
         /// AvailabilityZone
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-availabilityzone

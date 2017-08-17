@@ -5,6 +5,11 @@ namespace Humidifier.IAM
 
     public class InstanceProfile : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string Arn =  "Arn" ;
+        }
+
         /// <summary>
         /// InstanceProfileName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html#cfn-iam-instanceprofile-instanceprofilename

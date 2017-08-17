@@ -5,6 +5,11 @@ namespace Humidifier.CloudFormation
 
     public class WaitCondition : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string Data =  "Data" ;
+        }
+
         /// <summary>
         /// Count
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitcondition.html#cfn-waitcondition-count

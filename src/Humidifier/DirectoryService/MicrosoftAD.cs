@@ -5,6 +5,12 @@ namespace Humidifier.DirectoryService
 
     public class MicrosoftAD : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string Alias =  "Alias" ;
+            public static string DnsIpAddresses =  "DnsIpAddresses" ;
+        }
+
         /// <summary>
         /// CreateAlias
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-createalias

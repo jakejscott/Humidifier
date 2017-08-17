@@ -5,6 +5,11 @@ namespace Humidifier.IAM
 
     public class AccessKey : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string SecretAccessKey =  "SecretAccessKey" ;
+        }
+
         /// <summary>
         /// Serial
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html#cfn-iam-accesskey-serial

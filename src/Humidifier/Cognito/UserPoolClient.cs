@@ -5,6 +5,12 @@ namespace Humidifier.Cognito
 
     public class UserPoolClient : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string ClientSecret =  "ClientSecret" ;
+            public static string Name =  "Name" ;
+        }
+
         /// <summary>
         /// GenerateSecret
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-generatesecret

@@ -5,6 +5,15 @@ namespace Humidifier.EC2
 
     public class Instance : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string AvailabilityZone =  "AvailabilityZone" ;
+            public static string PrivateDnsName =  "PrivateDnsName" ;
+            public static string PrivateIp =  "PrivateIp" ;
+            public static string PublicDnsName =  "PublicDnsName" ;
+            public static string PublicIp =  "PublicIp" ;
+        }
+
         /// <summary>
         /// AdditionalInfo
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-additionalinfo

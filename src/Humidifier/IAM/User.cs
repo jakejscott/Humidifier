@@ -5,6 +5,11 @@ namespace Humidifier.IAM
 
     public class User : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string Arn =  "Arn" ;
+        }
+
         /// <summary>
         /// Groups
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-groups

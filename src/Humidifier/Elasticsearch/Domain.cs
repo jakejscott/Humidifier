@@ -5,6 +5,12 @@ namespace Humidifier.Elasticsearch
 
     public class Domain : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string DomainArn =  "DomainArn" ;
+            public static string DomainEndpoint =  "DomainEndpoint" ;
+        }
+
         /// <summary>
         /// AccessPolicies
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-accesspolicies

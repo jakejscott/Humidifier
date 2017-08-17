@@ -5,6 +5,11 @@ namespace Humidifier.CodeBuild
 
     public class Project : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string Arn =  "Arn" ;
+        }
+
         /// <summary>
         /// Artifacts
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-artifacts

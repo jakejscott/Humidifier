@@ -5,6 +5,11 @@ namespace Humidifier.Lambda
 
     public class Function : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string Arn =  "Arn" ;
+        }
+
         /// <summary>
         /// Code
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-code

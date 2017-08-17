@@ -5,6 +5,14 @@ namespace Humidifier.EC2
 
     public class VPC : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string CidrBlock =  "CidrBlock" ;
+            public static string DefaultNetworkAcl =  "DefaultNetworkAcl" ;
+            public static string DefaultSecurityGroup =  "DefaultSecurityGroup" ;
+            public static string Ipv6CidrBlocks =  "Ipv6CidrBlocks" ;
+        }
+
         /// <summary>
         /// CidrBlock
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html#cfn-aws-ec2-vpc-cidrblock

@@ -5,6 +5,11 @@ namespace Humidifier.Cognito
 
     public class IdentityPool : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string Name =  "Name" ;
+        }
+
         /// <summary>
         /// PushSync
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-pushsync

@@ -5,6 +5,11 @@ namespace Humidifier.ECS
 
     public class Service : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string Name =  "Name" ;
+        }
+
         /// <summary>
         /// Cluster
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-cluster

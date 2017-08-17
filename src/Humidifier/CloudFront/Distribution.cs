@@ -5,6 +5,11 @@ namespace Humidifier.CloudFront
 
     public class Distribution : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string DomainName =  "DomainName" ;
+        }
+
         /// <summary>
         /// DistributionConfig
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution.html#cfn-cloudfront-distribution-distributionconfig

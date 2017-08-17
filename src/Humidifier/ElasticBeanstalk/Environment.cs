@@ -5,6 +5,11 @@ namespace Humidifier.ElasticBeanstalk
 
     public class Environment : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string EndpointURL =  "EndpointURL" ;
+        }
+
         /// <summary>
         /// ApplicationName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-applicationname

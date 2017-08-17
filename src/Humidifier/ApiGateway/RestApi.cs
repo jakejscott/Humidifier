@@ -5,6 +5,11 @@ namespace Humidifier.ApiGateway
 
     public class RestApi : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string RootResourceId =  "RootResourceId" ;
+        }
+
         /// <summary>
         /// BinaryMediaTypes
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-binarymediatypes

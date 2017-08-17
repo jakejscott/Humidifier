@@ -5,6 +5,11 @@ namespace Humidifier.DMS
 
     public class Endpoint : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string ExternalId =  "ExternalId" ;
+        }
+
         /// <summary>
         /// KmsKeyId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-kmskeyid

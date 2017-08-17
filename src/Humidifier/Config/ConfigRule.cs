@@ -5,6 +5,12 @@ namespace Humidifier.Config
 
     public class ConfigRule : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string Arn =  "Arn" ;
+            public static string ConfigRuleId =  "ConfigRuleId" ;
+        }
+
         /// <summary>
         /// ConfigRuleName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-configrulename

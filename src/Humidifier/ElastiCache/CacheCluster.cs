@@ -5,6 +5,10 @@ namespace Humidifier.ElastiCache
 
     public class CacheCluster : Humidifier.Resource
     {
+        public static class Attributes
+        {
+        }
+
         /// <summary>
         /// AZMode
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html#cfn-elasticache-cachecluster-azmode

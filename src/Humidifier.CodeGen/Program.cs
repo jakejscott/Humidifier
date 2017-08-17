@@ -64,6 +64,37 @@ namespace Humidifier.CodeGen
                     .AddModifiers(Token(SyntaxKind.PublicKeyword))
                     .AddBaseListTypes(SimpleBaseType(ParseTypeName("Humidifier.Resource")));
 
+                if (resourceType.Attributes != null)
+                {
+                    var attributesClassDecl = ClassDeclaration("Attributes")
+                        .AddModifiers(Token(SyntaxKind.PublicKeyword))
+                        .AddModifiers(Token(SyntaxKind.StaticKeyword));
+
+                    foreach (Attribute attribute in resourceType.Attributes)
+                    {
+                        if (attribute.Name.Contains(".") && attribute.Name != resourceClassName)
+                        {
+                            continue;
+                        }
+
+                        string[] tokens = attribute.Name.Split(new[] { '.' }, StringSplitOptions.RemoveEmptyEntries);
+                        string attributeName = tokens.Length == 2 ? tokens[1] : tokens[0];
+
+                        var propertyDecl = PropertyDeclaration(ParseTypeName("string"), attributeName)
+                            .WithTrailingTrivia(
+                                Trivia(SkippedTokensTrivia().WithTokens(TokenList(Token(SyntaxKind.EqualsToken)))),
+                                Trivia(SkippedTokensTrivia().WithTokens(TokenList(Literal(attributeName))))
+                            )
+                            .WithSemicolonToken(Token(SyntaxKind.SemicolonToken))
+                            .AddModifiers(Token(SyntaxKind.PublicKeyword))
+                            .AddModifiers(Token(SyntaxKind.StaticKeyword));
+
+                        attributesClassDecl = attributesClassDecl.AddMembers(propertyDecl);
+                    }
+
+                    resourceClassDecl = resourceClassDecl.AddMembers(attributesClassDecl);
+                }
+
                 foreach (var property in resourceType.Properties)
                 {
                     var typeName = GetTypeName(property);

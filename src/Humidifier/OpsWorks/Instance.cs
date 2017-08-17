@@ -5,6 +5,15 @@ namespace Humidifier.OpsWorks
 
     public class Instance : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string AvailabilityZone =  "AvailabilityZone" ;
+            public static string PrivateDnsName =  "PrivateDnsName" ;
+            public static string PrivateIp =  "PrivateIp" ;
+            public static string PublicDnsName =  "PublicDnsName" ;
+            public static string PublicIp =  "PublicIp" ;
+        }
+
         /// <summary>
         /// AgentVersion
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-agentversion

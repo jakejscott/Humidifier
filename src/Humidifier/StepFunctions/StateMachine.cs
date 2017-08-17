@@ -5,6 +5,11 @@ namespace Humidifier.StepFunctions
 
     public class StateMachine : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string Name =  "Name" ;
+        }
+
         /// <summary>
         /// DefinitionString
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-definitionstring

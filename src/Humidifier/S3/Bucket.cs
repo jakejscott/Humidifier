@@ -5,6 +5,13 @@ namespace Humidifier.S3
 
     public class Bucket : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string DomainName =  "DomainName" ;
+            public static string DualStackDomainName =  "DualStackDomainName" ;
+            public static string WebsiteURL =  "WebsiteURL" ;
+        }
+
         /// <summary>
         /// AccessControl
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-accesscontrol

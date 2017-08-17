@@ -5,6 +5,11 @@ namespace Humidifier.DynamoDB
 
     public class Table : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string StreamArn =  "StreamArn" ;
+        }
+
         /// <summary>
         /// AttributeDefinitions
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-attributedef

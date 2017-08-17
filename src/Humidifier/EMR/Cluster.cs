@@ -5,6 +5,11 @@ namespace Humidifier.EMR
 
     public class Cluster : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string MasterPublicDNS =  "MasterPublicDNS" ;
+        }
+
         /// <summary>
         /// AdditionalInfo
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-additionalinfo

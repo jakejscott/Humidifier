@@ -5,6 +5,10 @@ namespace Humidifier.ElastiCache
 
     public class ReplicationGroup : Humidifier.Resource
     {
+        public static class Attributes
+        {
+        }
+
         /// <summary>
         /// AutoMinorVersionUpgrade
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-autominorversionupgrade

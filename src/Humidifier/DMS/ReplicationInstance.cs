@@ -5,6 +5,12 @@ namespace Humidifier.DMS
 
     public class ReplicationInstance : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string ReplicationInstancePublicIpAddresses =  "ReplicationInstancePublicIpAddresses" ;
+            public static string ReplicationInstancePrivateIpAddresses =  "ReplicationInstancePrivateIpAddresses" ;
+        }
+
         /// <summary>
         /// ReplicationInstanceIdentifier
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-replicationinstanceidentifier

@@ -5,6 +5,11 @@ namespace Humidifier.ElasticLoadBalancingV2
 
     public class TargetGroup : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string LoadBalancerArns =  "LoadBalancerArns" ;
+        }
+
         /// <summary>
         /// HealthCheckIntervalSeconds
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-healthcheckintervalseconds

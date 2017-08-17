@@ -5,6 +5,13 @@ namespace Humidifier.ElasticLoadBalancing
 
     public class LoadBalancer : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string CanonicalHostedZoneName =  "CanonicalHostedZoneName" ;
+            public static string CanonicalHostedZoneNameID =  "CanonicalHostedZoneNameID" ;
+            public static string DNSName =  "DNSName" ;
+        }
+
         /// <summary>
         /// AccessLoggingPolicy
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-accessloggingpolicy

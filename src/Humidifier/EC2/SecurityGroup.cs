@@ -5,6 +5,11 @@ namespace Humidifier.EC2
 
     public class SecurityGroup : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string GroupId =  "GroupId" ;
+        }
+
         /// <summary>
         /// GroupDescription
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html#cfn-ec2-securitygroup-groupdescription

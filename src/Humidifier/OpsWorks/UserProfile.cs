@@ -5,6 +5,11 @@ namespace Humidifier.OpsWorks
 
     public class UserProfile : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string SshUsername =  "SshUsername" ;
+        }
+
         /// <summary>
         /// AllowSelfManagement
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html#cfn-opsworks-userprofile-allowselfmanagement

@@ -5,6 +5,12 @@ namespace Humidifier.SSM
 
     public class Parameter : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string Type =  "Type" ;
+            public static string Value =  "Value" ;
+        }
+
         /// <summary>
         /// Type
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html#cfn-ssm-parameter-type

@@ -5,6 +5,10 @@ namespace Humidifier.RDS
 
     public class DBCluster : Humidifier.Resource
     {
+        public static class Attributes
+        {
+        }
+
         /// <summary>
         /// AvailabilityZones
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-availabilityzones

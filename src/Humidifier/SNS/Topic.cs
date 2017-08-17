@@ -5,6 +5,11 @@ namespace Humidifier.SNS
 
     public class Topic : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string TopicName =  "TopicName" ;
+        }
+
         /// <summary>
         /// DisplayName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html#cfn-sns-topic-displayname

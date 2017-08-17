@@ -5,6 +5,10 @@ namespace Humidifier.RDS
 
     public class DBInstance : Humidifier.Resource
     {
+        public static class Attributes
+        {
+        }
+
         /// <summary>
         /// AllocatedStorage
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-allocatedstorage

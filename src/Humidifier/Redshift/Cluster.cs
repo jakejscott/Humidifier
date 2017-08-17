@@ -5,6 +5,10 @@ namespace Humidifier.Redshift
 
     public class Cluster : Humidifier.Resource
     {
+        public static class Attributes
+        {
+        }
+
         /// <summary>
         /// AllowVersionUpgrade
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-allowversionupgrade

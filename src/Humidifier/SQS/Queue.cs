@@ -5,6 +5,11 @@ namespace Humidifier.SQS
 
     public class Queue : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string QueueArn =  "QueueArn" ;
+        }
+
         /// <summary>
         /// ContentBasedDeduplication
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-contentbaseddeduplication

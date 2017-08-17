@@ -5,6 +5,11 @@ namespace Humidifier.Route53
 
     public class HostedZone : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string NameServers =  "NameServers" ;
+        }
+
         /// <summary>
         /// HostedZoneConfig
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-hostedzoneconfig
