@@ -279,20 +279,26 @@ Fn.Sub("${AWS::StackName}-${AWS::Region}-bucket");
 Fn.Select("1", Fn.Split("|", "a|b|c"));
 ```
 
-```csharp
-// Because JSON doesn't allow newlines, there's a known hack where you can join multiple lines together using Fn::Join
-var fnBase64 = Fn.Base64(Fn.Join("",
-    "#!/bin/bash -e\n",
-    "wget https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chef_11.6.2-1.ubuntu.12.04_amd64.deb\n",
-    "dpkg -i chef_11.6.2-1.ubuntu.12.04_amd64.deb\n"
-));
+NOTE: Because JSON doesn't allow newlines, there's a known hack where you can join multiple lines together using Fn::Join
 
-// But that's gross and unreadable, we have a better way! Use a multiline C# string, and let the library take care of encoding it for you.
-//  - Whitespace on the start of the line is trimmed, so feel free to indent you code nicely.
-//  - Newlines are encoded as \r\n automatically by NewtonSoft.Json
-var altBase64 = Fn.Base64(
-    @"#!/bin/bash -e
-    wget https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chef_11.6.2-1.ubuntu.12.04_amd64.deb
-    dpkg -i chef_11.6.2-1.ubuntu.12.04_amd64.deb"
+```csharp
+Fn.Base64(Fn.Join("",
+  "#!/bin/bash -e\n",
+  "wget https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chef_11.6.2-1.ubuntu.12.04_amd64.deb\n",
+  "dpkg -i chef_11.6.2-1.ubuntu.12.04_amd64.deb\n"
+));
+```
+
+But that's gross and unreadable when outputted as JSON. Instead use a multiline C# string, and let the library take care 
+of encoding it for you:
+
+ - Whitespace on the start of the line is trimmed, which means you can indent your code nicely (Like you can in YAML).
+ - Newlines are encoded as \r\n automatically by NewtonSoft.Json
+
+```csharp
+Fn.Base64(
+  @"#!/bin/bash -e
+  wget https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chef_11.6.2-1.ubuntu.12.04_amd64.deb
+  dpkg -i chef_11.6.2-1.ubuntu.12.04_amd64.deb"
 );
 ````
