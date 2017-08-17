@@ -293,7 +293,7 @@ But that's gross and unreadable when outputted as JSON. Instead use a multiline 
 of encoding it for you:
 
  - Whitespace on the start of the line is trimmed, which means you can indent your code nicely (Like you can in YAML).
- - Newlines are encoded as \r\n automatically by NewtonSoft.Json
+ - Newlines are encoded as `\r\n` automatically by NewtonSoft.Json.
 
 ```csharp
 Fn.Base64(
