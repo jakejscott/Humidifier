@@ -3,7 +3,7 @@ namespace Humidifier.ElasticLoadBalancingV2
     using System.Collections.Generic;
     using LoadBalancerPropertyTypes;
 
-    public class LoadBalancer : IResource
+    public class LoadBalancer : Humidifier.Resource
     {
         /// <summary>
         /// IpAddressType

@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using VPNGatewayRoutePropagationPropertyTypes;
 
-    public class VPNGatewayRoutePropagation : IResource
+    public class VPNGatewayRoutePropagation : Humidifier.Resource
     {
         /// <summary>
         /// RouteTableIds

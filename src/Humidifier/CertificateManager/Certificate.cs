@@ -3,7 +3,7 @@ namespace Humidifier.CertificateManager
     using System.Collections.Generic;
     using CertificatePropertyTypes;
 
-    public class Certificate : IResource
+    public class Certificate : Humidifier.Resource
     {
         /// <summary>
         /// DomainName

@@ -3,7 +3,7 @@ namespace Humidifier.Lambda
     using System.Collections.Generic;
     using VersionPropertyTypes;
 
-    public class Version : IResource
+    public class Version : Humidifier.Resource
     {
         /// <summary>
         /// CodeSha256

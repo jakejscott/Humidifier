@@ -3,7 +3,7 @@ namespace Humidifier.S3
     using System.Collections.Generic;
     using BucketPolicyPropertyTypes;
 
-    public class BucketPolicy : IResource
+    public class BucketPolicy : Humidifier.Resource
     {
         /// <summary>
         /// Bucket

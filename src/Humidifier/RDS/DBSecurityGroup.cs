@@ -3,7 +3,7 @@ namespace Humidifier.RDS
     using System.Collections.Generic;
     using DBSecurityGroupPropertyTypes;
 
-    public class DBSecurityGroup : IResource
+    public class DBSecurityGroup : Humidifier.Resource
     {
         /// <summary>
         /// DBSecurityGroupIngress

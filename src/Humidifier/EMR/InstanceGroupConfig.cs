@@ -3,7 +3,7 @@ namespace Humidifier.EMR
     using System.Collections.Generic;
     using InstanceGroupConfigPropertyTypes;
 
-    public class InstanceGroupConfig : IResource
+    public class InstanceGroupConfig : Humidifier.Resource
     {
         /// <summary>
         /// AutoScalingPolicy

@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using VPNConnectionRoutePropertyTypes;
 
-    public class VPNConnectionRoute : IResource
+    public class VPNConnectionRoute : Humidifier.Resource
     {
         /// <summary>
         /// DestinationCidrBlock

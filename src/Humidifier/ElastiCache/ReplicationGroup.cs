@@ -3,7 +3,7 @@ namespace Humidifier.ElastiCache
     using System.Collections.Generic;
     using ReplicationGroupPropertyTypes;
 
-    public class ReplicationGroup : IResource
+    public class ReplicationGroup : Humidifier.Resource
     {
         /// <summary>
         /// AutoMinorVersionUpgrade

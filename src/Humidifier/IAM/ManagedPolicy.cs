@@ -3,7 +3,7 @@ namespace Humidifier.IAM
     using System.Collections.Generic;
     using ManagedPolicyPropertyTypes;
 
-    public class ManagedPolicy : IResource
+    public class ManagedPolicy : Humidifier.Resource
     {
         /// <summary>
         /// Description

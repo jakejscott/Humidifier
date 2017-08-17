@@ -3,7 +3,7 @@ namespace Humidifier.Logs
     using System.Collections.Generic;
     using MetricFilterPropertyTypes;
 
-    public class MetricFilter : IResource
+    public class MetricFilter : Humidifier.Resource
     {
         /// <summary>
         /// FilterPattern

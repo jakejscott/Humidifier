@@ -3,7 +3,7 @@ namespace Humidifier.RDS
     using System.Collections.Generic;
     using DBClusterPropertyTypes;
 
-    public class DBCluster : IResource
+    public class DBCluster : Humidifier.Resource
     {
         /// <summary>
         /// AvailabilityZones

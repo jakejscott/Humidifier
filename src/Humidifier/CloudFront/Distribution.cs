@@ -3,7 +3,7 @@ namespace Humidifier.CloudFront
     using System.Collections.Generic;
     using DistributionPropertyTypes;
 
-    public class Distribution : IResource
+    public class Distribution : Humidifier.Resource
     {
         /// <summary>
         /// DistributionConfig

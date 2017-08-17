@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using RoutePropertyTypes;
 
-    public class Route : IResource
+    public class Route : Humidifier.Resource
     {
         /// <summary>
         /// DestinationCidrBlock

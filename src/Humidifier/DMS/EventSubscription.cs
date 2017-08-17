@@ -3,7 +3,7 @@ namespace Humidifier.DMS
     using System.Collections.Generic;
     using EventSubscriptionPropertyTypes;
 
-    public class EventSubscription : IResource
+    public class EventSubscription : Humidifier.Resource
     {
         /// <summary>
         /// SourceType

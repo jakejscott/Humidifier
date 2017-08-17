@@ -3,7 +3,7 @@ namespace Humidifier.CodeBuild
     using System.Collections.Generic;
     using ProjectPropertyTypes;
 
-    public class Project : IResource
+    public class Project : Humidifier.Resource
     {
         /// <summary>
         /// Artifacts

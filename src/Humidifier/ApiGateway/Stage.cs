@@ -3,7 +3,7 @@ namespace Humidifier.ApiGateway
     using System.Collections.Generic;
     using StagePropertyTypes;
 
-    public class Stage : IResource
+    public class Stage : Humidifier.Resource
     {
         /// <summary>
         /// CacheClusterEnabled

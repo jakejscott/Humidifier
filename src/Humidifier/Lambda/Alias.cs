@@ -3,7 +3,7 @@ namespace Humidifier.Lambda
     using System.Collections.Generic;
     using AliasPropertyTypes;
 
-    public class Alias : IResource
+    public class Alias : Humidifier.Resource
     {
         /// <summary>
         /// Description

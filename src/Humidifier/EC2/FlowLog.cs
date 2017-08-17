@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using FlowLogPropertyTypes;
 
-    public class FlowLog : IResource
+    public class FlowLog : Humidifier.Resource
     {
         /// <summary>
         /// DeliverLogsPermissionArn

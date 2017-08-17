@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using SecurityGroupEgressPropertyTypes;
 
-    public class SecurityGroupEgress : IResource
+    public class SecurityGroupEgress : Humidifier.Resource
     {
         /// <summary>
         /// CidrIp

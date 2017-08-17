@@ -3,7 +3,7 @@ namespace Humidifier.CodePipeline
     using System.Collections.Generic;
     using CustomActionTypePropertyTypes;
 
-    public class CustomActionType : IResource
+    public class CustomActionType : Humidifier.Resource
     {
         /// <summary>
         /// Category

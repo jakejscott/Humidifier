@@ -3,7 +3,7 @@ namespace Humidifier.Config
     using System.Collections.Generic;
     using DeliveryChannelPropertyTypes;
 
-    public class DeliveryChannel : IResource
+    public class DeliveryChannel : Humidifier.Resource
     {
         /// <summary>
         /// ConfigSnapshotDeliveryProperties

@@ -3,7 +3,7 @@ namespace Humidifier.Config
     using System.Collections.Generic;
     using ConfigurationRecorderPropertyTypes;
 
-    public class ConfigurationRecorder : IResource
+    public class ConfigurationRecorder : Humidifier.Resource
     {
         /// <summary>
         /// Name

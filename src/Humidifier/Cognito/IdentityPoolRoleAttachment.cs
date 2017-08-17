@@ -3,7 +3,7 @@ namespace Humidifier.Cognito
     using System.Collections.Generic;
     using IdentityPoolRoleAttachmentPropertyTypes;
 
-    public class IdentityPoolRoleAttachment : IResource
+    public class IdentityPoolRoleAttachment : Humidifier.Resource
     {
         /// <summary>
         /// RoleMappings

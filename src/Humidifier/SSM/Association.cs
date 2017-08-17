@@ -3,7 +3,7 @@ namespace Humidifier.SSM
     using System.Collections.Generic;
     using AssociationPropertyTypes;
 
-    public class Association : IResource
+    public class Association : Humidifier.Resource
     {
         /// <summary>
         /// DocumentVersion

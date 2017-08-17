@@ -3,7 +3,7 @@ namespace Humidifier.Route53
     using System.Collections.Generic;
     using HealthCheckPropertyTypes;
 
-    public class HealthCheck : IResource
+    public class HealthCheck : Humidifier.Resource
     {
         /// <summary>
         /// HealthCheckConfig

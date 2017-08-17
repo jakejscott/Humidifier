@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using VolumeAttachmentPropertyTypes;
 
-    public class VolumeAttachment : IResource
+    public class VolumeAttachment : Humidifier.Resource
     {
         /// <summary>
         /// Device

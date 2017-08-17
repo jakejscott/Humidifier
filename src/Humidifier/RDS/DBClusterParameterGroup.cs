@@ -3,7 +3,7 @@ namespace Humidifier.RDS
     using System.Collections.Generic;
     using DBClusterParameterGroupPropertyTypes;
 
-    public class DBClusterParameterGroup : IResource
+    public class DBClusterParameterGroup : Humidifier.Resource
     {
         /// <summary>
         /// Description

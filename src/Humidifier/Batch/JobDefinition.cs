@@ -3,7 +3,7 @@ namespace Humidifier.Batch
     using System.Collections.Generic;
     using JobDefinitionPropertyTypes;
 
-    public class JobDefinition : IResource
+    public class JobDefinition : Humidifier.Resource
     {
         /// <summary>
         /// Type

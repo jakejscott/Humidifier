@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using VPCEndpointPropertyTypes;
 
-    public class VPCEndpoint : IResource
+    public class VPCEndpoint : Humidifier.Resource
     {
         /// <summary>
         /// PolicyDocument

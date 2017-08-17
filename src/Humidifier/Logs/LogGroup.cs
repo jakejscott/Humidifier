@@ -3,7 +3,7 @@ namespace Humidifier.Logs
     using System.Collections.Generic;
     using LogGroupPropertyTypes;
 
-    public class LogGroup : IResource
+    public class LogGroup : Humidifier.Resource
     {
         /// <summary>
         /// LogGroupName

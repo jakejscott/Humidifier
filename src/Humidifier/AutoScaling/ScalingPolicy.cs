@@ -3,7 +3,7 @@ namespace Humidifier.AutoScaling
     using System.Collections.Generic;
     using ScalingPolicyPropertyTypes;
 
-    public class ScalingPolicy : IResource
+    public class ScalingPolicy : Humidifier.Resource
     {
         /// <summary>
         /// AdjustmentType

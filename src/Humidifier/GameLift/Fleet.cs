@@ -3,7 +3,7 @@ namespace Humidifier.GameLift
     using System.Collections.Generic;
     using FleetPropertyTypes;
 
-    public class Fleet : IResource
+    public class Fleet : Humidifier.Resource
     {
         /// <summary>
         /// BuildId

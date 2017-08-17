@@ -3,7 +3,7 @@ namespace Humidifier.RDS
     using System.Collections.Generic;
     using DBSubnetGroupPropertyTypes;
 
-    public class DBSubnetGroup : IResource
+    public class DBSubnetGroup : Humidifier.Resource
     {
         /// <summary>
         /// DBSubnetGroupDescription

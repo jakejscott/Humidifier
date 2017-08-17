@@ -3,7 +3,7 @@ namespace Humidifier.IoT
     using System.Collections.Generic;
     using PolicyPrincipalAttachmentPropertyTypes;
 
-    public class PolicyPrincipalAttachment : IResource
+    public class PolicyPrincipalAttachment : Humidifier.Resource
     {
         /// <summary>
         /// PolicyName

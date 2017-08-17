@@ -3,7 +3,7 @@ namespace Humidifier.Logs
     using System.Collections.Generic;
     using DestinationPropertyTypes;
 
-    public class Destination : IResource
+    public class Destination : Humidifier.Resource
     {
         /// <summary>
         /// DestinationName

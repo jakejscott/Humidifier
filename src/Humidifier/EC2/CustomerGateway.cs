@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using CustomerGatewayPropertyTypes;
 
-    public class CustomerGateway : IResource
+    public class CustomerGateway : Humidifier.Resource
     {
         /// <summary>
         /// BgpAsn

@@ -3,7 +3,7 @@ namespace Humidifier.WAFRegional
     using System.Collections.Generic;
     using SizeConstraintSetPropertyTypes;
 
-    public class SizeConstraintSet : IResource
+    public class SizeConstraintSet : Humidifier.Resource
     {
         /// <summary>
         /// SizeConstraints

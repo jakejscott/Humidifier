@@ -3,7 +3,7 @@ namespace Humidifier.IAM
     using System.Collections.Generic;
     using InstanceProfilePropertyTypes;
 
-    public class InstanceProfile : IResource
+    public class InstanceProfile : Humidifier.Resource
     {
         /// <summary>
         /// InstanceProfileName

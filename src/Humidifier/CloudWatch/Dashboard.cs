@@ -3,7 +3,7 @@ namespace Humidifier.CloudWatch
     using System.Collections.Generic;
     using DashboardPropertyTypes;
 
-    public class Dashboard : IResource
+    public class Dashboard : Humidifier.Resource
     {
         /// <summary>
         /// DashboardName

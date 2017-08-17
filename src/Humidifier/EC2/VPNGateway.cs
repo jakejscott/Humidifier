@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using VPNGatewayPropertyTypes;
 
-    public class VPNGateway : IResource
+    public class VPNGateway : Humidifier.Resource
     {
         /// <summary>
         /// Tags

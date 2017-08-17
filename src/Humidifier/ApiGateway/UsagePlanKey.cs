@@ -3,7 +3,7 @@ namespace Humidifier.ApiGateway
     using System.Collections.Generic;
     using UsagePlanKeyPropertyTypes;
 
-    public class UsagePlanKey : IResource
+    public class UsagePlanKey : Humidifier.Resource
     {
         /// <summary>
         /// KeyId

@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using EIPPropertyTypes;
 
-    public class EIP : IResource
+    public class EIP : Humidifier.Resource
     {
         /// <summary>
         /// Domain

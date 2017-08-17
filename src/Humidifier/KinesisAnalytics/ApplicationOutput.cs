@@ -3,7 +3,7 @@ namespace Humidifier.KinesisAnalytics
     using System.Collections.Generic;
     using ApplicationOutputPropertyTypes;
 
-    public class ApplicationOutput : IResource
+    public class ApplicationOutput : Humidifier.Resource
     {
         /// <summary>
         /// ApplicationName

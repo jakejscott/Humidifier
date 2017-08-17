@@ -3,7 +3,7 @@ namespace Humidifier.StepFunctions
     using System.Collections.Generic;
     using StateMachinePropertyTypes;
 
-    public class StateMachine : IResource
+    public class StateMachine : Humidifier.Resource
     {
         /// <summary>
         /// DefinitionString

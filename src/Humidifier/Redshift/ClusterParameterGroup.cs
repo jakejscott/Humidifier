@@ -3,7 +3,7 @@ namespace Humidifier.Redshift
     using System.Collections.Generic;
     using ClusterParameterGroupPropertyTypes;
 
-    public class ClusterParameterGroup : IResource
+    public class ClusterParameterGroup : Humidifier.Resource
     {
         /// <summary>
         /// Description

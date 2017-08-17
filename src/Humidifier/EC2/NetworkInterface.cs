@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using NetworkInterfacePropertyTypes;
 
-    public class NetworkInterface : IResource
+    public class NetworkInterface : Humidifier.Resource
     {
         /// <summary>
         /// Description

@@ -3,7 +3,7 @@ namespace Humidifier.IoT
     using System.Collections.Generic;
     using ThingPropertyTypes;
 
-    public class Thing : IResource
+    public class Thing : Humidifier.Resource
     {
         /// <summary>
         /// AttributePayload

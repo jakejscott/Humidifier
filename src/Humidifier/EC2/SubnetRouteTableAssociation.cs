@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using SubnetRouteTableAssociationPropertyTypes;
 
-    public class SubnetRouteTableAssociation : IResource
+    public class SubnetRouteTableAssociation : Humidifier.Resource
     {
         /// <summary>
         /// RouteTableId

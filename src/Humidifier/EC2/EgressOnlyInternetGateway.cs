@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using EgressOnlyInternetGatewayPropertyTypes;
 
-    public class EgressOnlyInternetGateway : IResource
+    public class EgressOnlyInternetGateway : Humidifier.Resource
     {
         /// <summary>
         /// VpcId

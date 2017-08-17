@@ -3,7 +3,7 @@ namespace Humidifier.Cognito
     using System.Collections.Generic;
     using UserPoolUserPropertyTypes;
 
-    public class UserPoolUser : IResource
+    public class UserPoolUser : Humidifier.Resource
     {
         /// <summary>
         /// ValidationData

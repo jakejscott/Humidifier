@@ -3,7 +3,7 @@ namespace Humidifier.CloudTrail
     using System.Collections.Generic;
     using TrailPropertyTypes;
 
-    public class Trail : IResource
+    public class Trail : Humidifier.Resource
     {
         /// <summary>
         /// CloudWatchLogsLogGroupArn

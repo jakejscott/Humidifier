@@ -3,7 +3,7 @@ namespace Humidifier.WorkSpaces
     using System.Collections.Generic;
     using WorkspacePropertyTypes;
 
-    public class Workspace : IResource
+    public class Workspace : Humidifier.Resource
     {
         /// <summary>
         /// BundleId

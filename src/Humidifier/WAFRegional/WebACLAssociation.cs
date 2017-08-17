@@ -3,7 +3,7 @@ namespace Humidifier.WAFRegional
     using System.Collections.Generic;
     using WebACLAssociationPropertyTypes;
 
-    public class WebACLAssociation : IResource
+    public class WebACLAssociation : Humidifier.Resource
     {
         /// <summary>
         /// ResourceArn

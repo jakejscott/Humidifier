@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using PlacementGroupPropertyTypes;
 
-    public class PlacementGroup : IResource
+    public class PlacementGroup : Humidifier.Resource
     {
         /// <summary>
         /// Strategy

@@ -3,7 +3,7 @@ namespace Humidifier.AutoScaling
     using System.Collections.Generic;
     using ScheduledActionPropertyTypes;
 
-    public class ScheduledAction : IResource
+    public class ScheduledAction : Humidifier.Resource
     {
         /// <summary>
         /// AutoScalingGroupName

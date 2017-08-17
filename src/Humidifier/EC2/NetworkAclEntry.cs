@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using NetworkAclEntryPropertyTypes;
 
-    public class NetworkAclEntry : IResource
+    public class NetworkAclEntry : Humidifier.Resource
     {
         /// <summary>
         /// CidrBlock

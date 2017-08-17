@@ -3,7 +3,7 @@ namespace Humidifier.SQS
     using System.Collections.Generic;
     using QueuePropertyTypes;
 
-    public class Queue : IResource
+    public class Queue : Humidifier.Resource
     {
         /// <summary>
         /// ContentBasedDeduplication

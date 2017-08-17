@@ -3,7 +3,7 @@ namespace Humidifier.AutoScaling
     using System.Collections.Generic;
     using LaunchConfigurationPropertyTypes;
 
-    public class LaunchConfiguration : IResource
+    public class LaunchConfiguration : Humidifier.Resource
     {
         /// <summary>
         /// AssociatePublicIpAddress

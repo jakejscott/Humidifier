@@ -3,7 +3,7 @@ namespace Humidifier.OpsWorks
     using System.Collections.Generic;
     using LayerPropertyTypes;
 
-    public class Layer : IResource
+    public class Layer : Humidifier.Resource
     {
         /// <summary>
         /// Attributes

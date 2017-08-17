@@ -3,7 +3,7 @@ namespace Humidifier.Logs
     using System.Collections.Generic;
     using LogStreamPropertyTypes;
 
-    public class LogStream : IResource
+    public class LogStream : Humidifier.Resource
     {
         /// <summary>
         /// LogGroupName

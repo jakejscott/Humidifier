@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using SpotFleetPropertyTypes;
 
-    public class SpotFleet : IResource
+    public class SpotFleet : Humidifier.Resource
     {
         /// <summary>
         /// SpotFleetRequestConfigData

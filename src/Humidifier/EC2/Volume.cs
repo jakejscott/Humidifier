@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using VolumePropertyTypes;
 
-    public class Volume : IResource
+    public class Volume : Humidifier.Resource
     {
         /// <summary>
         /// AutoEnableIO

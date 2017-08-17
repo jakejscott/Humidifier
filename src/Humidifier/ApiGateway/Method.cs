@@ -3,7 +3,7 @@ namespace Humidifier.ApiGateway
     using System.Collections.Generic;
     using MethodPropertyTypes;
 
-    public class Method : IResource
+    public class Method : Humidifier.Resource
     {
         /// <summary>
         /// ApiKeyRequired

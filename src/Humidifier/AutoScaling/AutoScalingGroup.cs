@@ -3,7 +3,7 @@ namespace Humidifier.AutoScaling
     using System.Collections.Generic;
     using AutoScalingGroupPropertyTypes;
 
-    public class AutoScalingGroup : IResource
+    public class AutoScalingGroup : Humidifier.Resource
     {
         /// <summary>
         /// AvailabilityZones

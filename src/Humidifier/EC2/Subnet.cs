@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using SubnetPropertyTypes;
 
-    public class Subnet : IResource
+    public class Subnet : Humidifier.Resource
     {
         /// <summary>
         /// AvailabilityZone

@@ -3,7 +3,7 @@ namespace Humidifier.Lambda
     using System.Collections.Generic;
     using FunctionPropertyTypes;
 
-    public class Function : IResource
+    public class Function : Humidifier.Resource
     {
         /// <summary>
         /// Code

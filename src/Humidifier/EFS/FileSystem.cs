@@ -3,7 +3,7 @@ namespace Humidifier.EFS
     using System.Collections.Generic;
     using FileSystemPropertyTypes;
 
-    public class FileSystem : IResource
+    public class FileSystem : Humidifier.Resource
     {
         /// <summary>
         /// FileSystemTags

@@ -3,7 +3,7 @@ namespace Humidifier.ApiGateway
     using System.Collections.Generic;
     using AuthorizerPropertyTypes;
 
-    public class Authorizer : IResource
+    public class Authorizer : Humidifier.Resource
     {
         /// <summary>
         /// AuthorizerCredentials

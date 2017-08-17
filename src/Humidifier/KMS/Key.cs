@@ -3,7 +3,7 @@ namespace Humidifier.KMS
     using System.Collections.Generic;
     using KeyPropertyTypes;
 
-    public class Key : IResource
+    public class Key : Humidifier.Resource
     {
         /// <summary>
         /// Description

@@ -3,7 +3,7 @@ namespace Humidifier.AutoScaling
     using System.Collections.Generic;
     using LifecycleHookPropertyTypes;
 
-    public class LifecycleHook : IResource
+    public class LifecycleHook : Humidifier.Resource
     {
         /// <summary>
         /// AutoScalingGroupName

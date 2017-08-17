@@ -3,7 +3,7 @@ namespace Humidifier.WAF
     using System.Collections.Generic;
     using WebACLPropertyTypes;
 
-    public class WebACL : IResource
+    public class WebACL : Humidifier.Resource
     {
         /// <summary>
         /// DefaultAction

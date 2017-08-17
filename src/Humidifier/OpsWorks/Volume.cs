@@ -3,7 +3,7 @@ namespace Humidifier.OpsWorks
     using System.Collections.Generic;
     using VolumePropertyTypes;
 
-    public class Volume : IResource
+    public class Volume : Humidifier.Resource
     {
         /// <summary>
         /// Ec2VolumeId

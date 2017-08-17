@@ -3,7 +3,7 @@ namespace Humidifier.ApiGateway
     using System.Collections.Generic;
     using ModelPropertyTypes;
 
-    public class Model : IResource
+    public class Model : Humidifier.Resource
     {
         /// <summary>
         /// ContentType

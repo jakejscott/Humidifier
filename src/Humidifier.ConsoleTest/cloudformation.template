@@ -184,40 +184,6 @@
         }
       }
     },
-    "KmsKey": {
-      "Type": "AWS::KMS::Key",
-      "Properties": {
-        "Description": "A Key",
-        "KeyPolicy": {
-          "Version": "2012-10-17",
-          "Id": "key-default-1",
-          "Statement": [
-            {
-              "Sid": "Allow the administration of the key",
-              "Effect": "Allows",
-              "Principal": {
-                "AWS": "arn:aws:iam::123456789012:user/Alice"
-              },
-              "Action": [
-                "kms:Create*",
-                "kms:Describe*",
-                "kms:Enable*",
-                "kms:List*",
-                "kms:Put*",
-                "kms:Update*",
-                "kms:Revoke*",
-                "kms:Disable*",
-                "kms:Get*",
-                "kms:Delete*",
-                "kms:ScheduleKeyDeletion",
-                "kms:CancelKeyDeletion"
-              ],
-              "Resource": "*"
-            }
-          ]
-        }
-      }
-    },
     "LambdaFunction": {
       "Type": "AWS::Lambda::Function",
       "Properties": {
@@ -262,27 +228,37 @@
         ]
       }
     },
-    "EmrSecurityConfiguration": {
-      "Type": "AWS::EMR::SecurityConfiguration",
+    "KmsKey": {
+      "Type": "AWS::KMS::Key",
       "Properties": {
-        "Name": "SecurityConfig",
-        "SecurityConfiguration": {
-          "EncryptionConfiguration": {
-            "EnableInTransitEncryption": false,
-            "EnableAtRestEncryption": false
-          }
-        }
-      }
-    },
-    "Association": {
-      "Type": "AWS::SSM::Association",
-      "Properties": {
-        "Parameters": {
-          "Directory": {
-            "ParameterValues": [
-              "MyWorkspace"
-            ]
-          }
+        "Description": "A Key",
+        "KeyPolicy": {
+          "Version": "2012-10-17",
+          "Id": "key-default-1",
+          "Statement": [
+            {
+              "Sid": "Allow the administration of the key",
+              "Effect": "Allows",
+              "Principal": {
+                "AWS": "arn:aws:iam::123456789012:user/Alice"
+              },
+              "Action": [
+                "kms:Create*",
+                "kms:Describe*",
+                "kms:Enable*",
+                "kms:List*",
+                "kms:Put*",
+                "kms:Update*",
+                "kms:Revoke*",
+                "kms:Disable*",
+                "kms:Get*",
+                "kms:Delete*",
+                "kms:ScheduleKeyDeletion",
+                "kms:CancelKeyDeletion"
+              ],
+              "Resource": "*"
+            }
+          ]
         }
       }
     }

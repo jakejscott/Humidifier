@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using EIPAssociationPropertyTypes;
 
-    public class EIPAssociation : IResource
+    public class EIPAssociation : Humidifier.Resource
     {
         /// <summary>
         /// AllocationId

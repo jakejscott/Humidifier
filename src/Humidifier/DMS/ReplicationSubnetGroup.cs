@@ -3,7 +3,7 @@ namespace Humidifier.DMS
     using System.Collections.Generic;
     using ReplicationSubnetGroupPropertyTypes;
 
-    public class ReplicationSubnetGroup : IResource
+    public class ReplicationSubnetGroup : Humidifier.Resource
     {
         /// <summary>
         /// ReplicationSubnetGroupDescription

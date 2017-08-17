@@ -3,7 +3,7 @@ namespace Humidifier.Redshift
     using System.Collections.Generic;
     using ClusterPropertyTypes;
 
-    public class Cluster : IResource
+    public class Cluster : Humidifier.Resource
     {
         /// <summary>
         /// AllowVersionUpgrade

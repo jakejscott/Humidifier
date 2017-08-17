@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using VPCPropertyTypes;
 
-    public class VPC : IResource
+    public class VPC : Humidifier.Resource
     {
         /// <summary>
         /// CidrBlock

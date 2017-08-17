@@ -3,7 +3,7 @@ namespace Humidifier.ElastiCache
     using System.Collections.Generic;
     using ParameterGroupPropertyTypes;
 
-    public class ParameterGroup : IResource
+    public class ParameterGroup : Humidifier.Resource
     {
         /// <summary>
         /// CacheParameterGroupFamily

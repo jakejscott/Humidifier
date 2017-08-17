@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using InternetGatewayPropertyTypes;
 
-    public class InternetGateway : IResource
+    public class InternetGateway : Humidifier.Resource
     {
         /// <summary>
         /// Tags

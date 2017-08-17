@@ -3,7 +3,7 @@ namespace Humidifier.Elasticsearch
     using System.Collections.Generic;
     using DomainPropertyTypes;
 
-    public class Domain : IResource
+    public class Domain : Humidifier.Resource
     {
         /// <summary>
         /// AccessPolicies

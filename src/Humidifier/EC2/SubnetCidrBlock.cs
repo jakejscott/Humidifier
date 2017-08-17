@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using SubnetCidrBlockPropertyTypes;
 
-    public class SubnetCidrBlock : IResource
+    public class SubnetCidrBlock : Humidifier.Resource
     {
         /// <summary>
         /// Ipv6CidrBlock

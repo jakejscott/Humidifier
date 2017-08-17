@@ -3,7 +3,7 @@ namespace Humidifier.OpsWorks
     using System.Collections.Generic;
     using AppPropertyTypes;
 
-    public class App : IResource
+    public class App : Humidifier.Resource
     {
         /// <summary>
         /// AppSource

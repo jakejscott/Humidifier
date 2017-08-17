@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using HostPropertyTypes;
 
-    public class Host : IResource
+    public class Host : Humidifier.Resource
     {
         /// <summary>
         /// AutoPlacement

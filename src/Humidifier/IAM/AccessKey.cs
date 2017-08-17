@@ -3,7 +3,7 @@ namespace Humidifier.IAM
     using System.Collections.Generic;
     using AccessKeyPropertyTypes;
 
-    public class AccessKey : IResource
+    public class AccessKey : Humidifier.Resource
     {
         /// <summary>
         /// Serial

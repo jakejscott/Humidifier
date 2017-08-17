@@ -3,7 +3,7 @@ namespace Humidifier.KMS
     using System.Collections.Generic;
     using AliasPropertyTypes;
 
-    public class Alias : IResource
+    public class Alias : Humidifier.Resource
     {
         /// <summary>
         /// AliasName

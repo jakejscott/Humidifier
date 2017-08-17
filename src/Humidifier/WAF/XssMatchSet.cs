@@ -3,7 +3,7 @@ namespace Humidifier.WAF
     using System.Collections.Generic;
     using XssMatchSetPropertyTypes;
 
-    public class XssMatchSet : IResource
+    public class XssMatchSet : Humidifier.Resource
     {
         /// <summary>
         /// Name

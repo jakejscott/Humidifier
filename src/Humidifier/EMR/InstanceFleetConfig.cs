@@ -3,7 +3,7 @@ namespace Humidifier.EMR
     using System.Collections.Generic;
     using InstanceFleetConfigPropertyTypes;
 
-    public class InstanceFleetConfig : IResource
+    public class InstanceFleetConfig : Humidifier.Resource
     {
         /// <summary>
         /// ClusterId

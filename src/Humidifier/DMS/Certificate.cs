@@ -3,7 +3,7 @@ namespace Humidifier.DMS
     using System.Collections.Generic;
     using CertificatePropertyTypes;
 
-    public class Certificate : IResource
+    public class Certificate : Humidifier.Resource
     {
         /// <summary>
         /// CertificateIdentifier

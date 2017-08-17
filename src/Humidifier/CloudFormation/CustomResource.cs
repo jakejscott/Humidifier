@@ -3,7 +3,7 @@ namespace Humidifier.CloudFormation
     using System.Collections.Generic;
     using CustomResourcePropertyTypes;
 
-    public class CustomResource : IResource
+    public class CustomResource : Humidifier.Resource
     {
         /// <summary>
         /// ServiceToken

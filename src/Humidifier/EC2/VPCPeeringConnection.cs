@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using VPCPeeringConnectionPropertyTypes;
 
-    public class VPCPeeringConnection : IResource
+    public class VPCPeeringConnection : Humidifier.Resource
     {
         /// <summary>
         /// PeerOwnerId

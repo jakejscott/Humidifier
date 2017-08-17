@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using NetworkAclPropertyTypes;
 
-    public class NetworkAcl : IResource
+    public class NetworkAcl : Humidifier.Resource
     {
         /// <summary>
         /// Tags

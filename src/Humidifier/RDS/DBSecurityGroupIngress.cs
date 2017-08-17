@@ -3,7 +3,7 @@ namespace Humidifier.RDS
     using System.Collections.Generic;
     using DBSecurityGroupIngressPropertyTypes;
 
-    public class DBSecurityGroupIngress : IResource
+    public class DBSecurityGroupIngress : Humidifier.Resource
     {
         /// <summary>
         /// CIDRIP

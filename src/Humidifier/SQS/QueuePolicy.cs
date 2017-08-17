@@ -3,7 +3,7 @@ namespace Humidifier.SQS
     using System.Collections.Generic;
     using QueuePolicyPropertyTypes;
 
-    public class QueuePolicy : IResource
+    public class QueuePolicy : Humidifier.Resource
     {
         /// <summary>
         /// PolicyDocument

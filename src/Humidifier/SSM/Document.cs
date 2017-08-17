@@ -3,7 +3,7 @@ namespace Humidifier.SSM
     using System.Collections.Generic;
     using DocumentPropertyTypes;
 
-    public class Document : IResource
+    public class Document : Humidifier.Resource
     {
         /// <summary>
         /// Content

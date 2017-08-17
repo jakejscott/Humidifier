@@ -3,7 +3,7 @@ namespace Humidifier.DirectoryService
     using System.Collections.Generic;
     using SimpleADPropertyTypes;
 
-    public class SimpleAD : IResource
+    public class SimpleAD : Humidifier.Resource
     {
         /// <summary>
         /// CreateAlias

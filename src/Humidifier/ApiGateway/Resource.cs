@@ -3,7 +3,7 @@ namespace Humidifier.ApiGateway
     using System.Collections.Generic;
     using ResourcePropertyTypes;
 
-    public class Resource : IResource
+    public class Resource : Humidifier.Resource
     {
         /// <summary>
         /// ParentId

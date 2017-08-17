@@ -3,7 +3,7 @@ namespace Humidifier.ApplicationAutoScaling
     using System.Collections.Generic;
     using ScalableTargetPropertyTypes;
 
-    public class ScalableTarget : IResource
+    public class ScalableTarget : Humidifier.Resource
     {
         /// <summary>
         /// MaxCapacity

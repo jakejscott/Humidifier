@@ -3,7 +3,7 @@ namespace Humidifier.WAF
     using System.Collections.Generic;
     using RulePropertyTypes;
 
-    public class Rule : IResource
+    public class Rule : Humidifier.Resource
     {
         /// <summary>
         /// MetricName

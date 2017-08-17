@@ -3,7 +3,7 @@ namespace Humidifier.DMS
     using System.Collections.Generic;
     using EndpointPropertyTypes;
 
-    public class Endpoint : IResource
+    public class Endpoint : Humidifier.Resource
     {
         /// <summary>
         /// KmsKeyId

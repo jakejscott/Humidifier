@@ -3,7 +3,7 @@ namespace Humidifier.DynamoDB
     using System.Collections.Generic;
     using TablePropertyTypes;
 
-    public class Table : IResource
+    public class Table : Humidifier.Resource
     {
         /// <summary>
         /// AttributeDefinitions

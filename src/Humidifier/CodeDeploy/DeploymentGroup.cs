@@ -3,7 +3,7 @@ namespace Humidifier.CodeDeploy
     using System.Collections.Generic;
     using DeploymentGroupPropertyTypes;
 
-    public class DeploymentGroup : IResource
+    public class DeploymentGroup : Humidifier.Resource
     {
         /// <summary>
         /// AlarmConfiguration

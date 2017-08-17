@@ -3,7 +3,7 @@ namespace Humidifier.OpsWorks
     using System.Collections.Generic;
     using StackPropertyTypes;
 
-    public class Stack : IResource
+    public class Stack : Humidifier.Resource
     {
         /// <summary>
         /// AgentVersion

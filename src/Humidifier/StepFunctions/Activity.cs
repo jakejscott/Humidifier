@@ -3,7 +3,7 @@ namespace Humidifier.StepFunctions
     using System.Collections.Generic;
     using ActivityPropertyTypes;
 
-    public class Activity : IResource
+    public class Activity : Humidifier.Resource
     {
         /// <summary>
         /// Name

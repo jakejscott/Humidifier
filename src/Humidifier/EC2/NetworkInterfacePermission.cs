@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using NetworkInterfacePermissionPropertyTypes;
 
-    public class NetworkInterfacePermission : IResource
+    public class NetworkInterfacePermission : Humidifier.Resource
     {
         /// <summary>
         /// AwsAccountId

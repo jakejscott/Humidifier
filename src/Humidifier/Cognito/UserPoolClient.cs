@@ -3,7 +3,7 @@ namespace Humidifier.Cognito
     using System.Collections.Generic;
     using UserPoolClientPropertyTypes;
 
-    public class UserPoolClient : IResource
+    public class UserPoolClient : Humidifier.Resource
     {
         /// <summary>
         /// GenerateSecret

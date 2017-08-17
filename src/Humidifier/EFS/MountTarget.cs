@@ -3,7 +3,7 @@ namespace Humidifier.EFS
     using System.Collections.Generic;
     using MountTargetPropertyTypes;
 
-    public class MountTarget : IResource
+    public class MountTarget : Humidifier.Resource
     {
         /// <summary>
         /// FileSystemId

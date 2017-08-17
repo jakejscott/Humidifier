@@ -3,7 +3,7 @@ namespace Humidifier.Cognito
     using System.Collections.Generic;
     using UserPoolUserToGroupAttachmentPropertyTypes;
 
-    public class UserPoolUserToGroupAttachment : IResource
+    public class UserPoolUserToGroupAttachment : Humidifier.Resource
     {
         /// <summary>
         /// GroupName

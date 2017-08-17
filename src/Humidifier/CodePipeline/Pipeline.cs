@@ -3,7 +3,7 @@ namespace Humidifier.CodePipeline
     using System.Collections.Generic;
     using PipelinePropertyTypes;
 
-    public class Pipeline : IResource
+    public class Pipeline : Humidifier.Resource
     {
         /// <summary>
         /// ArtifactStore

@@ -3,7 +3,7 @@ namespace Humidifier.Kinesis
     using System.Collections.Generic;
     using StreamPropertyTypes;
 
-    public class Stream : IResource
+    public class Stream : Humidifier.Resource
     {
         /// <summary>
         /// Name

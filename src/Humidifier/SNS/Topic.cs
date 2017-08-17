@@ -3,7 +3,7 @@ namespace Humidifier.SNS
     using System.Collections.Generic;
     using TopicPropertyTypes;
 
-    public class Topic : IResource
+    public class Topic : Humidifier.Resource
     {
         /// <summary>
         /// DisplayName

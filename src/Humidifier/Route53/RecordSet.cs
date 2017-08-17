@@ -3,7 +3,7 @@ namespace Humidifier.Route53
     using System.Collections.Generic;
     using RecordSetPropertyTypes;
 
-    public class RecordSet : IResource
+    public class RecordSet : Humidifier.Resource
     {
         /// <summary>
         /// AliasTarget

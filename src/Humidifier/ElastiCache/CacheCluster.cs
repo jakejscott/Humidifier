@@ -3,7 +3,7 @@ namespace Humidifier.ElastiCache
     using System.Collections.Generic;
     using CacheClusterPropertyTypes;
 
-    public class CacheCluster : IResource
+    public class CacheCluster : Humidifier.Resource
     {
         /// <summary>
         /// AZMode

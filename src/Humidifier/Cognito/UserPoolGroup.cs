@@ -3,7 +3,7 @@ namespace Humidifier.Cognito
     using System.Collections.Generic;
     using UserPoolGroupPropertyTypes;
 
-    public class UserPoolGroup : IResource
+    public class UserPoolGroup : Humidifier.Resource
     {
         /// <summary>
         /// GroupName

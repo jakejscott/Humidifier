@@ -1,7 +1,6 @@
 ﻿namespace Humidifier
 {
-    public interface IResource
+    public abstract class Resource
     {
-
     }
 }

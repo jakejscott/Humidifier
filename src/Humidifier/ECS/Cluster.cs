@@ -3,7 +3,7 @@ namespace Humidifier.ECS
     using System.Collections.Generic;
     using ClusterPropertyTypes;
 
-    public class Cluster : IResource
+    public class Cluster : Humidifier.Resource
     {
         /// <summary>
         /// ClusterName

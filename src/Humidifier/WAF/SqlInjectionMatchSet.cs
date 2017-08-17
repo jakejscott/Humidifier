@@ -3,7 +3,7 @@ namespace Humidifier.WAF
     using System.Collections.Generic;
     using SqlInjectionMatchSetPropertyTypes;
 
-    public class SqlInjectionMatchSet : IResource
+    public class SqlInjectionMatchSet : Humidifier.Resource
     {
         /// <summary>
         /// Name

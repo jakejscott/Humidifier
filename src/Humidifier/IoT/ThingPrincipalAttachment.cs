@@ -3,7 +3,7 @@ namespace Humidifier.IoT
     using System.Collections.Generic;
     using ThingPrincipalAttachmentPropertyTypes;
 
-    public class ThingPrincipalAttachment : IResource
+    public class ThingPrincipalAttachment : Humidifier.Resource
     {
         /// <summary>
         /// Principal

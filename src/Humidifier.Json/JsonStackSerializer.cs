@@ -10,8 +10,6 @@ namespace Humidifier.Json
     {
         private static JsonSerializerSettings settings;
 
-        JsonTextWriter asds;
-
         static JsonStackSerializer()
         {
             settings = new JsonSerializerSettings
@@ -89,7 +87,7 @@ namespace Humidifier.Json
         private class ResourceJson
         {
             public string Type { get; set; }
-            public IResource Properties { get; set; }
+            public Resource Properties { get; set; }
         }
 
         private class FixPropertyNameWithUnderscoreContractResolver : DefaultContractResolver

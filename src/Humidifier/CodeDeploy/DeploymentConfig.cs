@@ -3,7 +3,7 @@ namespace Humidifier.CodeDeploy
     using System.Collections.Generic;
     using DeploymentConfigPropertyTypes;
 
-    public class DeploymentConfig : IResource
+    public class DeploymentConfig : Humidifier.Resource
     {
         /// <summary>
         /// DeploymentConfigName

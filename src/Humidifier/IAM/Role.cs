@@ -3,7 +3,7 @@ namespace Humidifier.IAM
     using System.Collections.Generic;
     using RolePropertyTypes;
 
-    public class Role : IResource
+    public class Role : Humidifier.Resource
     {
         /// <summary>
         /// AssumeRolePolicyDocument

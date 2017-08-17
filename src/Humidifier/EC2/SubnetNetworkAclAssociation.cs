@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using SubnetNetworkAclAssociationPropertyTypes;
 
-    public class SubnetNetworkAclAssociation : IResource
+    public class SubnetNetworkAclAssociation : Humidifier.Resource
     {
         /// <summary>
         /// NetworkAclId

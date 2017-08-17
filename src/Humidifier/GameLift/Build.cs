@@ -3,7 +3,7 @@ namespace Humidifier.GameLift
     using System.Collections.Generic;
     using BuildPropertyTypes;
 
-    public class Build : IResource
+    public class Build : Humidifier.Resource
     {
         /// <summary>
         /// Name

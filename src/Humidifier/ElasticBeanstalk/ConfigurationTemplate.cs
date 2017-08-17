@@ -3,7 +3,7 @@ namespace Humidifier.ElasticBeanstalk
     using System.Collections.Generic;
     using ConfigurationTemplatePropertyTypes;
 
-    public class ConfigurationTemplate : IResource
+    public class ConfigurationTemplate : Humidifier.Resource
     {
         /// <summary>
         /// ApplicationName

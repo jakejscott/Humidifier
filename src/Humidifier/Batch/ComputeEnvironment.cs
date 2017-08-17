@@ -3,7 +3,7 @@ namespace Humidifier.Batch
     using System.Collections.Generic;
     using ComputeEnvironmentPropertyTypes;
 
-    public class ComputeEnvironment : IResource
+    public class ComputeEnvironment : Humidifier.Resource
     {
         /// <summary>
         /// Type

@@ -3,7 +3,7 @@ namespace Humidifier.Lambda
     using System.Collections.Generic;
     using PermissionPropertyTypes;
 
-    public class Permission : IResource
+    public class Permission : Humidifier.Resource
     {
         /// <summary>
         /// Action

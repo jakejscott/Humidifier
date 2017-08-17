@@ -3,7 +3,7 @@ namespace Humidifier.ECS
     using System.Collections.Generic;
     using TaskDefinitionPropertyTypes;
 
-    public class TaskDefinition : IResource
+    public class TaskDefinition : Humidifier.Resource
     {
         /// <summary>
         /// ContainerDefinitions

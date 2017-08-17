@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using VPCCidrBlockPropertyTypes;
 
-    public class VPCCidrBlock : IResource
+    public class VPCCidrBlock : Humidifier.Resource
     {
         /// <summary>
         /// AmazonProvidedIpv6CidrBlock

@@ -3,7 +3,7 @@ namespace Humidifier.Redshift
     using System.Collections.Generic;
     using ClusterSecurityGroupIngressPropertyTypes;
 
-    public class ClusterSecurityGroupIngress : IResource
+    public class ClusterSecurityGroupIngress : Humidifier.Resource
     {
         /// <summary>
         /// CIDRIP

@@ -3,7 +3,7 @@ namespace Humidifier.RDS
     using System.Collections.Generic;
     using DBInstancePropertyTypes;
 
-    public class DBInstance : IResource
+    public class DBInstance : Humidifier.Resource
     {
         /// <summary>
         /// AllocatedStorage

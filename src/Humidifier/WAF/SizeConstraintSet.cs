@@ -3,7 +3,7 @@ namespace Humidifier.WAF
     using System.Collections.Generic;
     using SizeConstraintSetPropertyTypes;
 
-    public class SizeConstraintSet : IResource
+    public class SizeConstraintSet : Humidifier.Resource
     {
         /// <summary>
         /// Name

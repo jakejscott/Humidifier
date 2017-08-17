@@ -3,7 +3,7 @@ namespace Humidifier.ElasticLoadBalancingV2
     using System.Collections.Generic;
     using TargetGroupPropertyTypes;
 
-    public class TargetGroup : IResource
+    public class TargetGroup : Humidifier.Resource
     {
         /// <summary>
         /// HealthCheckIntervalSeconds

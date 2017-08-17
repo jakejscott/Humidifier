@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using VPCDHCPOptionsAssociationPropertyTypes;
 
-    public class VPCDHCPOptionsAssociation : IResource
+    public class VPCDHCPOptionsAssociation : Humidifier.Resource
     {
         /// <summary>
         /// DhcpOptionsId

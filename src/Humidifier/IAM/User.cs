@@ -3,7 +3,7 @@ namespace Humidifier.IAM
     using System.Collections.Generic;
     using UserPropertyTypes;
 
-    public class User : IResource
+    public class User : Humidifier.Resource
     {
         /// <summary>
         /// Groups

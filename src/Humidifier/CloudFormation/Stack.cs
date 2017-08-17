@@ -3,7 +3,7 @@ namespace Humidifier.CloudFormation
     using System.Collections.Generic;
     using StackPropertyTypes;
 
-    public class Stack : IResource
+    public class Stack : Humidifier.Resource
     {
         /// <summary>
         /// NotificationARNs

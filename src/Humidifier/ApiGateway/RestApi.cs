@@ -3,7 +3,7 @@ namespace Humidifier.ApiGateway
     using System.Collections.Generic;
     using RestApiPropertyTypes;
 
-    public class RestApi : IResource
+    public class RestApi : Humidifier.Resource
     {
         /// <summary>
         /// BinaryMediaTypes

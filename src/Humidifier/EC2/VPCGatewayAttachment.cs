@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using VPCGatewayAttachmentPropertyTypes;
 
-    public class VPCGatewayAttachment : IResource
+    public class VPCGatewayAttachment : Humidifier.Resource
     {
         /// <summary>
         /// InternetGatewayId

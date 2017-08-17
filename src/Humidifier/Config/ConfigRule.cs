@@ -3,7 +3,7 @@ namespace Humidifier.Config
     using System.Collections.Generic;
     using ConfigRulePropertyTypes;
 
-    public class ConfigRule : IResource
+    public class ConfigRule : Humidifier.Resource
     {
         /// <summary>
         /// ConfigRuleName

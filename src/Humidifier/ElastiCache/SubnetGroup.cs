@@ -3,7 +3,7 @@ namespace Humidifier.ElastiCache
     using System.Collections.Generic;
     using SubnetGroupPropertyTypes;
 
-    public class SubnetGroup : IResource
+    public class SubnetGroup : Humidifier.Resource
     {
         /// <summary>
         /// CacheSubnetGroupName

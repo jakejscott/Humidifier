@@ -3,7 +3,7 @@ namespace Humidifier.CloudFormation
     using System.Collections.Generic;
     using WaitConditionHandlePropertyTypes;
 
-    public class WaitConditionHandle : IResource
+    public class WaitConditionHandle : Humidifier.Resource
     {
     }
 

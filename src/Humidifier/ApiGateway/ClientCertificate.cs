@@ -3,7 +3,7 @@ namespace Humidifier.ApiGateway
     using System.Collections.Generic;
     using ClientCertificatePropertyTypes;
 
-    public class ClientCertificate : IResource
+    public class ClientCertificate : Humidifier.Resource
     {
         /// <summary>
         /// Description

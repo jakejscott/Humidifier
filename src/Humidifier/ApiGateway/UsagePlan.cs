@@ -3,7 +3,7 @@ namespace Humidifier.ApiGateway
     using System.Collections.Generic;
     using UsagePlanPropertyTypes;
 
-    public class UsagePlan : IResource
+    public class UsagePlan : Humidifier.Resource
     {
         /// <summary>
         /// ApiStages

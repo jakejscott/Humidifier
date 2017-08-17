@@ -3,7 +3,7 @@ namespace Humidifier.RDS
     using System.Collections.Generic;
     using OptionGroupPropertyTypes;
 
-    public class OptionGroup : IResource
+    public class OptionGroup : Humidifier.Resource
     {
         /// <summary>
         /// EngineName

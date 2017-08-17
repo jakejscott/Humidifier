@@ -62,7 +62,7 @@ namespace Humidifier.CodeGen
 
                 var resourceClassDecl = ClassDeclaration(resourceClassName)
                     .AddModifiers(Token(SyntaxKind.PublicKeyword))
-                    .AddBaseListTypes(SimpleBaseType(ParseTypeName("IResource")));
+                    .AddBaseListTypes(SimpleBaseType(ParseTypeName("Humidifier.Resource")));
 
                 foreach (var property in resourceType.Properties)
                 {

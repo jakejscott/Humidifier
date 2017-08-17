@@ -3,7 +3,7 @@ namespace Humidifier.IAM
     using System.Collections.Generic;
     using PolicyPropertyTypes;
 
-    public class Policy : IResource
+    public class Policy : Humidifier.Resource
     {
         /// <summary>
         /// Groups

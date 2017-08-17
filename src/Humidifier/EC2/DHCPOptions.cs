@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using DHCPOptionsPropertyTypes;
 
-    public class DHCPOptions : IResource
+    public class DHCPOptions : Humidifier.Resource
     {
         /// <summary>
         /// DomainName

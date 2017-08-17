@@ -3,7 +3,7 @@ namespace Humidifier.KinesisAnalytics
     using System.Collections.Generic;
     using ApplicationReferenceDataSourcePropertyTypes;
 
-    public class ApplicationReferenceDataSource : IResource
+    public class ApplicationReferenceDataSource : Humidifier.Resource
     {
         /// <summary>
         /// ApplicationName

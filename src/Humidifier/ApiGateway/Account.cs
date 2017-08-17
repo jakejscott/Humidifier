@@ -3,7 +3,7 @@ namespace Humidifier.ApiGateway
     using System.Collections.Generic;
     using AccountPropertyTypes;
 
-    public class Account : IResource
+    public class Account : Humidifier.Resource
     {
         /// <summary>
         /// CloudWatchRoleArn

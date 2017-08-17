@@ -3,7 +3,7 @@ namespace Humidifier.Lambda
     using System.Collections.Generic;
     using EventSourceMappingPropertyTypes;
 
-    public class EventSourceMapping : IResource
+    public class EventSourceMapping : Humidifier.Resource
     {
         /// <summary>
         /// BatchSize

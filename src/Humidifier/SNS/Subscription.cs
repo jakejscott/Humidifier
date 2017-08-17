@@ -3,7 +3,7 @@ namespace Humidifier.SNS
     using System.Collections.Generic;
     using SubscriptionPropertyTypes;
 
-    public class Subscription : IResource
+    public class Subscription : Humidifier.Resource
     {
         /// <summary>
         /// Endpoint

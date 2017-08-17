@@ -3,7 +3,7 @@ namespace Humidifier.Route53
     using System.Collections.Generic;
     using HostedZonePropertyTypes;
 
-    public class HostedZone : IResource
+    public class HostedZone : Humidifier.Resource
     {
         /// <summary>
         /// HostedZoneConfig

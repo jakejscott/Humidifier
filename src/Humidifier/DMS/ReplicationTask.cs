@@ -3,7 +3,7 @@ namespace Humidifier.DMS
     using System.Collections.Generic;
     using ReplicationTaskPropertyTypes;
 
-    public class ReplicationTask : IResource
+    public class ReplicationTask : Humidifier.Resource
     {
         /// <summary>
         /// ReplicationTaskSettings

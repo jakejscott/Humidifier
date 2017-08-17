@@ -3,7 +3,7 @@ namespace Humidifier.CloudWatch
     using System.Collections.Generic;
     using AlarmPropertyTypes;
 
-    public class Alarm : IResource
+    public class Alarm : Humidifier.Resource
     {
         /// <summary>
         /// ActionsEnabled

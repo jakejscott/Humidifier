@@ -3,7 +3,7 @@ namespace Humidifier.WAFRegional
     using System.Collections.Generic;
     using WebACLPropertyTypes;
 
-    public class WebACL : IResource
+    public class WebACL : Humidifier.Resource
     {
         /// <summary>
         /// MetricName

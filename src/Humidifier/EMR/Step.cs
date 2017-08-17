@@ -3,7 +3,7 @@ namespace Humidifier.EMR
     using System.Collections.Generic;
     using StepPropertyTypes;
 
-    public class Step : IResource
+    public class Step : Humidifier.Resource
     {
         /// <summary>
         /// ActionOnFailure

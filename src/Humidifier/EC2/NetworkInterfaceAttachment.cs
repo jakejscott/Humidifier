@@ -3,7 +3,7 @@ namespace Humidifier.EC2
     using System.Collections.Generic;
     using NetworkInterfaceAttachmentPropertyTypes;
 
-    public class NetworkInterfaceAttachment : IResource
+    public class NetworkInterfaceAttachment : Humidifier.Resource
     {
         /// <summary>
         /// DeleteOnTermination

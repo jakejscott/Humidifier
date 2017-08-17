@@ -3,7 +3,7 @@ namespace Humidifier.ElasticLoadBalancingV2
     using System.Collections.Generic;
     using ListenerPropertyTypes;
 
-    public class Listener : IResource
+    public class Listener : Humidifier.Resource
     {
         /// <summary>
         /// Certificates

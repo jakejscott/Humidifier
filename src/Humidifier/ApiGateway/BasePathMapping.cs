@@ -3,7 +3,7 @@ namespace Humidifier.ApiGateway
     using System.Collections.Generic;
     using BasePathMappingPropertyTypes;
 
-    public class BasePathMapping : IResource
+    public class BasePathMapping : Humidifier.Resource
     {
         /// <summary>
         /// BasePath

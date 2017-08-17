@@ -3,7 +3,7 @@ namespace Humidifier.Logs
     using System.Collections.Generic;
     using SubscriptionFilterPropertyTypes;
 
-    public class SubscriptionFilter : IResource
+    public class SubscriptionFilter : Humidifier.Resource
     {
         /// <summary>
         /// DestinationArn

@@ -3,7 +3,7 @@ namespace Humidifier.EMR
     using System.Collections.Generic;
     using SecurityConfigurationPropertyTypes;
 
-    public class SecurityConfiguration : IResource
+    public class SecurityConfiguration : Humidifier.Resource
     {
         /// <summary>
         /// Name

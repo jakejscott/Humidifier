@@ -3,7 +3,7 @@ namespace Humidifier.SSM
     using System.Collections.Generic;
     using ParameterPropertyTypes;
 
-    public class Parameter : IResource
+    public class Parameter : Humidifier.Resource
     {
         /// <summary>
         /// Type
