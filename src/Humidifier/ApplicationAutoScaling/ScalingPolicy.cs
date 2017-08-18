@@ -163,7 +163,7 @@ namespace Humidifier.ApplicationAutoScaling
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? Cooldown
+            public dynamic Cooldown
             {
                 get;
                 set;
@@ -189,7 +189,7 @@ namespace Humidifier.ApplicationAutoScaling
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? MinAdjustmentMagnitude
+            public dynamic MinAdjustmentMagnitude
             {
                 get;
                 set;
@@ -317,7 +317,7 @@ namespace Humidifier.ApplicationAutoScaling
             /// UpdateType: Mutable
             /// PrimitiveType: Double
             /// </summary>
-            public double ? MetricIntervalLowerBound
+            public dynamic MetricIntervalLowerBound
             {
                 get;
                 set;
@@ -330,7 +330,7 @@ namespace Humidifier.ApplicationAutoScaling
             /// UpdateType: Mutable
             /// PrimitiveType: Double
             /// </summary>
-            public double ? MetricIntervalUpperBound
+            public dynamic MetricIntervalUpperBound
             {
                 get;
                 set;
@@ -343,7 +343,7 @@ namespace Humidifier.ApplicationAutoScaling
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ScalingAdjustment
+            public dynamic ScalingAdjustment
             {
                 get;
                 set;
@@ -385,7 +385,7 @@ namespace Humidifier.ApplicationAutoScaling
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? ScaleInCooldown
+            public dynamic ScaleInCooldown
             {
                 get;
                 set;
@@ -398,7 +398,7 @@ namespace Humidifier.ApplicationAutoScaling
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? ScaleOutCooldown
+            public dynamic ScaleOutCooldown
             {
                 get;
                 set;
@@ -411,7 +411,7 @@ namespace Humidifier.ApplicationAutoScaling
             /// UpdateType: Mutable
             /// PrimitiveType: Double
             /// </summary>
-            public double TargetValue
+            public dynamic TargetValue
             {
                 get;
                 set;

@@ -83,7 +83,7 @@ namespace Humidifier.WAFRegional
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int Priority
+            public dynamic Priority
             {
                 get;
                 set;

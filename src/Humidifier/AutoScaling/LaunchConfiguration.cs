@@ -12,7 +12,7 @@ namespace Humidifier.AutoScaling
         /// UpdateType: Immutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? AssociatePublicIpAddress
+        public dynamic AssociatePublicIpAddress
         {
             get;
             set;
@@ -66,7 +66,7 @@ namespace Humidifier.AutoScaling
         /// UpdateType: Immutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? EbsOptimized
+        public dynamic EbsOptimized
         {
             get;
             set;
@@ -118,7 +118,7 @@ namespace Humidifier.AutoScaling
         /// UpdateType: Immutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? InstanceMonitoring
+        public dynamic InstanceMonitoring
         {
             get;
             set;
@@ -267,7 +267,7 @@ namespace Humidifier.AutoScaling
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? NoDevice
+            public dynamic NoDevice
             {
                 get;
                 set;
@@ -296,7 +296,7 @@ namespace Humidifier.AutoScaling
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? DeleteOnTermination
+            public dynamic DeleteOnTermination
             {
                 get;
                 set;
@@ -309,7 +309,7 @@ namespace Humidifier.AutoScaling
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? Encrypted
+            public dynamic Encrypted
             {
                 get;
                 set;
@@ -322,7 +322,7 @@ namespace Humidifier.AutoScaling
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? Iops
+            public dynamic Iops
             {
                 get;
                 set;
@@ -348,7 +348,7 @@ namespace Humidifier.AutoScaling
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? VolumeSize
+            public dynamic VolumeSize
             {
                 get;
                 set;

@@ -38,7 +38,7 @@ namespace Humidifier.AutoScaling
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? HeartbeatTimeout
+        public dynamic HeartbeatTimeout
         {
             get;
             set;

@@ -39,7 +39,7 @@ namespace Humidifier.DMS
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? Enabled
+        public dynamic Enabled
         {
             get;
             set;

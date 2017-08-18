@@ -51,7 +51,7 @@ namespace Humidifier.AutoScaling
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? EstimatedInstanceWarmup
+        public dynamic EstimatedInstanceWarmup
         {
             get;
             set;
@@ -77,7 +77,7 @@ namespace Humidifier.AutoScaling
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? MinAdjustmentMagnitude
+        public dynamic MinAdjustmentMagnitude
         {
             get;
             set;
@@ -103,7 +103,7 @@ namespace Humidifier.AutoScaling
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? ScalingAdjustment
+        public dynamic ScalingAdjustment
         {
             get;
             set;
@@ -135,7 +135,7 @@ namespace Humidifier.AutoScaling
             /// UpdateType: Mutable
             /// PrimitiveType: Double
             /// </summary>
-            public double ? MetricIntervalLowerBound
+            public dynamic MetricIntervalLowerBound
             {
                 get;
                 set;
@@ -148,7 +148,7 @@ namespace Humidifier.AutoScaling
             /// UpdateType: Mutable
             /// PrimitiveType: Double
             /// </summary>
-            public double ? MetricIntervalUpperBound
+            public dynamic MetricIntervalUpperBound
             {
                 get;
                 set;
@@ -161,7 +161,7 @@ namespace Humidifier.AutoScaling
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ScalingAdjustment
+            public dynamic ScalingAdjustment
             {
                 get;
                 set;

@@ -52,7 +52,7 @@ namespace Humidifier.CodePipeline
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? RestartExecutionOnUpdate
+        public dynamic RestartExecutionOnUpdate
         {
             get;
             set;
@@ -235,7 +235,7 @@ namespace Humidifier.CodePipeline
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? RunOrder
+            public dynamic RunOrder
             {
                 get;
                 set;

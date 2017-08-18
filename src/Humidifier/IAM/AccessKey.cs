@@ -17,7 +17,7 @@ namespace Humidifier.IAM
         /// UpdateType: Immutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? Serial
+        public dynamic Serial
         {
             get;
             set;

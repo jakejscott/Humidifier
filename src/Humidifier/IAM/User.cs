@@ -116,7 +116,7 @@ namespace Humidifier.IAM
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? PasswordResetRequired
+            public dynamic PasswordResetRequired
             {
                 get;
                 set;

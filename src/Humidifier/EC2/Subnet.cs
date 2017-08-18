@@ -44,7 +44,7 @@ namespace Humidifier.EC2
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? MapPublicIpOnLaunch
+        public dynamic MapPublicIpOnLaunch
         {
             get;
             set;

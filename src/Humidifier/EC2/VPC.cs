@@ -33,7 +33,7 @@ namespace Humidifier.EC2
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? EnableDnsHostnames
+        public dynamic EnableDnsHostnames
         {
             get;
             set;
@@ -46,7 +46,7 @@ namespace Humidifier.EC2
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? EnableDnsSupport
+        public dynamic EnableDnsSupport
         {
             get;
             set;

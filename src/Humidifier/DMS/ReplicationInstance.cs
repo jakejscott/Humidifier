@@ -83,7 +83,7 @@ namespace Humidifier.DMS
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? AutoMinorVersionUpgrade
+        public dynamic AutoMinorVersionUpgrade
         {
             get;
             set;
@@ -109,7 +109,7 @@ namespace Humidifier.DMS
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? AllocatedStorage
+        public dynamic AllocatedStorage
         {
             get;
             set;
@@ -136,7 +136,7 @@ namespace Humidifier.DMS
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? AllowMajorVersionUpgrade
+        public dynamic AllowMajorVersionUpgrade
         {
             get;
             set;
@@ -162,7 +162,7 @@ namespace Humidifier.DMS
         /// UpdateType: Immutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? PubliclyAccessible
+        public dynamic PubliclyAccessible
         {
             get;
             set;
@@ -175,7 +175,7 @@ namespace Humidifier.DMS
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? MultiAZ
+        public dynamic MultiAZ
         {
             get;
             set;

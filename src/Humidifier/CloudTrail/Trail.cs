@@ -38,7 +38,7 @@ namespace Humidifier.CloudTrail
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? EnableLogFileValidation
+        public dynamic EnableLogFileValidation
         {
             get;
             set;
@@ -51,7 +51,7 @@ namespace Humidifier.CloudTrail
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? IncludeGlobalServiceEvents
+        public dynamic IncludeGlobalServiceEvents
         {
             get;
             set;
@@ -64,7 +64,7 @@ namespace Humidifier.CloudTrail
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool IsLogging
+        public dynamic IsLogging
         {
             get;
             set;
@@ -77,7 +77,7 @@ namespace Humidifier.CloudTrail
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? IsMultiRegionTrail
+        public dynamic IsMultiRegionTrail
         {
             get;
             set;

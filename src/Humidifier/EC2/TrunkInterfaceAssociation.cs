@@ -25,7 +25,7 @@ namespace Humidifier.EC2
         /// UpdateType: Immutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? GREKey
+        public dynamic GREKey
         {
             get;
             set;
@@ -51,7 +51,7 @@ namespace Humidifier.EC2
         /// UpdateType: Immutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? VLANId
+        public dynamic VLANId
         {
             get;
             set;

@@ -96,7 +96,7 @@ namespace Humidifier.Cognito
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool AllowUnauthenticatedIdentities
+        public dynamic AllowUnauthenticatedIdentities
         {
             get;
             set;
@@ -227,7 +227,7 @@ namespace Humidifier.Cognito
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? ServerSideTokenCheck
+            public dynamic ServerSideTokenCheck
             {
                 get;
                 set;

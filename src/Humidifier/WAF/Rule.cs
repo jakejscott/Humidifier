@@ -70,7 +70,7 @@ namespace Humidifier.WAF
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool Negated
+            public dynamic Negated
             {
                 get;
                 set;

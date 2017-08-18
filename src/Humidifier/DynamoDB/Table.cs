@@ -248,7 +248,7 @@ namespace Humidifier.DynamoDB
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ReadCapacityUnits
+            public dynamic ReadCapacityUnits
             {
                 get;
                 set;
@@ -261,7 +261,7 @@ namespace Humidifier.DynamoDB
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int WriteCapacityUnits
+            public dynamic WriteCapacityUnits
             {
                 get;
                 set;

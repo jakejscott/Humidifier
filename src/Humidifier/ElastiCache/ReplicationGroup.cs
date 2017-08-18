@@ -16,7 +16,7 @@ namespace Humidifier.ElastiCache
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? AutoMinorVersionUpgrade
+        public dynamic AutoMinorVersionUpgrade
         {
             get;
             set;
@@ -29,7 +29,7 @@ namespace Humidifier.ElastiCache
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? AutomaticFailoverEnabled
+        public dynamic AutomaticFailoverEnabled
         {
             get;
             set;
@@ -148,7 +148,7 @@ namespace Humidifier.ElastiCache
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? NumCacheClusters
+        public dynamic NumCacheClusters
         {
             get;
             set;
@@ -161,7 +161,7 @@ namespace Humidifier.ElastiCache
         /// UpdateType: Immutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? NumNodeGroups
+        public dynamic NumNodeGroups
         {
             get;
             set;
@@ -174,7 +174,7 @@ namespace Humidifier.ElastiCache
         /// UpdateType: Immutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? Port
+        public dynamic Port
         {
             get;
             set;
@@ -227,7 +227,7 @@ namespace Humidifier.ElastiCache
         /// UpdateType: Immutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? ReplicasPerNodeGroup
+        public dynamic ReplicasPerNodeGroup
         {
             get;
             set;
@@ -307,7 +307,7 @@ namespace Humidifier.ElastiCache
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? SnapshotRetentionLimit
+        public dynamic SnapshotRetentionLimit
         {
             get;
             set;
@@ -392,7 +392,7 @@ namespace Humidifier.ElastiCache
             /// UpdateType: Immutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? ReplicaCount
+            public dynamic ReplicaCount
             {
                 get;
                 set;

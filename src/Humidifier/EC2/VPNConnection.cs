@@ -25,7 +25,7 @@ namespace Humidifier.EC2
         /// UpdateType: Immutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? StaticRoutesOnly
+        public dynamic StaticRoutesOnly
         {
             get;
             set;

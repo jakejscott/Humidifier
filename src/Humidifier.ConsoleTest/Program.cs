@@ -86,6 +86,7 @@ namespace Humidifier.ConsoleTest
             //
 
             stack.Add("CreateProdResources", new Condition(JObject.Parse("{'Fn::Equals' : [{'Ref' : 'Environment'}, 'prod']}")));
+            stack.Add("CreateDevResources", new Condition(JObject.Parse("{'Fn::Equals' : [{'Ref' : 'Environment'}, 'dev']}")));
 
             //
             // Outputs
@@ -120,14 +121,13 @@ namespace Humidifier.ConsoleTest
                 Export = new { Name = Fn.Sub("${AWS::StackName}-MonitoringSnsTopicArn") }
             });
 
-
             //
             // Resources
             //
 
             stack.Add("Volume", new EC2.Volume
             {
-                Size = 100,
+                Size = Fn.If("CreateProdResources", valueIfTrue: "100", valueIfFalse: "10"),
                 AvailabilityZone = Fn.GetAtt("Ec2Instance", EC2.Instance.Attributes.AvailabilityZone)
             },
             condition: "CreateProdResources"); // Condition example
@@ -155,7 +155,7 @@ namespace Humidifier.ConsoleTest
             stack.Add("Ec2Instance", new EC2.Instance
             {
                 ImageId = Fn.FindInMap("RegionMap", Fn.Ref("AWS::Region"), "64"),
-                InstanceType = Fn.If("CreateProdResources", "t2.micro", "t2.large"),
+                InstanceType = Fn.If("CreateProdResources", "c1.xlarge", Fn.If("CreateDevResources", "m1.large", "m1.small")),
                 UserData = Fn.Base64(
                     @"#!/bin/bash -e
                     wget https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chef_11.6.2-1.ubuntu.12.04_amd64.deb

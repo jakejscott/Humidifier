@@ -17,7 +17,7 @@ namespace Humidifier.OpsWorks
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? AllowSelfManagement
+        public dynamic AllowSelfManagement
         {
             get;
             set;

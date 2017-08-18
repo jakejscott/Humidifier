@@ -111,7 +111,7 @@ namespace Humidifier.Batch
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? ReadOnly
+            public dynamic ReadOnly
             {
                 get;
                 set;
@@ -153,7 +153,7 @@ namespace Humidifier.Batch
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? Attempts
+            public dynamic Attempts
             {
                 get;
                 set;
@@ -224,7 +224,7 @@ namespace Humidifier.Batch
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int Memory
+            public dynamic Memory
             {
                 get;
                 set;
@@ -237,7 +237,7 @@ namespace Humidifier.Batch
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? Privileged
+            public dynamic Privileged
             {
                 get;
                 set;
@@ -277,7 +277,7 @@ namespace Humidifier.Batch
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? ReadonlyRootFilesystem
+            public dynamic ReadonlyRootFilesystem
             {
                 get;
                 set;
@@ -304,7 +304,7 @@ namespace Humidifier.Batch
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int Vcpus
+            public dynamic Vcpus
             {
                 get;
                 set;
@@ -362,7 +362,7 @@ namespace Humidifier.Batch
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int SoftLimit
+            public dynamic SoftLimit
             {
                 get;
                 set;
@@ -375,7 +375,7 @@ namespace Humidifier.Batch
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int HardLimit
+            public dynamic HardLimit
             {
                 get;
                 set;

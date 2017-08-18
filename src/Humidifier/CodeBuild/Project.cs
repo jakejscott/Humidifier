@@ -122,7 +122,7 @@ namespace Humidifier.CodeBuild
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? TimeoutInMinutes
+        public dynamic TimeoutInMinutes
         {
             get;
             set;
@@ -361,7 +361,7 @@ namespace Humidifier.CodeBuild
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? PrivilegedMode
+            public dynamic PrivilegedMode
             {
                 get;
                 set;

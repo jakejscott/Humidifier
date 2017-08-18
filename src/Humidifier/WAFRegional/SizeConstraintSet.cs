@@ -57,7 +57,7 @@ namespace Humidifier.WAFRegional
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int Size
+            public dynamic Size
             {
                 get;
                 set;

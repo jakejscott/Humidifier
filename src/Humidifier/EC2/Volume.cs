@@ -12,7 +12,7 @@ namespace Humidifier.EC2
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? AutoEnableIO
+        public dynamic AutoEnableIO
         {
             get;
             set;
@@ -38,7 +38,7 @@ namespace Humidifier.EC2
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? Encrypted
+        public dynamic Encrypted
         {
             get;
             set;
@@ -51,7 +51,7 @@ namespace Humidifier.EC2
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? Iops
+        public dynamic Iops
         {
             get;
             set;
@@ -77,7 +77,7 @@ namespace Humidifier.EC2
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? Size
+        public dynamic Size
         {
             get;
             set;

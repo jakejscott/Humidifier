@@ -38,7 +38,7 @@ namespace Humidifier.EC2
         /// UpdateType: Immutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? FromPort
+        public dynamic FromPort
         {
             get;
             set;
@@ -129,7 +129,7 @@ namespace Humidifier.EC2
         /// UpdateType: Immutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? ToPort
+        public dynamic ToPort
         {
             get;
             set;

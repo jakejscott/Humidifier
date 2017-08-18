@@ -30,7 +30,7 @@ namespace Humidifier.Logs
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? RetentionInDays
+        public dynamic RetentionInDays
         {
             get;
             set;

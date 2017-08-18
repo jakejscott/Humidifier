@@ -56,7 +56,7 @@ namespace Humidifier.CodeDeploy
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int Value
+            public dynamic Value
             {
                 get;
                 set;

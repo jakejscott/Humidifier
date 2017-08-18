@@ -26,7 +26,7 @@ namespace Humidifier.Batch
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int Priority
+        public dynamic Priority
         {
             get;
             set;
@@ -83,7 +83,7 @@ namespace Humidifier.Batch
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int Order
+            public dynamic Order
             {
                 get;
                 set;

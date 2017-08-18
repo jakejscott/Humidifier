@@ -56,7 +56,7 @@ namespace Humidifier.Config
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? AllSupported
+            public dynamic AllSupported
             {
                 get;
                 set;
@@ -69,7 +69,7 @@ namespace Humidifier.Config
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? IncludeGlobalResourceTypes
+            public dynamic IncludeGlobalResourceTypes
             {
                 get;
                 set;

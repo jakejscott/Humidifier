@@ -12,7 +12,7 @@ namespace Humidifier.ApplicationAutoScaling
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int MaxCapacity
+        public dynamic MaxCapacity
         {
             get;
             set;
@@ -25,7 +25,7 @@ namespace Humidifier.ApplicationAutoScaling
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int MinCapacity
+        public dynamic MinCapacity
         {
             get;
             set;

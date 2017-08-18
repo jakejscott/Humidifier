@@ -153,7 +153,7 @@ namespace Humidifier.RDS
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? Port
+            public dynamic Port
             {
                 get;
                 set;

@@ -170,7 +170,7 @@ namespace Humidifier.ECS
             /// UpdateType: Immutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? Cpu
+            public dynamic Cpu
             {
                 get;
                 set;
@@ -183,7 +183,7 @@ namespace Humidifier.ECS
             /// UpdateType: Immutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? DisableNetworking
+            public dynamic DisableNetworking
             {
                 get;
                 set;
@@ -280,7 +280,7 @@ namespace Humidifier.ECS
             /// UpdateType: Immutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? Essential
+            public dynamic Essential
             {
                 get;
                 set;
@@ -360,7 +360,7 @@ namespace Humidifier.ECS
             /// UpdateType: Immutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? Memory
+            public dynamic Memory
             {
                 get;
                 set;
@@ -373,7 +373,7 @@ namespace Humidifier.ECS
             /// UpdateType: Immutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? MemoryReservation
+            public dynamic MemoryReservation
             {
                 get;
                 set;
@@ -427,7 +427,7 @@ namespace Humidifier.ECS
             /// UpdateType: Immutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? Privileged
+            public dynamic Privileged
             {
                 get;
                 set;
@@ -440,7 +440,7 @@ namespace Humidifier.ECS
             /// UpdateType: Immutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? ReadonlyRootFilesystem
+            public dynamic ReadonlyRootFilesystem
             {
                 get;
                 set;
@@ -598,7 +598,7 @@ namespace Humidifier.ECS
             /// UpdateType: Immutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? ContainerPort
+            public dynamic ContainerPort
             {
                 get;
                 set;
@@ -611,7 +611,7 @@ namespace Humidifier.ECS
             /// UpdateType: Immutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? HostPort
+            public dynamic HostPort
             {
                 get;
                 set;
@@ -640,7 +640,7 @@ namespace Humidifier.ECS
             /// UpdateType: Immutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int HardLimit
+            public dynamic HardLimit
             {
                 get;
                 set;
@@ -666,7 +666,7 @@ namespace Humidifier.ECS
             /// UpdateType: Immutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int SoftLimit
+            public dynamic SoftLimit
             {
                 get;
                 set;
@@ -695,7 +695,7 @@ namespace Humidifier.ECS
             /// UpdateType: Immutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? ReadOnly
+            public dynamic ReadOnly
             {
                 get;
                 set;
@@ -740,7 +740,7 @@ namespace Humidifier.ECS
             /// UpdateType: Immutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? ReadOnly
+            public dynamic ReadOnly
             {
                 get;
                 set;

@@ -16,6 +16,7 @@ namespace Humidifier.Json
             // { "Fn::If": [ condition_name, value_if_true, value_if_false ] }
 
             var fn = (FnIf)value;
+
             writer.WriteStartObject();
             writer.WritePropertyName("Fn::If");
             writer.WriteStartArray();

@@ -38,7 +38,7 @@ namespace Humidifier.WorkSpaces
         /// UpdateType: Conditional
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? RootVolumeEncryptionEnabled
+        public dynamic RootVolumeEncryptionEnabled
         {
             get;
             set;
@@ -64,7 +64,7 @@ namespace Humidifier.WorkSpaces
         /// UpdateType: Conditional
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? UserVolumeEncryptionEnabled
+        public dynamic UserVolumeEncryptionEnabled
         {
             get;
             set;

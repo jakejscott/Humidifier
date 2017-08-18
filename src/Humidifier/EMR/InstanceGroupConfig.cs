@@ -65,7 +65,7 @@ namespace Humidifier.EMR
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int InstanceCount
+        public dynamic InstanceCount
         {
             get;
             set;
@@ -206,7 +206,7 @@ namespace Humidifier.EMR
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? VolumesPerInstance
+            public dynamic VolumesPerInstance
             {
                 get;
                 set;
@@ -295,7 +295,7 @@ namespace Humidifier.EMR
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int MaxCapacity
+            public dynamic MaxCapacity
             {
                 get;
                 set;
@@ -308,7 +308,7 @@ namespace Humidifier.EMR
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int MinCapacity
+            public dynamic MinCapacity
             {
                 get;
                 set;
@@ -351,7 +351,7 @@ namespace Humidifier.EMR
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? EvaluationPeriods
+            public dynamic EvaluationPeriods
             {
                 get;
                 set;
@@ -390,7 +390,7 @@ namespace Humidifier.EMR
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int Period
+            public dynamic Period
             {
                 get;
                 set;
@@ -416,7 +416,7 @@ namespace Humidifier.EMR
             /// UpdateType: Mutable
             /// PrimitiveType: Double
             /// </summary>
-            public double Threshold
+            public dynamic Threshold
             {
                 get;
                 set;
@@ -458,7 +458,7 @@ namespace Humidifier.EMR
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? CoolDown
+            public dynamic CoolDown
             {
                 get;
                 set;
@@ -471,7 +471,7 @@ namespace Humidifier.EMR
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ScalingAdjustment
+            public dynamic ScalingAdjustment
             {
                 get;
                 set;
@@ -487,7 +487,7 @@ namespace Humidifier.EMR
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? Iops
+            public dynamic Iops
             {
                 get;
                 set;
@@ -500,7 +500,7 @@ namespace Humidifier.EMR
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int SizeInGB
+            public dynamic SizeInGB
             {
                 get;
                 set;
@@ -628,7 +628,7 @@ namespace Humidifier.EMR
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? EbsOptimized
+            public dynamic EbsOptimized
             {
                 get;
                 set;

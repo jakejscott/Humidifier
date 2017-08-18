@@ -17,7 +17,7 @@ namespace Humidifier.CloudFormation
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? Count
+        public dynamic Count
         {
             get;
             set;

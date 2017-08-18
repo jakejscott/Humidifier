@@ -12,7 +12,7 @@ namespace Humidifier.Lambda
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? BatchSize
+        public dynamic BatchSize
         {
             get;
             set;
@@ -25,7 +25,7 @@ namespace Humidifier.Lambda
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? Enabled
+        public dynamic Enabled
         {
             get;
             set;

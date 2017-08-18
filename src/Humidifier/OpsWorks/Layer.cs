@@ -26,7 +26,7 @@ namespace Humidifier.OpsWorks
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool AutoAssignElasticIps
+        public dynamic AutoAssignElasticIps
         {
             get;
             set;
@@ -39,7 +39,7 @@ namespace Humidifier.OpsWorks
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool AutoAssignPublicIps
+        public dynamic AutoAssignPublicIps
         {
             get;
             set;
@@ -105,7 +105,7 @@ namespace Humidifier.OpsWorks
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool EnableAutoHealing
+        public dynamic EnableAutoHealing
         {
             get;
             set;
@@ -118,7 +118,7 @@ namespace Humidifier.OpsWorks
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? InstallUpdatesOnBoot
+        public dynamic InstallUpdatesOnBoot
         {
             get;
             set;
@@ -223,7 +223,7 @@ namespace Humidifier.OpsWorks
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? UseEbsOptimizedInstances
+        public dynamic UseEbsOptimizedInstances
         {
             get;
             set;
@@ -255,7 +255,7 @@ namespace Humidifier.OpsWorks
             /// UpdateType: Mutable
             /// PrimitiveType: Double
             /// </summary>
-            public double ? CpuThreshold
+            public dynamic CpuThreshold
             {
                 get;
                 set;
@@ -268,7 +268,7 @@ namespace Humidifier.OpsWorks
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? IgnoreMetricsTime
+            public dynamic IgnoreMetricsTime
             {
                 get;
                 set;
@@ -281,7 +281,7 @@ namespace Humidifier.OpsWorks
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? InstanceCount
+            public dynamic InstanceCount
             {
                 get;
                 set;
@@ -294,7 +294,7 @@ namespace Humidifier.OpsWorks
             /// UpdateType: Mutable
             /// PrimitiveType: Double
             /// </summary>
-            public double ? LoadThreshold
+            public dynamic LoadThreshold
             {
                 get;
                 set;
@@ -307,7 +307,7 @@ namespace Humidifier.OpsWorks
             /// UpdateType: Mutable
             /// PrimitiveType: Double
             /// </summary>
-            public double ? MemoryThreshold
+            public dynamic MemoryThreshold
             {
                 get;
                 set;
@@ -320,7 +320,7 @@ namespace Humidifier.OpsWorks
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? ThresholdsWaitTime
+            public dynamic ThresholdsWaitTime
             {
                 get;
                 set;
@@ -336,7 +336,7 @@ namespace Humidifier.OpsWorks
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? DelayUntilElbConnectionsDrained
+            public dynamic DelayUntilElbConnectionsDrained
             {
                 get;
                 set;
@@ -349,7 +349,7 @@ namespace Humidifier.OpsWorks
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? ExecutionTimeout
+            public dynamic ExecutionTimeout
             {
                 get;
                 set;
@@ -365,7 +365,7 @@ namespace Humidifier.OpsWorks
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? Iops
+            public dynamic Iops
             {
                 get;
                 set;
@@ -391,7 +391,7 @@ namespace Humidifier.OpsWorks
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? NumberOfDisks
+            public dynamic NumberOfDisks
             {
                 get;
                 set;
@@ -404,7 +404,7 @@ namespace Humidifier.OpsWorks
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? RaidLevel
+            public dynamic RaidLevel
             {
                 get;
                 set;
@@ -417,7 +417,7 @@ namespace Humidifier.OpsWorks
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? Size
+            public dynamic Size
             {
                 get;
                 set;
@@ -548,7 +548,7 @@ namespace Humidifier.OpsWorks
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? Enable
+            public dynamic Enable
             {
                 get;
                 set;

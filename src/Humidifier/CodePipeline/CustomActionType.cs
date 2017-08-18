@@ -164,7 +164,7 @@ namespace Humidifier.CodePipeline
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int MaximumCount
+            public dynamic MaximumCount
             {
                 get;
                 set;
@@ -177,7 +177,7 @@ namespace Humidifier.CodePipeline
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int MinimumCount
+            public dynamic MinimumCount
             {
                 get;
                 set;
@@ -206,7 +206,7 @@ namespace Humidifier.CodePipeline
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool Key
+            public dynamic Key
             {
                 get;
                 set;
@@ -232,7 +232,7 @@ namespace Humidifier.CodePipeline
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? Queryable
+            public dynamic Queryable
             {
                 get;
                 set;
@@ -245,7 +245,7 @@ namespace Humidifier.CodePipeline
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool Required
+            public dynamic Required
             {
                 get;
                 set;
@@ -258,7 +258,7 @@ namespace Humidifier.CodePipeline
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool Secret
+            public dynamic Secret
             {
                 get;
                 set;

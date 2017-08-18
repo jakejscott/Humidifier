@@ -29,7 +29,7 @@ namespace Humidifier.RDS
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? AllowMajorVersionUpgrade
+        public dynamic AllowMajorVersionUpgrade
         {
             get;
             set;
@@ -42,7 +42,7 @@ namespace Humidifier.RDS
         /// UpdateType: Conditional
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? AutoMinorVersionUpgrade
+        public dynamic AutoMinorVersionUpgrade
         {
             get;
             set;
@@ -94,7 +94,7 @@ namespace Humidifier.RDS
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? CopyTagsToSnapshot
+        public dynamic CopyTagsToSnapshot
         {
             get;
             set;
@@ -264,7 +264,7 @@ namespace Humidifier.RDS
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? Iops
+        public dynamic Iops
         {
             get;
             set;
@@ -329,7 +329,7 @@ namespace Humidifier.RDS
         /// UpdateType: Conditional
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? MonitoringInterval
+        public dynamic MonitoringInterval
         {
             get;
             set;
@@ -355,7 +355,7 @@ namespace Humidifier.RDS
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? MultiAZ
+        public dynamic MultiAZ
         {
             get;
             set;
@@ -420,7 +420,7 @@ namespace Humidifier.RDS
         /// UpdateType: Immutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? PubliclyAccessible
+        public dynamic PubliclyAccessible
         {
             get;
             set;
@@ -446,7 +446,7 @@ namespace Humidifier.RDS
         /// UpdateType: Immutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? StorageEncrypted
+        public dynamic StorageEncrypted
         {
             get;
             set;

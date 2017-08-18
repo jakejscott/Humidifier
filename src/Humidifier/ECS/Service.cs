@@ -43,7 +43,7 @@ namespace Humidifier.ECS
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? DesiredCount
+        public dynamic DesiredCount
         {
             get;
             set;
@@ -142,7 +142,7 @@ namespace Humidifier.ECS
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? MaximumPercent
+            public dynamic MaximumPercent
             {
                 get;
                 set;
@@ -155,7 +155,7 @@ namespace Humidifier.ECS
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? MinimumHealthyPercent
+            public dynamic MinimumHealthyPercent
             {
                 get;
                 set;
@@ -184,7 +184,7 @@ namespace Humidifier.ECS
             /// UpdateType: Immutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ContainerPort
+            public dynamic ContainerPort
             {
                 get;
                 set;

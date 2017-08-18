@@ -310,7 +310,7 @@ namespace Humidifier.KinesisAnalytics
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? Count
+            public dynamic Count
             {
                 get;
                 set;

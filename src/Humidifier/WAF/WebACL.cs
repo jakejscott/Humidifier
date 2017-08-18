@@ -99,7 +99,7 @@ namespace Humidifier.WAF
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int Priority
+            public dynamic Priority
             {
                 get;
                 set;

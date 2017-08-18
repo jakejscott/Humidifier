@@ -48,7 +48,7 @@ namespace Humidifier.CloudFront
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? CloudFrontDefaultCertificate
+            public dynamic CloudFrontDefaultCertificate
             {
                 get;
                 set;
@@ -149,7 +149,7 @@ namespace Humidifier.CloudFront
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? HTTPPort
+            public dynamic HTTPPort
             {
                 get;
                 set;
@@ -162,7 +162,7 @@ namespace Humidifier.CloudFront
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? HTTPSPort
+            public dynamic HTTPSPort
             {
                 get;
                 set;
@@ -205,7 +205,7 @@ namespace Humidifier.CloudFront
             /// UpdateType: Mutable
             /// PrimitiveType: Long
             /// </summary>
-            public long ? ErrorCachingMinTTL
+            public dynamic ErrorCachingMinTTL
             {
                 get;
                 set;
@@ -218,7 +218,7 @@ namespace Humidifier.CloudFront
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ErrorCode
+            public dynamic ErrorCode
             {
                 get;
                 set;
@@ -231,7 +231,7 @@ namespace Humidifier.CloudFront
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? ResponseCode
+            public dynamic ResponseCode
             {
                 get;
                 set;
@@ -287,7 +287,7 @@ namespace Humidifier.CloudFront
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool QueryString
+            public dynamic QueryString
             {
                 get;
                 set;
@@ -345,7 +345,7 @@ namespace Humidifier.CloudFront
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? Compress
+            public dynamic Compress
             {
                 get;
                 set;
@@ -358,7 +358,7 @@ namespace Humidifier.CloudFront
             /// UpdateType: Mutable
             /// PrimitiveType: Long
             /// </summary>
-            public long ? DefaultTTL
+            public dynamic DefaultTTL
             {
                 get;
                 set;
@@ -384,7 +384,7 @@ namespace Humidifier.CloudFront
             /// UpdateType: Mutable
             /// PrimitiveType: Long
             /// </summary>
-            public long ? MaxTTL
+            public dynamic MaxTTL
             {
                 get;
                 set;
@@ -397,7 +397,7 @@ namespace Humidifier.CloudFront
             /// UpdateType: Mutable
             /// PrimitiveType: Long
             /// </summary>
-            public long ? MinTTL
+            public dynamic MinTTL
             {
                 get;
                 set;
@@ -423,7 +423,7 @@ namespace Humidifier.CloudFront
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? SmoothStreaming
+            public dynamic SmoothStreaming
             {
                 get;
                 set;
@@ -560,7 +560,7 @@ namespace Humidifier.CloudFront
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool Enabled
+            public dynamic Enabled
             {
                 get;
                 set;
@@ -681,7 +681,7 @@ namespace Humidifier.CloudFront
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? IncludeCookies
+            public dynamic IncludeCookies
             {
                 get;
                 set;
@@ -738,7 +738,7 @@ namespace Humidifier.CloudFront
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? Compress
+            public dynamic Compress
             {
                 get;
                 set;
@@ -751,7 +751,7 @@ namespace Humidifier.CloudFront
             /// UpdateType: Mutable
             /// PrimitiveType: Long
             /// </summary>
-            public long ? DefaultTTL
+            public dynamic DefaultTTL
             {
                 get;
                 set;
@@ -777,7 +777,7 @@ namespace Humidifier.CloudFront
             /// UpdateType: Mutable
             /// PrimitiveType: Long
             /// </summary>
-            public long ? MaxTTL
+            public dynamic MaxTTL
             {
                 get;
                 set;
@@ -790,7 +790,7 @@ namespace Humidifier.CloudFront
             /// UpdateType: Mutable
             /// PrimitiveType: Long
             /// </summary>
-            public long ? MinTTL
+            public dynamic MinTTL
             {
                 get;
                 set;
@@ -803,7 +803,7 @@ namespace Humidifier.CloudFront
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? SmoothStreaming
+            public dynamic SmoothStreaming
             {
                 get;
                 set;

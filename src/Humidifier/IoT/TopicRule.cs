@@ -127,7 +127,7 @@ namespace Humidifier.IoT
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? UseBase64
+            public dynamic UseBase64
             {
                 get;
                 set;
@@ -782,7 +782,7 @@ namespace Humidifier.IoT
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool RuleDisabled
+            public dynamic RuleDisabled
             {
                 get;
                 set;

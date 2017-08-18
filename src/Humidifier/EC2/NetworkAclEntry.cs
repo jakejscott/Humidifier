@@ -25,7 +25,7 @@ namespace Humidifier.EC2
         /// UpdateType: Immutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? Egress
+        public dynamic Egress
         {
             get;
             set;
@@ -90,7 +90,7 @@ namespace Humidifier.EC2
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int Protocol
+        public dynamic Protocol
         {
             get;
             set;
@@ -116,7 +116,7 @@ namespace Humidifier.EC2
         /// UpdateType: Immutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int RuleNumber
+        public dynamic RuleNumber
         {
             get;
             set;
@@ -134,7 +134,7 @@ namespace Humidifier.EC2
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? Code
+            public dynamic Code
             {
                 get;
                 set;
@@ -147,7 +147,7 @@ namespace Humidifier.EC2
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? Type
+            public dynamic Type
             {
                 get;
                 set;
@@ -163,7 +163,7 @@ namespace Humidifier.EC2
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? From
+            public dynamic From
             {
                 get;
                 set;
@@ -176,7 +176,7 @@ namespace Humidifier.EC2
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? To
+            public dynamic To
             {
                 get;
                 set;

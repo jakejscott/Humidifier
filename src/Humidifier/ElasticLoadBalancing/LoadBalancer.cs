@@ -86,7 +86,7 @@ namespace Humidifier.ElasticLoadBalancing
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? CrossZone
+        public dynamic CrossZone
         {
             get;
             set;
@@ -391,7 +391,7 @@ namespace Humidifier.ElasticLoadBalancing
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? EmitInterval
+            public dynamic EmitInterval
             {
                 get;
                 set;
@@ -404,7 +404,7 @@ namespace Humidifier.ElasticLoadBalancing
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool Enabled
+            public dynamic Enabled
             {
                 get;
                 set;
@@ -446,7 +446,7 @@ namespace Humidifier.ElasticLoadBalancing
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int IdleTimeout
+            public dynamic IdleTimeout
             {
                 get;
                 set;
@@ -591,7 +591,7 @@ namespace Humidifier.ElasticLoadBalancing
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool Enabled
+            public dynamic Enabled
             {
                 get;
                 set;
@@ -604,7 +604,7 @@ namespace Humidifier.ElasticLoadBalancing
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? Timeout
+            public dynamic Timeout
             {
                 get;
                 set;

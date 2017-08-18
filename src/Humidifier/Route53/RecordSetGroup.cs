@@ -125,7 +125,7 @@ namespace Humidifier.Route53
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? EvaluateTargetHealth
+            public dynamic EvaluateTargetHealth
             {
                 get;
                 set;
@@ -324,7 +324,7 @@ namespace Humidifier.Route53
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? Weight
+            public dynamic Weight
             {
                 get;
                 set;

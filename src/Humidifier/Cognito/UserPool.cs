@@ -387,7 +387,7 @@ namespace Humidifier.Cognito
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? RequireNumbers
+            public dynamic RequireNumbers
             {
                 get;
                 set;
@@ -400,7 +400,7 @@ namespace Humidifier.Cognito
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? MinimumLength
+            public dynamic MinimumLength
             {
                 get;
                 set;
@@ -413,7 +413,7 @@ namespace Humidifier.Cognito
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? RequireUppercase
+            public dynamic RequireUppercase
             {
                 get;
                 set;
@@ -426,7 +426,7 @@ namespace Humidifier.Cognito
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? RequireLowercase
+            public dynamic RequireLowercase
             {
                 get;
                 set;
@@ -439,7 +439,7 @@ namespace Humidifier.Cognito
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? RequireSymbols
+            public dynamic RequireSymbols
             {
                 get;
                 set;
@@ -468,7 +468,7 @@ namespace Humidifier.Cognito
             /// UpdateType: Mutable
             /// PrimitiveType: Double
             /// </summary>
-            public double ? UnusedAccountValidityDays
+            public dynamic UnusedAccountValidityDays
             {
                 get;
                 set;
@@ -481,7 +481,7 @@ namespace Humidifier.Cognito
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? AllowAdminCreateUserOnly
+            public dynamic AllowAdminCreateUserOnly
             {
                 get;
                 set;
@@ -497,7 +497,7 @@ namespace Humidifier.Cognito
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? DeveloperOnlyAttribute
+            public dynamic DeveloperOnlyAttribute
             {
                 get;
                 set;
@@ -510,7 +510,7 @@ namespace Humidifier.Cognito
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? Mutable
+            public dynamic Mutable
             {
                 get;
                 set;
@@ -549,7 +549,7 @@ namespace Humidifier.Cognito
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? Required
+            public dynamic Required
             {
                 get;
                 set;
@@ -649,7 +649,7 @@ namespace Humidifier.Cognito
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? DeviceOnlyRememberedOnUserPrompt
+            public dynamic DeviceOnlyRememberedOnUserPrompt
             {
                 get;
                 set;
@@ -662,7 +662,7 @@ namespace Humidifier.Cognito
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? ChallengeRequiredOnNewDevice
+            public dynamic ChallengeRequiredOnNewDevice
             {
                 get;
                 set;

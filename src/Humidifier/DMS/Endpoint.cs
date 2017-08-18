@@ -30,7 +30,7 @@ namespace Humidifier.DMS
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? Port
+        public dynamic Port
         {
             get;
             set;
@@ -296,7 +296,7 @@ namespace Humidifier.DMS
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? Port
+            public dynamic Port
             {
                 get;
                 set;

@@ -71,7 +71,7 @@ namespace Humidifier.Route53
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? EnableSNI
+            public dynamic EnableSNI
             {
                 get;
                 set;
@@ -84,7 +84,7 @@ namespace Humidifier.Route53
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? FailureThreshold
+            public dynamic FailureThreshold
             {
                 get;
                 set;
@@ -110,7 +110,7 @@ namespace Humidifier.Route53
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? HealthThreshold
+            public dynamic HealthThreshold
             {
                 get;
                 set;
@@ -149,7 +149,7 @@ namespace Humidifier.Route53
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? Inverted
+            public dynamic Inverted
             {
                 get;
                 set;
@@ -162,7 +162,7 @@ namespace Humidifier.Route53
             /// UpdateType: Immutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? MeasureLatency
+            public dynamic MeasureLatency
             {
                 get;
                 set;
@@ -175,7 +175,7 @@ namespace Humidifier.Route53
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? Port
+            public dynamic Port
             {
                 get;
                 set;
@@ -188,7 +188,7 @@ namespace Humidifier.Route53
             /// UpdateType: Immutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? RequestInterval
+            public dynamic RequestInterval
             {
                 get;
                 set;

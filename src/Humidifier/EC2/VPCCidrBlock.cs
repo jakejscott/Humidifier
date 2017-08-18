@@ -12,7 +12,7 @@ namespace Humidifier.EC2
         /// UpdateType: Immutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? AmazonProvidedIpv6CidrBlock
+        public dynamic AmazonProvidedIpv6CidrBlock
         {
             get;
             set;

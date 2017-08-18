@@ -18,7 +18,7 @@ namespace Humidifier.DirectoryService
         /// UpdateType: Immutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? CreateAlias
+        public dynamic CreateAlias
         {
             get;
             set;
@@ -31,7 +31,7 @@ namespace Humidifier.DirectoryService
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? EnableSso
+        public dynamic EnableSso
         {
             get;
             set;

@@ -31,7 +31,6 @@ namespace Humidifier.Json
             settings.Converters.Add(new FnGetAZsConverter());
             settings.Converters.Add(new FnFindInMapConverter());
             settings.Converters.Add(new FnBase64Converter());
-
             settings.Converters.Add(new FnIfConverter());
 
             settings.Converters.Add(new ConditionConverter());

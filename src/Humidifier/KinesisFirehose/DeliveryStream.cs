@@ -202,7 +202,7 @@ namespace Humidifier.KinesisFirehose
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int IntervalInSeconds
+            public dynamic IntervalInSeconds
             {
                 get;
                 set;
@@ -215,7 +215,7 @@ namespace Humidifier.KinesisFirehose
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int SizeInMBs
+            public dynamic SizeInMBs
             {
                 get;
                 set;
@@ -260,7 +260,7 @@ namespace Humidifier.KinesisFirehose
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? Enabled
+            public dynamic Enabled
             {
                 get;
                 set;
@@ -344,7 +344,7 @@ namespace Humidifier.KinesisFirehose
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int IntervalInSeconds
+            public dynamic IntervalInSeconds
             {
                 get;
                 set;
@@ -357,7 +357,7 @@ namespace Humidifier.KinesisFirehose
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int SizeInMBs
+            public dynamic SizeInMBs
             {
                 get;
                 set;
@@ -467,7 +467,7 @@ namespace Humidifier.KinesisFirehose
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int DurationInSeconds
+            public dynamic DurationInSeconds
             {
                 get;
                 set;

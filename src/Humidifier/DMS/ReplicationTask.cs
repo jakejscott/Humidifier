@@ -117,7 +117,7 @@ namespace Humidifier.DMS
         /// UpdateType: Mutable
         /// PrimitiveType: Double
         /// </summary>
-        public double ? CdcStartTime
+        public dynamic CdcStartTime
         {
             get;
             set;

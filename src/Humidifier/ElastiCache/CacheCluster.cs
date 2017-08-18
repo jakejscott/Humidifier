@@ -29,7 +29,7 @@ namespace Humidifier.ElastiCache
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? AutoMinorVersionUpgrade
+        public dynamic AutoMinorVersionUpgrade
         {
             get;
             set;
@@ -147,7 +147,7 @@ namespace Humidifier.ElastiCache
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int NumCacheNodes
+        public dynamic NumCacheNodes
         {
             get;
             set;
@@ -160,7 +160,7 @@ namespace Humidifier.ElastiCache
         /// UpdateType: Immutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? Port
+        public dynamic Port
         {
             get;
             set;
@@ -240,7 +240,7 @@ namespace Humidifier.ElastiCache
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? SnapshotRetentionLimit
+        public dynamic SnapshotRetentionLimit
         {
             get;
             set;

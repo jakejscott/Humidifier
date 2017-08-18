@@ -25,7 +25,7 @@ namespace Humidifier.ApiGateway
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? AuthorizerResultTtlInSeconds
+        public dynamic AuthorizerResultTtlInSeconds
         {
             get;
             set;

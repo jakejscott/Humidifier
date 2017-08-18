@@ -17,7 +17,7 @@ namespace Humidifier.SQS
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? ContentBasedDeduplication
+        public dynamic ContentBasedDeduplication
         {
             get;
             set;
@@ -30,7 +30,7 @@ namespace Humidifier.SQS
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? DelaySeconds
+        public dynamic DelaySeconds
         {
             get;
             set;
@@ -43,7 +43,7 @@ namespace Humidifier.SQS
         /// UpdateType: Immutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? FifoQueue
+        public dynamic FifoQueue
         {
             get;
             set;
@@ -56,7 +56,7 @@ namespace Humidifier.SQS
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? MaximumMessageSize
+        public dynamic MaximumMessageSize
         {
             get;
             set;
@@ -69,7 +69,7 @@ namespace Humidifier.SQS
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? MessageRetentionPeriod
+        public dynamic MessageRetentionPeriod
         {
             get;
             set;
@@ -95,7 +95,7 @@ namespace Humidifier.SQS
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? ReceiveMessageWaitTimeSeconds
+        public dynamic ReceiveMessageWaitTimeSeconds
         {
             get;
             set;
@@ -121,7 +121,7 @@ namespace Humidifier.SQS
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? VisibilityTimeout
+        public dynamic VisibilityTimeout
         {
             get;
             set;

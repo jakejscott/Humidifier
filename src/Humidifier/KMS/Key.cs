@@ -30,7 +30,7 @@ namespace Humidifier.KMS
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? EnableKeyRotation
+        public dynamic EnableKeyRotation
         {
             get;
             set;
@@ -43,7 +43,7 @@ namespace Humidifier.KMS
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? Enabled
+        public dynamic Enabled
         {
             get;
             set;

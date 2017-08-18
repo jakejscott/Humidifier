@@ -201,7 +201,7 @@ namespace Humidifier.S3
             /// UpdateType: Mutable
             /// PrimitiveType: Timestamp
             /// </summary>
-            public System.DateTime ExpirationDate
+            public dynamic ExpirationDate
             {
                 get;
                 set;
@@ -214,7 +214,7 @@ namespace Humidifier.S3
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? ExpirationInDays
+            public dynamic ExpirationInDays
             {
                 get;
                 set;
@@ -240,7 +240,7 @@ namespace Humidifier.S3
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? NoncurrentVersionExpirationInDays
+            public dynamic NoncurrentVersionExpirationInDays
             {
                 get;
                 set;
@@ -630,7 +630,7 @@ namespace Humidifier.S3
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? MaxAge
+            public dynamic MaxAge
             {
                 get;
                 set;
@@ -659,7 +659,7 @@ namespace Humidifier.S3
             /// UpdateType: Mutable
             /// PrimitiveType: Timestamp
             /// </summary>
-            public System.DateTime TransitionDate
+            public dynamic TransitionDate
             {
                 get;
                 set;
@@ -672,7 +672,7 @@ namespace Humidifier.S3
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? TransitionInDays
+            public dynamic TransitionInDays
             {
                 get;
                 set;
@@ -805,7 +805,7 @@ namespace Humidifier.S3
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int TransitionInDays
+            public dynamic TransitionInDays
             {
                 get;
                 set;

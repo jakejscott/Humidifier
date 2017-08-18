@@ -67,7 +67,7 @@ namespace Humidifier.CloudFormation
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? TimeoutInMinutes
+        public dynamic TimeoutInMinutes
         {
             get;
             set;

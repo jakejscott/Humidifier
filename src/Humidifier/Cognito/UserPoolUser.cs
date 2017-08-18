@@ -79,7 +79,7 @@ namespace Humidifier.Cognito
         /// UpdateType: Immutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? ForceAliasCreation
+        public dynamic ForceAliasCreation
         {
             get;
             set;

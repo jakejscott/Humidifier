@@ -16,7 +16,7 @@ namespace Humidifier.Redshift
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? AllowVersionUpgrade
+        public dynamic AllowVersionUpgrade
         {
             get;
             set;
@@ -29,7 +29,7 @@ namespace Humidifier.Redshift
         /// UpdateType: Immutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? AutomatedSnapshotRetentionPeriod
+        public dynamic AutomatedSnapshotRetentionPeriod
         {
             get;
             set;
@@ -147,7 +147,7 @@ namespace Humidifier.Redshift
         /// UpdateType: Immutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? Encrypted
+        public dynamic Encrypted
         {
             get;
             set;
@@ -265,7 +265,7 @@ namespace Humidifier.Redshift
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? NumberOfNodes
+        public dynamic NumberOfNodes
         {
             get;
             set;
@@ -291,7 +291,7 @@ namespace Humidifier.Redshift
         /// UpdateType: Immutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? Port
+        public dynamic Port
         {
             get;
             set;
@@ -317,7 +317,7 @@ namespace Humidifier.Redshift
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? PubliclyAccessible
+        public dynamic PubliclyAccessible
         {
             get;
             set;

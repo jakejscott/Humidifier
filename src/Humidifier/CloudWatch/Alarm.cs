@@ -12,7 +12,7 @@ namespace Humidifier.CloudWatch
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? ActionsEnabled
+        public dynamic ActionsEnabled
         {
             get;
             set;
@@ -105,7 +105,7 @@ namespace Humidifier.CloudWatch
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int EvaluationPeriods
+        public dynamic EvaluationPeriods
         {
             get;
             set;
@@ -185,7 +185,7 @@ namespace Humidifier.CloudWatch
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int Period
+        public dynamic Period
         {
             get;
             set;
@@ -211,7 +211,7 @@ namespace Humidifier.CloudWatch
         /// UpdateType: Mutable
         /// PrimitiveType: Double
         /// </summary>
-        public double Threshold
+        public dynamic Threshold
         {
             get;
             set;

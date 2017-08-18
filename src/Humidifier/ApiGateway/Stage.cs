@@ -12,7 +12,7 @@ namespace Humidifier.ApiGateway
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? CacheClusterEnabled
+        public dynamic CacheClusterEnabled
         {
             get;
             set;
@@ -136,7 +136,7 @@ namespace Humidifier.ApiGateway
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? CacheDataEncrypted
+            public dynamic CacheDataEncrypted
             {
                 get;
                 set;
@@ -149,7 +149,7 @@ namespace Humidifier.ApiGateway
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? CacheTtlInSeconds
+            public dynamic CacheTtlInSeconds
             {
                 get;
                 set;
@@ -162,7 +162,7 @@ namespace Humidifier.ApiGateway
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? CachingEnabled
+            public dynamic CachingEnabled
             {
                 get;
                 set;
@@ -175,7 +175,7 @@ namespace Humidifier.ApiGateway
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? DataTraceEnabled
+            public dynamic DataTraceEnabled
             {
                 get;
                 set;
@@ -214,7 +214,7 @@ namespace Humidifier.ApiGateway
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? MetricsEnabled
+            public dynamic MetricsEnabled
             {
                 get;
                 set;
@@ -240,7 +240,7 @@ namespace Humidifier.ApiGateway
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? ThrottlingBurstLimit
+            public dynamic ThrottlingBurstLimit
             {
                 get;
                 set;
@@ -253,7 +253,7 @@ namespace Humidifier.ApiGateway
             /// UpdateType: Mutable
             /// PrimitiveType: Double
             /// </summary>
-            public double ? ThrottlingRateLimit
+            public dynamic ThrottlingRateLimit
             {
                 get;
                 set;

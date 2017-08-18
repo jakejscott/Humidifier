@@ -51,7 +51,7 @@ namespace Humidifier.Cognito
         /// UpdateType: Mutable
         /// PrimitiveType: Double
         /// </summary>
-        public double ? Precedence
+        public dynamic Precedence
         {
             get;
             set;

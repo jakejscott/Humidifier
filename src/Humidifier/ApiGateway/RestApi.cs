@@ -83,7 +83,7 @@ namespace Humidifier.ApiGateway
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? FailOnWarnings
+        public dynamic FailOnWarnings
         {
             get;
             set;

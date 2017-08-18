@@ -12,7 +12,7 @@ namespace Humidifier.DataPipeline
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? Activate
+        public dynamic Activate
         {
             get;
             set;

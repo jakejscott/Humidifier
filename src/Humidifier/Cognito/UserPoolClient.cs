@@ -18,7 +18,7 @@ namespace Humidifier.Cognito
         /// UpdateType: Immutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? GenerateSecret
+        public dynamic GenerateSecret
         {
             get;
             set;
@@ -71,7 +71,7 @@ namespace Humidifier.Cognito
         /// UpdateType: Mutable
         /// PrimitiveType: Double
         /// </summary>
-        public double ? RefreshTokenValidity
+        public dynamic RefreshTokenValidity
         {
             get;
             set;

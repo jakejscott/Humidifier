@@ -80,7 +80,7 @@ namespace Humidifier.OpsWorks
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? EnableSsl
+        public dynamic EnableSsl
         {
             get;
             set;
@@ -232,7 +232,7 @@ namespace Humidifier.OpsWorks
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? Secure
+            public dynamic Secure
             {
                 get;
                 set;

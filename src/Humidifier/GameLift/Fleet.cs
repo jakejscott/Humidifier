@@ -38,7 +38,7 @@ namespace Humidifier.GameLift
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int DesiredEC2Instances
+        public dynamic DesiredEC2Instances
         {
             get;
             set;
@@ -92,7 +92,7 @@ namespace Humidifier.GameLift
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? MaxSize
+        public dynamic MaxSize
         {
             get;
             set;
@@ -105,7 +105,7 @@ namespace Humidifier.GameLift
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? MinSize
+        public dynamic MinSize
         {
             get;
             set;
@@ -162,7 +162,7 @@ namespace Humidifier.GameLift
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int FromPort
+            public dynamic FromPort
             {
                 get;
                 set;
@@ -201,7 +201,7 @@ namespace Humidifier.GameLift
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ToPort
+            public dynamic ToPort
             {
                 get;
                 set;

@@ -12,7 +12,7 @@ namespace Humidifier.EC2
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? DeleteOnTermination
+        public dynamic DeleteOnTermination
         {
             get;
             set;

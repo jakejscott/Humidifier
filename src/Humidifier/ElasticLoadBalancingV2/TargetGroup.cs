@@ -17,7 +17,7 @@ namespace Humidifier.ElasticLoadBalancingV2
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? HealthCheckIntervalSeconds
+        public dynamic HealthCheckIntervalSeconds
         {
             get;
             set;
@@ -69,7 +69,7 @@ namespace Humidifier.ElasticLoadBalancingV2
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? HealthCheckTimeoutSeconds
+        public dynamic HealthCheckTimeoutSeconds
         {
             get;
             set;
@@ -82,7 +82,7 @@ namespace Humidifier.ElasticLoadBalancingV2
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? HealthyThresholdCount
+        public dynamic HealthyThresholdCount
         {
             get;
             set;
@@ -121,7 +121,7 @@ namespace Humidifier.ElasticLoadBalancingV2
         /// UpdateType: Immutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int Port
+        public dynamic Port
         {
             get;
             set;
@@ -189,7 +189,7 @@ namespace Humidifier.ElasticLoadBalancingV2
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? UnhealthyThresholdCount
+        public dynamic UnhealthyThresholdCount
         {
             get;
             set;
@@ -278,7 +278,7 @@ namespace Humidifier.ElasticLoadBalancingV2
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? Port
+            public dynamic Port
             {
                 get;
                 set;

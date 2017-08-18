@@ -53,7 +53,7 @@ namespace Humidifier.ElasticLoadBalancingV2
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int Priority
+        public dynamic Priority
         {
             get;
             set;

@@ -95,7 +95,7 @@ namespace Humidifier.Batch
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int MaxvCpus
+            public dynamic MaxvCpus
             {
                 get;
                 set;
@@ -108,7 +108,7 @@ namespace Humidifier.Batch
             /// UpdateType: Immutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? BidPercentage
+            public dynamic BidPercentage
             {
                 get;
                 set;
@@ -162,7 +162,7 @@ namespace Humidifier.Batch
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int MinvCpus
+            public dynamic MinvCpus
             {
                 get;
                 set;
@@ -241,7 +241,7 @@ namespace Humidifier.Batch
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? DesiredvCpus
+            public dynamic DesiredvCpus
             {
                 get;
                 set;

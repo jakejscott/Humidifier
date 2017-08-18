@@ -46,7 +46,7 @@ namespace Humidifier.EC2
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? AssociatePublicIpAddress
+            public dynamic AssociatePublicIpAddress
             {
                 get;
                 set;
@@ -59,7 +59,7 @@ namespace Humidifier.EC2
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? DeleteOnTermination
+            public dynamic DeleteOnTermination
             {
                 get;
                 set;
@@ -85,7 +85,7 @@ namespace Humidifier.EC2
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? DeviceIndex
+            public dynamic DeviceIndex
             {
                 get;
                 set;
@@ -112,7 +112,7 @@ namespace Humidifier.EC2
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? Ipv6AddressCount
+            public dynamic Ipv6AddressCount
             {
                 get;
                 set;
@@ -166,7 +166,7 @@ namespace Humidifier.EC2
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? SecondaryPrivateIpAddressCount
+            public dynamic SecondaryPrivateIpAddressCount
             {
                 get;
                 set;
@@ -195,7 +195,7 @@ namespace Humidifier.EC2
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? Primary
+            public dynamic Primary
             {
                 get;
                 set;
@@ -254,7 +254,7 @@ namespace Humidifier.EC2
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? EbsOptimized
+            public dynamic EbsOptimized
             {
                 get;
                 set;
@@ -438,7 +438,7 @@ namespace Humidifier.EC2
             /// UpdateType: Mutable
             /// PrimitiveType: Double
             /// </summary>
-            public double ? WeightedCapacity
+            public dynamic WeightedCapacity
             {
                 get;
                 set;
@@ -565,7 +565,7 @@ namespace Humidifier.EC2
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int TargetCapacity
+            public dynamic TargetCapacity
             {
                 get;
                 set;
@@ -578,7 +578,7 @@ namespace Humidifier.EC2
             /// UpdateType: Immutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? TerminateInstancesWithExpiration
+            public dynamic TerminateInstancesWithExpiration
             {
                 get;
                 set;
@@ -620,7 +620,7 @@ namespace Humidifier.EC2
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? DeleteOnTermination
+            public dynamic DeleteOnTermination
             {
                 get;
                 set;
@@ -633,7 +633,7 @@ namespace Humidifier.EC2
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? Encrypted
+            public dynamic Encrypted
             {
                 get;
                 set;
@@ -646,7 +646,7 @@ namespace Humidifier.EC2
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? Iops
+            public dynamic Iops
             {
                 get;
                 set;
@@ -672,7 +672,7 @@ namespace Humidifier.EC2
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? VolumeSize
+            public dynamic VolumeSize
             {
                 get;
                 set;
@@ -701,7 +701,7 @@ namespace Humidifier.EC2
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? Enabled
+            public dynamic Enabled
             {
                 get;
                 set;

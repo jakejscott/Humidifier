@@ -53,7 +53,7 @@ namespace Humidifier.EC2
         /// UpdateType: Immutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? NetbiosNodeType
+        public dynamic NetbiosNodeType
         {
             get;
             set;

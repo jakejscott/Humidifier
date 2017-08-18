@@ -29,7 +29,7 @@ namespace Humidifier.RDS
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? BackupRetentionPeriod
+        public dynamic BackupRetentionPeriod
         {
             get;
             set;
@@ -146,7 +146,7 @@ namespace Humidifier.RDS
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? Port
+        public dynamic Port
         {
             get;
             set;
@@ -211,7 +211,7 @@ namespace Humidifier.RDS
         /// UpdateType: Immutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? StorageEncrypted
+        public dynamic StorageEncrypted
         {
             get;
             set;

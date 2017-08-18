@@ -12,7 +12,7 @@ namespace Humidifier.ApiGateway
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? ApiKeyRequired
+        public dynamic ApiKeyRequired
         {
             get;
             set;

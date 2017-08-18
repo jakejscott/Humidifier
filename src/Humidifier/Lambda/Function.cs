@@ -108,7 +108,7 @@ namespace Humidifier.Lambda
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? MemorySize
+        public dynamic MemorySize
         {
             get;
             set;
@@ -161,7 +161,7 @@ namespace Humidifier.Lambda
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? Timeout
+        public dynamic Timeout
         {
             get;
             set;

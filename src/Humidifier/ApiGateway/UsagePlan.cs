@@ -83,7 +83,7 @@ namespace Humidifier.ApiGateway
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? BurstLimit
+            public dynamic BurstLimit
             {
                 get;
                 set;
@@ -96,7 +96,7 @@ namespace Humidifier.ApiGateway
             /// UpdateType: Mutable
             /// PrimitiveType: Double
             /// </summary>
-            public double ? RateLimit
+            public dynamic RateLimit
             {
                 get;
                 set;
@@ -141,7 +141,7 @@ namespace Humidifier.ApiGateway
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? Limit
+            public dynamic Limit
             {
                 get;
                 set;
@@ -154,7 +154,7 @@ namespace Humidifier.ApiGateway
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? Offset
+            public dynamic Offset
             {
                 get;
                 set;

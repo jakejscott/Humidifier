@@ -100,7 +100,7 @@ namespace Humidifier.OpsWorks
         /// UpdateType: Immutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? EbsOptimized
+        public dynamic EbsOptimized
         {
             get;
             set;
@@ -140,7 +140,7 @@ namespace Humidifier.OpsWorks
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? InstallUpdatesOnBoot
+        public dynamic InstallUpdatesOnBoot
         {
             get;
             set;
@@ -358,7 +358,7 @@ namespace Humidifier.OpsWorks
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? DeleteOnTermination
+            public dynamic DeleteOnTermination
             {
                 get;
                 set;
@@ -371,7 +371,7 @@ namespace Humidifier.OpsWorks
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? Iops
+            public dynamic Iops
             {
                 get;
                 set;
@@ -397,7 +397,7 @@ namespace Humidifier.OpsWorks
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? VolumeSize
+            public dynamic VolumeSize
             {
                 get;
                 set;

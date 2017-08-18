@@ -212,6 +212,11 @@ namespace Humidifier.CodeGen
 
             if (!string.IsNullOrWhiteSpace(property.PrimitiveType))
             {
+                // NOTE: We can't actually use strong typing because of the cloudformation intrinsics functions :(
+                // I thought about doing something like DynamicInt, DynamicString etc so that you still get a bit of an indication of what the type should be.
+                // At least the xmldoc comments show the correct types in intellisense.
+                return "dynamic";
+#if false
                 switch (property.PrimitiveType)
                 {
                     case "String":
@@ -239,6 +244,7 @@ namespace Humidifier.CodeGen
                     default:
                         throw new InvalidOperationException($"Unknown PrimitiveType: {property.PrimitiveType}");
                 }
+#endif
             }
             else
             {
@@ -246,6 +252,7 @@ namespace Humidifier.CodeGen
 
                 switch (property.Type)
                 {
+                    // TODO: Might have use "List<dynamic>" dynamic[] or dynamic.
                     case "List":
                         if (property.PrimitiveItemType != null)
                         {
@@ -282,6 +289,7 @@ namespace Humidifier.CodeGen
 
                         break;
 
+                    // TODO: Might have to use "Dictionary<string, dynamic>"
                     case "Map":
                         if (property.PrimitiveItemType != null)
                         {

@@ -30,7 +30,7 @@ namespace Humidifier.Kinesis
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? RetentionPeriodHours
+        public dynamic RetentionPeriodHours
         {
             get;
             set;
@@ -43,7 +43,7 @@ namespace Humidifier.Kinesis
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ShardCount
+        public dynamic ShardCount
         {
             get;
             set;

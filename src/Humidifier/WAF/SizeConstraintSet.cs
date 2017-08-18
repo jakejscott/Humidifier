@@ -99,7 +99,7 @@ namespace Humidifier.WAF
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int Size
+            public dynamic Size
             {
                 get;
                 set;

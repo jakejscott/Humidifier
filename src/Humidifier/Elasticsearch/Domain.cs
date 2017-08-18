@@ -129,7 +129,7 @@ namespace Humidifier.Elasticsearch
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? DedicatedMasterCount
+            public dynamic DedicatedMasterCount
             {
                 get;
                 set;
@@ -142,7 +142,7 @@ namespace Humidifier.Elasticsearch
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? DedicatedMasterEnabled
+            public dynamic DedicatedMasterEnabled
             {
                 get;
                 set;
@@ -168,7 +168,7 @@ namespace Humidifier.Elasticsearch
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? InstanceCount
+            public dynamic InstanceCount
             {
                 get;
                 set;
@@ -194,7 +194,7 @@ namespace Humidifier.Elasticsearch
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? ZoneAwarenessEnabled
+            public dynamic ZoneAwarenessEnabled
             {
                 get;
                 set;
@@ -210,7 +210,7 @@ namespace Humidifier.Elasticsearch
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? AutomatedSnapshotStartHour
+            public dynamic AutomatedSnapshotStartHour
             {
                 get;
                 set;
@@ -226,7 +226,7 @@ namespace Humidifier.Elasticsearch
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? EBSEnabled
+            public dynamic EBSEnabled
             {
                 get;
                 set;
@@ -239,7 +239,7 @@ namespace Humidifier.Elasticsearch
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? Iops
+            public dynamic Iops
             {
                 get;
                 set;
@@ -252,7 +252,7 @@ namespace Humidifier.Elasticsearch
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? VolumeSize
+            public dynamic VolumeSize
             {
                 get;
                 set;

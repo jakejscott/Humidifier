@@ -78,7 +78,7 @@ namespace Humidifier.EMR
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? TargetOnDemandCapacity
+        public dynamic TargetOnDemandCapacity
         {
             get;
             set;
@@ -91,7 +91,7 @@ namespace Humidifier.EMR
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? TargetSpotCapacity
+        public dynamic TargetSpotCapacity
         {
             get;
             set;
@@ -122,7 +122,7 @@ namespace Humidifier.EMR
             /// UpdateType: Immutable
             /// PrimitiveType: Double
             /// </summary>
-            public double ? BidPriceAsPercentageOfOnDemandPrice
+            public dynamic BidPriceAsPercentageOfOnDemandPrice
             {
                 get;
                 set;
@@ -175,7 +175,7 @@ namespace Humidifier.EMR
             /// UpdateType: Immutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? WeightedCapacity
+            public dynamic WeightedCapacity
             {
                 get;
                 set;
@@ -191,7 +191,7 @@ namespace Humidifier.EMR
             /// UpdateType: Immutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? Iops
+            public dynamic Iops
             {
                 get;
                 set;
@@ -204,7 +204,7 @@ namespace Humidifier.EMR
             /// UpdateType: Immutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int SizeInGB
+            public dynamic SizeInGB
             {
                 get;
                 set;
@@ -233,7 +233,7 @@ namespace Humidifier.EMR
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? BlockDurationMinutes
+            public dynamic BlockDurationMinutes
             {
                 get;
                 set;
@@ -259,7 +259,7 @@ namespace Humidifier.EMR
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int TimeoutDurationMinutes
+            public dynamic TimeoutDurationMinutes
             {
                 get;
                 set;
@@ -333,7 +333,7 @@ namespace Humidifier.EMR
             /// UpdateType: Immutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? EbsOptimized
+            public dynamic EbsOptimized
             {
                 get;
                 set;
@@ -378,7 +378,7 @@ namespace Humidifier.EMR
             /// UpdateType: Immutable
             /// PrimitiveType: Integer
             /// </summary>
-            public int ? VolumesPerInstance
+            public dynamic VolumesPerInstance
             {
                 get;
                 set;

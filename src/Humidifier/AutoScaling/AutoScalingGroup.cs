@@ -52,7 +52,7 @@ namespace Humidifier.AutoScaling
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
-        public int ? HealthCheckGracePeriod
+        public dynamic HealthCheckGracePeriod
         {
             get;
             set;
@@ -319,7 +319,7 @@ namespace Humidifier.AutoScaling
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool PropagateAtLaunch
+            public dynamic PropagateAtLaunch
             {
                 get;
                 set;

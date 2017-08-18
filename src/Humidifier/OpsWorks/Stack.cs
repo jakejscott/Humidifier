@@ -66,7 +66,7 @@ namespace Humidifier.OpsWorks
         /// UpdateType: Immutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? ClonePermissions
+        public dynamic ClonePermissions
         {
             get;
             set;
@@ -289,7 +289,7 @@ namespace Humidifier.OpsWorks
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? UseCustomCookbooks
+        public dynamic UseCustomCookbooks
         {
             get;
             set;
@@ -302,7 +302,7 @@ namespace Humidifier.OpsWorks
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
-        public bool ? UseOpsworksSecurityGroups
+        public dynamic UseOpsworksSecurityGroups
         {
             get;
             set;
@@ -498,7 +498,7 @@ namespace Humidifier.OpsWorks
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? ManageBerkshelf
+            public dynamic ManageBerkshelf
             {
                 get;
                 set;

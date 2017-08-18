@@ -446,7 +446,7 @@ namespace Humidifier.CodeDeploy
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? IgnoreApplicationStopFailures
+            public dynamic IgnoreApplicationStopFailures
             {
                 get;
                 set;
@@ -489,7 +489,7 @@ namespace Humidifier.CodeDeploy
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? Enabled
+            public dynamic Enabled
             {
                 get;
                 set;
@@ -502,7 +502,7 @@ namespace Humidifier.CodeDeploy
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
-            public bool ? IgnorePollAlarmFailure
+            public dynamic IgnorePollAlarmFailure
             {
                 get;
                 set;
