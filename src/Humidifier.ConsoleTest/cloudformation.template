@@ -29,6 +29,10 @@
     "SubnetIds": {
       "Type": "String",
       "MinLength": 3
+    },
+    "SecurityGroup": {
+      "Type": "String",
+      "MinLength": 3
     }
   },
   "Resources": {
@@ -185,6 +189,25 @@
                 }
               ]
             }
+          ]
+        }
+      }
+    },
+    "KinesisStream": {
+      "Type": "AWS::Kinesis::Stream",
+      "Properties": {
+        "Name": "MyStream",
+        "RetentionPeriodHours": 24
+      }
+    },
+    "KinesisStreamMapping": {
+      "Type": "AWS::Lambda::EventSourceMapping",
+      "Properties": {
+        "Enabled": true,
+        "EventSourceArn": {
+          "Fn::GetAtt": [
+            "KinesisStream",
+            "Arn"
           ]
         }
       }
@@ -373,7 +396,7 @@
         "dev"
       ]
     },
-    "NotProduction": {
+    "NotCondition": {
       "Fn::Not": [
         {
           "Fn::Equals": [
@@ -382,6 +405,36 @@
             },
             "prod"
           ]
+        }
+      ]
+    },
+    "AndCondition": {
+      "Fn::And": [
+        {
+          "Fn::Equals": [
+            "sg-mysqgroup",
+            {
+              "Ref": "SecurityGroup"
+            }
+          ]
+        },
+        {
+          "Condition": "NotCondition"
+        }
+      ]
+    },
+    "OrCondition": {
+      "Fn::Or": [
+        {
+          "Fn::Equals": [
+            "sg-mysqgroup",
+            {
+              "Ref": "SecurityGroup"
+            }
+          ]
+        },
+        {
+          "Condition": "NotCondition"
         }
       ]
     }

@@ -16,15 +16,67 @@ namespace Humidifier
         public static FnGetAZs GetAZs(dynamic region) => new FnGetAZs(region);
         public static FnFindInMap FindInMap(string mapName, dynamic topLevelKey, dynamic secondLevelKey) => new FnFindInMap(mapName, topLevelKey, secondLevelKey);
 
+        public static FnAnd And(params dynamic[] conditions) => new FnAnd(conditions);
         public static FnIf If(string conditionName, dynamic valueIfTrue, dynamic valueIfFalse) => new FnIf(conditionName, valueIfTrue, valueIfFalse);
         public new static FnEquals Equals(dynamic value1, dynamic value2) => new FnEquals(value1, value2);
         public static FnNot Not(dynamic condition) => new FnNot(condition);
+        public static FnOr Or(params dynamic[] conditions) => new FnOr(conditions);
+    }
+
+    /// <summary>
+    /// Returns true if any one of the specified conditions evaluate to true, or returns false if all of the conditions evaluates to false. Fn::Or acts as an OR operator. The minimum number of conditions that you can include is 2, and the maximum is 10.
+    /// 
+    /// Example: 
+    /// 
+    /// { "Fn::And": [{condition}, {...}] }
+    /// 
+    /// </summary>
+    public class FnAnd
+    {
+        public List<dynamic> Conditions { get; }
+
+        public FnAnd(params dynamic[] conditions)
+        {
+            if (conditions == null) throw new ArgumentNullException(nameof(conditions));
+            if (conditions.Length < 2 || conditions.Length > 10)
+            {
+                throw new ArgumentException("The minimum number of conditions that you can include is 2, and the maximum is 10.");
+            }
+
+            Conditions = new List<dynamic>(conditions);
+        }
+    }
+
+    /// <summary>
+    /// Returns true if any one of the specified conditions evaluate to true, or returns false if all of the conditions evaluates to false. Fn::Or acts as an OR operator. The minimum number of conditions that you can include is 2, and the maximum is 10.
+    /// 
+    /// Example: 
+    /// 
+    /// { "Fn::Or": [{condition}, {...}] }
+    /// 
+    /// </summary>
+    public class FnOr
+    {
+        public List<dynamic> Conditions { get; }
+
+        public FnOr(params dynamic[] conditions)
+        {
+            if (conditions == null) throw new ArgumentNullException(nameof(conditions));
+            if (conditions.Length < 2 || conditions.Length > 10)
+            {
+                throw new ArgumentException("The minimum number of conditions that you can include is 2, and the maximum is 10.");
+            }
+
+            Conditions = new List<dynamic>(conditions);
+        }
     }
 
     /// <summary>
     /// Returns true for a condition that evaluates to false or returns false for a condition that evaluates to true. Fn::Not acts as a NOT operator.
     /// 
-    /// Example: 
+    /// A condition such as Fn::Equals that evaluates to true or false.
+    /// 
+    /// Example:
     /// 
     /// { "Fn::Not": [{condition}] }
     /// 

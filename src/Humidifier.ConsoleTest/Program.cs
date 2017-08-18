@@ -81,12 +81,34 @@ namespace Humidifier.ConsoleTest
                 MinLength = 3
             });
 
+            stack.Add("SecurityGroup", new Parameter
+            {
+                Type = "String",
+                MinLength = 3
+            });
+
             //
             // Conditions
             //
             stack.Add("CreateProdResources", new Condition(Fn.Equals(Fn.Ref("Environment"), "prod")));
             stack.Add("CreateDevResources", new Condition(Fn.Equals(Fn.Ref("Environment"), "dev")));
-            stack.Add("NotProduction", new Condition(Fn.Not(Fn.Equals(Fn.Ref("Environment"), "prod"))));
+            stack.Add("NotCondition", new Condition(Fn.Not(Fn.Equals(Fn.Ref("Environment"), "prod"))));
+            stack.Add("AndCondition", 
+                new Condition(
+                    Fn.And(
+                        Fn.Equals("sg-mysqgroup", Fn.Ref("SecurityGroup")),
+                        new { Condition = "NotCondition" }
+                    )
+                )
+            );
+            stack.Add("OrCondition",
+                new Condition(
+                    Fn.Or(
+                        Fn.Equals("sg-mysqgroup", Fn.Ref("SecurityGroup")),
+                        new { Condition = "NotCondition" }
+                    )
+                )
+            );
 
             //
             // Outputs
@@ -208,6 +230,18 @@ namespace Humidifier.ConsoleTest
                         }
                     }
                 }
+            });
+
+            stack.Add("KinesisStream", new Kinesis.Stream
+            {
+                Name = "MyStream",
+                RetentionPeriodHours = 24
+            });
+
+            stack.Add("KinesisStreamMapping", new Lambda.EventSourceMapping
+            {
+                Enabled = true,
+                EventSourceArn = Fn.GetAtt("KinesisStream", Kinesis.Stream.Attributes.Arn)
             });
 
             stack.Add("LambdaFunction", new Lambda.Function

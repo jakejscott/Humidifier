@@ -17,10 +17,13 @@ namespace Humidifier.Json
                 Formatting = Formatting.Indented,
                 NullValueHandling = NullValueHandling.Ignore,
                 DateFormatHandling = DateFormatHandling.IsoDateFormat,
-
-                ContractResolver = new FixPropertyNameWithUnderscoreContractResolver(),
             };
 
+            settings.ContractResolver = new FixPropertyNameWithUnderscoreContractResolver();
+
+            settings.Converters.Add(new ConditionConverter());
+
+            // Intrinsic functions
             settings.Converters.Add(new FnJoinConverter());
             settings.Converters.Add(new FnRefConverter());
             settings.Converters.Add(new FnGetAttConverter());
@@ -32,11 +35,12 @@ namespace Humidifier.Json
             settings.Converters.Add(new FnFindInMapConverter());
             settings.Converters.Add(new FnBase64Converter());
 
+            // Conditional functions
+            settings.Converters.Add(new FnAndConverter());
             settings.Converters.Add(new FnIfConverter());
             settings.Converters.Add(new FnEqualsConverter());
             settings.Converters.Add(new FnNotConverter());
-
-            settings.Converters.Add(new ConditionConverter());
+            settings.Converters.Add(new FnOrConverter());
         }
 
         public string Serialize(Stack stack)
