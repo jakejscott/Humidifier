@@ -5,7 +5,6 @@ namespace Humidifier
 {
     public static class Fn
     {
-        public static FnIf If(string conditionName, dynamic valueIfTrue, dynamic valueIfFalse) => new FnIf(conditionName, valueIfTrue, valueIfFalse);
         public static FnBase64 Base64(dynamic valueToEncode) => new FnBase64(valueToEncode);
         public static FnJoin Join(string seperator, params dynamic[] parameters) => new FnJoin(seperator, parameters);
         public static FnRef Ref(string reference) => new FnRef(reference);
@@ -16,6 +15,32 @@ namespace Humidifier
         public static FnSelect Select(string index, dynamic listOfObjects) => new FnSelect(index, listOfObjects);
         public static FnGetAZs GetAZs(dynamic region) => new FnGetAZs(region);
         public static FnFindInMap FindInMap(string mapName, dynamic topLevelKey, dynamic secondLevelKey) => new FnFindInMap(mapName, topLevelKey, secondLevelKey);
+
+        public static FnIf If(string conditionName, dynamic valueIfTrue, dynamic valueIfFalse) => new FnIf(conditionName, valueIfTrue, valueIfFalse);
+        public new static FnEquals Equals(dynamic value1, dynamic value2) => new FnEquals(value1, value2);
+    }
+
+    /// <summary>
+    /// Compares if two values are equal. Returns true if the two values are equal or false if they aren't.
+    /// 
+    /// Example: 
+    /// 
+    /// { "Fn::Equals" : ["value_1", "value_2"] }
+    /// 
+    /// </summary>
+    public class FnEquals
+    {
+        public dynamic Value1 { get; }
+        public dynamic Value2 { get; }
+
+        public FnEquals(dynamic value1, dynamic value2)
+        {
+            if (value1 == null) throw new ArgumentNullException(nameof(value1));
+            if (value2 == null) throw new ArgumentNullException(nameof(value2));
+
+            Value1 = value1;
+            Value2 = value2;
+        }
     }
 
     /// <summary>

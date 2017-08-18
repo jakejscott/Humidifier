@@ -84,9 +84,8 @@ namespace Humidifier.ConsoleTest
             //
             // Conditions
             //
-
-            stack.Add("CreateProdResources", new Condition(JObject.Parse("{'Fn::Equals' : [{'Ref' : 'Environment'}, 'prod']}")));
-            stack.Add("CreateDevResources", new Condition(JObject.Parse("{'Fn::Equals' : [{'Ref' : 'Environment'}, 'dev']}")));
+            stack.Add("CreateProdResources", new Condition(Fn.Equals(Fn.Ref("Environment"), "prod")));
+            stack.Add("CreateDevResources", new Condition(Fn.Equals(Fn.Ref("Environment"), "dev")));
 
             //
             // Outputs
