@@ -18,6 +18,26 @@ namespace Humidifier
 
         public static FnIf If(string conditionName, dynamic valueIfTrue, dynamic valueIfFalse) => new FnIf(conditionName, valueIfTrue, valueIfFalse);
         public new static FnEquals Equals(dynamic value1, dynamic value2) => new FnEquals(value1, value2);
+        public static FnNot Not(dynamic condition) => new FnNot(condition);
+    }
+
+    /// <summary>
+    /// Returns true for a condition that evaluates to false or returns false for a condition that evaluates to true. Fn::Not acts as a NOT operator.
+    /// 
+    /// Example: 
+    /// 
+    /// { "Fn::Not": [{condition}] }
+    /// 
+    /// </summary>
+    public class FnNot
+    {
+        public dynamic Condition { get; }
+
+        public FnNot(dynamic condition)
+        {
+            if (condition == null) throw new ArgumentNullException(nameof(condition));
+            Condition = condition;
+        }
     }
 
     /// <summary>

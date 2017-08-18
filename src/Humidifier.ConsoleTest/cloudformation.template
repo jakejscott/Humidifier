@@ -372,6 +372,18 @@
         },
         "dev"
       ]
+    },
+    "NotProduction": {
+      "Fn::Not": [
+        {
+          "Fn::Equals": [
+            {
+              "Ref": "Environment"
+            },
+            "prod"
+          ]
+        }
+      ]
     }
   }
 }

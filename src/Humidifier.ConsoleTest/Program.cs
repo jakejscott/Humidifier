@@ -86,6 +86,7 @@ namespace Humidifier.ConsoleTest
             //
             stack.Add("CreateProdResources", new Condition(Fn.Equals(Fn.Ref("Environment"), "prod")));
             stack.Add("CreateDevResources", new Condition(Fn.Equals(Fn.Ref("Environment"), "dev")));
+            stack.Add("NotProduction", new Condition(Fn.Not(Fn.Equals(Fn.Ref("Environment"), "prod"))));
 
             //
             // Outputs
