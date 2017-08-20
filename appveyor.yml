@@ -1,0 +1,34 @@
+version: 1.0.{build}
+image: Visual Studio 2017
+configuration: Release
+environment:
+install:
+- ps: >-
+    cd src
+    
+    nuget restore Humidifier.sln
+    
+    $env:HUMIDIFIER_BUILD_NUMBER = ([int]$env:APPVEYOR_BUILD_NUMBER).ToString("000")
+    $env:HUMIDIFIER_VERSION_SUFFIX = "pre$env:HUMIDIFIER_BUILD_NUMBER"
+    
+    $env:appveyor_nuget_push = 'false'
+    
+    if(-Not $env:APPVEYOR_PULL_REQUEST_NUMBER) {
+      if($env:appveyor_repo_tag -eq 'True') {
+        if($env:appveyor_repo_tag_name -match '^v[0-9]') {
+           $env:appveyor_nuget_push = 'true'
+           $env:HUMIDIFIER_VERSION_SUFFIX = ""
+        }
+        if($env:appveyor_repo_tag_name -eq 'latest') {
+           $env:appveyor_nuget_push = 'true'
+        }
+      }
+    }
+build:
+  project: src/Humidifier.sln
+  verbosity: minimal
+before_package:
+- cmd: msbuild /t:pack /p:VersionSuffix="%HUMIDIFIER_VERSION_SUFFIX%" /p:Configuration=Release Humidifier/Humidifier.csproj
+artifacts:
+- path: src\Humidifier\Bin\Release\*.nupkg
+  name: Humidifier Nugets
