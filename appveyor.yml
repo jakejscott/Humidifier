@@ -8,6 +8,7 @@ install:
     nuget restore Humidifier.sln
     
     $env:HUMIDIFIER_BUILD_NUMBER = ([int]$env:APPVEYOR_BUILD_NUMBER).ToString("000")
+    
     $env:HUMIDIFIER_VERSION_SUFFIX = "pre$env:HUMIDIFIER_BUILD_NUMBER"
     
     $env:appveyor_nuget_push = 'false'
