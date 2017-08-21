@@ -28,7 +28,15 @@ build:
   project: src/Humidifier.sln
   verbosity: minimal
 before_package:
-- cmd: msbuild /t:pack /p:VersionSuffix="%HUMIDIFIER_VERSION_SUFFIX%" /p:Configuration=Release Humidifier/Humidifier.csproj
+- cmd: >-
+    msbuild /t:pack /p:VersionSuffix="%HUMIDIFIER_VERSION_SUFFIX%" /p:Configuration=Release Humidifier/Humidifier.csproj
+    msbuild /t:pack /p:VersionSuffix="%HUMIDIFIER_VERSION_SUFFIX%" /p:Configuration=Release Humidifier.Json/Humidifier.Json.csproj
 artifacts:
 - path: src\Humidifier\Bin\Release\*.nupkg
   name: Humidifier Nugets
+deploy:
+- provider: NuGet
+  api_key:
+    secure: 4Lqb8mykTgZNLC3NX5EZlLnEYKGw5xnnDbM5ZaXEdQCUfU23MvK6aOI8b0z5Dx1V
+  on:
+    appveyor_nuget_push: true
