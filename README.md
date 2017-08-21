@@ -1,4 +1,5 @@
-# Humidifier
+# Humidifier [![Build status](https://ci.appveyor.com/api/projects/status/qidmpegskc7tp020/branch/master?svg=true)](https://ci.appveyor.com/project/superlogical/humidifier/branch/master) [![NuGet](https://img.shields.io/nuget/v/Humidifier.svg)](https://www.nuget.org/packages/Humidifier/)
+
 
 Humidifier allows you to build AWS CloudFormation templates programmatically. Stacks and resources are represented as C# objects with accessors for all their supported properties.
 
