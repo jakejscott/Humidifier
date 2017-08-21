@@ -1,7 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard1.4</TargetFramework>
+        <Description>Json Serialization support for Humidifier.</Description>
+        <Copyright>Jake Scott</Copyright>
+        <AssemblyTitle>Humidifier.Json</AssemblyTitle>
+        <NeutralLanguage>en-US</NeutralLanguage>
+        <VersionPrefix>0.1.0</VersionPrefix>
+        <Authors>Jake Scott</Authors>
+        <TargetFrameworks>net45;netstandard1.3</TargetFrameworks>
+        <AssemblyName>Humidifier.Json</AssemblyName>
+        <PackageId>Humidifier.Json</PackageId>
+        <PackageTags>aws;cloudformation;</PackageTags>
+        <PackageReleaseNotes>
+            &gt; 0.1.0
+            - Initial version
+        </PackageReleaseNotes>
+        <PackageIconUrl>https://raw.githubusercontent.com/jakejscott/humidifier/master/img/humidifier.png</PackageIconUrl>
+        <PackageProjectUrl>https://github.com/jakejscott/humidifier</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/jakejscott/humidifier/blob/master/license.txt</PackageLicenseUrl>
+        <DebugType>Full</DebugType>
     </PropertyGroup>
 
     <ItemGroup>
