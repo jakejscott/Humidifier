@@ -34,7 +34,8 @@ before_package:
     msbuild /t:pack /p:VersionSuffix="%HUMIDIFIER_VERSION_SUFFIX%" /p:Configuration=Release Humidifier.Json/Humidifier.Json.csproj
 artifacts:
 - path: src\Humidifier\Bin\Release\*.nupkg
-  name: Humidifier Nugets
+- path: src\Humidifier.Json\Bin\Release\*.nupkg
+  
 deploy:
 - provider: NuGet
   api_key:
