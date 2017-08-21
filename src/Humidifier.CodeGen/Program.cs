@@ -28,10 +28,10 @@ namespace Humidifier.CodeGen
                 Formatting = Formatting.Indented,
             };
 
-            var result = JsonConvert.SerializeObject(specification, settings);
-            File.WriteAllText("../../Spec.json", result);
-            File.WriteAllText("../../PropertyTypes.json", JsonConvert.SerializeObject(specification.PropertyTypes, settings));
-            File.WriteAllText("../../ResourceTypes.json", JsonConvert.SerializeObject(specification.ResourceTypes, settings));
+            // var result = JsonConvert.SerializeObject(specification, settings);
+            // File.WriteAllText("../../Spec.json", result);
+            // File.WriteAllText("../../PropertyTypes.json", JsonConvert.SerializeObject(specification.PropertyTypes, settings));
+            // File.WriteAllText("../../ResourceTypes.json", JsonConvert.SerializeObject(specification.ResourceTypes, settings));
 
             // Clean out any files from last run of the code generator
             var directories = Directory.GetDirectories("../Humidifier/");

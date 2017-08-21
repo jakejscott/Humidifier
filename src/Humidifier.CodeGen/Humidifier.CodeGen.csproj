@@ -6,12 +6,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Content Include="..\..\PropertyTypes.json" Link="Specs\PropertyTypes.json" />
-      <Content Include="..\..\ResourceTypes.json" Link="Specs\ResourceTypes.json" />
-      <Content Include="..\..\Spec.json" Link="Specs\Spec.json" />
-    </ItemGroup>
-
-    <ItemGroup>
       <None Include="..\..\CloudFormationResourceSpecification.json" Link="Specs\CloudFormationResourceSpecification.json" />
     </ItemGroup>
 
