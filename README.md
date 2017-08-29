@@ -359,13 +359,24 @@ stack.Add("OrCondition",
 );
 ````
 
-To specify a condition on a resource
+To specify a condition you can use `Fn.If`
 
 ````csharp
 stack.Add("Volume", new EC2.Volume
 {
-    Size = Fn.If("CreateProdResources", valueIfTrue: "100", valueIfFalse: "10"),
+    Size = 100,
     AvailabilityZone = Fn.GetAtt("Ec2Instance", EC2.Instance.Attributes.AvailabilityZone)
 },
 condition: "CreateProdResources");
+
+stack.Add("Volume", new EC2.Volume
+{
+    Size = 10,
+    AvailabilityZone = Fn.GetAtt("Ec2Instance", EC2.Instance.Attributes.AvailabilityZone)
+},
+condition: "CreateDevResources");
+
 ````
+
+
+
