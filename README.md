@@ -322,3 +322,50 @@ Fn.Base64(
   dpkg -i chef_11.6.2-1.ubuntu.12.04_amd64.deb"
 );
 ````
+
+### Conditions
+
+````csharp
+stack.Add("CreateProdResources", new Condition(Fn.Equals(Fn.Ref("Environment"), "prod")));
+````
+
+````csharp
+stack.Add("CreateDevResources", new Condition(Fn.Equals(Fn.Ref("Environment"), "dev")));
+````
+
+````csharp
+stack.Add("NotCondition", new Condition(Fn.Not(Fn.Equals(Fn.Ref("Environment"), "prod"))));
+````
+
+````csharp
+stack.Add("AndCondition", 
+    new Condition(
+        Fn.And(
+            Fn.Equals("sg-mysqgroup", Fn.Ref("SecurityGroup")),
+            new { Condition = "NotCondition" }
+        )
+    )
+);
+````
+
+````csharp
+stack.Add("OrCondition",
+    new Condition(
+        Fn.Or(
+            Fn.Equals("sg-mysqgroup", Fn.Ref("SecurityGroup")),
+            new { Condition = "NotCondition" }
+        )
+    )
+);
+````
+
+To specify a condition on a resource
+
+````csharp
+stack.Add("Volume", new EC2.Volume
+{
+    Size = Fn.If("CreateProdResources", valueIfTrue: "100", valueIfFalse: "10"),
+    AvailabilityZone = Fn.GetAtt("Ec2Instance", EC2.Instance.Attributes.AvailabilityZone)
+},
+condition: "CreateProdResources");
+````
