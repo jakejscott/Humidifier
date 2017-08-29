@@ -368,15 +368,4 @@ stack.Add("Volume", new EC2.Volume
     AvailabilityZone = Fn.GetAtt("Ec2Instance", EC2.Instance.Attributes.AvailabilityZone)
 },
 condition: "CreateProdResources");
-
-stack.Add("Volume", new EC2.Volume
-{
-    Size = 10,
-    AvailabilityZone = Fn.GetAtt("Ec2Instance", EC2.Instance.Attributes.AvailabilityZone)
-},
-condition: "CreateDevResources");
-
 ````
-
-
-
