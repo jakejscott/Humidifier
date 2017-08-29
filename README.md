@@ -359,7 +359,7 @@ stack.Add("OrCondition",
 );
 ````
 
-To specify a condition you can use `Fn.If`
+To specify a condition on a resource use the overload to `stack.Add` and pass in the `condition` parameter.
 
 ````csharp
 stack.Add("Volume", new EC2.Volume
