@@ -5,7 +5,7 @@
         <Copyright>Jake Scott</Copyright>
         <AssemblyTitle>Humidifier</AssemblyTitle>
         <NeutralLanguage>en-US</NeutralLanguage>
-        <VersionPrefix>0.1.2</VersionPrefix>
+        <VersionPrefix>0.1.3</VersionPrefix>
         <Authors>Jake Scott</Authors>
         <TargetFrameworks>net45;netstandard1.3</TargetFrameworks>
         <AssemblyName>Humidifier</AssemblyName>
@@ -14,12 +14,15 @@
         <PackageReleaseNotes>
             &gt; 0.1.0
             - Initial version
-            
+
             &gt; 0.1.1
             - Add Symbols
-            
+
             &gt; 0.1.2
             - Bump version
+
+            &gt; 0.1.3
+            - Add docs
         </PackageReleaseNotes>
         <PackageIconUrl>https://raw.githubusercontent.com/jakejscott/humidifier/master/img/humidifier.png</PackageIconUrl>
         <PackageProjectUrl>https://github.com/jakejscott/humidifier</PackageProjectUrl>
@@ -30,5 +33,9 @@
     <ItemGroup>
         <PackageReference Include="Microsoft.CSharp" Version="4.4.0" />
     </ItemGroup>
+
+    <PropertyGroup Condition="'$(Configuration)'=='Release'">
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
 
 </Project>
