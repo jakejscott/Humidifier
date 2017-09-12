@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -19,19 +20,14 @@ namespace Humidifier.CodeGen
     {
         public static void Main(string[] args)
         {
-            var json = File.ReadAllText("../../CloudFormationResourceSpecification.json");
+            var client = new HttpClient();
+
+            // NOTE: Download spec from us-east-1 http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-resource-specification.html
+            var url = "https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json";
+            Console.WriteLine($"Downloading spec from {url}");
+            var json = client.GetStringAsync(url).GetAwaiter().GetResult();
+            
             Specification specification = ParseSpecification(json);
-
-            var settings = new JsonSerializerSettings
-            {
-                NullValueHandling = NullValueHandling.Ignore,
-                Formatting = Formatting.Indented,
-            };
-
-            // var result = JsonConvert.SerializeObject(specification, settings);
-            // File.WriteAllText("../../Spec.json", result);
-            // File.WriteAllText("../../PropertyTypes.json", JsonConvert.SerializeObject(specification.PropertyTypes, settings));
-            // File.WriteAllText("../../ResourceTypes.json", JsonConvert.SerializeObject(specification.ResourceTypes, settings));
 
             // Clean out any files from last run of the code generator
             var directories = Directory.GetDirectories("../Humidifier/");
