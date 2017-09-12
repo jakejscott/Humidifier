@@ -61,6 +61,93 @@ namespace Humidifier.KinesisAnalytics
 
     namespace ApplicationPropertyTypes
     {
+        public class MappingParameters
+        {
+            /// <summary>
+            /// JSONMappingParameters
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-mappingparameters.html#cfn-kinesisanalytics-application-mappingparameters-jsonmappingparameters
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: JSONMappingParameters
+            /// </summary>
+            public JSONMappingParameters JSONMappingParameters
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// CSVMappingParameters
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-mappingparameters.html#cfn-kinesisanalytics-application-mappingparameters-csvmappingparameters
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: CSVMappingParameters
+            /// </summary>
+            public CSVMappingParameters CSVMappingParameters
+            {
+                get;
+                set;
+            }
+        }
+
+        public class CSVMappingParameters
+        {
+            /// <summary>
+            /// RecordRowDelimiter
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-csvmappingparameters.html#cfn-kinesisanalytics-application-csvmappingparameters-recordrowdelimiter
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RecordRowDelimiter
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RecordColumnDelimiter
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-csvmappingparameters.html#cfn-kinesisanalytics-application-csvmappingparameters-recordcolumndelimiter
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RecordColumnDelimiter
+            {
+                get;
+                set;
+            }
+        }
+
+        public class KinesisStreamsInput
+        {
+            /// <summary>
+            /// ResourceARN
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisstreamsinput.html#cfn-kinesisanalytics-application-kinesisstreamsinput-resourcearn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ResourceARN
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RoleARN
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisstreamsinput.html#cfn-kinesisanalytics-application-kinesisstreamsinput-rolearn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RoleARN
+            {
+                get;
+                set;
+            }
+        }
+
         public class Input
         {
             /// <summary>
@@ -214,35 +301,6 @@ namespace Humidifier.KinesisAnalytics
             }
         }
 
-        public class MappingParameters
-        {
-            /// <summary>
-            /// JSONMappingParameters
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-mappingparameters.html#cfn-kinesisanalytics-application-mappingparameters-jsonmappingparameters
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: JSONMappingParameters
-            /// </summary>
-            public JSONMappingParameters JSONMappingParameters
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// CSVMappingParameters
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-mappingparameters.html#cfn-kinesisanalytics-application-mappingparameters-csvmappingparameters
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: CSVMappingParameters
-            /// </summary>
-            public CSVMappingParameters CSVMappingParameters
-            {
-                get;
-                set;
-            }
-        }
-
         public class RecordFormat
         {
             /// <summary>
@@ -327,64 +385,6 @@ namespace Humidifier.KinesisAnalytics
             /// PrimitiveType: String
             /// </summary>
             public dynamic RecordRowPath
-            {
-                get;
-                set;
-            }
-        }
-
-        public class CSVMappingParameters
-        {
-            /// <summary>
-            /// RecordRowDelimiter
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-csvmappingparameters.html#cfn-kinesisanalytics-application-csvmappingparameters-recordrowdelimiter
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic RecordRowDelimiter
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// RecordColumnDelimiter
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-csvmappingparameters.html#cfn-kinesisanalytics-application-csvmappingparameters-recordcolumndelimiter
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic RecordColumnDelimiter
-            {
-                get;
-                set;
-            }
-        }
-
-        public class KinesisStreamsInput
-        {
-            /// <summary>
-            /// ResourceARN
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisstreamsinput.html#cfn-kinesisanalytics-application-kinesisstreamsinput-resourcearn
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic ResourceARN
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// RoleARN
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisstreamsinput.html#cfn-kinesisanalytics-application-kinesisstreamsinput-rolearn
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic RoleARN
             {
                 get;
                 set;

@@ -215,22 +215,6 @@ namespace Humidifier.EC2
             }
         }
 
-        public class InstanceIpv6Address
-        {
-            /// <summary>
-            /// Ipv6Address
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instanceipv6address.html#cfn-ec2-spotfleet-instanceipv6address-ipv6address
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Ipv6Address
-            {
-                get;
-                set;
-            }
-        }
-
         public class SpotFleetLaunchSpecification
         {
             /// <summary>
@@ -445,22 +429,6 @@ namespace Humidifier.EC2
             }
         }
 
-        public class GroupIdentifier
-        {
-            /// <summary>
-            /// GroupId
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-securitygroups.html#cfn-ec2-spotfleet-groupidentifier-groupid
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic GroupId
-            {
-                get;
-                set;
-            }
-        }
-
         public class SpotPlacement
         {
             /// <summary>
@@ -546,6 +514,19 @@ namespace Humidifier.EC2
             }
 
             /// <summary>
+            /// ReplaceUnhealthyInstances
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-replaceunhealthyinstances
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic ReplaceUnhealthyInstances
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// SpotPrice
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-spotprice
             /// Required: True
@@ -579,6 +560,19 @@ namespace Humidifier.EC2
             /// PrimitiveType: Boolean
             /// </summary>
             public dynamic TerminateInstancesWithExpiration
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Type
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-type
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Type
             {
                 get;
                 set;
@@ -686,6 +680,38 @@ namespace Humidifier.EC2
             /// PrimitiveType: String
             /// </summary>
             public dynamic VolumeType
+            {
+                get;
+                set;
+            }
+        }
+
+        public class InstanceIpv6Address
+        {
+            /// <summary>
+            /// Ipv6Address
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instanceipv6address.html#cfn-ec2-spotfleet-instanceipv6address-ipv6address
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Ipv6Address
+            {
+                get;
+                set;
+            }
+        }
+
+        public class GroupIdentifier
+        {
+            /// <summary>
+            /// GroupId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-securitygroups.html#cfn-ec2-spotfleet-groupidentifier-groupid
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic GroupId
             {
                 get;
                 set;

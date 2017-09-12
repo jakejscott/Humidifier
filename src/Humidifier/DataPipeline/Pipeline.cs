@@ -161,6 +161,36 @@ namespace Humidifier.DataPipeline
             }
         }
 
+        public class ParameterObject
+        {
+            /// <summary>
+            /// Attributes
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobjects.html#cfn-datapipeline-pipeline-parameterobjects-attributes
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: ParameterAttribute
+            /// </summary>
+            public List<ParameterAttribute> Attributes
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Id
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobjects.html#cfn-datapipeline-pipeline-parameterobjects-id
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Id
+            {
+                get;
+                set;
+            }
+        }
+
         public class PipelineObject
         {
             /// <summary>
@@ -198,36 +228,6 @@ namespace Humidifier.DataPipeline
             /// PrimitiveType: String
             /// </summary>
             public dynamic Name
-            {
-                get;
-                set;
-            }
-        }
-
-        public class ParameterObject
-        {
-            /// <summary>
-            /// Attributes
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobjects.html#cfn-datapipeline-pipeline-parameterobjects-attributes
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: ParameterAttribute
-            /// </summary>
-            public List<ParameterAttribute> Attributes
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Id
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobjects.html#cfn-datapipeline-pipeline-parameterobject-id
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Id
             {
                 get;
                 set;

@@ -82,6 +82,20 @@ namespace Humidifier.ElasticLoadBalancingV2
         }
 
         /// <summary>
+        /// SubnetMappings
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmappings
+        /// Required: False
+        /// UpdateType: Immutable
+        /// Type: List
+        /// ItemType: SubnetMapping
+        /// </summary>
+        public List<SubnetMapping> SubnetMappings
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Subnets
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-subnets
         /// Required: False
@@ -104,6 +118,19 @@ namespace Humidifier.ElasticLoadBalancingV2
         /// ItemType: Tag
         /// </summary>
         public List<Tag> Tags
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Type
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-type
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic Type
         {
             get;
             set;
@@ -135,6 +162,35 @@ namespace Humidifier.ElasticLoadBalancingV2
             /// PrimitiveType: String
             /// </summary>
             public dynamic Value
+            {
+                get;
+                set;
+            }
+        }
+
+        public class SubnetMapping
+        {
+            /// <summary>
+            /// AllocationId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-allocationid
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic AllocationId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SubnetId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-subnetid
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic SubnetId
             {
                 get;
                 set;

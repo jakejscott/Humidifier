@@ -74,35 +74,6 @@ namespace Humidifier.ApiGateway
 
     namespace UsagePlanPropertyTypes
     {
-        public class ThrottleSettings
-        {
-            /// <summary>
-            /// BurstLimit
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-burstlimit
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic BurstLimit
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// RateLimit
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-ratelimit
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Double
-            /// </summary>
-            public dynamic RateLimit
-            {
-                get;
-                set;
-            }
-        }
-
         public class ApiStage
         {
             /// <summary>
@@ -126,6 +97,35 @@ namespace Humidifier.ApiGateway
             /// PrimitiveType: String
             /// </summary>
             public dynamic Stage
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ThrottleSettings
+        {
+            /// <summary>
+            /// BurstLimit
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-burstlimit
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic BurstLimit
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RateLimit
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-ratelimit
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Double
+            /// </summary>
+            public dynamic RateLimit
             {
                 get;
                 set;

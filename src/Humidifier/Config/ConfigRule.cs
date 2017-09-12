@@ -92,49 +92,6 @@ namespace Humidifier.Config
 
     namespace ConfigRulePropertyTypes
     {
-        public class Source
-        {
-            /// <summary>
-            /// Owner
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-source.html#cfn-config-configrule-source-owner
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Owner
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// SourceDetails
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-source.html#cfn-config-configrule-source-sourcedetails
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: SourceDetail
-            /// </summary>
-            public List<SourceDetail> SourceDetails
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// SourceIdentifier
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-source.html#cfn-config-configrule-source-sourceidentifier
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic SourceIdentifier
-            {
-                get;
-                set;
-            }
-        }
-
         public class Scope
         {
             /// <summary>
@@ -185,6 +142,49 @@ namespace Humidifier.Config
             /// PrimitiveType: String
             /// </summary>
             public dynamic TagValue
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Source
+        {
+            /// <summary>
+            /// Owner
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-source.html#cfn-config-configrule-source-owner
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Owner
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SourceDetails
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-source.html#cfn-config-configrule-source-sourcedetails
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: SourceDetail
+            /// </summary>
+            public List<SourceDetail> SourceDetails
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SourceIdentifier
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-source.html#cfn-config-configrule-source-sourceidentifier
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic SourceIdentifier
             {
                 get;
                 set;

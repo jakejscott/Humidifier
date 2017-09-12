@@ -237,36 +237,6 @@ namespace Humidifier.AutoScaling
 
     namespace AutoScalingGroupPropertyTypes
     {
-        public class MetricsCollection
-        {
-            /// <summary>
-            /// Granularity
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-metricscollection.html#cfn-as-metricscollection-granularity
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Granularity
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Metrics
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-metricscollection.html#cfn-as-metricscollection-metrics
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// PrimitiveItemType: String
-            /// </summary>
-            public List<dynamic> Metrics
-            {
-                get;
-                set;
-            }
-        }
-
         public class NotificationConfiguration
         {
             /// <summary>
@@ -291,6 +261,36 @@ namespace Humidifier.AutoScaling
             /// PrimitiveType: String
             /// </summary>
             public dynamic TopicARN
+            {
+                get;
+                set;
+            }
+        }
+
+        public class MetricsCollection
+        {
+            /// <summary>
+            /// Granularity
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-metricscollection.html#cfn-as-metricscollection-granularity
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Granularity
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Metrics
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-metricscollection.html#cfn-as-metricscollection-metrics
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public List<dynamic> Metrics
             {
                 get;
                 set;

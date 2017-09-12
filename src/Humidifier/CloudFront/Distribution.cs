@@ -26,90 +26,6 @@ namespace Humidifier.CloudFront
 
     namespace DistributionPropertyTypes
     {
-        public class ViewerCertificate
-        {
-            /// <summary>
-            /// AcmCertificateArn
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-viewercertificate.html#cfn-cloudfront-distributionconfig-viewercertificate-acmcertificatearn
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic AcmCertificateArn
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// CloudFrontDefaultCertificate
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-viewercertificate.html#cfn-cloudfront-distributionconfig-viewercertificate-cloudfrontdefaultcertificate
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic CloudFrontDefaultCertificate
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// IamCertificateId
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-viewercertificate.html#cfn-cloudfront-distributionconfig-viewercertificate-iamcertificateid
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic IamCertificateId
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// MinimumProtocolVersion
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-viewercertificate.html#cfn-cloudfront-distributionconfig-viewercertificate-sslsupportmethod
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic MinimumProtocolVersion
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// SslSupportMethod
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-viewercertificate.html#cfn-cloudfront-distributionconfig-viewercertificate-minimumprotocolversion
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic SslSupportMethod
-            {
-                get;
-                set;
-            }
-        }
-
-        public class S3OriginConfig
-        {
-            /// <summary>
-            /// OriginAccessIdentity
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-s3origin.html#cfn-cloudfront-s3origin-originaccessidentity
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic OriginAccessIdentity
-            {
-                get;
-                set;
-            }
-        }
-
         public class Cookies
         {
             /// <summary>
@@ -190,61 +106,6 @@ namespace Humidifier.CloudFront
             /// PrimitiveItemType: String
             /// </summary>
             public List<dynamic> OriginSSLProtocols
-            {
-                get;
-                set;
-            }
-        }
-
-        public class CustomErrorResponse
-        {
-            /// <summary>
-            /// ErrorCachingMinTTL
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-customerrorresponse.html#cfn-cloudfront-distributionconfig-customerrorresponse-errorcachingminttl
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Long
-            /// </summary>
-            public dynamic ErrorCachingMinTTL
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// ErrorCode
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-customerrorresponse.html#cfn-cloudfront-distributionconfig-customerrorresponse-errorcode
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic ErrorCode
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// ResponseCode
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-customerrorresponse.html#cfn-cloudfront-distributionconfig-customerrorresponse-responsecode
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic ResponseCode
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// ResponsePagePath
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-customerrorresponse.html#cfn-cloudfront-distributionconfig-customerrorresponse-responsepagepath
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic ResponsePagePath
             {
                 get;
                 set;
@@ -464,6 +325,422 @@ namespace Humidifier.CloudFront
             /// PrimitiveType: String
             /// </summary>
             public dynamic ViewerProtocolPolicy
+            {
+                get;
+                set;
+            }
+        }
+
+        public class DefaultCacheBehavior
+        {
+            /// <summary>
+            /// AllowedMethods
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-defaultcachebehavior.html#cfn-cloudfront-defaultcachebehavior-allowedmethods
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public List<dynamic> AllowedMethods
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// CachedMethods
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-defaultcachebehavior.html#cfn-cloudfront-defaultcachebehavior-cachedmethods
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public List<dynamic> CachedMethods
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Compress
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-defaultcachebehavior.html#cfn-cloudfront-defaultcachebehavior-compress
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Compress
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DefaultTTL
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-defaultcachebehavior.html#cfn-cloudfront-defaultcachebehavior-defaultttl
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Long
+            /// </summary>
+            public dynamic DefaultTTL
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ForwardedValues
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-defaultcachebehavior.html#cfn-cloudfront-defaultcachebehavior-forwardedvalues
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: ForwardedValues
+            /// </summary>
+            public ForwardedValues ForwardedValues
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// MaxTTL
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-defaultcachebehavior.html#cfn-cloudfront-defaultcachebehavior-maxttl
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Long
+            /// </summary>
+            public dynamic MaxTTL
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// MinTTL
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-defaultcachebehavior.html#cfn-cloudfront-defaultcachebehavior-minttl
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Long
+            /// </summary>
+            public dynamic MinTTL
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SmoothStreaming
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-defaultcachebehavior.html#cfn-cloudfront-defaultcachebehavior-smoothstreaming
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic SmoothStreaming
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// TargetOriginId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-defaultcachebehavior.html#cfn-cloudfront-defaultcachebehavior-targetoriginid
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic TargetOriginId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// TrustedSigners
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-defaultcachebehavior.html#cfn-cloudfront-defaultcachebehavior-trustedsigners
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public List<dynamic> TrustedSigners
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ViewerProtocolPolicy
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-defaultcachebehavior.html#cfn-cloudfront-defaultcachebehavior-viewerprotocolpolicy
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ViewerProtocolPolicy
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Restrictions
+        {
+            /// <summary>
+            /// GeoRestriction
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-restrictions.html#cfn-cloudfront-distributionconfig-restrictions-georestriction
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: GeoRestriction
+            /// </summary>
+            public GeoRestriction GeoRestriction
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Origin
+        {
+            /// <summary>
+            /// CustomOriginConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-origin.html#cfn-cloudfront-origin-customorigin
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: CustomOriginConfig
+            /// </summary>
+            public CustomOriginConfig CustomOriginConfig
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DomainName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-origin.html#cfn-cloudfront-origin-domainname
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DomainName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Id
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-origin.html#cfn-cloudfront-origin-id
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Id
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// OriginCustomHeaders
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-origin.html#cfn-cloudfront-origin-origincustomheaders
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: OriginCustomHeader
+            /// </summary>
+            public List<OriginCustomHeader> OriginCustomHeaders
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// OriginPath
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-origin.html#cfn-cloudfront-origin-originpath
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic OriginPath
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// S3OriginConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-origin.html#cfn-cloudfront-origin-s3origin
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: S3OriginConfig
+            /// </summary>
+            public S3OriginConfig S3OriginConfig
+            {
+                get;
+                set;
+            }
+        }
+
+        public class GeoRestriction
+        {
+            /// <summary>
+            /// Locations
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-restrictions-georestriction.html#cfn-cloudfront-distributionconfig-restrictions-georestriction-locations
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public List<dynamic> Locations
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RestrictionType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-restrictions-georestriction.html#cfn-cloudfront-distributionconfig-restrictions-georestriction-restrictiontype
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RestrictionType
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ViewerCertificate
+        {
+            /// <summary>
+            /// AcmCertificateArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-viewercertificate.html#cfn-cloudfront-distributionconfig-viewercertificate-acmcertificatearn
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic AcmCertificateArn
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// CloudFrontDefaultCertificate
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-viewercertificate.html#cfn-cloudfront-distributionconfig-viewercertificate-cloudfrontdefaultcertificate
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic CloudFrontDefaultCertificate
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// IamCertificateId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-viewercertificate.html#cfn-cloudfront-distributionconfig-viewercertificate-iamcertificateid
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic IamCertificateId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// MinimumProtocolVersion
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-viewercertificate.html#cfn-cloudfront-distributionconfig-viewercertificate-sslsupportmethod
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic MinimumProtocolVersion
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SslSupportMethod
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-viewercertificate.html#cfn-cloudfront-distributionconfig-viewercertificate-minimumprotocolversion
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic SslSupportMethod
+            {
+                get;
+                set;
+            }
+        }
+
+        public class S3OriginConfig
+        {
+            /// <summary>
+            /// OriginAccessIdentity
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-s3origin.html#cfn-cloudfront-s3origin-originaccessidentity
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic OriginAccessIdentity
+            {
+                get;
+                set;
+            }
+        }
+
+        public class CustomErrorResponse
+        {
+            /// <summary>
+            /// ErrorCachingMinTTL
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-customerrorresponse.html#cfn-cloudfront-distributionconfig-customerrorresponse-errorcachingminttl
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Long
+            /// </summary>
+            public dynamic ErrorCachingMinTTL
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ErrorCode
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-customerrorresponse.html#cfn-cloudfront-distributionconfig-customerrorresponse-errorcode
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic ErrorCode
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ResponseCode
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-customerrorresponse.html#cfn-cloudfront-distributionconfig-customerrorresponse-responsecode
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic ResponseCode
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ResponsePagePath
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-customerrorresponse.html#cfn-cloudfront-distributionconfig-customerrorresponse-responsepagepath
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ResponsePagePath
             {
                 get;
                 set;
@@ -701,155 +978,6 @@ namespace Humidifier.CloudFront
             }
         }
 
-        public class DefaultCacheBehavior
-        {
-            /// <summary>
-            /// AllowedMethods
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-defaultcachebehavior.html#cfn-cloudfront-defaultcachebehavior-allowedmethods
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// PrimitiveItemType: String
-            /// </summary>
-            public List<dynamic> AllowedMethods
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// CachedMethods
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-defaultcachebehavior.html#cfn-cloudfront-defaultcachebehavior-cachedmethods
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// PrimitiveItemType: String
-            /// </summary>
-            public List<dynamic> CachedMethods
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Compress
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-defaultcachebehavior.html#cfn-cloudfront-defaultcachebehavior-compress
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic Compress
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// DefaultTTL
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-defaultcachebehavior.html#cfn-cloudfront-defaultcachebehavior-defaultttl
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Long
-            /// </summary>
-            public dynamic DefaultTTL
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// ForwardedValues
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-defaultcachebehavior.html#cfn-cloudfront-defaultcachebehavior-forwardedvalues
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: ForwardedValues
-            /// </summary>
-            public ForwardedValues ForwardedValues
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// MaxTTL
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-defaultcachebehavior.html#cfn-cloudfront-defaultcachebehavior-maxttl
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Long
-            /// </summary>
-            public dynamic MaxTTL
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// MinTTL
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-defaultcachebehavior.html#cfn-cloudfront-defaultcachebehavior-minttl
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Long
-            /// </summary>
-            public dynamic MinTTL
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// SmoothStreaming
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-defaultcachebehavior.html#cfn-cloudfront-defaultcachebehavior-smoothstreaming
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic SmoothStreaming
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// TargetOriginId
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-defaultcachebehavior.html#cfn-cloudfront-defaultcachebehavior-targetoriginid
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic TargetOriginId
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// TrustedSigners
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-defaultcachebehavior.html#cfn-cloudfront-defaultcachebehavior-trustedsigners
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// PrimitiveItemType: String
-            /// </summary>
-            public List<dynamic> TrustedSigners
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// ViewerProtocolPolicy
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-defaultcachebehavior.html#cfn-cloudfront-defaultcachebehavior-viewerprotocolpolicy
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic ViewerProtocolPolicy
-            {
-                get;
-                set;
-            }
-        }
-
         public class OriginCustomHeader
         {
             /// <summary>
@@ -873,134 +1001,6 @@ namespace Humidifier.CloudFront
             /// PrimitiveType: String
             /// </summary>
             public dynamic HeaderValue
-            {
-                get;
-                set;
-            }
-        }
-
-        public class Restrictions
-        {
-            /// <summary>
-            /// GeoRestriction
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-restrictions.html#cfn-cloudfront-distributionconfig-restrictions-georestriction
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: GeoRestriction
-            /// </summary>
-            public GeoRestriction GeoRestriction
-            {
-                get;
-                set;
-            }
-        }
-
-        public class Origin
-        {
-            /// <summary>
-            /// CustomOriginConfig
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-origin.html#cfn-cloudfront-origin-customorigin
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: CustomOriginConfig
-            /// </summary>
-            public CustomOriginConfig CustomOriginConfig
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// DomainName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-origin.html#cfn-cloudfront-origin-domainname
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic DomainName
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Id
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-origin.html#cfn-cloudfront-origin-id
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Id
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// OriginCustomHeaders
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-origin.html#cfn-cloudfront-origin-origincustomheaders
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: OriginCustomHeader
-            /// </summary>
-            public List<OriginCustomHeader> OriginCustomHeaders
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// OriginPath
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-origin.html#cfn-cloudfront-origin-originpath
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic OriginPath
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// S3OriginConfig
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-origin.html#cfn-cloudfront-origin-s3origin
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: S3OriginConfig
-            /// </summary>
-            public S3OriginConfig S3OriginConfig
-            {
-                get;
-                set;
-            }
-        }
-
-        public class GeoRestriction
-        {
-            /// <summary>
-            /// Locations
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-restrictions-georestriction.html#cfn-cloudfront-distributionconfig-restrictions-georestriction-locations
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// PrimitiveItemType: String
-            /// </summary>
-            public List<dynamic> Locations
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// RestrictionType
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-restrictions-georestriction.html#cfn-cloudfront-distributionconfig-restrictions-georestriction-restrictiontype
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic RestrictionType
             {
                 get;
                 set;

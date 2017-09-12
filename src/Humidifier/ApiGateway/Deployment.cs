@@ -64,7 +64,7 @@ namespace Humidifier.ApiGateway
         {
             /// <summary>
             /// CacheDataEncrypted
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-deployment-stagedescription-methodsetting.html#cfn-apigateway-deployment-stagedescription-methodsetting-cachedataencrypted
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription-methodsetting.html#cfn-apigateway-deployment-stagedescription-methodsetting-cachedataencrypted
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
@@ -77,7 +77,7 @@ namespace Humidifier.ApiGateway
 
             /// <summary>
             /// CacheTtlInSeconds
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-deployment-stagedescription-methodsetting.html#cfn-apigateway-deployment-stagedescription-methodsetting-cachettlinseconds
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription-methodsetting.html#cfn-apigateway-deployment-stagedescription-methodsetting-cachettlinseconds
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
@@ -90,7 +90,7 @@ namespace Humidifier.ApiGateway
 
             /// <summary>
             /// CachingEnabled
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-deployment-stagedescription-methodsetting.html#cfn-apigateway-deployment-stagedescription-methodsetting-cachingenabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription-methodsetting.html#cfn-apigateway-deployment-stagedescription-methodsetting-cachingenabled
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
@@ -103,7 +103,7 @@ namespace Humidifier.ApiGateway
 
             /// <summary>
             /// DataTraceEnabled
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-deployment-stagedescription-methodsetting.html#cfn-apigateway-deployment-stagedescription-methodsetting-datatraceenabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription-methodsetting.html#cfn-apigateway-deployment-stagedescription-methodsetting-datatraceenabled
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
@@ -116,7 +116,7 @@ namespace Humidifier.ApiGateway
 
             /// <summary>
             /// HttpMethod
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-deployment-stagedescription-methodsetting.html#cfn-apigateway-deployment-stagedescription-methodsetting-httpmethod
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription-methodsetting.html#cfn-apigateway-deployment-stagedescription-methodsetting-httpmethod
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -129,7 +129,7 @@ namespace Humidifier.ApiGateway
 
             /// <summary>
             /// LoggingLevel
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-deployment-stagedescription-methodsetting.html#cfn-apigateway-deployment-stagedescription-methodsetting-logginglevel
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription-methodsetting.html#cfn-apigateway-deployment-stagedescription-methodsetting-logginglevel
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -142,7 +142,7 @@ namespace Humidifier.ApiGateway
 
             /// <summary>
             /// MetricsEnabled
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-deployment-stagedescription-methodsetting.html#cfn-apigateway-deployment-stagedescription-methodsetting-metricsenabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription-methodsetting.html#cfn-apigateway-deployment-stagedescription-methodsetting-metricsenabled
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
@@ -155,7 +155,7 @@ namespace Humidifier.ApiGateway
 
             /// <summary>
             /// ResourcePath
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-deployment-stagedescription-methodsetting.html#cfn-apigateway-deployment-stagedescription-methodsetting-resourcepath
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription-methodsetting.html#cfn-apigateway-deployment-stagedescription-methodsetting-resourcepath
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -168,7 +168,7 @@ namespace Humidifier.ApiGateway
 
             /// <summary>
             /// ThrottlingBurstLimit
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-deployment-stagedescription-methodsetting.html#cfn-apigateway-deployment-stagedescription-methodsetting-throttlingburstlimit
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription-methodsetting.html#cfn-apigateway-deployment-stagedescription-methodsetting-throttlingburstlimit
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
@@ -181,7 +181,7 @@ namespace Humidifier.ApiGateway
 
             /// <summary>
             /// ThrottlingRateLimit
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-deployment-stagedescription-methodsetting.html#cfn-apigateway-deployment-stagedescription-methodsetting-throttlingratelimit
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription-methodsetting.html#cfn-apigateway-deployment-stagedescription-methodsetting-throttlingratelimit
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: Double
@@ -197,7 +197,7 @@ namespace Humidifier.ApiGateway
         {
             /// <summary>
             /// CacheClusterEnabled
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-cacheclusterenabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-cacheclusterenabled
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
@@ -210,7 +210,7 @@ namespace Humidifier.ApiGateway
 
             /// <summary>
             /// CacheClusterSize
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-cacheclustersize
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-cacheclustersize
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -223,7 +223,7 @@ namespace Humidifier.ApiGateway
 
             /// <summary>
             /// CacheDataEncrypted
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-cachedataencrypted
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-cachedataencrypted
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
@@ -236,7 +236,7 @@ namespace Humidifier.ApiGateway
 
             /// <summary>
             /// CacheTtlInSeconds
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-cachettlinseconds
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-cachettlinseconds
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
@@ -249,7 +249,7 @@ namespace Humidifier.ApiGateway
 
             /// <summary>
             /// CachingEnabled
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-cachingenabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-cachingenabled
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
@@ -262,7 +262,7 @@ namespace Humidifier.ApiGateway
 
             /// <summary>
             /// ClientCertificateId
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-clientcertificateid
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-clientcertificateid
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -275,7 +275,7 @@ namespace Humidifier.ApiGateway
 
             /// <summary>
             /// DataTraceEnabled
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-datatraceenabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-datatraceenabled
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
@@ -288,7 +288,7 @@ namespace Humidifier.ApiGateway
 
             /// <summary>
             /// Description
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-description
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-description
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -300,8 +300,21 @@ namespace Humidifier.ApiGateway
             }
 
             /// <summary>
+            /// DocumentationVersion
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-documentationversion
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DocumentationVersion
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// LoggingLevel
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-logginglevel
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-logginglevel
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -314,7 +327,7 @@ namespace Humidifier.ApiGateway
 
             /// <summary>
             /// MethodSettings
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-methodsettings
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-methodsettings
             /// Required: False
             /// UpdateType: Mutable
             /// Type: List
@@ -328,7 +341,7 @@ namespace Humidifier.ApiGateway
 
             /// <summary>
             /// MetricsEnabled
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-metricsenabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-metricsenabled
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
@@ -341,7 +354,7 @@ namespace Humidifier.ApiGateway
 
             /// <summary>
             /// StageName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-stagename
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-stagename
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -354,7 +367,7 @@ namespace Humidifier.ApiGateway
 
             /// <summary>
             /// ThrottlingBurstLimit
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-throttlingburstlimit
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-throttlingburstlimit
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
@@ -367,7 +380,7 @@ namespace Humidifier.ApiGateway
 
             /// <summary>
             /// ThrottlingRateLimit
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-throttlingratelimit
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-throttlingratelimit
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: Double
@@ -380,7 +393,7 @@ namespace Humidifier.ApiGateway
 
             /// <summary>
             /// Variables
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-variables
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-variables
             /// Required: False
             /// UpdateType: Mutable
             /// Type: Map

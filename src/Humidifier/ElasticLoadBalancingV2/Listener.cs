@@ -88,22 +88,6 @@ namespace Humidifier.ElasticLoadBalancingV2
 
     namespace ListenerPropertyTypes
     {
-        public class Certificate
-        {
-            /// <summary>
-            /// CertificateArn
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-certificates.html#cfn-elasticloadbalancingv2-listener-certificates-certificatearn
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic CertificateArn
-            {
-                get;
-                set;
-            }
-        }
-
         public class Action
         {
             /// <summary>
@@ -127,6 +111,22 @@ namespace Humidifier.ElasticLoadBalancingV2
             /// PrimitiveType: String
             /// </summary>
             public dynamic Type
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Certificate
+        {
+            /// <summary>
+            /// CertificateArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-certificates.html#cfn-elasticloadbalancingv2-listener-certificates-certificatearn
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic CertificateArn
             {
                 get;
                 set;

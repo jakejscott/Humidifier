@@ -160,6 +160,22 @@ namespace Humidifier.EC2
 
     namespace NetworkInterfacePropertyTypes
     {
+        public class InstanceIpv6Address
+        {
+            /// <summary>
+            /// Ipv6Address
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-instanceipv6address.html#cfn-ec2-networkinterface-instanceipv6address-ipv6address
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Ipv6Address
+            {
+                get;
+                set;
+            }
+        }
+
         public class PrivateIpAddressSpecification
         {
             /// <summary>
@@ -183,22 +199,6 @@ namespace Humidifier.EC2
             /// PrimitiveType: String
             /// </summary>
             public dynamic PrivateIpAddress
-            {
-                get;
-                set;
-            }
-        }
-
-        public class InstanceIpv6Address
-        {
-            /// <summary>
-            /// Ipv6Address
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-instanceipv6address.html#cfn-ec2-networkinterface-instanceipv6address-ipv6address
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Ipv6Address
             {
                 get;
                 set;

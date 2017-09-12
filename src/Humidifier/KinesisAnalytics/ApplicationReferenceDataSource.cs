@@ -34,35 +34,6 @@ namespace Humidifier.KinesisAnalytics
 
     namespace ApplicationReferenceDataSourcePropertyTypes
     {
-        public class RecordFormat
-        {
-            /// <summary>
-            /// MappingParameters
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-recordformat.html#cfn-kinesisanalytics-applicationreferencedatasource-recordformat-mappingparameters
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: MappingParameters
-            /// </summary>
-            public MappingParameters MappingParameters
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// RecordFormatType
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-recordformat.html#cfn-kinesisanalytics-applicationreferencedatasource-recordformat-recordformattype
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic RecordFormatType
-            {
-                get;
-                set;
-            }
-        }
-
         public class S3ReferenceDataSource
         {
             /// <summary>
@@ -99,6 +70,80 @@ namespace Humidifier.KinesisAnalytics
             /// PrimitiveType: String
             /// </summary>
             public dynamic ReferenceRoleARN
+            {
+                get;
+                set;
+            }
+        }
+
+        public class MappingParameters
+        {
+            /// <summary>
+            /// JSONMappingParameters
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-mappingparameters.html#cfn-kinesisanalytics-applicationreferencedatasource-mappingparameters-jsonmappingparameters
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: JSONMappingParameters
+            /// </summary>
+            public JSONMappingParameters JSONMappingParameters
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// CSVMappingParameters
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-mappingparameters.html#cfn-kinesisanalytics-applicationreferencedatasource-mappingparameters-csvmappingparameters
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: CSVMappingParameters
+            /// </summary>
+            public CSVMappingParameters CSVMappingParameters
+            {
+                get;
+                set;
+            }
+        }
+
+        public class JSONMappingParameters
+        {
+            /// <summary>
+            /// RecordRowPath
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-jsonmappingparameters.html#cfn-kinesisanalytics-applicationreferencedatasource-jsonmappingparameters-recordrowpath
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RecordRowPath
+            {
+                get;
+                set;
+            }
+        }
+
+        public class RecordFormat
+        {
+            /// <summary>
+            /// MappingParameters
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-recordformat.html#cfn-kinesisanalytics-applicationreferencedatasource-recordformat-mappingparameters
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: MappingParameters
+            /// </summary>
+            public MappingParameters MappingParameters
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RecordFormatType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-recordformat.html#cfn-kinesisanalytics-applicationreferencedatasource-recordformat-recordformattype
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RecordFormatType
             {
                 get;
                 set;
@@ -255,51 +300,6 @@ namespace Humidifier.KinesisAnalytics
             /// Type: S3ReferenceDataSource
             /// </summary>
             public S3ReferenceDataSource S3ReferenceDataSource
-            {
-                get;
-                set;
-            }
-        }
-
-        public class MappingParameters
-        {
-            /// <summary>
-            /// JSONMappingParameters
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-mappingparameters.html#cfn-kinesisanalytics-applicationreferencedatasource-mappingparameters-jsonmappingparameters
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: JSONMappingParameters
-            /// </summary>
-            public JSONMappingParameters JSONMappingParameters
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// CSVMappingParameters
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-mappingparameters.html#cfn-kinesisanalytics-applicationreferencedatasource-mappingparameters-csvmappingparameters
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: CSVMappingParameters
-            /// </summary>
-            public CSVMappingParameters CSVMappingParameters
-            {
-                get;
-                set;
-            }
-        }
-
-        public class JSONMappingParameters
-        {
-            /// <summary>
-            /// RecordRowPath
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-jsonmappingparameters.html#cfn-kinesisanalytics-applicationreferencedatasource-jsonmappingparameters-recordrowpath
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic RecordRowPath
             {
                 get;
                 set;

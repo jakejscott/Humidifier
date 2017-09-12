@@ -139,51 +139,6 @@ namespace Humidifier.EMR
 
     namespace InstanceGroupConfigPropertyTypes
     {
-        public class ScalingAction
-        {
-            /// <summary>
-            /// Market
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingaction.html#cfn-elasticmapreduce-instancegroupconfig-scalingaction-market
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Market
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// SimpleScalingPolicyConfiguration
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingaction.html#cfn-elasticmapreduce-instancegroupconfig-scalingaction-simplescalingpolicyconfiguration
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: SimpleScalingPolicyConfiguration
-            /// </summary>
-            public SimpleScalingPolicyConfiguration SimpleScalingPolicyConfiguration
-            {
-                get;
-                set;
-            }
-        }
-
-        public class ScalingTrigger
-        {
-            /// <summary>
-            /// CloudWatchAlarmDefinition
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingtrigger.html#cfn-elasticmapreduce-instancegroupconfig-scalingtrigger-cloudwatchalarmdefinition
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: CloudWatchAlarmDefinition
-            /// </summary>
-            public CloudWatchAlarmDefinition CloudWatchAlarmDefinition
-            {
-                get;
-                set;
-            }
-        }
-
         public class EbsBlockDeviceConfig
         {
             /// <summary>
@@ -280,6 +235,148 @@ namespace Humidifier.EMR
             /// PrimitiveType: String
             /// </summary>
             public dynamic Value
+            {
+                get;
+                set;
+            }
+        }
+
+        public class SimpleScalingPolicyConfiguration
+        {
+            /// <summary>
+            /// AdjustmentType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration.html#cfn-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration-adjustmenttype
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic AdjustmentType
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// CoolDown
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration.html#cfn-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration-cooldown
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic CoolDown
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ScalingAdjustment
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration.html#cfn-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration-scalingadjustment
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic ScalingAdjustment
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ScalingRule
+        {
+            /// <summary>
+            /// Action
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingrule.html#cfn-elasticmapreduce-instancegroupconfig-scalingrule-action
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: ScalingAction
+            /// </summary>
+            public ScalingAction Action
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Description
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingrule.html#cfn-elasticmapreduce-instancegroupconfig-scalingrule-description
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Description
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Name
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingrule.html#cfn-elasticmapreduce-instancegroupconfig-scalingrule-name
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Name
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Trigger
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingrule.html#cfn-elasticmapreduce-instancegroupconfig-scalingrule-trigger
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: ScalingTrigger
+            /// </summary>
+            public ScalingTrigger Trigger
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ScalingAction
+        {
+            /// <summary>
+            /// Market
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingaction.html#cfn-elasticmapreduce-instancegroupconfig-scalingaction-market
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Market
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SimpleScalingPolicyConfiguration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingaction.html#cfn-elasticmapreduce-instancegroupconfig-scalingaction-simplescalingpolicyconfiguration
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: SimpleScalingPolicyConfiguration
+            /// </summary>
+            public SimpleScalingPolicyConfiguration SimpleScalingPolicyConfiguration
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ScalingTrigger
+        {
+            /// <summary>
+            /// CloudWatchAlarmDefinition
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingtrigger.html#cfn-elasticmapreduce-instancegroupconfig-scalingtrigger-cloudwatchalarmdefinition
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: CloudWatchAlarmDefinition
+            /// </summary>
+            public CloudWatchAlarmDefinition CloudWatchAlarmDefinition
             {
                 get;
                 set;
@@ -436,48 +533,6 @@ namespace Humidifier.EMR
             }
         }
 
-        public class SimpleScalingPolicyConfiguration
-        {
-            /// <summary>
-            /// AdjustmentType
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration.html#cfn-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration-adjustmenttype
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic AdjustmentType
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// CoolDown
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration.html#cfn-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration-cooldown
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic CoolDown
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// ScalingAdjustment
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration.html#cfn-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration-scalingadjustment
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic ScalingAdjustment
-            {
-                get;
-                set;
-            }
-        }
-
         public class VolumeSpecification
         {
             /// <summary>
@@ -514,61 +569,6 @@ namespace Humidifier.EMR
             /// PrimitiveType: String
             /// </summary>
             public dynamic VolumeType
-            {
-                get;
-                set;
-            }
-        }
-
-        public class ScalingRule
-        {
-            /// <summary>
-            /// Action
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingrule.html#cfn-elasticmapreduce-instancegroupconfig-scalingrule-action
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: ScalingAction
-            /// </summary>
-            public ScalingAction Action
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Description
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingrule.html#cfn-elasticmapreduce-instancegroupconfig-scalingrule-description
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Description
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Name
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingrule.html#cfn-elasticmapreduce-instancegroupconfig-scalingrule-name
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Name
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Trigger
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingrule.html#cfn-elasticmapreduce-instancegroupconfig-scalingrule-trigger
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: ScalingTrigger
-            /// </summary>
-            public ScalingTrigger Trigger
             {
                 get;
                 set;

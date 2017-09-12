@@ -26,7 +26,7 @@ namespace Humidifier.Redshift
         /// AutomatedSnapshotRetentionPeriod
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-automatedsnapshotretentionperiod
         /// Required: False
-        /// UpdateType: Immutable
+        /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>
         public dynamic AutomatedSnapshotRetentionPeriod

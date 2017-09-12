@@ -87,6 +87,35 @@ namespace Humidifier.ElasticBeanstalk
 
     namespace ConfigurationTemplatePropertyTypes
     {
+        public class SourceConfiguration
+        {
+            /// <summary>
+            /// ApplicationName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-configurationtemplate-sourceconfiguration.html#cfn-beanstalk-configurationtemplate-sourceconfiguration-applicationname
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ApplicationName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// TemplateName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-configurationtemplate-sourceconfiguration.html#cfn-beanstalk-configurationtemplate-sourceconfiguration-templatename
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic TemplateName
+            {
+                get;
+                set;
+            }
+        }
+
         public class ConfigurationOptionSetting
         {
             /// <summary>
@@ -123,35 +152,6 @@ namespace Humidifier.ElasticBeanstalk
             /// PrimitiveType: String
             /// </summary>
             public dynamic Value
-            {
-                get;
-                set;
-            }
-        }
-
-        public class SourceConfiguration
-        {
-            /// <summary>
-            /// ApplicationName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-configurationtemplate-sourceconfiguration.html#cfn-beanstalk-configurationtemplate-sourceconfiguration-applicationname
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic ApplicationName
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// TemplateName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-configurationtemplate-sourceconfiguration.html#cfn-beanstalk-configurationtemplate-sourceconfiguration-templatename
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic TemplateName
             {
                 get;
                 set;

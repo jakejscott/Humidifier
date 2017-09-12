@@ -7,7 +7,7 @@ namespace Humidifier.S3
     {
         /// <summary>
         /// Bucket
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-policy.html#cfn-s3-bucketpolicy-bucket
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-policy.html#aws-properties-s3-policy-bucket
         /// Required: True
         /// UpdateType: Immutable
         /// PrimitiveType: String
@@ -20,7 +20,7 @@ namespace Humidifier.S3
 
         /// <summary>
         /// PolicyDocument
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-policy.html#cfn-s3-bucketpolicy-policydocument
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-policy.html#aws-properties-s3-policy-policydocument
         /// Required: True
         /// UpdateType: Mutable
         /// PrimitiveType: Json

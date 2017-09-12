@@ -9,6 +9,21 @@ namespace Humidifier.EC2
         {
             public static string AvailabilityZone =  "AvailabilityZone" ;
             public static string Ipv6CidrBlocks =  "Ipv6CidrBlocks" ;
+            public static string NetworkAclAssociationId =  "NetworkAclAssociationId" ;
+            public static string VpcId =  "VpcId" ;
+        }
+
+        /// <summary>
+        /// AssignIpv6AddressOnCreation
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-assignipv6addressoncreation
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Boolean
+        /// </summary>
+        public dynamic AssignIpv6AddressOnCreation
+        {
+            get;
+            set;
         }
 
         /// <summary>
@@ -32,6 +47,19 @@ namespace Humidifier.EC2
         /// PrimitiveType: String
         /// </summary>
         public dynamic CidrBlock
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Ipv6CidrBlock
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-ipv6cidrblock
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic Ipv6CidrBlock
         {
             get;
             set;

@@ -38,6 +38,19 @@ namespace Humidifier.SSM
         }
 
         /// <summary>
+        /// AllowedPattern
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html#cfn-ssm-parameter-allowedpattern
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic AllowedPattern
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Value
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html#cfn-ssm-parameter-value
         /// Required: True

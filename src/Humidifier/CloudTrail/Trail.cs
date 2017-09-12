@@ -5,9 +5,15 @@ namespace Humidifier.CloudTrail
 
     public class Trail : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string Arn =  "Arn" ;
+            public static string SnsTopicArn =  "SnsTopicArn" ;
+        }
+
         /// <summary>
         /// CloudWatchLogsLogGroupArn
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail.html#aws-cloudtrail-trail-cloudwatchlogsloggroupaem
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-cloudwatchlogsloggrouparn
         /// Required: False
         /// UpdateType: Mutable
         /// PrimitiveType: String
@@ -20,7 +26,7 @@ namespace Humidifier.CloudTrail
 
         /// <summary>
         /// CloudWatchLogsRoleArn
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail.html#aws-cloudtrail-trail-cloudwatchlogsrolearn
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-cloudwatchlogsrolearn
         /// Required: False
         /// UpdateType: Mutable
         /// PrimitiveType: String
@@ -33,7 +39,7 @@ namespace Humidifier.CloudTrail
 
         /// <summary>
         /// EnableLogFileValidation
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail.html#aws-cloudtrail-trail-enablelogfilevalidation
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-enablelogfilevalidation
         /// Required: False
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
@@ -45,8 +51,22 @@ namespace Humidifier.CloudTrail
         }
 
         /// <summary>
+        /// EventSelectors
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-eventselectors
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: EventSelector
+        /// </summary>
+        public List<EventSelector> EventSelectors
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// IncludeGlobalServiceEvents
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail.html#aws-cloudtrail-trail-includeglobalserviceevents
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-includeglobalserviceevents
         /// Required: False
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
@@ -59,7 +79,7 @@ namespace Humidifier.CloudTrail
 
         /// <summary>
         /// IsLogging
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail.html#aws-cloudtrail-trail-islogging
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-islogging
         /// Required: True
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
@@ -72,7 +92,7 @@ namespace Humidifier.CloudTrail
 
         /// <summary>
         /// IsMultiRegionTrail
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail.html#aws-cloudtrail-trail-ismultiregiontrail
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-ismultiregiontrail
         /// Required: False
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
@@ -85,7 +105,7 @@ namespace Humidifier.CloudTrail
 
         /// <summary>
         /// KMSKeyId
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail.html#aws-cloudtrail-trail-kmskeyid
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-kmskeyid
         /// Required: False
         /// UpdateType: Mutable
         /// PrimitiveType: String
@@ -98,7 +118,7 @@ namespace Humidifier.CloudTrail
 
         /// <summary>
         /// S3BucketName
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail.html#aws-cloudtrail-trail-s3bucketname
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-s3bucketname
         /// Required: True
         /// UpdateType: Mutable
         /// PrimitiveType: String
@@ -111,7 +131,7 @@ namespace Humidifier.CloudTrail
 
         /// <summary>
         /// S3KeyPrefix
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail.html#aws-cloudtrail-trail-s3keyprefix
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-s3keyprefix
         /// Required: False
         /// UpdateType: Mutable
         /// PrimitiveType: String
@@ -124,7 +144,7 @@ namespace Humidifier.CloudTrail
 
         /// <summary>
         /// SnsTopicName
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail.html#aws-cloudtrail-trail-snstopicname
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-snstopicname
         /// Required: False
         /// UpdateType: Mutable
         /// PrimitiveType: String
@@ -137,7 +157,7 @@ namespace Humidifier.CloudTrail
 
         /// <summary>
         /// Tags
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail.html#cfn-cloudtrail-trail-tags
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-tags
         /// Required: False
         /// UpdateType: Mutable
         /// Type: List
@@ -151,7 +171,7 @@ namespace Humidifier.CloudTrail
 
         /// <summary>
         /// TrailName
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail.html#aws-cloudtrail-trail-trailname
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-trailname
         /// Required: False
         /// UpdateType: Immutable
         /// PrimitiveType: String
@@ -165,5 +185,77 @@ namespace Humidifier.CloudTrail
 
     namespace TrailPropertyTypes
     {
+        public class EventSelector
+        {
+            /// <summary>
+            /// DataResources
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-dataresources
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: DataResource
+            /// </summary>
+            public List<DataResource> DataResources
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// IncludeManagementEvents
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-includemanagementevents
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic IncludeManagementEvents
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ReadWriteType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-readwritetype
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ReadWriteType
+            {
+                get;
+                set;
+            }
+        }
+
+        public class DataResource
+        {
+            /// <summary>
+            /// Type
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-dataresource.html#cfn-cloudtrail-trail-dataresource-type
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Type
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Values
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-dataresource.html#cfn-cloudtrail-trail-dataresource-values
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public List<dynamic> Values
+            {
+                get;
+                set;
+            }
+        }
     }
 }

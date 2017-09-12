@@ -6,6 +6,19 @@ namespace Humidifier.EFS
     public class FileSystem : Humidifier.Resource
     {
         /// <summary>
+        /// Encrypted
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-encrypted
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: Boolean
+        /// </summary>
+        public dynamic Encrypted
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// FileSystemTags
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-filesystemtags
         /// Required: False
@@ -14,6 +27,19 @@ namespace Humidifier.EFS
         /// ItemType: ElasticFileSystemTag
         /// </summary>
         public List<ElasticFileSystemTag> FileSystemTags
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// KmsKeyId
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-kmskeyid
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic KmsKeyId
         {
             get;
             set;

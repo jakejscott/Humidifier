@@ -7,13 +7,14 @@ namespace Humidifier.DynamoDB
     {
         public static class Attributes
         {
+            public static string Arn =  "Arn" ;
             public static string StreamArn =  "StreamArn" ;
         }
 
         /// <summary>
         /// AttributeDefinitions
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-attributedef
-        /// Required: True
+        /// Required: False
         /// UpdateType: Mutable
         /// Type: List
         /// ItemType: AttributeDefinition
@@ -104,15 +105,42 @@ namespace Humidifier.DynamoDB
             get;
             set;
         }
+
+        /// <summary>
+        /// Tags
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-tags
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: Tag
+        /// </summary>
+        public List<Tag> Tags
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// TimeToLiveSpecification
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-timetolivespecification
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: TimeToLiveSpecification
+        /// </summary>
+        public TimeToLiveSpecification TimeToLiveSpecification
+        {
+            get;
+            set;
+        }
     }
 
     namespace TablePropertyTypes
     {
-        public class KeySchema
+        public class TimeToLiveSpecification
         {
             /// <summary>
             /// AttributeName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-keyschema.html#aws-properties-dynamodb-keyschema-attributename
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-timetolivespecification.html#cfn-dynamodb-timetolivespecification-attributename
             /// Required: True
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -124,13 +152,13 @@ namespace Humidifier.DynamoDB
             }
 
             /// <summary>
-            /// KeyType
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-keyschema.html#aws-properties-dynamodb-keyschema-keytype
+            /// Enabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-timetolivespecification.html#cfn-dynamodb-timetolivespecification-enabled
             /// Required: True
             /// UpdateType: Mutable
-            /// PrimitiveType: String
+            /// PrimitiveType: Boolean
             /// </summary>
-            public dynamic KeyType
+            public dynamic Enabled
             {
                 get;
                 set;
@@ -160,36 +188,6 @@ namespace Humidifier.DynamoDB
             /// PrimitiveType: String
             /// </summary>
             public dynamic AttributeType
-            {
-                get;
-                set;
-            }
-        }
-
-        public class Projection
-        {
-            /// <summary>
-            /// NonKeyAttributes
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-projectionobject.html#cfn-dynamodb-projectionobj-nonkeyatt
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// PrimitiveItemType: String
-            /// </summary>
-            public List<dynamic> NonKeyAttributes
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// ProjectionType
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-projectionobject.html#cfn-dynamodb-projectionobj-projtype
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic ProjectionType
             {
                 get;
                 set;
@@ -246,7 +244,7 @@ namespace Humidifier.DynamoDB
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-provisionedthroughput.html#cfn-dynamodb-provisionedthroughput-readcapacityunits
             /// Required: True
             /// UpdateType: Mutable
-            /// PrimitiveType: Integer
+            /// PrimitiveType: Long
             /// </summary>
             public dynamic ReadCapacityUnits
             {
@@ -259,7 +257,7 @@ namespace Humidifier.DynamoDB
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-provisionedthroughput.html#cfn-dynamodb-provisionedthroughput-writecapacityunits
             /// Required: True
             /// UpdateType: Mutable
-            /// PrimitiveType: Integer
+            /// PrimitiveType: Long
             /// </summary>
             public dynamic WriteCapacityUnits
             {
@@ -318,6 +316,65 @@ namespace Humidifier.DynamoDB
             /// Type: ProvisionedThroughput
             /// </summary>
             public ProvisionedThroughput ProvisionedThroughput
+            {
+                get;
+                set;
+            }
+        }
+
+        public class KeySchema
+        {
+            /// <summary>
+            /// AttributeName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-keyschema.html#aws-properties-dynamodb-keyschema-attributename
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic AttributeName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// KeyType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-keyschema.html#aws-properties-dynamodb-keyschema-keytype
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic KeyType
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Projection
+        {
+            /// <summary>
+            /// NonKeyAttributes
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-projectionobject.html#cfn-dynamodb-projectionobj-nonkeyatt
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public List<dynamic> NonKeyAttributes
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ProjectionType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-projectionobject.html#cfn-dynamodb-projectionobj-projtype
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ProjectionType
             {
                 get;
                 set;

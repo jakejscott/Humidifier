@@ -7,7 +7,8 @@ namespace Humidifier.SQS
     {
         public static class Attributes
         {
-            public static string QueueArn =  "QueueArn" ;
+            public static string Arn =  "Arn" ;
+            public static string QueueName =  "QueueName" ;
         }
 
         /// <summary>
@@ -44,6 +45,32 @@ namespace Humidifier.SQS
         /// PrimitiveType: Boolean
         /// </summary>
         public dynamic FifoQueue
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// KmsDataKeyReusePeriodSeconds
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-kmsdatakeyreuseperiodseconds
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Integer
+        /// </summary>
+        public dynamic KmsDataKeyReusePeriodSeconds
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// KmsMasterKeyId
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-kmsmasterkeyid
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic KmsMasterKeyId
         {
             get;
             set;

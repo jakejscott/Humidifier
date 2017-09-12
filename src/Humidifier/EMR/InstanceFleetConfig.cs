@@ -100,88 +100,6 @@ namespace Humidifier.EMR
 
     namespace InstanceFleetConfigPropertyTypes
     {
-        public class InstanceTypeConfig
-        {
-            /// <summary>
-            /// BidPrice
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.html#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-bidprice
-            /// Required: False
-            /// UpdateType: Immutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic BidPrice
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// BidPriceAsPercentageOfOnDemandPrice
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.html#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-bidpriceaspercentageofondemandprice
-            /// Required: False
-            /// UpdateType: Immutable
-            /// PrimitiveType: Double
-            /// </summary>
-            public dynamic BidPriceAsPercentageOfOnDemandPrice
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Configurations
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.html#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-configurations
-            /// Required: False
-            /// UpdateType: Immutable
-            /// Type: List
-            /// ItemType: Configuration
-            /// </summary>
-            public List<Configuration> Configurations
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// EbsConfiguration
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.html#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-ebsconfiguration
-            /// Required: False
-            /// UpdateType: Immutable
-            /// Type: EbsConfiguration
-            /// </summary>
-            public EbsConfiguration EbsConfiguration
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// InstanceType
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.html#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-instancetype
-            /// Required: True
-            /// UpdateType: Immutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic InstanceType
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// WeightedCapacity
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.html#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-weightedcapacity
-            /// Required: False
-            /// UpdateType: Immutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic WeightedCapacity
-            {
-                get;
-                set;
-            }
-        }
-
         public class VolumeSpecification
         {
             /// <summary>
@@ -334,6 +252,88 @@ namespace Humidifier.EMR
             /// PrimitiveType: Boolean
             /// </summary>
             public dynamic EbsOptimized
+            {
+                get;
+                set;
+            }
+        }
+
+        public class InstanceTypeConfig
+        {
+            /// <summary>
+            /// BidPrice
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.html#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-bidprice
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic BidPrice
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// BidPriceAsPercentageOfOnDemandPrice
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.html#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-bidpriceaspercentageofondemandprice
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Double
+            /// </summary>
+            public dynamic BidPriceAsPercentageOfOnDemandPrice
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Configurations
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.html#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-configurations
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: List
+            /// ItemType: Configuration
+            /// </summary>
+            public List<Configuration> Configurations
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// EbsConfiguration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.html#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-ebsconfiguration
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: EbsConfiguration
+            /// </summary>
+            public EbsConfiguration EbsConfiguration
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// InstanceType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.html#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-instancetype
+            /// Required: True
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic InstanceType
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// WeightedCapacity
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.html#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-weightedcapacity
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic WeightedCapacity
             {
                 get;
                 set;

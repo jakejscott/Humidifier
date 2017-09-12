@@ -67,35 +67,6 @@ namespace Humidifier.Route53
 
     namespace HostedZonePropertyTypes
     {
-        public class VPC
-        {
-            /// <summary>
-            /// VPCId
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone-hostedzonevpcs.html#cfn-route53-hostedzone-hostedzonevpcs-vpcid
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic VPCId
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// VPCRegion
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone-hostedzonevpcs.html#cfn-route53-hostedzone-hostedzonevpcs-vpcregion
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic VPCRegion
-            {
-                get;
-                set;
-            }
-        }
-
         public class HostedZoneTag
         {
             /// <summary>
@@ -135,6 +106,35 @@ namespace Humidifier.Route53
             /// PrimitiveType: String
             /// </summary>
             public dynamic Comment
+            {
+                get;
+                set;
+            }
+        }
+
+        public class VPC
+        {
+            /// <summary>
+            /// VPCId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone-hostedzonevpcs.html#cfn-route53-hostedzone-hostedzonevpcs-vpcid
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic VPCId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// VPCRegion
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone-hostedzonevpcs.html#cfn-route53-hostedzone-hostedzonevpcs-vpcregion
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic VPCRegion
             {
                 get;
                 set;

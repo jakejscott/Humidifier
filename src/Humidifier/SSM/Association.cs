@@ -88,23 +88,6 @@ namespace Humidifier.SSM
 
     namespace AssociationPropertyTypes
     {
-        public class ParameterValues
-        {
-            /// <summary>
-            /// ParameterValues
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-parametervalues.html#cfn-ssm-association-parametervalues-parametervalues
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: List
-            /// PrimitiveItemType: String
-            /// </summary>
-            public List<dynamic> ParameterValues_
-            {
-                get;
-                set;
-            }
-        }
-
         public class Target
         {
             /// <summary>
@@ -129,6 +112,23 @@ namespace Humidifier.SSM
             /// PrimitiveItemType: String
             /// </summary>
             public List<dynamic> Values
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ParameterValues
+        {
+            /// <summary>
+            /// ParameterValues
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-parametervalues.html#cfn-ssm-association-parametervalues-parametervalues
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public List<dynamic> ParameterValues_
             {
                 get;
                 set;

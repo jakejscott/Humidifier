@@ -19,6 +19,19 @@ namespace Humidifier.Lambda
         }
 
         /// <summary>
+        /// EventSourceToken
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-permission.html#cfn-lambda-permission-eventsourcetoken
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic EventSourceToken
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// FunctionName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-permission.html#cfn-lambda-permission-functionname
         /// Required: True

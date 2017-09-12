@@ -105,6 +105,23 @@ namespace Humidifier.Events
 
     namespace RulePropertyTypes
     {
+        public class RunCommandParameters
+        {
+            /// <summary>
+            /// RunCommandTargets
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-runcommandparameters.html#cfn-events-rule-runcommandparameters-runcommandtargets
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: RunCommandTarget
+            /// </summary>
+            public List<RunCommandTarget> RunCommandTargets
+            {
+                get;
+                set;
+            }
+        }
+
         public class Target
         {
             /// <summary>
@@ -115,6 +132,19 @@ namespace Humidifier.Events
             /// PrimitiveType: String
             /// </summary>
             public dynamic Arn
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// EcsParameters
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html#cfn-events-rule-target-ecsparameters
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: EcsParameters
+            /// </summary>
+            public EcsParameters EcsParameters
             {
                 get;
                 set;
@@ -160,6 +190,32 @@ namespace Humidifier.Events
             }
 
             /// <summary>
+            /// InputTransformer
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html#cfn-events-rule-target-inputtransformer
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: InputTransformer
+            /// </summary>
+            public InputTransformer InputTransformer
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// KinesisParameters
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html#cfn-events-rule-target-kinesisparameters
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: KinesisParameters
+            /// </summary>
+            public KinesisParameters KinesisParameters
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// RoleArn
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html#cfn-events-rule-target-rolearn
             /// Required: False
@@ -167,6 +223,124 @@ namespace Humidifier.Events
             /// PrimitiveType: String
             /// </summary>
             public dynamic RoleArn
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RunCommandParameters
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html#cfn-events-rule-target-runcommandparameters
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: RunCommandParameters
+            /// </summary>
+            public RunCommandParameters RunCommandParameters
+            {
+                get;
+                set;
+            }
+        }
+
+        public class RunCommandTarget
+        {
+            /// <summary>
+            /// Key
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-runcommandtarget.html#cfn-events-rule-runcommandtarget-key
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Key
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Values
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-runcommandtarget.html#cfn-events-rule-runcommandtarget-values
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public List<dynamic> Values
+            {
+                get;
+                set;
+            }
+        }
+
+        public class InputTransformer
+        {
+            /// <summary>
+            /// InputPathsMap
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-inputtransformer.html#cfn-events-rule-inputtransformer-inputpathsmap
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: Map
+            /// PrimitiveItemType: String
+            /// </summary>
+            public Dictionary<string, dynamic> InputPathsMap
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// InputTemplate
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-inputtransformer.html#cfn-events-rule-inputtransformer-inputtemplate
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic InputTemplate
+            {
+                get;
+                set;
+            }
+        }
+
+        public class KinesisParameters
+        {
+            /// <summary>
+            /// PartitionKeyPath
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-kinesisparameters.html#cfn-events-rule-kinesisparameters-partitionkeypath
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic PartitionKeyPath
+            {
+                get;
+                set;
+            }
+        }
+
+        public class EcsParameters
+        {
+            /// <summary>
+            /// TaskCount
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-ecsparameters.html#cfn-events-rule-ecsparameters-taskcount
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic TaskCount
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// TaskDefinitionArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-ecsparameters.html#cfn-events-rule-ecsparameters-taskdefinitionarn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic TaskDefinitionArn
             {
                 get;
                 set;
