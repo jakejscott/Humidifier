@@ -29,6 +29,8 @@ namespace Humidifier.CodeGen
             
             Specification specification = ParseSpecification(json);
 
+            Console.WriteLine("ResourceSpecificationVersion: " + specification.ResourceSpecificationVersion);
+
             // Clean out any files from last run of the code generator
             var directories = Directory.GetDirectories("../Humidifier/");
             foreach (var directory in directories)

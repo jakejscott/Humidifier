@@ -19,6 +19,19 @@ namespace Humidifier.EC2
         }
 
         /// <summary>
+        /// CidrBlock
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-cidrblock
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic CidrBlock
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// VpcId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-vpcid
         /// Required: True

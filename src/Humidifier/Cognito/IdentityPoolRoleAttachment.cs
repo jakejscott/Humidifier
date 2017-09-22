@@ -50,14 +50,14 @@ namespace Humidifier.Cognito
         public class RulesConfigurationType
         {
             /// <summary>
-            /// RulesConfigurationType
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rulesconfigurationtype.html
+            /// Rules
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rulesconfigurationtype.html#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-rules
             /// Required: True
             /// UpdateType: Mutable
             /// Type: List
             /// ItemType: MappingRule
             /// </summary>
-            public List<MappingRule> RulesConfigurationType_
+            public List<MappingRule> Rules
             {
                 get;
                 set;

@@ -39,7 +39,7 @@ namespace Humidifier.ECS
         /// <summary>
         /// DesiredCount
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-desiredcount
-        /// Required: True
+        /// Required: False
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>

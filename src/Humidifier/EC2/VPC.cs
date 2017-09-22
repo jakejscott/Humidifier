@@ -8,6 +8,7 @@ namespace Humidifier.EC2
         public static class Attributes
         {
             public static string CidrBlock =  "CidrBlock" ;
+            public static string CidrBlockAssociations =  "CidrBlockAssociations" ;
             public static string DefaultNetworkAcl =  "DefaultNetworkAcl" ;
             public static string DefaultSecurityGroup =  "DefaultSecurityGroup" ;
             public static string Ipv6CidrBlocks =  "Ipv6CidrBlocks" ;
