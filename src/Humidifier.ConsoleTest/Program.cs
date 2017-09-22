@@ -2,7 +2,6 @@
 using System.IO;
 using Humidifier.Json;
 using Humidifier.Lambda.FunctionPropertyTypes;
-using Newtonsoft.Json.Linq;
 
 namespace Humidifier.ConsoleTest
 {
@@ -315,19 +314,19 @@ namespace Humidifier.ConsoleTest
 
         private static void FnExamples()
         {
-            var fnFindInMap = Fn.FindInMap("RegionMap", Fn.Ref("AWS::Region"), "64");
-            var fnGetAtt = Fn.GetAtt("MyElb", ElasticLoadBalancing.LoadBalancer.Attributes.DNSName);
-            var fnGetAZs = Fn.GetAZs("us-east-2");
-            var fnImportValue = Fn.ImportValue(Fn.Sub("${NetworkStackNameParameter}-SubnetID"));
-            var fnJoin = Fn.Join("", "arn:aws:s3:::", Fn.Ref("DeployBucket"), "/*");
-            var fnRef = Fn.Ref("BucketName");
-            var fnSelect = Fn.Select("1", new[] { "a", "b", "c" });
-            var fnSplit = Fn.Split("|", "a|b|c");
-            var fnSub = Fn.Sub("${AWS::StackName}-${AWS::Region}-bucket");
-            var fnSelectSplit = Fn.Select("1", Fn.Split("|", "a|b|c"));
+            Fn.FindInMap("RegionMap", Fn.Ref("AWS::Region"), "64");
+            Fn.GetAtt("MyElb", ElasticLoadBalancing.LoadBalancer.Attributes.DNSName);
+            Fn.GetAZs("us-east-2");
+            Fn.ImportValue(Fn.Sub("${NetworkStackNameParameter}-SubnetID"));
+            Fn.Join("", "arn:aws:s3:::", Fn.Ref("DeployBucket"), "/*");
+            Fn.Ref("BucketName");
+            Fn.Select("1", new[] { "a", "b", "c" });
+            Fn.Split("|", "a|b|c");
+            Fn.Sub("${AWS::StackName}-${AWS::Region}-bucket");
+            Fn.Select("1", Fn.Split("|", "a|b|c"));
 
             // Because JSON doesn't allow newlines, there's a known hack where you can join multiple lines together using Fn::Join
-            var fnBase64 = Fn.Base64(Fn.Join("",
+            Fn.Base64(Fn.Join("",
                 "#!/bin/bash -e\n",
                 "wget https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chef_11.6.2-1.ubuntu.12.04_amd64.deb\n",
                 "dpkg -i chef_11.6.2-1.ubuntu.12.04_amd64.deb\n"
@@ -336,7 +335,7 @@ namespace Humidifier.ConsoleTest
             // But that's gross and unreadable, we have a better way! Use a multiline C# string, and let the library take care of encoding it for you.
             //  - Whitespace on the start of the line is trimmed, so feel free to indent you code nicely.
             //  - Newlines are encoded as \r\n automatically by NewtonSoft.Json
-            var altBase64 = Fn.Base64(
+            Fn.Base64(
                 @"#!/bin/bash -e
                 wget https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chef_11.6.2-1.ubuntu.12.04_amd64.deb
                 dpkg -i chef_11.6.2-1.ubuntu.12.04_amd64.deb"
