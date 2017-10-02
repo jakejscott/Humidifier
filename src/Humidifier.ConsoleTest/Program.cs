@@ -184,7 +184,7 @@ namespace Humidifier.ConsoleTest
             });
 
             //
-            // Manually add a dependancy to a resource
+            // Manually add a dependency to a resource
             //
             stack.AddDependsOn("Ec2Instance", "DbInstance");
             stack.AddDependsOn("Ec2Instance", "DbInstance", "DbInstance", "Subnet");
