@@ -29,11 +29,18 @@
 
             &gt; 0.1.5
             - Update to the 1.6.1 version of the cloudformation specification
+
+            &gt; 0.1.6
+            - Add support for DependsOn attribute
+            - Add a way to manually add a DependsOn attribute to a resource
+            - Add a way to manually add a Condition to a resource
+            - Make sure null or empty template props are not serialized to JSON
         </PackageReleaseNotes>
         <PackageIconUrl>https://raw.githubusercontent.com/jakejscott/humidifier/master/img/humidifier.png</PackageIconUrl>
         <PackageProjectUrl>https://github.com/jakejscott/humidifier</PackageProjectUrl>
         <PackageLicenseUrl>https://github.com/jakejscott/humidifier/blob/master/license.txt</PackageLicenseUrl>
         <DebugType>Full</DebugType>
+        <Version>0.1.6</Version>
     </PropertyGroup>
 
     <ItemGroup>
