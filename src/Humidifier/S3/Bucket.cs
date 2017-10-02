@@ -40,6 +40,20 @@ namespace Humidifier.S3
         }
 
         /// <summary>
+        /// AnalyticsConfigurations
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-analyticsconfigurations
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: AnalyticsConfiguration
+        /// </summary>
+        public List<AnalyticsConfiguration> AnalyticsConfigurations
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// BucketName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-name
         /// Required: False
@@ -60,6 +74,20 @@ namespace Humidifier.S3
         /// Type: CorsConfiguration
         /// </summary>
         public CorsConfiguration CorsConfiguration
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// InventoryConfigurations
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-inventoryconfigurations
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: InventoryConfiguration
+        /// </summary>
+        public List<InventoryConfiguration> InventoryConfigurations
         {
             get;
             set;
@@ -418,6 +446,117 @@ namespace Humidifier.S3
             }
         }
 
+        public class Destination
+        {
+            /// <summary>
+            /// BucketAccountId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-destination.html#cfn-s3-bucket-destination-bucketaccountid
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic BucketAccountId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// BucketArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-destination.html#cfn-s3-bucket-destination-bucketarn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic BucketArn
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Format
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-destination.html#cfn-s3-bucket-destination-format
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Format
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Prefix
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-destination.html#cfn-s3-bucket-destination-prefix
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Prefix
+            {
+                get;
+                set;
+            }
+        }
+
+        public class AnalyticsConfiguration
+        {
+            /// <summary>
+            /// Id
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-analyticsconfiguration.html#cfn-s3-bucket-analyticsconfiguration-id
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Id
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Prefix
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-analyticsconfiguration.html#cfn-s3-bucket-analyticsconfiguration-prefix
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Prefix
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// StorageClassAnalysis
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-analyticsconfiguration.html#cfn-s3-bucket-analyticsconfiguration-storageclassanalysis
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: StorageClassAnalysis
+            /// </summary>
+            public StorageClassAnalysis StorageClassAnalysis
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// TagFilters
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-analyticsconfiguration.html#cfn-s3-bucket-analyticsconfiguration-tagfilters
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: TagFilter
+            /// </summary>
+            public List<TagFilter> TagFilters
+            {
+                get;
+                set;
+            }
+        }
+
         public class LoggingConfiguration
         {
             /// <summary>
@@ -441,6 +580,22 @@ namespace Humidifier.S3
             /// PrimitiveType: String
             /// </summary>
             public dynamic LogFilePrefix
+            {
+                get;
+                set;
+            }
+        }
+
+        public class StorageClassAnalysis
+        {
+            /// <summary>
+            /// DataExport
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-storageclassanalysis.html#cfn-s3-bucket-storageclassanalysis-dataexport
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: DataExport
+            /// </summary>
+            public DataExport DataExport
             {
                 get;
                 set;
@@ -645,6 +800,101 @@ namespace Humidifier.S3
             /// ItemType: FilterRule
             /// </summary>
             public List<FilterRule> Rules
+            {
+                get;
+                set;
+            }
+        }
+
+        public class InventoryConfiguration
+        {
+            /// <summary>
+            /// Destination
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-destination
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: Destination
+            /// </summary>
+            public Destination Destination
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Enabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-enabled
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Enabled
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Id
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-id
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Id
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// IncludedObjectVersions
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-includedobjectversions
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic IncludedObjectVersions
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// OptionalFields
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-optionalfields
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public List<dynamic> OptionalFields
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Prefix
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-prefix
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Prefix
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ScheduleFrequency
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-schedulefrequency
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ScheduleFrequency
             {
                 get;
                 set;
@@ -1091,6 +1341,35 @@ namespace Humidifier.S3
             /// PrimitiveType: Integer
             /// </summary>
             public dynamic TransitionInDays
+            {
+                get;
+                set;
+            }
+        }
+
+        public class DataExport
+        {
+            /// <summary>
+            /// Destination
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-dataexport.html#cfn-s3-bucket-dataexport-destination
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: Destination
+            /// </summary>
+            public Destination Destination
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// OutputSchemaVersion
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-dataexport.html#cfn-s3-bucket-dataexport-outputschemaversion
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic OutputSchemaVersion
             {
                 get;
                 set;

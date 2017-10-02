@@ -19,6 +19,19 @@ namespace Humidifier.KinesisFirehose
         }
 
         /// <summary>
+        /// DeliveryStreamType
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-deliverystreamtype
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic DeliveryStreamType
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// ElasticsearchDestinationConfiguration
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration
         /// Required: False
@@ -39,6 +52,19 @@ namespace Humidifier.KinesisFirehose
         /// Type: ExtendedS3DestinationConfiguration
         /// </summary>
         public ExtendedS3DestinationConfiguration ExtendedS3DestinationConfiguration
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// KinesisStreamSourceConfiguration
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: KinesisStreamSourceConfiguration
+        /// </summary>
+        public KinesisStreamSourceConfiguration KinesisStreamSourceConfiguration
         {
             get;
             set;
@@ -372,6 +398,35 @@ namespace Humidifier.KinesisFirehose
             /// PrimitiveType: Integer
             /// </summary>
             public dynamic SizeInMBs
+            {
+                get;
+                set;
+            }
+        }
+
+        public class KinesisStreamSourceConfiguration
+        {
+            /// <summary>
+            /// KinesisStreamARN
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration.html#cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration-kinesisstreamarn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic KinesisStreamARN
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RoleARN
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration.html#cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration-rolearn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RoleARN
             {
                 get;
                 set;

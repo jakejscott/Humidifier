@@ -14,7 +14,7 @@ namespace Humidifier.DynamoDB
         /// <summary>
         /// AttributeDefinitions
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-attributedef
-        /// Required: True
+        /// Required: False
         /// UpdateType: Mutable
         /// Type: List
         /// ItemType: AttributeDefinition
