@@ -89,8 +89,20 @@
         }
       }
     },
+    "DbInstance": {
+      "Type": "AWS::RDS::DBInstance",
+      "Properties": {
+        "AllocatedStorage": "5",
+        "DBInstanceClass": "db.m1.small",
+        "Engine": "MySQL",
+        "EngineVersion": "5.5",
+        "MasterUserPassword": "MyPassword",
+        "MasterUsername": "MyName"
+      }
+    },
     "Ec2Instance": {
       "Type": "AWS::EC2::Instance",
+      "Condition": "CreateProdResources",
       "Properties": {
         "ImageId": {
           "Fn::FindInMap": [
@@ -117,7 +129,11 @@
         "UserData": {
           "Fn::Base64": "#!/bin/bash -e\r\nwget https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chef_11.6.2-1.ubuntu.12.04_amd64.deb\r\ndpkg -i chef_11.6.2-1.ubuntu.12.04_amd64.deb\r\n"
         }
-      }
+      },
+      "DependsOn": [
+        "DbInstance",
+        "Subnet"
+      ]
     },
     "AutomationServiceRole": {
       "Type": "AWS::IAM::Role",
@@ -210,7 +226,10 @@
             "Arn"
           ]
         }
-      }
+      },
+      "DependsOn": [
+        "KinesisStream"
+      ]
     },
     "LambdaFunction": {
       "Type": "AWS::Lambda::Function",

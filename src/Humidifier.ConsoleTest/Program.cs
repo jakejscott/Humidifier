@@ -92,7 +92,7 @@ namespace Humidifier.ConsoleTest
             stack.Add("CreateProdResources", new Condition(Fn.Equals(Fn.Ref("Environment"), "prod")));
             stack.Add("CreateDevResources", new Condition(Fn.Equals(Fn.Ref("Environment"), "dev")));
             stack.Add("NotCondition", new Condition(Fn.Not(Fn.Equals(Fn.Ref("Environment"), "prod"))));
-            stack.Add("AndCondition", 
+            stack.Add("AndCondition",
                 new Condition(
                     Fn.And(
                         Fn.Equals("sg-mysqgroup", Fn.Ref("SecurityGroup")),
@@ -173,6 +173,28 @@ namespace Humidifier.ConsoleTest
                 AvailabilityZone = Fn.Select("0", Fn.GetAZs(Fn.Ref("AWS::Region")))
             });
 
+            stack.Add("DbInstance", new RDS.DBInstance
+            {
+                AllocatedStorage = "5",
+                DBInstanceClass = "db.m1.small",
+                Engine = "MySQL",
+                EngineVersion = "5.5",
+                MasterUsername = "MyName",
+                MasterUserPassword = "MyPassword"
+            });
+
+            //
+            // Manually add a dependancy to a resource
+            //
+            stack.AddDependsOn("Ec2Instance", "DbInstance");
+            stack.AddDependsOn("Ec2Instance", "DbInstance", "DbInstance", "Subnet");
+
+            //
+            // Manually add a condition to a resource
+            //
+            stack.AddCondition("Ec2Instance", "CreateProdResources");
+            stack.AddCondition("Ec2Instance", "CreateProdResources");
+
             stack.Add("Ec2Instance", new EC2.Instance
             {
                 ImageId = Fn.FindInMap("RegionMap", Fn.Ref("AWS::Region"), "64"),
@@ -182,7 +204,13 @@ namespace Humidifier.ConsoleTest
                     wget https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chef_11.6.2-1.ubuntu.12.04_amd64.deb
                     dpkg -i chef_11.6.2-1.ubuntu.12.04_amd64.deb"
                 )
-            });
+            }, condition: "CreateProdResources", dependsOn: new[] { "DbInstance", "Subnet" });
+
+            stack.AddDependsOn("Ec2Instance", "DbInstance", "DbInstance");
+            stack.AddDependsOn("Ec2Instance", "DbInstance");
+
+            stack.AddCondition("Ec2Instance", "CreateProdResources");
+            stack.AddCondition("Ec2Instance", "CreateProdResources");
 
             stack.Add("AutomationServiceRole", new IAM.Role
             {
@@ -241,7 +269,8 @@ namespace Humidifier.ConsoleTest
             {
                 Enabled = true,
                 EventSourceArn = Fn.GetAtt("KinesisStream", Kinesis.Stream.Attributes.Arn)
-            });
+            },
+            dependsOn: new[] { "KinesisStream" });
 
             stack.Add("LambdaFunction", new Lambda.Function
             {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
@@ -45,23 +46,32 @@ namespace Humidifier.Json
 
         public string Serialize(Stack stack)
         {
-            StackJson stackJson = Convert(stack);
-            var result = JsonConvert.SerializeObject(stackJson, settings);
-            return result;
-        }
-
-        private static StackJson Convert(Stack stack)
-        {
             var stackJson = new StackJson
             {
                 AWSTemplateFormatVersion = stack.AWSTemplateFormatVersion,
                 Transform = stack.Transform,
-                Description = stack.Description,
-                Parameters = stack.Parameters,
-                Mappings = stack.Mappings,
-                Outputs = stack.Outputs,
-                Conditions = stack.Conditions
+                Description = stack.Description
             };
+
+            if (stack.Parameters != null && stack.Parameters.Any())
+            {
+                stackJson.Parameters = stack.Parameters;
+            }
+
+            if (stack.Mappings != null && stack.Mappings.Any())
+            {
+                stackJson.Mappings = stack.Mappings;
+            }
+
+            if (stack.Outputs != null && stack.Outputs.Any())
+            {
+                stackJson.Outputs = stack.Outputs;
+            }
+
+            if (stack.Conditions != null && stack.Conditions.Any())
+            {
+                stackJson.Conditions = stack.Conditions;
+            }
 
             if (stack.Resources != null && stack.Resources.Any())
             {
@@ -72,26 +82,45 @@ namespace Humidifier.Json
                     var resource = kvp.Value;
 
                     var typeInfo = kvp.Value.GetType();
+                    Debug.Assert(typeInfo.Namespace != null);
+
                     var awsTypeName = typeInfo.Namespace.Replace("Humidifier.", "AWS::") + "::" + typeInfo.Name;
 
-                    string condition = null;
-                    if (stack.ResourceConditions.ContainsKey(kvp.Key))
-                    {
-                        condition = stack.ResourceConditions[kvp.Key];
-                    }
+                    var condition = stack.GetCondition(kvp.Key);
+                    var dependsOn = stack.GetDependsOn(kvp.Key);
 
                     var resourceJson = new ResourceJson
                     {
                         Type = awsTypeName,
                         Condition = condition,
-                        Properties = resource
+                        Properties = resource,
+                        DependsOn = dependsOn,
                     };
 
                     stackJson.Resources.Add(kvp.Key, resourceJson);
                 }
             }
 
-            return stackJson;
+            var result = JsonConvert.SerializeObject(stackJson, settings);
+            return result;
+        }
+
+        private class FixPropertyNameWithUnderscoreContractResolver : DefaultContractResolver
+        {
+            protected override IList<JsonProperty> CreateProperties(Type type, MemberSerialization memberSerialization)
+            {
+                IList<JsonProperty> properties = base.CreateProperties(type, memberSerialization);
+
+                foreach (var jsonProperty in properties)
+                {
+                    if (jsonProperty.PropertyName.EndsWith("_"))
+                    {
+                        jsonProperty.PropertyName = jsonProperty.PropertyName.TrimEnd('_');
+                    }
+                }
+
+                return properties;
+            }
         }
 
         private class StackJson
@@ -112,24 +141,7 @@ namespace Humidifier.Json
             public string Type { get; set; }
             public string Condition { get; set; }
             public Resource Properties { get; set; }
-        }
-
-        private class FixPropertyNameWithUnderscoreContractResolver : DefaultContractResolver
-        {
-            protected override IList<JsonProperty> CreateProperties(Type type, MemberSerialization memberSerialization)
-            {
-                IList<JsonProperty> properties = base.CreateProperties(type, memberSerialization);
-
-                foreach (var jsonProperty in properties)
-                {
-                    if (jsonProperty.PropertyName.EndsWith("_"))
-                    {
-                        jsonProperty.PropertyName = jsonProperty.PropertyName.TrimEnd('_');
-                    }
-                }
-
-                return properties;
-            }
+            public List<string> DependsOn { get; set; }
         }
     }
 }
