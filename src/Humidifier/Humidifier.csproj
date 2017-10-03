@@ -5,7 +5,7 @@
         <Copyright>Jake Scott</Copyright>
         <AssemblyTitle>Humidifier</AssemblyTitle>
         <NeutralLanguage>en-US</NeutralLanguage>
-        <VersionPrefix>0.1.5</VersionPrefix>
+        <VersionPrefix>0.1.7</VersionPrefix>
         <Authors>Jake Scott</Authors>
         <TargetFrameworks>net45;netstandard1.3</TargetFrameworks>
         <AssemblyName>Humidifier</AssemblyName>
@@ -35,12 +35,14 @@
             - Add a way to manually add a DependsOn attribute to a resource
             - Add a way to manually add a Condition to a resource
             - Make sure null or empty template props are not serialized to JSON
+            
+            &gt; 0.1.7
+            - Improve PolicyDocument with support for conditions
         </PackageReleaseNotes>
         <PackageIconUrl>https://raw.githubusercontent.com/jakejscott/humidifier/master/img/humidifier.png</PackageIconUrl>
         <PackageProjectUrl>https://github.com/jakejscott/humidifier</PackageProjectUrl>
         <PackageLicenseUrl>https://github.com/jakejscott/humidifier/blob/master/license.txt</PackageLicenseUrl>
         <DebugType>Full</DebugType>
-        <Version>0.1.6</Version>
     </PropertyGroup>
 
     <ItemGroup>
