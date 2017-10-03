@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using Humidifier.Json;
 using Humidifier.Lambda.FunctionPropertyTypes;
@@ -228,6 +229,33 @@ namespace Humidifier.ConsoleTest
                 }
             });
 
+
+
+            stack.Add("KinesisFirehoseRole", new IAM.Role
+            {
+                AssumeRolePolicyDocument = new PolicyDocument
+                {
+                    Statement = new List<Statement>
+                    {
+                        new Statement
+                        {
+                            Effect = "Allow",
+                            Principal = new { Service = "firehose.amazonaws.com" },
+                            Action = "sts:AssumeRole",
+                            Condition = new Dictionary<string, Dictionary<string, dynamic>>
+                            {
+                                ["StringEquals"] = new Dictionary<string, dynamic> { ["sts:ExternalId"] = Fn.Ref("AWS::AccountId") },
+                                ["DateGreaterThan"] = new Dictionary<string, dynamic> { ["aws:CurrentTime"] = "2013-08-16T12:00:00Z" },
+                                ["DateLessThan"] = new Dictionary<string, dynamic> { ["aws:CurrentTime"] = "2013-08-16T15:00:00Z" },
+                                ["IpAddress"] = new Dictionary<string, dynamic> { ["aws:SourceIp"] = new [] { "192.0.2.0/24", "203.0.113.0/24" } },
+                                ["StringLikeIfExists"] = new Dictionary<string, dynamic> { ["ec2:InstanceType"] = new [] { "t1.*", "t2.*", "m3.*" } },
+                                ["Null"] = new Dictionary<string, dynamic> { ["aws:TokenIssueTime"] = new [] { "true" } }
+                            }
+                        }
+                    }
+                }
+            });
+
             stack.Add("DeploymentBucket", new S3.Bucket
             {
                 BucketName = Fn.Ref("AWS::StackName")
@@ -285,7 +313,7 @@ namespace Humidifier.ConsoleTest
                     S3Bucket = Fn.ImportValue(Fn.Sub("${AutomationStack}-DeploymentBucket")),
                     S3Key = new { Ref = "CodeS3Key" },
                 },
-                Environment = new Environment
+                Environment = new Humidifier.Lambda.FunctionPropertyTypes.Environment
                 {
                     Variables = new Dictionary<string, dynamic>
                     {

@@ -151,6 +151,53 @@
         }
       }
     },
+    "KinesisFirehoseRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "firehose.amazonaws.com"
+              },
+              "Action": "sts:AssumeRole",
+              "Condition": {
+                "StringEquals": {
+                  "sts:ExternalId": {
+                    "Ref": "AWS::AccountId"
+                  }
+                },
+                "DateGreaterThan": {
+                  "aws:CurrentTime": "2013-08-16T12:00:00Z"
+                },
+                "DateLessThan": {
+                  "aws:CurrentTime": "2013-08-16T15:00:00Z"
+                },
+                "IpAddress": {
+                  "aws:SourceIp": [
+                    "192.0.2.0/24",
+                    "203.0.113.0/24"
+                  ]
+                },
+                "StringLikeIfExists": {
+                  "ec2:InstanceType": [
+                    "t1.*",
+                    "t2.*",
+                    "m3.*"
+                  ]
+                },
+                "Null": {
+                  "aws:TokenIssueTime": [
+                    "true"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
     "DeploymentBucket": {
       "Type": "AWS::S3::Bucket",
       "Properties": {

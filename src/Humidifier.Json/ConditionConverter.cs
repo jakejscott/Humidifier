@@ -10,7 +10,6 @@ namespace Humidifier.Json
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            // { "Fn::Equals" : [{"Ref" : "EnvType"}, "prod"]}
             var condition = (Condition)value;
             serializer.Serialize(writer, condition.Fn);
         }
