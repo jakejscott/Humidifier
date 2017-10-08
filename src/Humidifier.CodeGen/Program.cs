@@ -18,27 +18,24 @@ namespace Humidifier.CodeGen
 {
     public static class Program
     {
+        static string url = "https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json";
+
         public static void Main(string[] args)
         {
-            var client = new HttpClient();
+            var basePath = Environment.GetEnvironmentVariable("BUILD_PATH");
+            var humidifierPath = Path.Combine(basePath, "src", "Humidifier");
 
-            // NOTE: Download spec from us-east-1 http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-resource-specification.html
-            var url = "https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json";
-            Console.WriteLine($"Downloading spec from {url}");
-            var json = client.GetStringAsync(url).GetAwaiter().GetResult();
-            
-            Specification specification = ParseSpecification(json);
-
-            Console.WriteLine("ResourceSpecificationVersion: " + specification.ResourceSpecificationVersion);
-
-            // Clean out any files from last run of the code generator
-            var directories = Directory.GetDirectories("../Humidifier/");
-            foreach (var directory in directories)
+            foreach (var directory in Directory.GetDirectories(humidifierPath))
             {
-                if (directory.StartsWith("../Humidifier/bin")) continue;
-                if (directory.StartsWith("../Humidifier/obj")) continue;
+                if (directory.StartsWith("bin") || directory.StartsWith("obj")) continue;
                 Directory.Delete(directory, true);
             }
+
+            var client = new HttpClient();
+            var json = client.GetStringAsync(url).GetAwaiter().GetResult();
+
+            Specification specification = ParseSpecification(json);
+            Console.WriteLine("ResourceSpecificationVersion: " + specification.ResourceSpecificationVersion);
 
             foreach (ResourceType resourceType in specification.ResourceTypes)
             {
@@ -46,7 +43,7 @@ namespace Humidifier.CodeGen
 
                 var group = parts[1];
                 var resourceClassName = parts[2];
-                var path = $"../Humidifier/{group}";
+                var path = Path.Combine(humidifierPath, group);
 
                 Directory.CreateDirectory(path);
 
@@ -165,7 +162,6 @@ namespace Humidifier.CodeGen
             }
 
             Console.WriteLine("Done");
-            Console.ReadLine();
         }
 
         private static string GetComment(Property property)
