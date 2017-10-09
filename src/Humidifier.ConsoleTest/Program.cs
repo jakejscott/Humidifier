@@ -259,7 +259,7 @@ namespace Humidifier.ConsoleTest
             stack.Add("DeploymentBucket", new S3.Bucket
             {
                 BucketName = Fn.Ref("AWS::StackName")
-            }, 
+            },
             deletionPolicy: DeletionPolicy.Retain, metadata: new { SomeProp = "SomeProp", AnotherProp = "AnotherProp" });
 
             stack.Add("ImageBucket", new S3.Bucket
@@ -382,15 +382,6 @@ namespace Humidifier.ConsoleTest
                 UserData = ""
             });
 
-            stack.Add("AutoScalingGroup", new AutoScaling.AutoScalingGroup
-            {
-                AvailabilityZones = Fn.GetAZs(""),
-                LaunchConfigurationName = Fn.Ref("LaunchConfig"),
-                DesiredCapacity = 1,
-                MinSize = 1,
-                MaxSize = 2
-            });
-
             stack.Add("AutoScalingGroupScheduledAction", new AutoScaling.ScheduledAction
             {
                 AutoScalingGroupName = Fn.Ref("AutoScalingGroup"),
@@ -398,16 +389,23 @@ namespace Humidifier.ConsoleTest
                 StartTime = "2017-06-02T20:00:00Z"
             });
 
-            stack.AddCreationPolicy("AutoScalingGroup", new CreationPolicy
+            stack.Add("AutoScalingGroup", new AutoScaling.AutoScalingGroup
+            {
+                AvailabilityZones = Fn.GetAZs(""),
+                LaunchConfigurationName = Fn.Ref("LaunchConfig"),
+                DesiredCapacity = 1,
+                MinSize = 1,
+                MaxSize = 2
+            },
+            creationPolicy: new CreationPolicy
             {
                 ResourceSignal = new ResourceSignal
                 {
                     Count = 3,
                     Timeout = "PT15M"
                 }
-            });
-
-            stack.AddUpdatePolicy("AutoScalingGroup", new UpdatePolicy
+            },
+            updatePolicy: new UpdatePolicy
             {
                 AutoScalingScheduledAction = new AutoScalingScheduledAction
                 {
@@ -419,12 +417,9 @@ namespace Humidifier.ConsoleTest
                     MaxBatchSize = "2",
                     WaitOnResourceSignals = true,
                     PauseTime = "PT10M"
-                },
-                AutoScalingReplacingUpdate = new AutoScalingReplacingUpdate
-                {
-                    WillReplace = true
                 }
-            });
+            }, 
+            metadata: new { Key1 = "Value1", Key2 = "Value2" });
 
             return stack;
         }

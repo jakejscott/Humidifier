@@ -204,6 +204,32 @@
         "BucketName": {
           "Ref": "AWS::StackName"
         }
+      },
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "SomeProp": "SomeProp",
+        "AnotherProp": "AnotherProp"
+      }
+    },
+    "ImageBucket": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketName": {
+          "Fn::Join": [
+            "",
+            [
+              {
+                "Ref": "AWS::StackName"
+              },
+              "-images"
+            ]
+          ]
+        }
+      },
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "Object1": "Location1",
+        "Object2": "Object2"
       }
     },
     "DeploymentBucketPolicy": {
@@ -354,6 +380,59 @@
             }
           ]
         }
+      }
+    },
+    "LaunchConfig": {
+      "Type": "AWS::AutoScaling::LaunchConfiguration",
+      "Properties": {
+        "ImageId": "ami-e689729e",
+        "InstanceType": "t2.micro",
+        "UserData": ""
+      }
+    },
+    "AutoScalingGroupScheduledAction": {
+      "Type": "AWS::AutoScaling::ScheduledAction",
+      "Properties": {
+        "AutoScalingGroupName": {
+          "Ref": "AutoScalingGroup"
+        },
+        "DesiredCapacity": 2,
+        "StartTime": "2017-06-02T20:00:00Z"
+      }
+    },
+    "AutoScalingGroup": {
+      "Type": "AWS::AutoScaling::AutoScalingGroup",
+      "Properties": {
+        "AvailabilityZones": {
+          "Fn::GetAZs": ""
+        },
+        "DesiredCapacity": 1,
+        "LaunchConfigurationName": {
+          "Ref": "LaunchConfig"
+        },
+        "MaxSize": 2,
+        "MinSize": 1
+      },
+      "CreationPolicy": {
+        "ResourceSignal": {
+          "Count": 3,
+          "Timeout": "PT15M"
+        }
+      },
+      "UpdatePolicy": {
+        "AutoScalingRollingUpdate": {
+          "MaxBatchSize": "2",
+          "MinInstancesInService": 2,
+          "PauseTime": "PT10M",
+          "WaitOnResourceSignals": true
+        },
+        "AutoScalingScheduledAction": {
+          "IgnoreUnmodifiedGroupSizeProperties": true
+        }
+      },
+      "Metadata": {
+        "Key1": "Value1",
+        "Key2": "Value2"
       }
     }
   },
