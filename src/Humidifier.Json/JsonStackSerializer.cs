@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
 
 namespace Humidifier.Json
@@ -89,12 +90,21 @@ namespace Humidifier.Json
                     var condition = stack.GetCondition(kvp.Key);
                     var dependsOn = stack.GetDependsOn(kvp.Key);
 
+                    var creationPolicy = stack.GetCreationPolicy(kvp.Key);
+                    var updatePolicy = stack.GetUpdatePolicy(kvp.Key);
+                    var deletionPolicy = stack.GetDeletionPolicy(kvp.Key);
+                    var metadata = stack.GetMetadata(kvp.Key);
+
                     var resourceJson = new ResourceJson
                     {
                         Type = awsTypeName,
                         Condition = condition,
                         Properties = resource,
                         DependsOn = dependsOn,
+                        CreationPolicy = creationPolicy,
+                        UpdatePolicy = updatePolicy,
+                        DeletionPolicy = deletionPolicy,
+                        Metadata = metadata
                     };
 
                     stackJson.Resources.Add(kvp.Key, resourceJson);
@@ -142,6 +152,11 @@ namespace Humidifier.Json
             public string Condition { get; set; }
             public Resource Properties { get; set; }
             public List<string> DependsOn { get; set; }
+            public CreationPolicy CreationPolicy { get; set; }
+            public UpdatePolicy UpdatePolicy { get; set; }
+            [JsonConverter(typeof(StringEnumConverter))]
+            public DeletionPolicy? DeletionPolicy { get; set; }
+            public dynamic Metadata { get; set; }
         }
     }
 }

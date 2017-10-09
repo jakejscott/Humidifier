@@ -6,6 +6,10 @@ namespace Humidifier
     public class Stack
     {
         private Dictionary<string, string> ResourceConditions { get; } = new Dictionary<string, string>();
+        private Dictionary<string, DeletionPolicy> ResourceDeletionPolicies { get; } = new Dictionary<string, DeletionPolicy>();
+        private Dictionary<string, CreationPolicy> ResourceCreationPolicies { get; } = new Dictionary<string, CreationPolicy>();
+        private Dictionary<string, UpdatePolicy> ResourceUpdatePolicies { get; } = new Dictionary<string, UpdatePolicy>();
+        private Dictionary<string, dynamic> ResourceMetadata { get; } = new Dictionary<string, dynamic>();
         private Dictionary<string, HashSet<string>> ResourceDependsOn { get; } = new Dictionary<string, HashSet<string>>();
 
         public Stack(string awsTemplateFormatVersion = "2010-09-09")
@@ -28,7 +32,7 @@ namespace Humidifier
         public void Add(string name, Output output) => Outputs.Add(name, output);
         public void Add(string name, Mapping mapping) => Mappings.Add(name, mapping);
 
-        public void Add(string name, Resource resource, string condition = null, string[] dependsOn = null)
+        public void Add(string name, Resource resource, string condition = null, CreationPolicy creationPolicy = null, UpdatePolicy updatePolicy = null, DeletionPolicy? deletionPolicy = null, dynamic metadata = null, string[] dependsOn = null)
         {
             Resources.Add(name, resource);
 
@@ -41,17 +45,37 @@ namespace Humidifier
             {
                 AddDependsOn(name, dependsOn);
             }
+
+            if (creationPolicy != null)
+            {
+                AddCreationPolicy(name, creationPolicy);
+            }
+
+            if (updatePolicy != null)
+            {
+                AddUpdatePolicy(name, updatePolicy);
+            }
+
+            if (deletionPolicy != null)
+            {
+                AddDelitionPolicy(name, deletionPolicy.Value);
+            }
+
+            if (metadata != null)
+            {
+                AddMetadata(name, metadata);
+            }
         }
 
-        public void AddCondition(string name, string condition)
+        public void AddCondition(string resource, string condition)
         {
-            if (ResourceConditions.ContainsKey(name))
+            if (ResourceConditions.ContainsKey(resource))
             {
-                ResourceConditions[name] = condition;
+                ResourceConditions[resource] = condition;
             }
             else
             {
-                ResourceConditions.Add(name, condition);
+                ResourceConditions.Add(resource, condition);
             }
         }
 
@@ -70,6 +94,54 @@ namespace Humidifier
             }
         }
 
+        public void AddCreationPolicy(string resource, CreationPolicy creationPolicy)
+        {
+            if (ResourceCreationPolicies.ContainsKey(resource))
+            {
+                ResourceCreationPolicies[resource] = creationPolicy;
+            }
+            else
+            {
+                ResourceCreationPolicies.Add(resource, creationPolicy);
+            }
+        }
+
+        public void AddUpdatePolicy(string resource, UpdatePolicy updatePolicy)
+        {
+            if (ResourceCreationPolicies.ContainsKey(resource))
+            {
+                ResourceUpdatePolicies[resource] = updatePolicy;
+            }
+            else
+            {
+                ResourceUpdatePolicies.Add(resource, updatePolicy);
+            }
+        }
+
+        public void AddDelitionPolicy(string resource, DeletionPolicy policy)
+        {
+            if (ResourceDeletionPolicies.ContainsKey(resource))
+            {
+                ResourceDeletionPolicies[resource] = policy;
+            }
+            else
+            {
+                ResourceDeletionPolicies.Add(resource, policy);
+            }
+        }
+
+        public void AddMetadata(string resource, dynamic metadata)
+        {
+            if (ResourceMetadata.ContainsKey(resource))
+            {
+                ResourceMetadata[resource] = metadata;
+            }
+            else
+            {
+                ResourceMetadata.Add(resource, metadata);
+            }
+        }
+
         public string GetCondition(string resource)
         {
             if (ResourceConditions.ContainsKey(resource))
@@ -79,13 +151,52 @@ namespace Humidifier
 
             return null;
         }
-
-
+        
         public List<string> GetDependsOn(string resource)
         {
             if (ResourceDependsOn.ContainsKey(resource))
             {
                 return ResourceDependsOn[resource].ToList();
+            }
+
+            return null;
+        }
+
+        public CreationPolicy GetCreationPolicy(string resource)
+        {
+            if (ResourceCreationPolicies.ContainsKey(resource))
+            {
+                return ResourceCreationPolicies[resource];
+            }
+
+            return null;
+        }
+
+        public UpdatePolicy GetUpdatePolicy(string resource)
+        {
+            if (ResourceUpdatePolicies.ContainsKey(resource))
+            {
+                return ResourceUpdatePolicies[resource];
+            }
+
+            return null;
+        }
+
+        public DeletionPolicy? GetDeletionPolicy(string resource)
+        {
+            if (ResourceDeletionPolicies.ContainsKey(resource))
+            {
+                return ResourceDeletionPolicies[resource];
+            }
+
+            return null;
+        }
+
+        public dynamic GetMetadata(string resource)
+        {
+            if (ResourceMetadata.ContainsKey(resource))
+            {
+                return ResourceMetadata[resource];
             }
 
             return null;

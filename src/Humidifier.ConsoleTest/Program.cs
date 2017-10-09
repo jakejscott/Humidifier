@@ -259,7 +259,16 @@ namespace Humidifier.ConsoleTest
             stack.Add("DeploymentBucket", new S3.Bucket
             {
                 BucketName = Fn.Ref("AWS::StackName")
+            }, 
+            deletionPolicy: DeletionPolicy.Retain, metadata: new { SomeProp = "SomeProp", AnotherProp = "AnotherProp" });
+
+            stack.Add("ImageBucket", new S3.Bucket
+            {
+                BucketName = Fn.Join("", Fn.Ref("AWS::StackName"), "-images")
             });
+
+            stack.AddDelitionPolicy("ImageBucket", DeletionPolicy.Retain);
+            stack.AddMetadata("ImageBucket", new { Object1 = "Location1", Object2 = "Object2" });
 
             stack.Add("DeploymentBucketPolicy", new S3.BucketPolicy
             {
@@ -363,6 +372,57 @@ namespace Humidifier.ConsoleTest
                             Resource = "*"
                         }
                     }
+                }
+            });
+
+            stack.Add("LaunchConfig", new AutoScaling.LaunchConfiguration
+            {
+                ImageId = "ami-e689729e",
+                InstanceType = "t2.micro",
+                UserData = ""
+            });
+
+            stack.Add("AutoScalingGroup", new AutoScaling.AutoScalingGroup
+            {
+                AvailabilityZones = Fn.GetAZs(""),
+                LaunchConfigurationName = Fn.Ref("LaunchConfig"),
+                DesiredCapacity = 1,
+                MinSize = 1,
+                MaxSize = 2
+            });
+
+            stack.Add("AutoScalingGroupScheduledAction", new AutoScaling.ScheduledAction
+            {
+                AutoScalingGroupName = Fn.Ref("AutoScalingGroup"),
+                DesiredCapacity = 2,
+                StartTime = "2017-06-02T20:00:00Z"
+            });
+
+            stack.AddCreationPolicy("AutoScalingGroup", new CreationPolicy
+            {
+                ResourceSignal = new ResourceSignal
+                {
+                    Count = 3,
+                    Timeout = "PT15M"
+                }
+            });
+
+            stack.AddUpdatePolicy("AutoScalingGroup", new UpdatePolicy
+            {
+                AutoScalingScheduledAction = new AutoScalingScheduledAction
+                {
+                    IgnoreUnmodifiedGroupSizeProperties = true
+                },
+                AutoScalingRollingUpdate = new AutoScalingRollingUpdate
+                {
+                    MinInstancesInService = 2,
+                    MaxBatchSize = "2",
+                    WaitOnResourceSignals = true,
+                    PauseTime = "PT10M"
+                },
+                AutoScalingReplacingUpdate = new AutoScalingReplacingUpdate
+                {
+                    WillReplace = true
                 }
             });
 
