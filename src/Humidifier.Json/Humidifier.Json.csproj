@@ -5,7 +5,7 @@
         <Copyright>Jake Scott</Copyright>
         <AssemblyTitle>Humidifier.Json</AssemblyTitle>
         <NeutralLanguage>en-US</NeutralLanguage>
-        <VersionPrefix>0.1.7</VersionPrefix>
+        <VersionPrefix>0.1.8</VersionPrefix>
         <Authors>Jake Scott</Authors>
         <TargetFrameworks>net45;netstandard1.3</TargetFrameworks>
         <AssemblyName>Humidifier.Json</AssemblyName>
@@ -38,6 +38,9 @@
             
             &gt; 0.1.7
             - Improve PolicyDocument with support for conditions
+
+            &gt; 0.1.8
+            - Add support for resource attributes (CreationPolicy, UpdatePolicy, DeletionPolicy, Metadata)
         </PackageReleaseNotes>
         <PackageIconUrl>https://raw.githubusercontent.com/jakejscott/humidifier/master/img/humidifier.png</PackageIconUrl>
         <PackageProjectUrl>https://github.com/jakejscott/humidifier</PackageProjectUrl>
