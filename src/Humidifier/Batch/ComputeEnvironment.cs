@@ -122,7 +122,7 @@ namespace Humidifier.Batch
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> SecurityGroupIds
+            public dynamic SecurityGroupIds
             {
                 get;
                 set;
@@ -136,7 +136,7 @@ namespace Humidifier.Batch
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> Subnets
+            public dynamic Subnets
             {
                 get;
                 set;
@@ -202,7 +202,7 @@ namespace Humidifier.Batch
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> InstanceTypes
+            public dynamic InstanceTypes
             {
                 get;
                 set;

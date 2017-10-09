@@ -13,7 +13,7 @@ namespace Humidifier.AutoScaling
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> AvailabilityZones
+        public dynamic AvailabilityZones
         {
             get;
             set;
@@ -105,7 +105,7 @@ namespace Humidifier.AutoScaling
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> LoadBalancerNames
+        public dynamic LoadBalancerNames
         {
             get;
             set;
@@ -200,7 +200,7 @@ namespace Humidifier.AutoScaling
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> TargetGroupARNs
+        public dynamic TargetGroupARNs
         {
             get;
             set;
@@ -214,7 +214,7 @@ namespace Humidifier.AutoScaling
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> TerminationPolicies
+        public dynamic TerminationPolicies
         {
             get;
             set;
@@ -228,7 +228,7 @@ namespace Humidifier.AutoScaling
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> VPCZoneIdentifier
+        public dynamic VPCZoneIdentifier
         {
             get;
             set;
@@ -247,7 +247,7 @@ namespace Humidifier.AutoScaling
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> NotificationTypes
+            public dynamic NotificationTypes
             {
                 get;
                 set;
@@ -290,7 +290,7 @@ namespace Humidifier.AutoScaling
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> Metrics
+            public dynamic Metrics
             {
                 get;
                 set;

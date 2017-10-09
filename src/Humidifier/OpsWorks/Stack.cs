@@ -53,7 +53,7 @@ namespace Humidifier.OpsWorks
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> CloneAppIds
+        public dynamic CloneAppIds
         {
             get;
             set;

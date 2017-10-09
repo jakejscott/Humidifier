@@ -70,7 +70,7 @@ namespace Humidifier.EMR
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> Args
+            public dynamic Args
             {
                 get;
                 set;

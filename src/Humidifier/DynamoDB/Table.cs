@@ -361,7 +361,7 @@ namespace Humidifier.DynamoDB
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> NonKeyAttributes
+            public dynamic NonKeyAttributes
             {
                 get;
                 set;

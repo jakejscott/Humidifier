@@ -371,7 +371,7 @@ namespace Humidifier.S3
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> AllowedHeaders
+            public dynamic AllowedHeaders
             {
                 get;
                 set;
@@ -385,7 +385,7 @@ namespace Humidifier.S3
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> AllowedMethods
+            public dynamic AllowedMethods
             {
                 get;
                 set;
@@ -399,7 +399,7 @@ namespace Humidifier.S3
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> AllowedOrigins
+            public dynamic AllowedOrigins
             {
                 get;
                 set;
@@ -413,7 +413,7 @@ namespace Humidifier.S3
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> ExposedHeaders
+            public dynamic ExposedHeaders
             {
                 get;
                 set;
@@ -868,7 +868,7 @@ namespace Humidifier.S3
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> OptionalFields
+            public dynamic OptionalFields
             {
                 get;
                 set;

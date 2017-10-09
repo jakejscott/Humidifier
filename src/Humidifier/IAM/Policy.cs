@@ -12,7 +12,7 @@ namespace Humidifier.IAM
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> Groups
+        public dynamic Groups
         {
             get;
             set;
@@ -52,7 +52,7 @@ namespace Humidifier.IAM
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> Roles
+        public dynamic Roles
         {
             get;
             set;
@@ -66,7 +66,7 @@ namespace Humidifier.IAM
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> Users
+        public dynamic Users
         {
             get;
             set;

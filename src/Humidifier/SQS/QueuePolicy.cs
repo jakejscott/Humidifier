@@ -25,7 +25,7 @@ namespace Humidifier.SQS
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> Queues
+        public dynamic Queues
         {
             get;
             set;

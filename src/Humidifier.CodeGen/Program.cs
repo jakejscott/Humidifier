@@ -27,7 +27,7 @@ namespace Humidifier.CodeGen
 
             foreach (var directory in Directory.GetDirectories(humidifierPath))
             {
-                if (directory.StartsWith("bin") || directory.StartsWith("obj")) continue;
+                if (directory.EndsWith("bin") || directory.EndsWith("obj")) continue;
                 Directory.Delete(directory, true);
             }
 
@@ -265,11 +265,13 @@ namespace Humidifier.CodeGen
                             switch (property.PrimitiveItemType)
                             {
                                 case "String":
-                                    typeName = $"List<dynamic>";
+                                    typeName = "dynamic";
                                     break;
                                 case "Long":
+                                    typeName = $"List<long>";
+                                    break;
                                 case "Double":
-                                    typeName = $"List<{property.PrimitiveItemType.ToLower()}>";
+                                    typeName = $"List<double>";
                                     break;
                                 case "Boolean":
                                     typeName = "List<bool>";

@@ -285,7 +285,7 @@ namespace Humidifier.EC2
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> SecurityGroupIds
+        public dynamic SecurityGroupIds
         {
             get;
             set;
@@ -299,7 +299,7 @@ namespace Humidifier.EC2
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> SecurityGroups
+        public dynamic SecurityGroups
         {
             get;
             set;
@@ -464,7 +464,7 @@ namespace Humidifier.EC2
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> GroupSet
+            public dynamic GroupSet
             {
                 get;
                 set;
@@ -632,7 +632,7 @@ namespace Humidifier.EC2
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> Value
+            public dynamic Value
             {
                 get;
                 set;

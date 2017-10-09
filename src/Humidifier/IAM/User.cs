@@ -18,7 +18,7 @@ namespace Humidifier.IAM
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> Groups
+        public dynamic Groups
         {
             get;
             set;
@@ -45,7 +45,7 @@ namespace Humidifier.IAM
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> ManagedPolicyArns
+        public dynamic ManagedPolicyArns
         {
             get;
             set;

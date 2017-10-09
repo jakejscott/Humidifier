@@ -265,7 +265,7 @@ namespace Humidifier.Events
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> Values
+            public dynamic Values
             {
                 get;
                 set;

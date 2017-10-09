@@ -25,7 +25,7 @@ namespace Humidifier.EC2
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> DomainNameServers
+        public dynamic DomainNameServers
         {
             get;
             set;
@@ -39,7 +39,7 @@ namespace Humidifier.EC2
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> NetbiosNameServers
+        public dynamic NetbiosNameServers
         {
             get;
             set;
@@ -66,7 +66,7 @@ namespace Humidifier.EC2
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> NtpServers
+        public dynamic NtpServers
         {
             get;
             set;

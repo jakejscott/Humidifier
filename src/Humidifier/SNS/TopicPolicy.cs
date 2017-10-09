@@ -25,7 +25,7 @@ namespace Humidifier.SNS
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> Topics
+        public dynamic Topics
         {
             get;
             set;

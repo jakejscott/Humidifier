@@ -83,7 +83,7 @@ namespace Humidifier.Config
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> ResourceTypes
+            public dynamic ResourceTypes
             {
                 get;
                 set;

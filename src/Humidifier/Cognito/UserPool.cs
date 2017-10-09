@@ -151,7 +151,7 @@ namespace Humidifier.Cognito
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> AliasAttributes
+        public dynamic AliasAttributes
         {
             get;
             set;
@@ -191,7 +191,7 @@ namespace Humidifier.Cognito
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> AutoVerifiedAttributes
+        public dynamic AutoVerifiedAttributes
         {
             get;
             set;

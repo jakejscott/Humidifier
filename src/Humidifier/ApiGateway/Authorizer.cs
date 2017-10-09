@@ -90,7 +90,7 @@ namespace Humidifier.ApiGateway
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> ProviderARNs
+        public dynamic ProviderARNs
         {
             get;
             set;

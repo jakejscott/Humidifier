@@ -169,7 +169,7 @@ namespace Humidifier.Batch
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> Command
+            public dynamic Command
             {
                 get;
                 set;

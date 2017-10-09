@@ -32,7 +32,7 @@ namespace Humidifier.EC2
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> GroupSet
+        public dynamic GroupSet
         {
             get;
             set;

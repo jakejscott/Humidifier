@@ -47,7 +47,7 @@ namespace Humidifier.ElasticLoadBalancing
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> AvailabilityZones
+        public dynamic AvailabilityZones
         {
             get;
             set;
@@ -113,7 +113,7 @@ namespace Humidifier.ElasticLoadBalancing
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> Instances
+        public dynamic Instances
         {
             get;
             set;
@@ -195,7 +195,7 @@ namespace Humidifier.ElasticLoadBalancing
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> SecurityGroups
+        public dynamic SecurityGroups
         {
             get;
             set;
@@ -209,7 +209,7 @@ namespace Humidifier.ElasticLoadBalancing
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> Subnets
+        public dynamic Subnets
         {
             get;
             set;
@@ -478,7 +478,7 @@ namespace Humidifier.ElasticLoadBalancing
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> PolicyNames
+            public dynamic PolicyNames
             {
                 get;
                 set;
@@ -535,7 +535,7 @@ namespace Humidifier.ElasticLoadBalancing
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> InstancePorts
+            public dynamic InstancePorts
             {
                 get;
                 set;
@@ -549,7 +549,7 @@ namespace Humidifier.ElasticLoadBalancing
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> LoadBalancerPorts
+            public dynamic LoadBalancerPorts
             {
                 get;
                 set;

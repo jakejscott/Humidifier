@@ -53,7 +53,7 @@ namespace Humidifier.AutoScaling
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> ClassicLinkVPCSecurityGroups
+        public dynamic ClassicLinkVPCSecurityGroups
         {
             get;
             set;
@@ -197,7 +197,7 @@ namespace Humidifier.AutoScaling
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> SecurityGroups
+        public dynamic SecurityGroups
         {
             get;
             set;

@@ -499,7 +499,7 @@ namespace Humidifier.EMR
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> AdditionalMasterSecurityGroups
+            public dynamic AdditionalMasterSecurityGroups
             {
                 get;
                 set;
@@ -513,7 +513,7 @@ namespace Humidifier.EMR
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> AdditionalSlaveSecurityGroups
+            public dynamic AdditionalSlaveSecurityGroups
             {
                 get;
                 set;
@@ -771,7 +771,7 @@ namespace Humidifier.EMR
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> Args
+            public dynamic Args
             {
                 get;
                 set;
@@ -903,7 +903,7 @@ namespace Humidifier.EMR
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> Args
+            public dynamic Args
             {
                 get;
                 set;

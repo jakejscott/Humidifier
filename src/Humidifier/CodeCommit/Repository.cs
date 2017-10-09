@@ -66,7 +66,7 @@ namespace Humidifier.CodeCommit
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> Events
+            public dynamic Events
             {
                 get;
                 set;
@@ -80,7 +80,7 @@ namespace Humidifier.CodeCommit
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> Branches
+            public dynamic Branches
             {
                 get;
                 set;

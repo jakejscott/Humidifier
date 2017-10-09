@@ -57,7 +57,7 @@ namespace Humidifier.Cognito
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> ExplicitAuthFlows
+        public dynamic ExplicitAuthFlows
         {
             get;
             set;
@@ -84,7 +84,7 @@ namespace Humidifier.Cognito
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> ReadAttributes
+        public dynamic ReadAttributes
         {
             get;
             set;
@@ -98,7 +98,7 @@ namespace Humidifier.Cognito
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> WriteAttributes
+        public dynamic WriteAttributes
         {
             get;
             set;

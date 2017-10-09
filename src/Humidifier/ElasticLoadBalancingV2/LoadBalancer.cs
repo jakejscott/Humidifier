@@ -75,7 +75,7 @@ namespace Humidifier.ElasticLoadBalancingV2
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> SecurityGroups
+        public dynamic SecurityGroups
         {
             get;
             set;
@@ -103,7 +103,7 @@ namespace Humidifier.ElasticLoadBalancingV2
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> Subnets
+        public dynamic Subnets
         {
             get;
             set;

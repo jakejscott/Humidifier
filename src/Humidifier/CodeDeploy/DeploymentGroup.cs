@@ -52,7 +52,7 @@ namespace Humidifier.CodeDeploy
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> AutoScalingGroups
+        public dynamic AutoScalingGroups
         {
             get;
             set;
@@ -318,7 +318,7 @@ namespace Humidifier.CodeDeploy
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> TriggerEvents
+            public dynamic TriggerEvents
             {
                 get;
                 set;
@@ -578,7 +578,7 @@ namespace Humidifier.CodeDeploy
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> Events
+            public dynamic Events
             {
                 get;
                 set;

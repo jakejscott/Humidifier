@@ -31,7 +31,7 @@ namespace Humidifier.CloudWatch
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> AlarmActions
+        public dynamic AlarmActions
         {
             get;
             set;
@@ -137,7 +137,7 @@ namespace Humidifier.CloudWatch
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> InsufficientDataActions
+        public dynamic InsufficientDataActions
         {
             get;
             set;
@@ -177,7 +177,7 @@ namespace Humidifier.CloudWatch
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> OKActions
+        public dynamic OKActions
         {
             get;
             set;

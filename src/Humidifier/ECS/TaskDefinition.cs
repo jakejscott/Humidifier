@@ -99,7 +99,7 @@ namespace Humidifier.ECS
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> Command
+            public dynamic Command
             {
                 get;
                 set;
@@ -139,7 +139,7 @@ namespace Humidifier.ECS
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> DnsSearchDomains
+            public dynamic DnsSearchDomains
             {
                 get;
                 set;
@@ -153,7 +153,7 @@ namespace Humidifier.ECS
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> DnsServers
+            public dynamic DnsServers
             {
                 get;
                 set;
@@ -181,7 +181,7 @@ namespace Humidifier.ECS
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> DockerSecurityOptions
+            public dynamic DockerSecurityOptions
             {
                 get;
                 set;
@@ -195,7 +195,7 @@ namespace Humidifier.ECS
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> EntryPoint
+            public dynamic EntryPoint
             {
                 get;
                 set;
@@ -276,7 +276,7 @@ namespace Humidifier.ECS
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> Links
+            public dynamic Links
             {
                 get;
                 set;

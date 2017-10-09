@@ -25,7 +25,7 @@ namespace Humidifier.EC2
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> RouteTableIds
+        public dynamic RouteTableIds
         {
             get;
             set;

@@ -18,7 +18,7 @@ namespace Humidifier.ApiGateway
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> BinaryMediaTypes
+        public dynamic BinaryMediaTypes
         {
             get;
             set;

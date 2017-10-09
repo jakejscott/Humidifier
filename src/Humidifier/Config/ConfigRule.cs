@@ -115,7 +115,7 @@ namespace Humidifier.Config
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> ComplianceResourceTypes
+            public dynamic ComplianceResourceTypes
             {
                 get;
                 set;

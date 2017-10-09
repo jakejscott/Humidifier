@@ -25,7 +25,7 @@ namespace Humidifier.RDS
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> EventCategories
+        public dynamic EventCategories
         {
             get;
             set;
@@ -52,7 +52,7 @@ namespace Humidifier.RDS
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> SourceIds
+        public dynamic SourceIds
         {
             get;
             set;

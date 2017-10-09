@@ -122,7 +122,7 @@ namespace Humidifier.DMS
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> VpcSecurityGroupIds
+        public dynamic VpcSecurityGroupIds
         {
             get;
             set;

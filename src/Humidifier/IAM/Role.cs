@@ -31,7 +31,7 @@ namespace Humidifier.IAM
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> ManagedPolicyArns
+        public dynamic ManagedPolicyArns
         {
             get;
             set;

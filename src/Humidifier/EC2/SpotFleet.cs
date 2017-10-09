@@ -99,7 +99,7 @@ namespace Humidifier.EC2
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> Groups
+            public dynamic Groups
             {
                 get;
                 set;

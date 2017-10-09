@@ -38,7 +38,7 @@ namespace Humidifier.EFS
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> SecurityGroups
+        public dynamic SecurityGroups
         {
             get;
             set;

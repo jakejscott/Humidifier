@@ -188,7 +188,7 @@ namespace Humidifier.Route53
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> ResourceRecords
+            public dynamic ResourceRecords
             {
                 get;
                 set;

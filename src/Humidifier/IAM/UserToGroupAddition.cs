@@ -25,7 +25,7 @@ namespace Humidifier.IAM
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> Users
+        public dynamic Users
         {
             get;
             set;

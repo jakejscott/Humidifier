@@ -58,7 +58,7 @@ namespace Humidifier.Route53
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> ChildHealthChecks
+            public dynamic ChildHealthChecks
             {
                 get;
                 set;

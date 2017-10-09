@@ -123,7 +123,7 @@ namespace Humidifier.Cognito
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> SamlProviderARNs
+        public dynamic SamlProviderARNs
         {
             get;
             set;
@@ -137,7 +137,7 @@ namespace Humidifier.Cognito
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> OpenIdConnectProviderARNs
+        public dynamic OpenIdConnectProviderARNs
         {
             get;
             set;
@@ -156,7 +156,7 @@ namespace Humidifier.Cognito
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> ApplicationArns
+            public dynamic ApplicationArns
             {
                 get;
                 set;

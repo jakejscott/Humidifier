@@ -114,7 +114,7 @@ namespace Humidifier.OpsWorks
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> ElasticIps
+        public dynamic ElasticIps
         {
             get;
             set;
@@ -167,7 +167,7 @@ namespace Humidifier.OpsWorks
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> LayerIds
+        public dynamic LayerIds
         {
             get;
             set;
@@ -285,7 +285,7 @@ namespace Humidifier.OpsWorks
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> Volumes
+        public dynamic Volumes
         {
             get;
             set;

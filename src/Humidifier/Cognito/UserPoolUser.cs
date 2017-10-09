@@ -66,7 +66,7 @@ namespace Humidifier.Cognito
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> DesiredDeliveryMediums
+        public dynamic DesiredDeliveryMediums
         {
             get;
             set;

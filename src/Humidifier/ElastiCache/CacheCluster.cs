@@ -68,7 +68,7 @@ namespace Humidifier.ElastiCache
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> CacheSecurityGroupNames
+        public dynamic CacheSecurityGroupNames
         {
             get;
             set;
@@ -186,7 +186,7 @@ namespace Humidifier.ElastiCache
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> PreferredAvailabilityZones
+        public dynamic PreferredAvailabilityZones
         {
             get;
             set;
@@ -213,7 +213,7 @@ namespace Humidifier.ElastiCache
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> SnapshotArns
+        public dynamic SnapshotArns
         {
             get;
             set;
@@ -280,7 +280,7 @@ namespace Humidifier.ElastiCache
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> VpcSecurityGroupIds
+        public dynamic VpcSecurityGroupIds
         {
             get;
             set;

@@ -49,7 +49,7 @@ namespace Humidifier.CloudFront
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> WhitelistedNames
+            public dynamic WhitelistedNames
             {
                 get;
                 set;
@@ -105,7 +105,7 @@ namespace Humidifier.CloudFront
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> OriginSSLProtocols
+            public dynamic OriginSSLProtocols
             {
                 get;
                 set;
@@ -135,7 +135,7 @@ namespace Humidifier.CloudFront
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> Headers
+            public dynamic Headers
             {
                 get;
                 set;
@@ -162,7 +162,7 @@ namespace Humidifier.CloudFront
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> QueryStringCacheKeys
+            public dynamic QueryStringCacheKeys
             {
                 get;
                 set;
@@ -179,7 +179,7 @@ namespace Humidifier.CloudFront
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> AllowedMethods
+            public dynamic AllowedMethods
             {
                 get;
                 set;
@@ -193,7 +193,7 @@ namespace Humidifier.CloudFront
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> CachedMethods
+            public dynamic CachedMethods
             {
                 get;
                 set;
@@ -311,7 +311,7 @@ namespace Humidifier.CloudFront
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> TrustedSigners
+            public dynamic TrustedSigners
             {
                 get;
                 set;
@@ -341,7 +341,7 @@ namespace Humidifier.CloudFront
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> AllowedMethods
+            public dynamic AllowedMethods
             {
                 get;
                 set;
@@ -355,7 +355,7 @@ namespace Humidifier.CloudFront
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> CachedMethods
+            public dynamic CachedMethods
             {
                 get;
                 set;
@@ -460,7 +460,7 @@ namespace Humidifier.CloudFront
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> TrustedSigners
+            public dynamic TrustedSigners
             {
                 get;
                 set;
@@ -588,7 +588,7 @@ namespace Humidifier.CloudFront
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> Locations
+            public dynamic Locations
             {
                 get;
                 set;
@@ -757,7 +757,7 @@ namespace Humidifier.CloudFront
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> Aliases
+            public dynamic Aliases
             {
                 get;
                 set;

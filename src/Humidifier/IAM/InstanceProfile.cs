@@ -43,7 +43,7 @@ namespace Humidifier.IAM
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> Roles
+        public dynamic Roles
         {
             get;
             set;

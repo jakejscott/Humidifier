@@ -92,7 +92,7 @@ namespace Humidifier.OpsWorks
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> CustomSecurityGroupIds
+        public dynamic CustomSecurityGroupIds
         {
             get;
             set;
@@ -171,7 +171,7 @@ namespace Humidifier.OpsWorks
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> Packages
+        public dynamic Packages
         {
             get;
             set;
@@ -447,7 +447,7 @@ namespace Humidifier.OpsWorks
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> Configure
+            public dynamic Configure
             {
                 get;
                 set;
@@ -461,7 +461,7 @@ namespace Humidifier.OpsWorks
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> Deploy
+            public dynamic Deploy
             {
                 get;
                 set;
@@ -475,7 +475,7 @@ namespace Humidifier.OpsWorks
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> Setup
+            public dynamic Setup
             {
                 get;
                 set;
@@ -489,7 +489,7 @@ namespace Humidifier.OpsWorks
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> Shutdown
+            public dynamic Shutdown
             {
                 get;
                 set;
@@ -503,7 +503,7 @@ namespace Humidifier.OpsWorks
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> Undeploy
+            public dynamic Undeploy
             {
                 get;
                 set;

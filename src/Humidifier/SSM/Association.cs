@@ -111,7 +111,7 @@ namespace Humidifier.SSM
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> Values
+            public dynamic Values
             {
                 get;
                 set;
@@ -128,7 +128,7 @@ namespace Humidifier.SSM
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> ParameterValues_
+            public dynamic ParameterValues_
             {
                 get;
                 set;

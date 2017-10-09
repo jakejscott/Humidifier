@@ -79,7 +79,7 @@ namespace Humidifier.GameLift
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> LogPaths
+        public dynamic LogPaths
         {
             get;
             set;

@@ -114,7 +114,7 @@ namespace Humidifier.RDS
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> DBSecurityGroupMemberships
+            public dynamic DBSecurityGroupMemberships
             {
                 get;
                 set;
@@ -167,7 +167,7 @@ namespace Humidifier.RDS
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> VpcSecurityGroupMemberships
+            public dynamic VpcSecurityGroupMemberships
             {
                 get;
                 set;

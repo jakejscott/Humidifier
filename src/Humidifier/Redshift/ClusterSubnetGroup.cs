@@ -25,7 +25,7 @@ namespace Humidifier.Redshift
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> SubnetIds
+        public dynamic SubnetIds
         {
             get;
             set;

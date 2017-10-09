@@ -67,7 +67,7 @@ namespace Humidifier.OpsWorks
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> Domains
+        public dynamic Domains
         {
             get;
             set;

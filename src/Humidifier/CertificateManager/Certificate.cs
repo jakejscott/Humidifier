@@ -40,7 +40,7 @@ namespace Humidifier.CertificateManager
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> SubjectAlternativeNames
+        public dynamic SubjectAlternativeNames
         {
             get;
             set;

@@ -12,7 +12,7 @@ namespace Humidifier.CloudFormation
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> NotificationARNs
+        public dynamic NotificationARNs
         {
             get;
             set;

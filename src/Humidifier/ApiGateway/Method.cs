@@ -195,7 +195,7 @@ namespace Humidifier.ApiGateway
             /// Type: List
             /// PrimitiveItemType: String
             /// </summary>
-            public List<dynamic> CacheKeyParameters
+            public dynamic CacheKeyParameters
             {
                 get;
                 set;

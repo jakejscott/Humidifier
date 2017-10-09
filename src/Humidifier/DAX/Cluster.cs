@@ -57,7 +57,7 @@ namespace Humidifier.DAX
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> AvailabilityZones
+        public dynamic AvailabilityZones
         {
             get;
             set;
@@ -149,7 +149,7 @@ namespace Humidifier.DAX
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> SecurityGroupIds
+        public dynamic SecurityGroupIds
         {
             get;
             set;

@@ -69,7 +69,7 @@ namespace Humidifier.Redshift
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> ClusterSecurityGroups
+        public dynamic ClusterSecurityGroups
         {
             get;
             set;
@@ -187,7 +187,7 @@ namespace Humidifier.Redshift
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> IamRoles
+        public dynamic IamRoles
         {
             get;
             set;
@@ -371,7 +371,7 @@ namespace Humidifier.Redshift
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> VpcSecurityGroupIds
+        public dynamic VpcSecurityGroupIds
         {
             get;
             set;
