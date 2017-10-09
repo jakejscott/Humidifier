@@ -1,7 +1,6 @@
 namespace Humidifier.ElastiCache
 {
     using System.Collections.Generic;
-    using ParameterGroupPropertyTypes;
 
     public class ParameterGroup : Humidifier.Resource
     {
@@ -44,9 +43,5 @@ namespace Humidifier.ElastiCache
             get;
             set;
         }
-    }
-
-    namespace ParameterGroupPropertyTypes
-    {
     }
 }

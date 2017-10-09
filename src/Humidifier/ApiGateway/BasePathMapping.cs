@@ -1,7 +1,6 @@
 namespace Humidifier.ApiGateway
 {
     using System.Collections.Generic;
-    using BasePathMappingPropertyTypes;
 
     public class BasePathMapping : Humidifier.Resource
     {
@@ -56,9 +55,5 @@ namespace Humidifier.ApiGateway
             get;
             set;
         }
-    }
-
-    namespace BasePathMappingPropertyTypes
-    {
     }
 }

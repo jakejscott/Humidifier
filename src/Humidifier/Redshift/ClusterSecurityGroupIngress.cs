@@ -1,7 +1,6 @@
 namespace Humidifier.Redshift
 {
     using System.Collections.Generic;
-    using ClusterSecurityGroupIngressPropertyTypes;
 
     public class ClusterSecurityGroupIngress : Humidifier.Resource
     {
@@ -56,9 +55,5 @@ namespace Humidifier.Redshift
             get;
             set;
         }
-    }
-
-    namespace ClusterSecurityGroupIngressPropertyTypes
-    {
     }
 }

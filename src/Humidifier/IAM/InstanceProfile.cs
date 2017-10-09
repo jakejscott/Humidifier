@@ -1,7 +1,6 @@
 namespace Humidifier.IAM
 {
     using System.Collections.Generic;
-    using InstanceProfilePropertyTypes;
 
     public class InstanceProfile : Humidifier.Resource
     {
@@ -49,9 +48,5 @@ namespace Humidifier.IAM
             get;
             set;
         }
-    }
-
-    namespace InstanceProfilePropertyTypes
-    {
     }
 }

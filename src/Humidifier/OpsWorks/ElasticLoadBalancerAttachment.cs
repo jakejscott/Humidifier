@@ -1,7 +1,6 @@
 namespace Humidifier.OpsWorks
 {
     using System.Collections.Generic;
-    using ElasticLoadBalancerAttachmentPropertyTypes;
 
     public class ElasticLoadBalancerAttachment : Humidifier.Resource
     {
@@ -30,9 +29,5 @@ namespace Humidifier.OpsWorks
             get;
             set;
         }
-    }
-
-    namespace ElasticLoadBalancerAttachmentPropertyTypes
-    {
     }
 }

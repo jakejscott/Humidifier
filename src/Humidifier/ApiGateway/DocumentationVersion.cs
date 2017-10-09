@@ -1,7 +1,6 @@
 namespace Humidifier.ApiGateway
 {
     using System.Collections.Generic;
-    using DocumentationVersionPropertyTypes;
 
     public class DocumentationVersion : Humidifier.Resource
     {
@@ -43,9 +42,5 @@ namespace Humidifier.ApiGateway
             get;
             set;
         }
-    }
-
-    namespace DocumentationVersionPropertyTypes
-    {
     }
 }

@@ -1,7 +1,6 @@
 namespace Humidifier.IAM
 {
     using System.Collections.Generic;
-    using ManagedPolicyPropertyTypes;
 
     public class ManagedPolicy : Humidifier.Resource
     {
@@ -98,9 +97,5 @@ namespace Humidifier.IAM
             get;
             set;
         }
-    }
-
-    namespace ManagedPolicyPropertyTypes
-    {
     }
 }

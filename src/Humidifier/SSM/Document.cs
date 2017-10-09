@@ -1,7 +1,6 @@
 namespace Humidifier.SSM
 {
     using System.Collections.Generic;
-    using DocumentPropertyTypes;
 
     public class Document : Humidifier.Resource
     {
@@ -30,9 +29,5 @@ namespace Humidifier.SSM
             get;
             set;
         }
-    }
-
-    namespace DocumentPropertyTypes
-    {
     }
 }

@@ -1,7 +1,6 @@
 namespace Humidifier.Kinesis
 {
     using System.Collections.Generic;
-    using StreamPropertyTypes;
 
     public class Stream : Humidifier.Resource
     {
@@ -62,9 +61,5 @@ namespace Humidifier.Kinesis
             get;
             set;
         }
-    }
-
-    namespace StreamPropertyTypes
-    {
     }
 }

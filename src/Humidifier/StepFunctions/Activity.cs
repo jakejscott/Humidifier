@@ -1,7 +1,6 @@
 namespace Humidifier.StepFunctions
 {
     using System.Collections.Generic;
-    using ActivityPropertyTypes;
 
     public class Activity : Humidifier.Resource
     {
@@ -22,9 +21,5 @@ namespace Humidifier.StepFunctions
             get;
             set;
         }
-    }
-
-    namespace ActivityPropertyTypes
-    {
     }
 }

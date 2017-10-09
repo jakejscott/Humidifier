@@ -1,7 +1,6 @@
 namespace Humidifier.StepFunctions
 {
     using System.Collections.Generic;
-    using StateMachinePropertyTypes;
 
     public class StateMachine : Humidifier.Resource
     {
@@ -35,9 +34,5 @@ namespace Humidifier.StepFunctions
             get;
             set;
         }
-    }
-
-    namespace StateMachinePropertyTypes
-    {
     }
 }

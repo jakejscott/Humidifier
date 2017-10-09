@@ -1,7 +1,6 @@
 namespace Humidifier.EC2
 {
     using System.Collections.Generic;
-    using VPCPropertyTypes;
 
     public class VPC : Humidifier.Resource
     {
@@ -79,9 +78,5 @@ namespace Humidifier.EC2
             get;
             set;
         }
-    }
-
-    namespace VPCPropertyTypes
-    {
     }
 }

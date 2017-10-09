@@ -1,7 +1,6 @@
 namespace Humidifier.CloudWatch
 {
     using System.Collections.Generic;
-    using DashboardPropertyTypes;
 
     public class Dashboard : Humidifier.Resource
     {
@@ -30,9 +29,5 @@ namespace Humidifier.CloudWatch
             get;
             set;
         }
-    }
-
-    namespace DashboardPropertyTypes
-    {
     }
 }

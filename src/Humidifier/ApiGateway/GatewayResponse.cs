@@ -1,7 +1,6 @@
 namespace Humidifier.ApiGateway
 {
     using System.Collections.Generic;
-    using GatewayResponsePropertyTypes;
 
     public class GatewayResponse : Humidifier.Resource
     {
@@ -71,9 +70,5 @@ namespace Humidifier.ApiGateway
             get;
             set;
         }
-    }
-
-    namespace GatewayResponsePropertyTypes
-    {
     }
 }

@@ -1,7 +1,6 @@
 namespace Humidifier.WAFRegional
 {
     using System.Collections.Generic;
-    using WebACLAssociationPropertyTypes;
 
     public class WebACLAssociation : Humidifier.Resource
     {
@@ -30,9 +29,5 @@ namespace Humidifier.WAFRegional
             get;
             set;
         }
-    }
-
-    namespace WebACLAssociationPropertyTypes
-    {
     }
 }

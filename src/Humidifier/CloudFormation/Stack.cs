@@ -1,7 +1,6 @@
 namespace Humidifier.CloudFormation
 {
     using System.Collections.Generic;
-    using StackPropertyTypes;
 
     public class Stack : Humidifier.Resource
     {
@@ -72,9 +71,5 @@ namespace Humidifier.CloudFormation
             get;
             set;
         }
-    }
-
-    namespace StackPropertyTypes
-    {
     }
 }

@@ -1,7 +1,6 @@
 namespace Humidifier.CloudFormation
 {
     using System.Collections.Generic;
-    using WaitConditionPropertyTypes;
 
     public class WaitCondition : Humidifier.Resource
     {
@@ -48,9 +47,5 @@ namespace Humidifier.CloudFormation
             get;
             set;
         }
-    }
-
-    namespace WaitConditionPropertyTypes
-    {
     }
 }

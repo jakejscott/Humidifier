@@ -1,7 +1,6 @@
 namespace Humidifier.Logs
 {
     using System.Collections.Generic;
-    using DestinationPropertyTypes;
 
     public class Destination : Humidifier.Resource
     {
@@ -61,9 +60,5 @@ namespace Humidifier.Logs
             get;
             set;
         }
-    }
-
-    namespace DestinationPropertyTypes
-    {
     }
 }

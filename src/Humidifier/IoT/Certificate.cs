@@ -1,7 +1,6 @@
 namespace Humidifier.IoT
 {
     using System.Collections.Generic;
-    using CertificatePropertyTypes;
 
     public class Certificate : Humidifier.Resource
     {
@@ -35,9 +34,5 @@ namespace Humidifier.IoT
             get;
             set;
         }
-    }
-
-    namespace CertificatePropertyTypes
-    {
     }
 }

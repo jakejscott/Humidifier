@@ -1,7 +1,6 @@
 namespace Humidifier.EC2
 {
     using System.Collections.Generic;
-    using SecurityGroupEgressPropertyTypes;
 
     public class SecurityGroupEgress : Humidifier.Resource
     {
@@ -108,9 +107,5 @@ namespace Humidifier.EC2
             get;
             set;
         }
-    }
-
-    namespace SecurityGroupEgressPropertyTypes
-    {
     }
 }

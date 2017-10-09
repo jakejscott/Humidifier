@@ -1,7 +1,6 @@
 namespace Humidifier.ApiGateway
 {
     using System.Collections.Generic;
-    using AuthorizerPropertyTypes;
 
     public class Authorizer : Humidifier.Resource
     {
@@ -122,9 +121,5 @@ namespace Humidifier.ApiGateway
             get;
             set;
         }
-    }
-
-    namespace AuthorizerPropertyTypes
-    {
     }
 }

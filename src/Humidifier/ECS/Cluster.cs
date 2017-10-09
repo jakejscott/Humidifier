@@ -1,7 +1,6 @@
 namespace Humidifier.ECS
 {
     using System.Collections.Generic;
-    using ClusterPropertyTypes;
 
     public class Cluster : Humidifier.Resource
     {
@@ -22,9 +21,5 @@ namespace Humidifier.ECS
             get;
             set;
         }
-    }
-
-    namespace ClusterPropertyTypes
-    {
     }
 }

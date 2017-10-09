@@ -1,7 +1,6 @@
 namespace Humidifier.Cognito
 {
     using System.Collections.Generic;
-    using UserPoolUserToGroupAttachmentPropertyTypes;
 
     public class UserPoolUserToGroupAttachment : Humidifier.Resource
     {
@@ -43,9 +42,5 @@ namespace Humidifier.Cognito
             get;
             set;
         }
-    }
-
-    namespace UserPoolUserToGroupAttachmentPropertyTypes
-    {
     }
 }

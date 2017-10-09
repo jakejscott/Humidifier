@@ -1,7 +1,6 @@
 namespace Humidifier.ApiGateway
 {
     using System.Collections.Generic;
-    using ModelPropertyTypes;
 
     public class Model : Humidifier.Resource
     {
@@ -69,9 +68,5 @@ namespace Humidifier.ApiGateway
             get;
             set;
         }
-    }
-
-    namespace ModelPropertyTypes
-    {
     }
 }

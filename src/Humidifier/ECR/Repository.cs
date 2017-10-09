@@ -1,7 +1,6 @@
 namespace Humidifier.ECR
 {
     using System.Collections.Generic;
-    using RepositoryPropertyTypes;
 
     public class Repository : Humidifier.Resource
     {
@@ -35,9 +34,5 @@ namespace Humidifier.ECR
             get;
             set;
         }
-    }
-
-    namespace RepositoryPropertyTypes
-    {
     }
 }

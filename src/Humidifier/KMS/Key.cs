@@ -1,7 +1,6 @@
 namespace Humidifier.KMS
 {
     using System.Collections.Generic;
-    using KeyPropertyTypes;
 
     public class Key : Humidifier.Resource
     {
@@ -88,9 +87,5 @@ namespace Humidifier.KMS
             get;
             set;
         }
-    }
-
-    namespace KeyPropertyTypes
-    {
     }
 }

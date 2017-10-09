@@ -1,7 +1,6 @@
 namespace Humidifier.KMS
 {
     using System.Collections.Generic;
-    using AliasPropertyTypes;
 
     public class Alias : Humidifier.Resource
     {
@@ -30,9 +29,5 @@ namespace Humidifier.KMS
             get;
             set;
         }
-    }
-
-    namespace AliasPropertyTypes
-    {
     }
 }

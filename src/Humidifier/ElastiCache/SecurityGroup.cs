@@ -1,7 +1,6 @@
 namespace Humidifier.ElastiCache
 {
     using System.Collections.Generic;
-    using SecurityGroupPropertyTypes;
 
     public class SecurityGroup : Humidifier.Resource
     {
@@ -17,9 +16,5 @@ namespace Humidifier.ElastiCache
             get;
             set;
         }
-    }
-
-    namespace SecurityGroupPropertyTypes
-    {
     }
 }

@@ -1,7 +1,6 @@
 namespace Humidifier.EC2
 {
     using System.Collections.Generic;
-    using NatGatewayPropertyTypes;
 
     public class NatGateway : Humidifier.Resource
     {
@@ -44,9 +43,5 @@ namespace Humidifier.EC2
             get;
             set;
         }
-    }
-
-    namespace NatGatewayPropertyTypes
-    {
     }
 }

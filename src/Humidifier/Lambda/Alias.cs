@@ -1,7 +1,6 @@
 namespace Humidifier.Lambda
 {
     using System.Collections.Generic;
-    using AliasPropertyTypes;
 
     public class Alias : Humidifier.Resource
     {
@@ -56,9 +55,5 @@ namespace Humidifier.Lambda
             get;
             set;
         }
-    }
-
-    namespace AliasPropertyTypes
-    {
     }
 }

@@ -1,7 +1,6 @@
 namespace Humidifier.SSM
 {
     using System.Collections.Generic;
-    using ParameterPropertyTypes;
 
     public class Parameter : Humidifier.Resource
     {
@@ -75,9 +74,5 @@ namespace Humidifier.SSM
             get;
             set;
         }
-    }
-
-    namespace ParameterPropertyTypes
-    {
     }
 }

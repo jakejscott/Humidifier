@@ -1,7 +1,6 @@
 namespace Humidifier.ApiGateway
 {
     using System.Collections.Generic;
-    using DomainNamePropertyTypes;
 
     public class DomainName : Humidifier.Resource
     {
@@ -30,9 +29,5 @@ namespace Humidifier.ApiGateway
             get;
             set;
         }
-    }
-
-    namespace DomainNamePropertyTypes
-    {
     }
 }

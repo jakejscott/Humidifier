@@ -1,7 +1,6 @@
 namespace Humidifier.DAX
 {
     using System.Collections.Generic;
-    using ClusterPropertyTypes;
 
     public class Cluster : Humidifier.Resource
     {
@@ -168,9 +167,5 @@ namespace Humidifier.DAX
             get;
             set;
         }
-    }
-
-    namespace ClusterPropertyTypes
-    {
     }
 }

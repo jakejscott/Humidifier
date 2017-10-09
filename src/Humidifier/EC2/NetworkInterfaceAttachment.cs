@@ -1,7 +1,6 @@
 namespace Humidifier.EC2
 {
     using System.Collections.Generic;
-    using NetworkInterfaceAttachmentPropertyTypes;
 
     public class NetworkInterfaceAttachment : Humidifier.Resource
     {
@@ -56,9 +55,5 @@ namespace Humidifier.EC2
             get;
             set;
         }
-    }
-
-    namespace NetworkInterfaceAttachmentPropertyTypes
-    {
     }
 }

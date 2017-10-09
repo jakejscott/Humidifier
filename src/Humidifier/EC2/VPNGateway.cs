@@ -1,7 +1,6 @@
 namespace Humidifier.EC2
 {
     using System.Collections.Generic;
-    using VPNGatewayPropertyTypes;
 
     public class VPNGateway : Humidifier.Resource
     {
@@ -31,9 +30,5 @@ namespace Humidifier.EC2
             get;
             set;
         }
-    }
-
-    namespace VPNGatewayPropertyTypes
-    {
     }
 }

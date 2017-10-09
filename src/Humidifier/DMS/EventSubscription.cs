@@ -1,7 +1,6 @@
 namespace Humidifier.DMS
 {
     using System.Collections.Generic;
-    using EventSubscriptionPropertyTypes;
 
     public class EventSubscription : Humidifier.Resource
     {
@@ -98,9 +97,5 @@ namespace Humidifier.DMS
             get;
             set;
         }
-    }
-
-    namespace EventSubscriptionPropertyTypes
-    {
     }
 }

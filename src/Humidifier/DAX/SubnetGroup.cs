@@ -1,7 +1,6 @@
 namespace Humidifier.DAX
 {
     using System.Collections.Generic;
-    using SubnetGroupPropertyTypes;
 
     public class SubnetGroup : Humidifier.Resource
     {
@@ -44,9 +43,5 @@ namespace Humidifier.DAX
             get;
             set;
         }
-    }
-
-    namespace SubnetGroupPropertyTypes
-    {
     }
 }

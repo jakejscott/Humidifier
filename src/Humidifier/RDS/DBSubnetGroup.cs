@@ -1,7 +1,6 @@
 namespace Humidifier.RDS
 {
     using System.Collections.Generic;
-    using DBSubnetGroupPropertyTypes;
 
     public class DBSubnetGroup : Humidifier.Resource
     {
@@ -45,9 +44,5 @@ namespace Humidifier.RDS
             get;
             set;
         }
-    }
-
-    namespace DBSubnetGroupPropertyTypes
-    {
     }
 }

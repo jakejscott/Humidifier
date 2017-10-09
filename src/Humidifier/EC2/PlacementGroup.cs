@@ -1,7 +1,6 @@
 namespace Humidifier.EC2
 {
     using System.Collections.Generic;
-    using PlacementGroupPropertyTypes;
 
     public class PlacementGroup : Humidifier.Resource
     {
@@ -17,9 +16,5 @@ namespace Humidifier.EC2
             get;
             set;
         }
-    }
-
-    namespace PlacementGroupPropertyTypes
-    {
     }
 }

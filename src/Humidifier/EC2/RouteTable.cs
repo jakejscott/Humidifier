@@ -1,7 +1,6 @@
 namespace Humidifier.EC2
 {
     using System.Collections.Generic;
-    using RouteTablePropertyTypes;
 
     public class RouteTable : Humidifier.Resource
     {
@@ -31,9 +30,5 @@ namespace Humidifier.EC2
             get;
             set;
         }
-    }
-
-    namespace RouteTablePropertyTypes
-    {
     }
 }

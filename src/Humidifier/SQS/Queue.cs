@@ -1,7 +1,6 @@
 namespace Humidifier.SQS
 {
     using System.Collections.Generic;
-    using QueuePropertyTypes;
 
     public class Queue : Humidifier.Resource
     {
@@ -153,9 +152,5 @@ namespace Humidifier.SQS
             get;
             set;
         }
-    }
-
-    namespace QueuePropertyTypes
-    {
     }
 }

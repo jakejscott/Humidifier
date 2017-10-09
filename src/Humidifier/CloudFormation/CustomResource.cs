@@ -1,7 +1,6 @@
 namespace Humidifier.CloudFormation
 {
     using System.Collections.Generic;
-    using CustomResourcePropertyTypes;
 
     public class CustomResource : Humidifier.Resource
     {
@@ -17,9 +16,5 @@ namespace Humidifier.CloudFormation
             get;
             set;
         }
-    }
-
-    namespace CustomResourcePropertyTypes
-    {
     }
 }

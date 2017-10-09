@@ -1,7 +1,6 @@
 namespace Humidifier.ApiGateway
 {
     using System.Collections.Generic;
-    using ClientCertificatePropertyTypes;
 
     public class ClientCertificate : Humidifier.Resource
     {
@@ -17,9 +16,5 @@ namespace Humidifier.ApiGateway
             get;
             set;
         }
-    }
-
-    namespace ClientCertificatePropertyTypes
-    {
     }
 }

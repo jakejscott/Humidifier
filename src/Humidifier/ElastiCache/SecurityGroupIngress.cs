@@ -1,7 +1,6 @@
 namespace Humidifier.ElastiCache
 {
     using System.Collections.Generic;
-    using SecurityGroupIngressPropertyTypes;
 
     public class SecurityGroupIngress : Humidifier.Resource
     {
@@ -43,9 +42,5 @@ namespace Humidifier.ElastiCache
             get;
             set;
         }
-    }
-
-    namespace SecurityGroupIngressPropertyTypes
-    {
     }
 }

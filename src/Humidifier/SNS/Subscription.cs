@@ -1,7 +1,6 @@
 namespace Humidifier.SNS
 {
     using System.Collections.Generic;
-    using SubscriptionPropertyTypes;
 
     public class Subscription : Humidifier.Resource
     {
@@ -43,9 +42,5 @@ namespace Humidifier.SNS
             get;
             set;
         }
-    }
-
-    namespace SubscriptionPropertyTypes
-    {
     }
 }

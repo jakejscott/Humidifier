@@ -1,7 +1,6 @@
 namespace Humidifier.EC2
 {
     using System.Collections.Generic;
-    using HostPropertyTypes;
 
     public class Host : Humidifier.Resource
     {
@@ -43,9 +42,5 @@ namespace Humidifier.EC2
             get;
             set;
         }
-    }
-
-    namespace HostPropertyTypes
-    {
     }
 }

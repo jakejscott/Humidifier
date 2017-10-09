@@ -1,7 +1,6 @@
 namespace Humidifier.Logs
 {
     using System.Collections.Generic;
-    using LogStreamPropertyTypes;
 
     public class LogStream : Humidifier.Resource
     {
@@ -30,9 +29,5 @@ namespace Humidifier.Logs
             get;
             set;
         }
-    }
-
-    namespace LogStreamPropertyTypes
-    {
     }
 }

@@ -1,7 +1,6 @@
 namespace Humidifier.Cognito
 {
     using System.Collections.Generic;
-    using UserPoolClientPropertyTypes;
 
     public class UserPoolClient : Humidifier.Resource
     {
@@ -104,9 +103,5 @@ namespace Humidifier.Cognito
             get;
             set;
         }
-    }
-
-    namespace UserPoolClientPropertyTypes
-    {
     }
 }

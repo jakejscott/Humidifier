@@ -1,7 +1,6 @@
 namespace Humidifier.CodeDeploy
 {
     using System.Collections.Generic;
-    using ApplicationPropertyTypes;
 
     public class Application : Humidifier.Resource
     {
@@ -17,9 +16,5 @@ namespace Humidifier.CodeDeploy
             get;
             set;
         }
-    }
-
-    namespace ApplicationPropertyTypes
-    {
     }
 }

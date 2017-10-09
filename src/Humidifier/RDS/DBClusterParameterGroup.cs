@@ -1,7 +1,6 @@
 namespace Humidifier.RDS
 {
     using System.Collections.Generic;
-    using DBClusterParameterGroupPropertyTypes;
 
     public class DBClusterParameterGroup : Humidifier.Resource
     {
@@ -57,9 +56,5 @@ namespace Humidifier.RDS
             get;
             set;
         }
-    }
-
-    namespace DBClusterParameterGroupPropertyTypes
-    {
     }
 }

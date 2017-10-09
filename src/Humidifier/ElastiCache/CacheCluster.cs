@@ -1,7 +1,6 @@
 namespace Humidifier.ElastiCache
 {
     using System.Collections.Generic;
-    using CacheClusterPropertyTypes;
 
     public class CacheCluster : Humidifier.Resource
     {
@@ -286,9 +285,5 @@ namespace Humidifier.ElastiCache
             get;
             set;
         }
-    }
-
-    namespace CacheClusterPropertyTypes
-    {
     }
 }

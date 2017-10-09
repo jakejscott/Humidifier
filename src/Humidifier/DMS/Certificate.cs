@@ -1,7 +1,6 @@
 namespace Humidifier.DMS
 {
     using System.Collections.Generic;
-    using CertificatePropertyTypes;
 
     public class Certificate : Humidifier.Resource
     {
@@ -43,9 +42,5 @@ namespace Humidifier.DMS
             get;
             set;
         }
-    }
-
-    namespace CertificatePropertyTypes
-    {
     }
 }

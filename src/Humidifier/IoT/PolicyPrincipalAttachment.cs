@@ -1,7 +1,6 @@
 namespace Humidifier.IoT
 {
     using System.Collections.Generic;
-    using PolicyPrincipalAttachmentPropertyTypes;
 
     public class PolicyPrincipalAttachment : Humidifier.Resource
     {
@@ -30,9 +29,5 @@ namespace Humidifier.IoT
             get;
             set;
         }
-    }
-
-    namespace PolicyPrincipalAttachmentPropertyTypes
-    {
     }
 }

@@ -1,7 +1,6 @@
 namespace Humidifier.OpsWorks
 {
     using System.Collections.Generic;
-    using UserProfilePropertyTypes;
 
     public class UserProfile : Humidifier.Resource
     {
@@ -61,9 +60,5 @@ namespace Humidifier.OpsWorks
             get;
             set;
         }
-    }
-
-    namespace UserProfilePropertyTypes
-    {
     }
 }

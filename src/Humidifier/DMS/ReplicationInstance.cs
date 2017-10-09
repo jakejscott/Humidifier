@@ -1,7 +1,6 @@
 namespace Humidifier.DMS
 {
     using System.Collections.Generic;
-    using ReplicationInstancePropertyTypes;
 
     public class ReplicationInstance : Humidifier.Resource
     {
@@ -194,9 +193,5 @@ namespace Humidifier.DMS
             get;
             set;
         }
-    }
-
-    namespace ReplicationInstancePropertyTypes
-    {
     }
 }

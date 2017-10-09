@@ -1,7 +1,6 @@
 namespace Humidifier.EC2
 {
     using System.Collections.Generic;
-    using CustomerGatewayPropertyTypes;
 
     public class CustomerGateway : Humidifier.Resource
     {
@@ -57,9 +56,5 @@ namespace Humidifier.EC2
             get;
             set;
         }
-    }
-
-    namespace CustomerGatewayPropertyTypes
-    {
     }
 }

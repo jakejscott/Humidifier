@@ -1,7 +1,6 @@
 namespace Humidifier.EFS
 {
     using System.Collections.Generic;
-    using MountTargetPropertyTypes;
 
     public class MountTarget : Humidifier.Resource
     {
@@ -57,9 +56,5 @@ namespace Humidifier.EFS
             get;
             set;
         }
-    }
-
-    namespace MountTargetPropertyTypes
-    {
     }
 }

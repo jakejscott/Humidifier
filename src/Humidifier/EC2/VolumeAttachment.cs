@@ -1,7 +1,6 @@
 namespace Humidifier.EC2
 {
     using System.Collections.Generic;
-    using VolumeAttachmentPropertyTypes;
 
     public class VolumeAttachment : Humidifier.Resource
     {
@@ -43,9 +42,5 @@ namespace Humidifier.EC2
             get;
             set;
         }
-    }
-
-    namespace VolumeAttachmentPropertyTypes
-    {
     }
 }

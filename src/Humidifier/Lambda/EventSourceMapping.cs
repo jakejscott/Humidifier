@@ -1,7 +1,6 @@
 namespace Humidifier.Lambda
 {
     using System.Collections.Generic;
-    using EventSourceMappingPropertyTypes;
 
     public class EventSourceMapping : Humidifier.Resource
     {
@@ -69,9 +68,5 @@ namespace Humidifier.Lambda
             get;
             set;
         }
-    }
-
-    namespace EventSourceMappingPropertyTypes
-    {
     }
 }

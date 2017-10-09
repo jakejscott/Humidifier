@@ -1,7 +1,6 @@
 namespace Humidifier.DMS
 {
     using System.Collections.Generic;
-    using ReplicationTaskPropertyTypes;
 
     public class ReplicationTask : Humidifier.Resource
     {
@@ -122,9 +121,5 @@ namespace Humidifier.DMS
             get;
             set;
         }
-    }
-
-    namespace ReplicationTaskPropertyTypes
-    {
     }
 }

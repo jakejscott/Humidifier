@@ -1,7 +1,6 @@
 namespace Humidifier.SDB
 {
     using System.Collections.Generic;
-    using DomainPropertyTypes;
 
     public class Domain : Humidifier.Resource
     {
@@ -17,9 +16,5 @@ namespace Humidifier.SDB
             get;
             set;
         }
-    }
-
-    namespace DomainPropertyTypes
-    {
     }
 }

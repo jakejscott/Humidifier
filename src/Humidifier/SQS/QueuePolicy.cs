@@ -1,7 +1,6 @@
 namespace Humidifier.SQS
 {
     using System.Collections.Generic;
-    using QueuePolicyPropertyTypes;
 
     public class QueuePolicy : Humidifier.Resource
     {
@@ -31,9 +30,5 @@ namespace Humidifier.SQS
             get;
             set;
         }
-    }
-
-    namespace QueuePolicyPropertyTypes
-    {
     }
 }

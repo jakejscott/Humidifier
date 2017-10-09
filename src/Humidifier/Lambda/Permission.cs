@@ -1,7 +1,6 @@
 namespace Humidifier.Lambda
 {
     using System.Collections.Generic;
-    using PermissionPropertyTypes;
 
     public class Permission : Humidifier.Resource
     {
@@ -82,9 +81,5 @@ namespace Humidifier.Lambda
             get;
             set;
         }
-    }
-
-    namespace PermissionPropertyTypes
-    {
     }
 }

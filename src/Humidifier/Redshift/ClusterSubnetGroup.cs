@@ -1,7 +1,6 @@
 namespace Humidifier.Redshift
 {
     using System.Collections.Generic;
-    using ClusterSubnetGroupPropertyTypes;
 
     public class ClusterSubnetGroup : Humidifier.Resource
     {
@@ -45,9 +44,5 @@ namespace Humidifier.Redshift
             get;
             set;
         }
-    }
-
-    namespace ClusterSubnetGroupPropertyTypes
-    {
     }
 }

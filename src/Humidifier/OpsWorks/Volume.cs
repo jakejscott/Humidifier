@@ -1,7 +1,6 @@
 namespace Humidifier.OpsWorks
 {
     using System.Collections.Generic;
-    using VolumePropertyTypes;
 
     public class Volume : Humidifier.Resource
     {
@@ -56,9 +55,5 @@ namespace Humidifier.OpsWorks
             get;
             set;
         }
-    }
-
-    namespace VolumePropertyTypes
-    {
     }
 }

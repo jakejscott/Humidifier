@@ -1,7 +1,6 @@
 namespace Humidifier.EC2
 {
     using System.Collections.Generic;
-    using SubnetRouteTableAssociationPropertyTypes;
 
     public class SubnetRouteTableAssociation : Humidifier.Resource
     {
@@ -30,9 +29,5 @@ namespace Humidifier.EC2
             get;
             set;
         }
-    }
-
-    namespace SubnetRouteTableAssociationPropertyTypes
-    {
     }
 }

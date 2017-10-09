@@ -1,7 +1,6 @@
 namespace Humidifier.EC2
 {
     using System.Collections.Generic;
-    using VPCCidrBlockPropertyTypes;
 
     public class VPCCidrBlock : Humidifier.Resource
     {
@@ -43,9 +42,5 @@ namespace Humidifier.EC2
             get;
             set;
         }
-    }
-
-    namespace VPCCidrBlockPropertyTypes
-    {
     }
 }

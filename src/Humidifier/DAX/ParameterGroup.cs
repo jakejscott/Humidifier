@@ -1,7 +1,6 @@
 namespace Humidifier.DAX
 {
     using System.Collections.Generic;
-    using ParameterGroupPropertyTypes;
 
     public class ParameterGroup : Humidifier.Resource
     {
@@ -43,9 +42,5 @@ namespace Humidifier.DAX
             get;
             set;
         }
-    }
-
-    namespace ParameterGroupPropertyTypes
-    {
     }
 }

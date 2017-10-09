@@ -1,7 +1,6 @@
 namespace Humidifier.IoT
 {
     using System.Collections.Generic;
-    using ThingPrincipalAttachmentPropertyTypes;
 
     public class ThingPrincipalAttachment : Humidifier.Resource
     {
@@ -30,9 +29,5 @@ namespace Humidifier.IoT
             get;
             set;
         }
-    }
-
-    namespace ThingPrincipalAttachmentPropertyTypes
-    {
     }
 }

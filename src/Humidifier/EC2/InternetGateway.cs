@@ -1,7 +1,6 @@
 namespace Humidifier.EC2
 {
     using System.Collections.Generic;
-    using InternetGatewayPropertyTypes;
 
     public class InternetGateway : Humidifier.Resource
     {
@@ -18,9 +17,5 @@ namespace Humidifier.EC2
             get;
             set;
         }
-    }
-
-    namespace InternetGatewayPropertyTypes
-    {
     }
 }

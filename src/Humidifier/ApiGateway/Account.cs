@@ -1,7 +1,6 @@
 namespace Humidifier.ApiGateway
 {
     using System.Collections.Generic;
-    using AccountPropertyTypes;
 
     public class Account : Humidifier.Resource
     {
@@ -17,9 +16,5 @@ namespace Humidifier.ApiGateway
             get;
             set;
         }
-    }
-
-    namespace AccountPropertyTypes
-    {
     }
 }

@@ -1,7 +1,6 @@
 namespace Humidifier.SNS
 {
     using System.Collections.Generic;
-    using TopicPolicyPropertyTypes;
 
     public class TopicPolicy : Humidifier.Resource
     {
@@ -31,9 +30,5 @@ namespace Humidifier.SNS
             get;
             set;
         }
-    }
-
-    namespace TopicPolicyPropertyTypes
-    {
     }
 }

@@ -1,7 +1,6 @@
 namespace Humidifier.RDS
 {
     using System.Collections.Generic;
-    using DBInstancePropertyTypes;
 
     public class DBInstance : Humidifier.Resource
     {
@@ -505,9 +504,5 @@ namespace Humidifier.RDS
             get;
             set;
         }
-    }
-
-    namespace DBInstancePropertyTypes
-    {
     }
 }

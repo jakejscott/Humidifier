@@ -1,7 +1,6 @@
 namespace Humidifier.Logs
 {
     using System.Collections.Generic;
-    using LogGroupPropertyTypes;
 
     public class LogGroup : Humidifier.Resource
     {
@@ -35,9 +34,5 @@ namespace Humidifier.Logs
             get;
             set;
         }
-    }
-
-    namespace LogGroupPropertyTypes
-    {
     }
 }

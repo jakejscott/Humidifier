@@ -1,7 +1,6 @@
 namespace Humidifier.IAM
 {
     using System.Collections.Generic;
-    using AccessKeyPropertyTypes;
 
     public class AccessKey : Humidifier.Resource
     {
@@ -48,9 +47,5 @@ namespace Humidifier.IAM
             get;
             set;
         }
-    }
-
-    namespace AccessKeyPropertyTypes
-    {
     }
 }

@@ -51,9 +51,17 @@ namespace Humidifier.CodeGen
 
                 var namespaceDecl = NamespaceDeclaration(ParseName("Humidifier." + group))
                     .AddUsings(
-                        UsingDirective(ParseName("System.Collections.Generic")),
+                        UsingDirective(ParseName("System.Collections.Generic"))
+                    );
+
+                List<PropertyType> propertyTypes = specification.PropertyTypes.Where(x => x.Name.StartsWith(resourceType.Name + ".")).ToList();
+
+                if (propertyTypes.Any())
+                {
+                    namespaceDecl = namespaceDecl.AddUsings(
                         UsingDirective(ParseName(propsNamespace))
                     );
+                }
 
                 var resourceClassDecl = ClassDeclaration(resourceClassName)
                     .AddModifiers(Token(SyntaxKind.PublicKeyword))
@@ -114,7 +122,7 @@ namespace Humidifier.CodeGen
                     resourceClassDecl = resourceClassDecl.AddMembers(propertyDecl);
                 }
 
-                List<PropertyType> propertyTypes = specification.PropertyTypes.Where(x => x.Name.StartsWith(resourceType.Name + ".")).ToList();
+                
 
                 var propertyTypesNamespace = NamespaceDeclaration(ParseName(propsNamespace));
 
@@ -154,7 +162,11 @@ namespace Humidifier.CodeGen
                 }
 
                 namespaceDecl = namespaceDecl.AddMembers(resourceClassDecl);
-                namespaceDecl = namespaceDecl.AddMembers(propertyTypesNamespace);
+
+                if (propertyTypes.Any())
+                {
+                    namespaceDecl = namespaceDecl.AddMembers(propertyTypesNamespace);
+                }
 
                 var code = namespaceDecl.NormalizeWhitespace().ToFullString();
                 var filePath = $"{path}/{resourceClassName}.cs";

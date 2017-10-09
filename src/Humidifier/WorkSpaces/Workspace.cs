@@ -1,7 +1,6 @@
 namespace Humidifier.WorkSpaces
 {
     using System.Collections.Generic;
-    using WorkspacePropertyTypes;
 
     public class Workspace : Humidifier.Resource
     {
@@ -82,9 +81,5 @@ namespace Humidifier.WorkSpaces
             get;
             set;
         }
-    }
-
-    namespace WorkspacePropertyTypes
-    {
     }
 }

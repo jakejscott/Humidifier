@@ -1,7 +1,6 @@
 namespace Humidifier.DMS
 {
     using System.Collections.Generic;
-    using ReplicationSubnetGroupPropertyTypes;
 
     public class ReplicationSubnetGroup : Humidifier.Resource
     {
@@ -58,9 +57,5 @@ namespace Humidifier.DMS
             get;
             set;
         }
-    }
-
-    namespace ReplicationSubnetGroupPropertyTypes
-    {
     }
 }

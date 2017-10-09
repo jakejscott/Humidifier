@@ -1,7 +1,6 @@
 namespace Humidifier.S3
 {
     using System.Collections.Generic;
-    using BucketPolicyPropertyTypes;
 
     public class BucketPolicy : Humidifier.Resource
     {
@@ -30,9 +29,5 @@ namespace Humidifier.S3
             get;
             set;
         }
-    }
-
-    namespace BucketPolicyPropertyTypes
-    {
     }
 }

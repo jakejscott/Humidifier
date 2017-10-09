@@ -1,7 +1,6 @@
 namespace Humidifier.EMR
 {
     using System.Collections.Generic;
-    using SecurityConfigurationPropertyTypes;
 
     public class SecurityConfiguration : Humidifier.Resource
     {
@@ -30,9 +29,5 @@ namespace Humidifier.EMR
             get;
             set;
         }
-    }
-
-    namespace SecurityConfigurationPropertyTypes
-    {
     }
 }

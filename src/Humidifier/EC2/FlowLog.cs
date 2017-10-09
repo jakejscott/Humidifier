@@ -1,7 +1,6 @@
 namespace Humidifier.EC2
 {
     using System.Collections.Generic;
-    using FlowLogPropertyTypes;
 
     public class FlowLog : Humidifier.Resource
     {
@@ -69,9 +68,5 @@ namespace Humidifier.EC2
             get;
             set;
         }
-    }
-
-    namespace FlowLogPropertyTypes
-    {
     }
 }

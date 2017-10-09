@@ -1,7 +1,6 @@
 namespace Humidifier.EC2
 {
     using System.Collections.Generic;
-    using SubnetNetworkAclAssociationPropertyTypes;
 
     public class SubnetNetworkAclAssociation : Humidifier.Resource
     {
@@ -35,9 +34,5 @@ namespace Humidifier.EC2
             get;
             set;
         }
-    }
-
-    namespace SubnetNetworkAclAssociationPropertyTypes
-    {
     }
 }
