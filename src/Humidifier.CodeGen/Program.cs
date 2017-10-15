@@ -26,6 +26,7 @@ namespace Humidifier.CodeGen
 
             var basePath = Environment.GetEnvironmentVariable("BUILD_PATH");
             var humidifierPath = Path.Combine(basePath, "src", "Humidifier");
+            var codegenPath = Path.Combine(basePath, "src", "Humidifier.CodeGen");
 
             foreach (var directory in Directory.GetDirectories(humidifierPath))
             {
@@ -36,6 +37,7 @@ namespace Humidifier.CodeGen
             Console.WriteLine("Downloading spec from " + url);
             var client = new HttpClient();
             var json = client.GetStringAsync(url).GetAwaiter().GetResult();
+            File.WriteAllText(Path.Combine(codegenPath, "Specification.json"), json);
 
             Console.WriteLine("Parsing spec");
             Specification specification = ParseSpecification(json);
