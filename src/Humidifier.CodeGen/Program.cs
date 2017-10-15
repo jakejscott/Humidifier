@@ -22,6 +22,8 @@ namespace Humidifier.CodeGen
 
         public static void Main(string[] args)
         {
+            Console.WriteLine("Cleaning files");
+
             var basePath = Environment.GetEnvironmentVariable("BUILD_PATH");
             var humidifierPath = Path.Combine(basePath, "src", "Humidifier");
 
@@ -31,9 +33,11 @@ namespace Humidifier.CodeGen
                 Directory.Delete(directory, true);
             }
 
+            Console.WriteLine("Downloading spec from " + url);
             var client = new HttpClient();
             var json = client.GetStringAsync(url).GetAwaiter().GetResult();
 
+            Console.WriteLine("Parsing spec");
             Specification specification = ParseSpecification(json);
             Console.WriteLine("ResourceSpecificationVersion: " + specification.ResourceSpecificationVersion);
 
@@ -173,7 +177,9 @@ namespace Humidifier.CodeGen
                 File.WriteAllText(filePath, code);
             }
 
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Done");
+            Console.ResetColor();
         }
 
         private static string GetComment(Property property)
@@ -291,7 +297,7 @@ namespace Humidifier.CodeGen
                         }
                         else
                         {
-                            Console.WriteLine("List:: " + property.ItemType);
+                            // Console.WriteLine("List:: " + property.ItemType);
                             typeName = $"List<{property.ItemType}>";
                         }
 
@@ -315,14 +321,14 @@ namespace Humidifier.CodeGen
                         }
                         else
                         {
-                            Console.WriteLine("Map:: " + property.ItemType);
+                            // Console.WriteLine("Map:: " + property.ItemType);
                             typeName = $"Dictionary<string, {property.ItemType}>";
                         }
 
                         break;
 
                     default:
-                        Console.WriteLine("Struct:: " + property.Type);
+                        // Console.WriteLine("Struct:: " + property.Type);
                         typeName = property.Type;
                         break;
                 }
@@ -347,10 +353,19 @@ namespace Humidifier.CodeGen
 
             foreach (var propType in parsed.SelectToken("PropertyTypes").Children<JProperty>())
             {
+                var docs = propType.Value.SelectToken("Documentation");
+                if (docs == null)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("MISSING DOCS!! " + propType.Name);
+                    Console.ResetColor();
+                    continue;
+                }
+
                 var propertyType = new PropertyType
                 {
                     Name = propType.Name,
-                    Documentation = propType.Value.SelectToken("Documentation").Value<string>()
+                    Documentation = docs?.ToString()
                 };
 
                 var properties = propType.Value.SelectToken("Properties");
