@@ -40,7 +40,7 @@ namespace Humidifier.SSM
         /// Type: List
         /// ItemType: PatchGroup
         /// </summary>
-        public List<PatchGroup> PatchGroups
+        public List<dynamic> PatchGroups
         {
             get;
             set;

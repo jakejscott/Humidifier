@@ -128,14 +128,12 @@ namespace Humidifier.CodeGen
                     resourceClassDecl = resourceClassDecl.AddMembers(propertyDecl);
                 }
 
-                
-
                 var propertyTypesNamespace = NamespaceDeclaration(ParseName(propsNamespace));
 
                 foreach (PropertyType propertyType in propertyTypes)
                 {
-                    var split = propertyType.Name.Split(new[] { "::" }, StringSplitOptions.RemoveEmptyEntries);
-                    var propertyTypeClassName = split[2].Split(new[] { "." }, StringSplitOptions.RemoveEmptyEntries)[1];
+                    var split = propertyType.Name.Split(new[] {"::"}, StringSplitOptions.RemoveEmptyEntries);
+                    var propertyTypeClassName = split[2].Split(new[] {"."}, StringSplitOptions.RemoveEmptyEntries)[1];
 
                     var propertyTypeClassDecl = ClassDeclaration(propertyTypeClassName)
                         .AddModifiers(Token(SyntaxKind.PublicKeyword));
@@ -299,8 +297,18 @@ namespace Humidifier.CodeGen
                         }
                         else
                         {
-                            // Console.WriteLine("List:: " + property.ItemType);
-                            typeName = $"List<{property.ItemType}>";
+                            // Hack
+                            if (property.ItemType == "PatchGroup")
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("WARN::Property name: " + property.Name + " is a primitive type: " + property.ItemType);
+                                Console.ResetColor();
+                                typeName = "List<dynamic>";
+                            }
+                            else
+                            {
+                                typeName = $"List<{property.ItemType}>";
+                            }
                         }
 
                         break;
@@ -355,54 +363,44 @@ namespace Humidifier.CodeGen
 
             foreach (var propType in parsed.SelectToken("PropertyTypes").Children<JProperty>())
             {
-                var docs = propType.Value.SelectToken("Documentation");
-                if (docs == null)
+                var primitiveType = propType.Value.SelectToken("PrimitiveType");
+                if (primitiveType != null)
                 {
+                    var primitiveTypeValue = primitiveType.Value<string>();
+
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("MISSING DOCS!! " + propType.Name);
+                    Console.WriteLine("WARN::Property name: " + propType.Name + " is a primitive type: " + primitiveTypeValue);
                     Console.ResetColor();
                     continue;
                 }
-
-                var propertyType = new PropertyType
-                {
-                    Name = propType.Name,
-                    Documentation = docs?.ToString()
-                };
-
-                var properties = propType.Value.SelectToken("Properties");
-                if (properties != null)
-                {
-                    if (propertyType.Properties == null) propertyType.Properties = new List<Property>();
-
-                    foreach (var prop in properties.Children<JProperty>())
-                    {
-                        Property property = ParseProperty(prop);
-                        propertyType.Properties.Add(property);
-                    }
-                }
                 else
                 {
-                    // NOTE: Special case to handle "AWS::Cognito::IdentityPoolRoleAttachment.RulesConfigurationType" which doesn't have properties, but IS A property.
-                    if (propertyType.Properties == null) propertyType.Properties = new List<Property>();
-
-                    var split = propertyType.Name.Split(new[] { "::" }, StringSplitOptions.RemoveEmptyEntries);
-                    var name = split[2].Split(new[] { "." }, StringSplitOptions.RemoveEmptyEntries)[1];
-
-                    var property = new Property
+                    var docs = propType.Value.SelectToken("Documentation");
+                    if (docs == null)
                     {
-                        Name = name,
-                        Documentation = propType.Value.SelectToken("Documentation").Value<string>(),
-                        Required = propType.Value.SelectToken("Required").Value<bool>(),
-                        UpdateType = propType.Value.SelectToken("UpdateType").Value<string>(),
-                        Type = propType.Value.SelectToken("Type")?.Value<string>(),
-                        ItemType = propType.Value.SelectToken("ItemType")?.Value<string>(),
+                        throw new InvalidOperationException("Missing docs" + propType.Name);
+                    }
+
+                    var propertyType = new PropertyType
+                    {
+                        Name = propType.Name,
+                        Documentation = docs?.ToString()
                     };
 
-                    propertyType.Properties.Add(property);
-                }
+                    var properties = propType.Value.SelectToken("Properties");
+                    if (properties != null)
+                    {
+                        if (propertyType.Properties == null) propertyType.Properties = new List<Property>();
 
-                specification.PropertyTypes.Add(propertyType);
+                        foreach (var prop in properties.Children<JProperty>())
+                        {
+                            Property property = ParseProperty(prop);
+                            propertyType.Properties.Add(property);
+                        }
+                    }
+
+                    specification.PropertyTypes.Add(propertyType);
+                }
             }
 
             foreach (var resType in parsed.SelectToken("ResourceTypes").Children<JProperty>())
