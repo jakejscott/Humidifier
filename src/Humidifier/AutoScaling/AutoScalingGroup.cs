@@ -6,6 +6,20 @@ namespace Humidifier.AutoScaling
     public class AutoScalingGroup : Humidifier.Resource
     {
         /// <summary>
+        /// AsTags
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-tags
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: TagProperty
+        /// </summary>
+        public List<TagProperty> AsTags
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// AvailabilityZones
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-availabilityzones
         /// Required: False
@@ -98,6 +112,20 @@ namespace Humidifier.AutoScaling
         }
 
         /// <summary>
+        /// LifecycleHookSpecificationList
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecificationlist
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: LifecycleHookSpecification
+        /// </summary>
+        public List<LifecycleHookSpecification> LifecycleHookSpecificationList
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// LoadBalancerNames
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-loadbalancernames
         /// Required: False
@@ -179,20 +207,6 @@ namespace Humidifier.AutoScaling
         }
 
         /// <summary>
-        /// Tags
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-tags
-        /// Required: False
-        /// UpdateType: Mutable
-        /// Type: List
-        /// ItemType: TagProperty
-        /// </summary>
-        public List<TagProperty> Tags
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
         /// TargetGroupARNs
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-targetgrouparns
         /// Required: False
@@ -237,6 +251,100 @@ namespace Humidifier.AutoScaling
 
     namespace AutoScalingGroupPropertyTypes
     {
+        public class LifecycleHookSpecification
+        {
+            /// <summary>
+            /// DefaultResult
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-defaultresult
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DefaultResult
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// HeartbeatTimeout
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-heartbeattimeout
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic HeartbeatTimeout
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// LifecycleHookName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-lifecyclehookname
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic LifecycleHookName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// LifecycleTransition
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-lifecycletransition
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic LifecycleTransition
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// NotificationMetadata
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-notificationmetadata
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic NotificationMetadata
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// NotificationTargetARN
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-notificationtargetarn
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic NotificationTargetARN
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RoleARN
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-rolearn
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RoleARN
+            {
+                get;
+                set;
+            }
+        }
+
         public class NotificationConfiguration
         {
             /// <summary>

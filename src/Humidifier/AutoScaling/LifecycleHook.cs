@@ -44,6 +44,19 @@ namespace Humidifier.AutoScaling
         }
 
         /// <summary>
+        /// LifecycleHookName
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-lifecyclehook.html#cfn-autoscaling-lifecyclehook-lifecyclehookname
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic LifecycleHookName
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// LifecycleTransition
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-lifecyclehook.html#cfn-as-lifecyclehook-lifecycletransition
         /// Required: True

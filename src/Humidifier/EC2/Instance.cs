@@ -94,6 +94,20 @@ namespace Humidifier.EC2
         }
 
         /// <summary>
+        /// ElasticGpuSpecifications
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-elasticgpuspecifications
+        /// Required: False
+        /// UpdateType: Immutable
+        /// Type: List
+        /// ItemType: ElasticGpuSpecification
+        /// </summary>
+        public List<ElasticGpuSpecification> ElasticGpuSpecifications
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// HostId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-hostid
         /// Required: False
@@ -402,6 +416,22 @@ namespace Humidifier.EC2
 
     namespace InstancePropertyTypes
     {
+        public class ElasticGpuSpecification
+        {
+            /// <summary>
+            /// Type
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-elasticgpuspecification.html#cfn-ec2-instance-elasticgpuspecification-type
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Type
+            {
+                get;
+                set;
+            }
+        }
+
         public class NetworkInterface
         {
             /// <summary>

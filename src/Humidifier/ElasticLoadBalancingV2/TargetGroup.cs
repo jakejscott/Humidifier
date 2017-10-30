@@ -8,6 +8,7 @@ namespace Humidifier.ElasticLoadBalancingV2
         public static class Attributes
         {
             public static string LoadBalancerArns =  "LoadBalancerArns" ;
+            public static string TargetGroupFullName =  "TargetGroupFullName" ;
         }
 
         /// <summary>

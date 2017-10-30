@@ -1,6 +1,7 @@
 namespace Humidifier.EC2
 {
     using System.Collections.Generic;
+    using VPNConnectionPropertyTypes;
 
     public class VPNConnection : Humidifier.Resource
     {
@@ -68,6 +69,52 @@ namespace Humidifier.EC2
         {
             get;
             set;
+        }
+
+        /// <summary>
+        /// VpnTunnelOptionsSpecifications
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection.html#cfn-ec2-vpnconnection-vpntunneloptionsspecifications
+        /// Required: False
+        /// UpdateType: Immutable
+        /// Type: List
+        /// ItemType: VpnTunnelOptionsSpecification
+        /// </summary>
+        public List<VpnTunnelOptionsSpecification> VpnTunnelOptionsSpecifications
+        {
+            get;
+            set;
+        }
+    }
+
+    namespace VPNConnectionPropertyTypes
+    {
+        public class VpnTunnelOptionsSpecification
+        {
+            /// <summary>
+            /// PreSharedKey
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-vpnconnection-vpntunneloptionsspecification.html#cfn-ec2-vpnconnection-vpntunneloptionsspecification-presharedkey
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic PreSharedKey
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// TunnelInsideCidr
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-vpnconnection-vpntunneloptionsspecification.html#cfn-ec2-vpnconnection-vpntunneloptionsspecification-tunnelinsidecidr
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic TunnelInsideCidr
+            {
+                get;
+                set;
+            }
         }
     }
 }

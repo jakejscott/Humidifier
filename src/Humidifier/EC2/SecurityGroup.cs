@@ -123,6 +123,19 @@ namespace Humidifier.EC2
             }
 
             /// <summary>
+            /// Description
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-rule.html#cfn-ec2-security-group-rule-description
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Description
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// FromPort
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-rule.html#cfn-ec2-security-group-rule-fromport
             /// Required: False
@@ -224,6 +237,19 @@ namespace Humidifier.EC2
             /// PrimitiveType: String
             /// </summary>
             public dynamic CidrIpv6
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Description
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-rule.html#cfn-ec2-security-group-rule-description
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Description
             {
                 get;
                 set;

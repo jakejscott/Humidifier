@@ -196,6 +196,20 @@ namespace Humidifier.CodeDeploy
                 get;
                 set;
             }
+
+            /// <summary>
+            /// TargetGroupInfoList
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.html#cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgroupinfolist
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: TargetGroupInfo
+            /// </summary>
+            public List<TargetGroupInfo> TargetGroupInfoList
+            {
+                get;
+                set;
+            }
         }
 
         public class RevisionLocation
@@ -416,6 +430,22 @@ namespace Humidifier.CodeDeploy
             /// PrimitiveType: String
             /// </summary>
             public dynamic Repository
+            {
+                get;
+                set;
+            }
+        }
+
+        public class TargetGroupInfo
+        {
+            /// <summary>
+            /// Name
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-targetgroupinfo.html#cfn-codedeploy-deploymentgroup-targetgroupinfo-name
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Name
             {
                 get;
                 set;

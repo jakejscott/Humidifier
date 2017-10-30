@@ -12,7 +12,7 @@ namespace Humidifier.EMR
 
         /// <summary>
         /// AdditionalInfo
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-additionalinfo
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-additionalinfo
         /// Required: False
         /// UpdateType: Immutable
         /// PrimitiveType: Json
@@ -25,7 +25,7 @@ namespace Humidifier.EMR
 
         /// <summary>
         /// Applications
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-applications
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-applications
         /// Required: False
         /// UpdateType: Immutable
         /// Type: List
@@ -39,7 +39,7 @@ namespace Humidifier.EMR
 
         /// <summary>
         /// AutoScalingRole
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-elasticmapreduce-cluster-autoscalingrole
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-autoscalingrole
         /// Required: False
         /// UpdateType: Immutable
         /// PrimitiveType: String
@@ -52,7 +52,7 @@ namespace Humidifier.EMR
 
         /// <summary>
         /// BootstrapActions
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-bootstrapactions
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-bootstrapactions
         /// Required: False
         /// UpdateType: Immutable
         /// Type: List
@@ -66,7 +66,7 @@ namespace Humidifier.EMR
 
         /// <summary>
         /// Configurations
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-configurations
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-configurations
         /// Required: False
         /// UpdateType: Immutable
         /// Type: List
@@ -79,8 +79,21 @@ namespace Humidifier.EMR
         }
 
         /// <summary>
+        /// CustomAmiId
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-customamiid
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic CustomAmiId
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Instances
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-instances
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-instances
         /// Required: True
         /// UpdateType: Conditional
         /// Type: JobFlowInstancesConfig
@@ -93,7 +106,7 @@ namespace Humidifier.EMR
 
         /// <summary>
         /// JobFlowRole
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-jobflowrole
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-jobflowrole
         /// Required: True
         /// UpdateType: Immutable
         /// PrimitiveType: String
@@ -106,7 +119,7 @@ namespace Humidifier.EMR
 
         /// <summary>
         /// LogUri
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-loguri
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-loguri
         /// Required: False
         /// UpdateType: Immutable
         /// PrimitiveType: String
@@ -119,7 +132,7 @@ namespace Humidifier.EMR
 
         /// <summary>
         /// Name
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-name
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-name
         /// Required: True
         /// UpdateType: Immutable
         /// PrimitiveType: String
@@ -132,7 +145,7 @@ namespace Humidifier.EMR
 
         /// <summary>
         /// ReleaseLabel
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-releaselabel
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-releaselabel
         /// Required: False
         /// UpdateType: Immutable
         /// PrimitiveType: String
@@ -145,7 +158,7 @@ namespace Humidifier.EMR
 
         /// <summary>
         /// ScaleDownBehavior
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-elasticmapreduce-cluster-scaledownbehavior
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-scaledownbehavior
         /// Required: False
         /// UpdateType: Immutable
         /// PrimitiveType: String
@@ -158,7 +171,7 @@ namespace Humidifier.EMR
 
         /// <summary>
         /// SecurityConfiguration
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-securityconfiguration
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-securityconfiguration
         /// Required: False
         /// UpdateType: Immutable
         /// PrimitiveType: String
@@ -171,7 +184,7 @@ namespace Humidifier.EMR
 
         /// <summary>
         /// ServiceRole
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-servicerole
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-servicerole
         /// Required: True
         /// UpdateType: Immutable
         /// PrimitiveType: String
@@ -184,7 +197,7 @@ namespace Humidifier.EMR
 
         /// <summary>
         /// Tags
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-elasticmapreduce-cluster-tags
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-tags
         /// Required: False
         /// UpdateType: Mutable
         /// Type: List
@@ -198,7 +211,7 @@ namespace Humidifier.EMR
 
         /// <summary>
         /// VisibleToAllUsers
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-visibletoallusers
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-visibletoallusers
         /// Required: False
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
@@ -216,7 +229,7 @@ namespace Humidifier.EMR
         {
             /// <summary>
             /// AutoScalingPolicy
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-autoscalingpolicy
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-autoscalingpolicy
             /// Required: False
             /// UpdateType: Mutable
             /// Type: AutoScalingPolicy
@@ -229,7 +242,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// BidPrice
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.html#cfn-emr-cluster-jobflowinstancesconfig-instancegroupconfig-bidprice
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-bidprice
             /// Required: False
             /// UpdateType: Immutable
             /// PrimitiveType: String
@@ -242,7 +255,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// Configurations
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.html#cfn-emr-cluster-jobflowinstancesconfig-instancegroupconfig-configurations
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-configurations
             /// Required: False
             /// UpdateType: Immutable
             /// Type: List
@@ -256,7 +269,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// EbsConfiguration
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.html#cfn-emr-cluster-jobflowinstancesconfig-instancegroupconfigConfigurations-ebsconfiguration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-ebsconfiguration
             /// Required: False
             /// UpdateType: Immutable
             /// Type: EbsConfiguration
@@ -269,7 +282,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// InstanceCount
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.html#cfn-emr-cluster-jobflowinstancesconfig-instancegroupconfig-instancecount
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-instancecount
             /// Required: True
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
@@ -282,7 +295,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// InstanceType
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.html#cfn-emr-cluster-jobflowinstancesconfig-instancegroupconfig-instancetype
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-instancetype
             /// Required: True
             /// UpdateType: Immutable
             /// PrimitiveType: String
@@ -295,7 +308,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// Market
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.html#cfn-emr-cluster-jobflowinstancesconfig-instancegroupconfig-market
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-market
             /// Required: False
             /// UpdateType: Immutable
             /// PrimitiveType: String
@@ -308,7 +321,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// Name
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.html#cfn-emr-cluster-jobflowinstancesconfig-instancegroupconfig-name
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-name
             /// Required: False
             /// UpdateType: Immutable
             /// PrimitiveType: String
@@ -366,7 +379,7 @@ namespace Humidifier.EMR
         {
             /// <summary>
             /// Name
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-bootstrapactionconfig.html#cfn-emr-cluster-bootstrapactionconfig-name
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-bootstrapactionconfig.html#cfn-elasticmapreduce-cluster-bootstrapactionconfig-name
             /// Required: True
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -379,7 +392,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// ScriptBootstrapAction
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-bootstrapactionconfig.html#cfn-emr-cluster-bootstrapactionconfig-scriptbootstrapaction
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-bootstrapactionconfig.html#cfn-elasticmapreduce-cluster-bootstrapactionconfig-scriptbootstrapaction
             /// Required: True
             /// UpdateType: Mutable
             /// Type: ScriptBootstrapActionConfig
@@ -493,7 +506,7 @@ namespace Humidifier.EMR
         {
             /// <summary>
             /// AdditionalMasterSecurityGroups
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig.html#cfn-emr-cluster-jobflowinstancesconfig-additionalmastersecuritygroups
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-additionalmastersecuritygroups
             /// Required: False
             /// UpdateType: Immutable
             /// Type: List
@@ -507,7 +520,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// AdditionalSlaveSecurityGroups
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig.html#cfn-emr-cluster-jobflowinstancesconfig-additionalslavesecuritygroups
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-additionalslavesecuritygroups
             /// Required: False
             /// UpdateType: Immutable
             /// Type: List
@@ -521,7 +534,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// CoreInstanceFleet
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-coreinstancefleet
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-coreinstancefleet
             /// Required: False
             /// UpdateType: Immutable
             /// Type: InstanceFleetConfig
@@ -534,7 +547,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// CoreInstanceGroup
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig.html#cfn-emr-cluster-jobflowinstancesconfig-coreinstancegroup
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-coreinstancegroup
             /// Required: False
             /// UpdateType: Immutable
             /// Type: InstanceGroupConfig
@@ -547,7 +560,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// Ec2KeyName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig.html#cfn-emr-cluster-jobflowinstancesconfig-ec2keyname
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2keyname
             /// Required: False
             /// UpdateType: Immutable
             /// PrimitiveType: String
@@ -560,7 +573,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// Ec2SubnetId
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig.html#cfn-emr-cluster-jobflowinstancesconfig-ec2subnetid
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2subnetid
             /// Required: False
             /// UpdateType: Immutable
             /// PrimitiveType: String
@@ -573,7 +586,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// EmrManagedMasterSecurityGroup
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig.html#cfn-emr-cluster-jobflowinstancesconfig-emrmanagedmastersecuritygroup
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-emrmanagedmastersecuritygroup
             /// Required: False
             /// UpdateType: Immutable
             /// PrimitiveType: String
@@ -586,7 +599,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// EmrManagedSlaveSecurityGroup
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig.html#cfn-emr-cluster-jobflowinstancesconfig-emrmanagedslavesecuritygroup
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-emrmanagedslavesecuritygroup
             /// Required: False
             /// UpdateType: Immutable
             /// PrimitiveType: String
@@ -599,7 +612,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// HadoopVersion
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig.html#cfn-emr-cluster-jobflowinstancesconfig-hadoopversion
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-hadoopversion
             /// Required: False
             /// UpdateType: Immutable
             /// PrimitiveType: String
@@ -612,7 +625,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// MasterInstanceFleet
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-masterinstancefleet
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-masterinstancefleet
             /// Required: False
             /// UpdateType: Immutable
             /// Type: InstanceFleetConfig
@@ -625,7 +638,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// MasterInstanceGroup
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig.html#cfn-emr-cluster-jobflowinstancesconfig-coreinstancegroup
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-masterinstancegroup
             /// Required: False
             /// UpdateType: Immutable
             /// Type: InstanceGroupConfig
@@ -638,7 +651,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// Placement
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig.html#cfn-emr-cluster-jobflowinstancesconfig-placement
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-placement
             /// Required: False
             /// UpdateType: Immutable
             /// Type: PlacementType
@@ -651,7 +664,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// ServiceAccessSecurityGroup
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig.html#cfn-emr-cluster-jobflowinstancesconfig-serviceaccesssecuritygroup
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-serviceaccesssecuritygroup
             /// Required: False
             /// UpdateType: Immutable
             /// PrimitiveType: String
@@ -664,7 +677,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// TerminationProtected
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig.html#cfn-emr-cluster-jobflowinstancesconfig-terminationprotected
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-terminationprotected
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
@@ -751,7 +764,7 @@ namespace Humidifier.EMR
         {
             /// <summary>
             /// AdditionalInfo
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-application.html#cfn-emr-cluster-application-additionalinfo
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-application.html#cfn-elasticmapreduce-cluster-application-additionalinfo
             /// Required: False
             /// UpdateType: Mutable
             /// Type: Map
@@ -765,7 +778,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// Args
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-application.html#cfn-emr-cluster-application-args
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-application.html#cfn-elasticmapreduce-cluster-application-args
             /// Required: False
             /// UpdateType: Mutable
             /// Type: List
@@ -779,7 +792,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// Name
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-application.html#cfn-emr-cluster-application-name
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-application.html#cfn-elasticmapreduce-cluster-application-name
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -792,7 +805,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// Version
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-application.html#cfn-emr-cluster-application-version
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-application.html#cfn-elasticmapreduce-cluster-application-version
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -808,7 +821,7 @@ namespace Humidifier.EMR
         {
             /// <summary>
             /// VolumeSpecification
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration-ebsblockdeviceconfig.html#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-ebsblockdeviceconfig.html#cfn-elasticmapreduce-cluster-ebsblockdeviceconfig-volumespecification
             /// Required: True
             /// UpdateType: Mutable
             /// Type: VolumeSpecification
@@ -821,7 +834,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// VolumesPerInstance
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration-ebsblockdeviceconfig.html#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumesperinstance
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-ebsblockdeviceconfig.html#cfn-elasticmapreduce-cluster-ebsblockdeviceconfig-volumesperinstance
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
@@ -837,7 +850,7 @@ namespace Humidifier.EMR
         {
             /// <summary>
             /// AvailabilityZone
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-placementtype.html#aws-properties-emr-cluster-jobflowinstancesconfig-placementtype
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-placementtype.html#cfn-elasticmapreduce-cluster-placementtype-availabilityzone
             /// Required: True
             /// UpdateType: Immutable
             /// PrimitiveType: String
@@ -853,7 +866,7 @@ namespace Humidifier.EMR
         {
             /// <summary>
             /// Classification
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-configuration.html#cfn-emr-cluster-configuration-classification
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-configuration.html#cfn-elasticmapreduce-cluster-configuration-classification
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -866,7 +879,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// ConfigurationProperties
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-configuration.html#cfn-emr-cluster-configuration-configurationproperties
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-configuration.html#cfn-elasticmapreduce-cluster-configuration-configurationproperties
             /// Required: False
             /// UpdateType: Mutable
             /// Type: Map
@@ -880,7 +893,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// Configurations
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-configuration.html#cfn-emr-cluster-configuration-configurations
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-configuration.html#cfn-elasticmapreduce-cluster-configuration-configurations
             /// Required: False
             /// UpdateType: Mutable
             /// Type: List
@@ -897,7 +910,7 @@ namespace Humidifier.EMR
         {
             /// <summary>
             /// Args
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-bootstrapactionconfig-scriptbootstrapactionconfig.html#cfn-emr-cluster-bootstrapactionconfig-scriptbootstrapaction-args
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-scriptbootstrapactionconfig.html#cfn-elasticmapreduce-cluster-scriptbootstrapactionconfig-args
             /// Required: False
             /// UpdateType: Mutable
             /// Type: List
@@ -911,7 +924,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// Path
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-bootstrapactionconfig-scriptbootstrapactionconfig.html#cfn-emr-cluster-bootstrapactionconfig-scriptbootstrapaction-path
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-scriptbootstrapactionconfig.html#cfn-elasticmapreduce-cluster-scriptbootstrapactionconfig-path
             /// Required: True
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -1048,7 +1061,7 @@ namespace Humidifier.EMR
         {
             /// <summary>
             /// EbsBlockDeviceConfigs
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration.html#cfn-emr-ebsconfiguration-ebsblockdeviceconfigs
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-ebsconfiguration.html#cfn-elasticmapreduce-cluster-ebsconfiguration-ebsblockdeviceconfigs
             /// Required: False
             /// UpdateType: Mutable
             /// Type: List
@@ -1062,7 +1075,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// EbsOptimized
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration.html#cfn-emr-ebsconfiguration-ebsoptimized
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-ebsconfiguration.html#cfn-elasticmapreduce-cluster-ebsconfiguration-ebsoptimized
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
@@ -1244,7 +1257,7 @@ namespace Humidifier.EMR
         {
             /// <summary>
             /// Iops
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification.html#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification-iops
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-volumespecification.html#cfn-elasticmapreduce-cluster-volumespecification-iops
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
@@ -1257,7 +1270,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// SizeInGB
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification.html#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification-sizeingb
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-volumespecification.html#cfn-elasticmapreduce-cluster-volumespecification-sizeingb
             /// Required: True
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
@@ -1270,7 +1283,7 @@ namespace Humidifier.EMR
 
             /// <summary>
             /// VolumeType
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification.html#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification-volumetype
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-volumespecification.html#cfn-elasticmapreduce-cluster-volumespecification-volumetype
             /// Required: True
             /// UpdateType: Mutable
             /// PrimitiveType: String

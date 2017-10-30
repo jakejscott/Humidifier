@@ -353,19 +353,6 @@ namespace Humidifier.ApiGateway
             }
 
             /// <summary>
-            /// StageName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-stagename
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic StageName
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
             /// ThrottlingBurstLimit
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-throttlingburstlimit
             /// Required: False

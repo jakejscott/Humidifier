@@ -5,6 +5,19 @@ namespace Humidifier.ApiGateway
     public class Authorizer : Humidifier.Resource
     {
         /// <summary>
+        /// AuthType
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html#cfn-apigateway-authorizer-authtype
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic AuthType
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// AuthorizerCredentials
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html#cfn-apigateway-authorizer-authorizercredentials
         /// Required: False

@@ -31,6 +31,19 @@ namespace Humidifier.EC2
         }
 
         /// <summary>
+        /// EgressOnlyInternetGatewayId
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-egressonlyinternetgatewayid
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic EgressOnlyInternetGatewayId
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// GatewayId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-gatewayid
         /// Required: False

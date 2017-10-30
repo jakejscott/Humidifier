@@ -31,6 +31,19 @@ namespace Humidifier.EC2
         }
 
         /// <summary>
+        /// Description
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-description
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic Description
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// FromPort
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-fromport
         /// Required: False

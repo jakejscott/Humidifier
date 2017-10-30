@@ -5,6 +5,19 @@ namespace Humidifier.EC2
     public class VPNGateway : Humidifier.Resource
     {
         /// <summary>
+        /// AmazonSideAsn
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gateway.html#cfn-ec2-vpngateway-amazonsideasn
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: Long
+        /// </summary>
+        public dynamic AmazonSideAsn
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Tags
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gateway.html#cfn-ec2-vpngateway-tags
         /// Required: False

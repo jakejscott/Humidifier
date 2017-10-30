@@ -5,6 +5,11 @@ namespace Humidifier.KinesisFirehose
 
     public class DeliveryStream : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string Arn =  "Arn" ;
+        }
+
         /// <summary>
         /// DeliveryStreamName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-deliverystreamname
@@ -604,7 +609,7 @@ namespace Humidifier.KinesisFirehose
             /// <summary>
             /// Prefix
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-prefix
-            /// Required: True
+            /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String
             /// </summary>

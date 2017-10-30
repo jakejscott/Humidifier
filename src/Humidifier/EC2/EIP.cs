@@ -4,6 +4,11 @@ namespace Humidifier.EC2
 
     public class EIP : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string AllocationId =  "AllocationId" ;
+        }
+
         /// <summary>
         /// Domain
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip.html#cfn-ec2-eip-domain

@@ -85,6 +85,19 @@ namespace Humidifier.ApiGateway
         }
 
         /// <summary>
+        /// OperationName
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html#cfn-apigateway-method-operationname
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic OperationName
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// RequestModels
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html#cfn-apigateway-method-requestmodels
         /// Required: False
@@ -107,6 +120,19 @@ namespace Humidifier.ApiGateway
         /// PrimitiveItemType: Boolean
         /// </summary>
         public Dictionary<string, bool> RequestParameters
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// RequestValidatorId
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html#cfn-apigateway-method-requestvalidatorid
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic RequestValidatorId
         {
             get;
             set;
@@ -209,6 +235,19 @@ namespace Humidifier.ApiGateway
             /// PrimitiveType: String
             /// </summary>
             public dynamic CacheNamespace
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ContentHandling
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-contenthandling
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ContentHandling
             {
                 get;
                 set;
@@ -324,6 +363,19 @@ namespace Humidifier.ApiGateway
 
         public class IntegrationResponse
         {
+            /// <summary>
+            /// ContentHandling
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration-integrationresponse.html#cfn-apigateway-method-integrationresponse-contenthandling
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ContentHandling
+            {
+                get;
+                set;
+            }
+
             /// <summary>
             /// ResponseParameters
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration-integrationresponse.html#cfn-apigateway-method-integration-integrationresponse-responseparameters
