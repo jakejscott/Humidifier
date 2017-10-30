@@ -1,69 +1,32 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-        <Description>Json Serialization support for Humidifier.</Description>
-        <Copyright>Jake Scott</Copyright>
-        <AssemblyTitle>Humidifier.Json</AssemblyTitle>
-        <NeutralLanguage>en-US</NeutralLanguage>
-        <VersionPrefix>0.1.10</VersionPrefix>
-        <Authors>Jake Scott</Authors>
-        <TargetFrameworks>net45;netstandard1.3</TargetFrameworks>
-        <AssemblyName>Humidifier.Json</AssemblyName>
-        <PackageId>Humidifier.Json</PackageId>
-        <PackageTags>aws;cloudformation;</PackageTags>
-        <PackageReleaseNotes>
-            &gt; 0.1.0
-            - Initial version
+  <PropertyGroup>
+    <Description>Json Serialization support for Humidifier.</Description>
+    <Copyright>Jake Scott</Copyright>
+    <AssemblyTitle>Humidifier.Json</AssemblyTitle>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <VersionPrefix>0.1.11</VersionPrefix>
+    <Authors>Jake Scott</Authors>
+    <TargetFrameworks>net45;netstandard1.3</TargetFrameworks>
+    <AssemblyName>Humidifier.Json</AssemblyName>
+    <PackageId>Humidifier.Json</PackageId>
+    <PackageTags>aws;cloudformation;</PackageTags>
+    <PackageIconUrl>https://raw.githubusercontent.com/jakejscott/humidifier/master/img/humidifier.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/jakejscott/humidifier</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/jakejscott/humidifier/blob/master/license.txt</PackageLicenseUrl>
+    <DebugType>Full</DebugType>
+  </PropertyGroup>
 
-            &gt; 0.1.1
-            - Add Symbols
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
 
-            &gt; 0.1.2
-            - Bump version
+  <ItemGroup>
+    <ProjectReference Include="..\Humidifier\Humidifier.csproj" />
+  </ItemGroup>
 
-            &gt; 0.1.3
-            - Add docs
-
-            &gt; 0.1.4
-            - Update to the 1.6.0 version of the cloudformation specification
-
-            &gt; 0.1.5
-            - Update to the 1.6.1 version of the cloudformation specification
-
-            &gt; 0.1.6
-            - Add support for DependsOn attribute
-            - Add a way to manually add a DependsOn attribute to a resource
-            - Add a way to manually add a Condition to a resource
-            - Make sure null or empty template props are not serialized to JSON
-            
-            &gt; 0.1.7
-            - Improve PolicyDocument with support for conditions
-
-            &gt; 0.1.8
-            - Add support for resource attributes (CreationPolicy, UpdatePolicy, DeletionPolicy, Metadata)
-
-            &gt; 0.1.9
-            - Update to the 1.8.0 version of the cloudformation specification
-            
-            &gt; 0.1.10
-            - Update to latest version of the cloudformation specification
-        </PackageReleaseNotes>
-        <PackageIconUrl>https://raw.githubusercontent.com/jakejscott/humidifier/master/img/humidifier.png</PackageIconUrl>
-        <PackageProjectUrl>https://github.com/jakejscott/humidifier</PackageProjectUrl>
-        <PackageLicenseUrl>https://github.com/jakejscott/humidifier/blob/master/license.txt</PackageLicenseUrl>
-        <DebugType>Full</DebugType>
-    </PropertyGroup>
-
-    <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <ProjectReference Include="..\Humidifier\Humidifier.csproj" />
-    </ItemGroup>
-
-    <PropertyGroup Condition="'$(Configuration)'=='Release'">
-        <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
 
 </Project>
