@@ -6,20 +6,6 @@ namespace Humidifier.AutoScaling
     public class AutoScalingGroup : Humidifier.Resource
     {
         /// <summary>
-        /// AsTags
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-tags
-        /// Required: False
-        /// UpdateType: Mutable
-        /// Type: List
-        /// ItemType: TagProperty
-        /// </summary>
-        public List<TagProperty> AsTags
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
         /// AvailabilityZones
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-availabilityzones
         /// Required: False
@@ -201,6 +187,20 @@ namespace Humidifier.AutoScaling
         /// PrimitiveType: String
         /// </summary>
         public dynamic PlacementGroup
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Tags
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-tags
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: TagProperty
+        /// </summary>
+        public List<TagProperty> Tags
         {
             get;
             set;

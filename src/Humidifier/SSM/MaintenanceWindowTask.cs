@@ -60,7 +60,7 @@ namespace Humidifier.SSM
         /// <summary>
         /// MaxConcurrency
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-maxconcurrency
-        /// Required: False
+        /// Required: True
         /// UpdateType: Mutable
         /// PrimitiveType: String
         /// </summary>

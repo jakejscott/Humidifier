@@ -203,6 +203,19 @@ namespace Humidifier.KinesisAnalytics
             }
 
             /// <summary>
+            /// InputProcessingConfiguration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-input.html#cfn-kinesisanalytics-application-input-inputprocessingconfiguration
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: InputProcessingConfiguration
+            /// </summary>
+            public InputProcessingConfiguration InputProcessingConfiguration
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// InputParallelism
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-input.html#cfn-kinesisanalytics-application-input-inputparallelism
             /// Required: False
@@ -375,6 +388,22 @@ namespace Humidifier.KinesisAnalytics
             }
         }
 
+        public class InputProcessingConfiguration
+        {
+            /// <summary>
+            /// InputLambdaProcessor
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputprocessingconfiguration.html#cfn-kinesisanalytics-application-inputprocessingconfiguration-inputlambdaprocessor
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: InputLambdaProcessor
+            /// </summary>
+            public InputLambdaProcessor InputLambdaProcessor
+            {
+                get;
+                set;
+            }
+        }
+
         public class JSONMappingParameters
         {
             /// <summary>
@@ -385,6 +414,35 @@ namespace Humidifier.KinesisAnalytics
             /// PrimitiveType: String
             /// </summary>
             public dynamic RecordRowPath
+            {
+                get;
+                set;
+            }
+        }
+
+        public class InputLambdaProcessor
+        {
+            /// <summary>
+            /// ResourceARN
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputlambdaprocessor.html#cfn-kinesisanalytics-application-inputlambdaprocessor-resourcearn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ResourceARN
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RoleARN
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputlambdaprocessor.html#cfn-kinesisanalytics-application-inputlambdaprocessor-rolearn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RoleARN
             {
                 get;
                 set;

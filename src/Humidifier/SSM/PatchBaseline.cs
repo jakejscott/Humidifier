@@ -38,9 +38,9 @@ namespace Humidifier.SSM
         /// Required: False
         /// UpdateType: Mutable
         /// Type: List
-        /// ItemType: PatchGroup
+        /// PrimitiveItemType: String
         /// </summary>
-        public List<dynamic> PatchGroups
+        public dynamic PatchGroups
         {
             get;
             set;
