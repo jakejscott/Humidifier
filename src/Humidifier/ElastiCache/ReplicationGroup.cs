@@ -10,6 +10,32 @@ namespace Humidifier.ElastiCache
         }
 
         /// <summary>
+        /// AtRestEncryptionEnabled
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-atrestencryptionenabled
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: Boolean
+        /// </summary>
+        public dynamic AtRestEncryptionEnabled
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// AuthToken
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-authtoken
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic AuthToken
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// AutoMinorVersionUpgrade
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-autominorversionupgrade
         /// Required: False
@@ -348,6 +374,19 @@ namespace Humidifier.ElastiCache
         /// ItemType: Tag
         /// </summary>
         public List<Tag> Tags
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// TransitEncryptionEnabled
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-transitencryptionenabled
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: Boolean
+        /// </summary>
+        public dynamic TransitEncryptionEnabled
         {
             get;
             set;

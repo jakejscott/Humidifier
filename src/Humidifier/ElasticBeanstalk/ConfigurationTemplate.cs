@@ -7,7 +7,7 @@ namespace Humidifier.ElasticBeanstalk
     {
         /// <summary>
         /// ApplicationName
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-beanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-applicationname
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-applicationname
         /// Required: True
         /// UpdateType: Immutable
         /// PrimitiveType: String
@@ -20,7 +20,7 @@ namespace Humidifier.ElasticBeanstalk
 
         /// <summary>
         /// Description
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-beanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-description
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-description
         /// Required: False
         /// UpdateType: Mutable
         /// PrimitiveType: String
@@ -33,7 +33,7 @@ namespace Humidifier.ElasticBeanstalk
 
         /// <summary>
         /// EnvironmentId
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-beanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-environmentid
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-environmentid
         /// Required: False
         /// UpdateType: Immutable
         /// PrimitiveType: String
@@ -46,7 +46,7 @@ namespace Humidifier.ElasticBeanstalk
 
         /// <summary>
         /// OptionSettings
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-beanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-optionsettings
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-optionsettings
         /// Required: False
         /// UpdateType: Mutable
         /// Type: List
@@ -60,7 +60,7 @@ namespace Humidifier.ElasticBeanstalk
 
         /// <summary>
         /// PlatformArn
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-beanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-platformarn
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-platformarn
         /// Required: False
         /// UpdateType: Immutable
         /// PrimitiveType: String
@@ -73,7 +73,7 @@ namespace Humidifier.ElasticBeanstalk
 
         /// <summary>
         /// SolutionStackName
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-beanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-solutionstackname
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-solutionstackname
         /// Required: False
         /// UpdateType: Immutable
         /// PrimitiveType: String
@@ -86,7 +86,7 @@ namespace Humidifier.ElasticBeanstalk
 
         /// <summary>
         /// SourceConfiguration
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-beanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration
         /// Required: False
         /// UpdateType: Immutable
         /// Type: SourceConfiguration
@@ -104,7 +104,7 @@ namespace Humidifier.ElasticBeanstalk
         {
             /// <summary>
             /// ApplicationName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-configurationtemplate-sourceconfiguration.html#cfn-beanstalk-configurationtemplate-sourceconfiguration-applicationname
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-configurationtemplate-sourceconfiguration.html#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration-applicationname
             /// Required: True
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -117,7 +117,7 @@ namespace Humidifier.ElasticBeanstalk
 
             /// <summary>
             /// TemplateName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-configurationtemplate-sourceconfiguration.html#cfn-beanstalk-configurationtemplate-sourceconfiguration-templatename
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-configurationtemplate-sourceconfiguration.html#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration-templatename
             /// Required: True
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -133,7 +133,7 @@ namespace Humidifier.ElasticBeanstalk
         {
             /// <summary>
             /// Namespace
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-option-settings.html#cfn-beanstalk-optionsettings-namespace
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-configurationtemplate-configurationoptionsetting.html#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-namespace
             /// Required: True
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -146,7 +146,7 @@ namespace Humidifier.ElasticBeanstalk
 
             /// <summary>
             /// OptionName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-option-settings.html#cfn-beanstalk-optionsettings-optionname
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-configurationtemplate-configurationoptionsetting.html#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-optionname
             /// Required: True
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -159,7 +159,7 @@ namespace Humidifier.ElasticBeanstalk
 
             /// <summary>
             /// ResourceName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-option-settings.html#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-resourcename
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-configurationtemplate-configurationoptionsetting.html#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-resourcename
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -172,7 +172,7 @@ namespace Humidifier.ElasticBeanstalk
 
             /// <summary>
             /// Value
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-option-settings.html#cfn-beanstalk-optionsettings-value
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-configurationtemplate-configurationoptionsetting.html#cfn-elasticbeanstalk-configurationtemplate-configurationoptionsetting-value
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String

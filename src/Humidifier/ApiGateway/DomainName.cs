@@ -1,13 +1,14 @@
 namespace Humidifier.ApiGateway
 {
     using System.Collections.Generic;
+    using DomainNamePropertyTypes;
 
     public class DomainName : Humidifier.Resource
     {
         /// <summary>
         /// CertificateArn
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-certificatearn
-        /// Required: True
+        /// Required: False
         /// UpdateType: Mutable
         /// PrimitiveType: String
         /// </summary>
@@ -28,6 +29,52 @@ namespace Humidifier.ApiGateway
         {
             get;
             set;
+        }
+
+        /// <summary>
+        /// EndpointConfiguration
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-endpointconfiguration
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: EndpointConfiguration
+        /// </summary>
+        public EndpointConfiguration EndpointConfiguration
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// RegionalCertificateArn
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-regionalcertificatearn
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic RegionalCertificateArn
+        {
+            get;
+            set;
+        }
+    }
+
+    namespace DomainNamePropertyTypes
+    {
+        public class EndpointConfiguration
+        {
+            /// <summary>
+            /// Types
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-domainname-endpointconfiguration.html#cfn-apigateway-domainname-endpointconfiguration-types
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Types
+            {
+                get;
+                set;
+            }
         }
     }
 }

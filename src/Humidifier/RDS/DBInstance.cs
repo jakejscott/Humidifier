@@ -439,6 +439,19 @@ namespace Humidifier.RDS
         }
 
         /// <summary>
+        /// SourceRegion
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-sourceregion
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic SourceRegion
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// StorageEncrypted
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-storageencrypted
         /// Required: False

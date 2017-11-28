@@ -283,6 +283,19 @@ namespace Humidifier.ECS
             }
 
             /// <summary>
+            /// LinuxParameters
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html#cfn-ecs-taskdefinition-containerdefinition-linuxparameters
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: LinuxParameters
+            /// </summary>
+            public LinuxParameters LinuxParameters
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// LogConfiguration
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html#cfn-ecs-taskdefinition-containerdefinition-logconfiguration
             /// Required: False
@@ -473,6 +486,49 @@ namespace Humidifier.ECS
             }
         }
 
+        public class Device
+        {
+            /// <summary>
+            /// ContainerPath
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-device.html#cfn-ecs-taskdefinition-device-containerpath
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ContainerPath
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// HostPath
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-device.html#cfn-ecs-taskdefinition-device-hostpath
+            /// Required: True
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic HostPath
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Permissions
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-device.html#cfn-ecs-taskdefinition-device-permissions
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Permissions
+            {
+                get;
+                set;
+            }
+        }
+
         public class KeyValuePair
         {
             /// <summary>
@@ -596,6 +652,37 @@ namespace Humidifier.ECS
             /// PrimitiveType: String
             /// </summary>
             public dynamic IpAddress
+            {
+                get;
+                set;
+            }
+        }
+
+        public class KernelCapabilities
+        {
+            /// <summary>
+            /// Add
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-kernelcapabilities.html#cfn-ecs-taskdefinition-kernelcapabilities-add
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Add
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Drop
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-kernelcapabilities.html#cfn-ecs-taskdefinition-kernelcapabilities-drop
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Drop
             {
                 get;
                 set;
@@ -738,6 +825,49 @@ namespace Humidifier.ECS
             /// PrimitiveType: Integer
             /// </summary>
             public dynamic SoftLimit
+            {
+                get;
+                set;
+            }
+        }
+
+        public class LinuxParameters
+        {
+            /// <summary>
+            /// Capabilities
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-capabilities
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: KernelCapabilities
+            /// </summary>
+            public KernelCapabilities Capabilities
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Devices
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-devices
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: List
+            /// ItemType: Device
+            /// </summary>
+            public List<Device> Devices
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// InitProcessEnabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-initprocessenabled
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic InitProcessEnabled
             {
                 get;
                 set;

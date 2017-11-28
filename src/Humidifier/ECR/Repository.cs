@@ -1,12 +1,26 @@
 namespace Humidifier.ECR
 {
     using System.Collections.Generic;
+    using RepositoryPropertyTypes;
 
     public class Repository : Humidifier.Resource
     {
         public static class Attributes
         {
             public static string Arn =  "Arn" ;
+        }
+
+        /// <summary>
+        /// LifecyclePolicy
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html#cfn-ecr-repository-lifecyclepolicy
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: LifecyclePolicy
+        /// </summary>
+        public LifecyclePolicy LifecyclePolicy
+        {
+            get;
+            set;
         }
 
         /// <summary>
@@ -33,6 +47,38 @@ namespace Humidifier.ECR
         {
             get;
             set;
+        }
+    }
+
+    namespace RepositoryPropertyTypes
+    {
+        public class LifecyclePolicy
+        {
+            /// <summary>
+            /// LifecyclePolicyText
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-lifecyclepolicy.html#cfn-ecr-repository-lifecyclepolicy-lifecyclepolicytext
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic LifecyclePolicyText
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RegistryId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-lifecyclepolicy.html#cfn-ecr-repository-lifecyclepolicy-registryid
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RegistryId
+            {
+                get;
+                set;
+            }
         }
     }
 }

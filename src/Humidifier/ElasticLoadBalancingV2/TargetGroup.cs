@@ -9,6 +9,7 @@ namespace Humidifier.ElasticLoadBalancingV2
         {
             public static string LoadBalancerArns =  "LoadBalancerArns" ;
             public static string TargetGroupFullName =  "TargetGroupFullName" ;
+            public static string TargetGroupName =  "TargetGroupName" ;
         }
 
         /// <summary>

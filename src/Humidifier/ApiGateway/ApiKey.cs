@@ -6,8 +6,21 @@ namespace Humidifier.ApiGateway
     public class ApiKey : Humidifier.Resource
     {
         /// <summary>
+        /// CustomerId
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-customerid
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic CustomerId
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Description
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apigateway-apikey-description
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-description
         /// Required: False
         /// UpdateType: Mutable
         /// PrimitiveType: String
@@ -20,7 +33,7 @@ namespace Humidifier.ApiGateway
 
         /// <summary>
         /// Enabled
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apigateway-apikey-enabled
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-enabled
         /// Required: False
         /// UpdateType: Mutable
         /// PrimitiveType: Boolean
@@ -32,8 +45,21 @@ namespace Humidifier.ApiGateway
         }
 
         /// <summary>
+        /// GenerateDistinctId
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-generatedistinctid
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: Boolean
+        /// </summary>
+        public dynamic GenerateDistinctId
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Name
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apigateway-apikey-name
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-name
         /// Required: False
         /// UpdateType: Immutable
         /// PrimitiveType: String
@@ -46,7 +72,7 @@ namespace Humidifier.ApiGateway
 
         /// <summary>
         /// StageKeys
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apigateway-apikey-stagekeys
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-stagekeys
         /// Required: False
         /// UpdateType: Mutable
         /// Type: List
@@ -65,7 +91,7 @@ namespace Humidifier.ApiGateway
         {
             /// <summary>
             /// RestApiId
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-apikey-stagekey.html#cfn-apigateway-apikey-stagekey-restapiid
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-apikey-stagekey.html#cfn-apigateway-apikey-stagekey-restapiid
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -78,7 +104,7 @@ namespace Humidifier.ApiGateway
 
             /// <summary>
             /// StageName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-apikey-stagekey.html#cfn-apigateway-apikey-stagekey-stagename
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-apikey-stagekey.html#cfn-apigateway-apikey-stagekey-stagename
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String

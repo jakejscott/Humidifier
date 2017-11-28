@@ -92,6 +92,19 @@ namespace Humidifier.EMR
         }
 
         /// <summary>
+        /// EbsRootVolumeSize
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-ebsrootvolumesize
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: Integer
+        /// </summary>
+        public dynamic EbsRootVolumeSize
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Instances
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-instances
         /// Required: True

@@ -116,10 +116,54 @@ namespace Humidifier.Elasticsearch
             get;
             set;
         }
+
+        /// <summary>
+        /// VPCOptions
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-vpcoptions
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: VPCOptions
+        /// </summary>
+        public VPCOptions VPCOptions
+        {
+            get;
+            set;
+        }
     }
 
     namespace DomainPropertyTypes
     {
+        public class VPCOptions
+        {
+            /// <summary>
+            /// SecurityGroupIds
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-vpcoptions.html#cfn-elasticsearch-domain-vpcoptions-securitygroupids
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic SecurityGroupIds
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SubnetIds
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-vpcoptions.html#cfn-elasticsearch-domain-vpcoptions-subnetids
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic SubnetIds
+            {
+                get;
+                set;
+            }
+        }
+
         public class ElasticsearchClusterConfig
         {
             /// <summary>

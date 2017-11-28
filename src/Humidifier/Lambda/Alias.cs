@@ -1,7 +1,6 @@
 namespace Humidifier.Lambda
 {
     using System.Collections.Generic;
-    using AliasPropertyTypes;
 
     public class Alias : Humidifier.Resource
     {
@@ -55,68 +54,6 @@ namespace Humidifier.Lambda
         {
             get;
             set;
-        }
-
-        /// <summary>
-        /// RoutingConfig
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html#cfn-lambda-alias-routingconfig
-        /// Required: False
-        /// UpdateType: Mutable
-        /// Type: AliasRoutingConfiguration
-        /// </summary>
-        public AliasRoutingConfiguration RoutingConfig
-        {
-            get;
-            set;
-        }
-    }
-
-    namespace AliasPropertyTypes
-    {
-        public class AliasRoutingConfiguration
-        {
-            /// <summary>
-            /// AdditionalVersionWeights
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-alias-aliasroutingconfiguration.html#cfn-lambda-alias-aliasroutingconfiguration-additionalversionweights
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: VersionWeight
-            /// </summary>
-            public List<VersionWeight> AdditionalVersionWeights
-            {
-                get;
-                set;
-            }
-        }
-
-        public class VersionWeight
-        {
-            /// <summary>
-            /// FunctionVersion
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-alias-versionweight.html#cfn-lambda-alias-versionweight-functionversion
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic FunctionVersion
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// FunctionWeight
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-alias-versionweight.html#cfn-lambda-alias-versionweight-functionweight
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Double
-            /// </summary>
-            public dynamic FunctionWeight
-            {
-                get;
-                set;
-            }
         }
     }
 }

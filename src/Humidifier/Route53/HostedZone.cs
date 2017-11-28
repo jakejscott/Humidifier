@@ -51,6 +51,19 @@ namespace Humidifier.Route53
         }
 
         /// <summary>
+        /// QueryLoggingConfig
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-queryloggingconfig
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: QueryLoggingConfig
+        /// </summary>
+        public QueryLoggingConfig QueryLoggingConfig
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// VPCs
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-vpcs
         /// Required: False
@@ -106,6 +119,22 @@ namespace Humidifier.Route53
             /// PrimitiveType: String
             /// </summary>
             public dynamic Comment
+            {
+                get;
+                set;
+            }
+        }
+
+        public class QueryLoggingConfig
+        {
+            /// <summary>
+            /// CloudWatchLogsLogGroupArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-queryloggingconfig.html#cfn-route53-hostedzone-queryloggingconfig-cloudwatchlogsloggrouparn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic CloudWatchLogsLogGroupArn
             {
                 get;
                 set;

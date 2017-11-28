@@ -77,6 +77,19 @@ namespace Humidifier.ApiGateway
         }
 
         /// <summary>
+        /// EndpointConfiguration
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-endpointconfiguration
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: EndpointConfiguration
+        /// </summary>
+        public EndpointConfiguration EndpointConfiguration
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// FailOnWarnings
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-failonwarnings
         /// Required: False
@@ -136,7 +149,7 @@ namespace Humidifier.ApiGateway
         {
             /// <summary>
             /// Bucket
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-restapi-bodys3location.html#cfn-apigateway-restapi-s3location-bucket
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-bucket
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -149,7 +162,7 @@ namespace Humidifier.ApiGateway
 
             /// <summary>
             /// ETag
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-restapi-bodys3location.html#cfn-apigateway-restapi-s3location-etag
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-etag
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -162,7 +175,7 @@ namespace Humidifier.ApiGateway
 
             /// <summary>
             /// Key
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-restapi-bodys3location.html#cfn-apigateway-restapi-s3location-key
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-key
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -175,12 +188,29 @@ namespace Humidifier.ApiGateway
 
             /// <summary>
             /// Version
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-restapi-bodys3location.html#cfn-apigateway-restapi-s3location-version
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-version
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String
             /// </summary>
             public dynamic Version
+            {
+                get;
+                set;
+            }
+        }
+
+        public class EndpointConfiguration
+        {
+            /// <summary>
+            /// Types
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-endpointconfiguration.html#cfn-apigateway-restapi-endpointconfiguration-types
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Types
             {
                 get;
                 set;

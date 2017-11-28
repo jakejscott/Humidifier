@@ -13,7 +13,8 @@ namespace Humidifier.RDS
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-availabilityzones
         /// Required: False
         /// UpdateType: Immutable
-        /// PrimitiveType: String
+        /// Type: List
+        /// PrimitiveItemType: String
         /// </summary>
         public dynamic AvailabilityZones
         {
