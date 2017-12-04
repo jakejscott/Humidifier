@@ -16,5 +16,18 @@ namespace Humidifier.CodeDeploy
             get;
             set;
         }
+
+        /// <summary>
+        /// ComputePlatform
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-application.html#cfn-codedeploy-application-computeplatform
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic ComputePlatform
+        {
+            get;
+            set;
+        }
     }
 }

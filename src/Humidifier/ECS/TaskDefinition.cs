@@ -20,6 +20,32 @@ namespace Humidifier.ECS
         }
 
         /// <summary>
+        /// Cpu
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-cpu
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic Cpu
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// ExecutionRoleArn
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-executionrolearn
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic ExecutionRoleArn
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Family
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-family
         /// Required: False
@@ -27,6 +53,19 @@ namespace Humidifier.ECS
         /// PrimitiveType: String
         /// </summary>
         public dynamic Family
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Memory
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-memory
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic Memory
         {
             get;
             set;
@@ -54,6 +93,20 @@ namespace Humidifier.ECS
         /// ItemType: TaskDefinitionPlacementConstraint
         /// </summary>
         public List<TaskDefinitionPlacementConstraint> PlacementConstraints
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// RequiresCompatibilities
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-requirescompatibilities
+        /// Required: False
+        /// UpdateType: Immutable
+        /// Type: List
+        /// PrimitiveItemType: String
+        /// </summary>
+        public dynamic RequiresCompatibilities
         {
             get;
             set;

@@ -50,6 +50,19 @@ namespace Humidifier.ECS
         }
 
         /// <summary>
+        /// LaunchType
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-launchtype
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic LaunchType
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// LoadBalancers
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-loadbalancers
         /// Required: False
@@ -58,6 +71,19 @@ namespace Humidifier.ECS
         /// ItemType: LoadBalancer
         /// </summary>
         public List<LoadBalancer> LoadBalancers
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// NetworkConfiguration
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-networkconfiguration
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: NetworkConfiguration
+        /// </summary>
+        public NetworkConfiguration NetworkConfiguration
         {
             get;
             set;
@@ -86,6 +112,19 @@ namespace Humidifier.ECS
         /// ItemType: PlacementStrategy
         /// </summary>
         public List<PlacementStrategy> PlacementStrategies
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// PlatformVersion
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-platformversion
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic PlatformVersion
         {
             get;
             set;
@@ -269,6 +308,66 @@ namespace Humidifier.ECS
             /// PrimitiveType: String
             /// </summary>
             public dynamic Type
+            {
+                get;
+                set;
+            }
+        }
+
+        public class AwsVpcConfiguration
+        {
+            /// <summary>
+            /// AssignPublicIp
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-assignpublicip
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic AssignPublicIp
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SecurityGroups
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-securitygroups
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic SecurityGroups
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Subnets
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-subnets
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Subnets
+            {
+                get;
+                set;
+            }
+        }
+
+        public class NetworkConfiguration
+        {
+            /// <summary>
+            /// AwsvpcConfiguration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-networkconfiguration.html#cfn-ecs-service-networkconfiguration-awsvpcconfiguration
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: AwsVpcConfiguration
+            /// </summary>
+            public AwsVpcConfiguration AwsvpcConfiguration
             {
                 get;
                 set;

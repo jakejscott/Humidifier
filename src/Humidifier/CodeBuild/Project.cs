@@ -24,6 +24,19 @@ namespace Humidifier.CodeBuild
         }
 
         /// <summary>
+        /// BadgeEnabled
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-badgeenabled
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Boolean
+        /// </summary>
+        public dynamic BadgeEnabled
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Description
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-description
         /// Required: False
@@ -44,6 +57,19 @@ namespace Humidifier.CodeBuild
         /// PrimitiveType: String
         /// </summary>
         public dynamic ServiceRole
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// VpcConfig
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-vpcconfig
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: VpcConfig
+        /// </summary>
+        public VpcConfig VpcConfig
         {
             get;
             set;
@@ -123,6 +149,19 @@ namespace Humidifier.CodeBuild
         /// PrimitiveType: Integer
         /// </summary>
         public dynamic TimeoutInMinutes
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Cache
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-cache
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: ProjectCache
+        /// </summary>
+        public ProjectCache Cache
         {
             get;
             set;
@@ -304,6 +343,79 @@ namespace Humidifier.CodeBuild
             /// PrimitiveType: String
             /// </summary>
             public dynamic ComputeType
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ProjectCache
+        {
+            /// <summary>
+            /// Type
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-type
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Type
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Location
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-location
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Location
+            {
+                get;
+                set;
+            }
+        }
+
+        public class VpcConfig
+        {
+            /// <summary>
+            /// Subnets
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-subnets
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Subnets
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// VpcId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-vpcid
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic VpcId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SecurityGroupIds
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html#cfn-codebuild-project-vpcconfig-securitygroupids
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic SecurityGroupIds
             {
                 get;
                 set;

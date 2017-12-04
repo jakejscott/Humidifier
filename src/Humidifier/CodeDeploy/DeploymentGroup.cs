@@ -525,6 +525,19 @@ namespace Humidifier.CodeDeploy
                 get;
                 set;
             }
+
+            /// <summary>
+            /// DeploymentType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deploymentstyle.html#cfn-codedeploy-deploymentgroup-deploymentstyle-deploymenttype
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DeploymentType
+            {
+                get;
+                set;
+            }
         }
 
         public class Alarm

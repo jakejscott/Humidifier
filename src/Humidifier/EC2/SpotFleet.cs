@@ -529,7 +529,7 @@ namespace Humidifier.EC2
             /// <summary>
             /// SpotPrice
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-spotprice
-            /// Required: True
+            /// Required: False
             /// UpdateType: Immutable
             /// PrimitiveType: String
             /// </summary>
