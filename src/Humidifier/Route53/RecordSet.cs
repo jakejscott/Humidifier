@@ -1,7 +1,7 @@
 namespace Humidifier.Route53
 {
     using System.Collections.Generic;
-    using RecordSetPropertyTypes;
+    using RecordSetTypes;
 
     public class RecordSet : Humidifier.Resource
     {
@@ -189,7 +189,7 @@ namespace Humidifier.Route53
         }
     }
 
-    namespace RecordSetPropertyTypes
+    namespace RecordSetTypes
     {
         public class GeoLocation
         {

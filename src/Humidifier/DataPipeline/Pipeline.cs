@@ -1,7 +1,7 @@
 namespace Humidifier.DataPipeline
 {
     using System.Collections.Generic;
-    using PipelinePropertyTypes;
+    using PipelineTypes;
 
     public class Pipeline : Humidifier.Resource
     {
@@ -101,7 +101,7 @@ namespace Humidifier.DataPipeline
         }
     }
 
-    namespace PipelinePropertyTypes
+    namespace PipelineTypes
     {
         public class ParameterAttribute
         {

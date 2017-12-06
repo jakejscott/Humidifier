@@ -1,7 +1,7 @@
 namespace Humidifier.ElasticLoadBalancing
 {
     using System.Collections.Generic;
-    using LoadBalancerPropertyTypes;
+    using LoadBalancerTypes;
 
     public class LoadBalancer : Humidifier.Resource
     {
@@ -230,7 +230,7 @@ namespace Humidifier.ElasticLoadBalancing
         }
     }
 
-    namespace LoadBalancerPropertyTypes
+    namespace LoadBalancerTypes
     {
         public class HealthCheck
         {

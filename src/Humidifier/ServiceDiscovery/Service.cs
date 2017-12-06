@@ -1,7 +1,7 @@
 namespace Humidifier.ServiceDiscovery
 {
     using System.Collections.Generic;
-    using ServicePropertyTypes;
+    using ServiceTypes;
 
     public class Service : Humidifier.Resource
     {
@@ -65,7 +65,7 @@ namespace Humidifier.ServiceDiscovery
         }
     }
 
-    namespace ServicePropertyTypes
+    namespace ServiceTypes
     {
         public class DnsConfig
         {

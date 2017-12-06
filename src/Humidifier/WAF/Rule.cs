@@ -1,7 +1,7 @@
 namespace Humidifier.WAF
 {
     using System.Collections.Generic;
-    using RulePropertyTypes;
+    using RuleTypes;
 
     public class Rule : Humidifier.Resource
     {
@@ -46,7 +46,7 @@ namespace Humidifier.WAF
         }
     }
 
-    namespace RulePropertyTypes
+    namespace RuleTypes
     {
         public class Predicate
         {

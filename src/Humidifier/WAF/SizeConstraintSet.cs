@@ -1,7 +1,7 @@
 namespace Humidifier.WAF
 {
     using System.Collections.Generic;
-    using SizeConstraintSetPropertyTypes;
+    using SizeConstraintSetTypes;
 
     public class SizeConstraintSet : Humidifier.Resource
     {
@@ -33,7 +33,7 @@ namespace Humidifier.WAF
         }
     }
 
-    namespace SizeConstraintSetPropertyTypes
+    namespace SizeConstraintSetTypes
     {
         public class FieldToMatch
         {

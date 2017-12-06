@@ -1,7 +1,7 @@
 namespace Humidifier.WAFRegional
 {
     using System.Collections.Generic;
-    using WebACLPropertyTypes;
+    using WebACLTypes;
 
     public class WebACL : Humidifier.Resource
     {
@@ -59,7 +59,7 @@ namespace Humidifier.WAFRegional
         }
     }
 
-    namespace WebACLPropertyTypes
+    namespace WebACLTypes
     {
         public class Rule
         {

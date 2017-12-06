@@ -1,7 +1,7 @@
 namespace Humidifier.KinesisFirehose
 {
     using System.Collections.Generic;
-    using DeliveryStreamPropertyTypes;
+    using DeliveryStreamTypes;
 
     public class DeliveryStream : Humidifier.Resource
     {
@@ -102,7 +102,7 @@ namespace Humidifier.KinesisFirehose
         }
     }
 
-    namespace DeliveryStreamPropertyTypes
+    namespace DeliveryStreamTypes
     {
         public class ElasticsearchDestinationConfiguration
         {

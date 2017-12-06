@@ -1,7 +1,7 @@
 namespace Humidifier.Batch
 {
     using System.Collections.Generic;
-    using JobDefinitionPropertyTypes;
+    using JobDefinitionTypes;
 
     public class JobDefinition : Humidifier.Resource
     {
@@ -71,7 +71,7 @@ namespace Humidifier.Batch
         }
     }
 
-    namespace JobDefinitionPropertyTypes
+    namespace JobDefinitionTypes
     {
         public class Volumes
         {

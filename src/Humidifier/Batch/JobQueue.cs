@@ -1,7 +1,7 @@
 namespace Humidifier.Batch
 {
     using System.Collections.Generic;
-    using JobQueuePropertyTypes;
+    using JobQueueTypes;
 
     public class JobQueue : Humidifier.Resource
     {
@@ -59,7 +59,7 @@ namespace Humidifier.Batch
         }
     }
 
-    namespace JobQueuePropertyTypes
+    namespace JobQueueTypes
     {
         public class ComputeEnvironmentOrder
         {

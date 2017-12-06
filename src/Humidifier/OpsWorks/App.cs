@@ -1,7 +1,7 @@
 namespace Humidifier.OpsWorks
 {
     using System.Collections.Generic;
-    using AppPropertyTypes;
+    using AppTypes;
 
     public class App : Humidifier.Resource
     {
@@ -166,7 +166,7 @@ namespace Humidifier.OpsWorks
         }
     }
 
-    namespace AppPropertyTypes
+    namespace AppTypes
     {
         public class DataSource
         {

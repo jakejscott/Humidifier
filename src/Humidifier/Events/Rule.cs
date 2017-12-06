@@ -1,7 +1,7 @@
 namespace Humidifier.Events
 {
     using System.Collections.Generic;
-    using RulePropertyTypes;
+    using RuleTypes;
 
     public class Rule : Humidifier.Resource
     {
@@ -103,7 +103,7 @@ namespace Humidifier.Events
         }
     }
 
-    namespace RulePropertyTypes
+    namespace RuleTypes
     {
         public class RunCommandParameters
         {

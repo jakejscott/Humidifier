@@ -1,7 +1,7 @@
 namespace Humidifier.S3
 {
     using System.Collections.Generic;
-    using BucketPropertyTypes;
+    using BucketTypes;
 
     public class Bucket : Humidifier.Resource
     {
@@ -200,7 +200,7 @@ namespace Humidifier.S3
         }
     }
 
-    namespace BucketPropertyTypes
+    namespace BucketTypes
     {
         public class NotificationFilter
         {

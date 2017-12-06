@@ -1,7 +1,7 @@
 namespace Humidifier.Redshift
 {
     using System.Collections.Generic;
-    using ClusterPropertyTypes;
+    using ClusterTypes;
 
     public class Cluster : Humidifier.Resource
     {
@@ -378,7 +378,7 @@ namespace Humidifier.Redshift
         }
     }
 
-    namespace ClusterPropertyTypes
+    namespace ClusterTypes
     {
         public class LoggingProperties
         {

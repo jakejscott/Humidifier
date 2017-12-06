@@ -1,7 +1,7 @@
 namespace Humidifier.IoT
 {
     using System.Collections.Generic;
-    using TopicRulePropertyTypes;
+    using TopicRuleTypes;
 
     public class TopicRule : Humidifier.Resource
     {
@@ -37,7 +37,7 @@ namespace Humidifier.IoT
         }
     }
 
-    namespace TopicRulePropertyTypes
+    namespace TopicRuleTypes
     {
         public class S3Action
         {

@@ -1,7 +1,7 @@
 namespace Humidifier.GameLift
 {
     using System.Collections.Generic;
-    using AliasPropertyTypes;
+    using AliasTypes;
 
     public class Alias : Humidifier.Resource
     {
@@ -45,7 +45,7 @@ namespace Humidifier.GameLift
         }
     }
 
-    namespace AliasPropertyTypes
+    namespace AliasTypes
     {
         public class RoutingStrategy
         {

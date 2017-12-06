@@ -1,7 +1,7 @@
 namespace Humidifier.ApiGateway
 {
     using System.Collections.Generic;
-    using DeploymentPropertyTypes;
+    using DeploymentTypes;
 
     public class Deployment : Humidifier.Resource
     {
@@ -58,7 +58,7 @@ namespace Humidifier.ApiGateway
         }
     }
 
-    namespace DeploymentPropertyTypes
+    namespace DeploymentTypes
     {
         public class MethodSetting
         {

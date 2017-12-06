@@ -1,7 +1,7 @@
 namespace Humidifier.Config
 {
     using System.Collections.Generic;
-    using ConfigRulePropertyTypes;
+    using ConfigRuleTypes;
 
     public class ConfigRule : Humidifier.Resource
     {
@@ -90,7 +90,7 @@ namespace Humidifier.Config
         }
     }
 
-    namespace ConfigRulePropertyTypes
+    namespace ConfigRuleTypes
     {
         public class Scope
         {

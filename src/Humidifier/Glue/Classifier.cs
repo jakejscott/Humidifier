@@ -1,7 +1,7 @@
 namespace Humidifier.Glue
 {
     using System.Collections.Generic;
-    using ClassifierPropertyTypes;
+    using ClassifierTypes;
 
     public class Classifier : Humidifier.Resource
     {
@@ -19,7 +19,7 @@ namespace Humidifier.Glue
         }
     }
 
-    namespace ClassifierPropertyTypes
+    namespace ClassifierTypes
     {
         public class GrokClassifier
         {

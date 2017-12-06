@@ -1,7 +1,7 @@
 namespace Humidifier.ECS
 {
     using System.Collections.Generic;
-    using ServicePropertyTypes;
+    using ServiceTypes;
 
     public class Service : Humidifier.Resource
     {
@@ -170,7 +170,7 @@ namespace Humidifier.ECS
         }
     }
 
-    namespace ServicePropertyTypes
+    namespace ServiceTypes
     {
         public class LoadBalancer
         {

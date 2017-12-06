@@ -1,7 +1,7 @@
 namespace Humidifier.KinesisAnalytics
 {
     using System.Collections.Generic;
-    using ApplicationPropertyTypes;
+    using ApplicationTypes;
 
     public class Application : Humidifier.Resource
     {
@@ -59,7 +59,7 @@ namespace Humidifier.KinesisAnalytics
         }
     }
 
-    namespace ApplicationPropertyTypes
+    namespace ApplicationTypes
     {
         public class MappingParameters
         {

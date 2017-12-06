@@ -1,7 +1,7 @@
 namespace Humidifier.KinesisAnalytics
 {
     using System.Collections.Generic;
-    using ApplicationOutputPropertyTypes;
+    using ApplicationOutputTypes;
 
     public class ApplicationOutput : Humidifier.Resource
     {
@@ -32,7 +32,7 @@ namespace Humidifier.KinesisAnalytics
         }
     }
 
-    namespace ApplicationOutputPropertyTypes
+    namespace ApplicationOutputTypes
     {
         public class KinesisFirehoseOutput
         {

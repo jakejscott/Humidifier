@@ -1,7 +1,7 @@
 namespace Humidifier.ApplicationAutoScaling
 {
     using System.Collections.Generic;
-    using ScalingPolicyPropertyTypes;
+    using ScalingPolicyTypes;
 
     public class ScalingPolicy : Humidifier.Resource
     {
@@ -110,7 +110,7 @@ namespace Humidifier.ApplicationAutoScaling
         }
     }
 
-    namespace ScalingPolicyPropertyTypes
+    namespace ScalingPolicyTypes
     {
         public class StepScalingPolicyConfiguration
         {

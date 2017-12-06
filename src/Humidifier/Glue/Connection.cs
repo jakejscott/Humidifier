@@ -1,7 +1,7 @@
 namespace Humidifier.Glue
 {
     using System.Collections.Generic;
-    using ConnectionPropertyTypes;
+    using ConnectionTypes;
 
     public class Connection : Humidifier.Resource
     {
@@ -32,7 +32,7 @@ namespace Humidifier.Glue
         }
     }
 
-    namespace ConnectionPropertyTypes
+    namespace ConnectionTypes
     {
         public class ConnectionInput
         {

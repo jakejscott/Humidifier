@@ -1,7 +1,7 @@
 namespace Humidifier.ApiGateway
 {
     using System.Collections.Generic;
-    using MethodPropertyTypes;
+    using MethodTypes;
 
     public class Method : Humidifier.Resource
     {
@@ -165,7 +165,7 @@ namespace Humidifier.ApiGateway
         }
     }
 
-    namespace MethodPropertyTypes
+    namespace MethodTypes
     {
         public class MethodResponse
         {

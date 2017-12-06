@@ -1,7 +1,7 @@
 namespace Humidifier.Route53
 {
     using System.Collections.Generic;
-    using HostedZonePropertyTypes;
+    using HostedZoneTypes;
 
     public class HostedZone : Humidifier.Resource
     {
@@ -78,7 +78,7 @@ namespace Humidifier.Route53
         }
     }
 
-    namespace HostedZonePropertyTypes
+    namespace HostedZoneTypes
     {
         public class HostedZoneTag
         {

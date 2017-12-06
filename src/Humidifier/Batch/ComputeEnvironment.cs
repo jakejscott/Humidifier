@@ -1,7 +1,7 @@
 namespace Humidifier.Batch
 {
     using System.Collections.Generic;
-    using ComputeEnvironmentPropertyTypes;
+    using ComputeEnvironmentTypes;
 
     public class ComputeEnvironment : Humidifier.Resource
     {
@@ -71,7 +71,7 @@ namespace Humidifier.Batch
         }
     }
 
-    namespace ComputeEnvironmentPropertyTypes
+    namespace ComputeEnvironmentTypes
     {
         public class ComputeResources
         {

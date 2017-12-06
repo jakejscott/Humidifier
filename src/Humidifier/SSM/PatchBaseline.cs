@@ -1,7 +1,7 @@
 namespace Humidifier.SSM
 {
     using System.Collections.Generic;
-    using PatchBaselinePropertyTypes;
+    using PatchBaselineTypes;
 
     public class PatchBaseline : Humidifier.Resource
     {
@@ -126,7 +126,7 @@ namespace Humidifier.SSM
         }
     }
 
-    namespace PatchBaselinePropertyTypes
+    namespace PatchBaselineTypes
     {
         public class RuleGroup
         {

@@ -1,7 +1,7 @@
 namespace Humidifier.Elasticsearch
 {
     using System.Collections.Generic;
-    using DomainPropertyTypes;
+    using DomainTypes;
 
     public class Domain : Humidifier.Resource
     {
@@ -131,7 +131,7 @@ namespace Humidifier.Elasticsearch
         }
     }
 
-    namespace DomainPropertyTypes
+    namespace DomainTypes
     {
         public class VPCOptions
         {

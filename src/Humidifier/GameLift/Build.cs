@@ -1,7 +1,7 @@
 namespace Humidifier.GameLift
 {
     using System.Collections.Generic;
-    using BuildPropertyTypes;
+    using BuildTypes;
 
     public class Build : Humidifier.Resource
     {
@@ -45,7 +45,7 @@ namespace Humidifier.GameLift
         }
     }
 
-    namespace BuildPropertyTypes
+    namespace BuildTypes
     {
         public class S3Location
         {

@@ -1,7 +1,7 @@
 namespace Humidifier.Lambda
 {
     using System.Collections.Generic;
-    using FunctionPropertyTypes;
+    using FunctionTypes;
 
     public class Function : Humidifier.Resource
     {
@@ -194,7 +194,7 @@ namespace Humidifier.Lambda
         }
     }
 
-    namespace FunctionPropertyTypes
+    namespace FunctionTypes
     {
         public class VpcConfig
         {

@@ -1,7 +1,7 @@
 namespace Humidifier.CloudFront
 {
     using System.Collections.Generic;
-    using DistributionPropertyTypes;
+    using DistributionTypes;
 
     public class Distribution : Humidifier.Resource
     {
@@ -38,7 +38,7 @@ namespace Humidifier.CloudFront
         }
     }
 
-    namespace DistributionPropertyTypes
+    namespace DistributionTypes
     {
         public class Cookies
         {

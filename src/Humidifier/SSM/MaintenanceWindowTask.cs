@@ -1,7 +1,7 @@
 namespace Humidifier.SSM
 {
     using System.Collections.Generic;
-    using MaintenanceWindowTaskPropertyTypes;
+    using MaintenanceWindowTaskTypes;
 
     public class MaintenanceWindowTask : Humidifier.Resource
     {
@@ -176,7 +176,7 @@ namespace Humidifier.SSM
         }
     }
 
-    namespace MaintenanceWindowTaskPropertyTypes
+    namespace MaintenanceWindowTaskTypes
     {
         public class MaintenanceWindowLambdaParameters
         {

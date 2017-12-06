@@ -1,7 +1,7 @@
 namespace Humidifier.Config
 {
     using System.Collections.Generic;
-    using DeliveryChannelPropertyTypes;
+    using DeliveryChannelTypes;
 
     public class DeliveryChannel : Humidifier.Resource
     {
@@ -71,7 +71,7 @@ namespace Humidifier.Config
         }
     }
 
-    namespace DeliveryChannelPropertyTypes
+    namespace DeliveryChannelTypes
     {
         public class ConfigSnapshotDeliveryProperties
         {

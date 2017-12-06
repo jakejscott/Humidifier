@@ -1,7 +1,7 @@
 namespace Humidifier.Cognito
 {
     using System.Collections.Generic;
-    using IdentityPoolPropertyTypes;
+    using IdentityPoolTypes;
 
     public class IdentityPool : Humidifier.Resource
     {
@@ -144,7 +144,7 @@ namespace Humidifier.Cognito
         }
     }
 
-    namespace IdentityPoolPropertyTypes
+    namespace IdentityPoolTypes
     {
         public class PushSync
         {

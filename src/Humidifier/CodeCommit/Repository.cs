@@ -1,7 +1,7 @@
 namespace Humidifier.CodeCommit
 {
     using System.Collections.Generic;
-    using RepositoryPropertyTypes;
+    using RepositoryTypes;
 
     public class Repository : Humidifier.Resource
     {
@@ -54,7 +54,7 @@ namespace Humidifier.CodeCommit
         }
     }
 
-    namespace RepositoryPropertyTypes
+    namespace RepositoryTypes
     {
         public class RepositoryTrigger
         {

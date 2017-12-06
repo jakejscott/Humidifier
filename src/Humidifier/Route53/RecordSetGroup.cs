@@ -1,7 +1,7 @@
 namespace Humidifier.Route53
 {
     using System.Collections.Generic;
-    using RecordSetGroupPropertyTypes;
+    using RecordSetGroupTypes;
 
     public class RecordSetGroup : Humidifier.Resource
     {
@@ -59,7 +59,7 @@ namespace Humidifier.Route53
         }
     }
 
-    namespace RecordSetGroupPropertyTypes
+    namespace RecordSetGroupTypes
     {
         public class RecordSet
         {

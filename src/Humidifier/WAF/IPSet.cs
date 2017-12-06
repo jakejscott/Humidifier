@@ -1,7 +1,7 @@
 namespace Humidifier.WAF
 {
     using System.Collections.Generic;
-    using IPSetPropertyTypes;
+    using IPSetTypes;
 
     public class IPSet : Humidifier.Resource
     {
@@ -33,7 +33,7 @@ namespace Humidifier.WAF
         }
     }
 
-    namespace IPSetPropertyTypes
+    namespace IPSetTypes
     {
         public class IPSetDescriptor
         {

@@ -1,7 +1,7 @@
 namespace Humidifier.SSM
 {
     using System.Collections.Generic;
-    using AssociationPropertyTypes;
+    using AssociationTypes;
 
     public class Association : Humidifier.Resource
     {
@@ -86,7 +86,7 @@ namespace Humidifier.SSM
         }
     }
 
-    namespace AssociationPropertyTypes
+    namespace AssociationTypes
     {
         public class Target
         {

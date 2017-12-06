@@ -1,7 +1,7 @@
 namespace Humidifier.Glue
 {
     using System.Collections.Generic;
-    using TriggerPropertyTypes;
+    using TriggerTypes;
 
     public class Trigger : Humidifier.Resource
     {
@@ -85,7 +85,7 @@ namespace Humidifier.Glue
         }
     }
 
-    namespace TriggerPropertyTypes
+    namespace TriggerTypes
     {
         public class Action
         {

@@ -1,7 +1,7 @@
 namespace Humidifier.ElasticBeanstalk
 {
     using System.Collections.Generic;
-    using EnvironmentPropertyTypes;
+    using EnvironmentTypes;
 
     public class Environment : Humidifier.Resource
     {
@@ -156,7 +156,7 @@ namespace Humidifier.ElasticBeanstalk
         }
     }
 
-    namespace EnvironmentPropertyTypes
+    namespace EnvironmentTypes
     {
         public class OptionSetting
         {

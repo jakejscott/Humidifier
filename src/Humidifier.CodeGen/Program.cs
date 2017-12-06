@@ -53,7 +53,7 @@ namespace Humidifier.CodeGen
 
                 Directory.CreateDirectory(path);
 
-                var propsNamespace = resourceClassName + "PropertyTypes";
+                var propsNamespace = resourceClassName + "Types";
 
                 var namespaceDecl = NamespaceDeclaration(ParseName("Humidifier." + group))
                     .AddUsings(

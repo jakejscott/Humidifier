@@ -1,7 +1,7 @@
 namespace Humidifier.CodeDeploy
 {
     using System.Collections.Generic;
-    using DeploymentGroupPropertyTypes;
+    using DeploymentGroupTypes;
 
     public class DeploymentGroup : Humidifier.Resource
     {
@@ -179,7 +179,7 @@ namespace Humidifier.CodeDeploy
         }
     }
 
-    namespace DeploymentGroupPropertyTypes
+    namespace DeploymentGroupTypes
     {
         public class LoadBalancerInfo
         {

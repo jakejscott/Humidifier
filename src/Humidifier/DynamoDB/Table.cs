@@ -1,7 +1,7 @@
 namespace Humidifier.DynamoDB
 {
     using System.Collections.Generic;
-    using TablePropertyTypes;
+    using TableTypes;
 
     public class Table : Humidifier.Resource
     {
@@ -134,7 +134,7 @@ namespace Humidifier.DynamoDB
         }
     }
 
-    namespace TablePropertyTypes
+    namespace TableTypes
     {
         public class TimeToLiveSpecification
         {

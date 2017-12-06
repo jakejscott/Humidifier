@@ -1,7 +1,7 @@
 namespace Humidifier.CloudTrail
 {
     using System.Collections.Generic;
-    using TrailPropertyTypes;
+    using TrailTypes;
 
     public class Trail : Humidifier.Resource
     {
@@ -183,7 +183,7 @@ namespace Humidifier.CloudTrail
         }
     }
 
-    namespace TrailPropertyTypes
+    namespace TrailTypes
     {
         public class EventSelector
         {

@@ -1,7 +1,7 @@
 namespace Humidifier.EC2
 {
     using System.Collections.Generic;
-    using SpotFleetPropertyTypes;
+    using SpotFleetTypes;
 
     public class SpotFleet : Humidifier.Resource
     {
@@ -19,7 +19,7 @@ namespace Humidifier.EC2
         }
     }
 
-    namespace SpotFleetPropertyTypes
+    namespace SpotFleetTypes
     {
         public class IamInstanceProfileSpecification
         {

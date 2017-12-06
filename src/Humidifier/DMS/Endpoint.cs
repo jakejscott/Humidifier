@@ -1,7 +1,7 @@
 namespace Humidifier.DMS
 {
     using System.Collections.Generic;
-    using EndpointPropertyTypes;
+    using EndpointTypes;
 
     public class Endpoint : Humidifier.Resource
     {
@@ -220,7 +220,7 @@ namespace Humidifier.DMS
         }
     }
 
-    namespace EndpointPropertyTypes
+    namespace EndpointTypes
     {
         public class S3Settings
         {

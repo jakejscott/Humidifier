@@ -1,7 +1,7 @@
 namespace Humidifier.AutoScaling
 {
     using System.Collections.Generic;
-    using ScalingPolicyPropertyTypes;
+    using ScalingPolicyTypes;
 
     public class ScalingPolicy : Humidifier.Resource
     {
@@ -137,7 +137,7 @@ namespace Humidifier.AutoScaling
         }
     }
 
-    namespace ScalingPolicyPropertyTypes
+    namespace ScalingPolicyTypes
     {
         public class MetricDimension
         {

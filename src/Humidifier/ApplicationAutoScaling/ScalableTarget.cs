@@ -1,7 +1,7 @@
 namespace Humidifier.ApplicationAutoScaling
 {
     using System.Collections.Generic;
-    using ScalableTargetPropertyTypes;
+    using ScalableTargetTypes;
 
     public class ScalableTarget : Humidifier.Resource
     {
@@ -98,7 +98,7 @@ namespace Humidifier.ApplicationAutoScaling
         }
     }
 
-    namespace ScalableTargetPropertyTypes
+    namespace ScalableTargetTypes
     {
         public class ScheduledAction
         {

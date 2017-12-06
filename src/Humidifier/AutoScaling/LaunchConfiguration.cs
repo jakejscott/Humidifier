@@ -1,7 +1,7 @@
 namespace Humidifier.AutoScaling
 {
     using System.Collections.Generic;
-    using LaunchConfigurationPropertyTypes;
+    using LaunchConfigurationTypes;
 
     public class LaunchConfiguration : Humidifier.Resource
     {
@@ -230,7 +230,7 @@ namespace Humidifier.AutoScaling
         }
     }
 
-    namespace LaunchConfigurationPropertyTypes
+    namespace LaunchConfigurationTypes
     {
         public class BlockDeviceMapping
         {

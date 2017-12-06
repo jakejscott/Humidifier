@@ -1,7 +1,7 @@
 namespace Humidifier.ApiGateway
 {
     using System.Collections.Generic;
-    using StagePropertyTypes;
+    using StageTypes;
 
     public class Stage : Humidifier.Resource
     {
@@ -138,7 +138,7 @@ namespace Humidifier.ApiGateway
         }
     }
 
-    namespace StagePropertyTypes
+    namespace StageTypes
     {
         public class MethodSetting
         {

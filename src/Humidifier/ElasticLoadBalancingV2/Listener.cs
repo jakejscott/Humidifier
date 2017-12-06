@@ -1,7 +1,7 @@
 namespace Humidifier.ElasticLoadBalancingV2
 {
     using System.Collections.Generic;
-    using ListenerPropertyTypes;
+    using ListenerTypes;
 
     public class Listener : Humidifier.Resource
     {
@@ -86,7 +86,7 @@ namespace Humidifier.ElasticLoadBalancingV2
         }
     }
 
-    namespace ListenerPropertyTypes
+    namespace ListenerTypes
     {
         public class Action
         {

@@ -1,7 +1,7 @@
 namespace Humidifier.EC2
 {
     using System.Collections.Generic;
-    using NetworkAclEntryPropertyTypes;
+    using NetworkAclEntryTypes;
 
     public class NetworkAclEntry : Humidifier.Resource
     {
@@ -123,7 +123,7 @@ namespace Humidifier.EC2
         }
     }
 
-    namespace NetworkAclEntryPropertyTypes
+    namespace NetworkAclEntryTypes
     {
         public class Icmp
         {

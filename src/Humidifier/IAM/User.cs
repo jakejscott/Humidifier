@@ -1,7 +1,7 @@
 namespace Humidifier.IAM
 {
     using System.Collections.Generic;
-    using UserPropertyTypes;
+    using UserTypes;
 
     public class User : Humidifier.Resource
     {
@@ -92,7 +92,7 @@ namespace Humidifier.IAM
         }
     }
 
-    namespace UserPropertyTypes
+    namespace UserTypes
     {
         public class LoginProfile
         {

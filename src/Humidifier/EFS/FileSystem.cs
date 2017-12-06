@@ -1,7 +1,7 @@
 namespace Humidifier.EFS
 {
     using System.Collections.Generic;
-    using FileSystemPropertyTypes;
+    using FileSystemTypes;
 
     public class FileSystem : Humidifier.Resource
     {
@@ -59,7 +59,7 @@ namespace Humidifier.EFS
         }
     }
 
-    namespace FileSystemPropertyTypes
+    namespace FileSystemTypes
     {
         public class ElasticFileSystemTag
         {

@@ -1,7 +1,7 @@
 namespace Humidifier.KinesisAnalytics
 {
     using System.Collections.Generic;
-    using ApplicationReferenceDataSourcePropertyTypes;
+    using ApplicationReferenceDataSourceTypes;
 
     public class ApplicationReferenceDataSource : Humidifier.Resource
     {
@@ -32,7 +32,7 @@ namespace Humidifier.KinesisAnalytics
         }
     }
 
-    namespace ApplicationReferenceDataSourcePropertyTypes
+    namespace ApplicationReferenceDataSourceTypes
     {
         public class S3ReferenceDataSource
         {

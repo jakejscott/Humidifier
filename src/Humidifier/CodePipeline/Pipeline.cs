@@ -1,7 +1,7 @@
 namespace Humidifier.CodePipeline
 {
     using System.Collections.Generic;
-    using PipelinePropertyTypes;
+    using PipelineTypes;
 
     public class Pipeline : Humidifier.Resource
     {
@@ -86,7 +86,7 @@ namespace Humidifier.CodePipeline
         }
     }
 
-    namespace PipelinePropertyTypes
+    namespace PipelineTypes
     {
         public class InputArtifact
         {

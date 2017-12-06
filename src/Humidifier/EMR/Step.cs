@@ -1,7 +1,7 @@
 namespace Humidifier.EMR
 {
     using System.Collections.Generic;
-    using StepPropertyTypes;
+    using StepTypes;
 
     public class Step : Humidifier.Resource
     {
@@ -58,7 +58,7 @@ namespace Humidifier.EMR
         }
     }
 
-    namespace StepPropertyTypes
+    namespace StepTypes
     {
         public class HadoopJarStepConfig
         {

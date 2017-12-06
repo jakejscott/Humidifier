@@ -1,7 +1,7 @@
 namespace Humidifier.Redshift
 {
     using System.Collections.Generic;
-    using ClusterParameterGroupPropertyTypes;
+    using ClusterParameterGroupTypes;
 
     public class ClusterParameterGroup : Humidifier.Resource
     {
@@ -60,7 +60,7 @@ namespace Humidifier.Redshift
         }
     }
 
-    namespace ClusterParameterGroupPropertyTypes
+    namespace ClusterParameterGroupTypes
     {
         public class Parameter
         {

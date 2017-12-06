@@ -1,7 +1,7 @@
 namespace Humidifier.DirectoryService
 {
     using System.Collections.Generic;
-    using SimpleADPropertyTypes;
+    using SimpleADTypes;
 
     public class SimpleAD : Humidifier.Resource
     {
@@ -116,7 +116,7 @@ namespace Humidifier.DirectoryService
         }
     }
 
-    namespace SimpleADPropertyTypes
+    namespace SimpleADTypes
     {
         public class VpcSettings
         {

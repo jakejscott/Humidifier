@@ -1,7 +1,7 @@
 namespace Humidifier.EMR
 {
     using System.Collections.Generic;
-    using InstanceGroupConfigPropertyTypes;
+    using InstanceGroupConfigTypes;
 
     public class InstanceGroupConfig : Humidifier.Resource
     {
@@ -137,7 +137,7 @@ namespace Humidifier.EMR
         }
     }
 
-    namespace InstanceGroupConfigPropertyTypes
+    namespace InstanceGroupConfigTypes
     {
         public class EbsBlockDeviceConfig
         {

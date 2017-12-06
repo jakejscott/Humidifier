@@ -1,7 +1,7 @@
 namespace Humidifier.EMR
 {
     using System.Collections.Generic;
-    using InstanceFleetConfigPropertyTypes;
+    using InstanceFleetConfigTypes;
 
     public class InstanceFleetConfig : Humidifier.Resource
     {
@@ -98,7 +98,7 @@ namespace Humidifier.EMR
         }
     }
 
-    namespace InstanceFleetConfigPropertyTypes
+    namespace InstanceFleetConfigTypes
     {
         public class VolumeSpecification
         {

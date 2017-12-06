@@ -1,7 +1,7 @@
 namespace Humidifier.OpsWorks
 {
     using System.Collections.Generic;
-    using StackPropertyTypes;
+    using StackTypes;
 
     public class Stack : Humidifier.Resource
     {
@@ -336,7 +336,7 @@ namespace Humidifier.OpsWorks
         }
     }
 
-    namespace StackPropertyTypes
+    namespace StackTypes
     {
         public class Source
         {

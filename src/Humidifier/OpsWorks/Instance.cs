@@ -1,7 +1,7 @@
 namespace Humidifier.OpsWorks
 {
     using System.Collections.Generic;
-    using InstancePropertyTypes;
+    using InstanceTypes;
 
     public class Instance : Humidifier.Resource
     {
@@ -292,7 +292,7 @@ namespace Humidifier.OpsWorks
         }
     }
 
-    namespace InstancePropertyTypes
+    namespace InstanceTypes
     {
         public class BlockDeviceMapping
         {

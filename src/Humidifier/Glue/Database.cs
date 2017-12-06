@@ -1,7 +1,7 @@
 namespace Humidifier.Glue
 {
     using System.Collections.Generic;
-    using DatabasePropertyTypes;
+    using DatabaseTypes;
 
     public class Database : Humidifier.Resource
     {
@@ -32,7 +32,7 @@ namespace Humidifier.Glue
         }
     }
 
-    namespace DatabasePropertyTypes
+    namespace DatabaseTypes
     {
         public class DatabaseInput
         {

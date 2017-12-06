@@ -1,7 +1,7 @@
 namespace Humidifier.Logs
 {
     using System.Collections.Generic;
-    using MetricFilterPropertyTypes;
+    using MetricFilterTypes;
 
     public class MetricFilter : Humidifier.Resource
     {
@@ -46,7 +46,7 @@ namespace Humidifier.Logs
         }
     }
 
-    namespace MetricFilterPropertyTypes
+    namespace MetricFilterTypes
     {
         public class MetricTransformation
         {

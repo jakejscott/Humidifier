@@ -1,7 +1,7 @@
 namespace Humidifier.WAF
 {
     using System.Collections.Generic;
-    using ByteMatchSetPropertyTypes;
+    using ByteMatchSetTypes;
 
     public class ByteMatchSet : Humidifier.Resource
     {
@@ -33,7 +33,7 @@ namespace Humidifier.WAF
         }
     }
 
-    namespace ByteMatchSetPropertyTypes
+    namespace ByteMatchSetTypes
     {
         public class ByteMatchTuple
         {

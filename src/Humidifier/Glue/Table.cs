@@ -1,7 +1,7 @@
 namespace Humidifier.Glue
 {
     using System.Collections.Generic;
-    using TablePropertyTypes;
+    using TableTypes;
 
     public class Table : Humidifier.Resource
     {
@@ -45,7 +45,7 @@ namespace Humidifier.Glue
         }
     }
 
-    namespace TablePropertyTypes
+    namespace TableTypes
     {
         public class SkewedInfo
         {

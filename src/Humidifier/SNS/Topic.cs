@@ -1,7 +1,7 @@
 namespace Humidifier.SNS
 {
     using System.Collections.Generic;
-    using TopicPropertyTypes;
+    using TopicTypes;
 
     public class Topic : Humidifier.Resource
     {
@@ -51,7 +51,7 @@ namespace Humidifier.SNS
         }
     }
 
-    namespace TopicPropertyTypes
+    namespace TopicTypes
     {
         public class Subscription
         {

@@ -1,7 +1,7 @@
 namespace Humidifier.CloudFront
 {
     using System.Collections.Generic;
-    using StreamingDistributionPropertyTypes;
+    using StreamingDistributionTypes;
 
     public class StreamingDistribution : Humidifier.Resource
     {
@@ -38,7 +38,7 @@ namespace Humidifier.CloudFront
         }
     }
 
-    namespace StreamingDistributionPropertyTypes
+    namespace StreamingDistributionTypes
     {
         public class TrustedSigners
         {

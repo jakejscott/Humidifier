@@ -1,7 +1,7 @@
 namespace Humidifier.Glue
 {
     using System.Collections.Generic;
-    using PartitionPropertyTypes;
+    using PartitionTypes;
 
     public class Partition : Humidifier.Resource
     {
@@ -58,7 +58,7 @@ namespace Humidifier.Glue
         }
     }
 
-    namespace PartitionPropertyTypes
+    namespace PartitionTypes
     {
         public class SerdeInfo
         {

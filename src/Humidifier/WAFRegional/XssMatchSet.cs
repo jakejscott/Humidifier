@@ -1,7 +1,7 @@
 namespace Humidifier.WAFRegional
 {
     using System.Collections.Generic;
-    using XssMatchSetPropertyTypes;
+    using XssMatchSetTypes;
 
     public class XssMatchSet : Humidifier.Resource
     {
@@ -33,7 +33,7 @@ namespace Humidifier.WAFRegional
         }
     }
 
-    namespace XssMatchSetPropertyTypes
+    namespace XssMatchSetTypes
     {
         public class XssMatchTuple
         {

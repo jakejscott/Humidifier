@@ -1,7 +1,7 @@
 namespace Humidifier.CloudFront
 {
     using System.Collections.Generic;
-    using CloudFrontOriginAccessIdentityPropertyTypes;
+    using CloudFrontOriginAccessIdentityTypes;
 
     public class CloudFrontOriginAccessIdentity : Humidifier.Resource
     {
@@ -24,7 +24,7 @@ namespace Humidifier.CloudFront
         }
     }
 
-    namespace CloudFrontOriginAccessIdentityPropertyTypes
+    namespace CloudFrontOriginAccessIdentityTypes
     {
         public class CloudFrontOriginAccessIdentityConfig
         {

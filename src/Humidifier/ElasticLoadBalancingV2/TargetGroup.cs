@@ -1,7 +1,7 @@
 namespace Humidifier.ElasticLoadBalancingV2
 {
     using System.Collections.Generic;
-    using TargetGroupPropertyTypes;
+    using TargetGroupTypes;
 
     public class TargetGroup : Humidifier.Resource
     {
@@ -224,7 +224,7 @@ namespace Humidifier.ElasticLoadBalancingV2
         }
     }
 
-    namespace TargetGroupPropertyTypes
+    namespace TargetGroupTypes
     {
         public class TargetGroupAttribute
         {

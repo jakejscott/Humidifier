@@ -1,7 +1,7 @@
 namespace Humidifier.CertificateManager
 {
     using System.Collections.Generic;
-    using CertificatePropertyTypes;
+    using CertificateTypes;
 
     public class Certificate : Humidifier.Resource
     {
@@ -61,7 +61,7 @@ namespace Humidifier.CertificateManager
         }
     }
 
-    namespace CertificatePropertyTypes
+    namespace CertificateTypes
     {
         public class DomainValidationOption
         {

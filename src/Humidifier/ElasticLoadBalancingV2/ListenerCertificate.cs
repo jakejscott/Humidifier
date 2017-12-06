@@ -1,7 +1,7 @@
 namespace Humidifier.ElasticLoadBalancingV2
 {
     using System.Collections.Generic;
-    using ListenerCertificatePropertyTypes;
+    using ListenerCertificateTypes;
 
     public class ListenerCertificate : Humidifier.Resource
     {
@@ -33,7 +33,7 @@ namespace Humidifier.ElasticLoadBalancingV2
         }
     }
 
-    namespace ListenerCertificatePropertyTypes
+    namespace ListenerCertificateTypes
     {
         public class Certificate
         {

@@ -1,7 +1,7 @@
 namespace Humidifier.ApiGateway
 {
     using System.Collections.Generic;
-    using UsagePlanPropertyTypes;
+    using UsagePlanTypes;
 
     public class UsagePlan : Humidifier.Resource
     {
@@ -72,7 +72,7 @@ namespace Humidifier.ApiGateway
         }
     }
 
-    namespace UsagePlanPropertyTypes
+    namespace UsagePlanTypes
     {
         public class ApiStage
         {

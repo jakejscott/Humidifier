@@ -1,7 +1,7 @@
 namespace Humidifier.ElasticBeanstalk
 {
     using System.Collections.Generic;
-    using ConfigurationTemplatePropertyTypes;
+    using ConfigurationTemplateTypes;
 
     public class ConfigurationTemplate : Humidifier.Resource
     {
@@ -98,7 +98,7 @@ namespace Humidifier.ElasticBeanstalk
         }
     }
 
-    namespace ConfigurationTemplatePropertyTypes
+    namespace ConfigurationTemplateTypes
     {
         public class SourceConfiguration
         {

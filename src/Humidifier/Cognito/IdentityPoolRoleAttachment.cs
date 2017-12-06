@@ -1,7 +1,7 @@
 namespace Humidifier.Cognito
 {
     using System.Collections.Generic;
-    using IdentityPoolRoleAttachmentPropertyTypes;
+    using IdentityPoolRoleAttachmentTypes;
 
     public class IdentityPoolRoleAttachment : Humidifier.Resource
     {
@@ -45,7 +45,7 @@ namespace Humidifier.Cognito
         }
     }
 
-    namespace IdentityPoolRoleAttachmentPropertyTypes
+    namespace IdentityPoolRoleAttachmentTypes
     {
         public class RulesConfigurationType
         {

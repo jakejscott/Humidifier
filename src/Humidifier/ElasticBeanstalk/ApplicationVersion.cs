@@ -1,7 +1,7 @@
 namespace Humidifier.ElasticBeanstalk
 {
     using System.Collections.Generic;
-    using ApplicationVersionPropertyTypes;
+    using ApplicationVersionTypes;
 
     public class ApplicationVersion : Humidifier.Resource
     {
@@ -45,7 +45,7 @@ namespace Humidifier.ElasticBeanstalk
         }
     }
 
-    namespace ApplicationVersionPropertyTypes
+    namespace ApplicationVersionTypes
     {
         public class SourceBundle
         {

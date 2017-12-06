@@ -1,7 +1,7 @@
 namespace Humidifier.ElasticBeanstalk
 {
     using System.Collections.Generic;
-    using ApplicationPropertyTypes;
+    using ApplicationTypes;
 
     public class Application : Humidifier.Resource
     {
@@ -45,7 +45,7 @@ namespace Humidifier.ElasticBeanstalk
         }
     }
 
-    namespace ApplicationPropertyTypes
+    namespace ApplicationTypes
     {
         public class ApplicationResourceLifecycleConfig
         {

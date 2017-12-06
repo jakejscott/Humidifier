@@ -1,7 +1,7 @@
 namespace Humidifier.Lambda
 {
     using System.Collections.Generic;
-    using AliasPropertyTypes;
+    using AliasTypes;
 
     public class Alias : Humidifier.Resource
     {
@@ -71,7 +71,7 @@ namespace Humidifier.Lambda
         }
     }
 
-    namespace AliasPropertyTypes
+    namespace AliasTypes
     {
         public class AliasRoutingConfiguration
         {

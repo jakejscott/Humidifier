@@ -1,7 +1,7 @@
 namespace Humidifier.IoT
 {
     using System.Collections.Generic;
-    using ThingPropertyTypes;
+    using ThingTypes;
 
     public class Thing : Humidifier.Resource
     {
@@ -32,7 +32,7 @@ namespace Humidifier.IoT
         }
     }
 
-    namespace ThingPropertyTypes
+    namespace ThingTypes
     {
         public class AttributePayload
         {

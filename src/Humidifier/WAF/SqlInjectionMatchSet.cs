@@ -1,7 +1,7 @@
 namespace Humidifier.WAF
 {
     using System.Collections.Generic;
-    using SqlInjectionMatchSetPropertyTypes;
+    using SqlInjectionMatchSetTypes;
 
     public class SqlInjectionMatchSet : Humidifier.Resource
     {
@@ -33,7 +33,7 @@ namespace Humidifier.WAF
         }
     }
 
-    namespace SqlInjectionMatchSetPropertyTypes
+    namespace SqlInjectionMatchSetTypes
     {
         public class SqlInjectionMatchTuple
         {

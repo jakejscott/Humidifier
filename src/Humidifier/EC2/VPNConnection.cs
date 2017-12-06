@@ -1,7 +1,7 @@
 namespace Humidifier.EC2
 {
     using System.Collections.Generic;
-    using VPNConnectionPropertyTypes;
+    using VPNConnectionTypes;
 
     public class VPNConnection : Humidifier.Resource
     {
@@ -86,7 +86,7 @@ namespace Humidifier.EC2
         }
     }
 
-    namespace VPNConnectionPropertyTypes
+    namespace VPNConnectionTypes
     {
         public class VpnTunnelOptionsSpecification
         {

@@ -1,7 +1,7 @@
 namespace Humidifier.Glue
 {
     using System.Collections.Generic;
-    using CrawlerPropertyTypes;
+    using CrawlerTypes;
 
     public class Crawler : Humidifier.Resource
     {
@@ -124,7 +124,7 @@ namespace Humidifier.Glue
         }
     }
 
-    namespace CrawlerPropertyTypes
+    namespace CrawlerTypes
     {
         public class Targets
         {

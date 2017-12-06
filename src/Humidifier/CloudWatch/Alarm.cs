@@ -1,7 +1,7 @@
 namespace Humidifier.CloudWatch
 {
     using System.Collections.Generic;
-    using AlarmPropertyTypes;
+    using AlarmTypes;
 
     public class Alarm : Humidifier.Resource
     {
@@ -249,7 +249,7 @@ namespace Humidifier.CloudWatch
         }
     }
 
-    namespace AlarmPropertyTypes
+    namespace AlarmTypes
     {
         public class Dimension
         {

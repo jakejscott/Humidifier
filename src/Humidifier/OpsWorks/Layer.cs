@@ -1,7 +1,7 @@
 namespace Humidifier.OpsWorks
 {
     using System.Collections.Generic;
-    using LayerPropertyTypes;
+    using LayerTypes;
 
     public class Layer : Humidifier.Resource
     {
@@ -258,7 +258,7 @@ namespace Humidifier.OpsWorks
         }
     }
 
-    namespace LayerPropertyTypes
+    namespace LayerTypes
     {
         public class ShutdownEventConfiguration
         {

@@ -1,7 +1,7 @@
 namespace Humidifier.RDS
 {
     using System.Collections.Generic;
-    using OptionGroupPropertyTypes;
+    using OptionGroupTypes;
 
     public class OptionGroup : Humidifier.Resource
     {
@@ -73,7 +73,7 @@ namespace Humidifier.RDS
         }
     }
 
-    namespace OptionGroupPropertyTypes
+    namespace OptionGroupTypes
     {
         public class OptionSetting
         {

@@ -1,7 +1,7 @@
 namespace Humidifier.CodePipeline
 {
     using System.Collections.Generic;
-    using CustomActionTypePropertyTypes;
+    using CustomActionTypeTypes;
 
     public class CustomActionType : Humidifier.Resource
     {
@@ -98,7 +98,7 @@ namespace Humidifier.CodePipeline
         }
     }
 
-    namespace CustomActionTypePropertyTypes
+    namespace CustomActionTypeTypes
     {
         public class Settings
         {

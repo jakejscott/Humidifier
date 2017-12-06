@@ -1,7 +1,7 @@
 namespace Humidifier.AutoScaling
 {
     using System.Collections.Generic;
-    using AutoScalingGroupPropertyTypes;
+    using AutoScalingGroupTypes;
 
     public class AutoScalingGroup : Humidifier.Resource
     {
@@ -249,7 +249,7 @@ namespace Humidifier.AutoScaling
         }
     }
 
-    namespace AutoScalingGroupPropertyTypes
+    namespace AutoScalingGroupTypes
     {
         public class LifecycleHookSpecification
         {

@@ -1,7 +1,7 @@
 namespace Humidifier.IAM
 {
     using System.Collections.Generic;
-    using GroupPropertyTypes;
+    using GroupTypes;
 
     public class Group : Humidifier.Resource
     {
@@ -65,7 +65,7 @@ namespace Humidifier.IAM
         }
     }
 
-    namespace GroupPropertyTypes
+    namespace GroupTypes
     {
         public class Policy
         {

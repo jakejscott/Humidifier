@@ -1,7 +1,7 @@
 namespace Humidifier.Config
 {
     using System.Collections.Generic;
-    using ConfigurationRecorderPropertyTypes;
+    using ConfigurationRecorderTypes;
 
     public class ConfigurationRecorder : Humidifier.Resource
     {
@@ -45,7 +45,7 @@ namespace Humidifier.Config
         }
     }
 
-    namespace ConfigurationRecorderPropertyTypes
+    namespace ConfigurationRecorderTypes
     {
         public class RecordingGroup
         {

@@ -1,7 +1,7 @@
 namespace Humidifier.Glue
 {
     using System.Collections.Generic;
-    using JobPropertyTypes;
+    using JobTypes;
 
     public class Job : Humidifier.Resource
     {
@@ -136,7 +136,7 @@ namespace Humidifier.Glue
         }
     }
 
-    namespace JobPropertyTypes
+    namespace JobTypes
     {
         public class JobCommand
         {

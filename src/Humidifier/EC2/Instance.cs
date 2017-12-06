@@ -1,7 +1,7 @@
 namespace Humidifier.EC2
 {
     using System.Collections.Generic;
-    using InstancePropertyTypes;
+    using InstanceTypes;
 
     public class Instance : Humidifier.Resource
     {
@@ -414,7 +414,7 @@ namespace Humidifier.EC2
         }
     }
 
-    namespace InstancePropertyTypes
+    namespace InstanceTypes
     {
         public class ElasticGpuSpecification
         {

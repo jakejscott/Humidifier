@@ -1,7 +1,7 @@
 namespace Humidifier.ElastiCache
 {
     using System.Collections.Generic;
-    using ReplicationGroupPropertyTypes;
+    using ReplicationGroupTypes;
 
     public class ReplicationGroup : Humidifier.Resource
     {
@@ -393,7 +393,7 @@ namespace Humidifier.ElastiCache
         }
     }
 
-    namespace ReplicationGroupPropertyTypes
+    namespace ReplicationGroupTypes
     {
         public class NodeGroupConfiguration
         {

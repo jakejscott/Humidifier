@@ -1,7 +1,7 @@
 namespace Humidifier.ApiGateway
 {
     using System.Collections.Generic;
-    using RestApiPropertyTypes;
+    using RestApiTypes;
 
     public class RestApi : Humidifier.Resource
     {
@@ -143,7 +143,7 @@ namespace Humidifier.ApiGateway
         }
     }
 
-    namespace RestApiPropertyTypes
+    namespace RestApiTypes
     {
         public class S3Location
         {

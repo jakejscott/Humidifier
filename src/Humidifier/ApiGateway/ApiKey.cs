@@ -1,7 +1,7 @@
 namespace Humidifier.ApiGateway
 {
     using System.Collections.Generic;
-    using ApiKeyPropertyTypes;
+    using ApiKeyTypes;
 
     public class ApiKey : Humidifier.Resource
     {
@@ -85,7 +85,7 @@ namespace Humidifier.ApiGateway
         }
     }
 
-    namespace ApiKeyPropertyTypes
+    namespace ApiKeyTypes
     {
         public class StageKey
         {

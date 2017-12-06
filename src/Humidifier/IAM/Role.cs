@@ -1,7 +1,7 @@
 namespace Humidifier.IAM
 {
     using System.Collections.Generic;
-    using RolePropertyTypes;
+    using RoleTypes;
 
     public class Role : Humidifier.Resource
     {
@@ -78,7 +78,7 @@ namespace Humidifier.IAM
         }
     }
 
-    namespace RolePropertyTypes
+    namespace RoleTypes
     {
         public class Policy
         {

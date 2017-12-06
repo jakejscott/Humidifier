@@ -1,7 +1,7 @@
 namespace Humidifier.CodeBuild
 {
     using System.Collections.Generic;
-    using ProjectPropertyTypes;
+    using ProjectTypes;
 
     public class Project : Humidifier.Resource
     {
@@ -168,7 +168,7 @@ namespace Humidifier.CodeBuild
         }
     }
 
-    namespace ProjectPropertyTypes
+    namespace ProjectTypes
     {
         public class Artifacts
         {

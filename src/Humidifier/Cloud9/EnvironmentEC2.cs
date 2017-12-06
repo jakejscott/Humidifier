@@ -1,7 +1,7 @@
 namespace Humidifier.Cloud9
 {
     using System.Collections.Generic;
-    using EnvironmentEC2PropertyTypes;
+    using EnvironmentEC2Types;
 
     public class EnvironmentEC2 : Humidifier.Resource
     {
@@ -104,7 +104,7 @@ namespace Humidifier.Cloud9
         }
     }
 
-    namespace EnvironmentEC2PropertyTypes
+    namespace EnvironmentEC2Types
     {
         public class Repository
         {

@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using Humidifier.Json;
-using Humidifier.Lambda.FunctionPropertyTypes;
+using Humidifier.Lambda.FunctionTypes;
 
 namespace Humidifier.ConsoleTest
 {
     public static class Program
     {
-        public static void Main(string[] args)
+        public static void Main()
         {
             Stack stack = BuildStack();
 
@@ -322,7 +321,7 @@ namespace Humidifier.ConsoleTest
                     S3Bucket = Fn.ImportValue(Fn.Sub("${AutomationStack}-DeploymentBucket")),
                     S3Key = new { Ref = "CodeS3Key" },
                 },
-                Environment = new Humidifier.Lambda.FunctionPropertyTypes.Environment
+                Environment = new Environment
                 {
                     Variables = new Dictionary<string, dynamic>
                     {

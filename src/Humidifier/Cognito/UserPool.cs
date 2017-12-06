@@ -1,7 +1,7 @@
 namespace Humidifier.Cognito
 {
     using System.Collections.Generic;
-    using UserPoolPropertyTypes;
+    using UserPoolTypes;
 
     public class UserPool : Humidifier.Resource
     {
@@ -224,7 +224,7 @@ namespace Humidifier.Cognito
         }
     }
 
-    namespace UserPoolPropertyTypes
+    namespace UserPoolTypes
     {
         public class PasswordPolicy
         {

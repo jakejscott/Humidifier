@@ -1,7 +1,7 @@
 namespace Humidifier.Route53
 {
     using System.Collections.Generic;
-    using HealthCheckPropertyTypes;
+    using HealthCheckTypes;
 
     public class HealthCheck : Humidifier.Resource
     {
@@ -33,7 +33,7 @@ namespace Humidifier.Route53
         }
     }
 
-    namespace HealthCheckPropertyTypes
+    namespace HealthCheckTypes
     {
         public class HealthCheckConfig
         {

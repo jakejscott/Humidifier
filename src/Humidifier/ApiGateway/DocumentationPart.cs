@@ -1,7 +1,7 @@
 namespace Humidifier.ApiGateway
 {
     using System.Collections.Generic;
-    using DocumentationPartPropertyTypes;
+    using DocumentationPartTypes;
 
     public class DocumentationPart : Humidifier.Resource
     {
@@ -45,7 +45,7 @@ namespace Humidifier.ApiGateway
         }
     }
 
-    namespace DocumentationPartPropertyTypes
+    namespace DocumentationPartTypes
     {
         public class Location
         {

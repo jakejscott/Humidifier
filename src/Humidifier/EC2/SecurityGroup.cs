@@ -1,7 +1,7 @@
 namespace Humidifier.EC2
 {
     using System.Collections.Generic;
-    using SecurityGroupPropertyTypes;
+    using SecurityGroupTypes;
 
     public class SecurityGroup : Humidifier.Resource
     {
@@ -92,7 +92,7 @@ namespace Humidifier.EC2
         }
     }
 
-    namespace SecurityGroupPropertyTypes
+    namespace SecurityGroupTypes
     {
         public class Ingress
         {

@@ -1,7 +1,7 @@
 namespace Humidifier.CodeDeploy
 {
     using System.Collections.Generic;
-    using DeploymentConfigPropertyTypes;
+    using DeploymentConfigTypes;
 
     public class DeploymentConfig : Humidifier.Resource
     {
@@ -32,7 +32,7 @@ namespace Humidifier.CodeDeploy
         }
     }
 
-    namespace DeploymentConfigPropertyTypes
+    namespace DeploymentConfigTypes
     {
         public class MinimumHealthyHosts
         {

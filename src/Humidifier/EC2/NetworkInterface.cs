@@ -1,7 +1,7 @@
 namespace Humidifier.EC2
 {
     using System.Collections.Generic;
-    using NetworkInterfacePropertyTypes;
+    using NetworkInterfaceTypes;
 
     public class NetworkInterface : Humidifier.Resource
     {
@@ -158,7 +158,7 @@ namespace Humidifier.EC2
         }
     }
 
-    namespace NetworkInterfacePropertyTypes
+    namespace NetworkInterfaceTypes
     {
         public class InstanceIpv6Address
         {

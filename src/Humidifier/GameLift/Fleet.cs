@@ -1,7 +1,7 @@
 namespace Humidifier.GameLift
 {
     using System.Collections.Generic;
-    using FleetPropertyTypes;
+    using FleetTypes;
 
     public class Fleet : Humidifier.Resource
     {
@@ -151,7 +151,7 @@ namespace Humidifier.GameLift
         }
     }
 
-    namespace FleetPropertyTypes
+    namespace FleetTypes
     {
         public class IpPermission
         {
