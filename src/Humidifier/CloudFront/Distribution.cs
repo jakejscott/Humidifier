@@ -414,75 +414,6 @@ namespace Humidifier.CloudFront
             }
         }
 
-        public class LegacyCustomOrigin
-        {
-            /// <summary>
-            /// HTTPSPort
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacycustomorigin.html#cfn-cloudfront-distribution-legacycustomorigin-httpsport
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic HTTPSPort
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// OriginSSLProtocols
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacycustomorigin.html#cfn-cloudfront-distribution-legacycustomorigin-originsslprotocols
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// PrimitiveItemType: String
-            /// </summary>
-            public dynamic OriginSSLProtocols
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// DNSName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacycustomorigin.html#cfn-cloudfront-distribution-legacycustomorigin-dnsname
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic DNSName
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// HTTPPort
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacycustomorigin.html#cfn-cloudfront-distribution-legacycustomorigin-httpport
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic HTTPPort
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// OriginProtocolPolicy
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacycustomorigin.html#cfn-cloudfront-distribution-legacycustomorigin-originprotocolpolicy
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic OriginProtocolPolicy
-            {
-                get;
-                set;
-            }
-        }
-
         public class DefaultCacheBehavior
         {
             /// <summary>
@@ -1037,32 +968,6 @@ namespace Humidifier.CloudFront
             }
 
             /// <summary>
-            /// S3Origin
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-s3origin
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: LegacyS3Origin
-            /// </summary>
-            public LegacyS3Origin S3Origin
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// CustomOrigin
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-customorigin
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: LegacyCustomOrigin
-            /// </summary>
-            public LegacyCustomOrigin CustomOrigin
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
             /// DefaultCacheBehavior
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-defaultcachebehavior
             /// Required: False
@@ -1143,20 +1048,6 @@ namespace Humidifier.CloudFront
             }
 
             /// <summary>
-            /// CNAMEs
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-cnames
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// PrimitiveItemType: String
-            /// </summary>
-            public dynamic CNAMEs
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
             /// HttpVersion
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-httpversion
             /// Required: False
@@ -1191,35 +1082,6 @@ namespace Humidifier.CloudFront
             /// ItemType: CacheBehavior
             /// </summary>
             public List<CacheBehavior> CacheBehaviors
-            {
-                get;
-                set;
-            }
-        }
-
-        public class LegacyS3Origin
-        {
-            /// <summary>
-            /// OriginAccessIdentity
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacys3origin.html#cfn-cloudfront-distribution-legacys3origin-originaccessidentity
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic OriginAccessIdentity
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// DNSName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacys3origin.html#cfn-cloudfront-distribution-legacys3origin-dnsname
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic DNSName
             {
                 get;
                 set;
