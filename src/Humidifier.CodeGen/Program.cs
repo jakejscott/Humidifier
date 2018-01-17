@@ -23,7 +23,7 @@ namespace Humidifier.CodeGen
     {
         static string url = "https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json";
 
-        public static async Task Main(string[] args)
+        public static void Main(string[] args)
         {
             Console.WriteLine("Cleaning files");
 
@@ -49,8 +49,8 @@ namespace Humidifier.CodeGen
             var request = new HttpRequestMessage(HttpMethod.Get, url);
             request.Headers.AcceptEncoding.Add(new StringWithQualityHeaderValue("gzip"));
 
-            var response = await client.SendAsync(request).ConfigureAwait(false);
-            var json = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+            var response = client.SendAsync(request).GetAwaiter().GetResult();
+            var json = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
 
             File.WriteAllText(Path.Combine(codegenPath, "Specification.json"), json);
 
