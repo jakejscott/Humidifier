@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -20,7 +23,7 @@ namespace Humidifier.CodeGen
     {
         static string url = "https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json";
 
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             Console.WriteLine("Cleaning files");
 
@@ -35,12 +38,25 @@ namespace Humidifier.CodeGen
             }
 
             Console.WriteLine("Downloading spec from " + url);
-            var client = new HttpClient();
-            var json = client.GetStringAsync(url).GetAwaiter().GetResult();
+
+            var handler = new HttpClientHandler
+            {
+                AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate
+            };
+            
+            var client = new HttpClient(handler);
+
+            var request = new HttpRequestMessage(HttpMethod.Get, url);
+            request.Headers.AcceptEncoding.Add(new StringWithQualityHeaderValue("gzip"));
+
+            var response = await client.SendAsync(request).ConfigureAwait(false);
+            var json = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+
             File.WriteAllText(Path.Combine(codegenPath, "Specification.json"), json);
 
             Console.WriteLine("Parsing spec");
             Specification specification = ParseSpecification(json);
+
             Console.WriteLine("ResourceSpecificationVersion: " + specification.ResourceSpecificationVersion);
 
             foreach (ResourceType resourceType in specification.ResourceTypes)
