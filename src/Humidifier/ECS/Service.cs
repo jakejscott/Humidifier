@@ -50,6 +50,19 @@ namespace Humidifier.ECS
         }
 
         /// <summary>
+        /// HealthCheckGracePeriodSeconds
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-healthcheckgraceperiodseconds
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Integer
+        /// </summary>
+        public dynamic HealthCheckGracePeriodSeconds
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// LaunchType
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-launchtype
         /// Required: False

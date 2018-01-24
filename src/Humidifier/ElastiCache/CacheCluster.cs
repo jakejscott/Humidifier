@@ -143,7 +143,7 @@ namespace Humidifier.ElastiCache
         /// NumCacheNodes
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html#cfn-elasticache-cachecluster-numcachenodes
         /// Required: True
-        /// UpdateType: Mutable
+        /// UpdateType: Conditional
         /// PrimitiveType: Integer
         /// </summary>
         public dynamic NumCacheNodes

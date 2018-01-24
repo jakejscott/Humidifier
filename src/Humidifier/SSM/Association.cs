@@ -6,6 +6,19 @@ namespace Humidifier.SSM
     public class Association : Humidifier.Resource
     {
         /// <summary>
+        /// AssociationName
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-associationname
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic AssociationName
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// DocumentVersion
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-documentversion
         /// Required: False

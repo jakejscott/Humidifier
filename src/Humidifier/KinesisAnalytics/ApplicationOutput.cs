@@ -108,6 +108,19 @@ namespace Humidifier.KinesisAnalytics
             }
 
             /// <summary>
+            /// LambdaOutput
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-output.html#cfn-kinesisanalytics-applicationoutput-output-lambdaoutput
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: LambdaOutput
+            /// </summary>
+            public LambdaOutput LambdaOutput
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// KinesisFirehoseOutput
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-output.html#cfn-kinesisanalytics-applicationoutput-output-kinesisfirehoseoutput
             /// Required: False
@@ -141,6 +154,35 @@ namespace Humidifier.KinesisAnalytics
             /// PrimitiveType: String
             /// </summary>
             public dynamic Name
+            {
+                get;
+                set;
+            }
+        }
+
+        public class LambdaOutput
+        {
+            /// <summary>
+            /// ResourceARN
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-lambdaoutput.html#cfn-kinesisanalytics-applicationoutput-lambdaoutput-resourcearn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ResourceARN
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RoleARN
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-lambdaoutput.html#cfn-kinesisanalytics-applicationoutput-lambdaoutput-rolearn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RoleARN
             {
                 get;
                 set;

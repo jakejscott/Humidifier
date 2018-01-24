@@ -15,7 +15,7 @@ namespace Humidifier.DynamoDB
         /// AttributeDefinitions
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-attributedef
         /// Required: False
-        /// UpdateType: Mutable
+        /// UpdateType: Conditional
         /// Type: List
         /// ItemType: AttributeDefinition
         /// </summary>
@@ -43,7 +43,7 @@ namespace Humidifier.DynamoDB
         /// KeySchema
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-keyschema
         /// Required: True
-        /// UpdateType: Mutable
+        /// UpdateType: Immutable
         /// Type: List
         /// ItemType: KeySchema
         /// </summary>
@@ -57,7 +57,7 @@ namespace Humidifier.DynamoDB
         /// LocalSecondaryIndexes
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-lsi
         /// Required: False
-        /// UpdateType: Mutable
+        /// UpdateType: Immutable
         /// Type: List
         /// ItemType: LocalSecondaryIndex
         /// </summary>

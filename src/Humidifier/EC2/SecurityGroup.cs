@@ -8,6 +8,7 @@ namespace Humidifier.EC2
         public static class Attributes
         {
             public static string GroupId =  "GroupId" ;
+            public static string VpcId =  "VpcId" ;
         }
 
         /// <summary>

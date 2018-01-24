@@ -68,6 +68,19 @@ namespace Humidifier.EC2
         }
 
         /// <summary>
+        /// CreditSpecification
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-creditspecification
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: CreditSpecification
+        /// </summary>
+        public CreditSpecification CreditSpecification
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// DisableApiTermination
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-disableapitermination
         /// Required: False
@@ -778,6 +791,22 @@ namespace Humidifier.EC2
             /// PrimitiveType: String
             /// </summary>
             public dynamic DocumentName
+            {
+                get;
+                set;
+            }
+        }
+
+        public class CreditSpecification
+        {
+            /// <summary>
+            /// CPUCredits
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-creditspecification.html#cfn-ec2-instance-creditspecification-cpucredits
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic CPUCredits
             {
                 get;
                 set;

@@ -54,6 +54,19 @@ namespace Humidifier.S3
         }
 
         /// <summary>
+        /// BucketEncryption
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-bucketencryption
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: BucketEncryption
+        /// </summary>
+        public BucketEncryption BucketEncryption
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// BucketName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-name
         /// Required: False
@@ -202,6 +215,23 @@ namespace Humidifier.S3
 
     namespace BucketTypes
     {
+        public class BucketEncryption
+        {
+            /// <summary>
+            /// ServerSideEncryptionConfiguration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-bucketencryption.html#cfn-s3-bucket-bucketencryption-serversideencryptionconfiguration
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: ServerSideEncryptionRule
+            /// </summary>
+            public List<ServerSideEncryptionRule> ServerSideEncryptionConfiguration
+            {
+                get;
+                set;
+            }
+        }
+
         public class NotificationFilter
         {
             /// <summary>
@@ -342,6 +372,19 @@ namespace Humidifier.S3
             /// PrimitiveType: String
             /// </summary>
             public dynamic Prefix
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SourceSelectionCriteria
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules.html#cfn-s3-bucket-replicationrule-sourceselectioncriteria
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: SourceSelectionCriteria
+            /// </summary>
+            public SourceSelectionCriteria SourceSelectionCriteria
             {
                 get;
                 set;
@@ -501,6 +544,22 @@ namespace Humidifier.S3
             }
         }
 
+        public class ServerSideEncryptionRule
+        {
+            /// <summary>
+            /// ServerSideEncryptionByDefault
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-serversideencryptionrule.html#cfn-s3-bucket-serversideencryptionrule-serversideencryptionbydefault
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: ServerSideEncryptionByDefault
+            /// </summary>
+            public ServerSideEncryptionByDefault ServerSideEncryptionByDefault
+            {
+                get;
+                set;
+            }
+        }
+
         public class AnalyticsConfiguration
         {
             /// <summary>
@@ -551,6 +610,22 @@ namespace Humidifier.S3
             /// ItemType: TagFilter
             /// </summary>
             public List<TagFilter> TagFilters
+            {
+                get;
+                set;
+            }
+        }
+
+        public class SourceSelectionCriteria
+        {
+            /// <summary>
+            /// SseKmsEncryptedObjects
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-sourceselectioncriteria.html#cfn-s3-bucket-sourceselectioncriteria-ssekmsencryptedobjects
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: SseKmsEncryptedObjects
+            /// </summary>
+            public SseKmsEncryptedObjects SseKmsEncryptedObjects
             {
                 get;
                 set;
@@ -631,6 +706,22 @@ namespace Humidifier.S3
             }
         }
 
+        public class AccessControlTranslation
+        {
+            /// <summary>
+            /// Owner
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-accesscontroltranslation.html#cfn-s3-bucket-accesscontroltranslation-owner
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Owner
+            {
+                get;
+                set;
+            }
+        }
+
         public class VersioningConfiguration
         {
             /// <summary>
@@ -641,6 +732,22 @@ namespace Humidifier.S3
             /// PrimitiveType: String
             /// </summary>
             public dynamic Status
+            {
+                get;
+                set;
+            }
+        }
+
+        public class EncryptionConfiguration
+        {
+            /// <summary>
+            /// ReplicaKmsKeyID
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-encryptionconfiguration.html#cfn-s3-bucket-encryptionconfiguration-replicakmskeyid
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ReplicaKmsKeyID
             {
                 get;
                 set;
@@ -686,6 +793,35 @@ namespace Humidifier.S3
             /// ItemType: TopicConfiguration
             /// </summary>
             public List<TopicConfiguration> TopicConfigurations
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ServerSideEncryptionByDefault
+        {
+            /// <summary>
+            /// KMSMasterKeyID
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-serversideencryptionbydefault.html#cfn-s3-bucket-serversideencryptionbydefault-kmsmasterkeyid
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic KMSMasterKeyID
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SSEAlgorithm
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-serversideencryptionbydefault.html#cfn-s3-bucket-serversideencryptionbydefault-ssealgorithm
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic SSEAlgorithm
             {
                 get;
                 set;
@@ -981,6 +1117,22 @@ namespace Humidifier.S3
             /// ItemType: ReplicationRule
             /// </summary>
             public List<ReplicationRule> Rules
+            {
+                get;
+                set;
+            }
+        }
+
+        public class SseKmsEncryptedObjects
+        {
+            /// <summary>
+            /// Status
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-ssekmsencryptedobjects.html#cfn-s3-bucket-ssekmsencryptedobjects-status
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Status
             {
                 get;
                 set;
@@ -1396,6 +1548,32 @@ namespace Humidifier.S3
         public class ReplicationDestination
         {
             /// <summary>
+            /// AccessControlTranslation
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules-destination.html#cfn-s3-bucket-replicationdestination-accesscontroltranslation
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: AccessControlTranslation
+            /// </summary>
+            public AccessControlTranslation AccessControlTranslation
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Account
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules-destination.html#cfn-s3-bucket-replicationdestination-account
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Account
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// Bucket
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules-destination.html#cfn-s3-bucket-replicationconfiguration-rules-destination-bucket
             /// Required: True
@@ -1403,6 +1581,19 @@ namespace Humidifier.S3
             /// PrimitiveType: String
             /// </summary>
             public dynamic Bucket
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// EncryptionConfiguration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules-destination.html#cfn-s3-bucket-replicationdestination-encryptionconfiguration
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: EncryptionConfiguration
+            /// </summary>
+            public EncryptionConfiguration EncryptionConfiguration
             {
                 get;
                 set;

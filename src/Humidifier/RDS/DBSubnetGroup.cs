@@ -18,6 +18,19 @@ namespace Humidifier.RDS
         }
 
         /// <summary>
+        /// DBSubnetGroupName
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsubnet-group.html#cfn-rds-dbsubnetgroup-dbsubnetgroupname
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic DBSubnetGroupName
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// SubnetIds
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsubnet-group.html#cfn-rds-dbsubnetgroup-subnetids
         /// Required: True

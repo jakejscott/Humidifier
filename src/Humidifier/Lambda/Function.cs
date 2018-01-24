@@ -115,6 +115,19 @@ namespace Humidifier.Lambda
         }
 
         /// <summary>
+        /// ReservedConcurrentExecutions
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-reservedconcurrentexecutions
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Integer
+        /// </summary>
+        public dynamic ReservedConcurrentExecutions
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Role
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-role
         /// Required: True

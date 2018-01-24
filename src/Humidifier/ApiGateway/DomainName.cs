@@ -5,6 +5,14 @@ namespace Humidifier.ApiGateway
 
     public class DomainName : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string DistributionDomainName =  "DistributionDomainName" ;
+            public static string DistributionHostedZoneId =  "DistributionHostedZoneId" ;
+            public static string RegionalDomainName =  "RegionalDomainName" ;
+            public static string RegionalHostedZoneId =  "RegionalHostedZoneId" ;
+        }
+
         /// <summary>
         /// CertificateArn
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-certificatearn
