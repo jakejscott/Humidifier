@@ -506,6 +506,32 @@ namespace Humidifier.CodeBuild
             }
 
             /// <summary>
+            /// GitCloneDepth
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-gitclonedepth
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic GitCloneDepth
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// InsecureSsl
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-insecuressl
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic InsecureSsl
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// Location
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-location
             /// Required: False

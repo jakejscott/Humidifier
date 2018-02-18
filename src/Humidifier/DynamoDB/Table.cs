@@ -81,6 +81,19 @@ namespace Humidifier.DynamoDB
         }
 
         /// <summary>
+        /// SSESpecification
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-ssespecification
+        /// Required: False
+        /// UpdateType: Conditional
+        /// Type: SSESpecification
+        /// </summary>
+        public SSESpecification SSESpecification
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// StreamSpecification
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-streamspecification
         /// Required: False
@@ -375,6 +388,22 @@ namespace Humidifier.DynamoDB
             /// PrimitiveType: String
             /// </summary>
             public dynamic ProjectionType
+            {
+                get;
+                set;
+            }
+        }
+
+        public class SSESpecification
+        {
+            /// <summary>
+            /// SSEEnabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-ssespecification.html#cfn-dynamodb-table-ssespecification-sseenabled
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic SSEEnabled
             {
                 get;
                 set;
