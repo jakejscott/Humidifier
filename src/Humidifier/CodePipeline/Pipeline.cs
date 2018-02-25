@@ -33,13 +33,14 @@ namespace Humidifier.CodePipeline
         }
 
         /// <summary>
-        /// Name
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-name
-        /// Required: False
-        /// UpdateType: Immutable
-        /// PrimitiveType: String
+        /// Stages
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-stages
+        /// Required: True
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: StageDeclaration
         /// </summary>
-        public dynamic Name
+        public List<StageDeclaration> Stages
         {
             get;
             set;
@@ -72,14 +73,13 @@ namespace Humidifier.CodePipeline
         }
 
         /// <summary>
-        /// Stages
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-stages
-        /// Required: True
-        /// UpdateType: Mutable
-        /// Type: List
-        /// ItemType: StageDeclaration
+        /// Name
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-name
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
         /// </summary>
-        public List<StageDeclaration> Stages
+        public dynamic Name
         {
             get;
             set;
@@ -92,7 +92,7 @@ namespace Humidifier.CodePipeline
         {
             /// <summary>
             /// Name
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions-inputartifacts.html#cfn-codepipeline-pipeline-stages-actions-inputartifacts-name
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-inputartifact.html#cfn-codepipeline-pipeline-inputartifact-name
             /// Required: True
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -108,7 +108,7 @@ namespace Humidifier.CodePipeline
         {
             /// <summary>
             /// ActionTypeId
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-actiontypeid
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiondeclaration.html#cfn-codepipeline-pipeline-actiondeclaration-actiontypeid
             /// Required: True
             /// UpdateType: Mutable
             /// Type: ActionTypeId
@@ -121,7 +121,7 @@ namespace Humidifier.CodePipeline
 
             /// <summary>
             /// Configuration
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-configuration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiondeclaration.html#cfn-codepipeline-pipeline-actiondeclaration-configuration
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: Json
@@ -134,7 +134,7 @@ namespace Humidifier.CodePipeline
 
             /// <summary>
             /// InputArtifacts
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-inputartifacts
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiondeclaration.html#cfn-codepipeline-pipeline-actiondeclaration-inputartifacts
             /// Required: False
             /// UpdateType: Mutable
             /// Type: List
@@ -147,21 +147,8 @@ namespace Humidifier.CodePipeline
             }
 
             /// <summary>
-            /// Name
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-name
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Name
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
             /// OutputArtifacts
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-outputartifacts
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiondeclaration.html#cfn-codepipeline-pipeline-actiondeclaration-outputartifacts
             /// Required: False
             /// UpdateType: Mutable
             /// Type: List
@@ -175,7 +162,7 @@ namespace Humidifier.CodePipeline
 
             /// <summary>
             /// RoleArn
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-rolearn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiondeclaration.html#cfn-codepipeline-pipeline-actiondeclaration-rolearn
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -188,7 +175,7 @@ namespace Humidifier.CodePipeline
 
             /// <summary>
             /// RunOrder
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-runorder
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiondeclaration.html#cfn-codepipeline-pipeline-actiondeclaration-runorder
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
@@ -198,27 +185,26 @@ namespace Humidifier.CodePipeline
                 get;
                 set;
             }
+
+            /// <summary>
+            /// Name
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiondeclaration.html#cfn-codepipeline-pipeline-actiondeclaration-name
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Name
+            {
+                get;
+                set;
+            }
         }
 
         public class StageDeclaration
         {
             /// <summary>
-            /// Actions
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages.html#cfn-codepipeline-pipeline-stages-actions
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: ActionDeclaration
-            /// </summary>
-            public List<ActionDeclaration> Actions
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
             /// Blockers
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages.html#cfn-codepipeline-pipeline-stages-blockers
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagedeclaration.html#cfn-codepipeline-pipeline-stagedeclaration-blockers
             /// Required: False
             /// UpdateType: Mutable
             /// Type: List
@@ -231,8 +217,22 @@ namespace Humidifier.CodePipeline
             }
 
             /// <summary>
+            /// Actions
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagedeclaration.html#cfn-codepipeline-pipeline-stagedeclaration-actions
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: ActionDeclaration
+            /// </summary>
+            public List<ActionDeclaration> Actions
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// Name
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages.html#cfn-codepipeline-pipeline-stages-name
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagedeclaration.html#cfn-codepipeline-pipeline-stagedeclaration-name
             /// Required: True
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -247,21 +247,8 @@ namespace Humidifier.CodePipeline
         public class BlockerDeclaration
         {
             /// <summary>
-            /// Name
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-blockers.html#cfn-codepipeline-pipeline-stages-blockers-name
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Name
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
             /// Type
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-blockers.html#cfn-codepipeline-pipeline-stages-blockers-type
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-blockerdeclaration.html#cfn-codepipeline-pipeline-blockerdeclaration-type
             /// Required: True
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -271,26 +258,26 @@ namespace Humidifier.CodePipeline
                 get;
                 set;
             }
+
+            /// <summary>
+            /// Name
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-blockerdeclaration.html#cfn-codepipeline-pipeline-blockerdeclaration-name
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Name
+            {
+                get;
+                set;
+            }
         }
 
         public class StageTransition
         {
             /// <summary>
-            /// Reason
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-disableinboundstagetransitions.html#cfn-codepipeline-pipeline-disableinboundstagetransitions-reason
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Reason
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
             /// StageName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-disableinboundstagetransitions.html#cfn-codepipeline-pipeline-disableinboundstagetransitions-stagename
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagetransition.html#cfn-codepipeline-pipeline-stagetransition-stagename
             /// Required: True
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -300,10 +287,36 @@ namespace Humidifier.CodePipeline
                 get;
                 set;
             }
+
+            /// <summary>
+            /// Reason
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagetransition.html#cfn-codepipeline-pipeline-stagetransition-reason
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Reason
+            {
+                get;
+                set;
+            }
         }
 
         public class ArtifactStore
         {
+            /// <summary>
+            /// Type
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html#cfn-codepipeline-pipeline-artifactstore-type
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Type
+            {
+                get;
+                set;
+            }
+
             /// <summary>
             /// EncryptionKey
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html#cfn-codepipeline-pipeline-artifactstore-encryptionkey
@@ -329,39 +342,13 @@ namespace Humidifier.CodePipeline
                 get;
                 set;
             }
-
-            /// <summary>
-            /// Type
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html#cfn-codepipeline-pipeline-artifactstore-type
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Type
-            {
-                get;
-                set;
-            }
         }
 
         public class ActionTypeId
         {
             /// <summary>
-            /// Category
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions-actiontypeid.html#cfn-codepipeline-pipeline-stages-actions-actiontypeid-category
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Category
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
             /// Owner
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions-actiontypeid.html#cfn-codepipeline-pipeline-stages-actions-actiontypeid-owner
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiontypeid.html#cfn-codepipeline-pipeline-actiontypeid-owner
             /// Required: True
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -373,13 +360,13 @@ namespace Humidifier.CodePipeline
             }
 
             /// <summary>
-            /// Provider
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions-actiontypeid.html#cfn-codepipeline-pipeline-stages-actions-actiontypeid-provider
+            /// Category
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiontypeid.html#cfn-codepipeline-pipeline-actiontypeid-category
             /// Required: True
             /// UpdateType: Mutable
             /// PrimitiveType: String
             /// </summary>
-            public dynamic Provider
+            public dynamic Category
             {
                 get;
                 set;
@@ -387,12 +374,25 @@ namespace Humidifier.CodePipeline
 
             /// <summary>
             /// Version
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions-actiontypeid.html#cfn-codepipeline-pipeline-stages-actions-actiontypeid-version
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiontypeid.html#cfn-codepipeline-pipeline-actiontypeid-version
             /// Required: True
             /// UpdateType: Mutable
             /// PrimitiveType: String
             /// </summary>
             public dynamic Version
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Provider
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiontypeid.html#cfn-codepipeline-pipeline-actiontypeid-provider
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Provider
             {
                 get;
                 set;
@@ -403,7 +403,7 @@ namespace Humidifier.CodePipeline
         {
             /// <summary>
             /// Name
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions-outputartifacts.html#cfn-codepipeline-pipeline-stages-actions-outputartifacts-name
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-outputartifact.html#cfn-codepipeline-pipeline-outputartifact-name
             /// Required: True
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -418,26 +418,26 @@ namespace Humidifier.CodePipeline
         public class EncryptionKey
         {
             /// <summary>
-            /// Id
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore-encryptionkey.html#cfn-codepipeline-pipeline-artifactstore-encryptionkey-id
+            /// Type
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-encryptionkey.html#cfn-codepipeline-pipeline-encryptionkey-type
             /// Required: True
             /// UpdateType: Mutable
             /// PrimitiveType: String
             /// </summary>
-            public dynamic Id
+            public dynamic Type
             {
                 get;
                 set;
             }
 
             /// <summary>
-            /// Type
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore-encryptionkey.html#cfn-codepipeline-pipeline-artifactstore-encryptionkey-type
+            /// Id
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-encryptionkey.html#cfn-codepipeline-pipeline-encryptionkey-id
             /// Required: True
             /// UpdateType: Mutable
             /// PrimitiveType: String
             /// </summary>
-            public dynamic Type
+            public dynamic Id
             {
                 get;
                 set;

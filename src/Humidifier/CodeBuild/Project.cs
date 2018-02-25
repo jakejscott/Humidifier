@@ -11,6 +11,84 @@ namespace Humidifier.CodeBuild
         }
 
         /// <summary>
+        /// Description
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-description
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic Description
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// VpcConfig
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-vpcconfig
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: VpcConfig
+        /// </summary>
+        public VpcConfig VpcConfig
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// EncryptionKey
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-encryptionkey
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic EncryptionKey
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Triggers
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-triggers
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: ProjectTriggers
+        /// </summary>
+        public ProjectTriggers Triggers
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Source
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-source
+        /// Required: True
+        /// UpdateType: Mutable
+        /// Type: Source
+        /// </summary>
+        public Source Source
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Name
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-name
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic Name
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Artifacts
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-artifacts
         /// Required: True
@@ -37,19 +115,6 @@ namespace Humidifier.CodeBuild
         }
 
         /// <summary>
-        /// Description
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-description
-        /// Required: False
-        /// UpdateType: Mutable
-        /// PrimitiveType: String
-        /// </summary>
-        public dynamic Description
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
         /// ServiceRole
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-servicerole
         /// Required: True
@@ -57,19 +122,6 @@ namespace Humidifier.CodeBuild
         /// PrimitiveType: String
         /// </summary>
         public dynamic ServiceRole
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// VpcConfig
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-vpcconfig
-        /// Required: False
-        /// UpdateType: Mutable
-        /// Type: VpcConfig
-        /// </summary>
-        public VpcConfig VpcConfig
         {
             get;
             set;
@@ -89,32 +141,6 @@ namespace Humidifier.CodeBuild
         }
 
         /// <summary>
-        /// EncryptionKey
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-encryptionkey
-        /// Required: False
-        /// UpdateType: Mutable
-        /// PrimitiveType: String
-        /// </summary>
-        public dynamic EncryptionKey
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Source
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-source
-        /// Required: True
-        /// UpdateType: Mutable
-        /// Type: Source
-        /// </summary>
-        public Source Source
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
         /// Tags
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-tags
         /// Required: False
@@ -123,19 +149,6 @@ namespace Humidifier.CodeBuild
         /// ItemType: Tag
         /// </summary>
         public List<Tag> Tags
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Name
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-name
-        /// Required: False
-        /// UpdateType: Immutable
-        /// PrimitiveType: String
-        /// </summary>
-        public dynamic Name
         {
             get;
             set;
@@ -416,6 +429,22 @@ namespace Humidifier.CodeBuild
             /// PrimitiveItemType: String
             /// </summary>
             public dynamic SecurityGroupIds
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ProjectTriggers
+        {
+            /// <summary>
+            /// Webhook
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html#cfn-codebuild-project-projecttriggers-webhook
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Webhook
             {
                 get;
                 set;

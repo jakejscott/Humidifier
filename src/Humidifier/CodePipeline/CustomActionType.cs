@@ -19,20 +19,6 @@ namespace Humidifier.CodePipeline
         }
 
         /// <summary>
-        /// ConfigurationProperties
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-configurationproperties
-        /// Required: False
-        /// UpdateType: Immutable
-        /// Type: List
-        /// ItemType: ConfigurationProperties
-        /// </summary>
-        public List<ConfigurationProperties> ConfigurationProperties
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
         /// InputArtifactDetails
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-inputartifactdetails
         /// Required: True
@@ -40,6 +26,19 @@ namespace Humidifier.CodePipeline
         /// Type: ArtifactDetails
         /// </summary>
         public ArtifactDetails InputArtifactDetails
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Version
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-version
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic Version
         {
             get;
             set;
@@ -59,13 +58,14 @@ namespace Humidifier.CodePipeline
         }
 
         /// <summary>
-        /// Provider
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-provider
-        /// Required: True
+        /// ConfigurationProperties
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-configurationproperties
+        /// Required: False
         /// UpdateType: Immutable
-        /// PrimitiveType: String
+        /// Type: List
+        /// ItemType: ConfigurationProperties
         /// </summary>
-        public dynamic Provider
+        public List<ConfigurationProperties> ConfigurationProperties
         {
             get;
             set;
@@ -85,13 +85,13 @@ namespace Humidifier.CodePipeline
         }
 
         /// <summary>
-        /// Version
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-version
-        /// Required: False
+        /// Provider
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-provider
+        /// Required: True
         /// UpdateType: Immutable
         /// PrimitiveType: String
         /// </summary>
-        public dynamic Version
+        public dynamic Provider
         {
             get;
             set;
@@ -158,19 +158,6 @@ namespace Humidifier.CodePipeline
         public class ArtifactDetails
         {
             /// <summary>
-            /// MaximumCount
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-artifactdetails.html#cfn-codepipeline-customactiontype-artifactdetails-maximumcount
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic MaximumCount
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
             /// MinimumCount
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-artifactdetails.html#cfn-codepipeline-customactiontype-artifactdetails-minimumcount
             /// Required: True
@@ -182,10 +169,49 @@ namespace Humidifier.CodePipeline
                 get;
                 set;
             }
+
+            /// <summary>
+            /// MaximumCount
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-artifactdetails.html#cfn-codepipeline-customactiontype-artifactdetails-maximumcount
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic MaximumCount
+            {
+                get;
+                set;
+            }
         }
 
         public class ConfigurationProperties
         {
+            /// <summary>
+            /// Secret
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-configurationproperties.html#cfn-codepipeline-customactiontype-configurationproperties-secret
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Secret
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Type
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-configurationproperties.html#cfn-codepipeline-customactiontype-configurationproperties-type
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Type
+            {
+                get;
+                set;
+            }
+
             /// <summary>
             /// Description
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-configurationproperties.html#cfn-codepipeline-customactiontype-configurationproperties-description
@@ -194,6 +220,32 @@ namespace Humidifier.CodePipeline
             /// PrimitiveType: String
             /// </summary>
             public dynamic Description
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Required
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-configurationproperties.html#cfn-codepipeline-customactiontype-configurationproperties-required
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Required
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Queryable
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-configurationproperties.html#cfn-codepipeline-customactiontype-configurationproperties-queryable
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Queryable
             {
                 get;
                 set;
@@ -220,58 +272,6 @@ namespace Humidifier.CodePipeline
             /// PrimitiveType: String
             /// </summary>
             public dynamic Name
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Queryable
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-configurationproperties.html#cfn-codepipeline-customactiontype-configurationproperties-queryable
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic Queryable
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Required
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-configurationproperties.html#cfn-codepipeline-customactiontype-configurationproperties-required
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic Required
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Secret
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-configurationproperties.html#cfn-codepipeline-customactiontype-configurationproperties-secret
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic Secret
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Type
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-configurationproperties.html#cfn-codepipeline-customactiontype-configurationproperties-type
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Type
             {
                 get;
                 set;
