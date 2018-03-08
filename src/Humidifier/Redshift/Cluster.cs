@@ -49,6 +49,19 @@ namespace Humidifier.Redshift
         }
 
         /// <summary>
+        /// ClusterIdentifier
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-clusteridentifier
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic ClusterIdentifier
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// ClusterParameterGroupName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-clusterparametergroupname
         /// Required: False

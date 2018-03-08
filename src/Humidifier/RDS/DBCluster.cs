@@ -36,6 +36,19 @@ namespace Humidifier.RDS
         }
 
         /// <summary>
+        /// DBClusterIdentifier
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-dbclusteridentifier
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic DBClusterIdentifier
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// DBClusterParameterGroupName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-dbclusterparametergroupname
         /// Required: False

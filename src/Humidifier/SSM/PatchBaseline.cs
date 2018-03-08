@@ -73,6 +73,19 @@ namespace Humidifier.SSM
         }
 
         /// <summary>
+        /// ApprovedPatchesEnableNonSecurity
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-approvedpatchesenablenonsecurity
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Boolean
+        /// </summary>
+        public dynamic ApprovedPatchesEnableNonSecurity
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// ApprovalRules
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-approvalrules
         /// Required: False
@@ -93,6 +106,20 @@ namespace Humidifier.SSM
         /// Type: PatchFilterGroup
         /// </summary>
         public PatchFilterGroup GlobalFilters
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Sources
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-sources
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: PatchSource
+        /// </summary>
+        public List<PatchSource> Sources
         {
             get;
             set;
@@ -178,6 +205,19 @@ namespace Humidifier.SSM
         public class Rule
         {
             /// <summary>
+            /// EnableNonSecurity
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rule.html#cfn-ssm-patchbaseline-rule-enablenonsecurity
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic EnableNonSecurity
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// PatchFilterGroup
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rule.html#cfn-ssm-patchbaseline-rule-patchfiltergroup
             /// Required: False
@@ -228,6 +268,49 @@ namespace Humidifier.SSM
             /// ItemType: PatchFilter
             /// </summary>
             public List<PatchFilter> PatchFilters
+            {
+                get;
+                set;
+            }
+        }
+
+        public class PatchSource
+        {
+            /// <summary>
+            /// Products
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchsource.html#cfn-ssm-patchbaseline-patchsource-products
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Products
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Configuration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchsource.html#cfn-ssm-patchbaseline-patchsource-configuration
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Configuration
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Name
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchsource.html#cfn-ssm-patchbaseline-patchsource-name
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Name
             {
                 get;
                 set;

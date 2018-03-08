@@ -7,6 +7,7 @@ namespace Humidifier.Elasticsearch
     {
         public static class Attributes
         {
+            public static string Arn =  "Arn" ;
             public static string DomainArn =  "DomainArn" ;
             public static string DomainEndpoint =  "DomainEndpoint" ;
         }

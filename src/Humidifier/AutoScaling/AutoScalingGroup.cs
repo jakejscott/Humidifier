@@ -6,6 +6,19 @@ namespace Humidifier.AutoScaling
     public class AutoScalingGroup : Humidifier.Resource
     {
         /// <summary>
+        /// AutoScalingGroupName
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-autoscaling-autoscalinggroup-autoscalinggroupname
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic AutoScalingGroupName
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// AvailabilityZones
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-availabilityzones
         /// Required: False

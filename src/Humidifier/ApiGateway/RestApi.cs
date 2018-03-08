@@ -11,6 +11,19 @@ namespace Humidifier.ApiGateway
         }
 
         /// <summary>
+        /// ApiKeySourceType
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-apikeysourcetype
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic ApiKeySourceType
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// BinaryMediaTypes
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-binarymediatypes
         /// Required: False
@@ -103,13 +116,13 @@ namespace Humidifier.ApiGateway
         }
 
         /// <summary>
-        /// Mode
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-mode
+        /// MinimumCompressionSize
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-minimumcompressionsize
         /// Required: False
         /// UpdateType: Mutable
-        /// PrimitiveType: String
+        /// PrimitiveType: Integer
         /// </summary>
-        public dynamic Mode
+        public dynamic MinimumCompressionSize
         {
             get;
             set;

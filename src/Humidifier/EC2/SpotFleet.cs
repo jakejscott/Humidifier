@@ -186,6 +186,22 @@ namespace Humidifier.EC2
             }
         }
 
+        public class SpotFleetTagSpecification
+        {
+            /// <summary>
+            /// ResourceType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-tagspecifications.html#cfn-ec2-spotfleet-spotfleettagspecification-resourcetype
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ResourceType
+            {
+                get;
+                set;
+            }
+        }
+
         public class PrivateIpAddressSpecification
         {
             /// <summary>
@@ -397,6 +413,20 @@ namespace Humidifier.EC2
             /// PrimitiveType: String
             /// </summary>
             public dynamic SubnetId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// TagSpecifications
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-tagspecifications
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: SpotFleetTagSpecification
+            /// </summary>
+            public List<SpotFleetTagSpecification> TagSpecifications
             {
                 get;
                 set;
