@@ -21,6 +21,34 @@ namespace Humidifier
         public new static FnEquals Equals(dynamic value1, dynamic value2) => new FnEquals(value1, value2);
         public static FnNot Not(dynamic condition) => new FnNot(condition);
         public static FnOr Or(params dynamic[] conditions) => new FnOr(conditions);
+        public static FnGetCidr GetCidr(dynamic ipBlock, dynamic count, dynamic sizeMask) => new FnGetCidr(ipBlock, count, sizeMask);
+    }
+
+    /// <summary>
+    /// The intrinsic function Fn::GetCidr returns the specified Cidr address block.
+    /// 
+    /// Example: 
+    /// 
+    /// { "Fn:GetCidr": [ipBlock, count, sizeMask] }
+    /// 
+    /// ipBlock: The user-specified default Cidr address block.
+    /// count: The number of subnets' Cidr block wanted. Count can be 1 to 256.
+    /// sizeMask: Optional. The digit covered in the subnet.
+    /// 
+    /// 
+    /// </summary>
+    public class FnGetCidr
+    {
+        public dynamic IpBlock { get; set; }
+        public dynamic Count { get; set; }
+        public dynamic SizeMask { get; set; }
+
+        public FnGetCidr(dynamic ipBlock, dynamic count, dynamic sizeMask)
+        {
+            IpBlock = ipBlock;
+            Count = count;
+            SizeMask = sizeMask;
+        }
     }
 
     /// <summary>
