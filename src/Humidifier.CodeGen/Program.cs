@@ -120,6 +120,25 @@ namespace Humidifier.CodeGen
                     resourceClassDecl = resourceClassDecl.AddMembers(attributesClassDecl);
                 }
 
+                {
+                    var propertyDecAWSType = PropertyDeclaration(ParseTypeName(@"string"), @"AWSTypeName")
+                            .AddModifiers(Token(SyntaxKind.PublicKeyword))
+                            .AddModifiers(Token(SyntaxKind.OverrideKeyword))
+                            .AddAccessorListAccessors(
+                                AccessorDeclaration(SyntaxKind.GetAccessorDeclaration).WithBody(Block(
+                                        ReturnStatement(
+                                            LiteralExpression(
+                                                SyntaxKind.StringLiteralExpression,
+                                                Literal(string.Format(@"@""{0}""", resourceType.Name), resourceType.Name)
+                                            )
+                                        )
+                                    )
+                                )
+                            );
+
+                    resourceClassDecl = resourceClassDecl.AddMembers(propertyDecAWSType);
+                }
+
                 foreach (var property in resourceType.Properties)
                 {
                     var typeName = GetTypeName(property);
