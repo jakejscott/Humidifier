@@ -4,6 +4,14 @@ namespace Humidifier.EC2
 
     public class VPNGatewayRoutePropagation : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EC2::VPNGatewayRoutePropagation";
+            }
+        }
+
         /// <summary>
         /// RouteTableIds
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gatewayrouteprop.html#cfn-ec2-vpngatewayrouteprop-routetableids

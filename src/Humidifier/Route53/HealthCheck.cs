@@ -5,6 +5,14 @@ namespace Humidifier.Route53
 
     public class HealthCheck : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Route53::HealthCheck";
+            }
+        }
+
         /// <summary>
         /// HealthCheckConfig
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-healthcheck.html#cfn-route53-healthcheck-healthcheckconfig

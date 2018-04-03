@@ -4,6 +4,14 @@ namespace Humidifier.IAM
 
     public class Policy : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::IAM::Policy";
+            }
+        }
+
         /// <summary>
         /// Groups
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-groups

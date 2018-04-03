@@ -9,6 +9,14 @@ namespace Humidifier.Logs
             public static string Arn =  "Arn" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Logs::Destination";
+            }
+        }
+
         /// <summary>
         /// DestinationName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-destination.html#cfn-logs-destination-destinationname

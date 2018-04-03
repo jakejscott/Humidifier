@@ -5,6 +5,14 @@ namespace Humidifier.EC2
 
     public class VPNConnection : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EC2::VPNConnection";
+            }
+        }
+
         /// <summary>
         /// CustomerGatewayId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection.html#cfn-ec2-vpnconnection-customergatewayid

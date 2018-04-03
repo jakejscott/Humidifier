@@ -9,6 +9,14 @@ namespace Humidifier.Lambda
             public static string Version =  "Version" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Lambda::Version";
+            }
+        }
+
         /// <summary>
         /// CodeSha256
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html#cfn-lambda-version-codesha256

@@ -4,6 +4,14 @@ namespace Humidifier.EC2
 
     public class Route : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EC2::Route";
+            }
+        }
+
         /// <summary>
         /// DestinationCidrBlock
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-destinationcidrblock

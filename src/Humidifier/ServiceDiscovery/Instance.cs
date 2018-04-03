@@ -4,6 +4,14 @@ namespace Humidifier.ServiceDiscovery
 
     public class Instance : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::ServiceDiscovery::Instance";
+            }
+        }
+
         /// <summary>
         /// InstanceAttributes
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-instance.html#cfn-servicediscovery-instance-instanceattributes

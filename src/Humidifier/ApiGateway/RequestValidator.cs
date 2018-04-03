@@ -4,6 +4,14 @@ namespace Humidifier.ApiGateway
 
     public class RequestValidator : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::ApiGateway::RequestValidator";
+            }
+        }
+
         /// <summary>
         /// Name
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-requestvalidator.html#cfn-apigateway-requestvalidator-name

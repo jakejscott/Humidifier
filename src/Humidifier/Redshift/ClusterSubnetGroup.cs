@@ -4,6 +4,14 @@ namespace Humidifier.Redshift
 
     public class ClusterSubnetGroup : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Redshift::ClusterSubnetGroup";
+            }
+        }
+
         /// <summary>
         /// Description
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersubnetgroup.html#cfn-redshift-clustersubnetgroup-description

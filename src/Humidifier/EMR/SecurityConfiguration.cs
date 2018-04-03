@@ -4,6 +4,14 @@ namespace Humidifier.EMR
 
     public class SecurityConfiguration : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EMR::SecurityConfiguration";
+            }
+        }
+
         /// <summary>
         /// Name
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-securityconfiguration.html#cfn-emr-securityconfiguration-name

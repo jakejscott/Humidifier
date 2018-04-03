@@ -4,6 +4,14 @@ namespace Humidifier.AutoScaling
 
     public class LifecycleHook : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::AutoScaling::LifecycleHook";
+            }
+        }
+
         /// <summary>
         /// AutoScalingGroupName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-lifecyclehook.html#cfn-as-lifecyclehook-autoscalinggroupname

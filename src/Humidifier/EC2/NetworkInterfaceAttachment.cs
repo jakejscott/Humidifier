@@ -4,6 +4,14 @@ namespace Humidifier.EC2
 
     public class NetworkInterfaceAttachment : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EC2::NetworkInterfaceAttachment";
+            }
+        }
+
         /// <summary>
         /// DeleteOnTermination
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface-attachment.html#cfn-ec2-network-interface-attachment-deleteonterm

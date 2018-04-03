@@ -5,6 +5,14 @@ namespace Humidifier.ApiGateway
 
     public class DocumentationPart : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::ApiGateway::DocumentationPart";
+            }
+        }
+
         /// <summary>
         /// Location
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationpart.html#cfn-apigateway-documentationpart-location

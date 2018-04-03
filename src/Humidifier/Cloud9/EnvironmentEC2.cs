@@ -11,6 +11,14 @@ namespace Humidifier.Cloud9
             public static string Name =  "Name" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Cloud9::EnvironmentEC2";
+            }
+        }
+
         /// <summary>
         /// Repositories
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-repositories

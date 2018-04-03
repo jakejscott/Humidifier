@@ -4,6 +4,14 @@ namespace Humidifier.RDS
 
     public class DBSecurityGroupIngress : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::RDS::DBSecurityGroupIngress";
+            }
+        }
+
         /// <summary>
         /// CIDRIP
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-security-group-ingress.html#cfn-rds-securitygroup-ingress-cidrip

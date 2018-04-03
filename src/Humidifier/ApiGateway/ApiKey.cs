@@ -5,6 +5,14 @@ namespace Humidifier.ApiGateway
 
     public class ApiKey : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::ApiGateway::ApiKey";
+            }
+        }
+
         /// <summary>
         /// CustomerId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-customerid

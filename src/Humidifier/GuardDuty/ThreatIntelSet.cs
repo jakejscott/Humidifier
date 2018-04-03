@@ -4,6 +4,14 @@ namespace Humidifier.GuardDuty
 
     public class ThreatIntelSet : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::GuardDuty::ThreatIntelSet";
+            }
+        }
+
         /// <summary>
         /// Format
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-threatintelset.html#cfn-guardduty-threatintelset-format

@@ -5,6 +5,14 @@ namespace Humidifier.AutoScaling
 
     public class LaunchConfiguration : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::AutoScaling::LaunchConfiguration";
+            }
+        }
+
         /// <summary>
         /// AssociatePublicIpAddress
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cf-as-launchconfig-associatepubip

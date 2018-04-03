@@ -4,6 +4,14 @@ namespace Humidifier.Lambda
 
     public class Permission : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Lambda::Permission";
+            }
+        }
+
         /// <summary>
         /// Action
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-permission.html#cfn-lambda-permission-action

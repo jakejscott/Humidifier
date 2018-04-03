@@ -4,6 +4,14 @@ namespace Humidifier.EC2
 
     public class CustomerGateway : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EC2::CustomerGateway";
+            }
+        }
+
         /// <summary>
         /// BgpAsn
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customer-gateway.html#cfn-ec2-customergateway-bgpasn

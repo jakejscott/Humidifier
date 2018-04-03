@@ -11,6 +11,14 @@ namespace Humidifier.Config
             public static string ConfigRuleId =  "ConfigRuleId" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Config::ConfigRule";
+            }
+        }
+
         /// <summary>
         /// ConfigRuleName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-configrulename

@@ -4,6 +4,14 @@ namespace Humidifier.ApiGateway
 
     public class Model : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::ApiGateway::Model";
+            }
+        }
+
         /// <summary>
         /// ContentType
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-model.html#cfn-apigateway-model-contenttype

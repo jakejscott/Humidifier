@@ -4,6 +4,14 @@ namespace Humidifier.CloudFormation
 
     public class Stack : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::CloudFormation::Stack";
+            }
+        }
+
         /// <summary>
         /// NotificationARNs
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html#cfn-cloudformation-stack-notificationarns

@@ -4,6 +4,14 @@ namespace Humidifier.DMS
 
     public class EventSubscription : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::DMS::EventSubscription";
+            }
+        }
+
         /// <summary>
         /// SourceType
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-eventsubscription.html#cfn-dms-eventsubscription-sourcetype

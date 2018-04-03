@@ -4,6 +4,14 @@ namespace Humidifier.EC2
 
     public class Volume : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EC2::Volume";
+            }
+        }
+
         /// <summary>
         /// AutoEnableIO
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html#cfn-ec2-ebs-volume-autoenableio

@@ -5,6 +5,14 @@ namespace Humidifier.AutoScaling
 
     public class AutoScalingGroup : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::AutoScaling::AutoScalingGroup";
+            }
+        }
+
         /// <summary>
         /// AutoScalingGroupName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-autoscaling-autoscalinggroup-autoscalinggroupname

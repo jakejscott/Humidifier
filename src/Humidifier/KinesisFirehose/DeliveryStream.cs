@@ -10,6 +10,14 @@ namespace Humidifier.KinesisFirehose
             public static string Arn =  "Arn" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::KinesisFirehose::DeliveryStream";
+            }
+        }
+
         /// <summary>
         /// DeliveryStreamName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-deliverystreamname

@@ -10,6 +10,14 @@ namespace Humidifier.ApiGateway
             public static string RootResourceId =  "RootResourceId" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::ApiGateway::RestApi";
+            }
+        }
+
         /// <summary>
         /// ApiKeySourceType
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-apikeysourcetype

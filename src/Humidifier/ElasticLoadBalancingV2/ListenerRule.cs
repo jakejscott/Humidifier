@@ -5,6 +5,14 @@ namespace Humidifier.ElasticLoadBalancingV2
 
     public class ListenerRule : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::ElasticLoadBalancingV2::ListenerRule";
+            }
+        }
+
         /// <summary>
         /// Actions
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenerrule.html#cfn-elasticloadbalancingv2-listenerrule-actions

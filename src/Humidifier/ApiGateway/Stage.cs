@@ -5,6 +5,14 @@ namespace Humidifier.ApiGateway
 
     public class Stage : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::ApiGateway::Stage";
+            }
+        }
+
         /// <summary>
         /// CacheClusterEnabled
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-stage.html#cfn-apigateway-stage-cacheclusterenabled

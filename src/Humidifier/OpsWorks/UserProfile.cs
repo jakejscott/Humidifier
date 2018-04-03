@@ -9,6 +9,14 @@ namespace Humidifier.OpsWorks
             public static string SshUsername =  "SshUsername" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::OpsWorks::UserProfile";
+            }
+        }
+
         /// <summary>
         /// AllowSelfManagement
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html#cfn-opsworks-userprofile-allowselfmanagement

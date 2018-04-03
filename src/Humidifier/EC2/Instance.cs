@@ -14,6 +14,14 @@ namespace Humidifier.EC2
             public static string PublicIp =  "PublicIp" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EC2::Instance";
+            }
+        }
+
         /// <summary>
         /// AdditionalInfo
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-additionalinfo

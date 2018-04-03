@@ -4,6 +4,14 @@ namespace Humidifier.KMS
 
     public class Alias : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::KMS::Alias";
+            }
+        }
+
         /// <summary>
         /// AliasName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-alias.html#cfn-kms-alias-aliasname

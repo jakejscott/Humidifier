@@ -5,6 +5,14 @@ namespace Humidifier.ElasticBeanstalk
 
     public class Application : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::ElasticBeanstalk::Application";
+            }
+        }
+
         /// <summary>
         /// ApplicationName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk.html#cfn-elasticbeanstalk-application-name

@@ -5,6 +5,14 @@ namespace Humidifier.Config
 
     public class ConfigurationRecorder : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Config::ConfigurationRecorder";
+            }
+        }
+
         /// <summary>
         /// Name
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationrecorder.html#cfn-config-configurationrecorder-name

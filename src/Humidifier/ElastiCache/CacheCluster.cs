@@ -8,6 +8,14 @@ namespace Humidifier.ElastiCache
         {
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::ElastiCache::CacheCluster";
+            }
+        }
+
         /// <summary>
         /// AZMode
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html#cfn-elasticache-cachecluster-azmode

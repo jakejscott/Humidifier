@@ -4,6 +4,14 @@ namespace Humidifier.SNS
 
     public class TopicPolicy : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::SNS::TopicPolicy";
+            }
+        }
+
         /// <summary>
         /// PolicyDocument
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-policy.html#cfn-sns-topicpolicy-policydocument

@@ -10,6 +10,14 @@ namespace Humidifier.ECR
             public static string Arn =  "Arn" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::ECR::Repository";
+            }
+        }
+
         /// <summary>
         /// LifecyclePolicy
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html#cfn-ecr-repository-lifecyclepolicy

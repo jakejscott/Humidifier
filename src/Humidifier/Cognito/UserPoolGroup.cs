@@ -4,6 +4,14 @@ namespace Humidifier.Cognito
 
     public class UserPoolGroup : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Cognito::UserPoolGroup";
+            }
+        }
+
         /// <summary>
         /// GroupName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html#cfn-cognito-userpoolgroup-groupname

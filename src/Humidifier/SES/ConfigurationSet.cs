@@ -4,6 +4,14 @@ namespace Humidifier.SES
 
     public class ConfigurationSet : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::SES::ConfigurationSet";
+            }
+        }
+
         /// <summary>
         /// Name
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationset.html#cfn-ses-configurationset-name

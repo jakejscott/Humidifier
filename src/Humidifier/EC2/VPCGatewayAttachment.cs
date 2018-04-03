@@ -4,6 +4,14 @@ namespace Humidifier.EC2
 
     public class VPCGatewayAttachment : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EC2::VPCGatewayAttachment";
+            }
+        }
+
         /// <summary>
         /// InternetGatewayId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-gateway-attachment.html#cfn-ec2-vpcgatewayattachment-internetgatewayid

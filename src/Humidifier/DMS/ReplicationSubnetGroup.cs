@@ -4,6 +4,14 @@ namespace Humidifier.DMS
 
     public class ReplicationSubnetGroup : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::DMS::ReplicationSubnetGroup";
+            }
+        }
+
         /// <summary>
         /// ReplicationSubnetGroupDescription
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html#cfn-dms-replicationsubnetgroup-replicationsubnetgroupdescription

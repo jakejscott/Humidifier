@@ -5,6 +5,14 @@ namespace Humidifier.EC2
 
     public class NetworkAclEntry : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EC2::NetworkAclEntry";
+            }
+        }
+
         /// <summary>
         /// CidrBlock
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl-entry.html#cfn-ec2-networkaclentry-cidrblock

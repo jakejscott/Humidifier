@@ -5,6 +5,14 @@ namespace Humidifier.CodePipeline
 
     public class CustomActionType : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::CodePipeline::CustomActionType";
+            }
+        }
+
         /// <summary>
         /// Category
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-category

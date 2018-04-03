@@ -10,6 +10,14 @@ namespace Humidifier.CloudWatch
             public static string Arn =  "Arn" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::CloudWatch::Alarm";
+            }
+        }
+
         /// <summary>
         /// ActionsEnabled
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-actionsenabled

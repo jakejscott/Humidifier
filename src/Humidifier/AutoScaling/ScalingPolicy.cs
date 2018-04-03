@@ -5,6 +5,14 @@ namespace Humidifier.AutoScaling
 
     public class ScalingPolicy : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::AutoScaling::ScalingPolicy";
+            }
+        }
+
         /// <summary>
         /// AdjustmentType
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#cfn-as-scalingpolicy-adjustmenttype

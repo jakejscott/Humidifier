@@ -5,6 +5,14 @@ namespace Humidifier.EMR
 
     public class Step : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EMR::Step";
+            }
+        }
+
         /// <summary>
         /// ActionOnFailure
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-step.html#cfn-elasticmapreduce-step-actiononfailure

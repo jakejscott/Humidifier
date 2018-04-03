@@ -8,6 +8,14 @@ namespace Humidifier.RDS
         {
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::RDS::DBInstance";
+            }
+        }
+
         /// <summary>
         /// AllocatedStorage
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-allocatedstorage

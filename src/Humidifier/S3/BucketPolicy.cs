@@ -4,6 +4,14 @@ namespace Humidifier.S3
 
     public class BucketPolicy : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::S3::BucketPolicy";
+            }
+        }
+
         /// <summary>
         /// Bucket
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-policy.html#aws-properties-s3-policy-bucket

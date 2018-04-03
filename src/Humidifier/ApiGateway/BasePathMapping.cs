@@ -4,6 +4,14 @@ namespace Humidifier.ApiGateway
 
     public class BasePathMapping : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::ApiGateway::BasePathMapping";
+            }
+        }
+
         /// <summary>
         /// BasePath
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-basepathmapping.html#cfn-apigateway-basepathmapping-basepath

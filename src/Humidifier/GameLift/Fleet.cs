@@ -5,6 +5,14 @@ namespace Humidifier.GameLift
 
     public class Fleet : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::GameLift::Fleet";
+            }
+        }
+
         /// <summary>
         /// BuildId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-buildid

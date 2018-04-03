@@ -4,6 +4,14 @@ namespace Humidifier.ApiGateway
 
     public class Account : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::ApiGateway::Account";
+            }
+        }
+
         /// <summary>
         /// CloudWatchRoleArn
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-account.html#cfn-apigateway-account-cloudwatchrolearn

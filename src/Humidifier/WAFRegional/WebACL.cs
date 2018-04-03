@@ -5,6 +5,14 @@ namespace Humidifier.WAFRegional
 
     public class WebACL : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::WAFRegional::WebACL";
+            }
+        }
+
         /// <summary>
         /// MetricName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-webacl.html#cfn-wafregional-webacl-metricname

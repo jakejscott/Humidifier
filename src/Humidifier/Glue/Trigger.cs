@@ -5,6 +5,14 @@ namespace Humidifier.Glue
 
     public class Trigger : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Glue::Trigger";
+            }
+        }
+
         /// <summary>
         /// Type
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html#cfn-glue-trigger-type

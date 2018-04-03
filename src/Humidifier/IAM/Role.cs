@@ -10,6 +10,14 @@ namespace Humidifier.IAM
             public static string Arn =  "Arn" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::IAM::Role";
+            }
+        }
+
         /// <summary>
         /// AssumeRolePolicyDocument
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-assumerolepolicydocument

@@ -4,6 +4,14 @@ namespace Humidifier.OpsWorks
 
     public class ElasticLoadBalancerAttachment : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::OpsWorks::ElasticLoadBalancerAttachment";
+            }
+        }
+
         /// <summary>
         /// ElasticLoadBalancerName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-elbattachment.html#cfn-opsworks-elbattachment-elbname

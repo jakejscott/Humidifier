@@ -4,6 +4,14 @@ namespace Humidifier.EC2
 
     public class VPNConnectionRoute : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EC2::VPNConnectionRoute";
+            }
+        }
+
         /// <summary>
         /// DestinationCidrBlock
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection-route.html#cfn-ec2-vpnconnectionroute-cidrblock

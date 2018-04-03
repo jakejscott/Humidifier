@@ -13,6 +13,14 @@ namespace Humidifier.EC2
             public static string Ipv6CidrBlocks =  "Ipv6CidrBlocks" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EC2::VPC";
+            }
+        }
+
         /// <summary>
         /// CidrBlock
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html#cfn-aws-ec2-vpc-cidrblock

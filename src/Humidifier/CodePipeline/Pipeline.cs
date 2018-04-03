@@ -5,6 +5,14 @@ namespace Humidifier.CodePipeline
 
     public class Pipeline : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::CodePipeline::Pipeline";
+            }
+        }
+
         /// <summary>
         /// ArtifactStore
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-artifactstore

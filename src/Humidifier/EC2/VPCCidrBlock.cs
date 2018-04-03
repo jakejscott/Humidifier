@@ -4,6 +4,14 @@ namespace Humidifier.EC2
 
     public class VPCCidrBlock : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EC2::VPCCidrBlock";
+            }
+        }
+
         /// <summary>
         /// AmazonProvidedIpv6CidrBlock
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-amazonprovidedipv6cidrblock

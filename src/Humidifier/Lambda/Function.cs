@@ -10,6 +10,14 @@ namespace Humidifier.Lambda
             public static string Arn =  "Arn" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Lambda::Function";
+            }
+        }
+
         /// <summary>
         /// Code
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-code

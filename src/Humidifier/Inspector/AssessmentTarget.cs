@@ -9,6 +9,14 @@ namespace Humidifier.Inspector
             public static string Arn =  "Arn" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Inspector::AssessmentTarget";
+            }
+        }
+
         /// <summary>
         /// AssessmentTargetName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttarget.html#cfn-inspector-assessmenttarget-assessmenttargetname

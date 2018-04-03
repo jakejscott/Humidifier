@@ -4,6 +4,14 @@ namespace Humidifier.ElastiCache
 
     public class SubnetGroup : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::ElastiCache::SubnetGroup";
+            }
+        }
+
         /// <summary>
         /// CacheSubnetGroupName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-subnetgroup.html#cfn-elasticache-subnetgroup-cachesubnetgroupname

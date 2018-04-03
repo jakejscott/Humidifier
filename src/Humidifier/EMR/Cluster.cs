@@ -10,6 +10,14 @@ namespace Humidifier.EMR
             public static string MasterPublicDNS =  "MasterPublicDNS" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EMR::Cluster";
+            }
+        }
+
         /// <summary>
         /// AdditionalInfo
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-additionalinfo

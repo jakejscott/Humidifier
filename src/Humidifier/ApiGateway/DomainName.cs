@@ -13,6 +13,14 @@ namespace Humidifier.ApiGateway
             public static string RegionalHostedZoneId =  "RegionalHostedZoneId" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::ApiGateway::DomainName";
+            }
+        }
+
         /// <summary>
         /// CertificateArn
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-certificatearn

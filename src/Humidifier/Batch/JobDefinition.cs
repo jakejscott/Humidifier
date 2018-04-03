@@ -5,6 +5,14 @@ namespace Humidifier.Batch
 
     public class JobDefinition : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Batch::JobDefinition";
+            }
+        }
+
         /// <summary>
         /// Type
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-type

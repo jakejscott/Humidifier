@@ -5,6 +5,14 @@ namespace Humidifier.WAFRegional
 
     public class XssMatchSet : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::WAFRegional::XssMatchSet";
+            }
+        }
+
         /// <summary>
         /// XssMatchTuples
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-xssmatchset.html#cfn-wafregional-xssmatchset-xssmatchtuples

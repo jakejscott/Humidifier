@@ -4,6 +4,14 @@ namespace Humidifier.CodeDeploy
 
     public class Application : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::CodeDeploy::Application";
+            }
+        }
+
         /// <summary>
         /// ApplicationName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-application.html#cfn-codedeploy-application-applicationname

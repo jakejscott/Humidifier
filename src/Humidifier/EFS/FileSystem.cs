@@ -5,6 +5,14 @@ namespace Humidifier.EFS
 
     public class FileSystem : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EFS::FileSystem";
+            }
+        }
+
         /// <summary>
         /// Encrypted
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-encrypted

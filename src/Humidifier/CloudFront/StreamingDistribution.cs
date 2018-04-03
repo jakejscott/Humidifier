@@ -10,6 +10,14 @@ namespace Humidifier.CloudFront
             public static string DomainName =  "DomainName" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::CloudFront::StreamingDistribution";
+            }
+        }
+
         /// <summary>
         /// StreamingDistributionConfig
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-streamingdistribution.html#cfn-cloudfront-streamingdistribution-streamingdistributionconfig

@@ -9,6 +9,14 @@ namespace Humidifier.ECS
             public static string Arn =  "Arn" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::ECS::Cluster";
+            }
+        }
+
         /// <summary>
         /// ClusterName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-cluster.html#cfn-ecs-cluster-clustername

@@ -4,6 +4,14 @@ namespace Humidifier.RDS
 
     public class EventSubscription : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::RDS::EventSubscription";
+            }
+        }
+
         /// <summary>
         /// Enabled
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-eventsubscription.html#cfn-rds-eventsubscription-enabled

@@ -5,6 +5,14 @@ namespace Humidifier.EMR
 
     public class InstanceFleetConfig : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EMR::InstanceFleetConfig";
+            }
+        }
+
         /// <summary>
         /// ClusterId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-instancefleetconfig.html#cfn-elasticmapreduce-instancefleetconfig-clusterid

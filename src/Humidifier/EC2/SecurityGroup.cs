@@ -11,6 +11,14 @@ namespace Humidifier.EC2
             public static string VpcId =  "VpcId" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EC2::SecurityGroup";
+            }
+        }
+
         /// <summary>
         /// GroupDescription
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html#cfn-ec2-securitygroup-groupdescription

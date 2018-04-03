@@ -5,6 +5,14 @@ namespace Humidifier.ApplicationAutoScaling
 
     public class ScalableTarget : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::ApplicationAutoScaling::ScalableTarget";
+            }
+        }
+
         /// <summary>
         /// MaxCapacity
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html#cfn-applicationautoscaling-scalabletarget-maxcapacity

@@ -4,6 +4,14 @@ namespace Humidifier.ApiGateway
 
     public class Resource : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::ApiGateway::Resource";
+            }
+        }
+
         /// <summary>
         /// ParentId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-resource.html#cfn-apigateway-resource-parentid

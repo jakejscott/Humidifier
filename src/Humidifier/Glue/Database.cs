@@ -5,6 +5,14 @@ namespace Humidifier.Glue
 
     public class Database : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Glue::Database";
+            }
+        }
+
         /// <summary>
         /// DatabaseInput
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-database.html#cfn-glue-database-databaseinput
