@@ -1,6 +1,7 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
   "Description": "Description",
+  "Transform": "AWS::Serverless-2016-10-31",
   "Parameters": {
     "Environment": {
       "Type": "String",
@@ -433,6 +434,14 @@
       "Metadata": {
         "Key1": "Value1",
         "Key2": "Value2"
+      }
+    },
+    "ServerlessFunction": {
+      "Type": "AWS::Serverless::Function",
+      "Properties": {
+        "Handler": "index.handler",
+        "Runtime": "nodejs8.10",
+        "CodeUri": "'s3://my-bucket/function.zip"
       }
     }
   },

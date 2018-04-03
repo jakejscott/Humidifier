@@ -28,7 +28,8 @@ namespace Humidifier.ConsoleTest
             var stack = new Stack
             {
                 AWSTemplateFormatVersion = "2010-09-09",
-                Description = "Description"
+                Description = "Description",
+                Transform = "AWS::Serverless-2016-10-31"
             };
 
             //
@@ -419,6 +420,18 @@ namespace Humidifier.ConsoleTest
                 }
             }, 
             metadata: new { Key1 = "Value1", Key2 = "Value2" });
+
+
+            // TODO: Support Serverless Application Model
+            // https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md
+            // Example of a custom resource.
+
+            stack.Resources.Add("ServerlessFunction", new Humidifier.Serverless.Function
+            {
+                Handler = "index.handler",
+                Runtime = "nodejs8.10",
+                CodeUri = "'s3://my-bucket/function.zip"
+            });
 
             return stack;
         }
