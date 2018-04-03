@@ -5,6 +5,14 @@ namespace Humidifier.KinesisAnalytics
 
     public class ApplicationReferenceDataSource : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::KinesisAnalytics::ApplicationReferenceDataSource";
+            }
+        }
+
         /// <summary>
         /// ApplicationName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-applicationreferencedatasource.html#cfn-kinesisanalytics-applicationreferencedatasource-applicationname

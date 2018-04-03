@@ -5,6 +5,14 @@ namespace Humidifier.SSM
 
     public class MaintenanceWindowTask : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::SSM::MaintenanceWindowTask";
+            }
+        }
+
         /// <summary>
         /// MaxErrors
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-maxerrors

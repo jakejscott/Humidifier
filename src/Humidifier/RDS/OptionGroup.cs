@@ -5,6 +5,14 @@ namespace Humidifier.RDS
 
     public class OptionGroup : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::RDS::OptionGroup";
+            }
+        }
+
         /// <summary>
         /// EngineName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-enginename

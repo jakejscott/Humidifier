@@ -4,6 +4,14 @@ namespace Humidifier.DAX
 
     public class ParameterGroup : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::DAX::ParameterGroup";
+            }
+        }
+
         /// <summary>
         /// ParameterNameValues
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-parametergroup.html#cfn-dax-parametergroup-parameternamevalues

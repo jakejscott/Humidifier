@@ -4,6 +4,14 @@ namespace Humidifier.IAM
 
     public class UserToGroupAddition : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::IAM::UserToGroupAddition";
+            }
+        }
+
         /// <summary>
         /// GroupName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html#cfn-iam-addusertogroup-groupname

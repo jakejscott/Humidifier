@@ -4,6 +4,14 @@ namespace Humidifier.EC2
 
     public class VPCEndpoint : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EC2::VPCEndpoint";
+            }
+        }
+
         /// <summary>
         /// PolicyDocument
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-policydocument

@@ -9,6 +9,14 @@ namespace Humidifier.Redshift
         {
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Redshift::Cluster";
+            }
+        }
+
         /// <summary>
         /// AllowVersionUpgrade
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-allowversionupgrade

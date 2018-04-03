@@ -5,6 +5,14 @@ namespace Humidifier.SSM
 
     public class Association : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::SSM::Association";
+            }
+        }
+
         /// <summary>
         /// AssociationName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-associationname

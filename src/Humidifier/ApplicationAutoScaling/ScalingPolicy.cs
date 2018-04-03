@@ -5,6 +5,14 @@ namespace Humidifier.ApplicationAutoScaling
 
     public class ScalingPolicy : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::ApplicationAutoScaling::ScalingPolicy";
+            }
+        }
+
         /// <summary>
         /// PolicyName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html#cfn-applicationautoscaling-scalingpolicy-policyname

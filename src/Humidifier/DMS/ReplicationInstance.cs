@@ -10,6 +10,14 @@ namespace Humidifier.DMS
             public static string ReplicationInstancePrivateIpAddresses =  "ReplicationInstancePrivateIpAddresses" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::DMS::ReplicationInstance";
+            }
+        }
+
         /// <summary>
         /// ReplicationInstanceIdentifier
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-replicationinstanceidentifier

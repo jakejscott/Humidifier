@@ -4,6 +4,14 @@ namespace Humidifier.IoT
 
     public class PolicyPrincipalAttachment : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::IoT::PolicyPrincipalAttachment";
+            }
+        }
+
         /// <summary>
         /// PolicyName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-policyprincipalattachment.html#cfn-iot-policyprincipalattachment-policyname

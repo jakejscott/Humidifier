@@ -4,6 +4,14 @@ namespace Humidifier.EC2
 
     public class NetworkInterfacePermission : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EC2::NetworkInterfacePermission";
+            }
+        }
+
         /// <summary>
         /// AwsAccountId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterfacepermission.html#cfn-ec2-networkinterfacepermission-awsaccountid

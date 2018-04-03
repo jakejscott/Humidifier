@@ -10,6 +10,14 @@ namespace Humidifier.IAM
             public static string Arn =  "Arn" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::IAM::Group";
+            }
+        }
+
         /// <summary>
         /// GroupName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html#cfn-iam-group-groupname

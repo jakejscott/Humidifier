@@ -4,6 +4,14 @@ namespace Humidifier.EC2
 
     public class DHCPOptions : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EC2::DHCPOptions";
+            }
+        }
+
         /// <summary>
         /// DomainName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcp-options.html#cfn-ec2-dhcpoptions-domainname

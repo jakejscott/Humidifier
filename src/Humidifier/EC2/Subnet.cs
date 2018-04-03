@@ -12,6 +12,14 @@ namespace Humidifier.EC2
             public static string VpcId =  "VpcId" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EC2::Subnet";
+            }
+        }
+
         /// <summary>
         /// AssignIpv6AddressOnCreation
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-assignipv6addressoncreation

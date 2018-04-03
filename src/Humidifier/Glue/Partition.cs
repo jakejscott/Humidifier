@@ -5,6 +5,14 @@ namespace Humidifier.Glue
 
     public class Partition : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Glue::Partition";
+            }
+        }
+
         /// <summary>
         /// TableName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-partition.html#cfn-glue-partition-tablename

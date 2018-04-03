@@ -5,6 +5,14 @@ namespace Humidifier.KinesisAnalytics
 
     public class ApplicationOutput : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::KinesisAnalytics::ApplicationOutput";
+            }
+        }
+
         /// <summary>
         /// ApplicationName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-applicationoutput.html#cfn-kinesisanalytics-applicationoutput-applicationname

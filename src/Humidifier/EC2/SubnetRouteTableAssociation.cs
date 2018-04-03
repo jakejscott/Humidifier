@@ -4,6 +4,14 @@ namespace Humidifier.EC2
 
     public class SubnetRouteTableAssociation : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EC2::SubnetRouteTableAssociation";
+            }
+        }
+
         /// <summary>
         /// RouteTableId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet-route-table-assoc.html#cfn-ec2-subnetroutetableassociation-routetableid

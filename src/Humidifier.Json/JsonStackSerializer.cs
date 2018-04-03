@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Reflection;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
@@ -21,7 +22,7 @@ namespace Humidifier.Json
                 DateFormatHandling = DateFormatHandling.IsoDateFormat,
             };
 
-            settings.ContractResolver = new FixPropertyNameWithUnderscoreContractResolver();
+            settings.ContractResolver = new JsonStackSerializerContractResolver();
 
             settings.Converters.Add(new ConditionConverter());
 
@@ -85,7 +86,8 @@ namespace Humidifier.Json
                     var typeInfo = kvp.Value.GetType();
                     Debug.Assert(typeInfo.Namespace != null);
 
-                    var awsTypeName = typeInfo.Namespace.Replace("Humidifier.", "AWS::") + "::" + typeInfo.Name;
+                    // var awsTypeName = typeInfo.Namespace.Replace("Humidifier.", "AWS::") + "::" + typeInfo.Name;
+                    var awsTypeName = resource.AWSTypeName;
 
                     var condition = stack.GetCondition(kvp.Key);
                     var dependsOn = stack.GetDependsOn(kvp.Key);
@@ -115,7 +117,11 @@ namespace Humidifier.Json
             return result;
         }
 
-        private class FixPropertyNameWithUnderscoreContractResolver : DefaultContractResolver
+        /// <summary>
+        /// Omits AWSTypeName property
+        /// Removes trailing underscore from property names
+        /// </summary>
+        private class JsonStackSerializerContractResolver : DefaultContractResolver
         {
             protected override IList<JsonProperty> CreateProperties(Type type, MemberSerialization memberSerialization)
             {
@@ -130,6 +136,16 @@ namespace Humidifier.Json
                 }
 
                 return properties;
+            }
+
+            protected override JsonProperty CreateProperty(MemberInfo member, MemberSerialization memberSerialization)
+            {
+                var property = base.CreateProperty(member, memberSerialization);
+
+                if (property.PropertyName == @"AWSTypeName")
+                    property.ShouldSerialize = instance => { return false; };
+
+                return property;
             }
         }
 

@@ -4,6 +4,14 @@ namespace Humidifier.OpsWorks
 
     public class Volume : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::OpsWorks::Volume";
+            }
+        }
+
         /// <summary>
         /// Ec2VolumeId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-volume.html#cfn-opsworks-volume-ec2volumeid

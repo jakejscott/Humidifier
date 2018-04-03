@@ -5,6 +5,14 @@ namespace Humidifier.Glue
 
     public class Connection : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Glue::Connection";
+            }
+        }
+
         /// <summary>
         /// ConnectionInput
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-connection.html#cfn-glue-connection-connectioninput

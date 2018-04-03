@@ -4,6 +4,14 @@ namespace Humidifier.EC2
 
     public class VolumeAttachment : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EC2::VolumeAttachment";
+            }
+        }
+
         /// <summary>
         /// Device
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volumeattachment.html#cfn-ec2-ebs-volumeattachment-device

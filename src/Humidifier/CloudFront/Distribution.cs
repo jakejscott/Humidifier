@@ -10,6 +10,14 @@ namespace Humidifier.CloudFront
             public static string DomainName =  "DomainName" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::CloudFront::Distribution";
+            }
+        }
+
         /// <summary>
         /// DistributionConfig
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html#cfn-cloudfront-distribution-distributionconfig

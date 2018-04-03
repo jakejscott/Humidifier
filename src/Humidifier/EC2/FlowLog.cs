@@ -4,6 +4,14 @@ namespace Humidifier.EC2
 
     public class FlowLog : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EC2::FlowLog";
+            }
+        }
+
         /// <summary>
         /// DeliverLogsPermissionArn
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html#cfn-ec2-flowlog-deliverlogspermissionarn

@@ -4,6 +4,14 @@ namespace Humidifier.EC2
 
     public class VPCPeeringConnection : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EC2::VPCPeeringConnection";
+            }
+        }
+
         /// <summary>
         /// PeerOwnerId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html#cfn-ec2-vpcpeeringconnection-peerownerid

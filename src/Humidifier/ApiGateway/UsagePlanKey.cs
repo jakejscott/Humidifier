@@ -4,6 +4,14 @@ namespace Humidifier.ApiGateway
 
     public class UsagePlanKey : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::ApiGateway::UsagePlanKey";
+            }
+        }
+
         /// <summary>
         /// KeyId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplankey.html#cfn-apigateway-usageplankey-keyid

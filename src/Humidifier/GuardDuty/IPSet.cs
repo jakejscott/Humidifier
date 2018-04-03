@@ -4,6 +4,14 @@ namespace Humidifier.GuardDuty
 
     public class IPSet : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::GuardDuty::IPSet";
+            }
+        }
+
         /// <summary>
         /// Format
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-ipset.html#cfn-guardduty-ipset-format

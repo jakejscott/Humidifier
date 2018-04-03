@@ -5,6 +5,14 @@ namespace Humidifier.Glue
 
     public class Job : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Glue::Job";
+            }
+        }
+
         /// <summary>
         /// Role
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-role

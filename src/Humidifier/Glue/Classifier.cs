@@ -5,6 +5,14 @@ namespace Humidifier.Glue
 
     public class Classifier : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Glue::Classifier";
+            }
+        }
+
         /// <summary>
         /// GrokClassifier
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-classifier.html#cfn-glue-classifier-grokclassifier

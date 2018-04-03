@@ -4,6 +4,14 @@ namespace Humidifier.Lambda
 
     public class EventSourceMapping : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Lambda::EventSourceMapping";
+            }
+        }
+
         /// <summary>
         /// BatchSize
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-batchsize

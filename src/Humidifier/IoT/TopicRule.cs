@@ -10,6 +10,14 @@ namespace Humidifier.IoT
             public static string Arn =  "Arn" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::IoT::TopicRule";
+            }
+        }
+
         /// <summary>
         /// RuleName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicrule.html#cfn-iot-topicrule-rulename

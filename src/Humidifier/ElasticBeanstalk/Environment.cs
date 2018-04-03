@@ -10,6 +10,14 @@ namespace Humidifier.ElasticBeanstalk
             public static string EndpointURL =  "EndpointURL" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::ElasticBeanstalk::Environment";
+            }
+        }
+
         /// <summary>
         /// ApplicationName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-applicationname

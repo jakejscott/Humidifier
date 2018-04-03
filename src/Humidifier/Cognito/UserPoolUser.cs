@@ -5,6 +5,14 @@ namespace Humidifier.Cognito
 
     public class UserPoolUser : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Cognito::UserPoolUser";
+            }
+        }
+
         /// <summary>
         /// ValidationData
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-validationdata

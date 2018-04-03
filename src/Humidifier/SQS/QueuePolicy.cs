@@ -4,6 +4,14 @@ namespace Humidifier.SQS
 
     public class QueuePolicy : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::SQS::QueuePolicy";
+            }
+        }
+
         /// <summary>
         /// PolicyDocument
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-policy.html#cfn-sqs-queuepolicy-policydoc

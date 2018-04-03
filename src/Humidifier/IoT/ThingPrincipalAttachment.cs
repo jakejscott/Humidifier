@@ -4,6 +4,14 @@ namespace Humidifier.IoT
 
     public class ThingPrincipalAttachment : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::IoT::ThingPrincipalAttachment";
+            }
+        }
+
         /// <summary>
         /// Principal
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thingprincipalattachment.html#cfn-iot-thingprincipalattachment-principal

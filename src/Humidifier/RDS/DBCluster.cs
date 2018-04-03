@@ -8,6 +8,14 @@ namespace Humidifier.RDS
         {
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::RDS::DBCluster";
+            }
+        }
+
         /// <summary>
         /// AvailabilityZones
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-availabilityzones

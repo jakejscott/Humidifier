@@ -5,6 +5,14 @@ namespace Humidifier.Cognito
 
     public class IdentityPoolRoleAttachment : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Cognito::IdentityPoolRoleAttachment";
+            }
+        }
+
         /// <summary>
         /// RoleMappings
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolroleattachment.html#cfn-cognito-identitypoolroleattachment-rolemappings

@@ -4,6 +4,14 @@ namespace Humidifier.EC2
 
     public class SecurityGroupIngress : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EC2::SecurityGroupIngress";
+            }
+        }
+
         /// <summary>
         /// CidrIp
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-cidrip

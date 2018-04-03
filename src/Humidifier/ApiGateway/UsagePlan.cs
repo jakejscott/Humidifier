@@ -5,6 +5,14 @@ namespace Humidifier.ApiGateway
 
     public class UsagePlan : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::ApiGateway::UsagePlan";
+            }
+        }
+
         /// <summary>
         /// ApiStages
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-apistages

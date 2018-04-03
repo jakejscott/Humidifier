@@ -5,6 +5,14 @@ namespace Humidifier.SES
 
     public class ConfigurationSetEventDestination : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::SES::ConfigurationSetEventDestination";
+            }
+        }
+
         /// <summary>
         /// ConfigurationSetName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationseteventdestination.html#cfn-ses-configurationseteventdestination-configurationsetname

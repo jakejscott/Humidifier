@@ -5,6 +5,14 @@ namespace Humidifier.Route53
 
     public class RecordSet : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Route53::RecordSet";
+            }
+        }
+
         /// <summary>
         /// AliasTarget
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-aliastarget

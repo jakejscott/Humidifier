@@ -4,6 +4,14 @@ namespace Humidifier.AutoScaling
 
     public class ScheduledAction : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::AutoScaling::ScheduledAction";
+            }
+        }
+
         /// <summary>
         /// AutoScalingGroupName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-scheduledaction.html#cfn-as-scheduledaction-asgname

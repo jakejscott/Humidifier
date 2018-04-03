@@ -5,6 +5,14 @@ namespace Humidifier.CodeDeploy
 
     public class DeploymentConfig : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::CodeDeploy::DeploymentConfig";
+            }
+        }
+
         /// <summary>
         /// DeploymentConfigName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentconfig.html#cfn-codedeploy-deploymentconfig-deploymentconfigname

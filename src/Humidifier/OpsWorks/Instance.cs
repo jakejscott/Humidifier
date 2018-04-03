@@ -14,6 +14,14 @@ namespace Humidifier.OpsWorks
             public static string PublicIp =  "PublicIp" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::OpsWorks::Instance";
+            }
+        }
+
         /// <summary>
         /// AgentVersion
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html#cfn-opsworks-instance-agentversion

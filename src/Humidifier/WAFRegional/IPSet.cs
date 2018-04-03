@@ -5,6 +5,14 @@ namespace Humidifier.WAFRegional
 
     public class IPSet : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::WAFRegional::IPSet";
+            }
+        }
+
         /// <summary>
         /// IPSetDescriptors
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-ipset.html#cfn-wafregional-ipset-ipsetdescriptors

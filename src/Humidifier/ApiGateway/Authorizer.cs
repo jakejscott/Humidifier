@@ -4,6 +4,14 @@ namespace Humidifier.ApiGateway
 
     public class Authorizer : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::ApiGateway::Authorizer";
+            }
+        }
+
         /// <summary>
         /// AuthType
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html#cfn-apigateway-authorizer-authtype

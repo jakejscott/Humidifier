@@ -9,6 +9,14 @@ namespace Humidifier.EC2
             public static string AssociationId =  "AssociationId" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EC2::SubnetNetworkAclAssociation";
+            }
+        }
+
         /// <summary>
         /// NetworkAclId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet-network-acl-assoc.html#cfn-ec2-subnetnetworkaclassociation-networkaclid

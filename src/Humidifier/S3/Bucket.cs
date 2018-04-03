@@ -13,6 +13,14 @@ namespace Humidifier.S3
             public static string WebsiteURL =  "WebsiteURL" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::S3::Bucket";
+            }
+        }
+
         /// <summary>
         /// AccelerateConfiguration
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-accelerateconfiguration

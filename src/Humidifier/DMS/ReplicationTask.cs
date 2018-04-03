@@ -4,6 +4,14 @@ namespace Humidifier.DMS
 
     public class ReplicationTask : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::DMS::ReplicationTask";
+            }
+        }
+
         /// <summary>
         /// ReplicationTaskSettings
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-replicationtasksettings

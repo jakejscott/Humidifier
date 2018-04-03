@@ -5,6 +5,14 @@ namespace Humidifier.CodeDeploy
 
     public class DeploymentGroup : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::CodeDeploy::DeploymentGroup";
+            }
+        }
+
         /// <summary>
         /// AlarmConfiguration
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-alarmconfiguration

@@ -10,6 +10,14 @@ namespace Humidifier.CloudFront
             public static string S3CanonicalUserId =  "S3CanonicalUserId" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::CloudFront::CloudFrontOriginAccessIdentity";
+            }
+        }
+
         /// <summary>
         /// CloudFrontOriginAccessIdentityConfig
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-cloudfrontoriginaccessidentity.html#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig

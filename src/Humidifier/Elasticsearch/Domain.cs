@@ -12,6 +12,14 @@ namespace Humidifier.Elasticsearch
             public static string DomainEndpoint =  "DomainEndpoint" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Elasticsearch::Domain";
+            }
+        }
+
         /// <summary>
         /// AccessPolicies
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-accesspolicies

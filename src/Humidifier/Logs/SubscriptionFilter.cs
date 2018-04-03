@@ -4,6 +4,14 @@ namespace Humidifier.Logs
 
     public class SubscriptionFilter : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Logs::SubscriptionFilter";
+            }
+        }
+
         /// <summary>
         /// DestinationArn
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-subscriptionfilter.html#cfn-cwl-subscriptionfilter-destinationarn

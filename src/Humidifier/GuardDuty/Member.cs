@@ -4,6 +4,14 @@ namespace Humidifier.GuardDuty
 
     public class Member : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::GuardDuty::Member";
+            }
+        }
+
         /// <summary>
         /// Status
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-member.html#cfn-guardduty-member-status

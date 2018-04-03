@@ -4,6 +4,14 @@ namespace Humidifier.CloudWatch
 
     public class Dashboard : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::CloudWatch::Dashboard";
+            }
+        }
+
         /// <summary>
         /// DashboardName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-dashboard.html#cfn-cloudwatch-dashboard-dashboardname

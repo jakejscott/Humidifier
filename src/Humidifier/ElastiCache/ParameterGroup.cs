@@ -4,6 +4,14 @@ namespace Humidifier.ElastiCache
 
     public class ParameterGroup : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::ElastiCache::ParameterGroup";
+            }
+        }
+
         /// <summary>
         /// CacheParameterGroupFamily
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-parameter-group.html#cfn-elasticache-parametergroup-cacheparametergroupfamily

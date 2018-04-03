@@ -5,6 +5,14 @@ namespace Humidifier.Batch
 
     public class ComputeEnvironment : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Batch::ComputeEnvironment";
+            }
+        }
+
         /// <summary>
         /// Type
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html#cfn-batch-computeenvironment-type

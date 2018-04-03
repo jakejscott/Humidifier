@@ -5,6 +5,14 @@ namespace Humidifier.WAFRegional
 
     public class Rule : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::WAFRegional::Rule";
+            }
+        }
+
         /// <summary>
         /// MetricName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-rule.html#cfn-wafregional-rule-metricname

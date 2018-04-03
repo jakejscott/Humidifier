@@ -11,6 +11,14 @@ namespace Humidifier.CloudTrail
             public static string SnsTopicArn =  "SnsTopicArn" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::CloudTrail::Trail";
+            }
+        }
+
         /// <summary>
         /// CloudWatchLogsLogGroupArn
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-cloudwatchlogsloggrouparn

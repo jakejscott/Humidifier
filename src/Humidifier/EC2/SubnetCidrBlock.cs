@@ -4,6 +4,14 @@ namespace Humidifier.EC2
 
     public class SubnetCidrBlock : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EC2::SubnetCidrBlock";
+            }
+        }
+
         /// <summary>
         /// Ipv6CidrBlock
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetcidrblock.html#cfn-ec2-subnetcidrblock-ipv6cidrblock

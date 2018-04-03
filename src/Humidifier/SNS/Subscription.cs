@@ -4,6 +4,14 @@ namespace Humidifier.SNS
 
     public class Subscription : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::SNS::Subscription";
+            }
+        }
+
         /// <summary>
         /// Endpoint
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-endpoint

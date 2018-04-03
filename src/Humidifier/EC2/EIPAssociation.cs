@@ -4,6 +4,14 @@ namespace Humidifier.EC2
 
     public class EIPAssociation : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EC2::EIPAssociation";
+            }
+        }
+
         /// <summary>
         /// AllocationId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip-association.html#cfn-ec2-eipassociation-allocationid

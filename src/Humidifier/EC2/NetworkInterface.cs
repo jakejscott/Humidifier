@@ -11,6 +11,14 @@ namespace Humidifier.EC2
             public static string SecondaryPrivateIpAddresses =  "SecondaryPrivateIpAddresses" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EC2::NetworkInterface";
+            }
+        }
+
         /// <summary>
         /// Description
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html#cfn-awsec2networkinterface-description

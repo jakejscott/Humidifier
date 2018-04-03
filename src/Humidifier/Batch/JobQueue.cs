@@ -5,6 +5,14 @@ namespace Humidifier.Batch
 
     public class JobQueue : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Batch::JobQueue";
+            }
+        }
+
         /// <summary>
         /// ComputeEnvironmentOrder
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-computeenvironmentorder

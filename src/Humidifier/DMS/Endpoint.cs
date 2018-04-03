@@ -10,6 +10,14 @@ namespace Humidifier.DMS
             public static string ExternalId =  "ExternalId" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::DMS::Endpoint";
+            }
+        }
+
         /// <summary>
         /// KmsKeyId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-kmskeyid

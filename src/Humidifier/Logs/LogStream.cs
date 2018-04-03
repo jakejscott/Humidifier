@@ -4,6 +4,14 @@ namespace Humidifier.Logs
 
     public class LogStream : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Logs::LogStream";
+            }
+        }
+
         /// <summary>
         /// LogGroupName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-logstream.html#cfn-logs-logstream-loggroupname

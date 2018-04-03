@@ -4,6 +4,14 @@ namespace Humidifier.EC2
 
     public class NetworkAcl : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EC2::NetworkAcl";
+            }
+        }
+
         /// <summary>
         /// Tags
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl.html#cfn-ec2-networkacl-tags

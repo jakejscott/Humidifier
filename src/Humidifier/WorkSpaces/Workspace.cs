@@ -4,6 +4,14 @@ namespace Humidifier.WorkSpaces
 
     public class Workspace : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::WorkSpaces::Workspace";
+            }
+        }
+
         /// <summary>
         /// BundleId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-bundleid

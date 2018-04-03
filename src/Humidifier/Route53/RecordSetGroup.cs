@@ -5,6 +5,14 @@ namespace Humidifier.Route53
 
     public class RecordSetGroup : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Route53::RecordSetGroup";
+            }
+        }
+
         /// <summary>
         /// Comment
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordsetgroup.html#cfn-route53-recordsetgroup-comment

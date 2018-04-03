@@ -9,6 +9,14 @@ namespace Humidifier.Inspector
             public static string Arn =  "Arn" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Inspector::ResourceGroup";
+            }
+        }
+
         /// <summary>
         /// ResourceGroupTags
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-resourcegroup.html#cfn-inspector-resourcegroup-resourcegrouptags

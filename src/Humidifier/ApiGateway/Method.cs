@@ -5,6 +5,14 @@ namespace Humidifier.ApiGateway
 
     public class Method : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::ApiGateway::Method";
+            }
+        }
+
         /// <summary>
         /// ApiKeyRequired
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html#cfn-apigateway-method-apikeyrequired

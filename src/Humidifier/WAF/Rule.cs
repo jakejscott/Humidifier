@@ -5,6 +5,14 @@ namespace Humidifier.WAF
 
     public class Rule : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::WAF::Rule";
+            }
+        }
+
         /// <summary>
         /// MetricName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-rule.html#cfn-waf-rule-metricname

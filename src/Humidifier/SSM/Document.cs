@@ -4,6 +4,14 @@ namespace Humidifier.SSM
 
     public class Document : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::SSM::Document";
+            }
+        }
+
         /// <summary>
         /// Content
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html#cfn-ssm-document-content

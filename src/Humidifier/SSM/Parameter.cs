@@ -10,6 +10,14 @@ namespace Humidifier.SSM
             public static string Value =  "Value" ;
         }
 
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::SSM::Parameter";
+            }
+        }
+
         /// <summary>
         /// Type
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html#cfn-ssm-parameter-type

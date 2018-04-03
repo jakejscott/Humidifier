@@ -5,6 +5,14 @@ namespace Humidifier.ECS
 
     public class TaskDefinition : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::ECS::TaskDefinition";
+            }
+        }
+
         /// <summary>
         /// ContainerDefinitions
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-containerdefinitions

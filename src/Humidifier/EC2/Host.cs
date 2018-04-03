@@ -4,6 +4,14 @@ namespace Humidifier.EC2
 
     public class Host : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EC2::Host";
+            }
+        }
+
         /// <summary>
         /// AutoPlacement
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html#cfn-ec2-host-autoplacement

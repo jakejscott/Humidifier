@@ -5,6 +5,14 @@ namespace Humidifier.Logs
 
     public class MetricFilter : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Logs::MetricFilter";
+            }
+        }
+
         /// <summary>
         /// FilterPattern
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html#cfn-cwl-metricfilter-filterpattern

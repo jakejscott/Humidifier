@@ -4,6 +4,14 @@ namespace Humidifier.GuardDuty
 
     public class Master : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::GuardDuty::Master";
+            }
+        }
+
         /// <summary>
         /// DetectorId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-master.html#cfn-guardduty-master-detectorid

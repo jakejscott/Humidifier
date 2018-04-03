@@ -4,6 +4,14 @@ namespace Humidifier.RDS
 
     public class DBSubnetGroup : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::RDS::DBSubnetGroup";
+            }
+        }
+
         /// <summary>
         /// DBSubnetGroupDescription
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsubnet-group.html#cfn-rds-dbsubnetgroup-dbsubnetgroupdescription

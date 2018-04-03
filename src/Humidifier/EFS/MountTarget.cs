@@ -4,6 +4,14 @@ namespace Humidifier.EFS
 
     public class MountTarget : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::EFS::MountTarget";
+            }
+        }
+
         /// <summary>
         /// FileSystemId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html#cfn-efs-mounttarget-filesystemid

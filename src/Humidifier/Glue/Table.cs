@@ -5,6 +5,14 @@ namespace Humidifier.Glue
 
     public class Table : Humidifier.Resource
     {
+        public override string AWSTypeName
+        {
+            get
+            {
+                return @"AWS::Glue::Table";
+            }
+        }
+
         /// <summary>
         /// TableInput
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-tableinput
