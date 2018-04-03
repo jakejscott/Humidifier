@@ -11,7 +11,7 @@ namespace Humidifier.Json
 {
     public class JsonStackSerializer : IStackSerializer
     {
-        private static JsonSerializerSettings settings;
+        private static readonly JsonSerializerSettings settings;
 
         static JsonStackSerializer()
         {
@@ -86,9 +86,6 @@ namespace Humidifier.Json
                     var typeInfo = kvp.Value.GetType();
                     Debug.Assert(typeInfo.Namespace != null);
 
-                    // var awsTypeName = typeInfo.Namespace.Replace("Humidifier.", "AWS::") + "::" + typeInfo.Name;
-                    var awsTypeName = resource.AWSTypeName;
-
                     var condition = stack.GetCondition(kvp.Key);
                     var dependsOn = stack.GetDependsOn(kvp.Key);
 
@@ -99,7 +96,7 @@ namespace Humidifier.Json
 
                     var resourceJson = new ResourceJson
                     {
-                        Type = awsTypeName,
+                        Type = resource.AWSTypeName,
                         Condition = condition,
                         Properties = resource,
                         DependsOn = dependsOn,
@@ -117,10 +114,6 @@ namespace Humidifier.Json
             return result;
         }
 
-        /// <summary>
-        /// Omits AWSTypeName property
-        /// Removes trailing underscore from property names
-        /// </summary>
         private class JsonStackSerializerContractResolver : DefaultContractResolver
         {
             protected override IList<JsonProperty> CreateProperties(Type type, MemberSerialization memberSerialization)
@@ -129,6 +122,7 @@ namespace Humidifier.Json
 
                 foreach (var jsonProperty in properties)
                 {
+                    // Removes trailing underscore from property names
                     if (jsonProperty.PropertyName.EndsWith("_"))
                     {
                         jsonProperty.PropertyName = jsonProperty.PropertyName.TrimEnd('_');
@@ -142,6 +136,7 @@ namespace Humidifier.Json
             {
                 var property = base.CreateProperty(member, memberSerialization);
 
+                // Omits AWSTypeName property
                 if (property.PropertyName == @"AWSTypeName")
                     property.ShouldSerialize = instance => { return false; };
 
@@ -154,7 +149,6 @@ namespace Humidifier.Json
             public string AWSTemplateFormatVersion { get; set; }
             public string Description { get; set; }
             public string Transform { get; set; }
-
             public Dictionary<string, Parameter> Parameters { get; set; }
             public Dictionary<string, ResourceJson> Resources { get; set; }
             public Dictionary<string, Output> Outputs { get; set; }
