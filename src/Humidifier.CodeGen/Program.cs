@@ -33,7 +33,12 @@ namespace Humidifier.CodeGen
 
             foreach (var directory in Directory.GetDirectories(humidifierPath))
             {
-                if (directory.EndsWith("bin") || directory.EndsWith("obj")) continue;
+                if (directory.EndsWith("bin") || directory.EndsWith("obj"))
+                    continue;
+
+                if (directory.Contains("Serverless"))
+                    continue;
+
                 Directory.Delete(directory, true);
             }
 
