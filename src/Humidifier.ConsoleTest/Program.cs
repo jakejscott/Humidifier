@@ -449,6 +449,9 @@ namespace Humidifier.ConsoleTest
             Fn.Sub("${AWS::StackName}-${AWS::Region}-bucket");
             Fn.Select("1", Fn.Split("|", "a|b|c"));
 
+            // CidrBlock: !Select [1, !Cidr [!Ref cidrBlock, !Ref count, !Ref maskSizeForIPv4]]
+            Fn.Cidr("a", "b", "c");
+
             // Because JSON doesn't allow newlines, there's a known hack where you can join multiple lines together using Fn::Join
             Fn.Base64(Fn.Join("",
                 "#!/bin/bash -e\n",
