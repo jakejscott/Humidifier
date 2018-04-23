@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Humidifier",
+  "classifications": [
+    "AWS",
+    "Lambda",
+    "Serverless"
+  ],
+  "name": "Humidifier Solution Template",
+  "identity": "Humidifier.Solution.Template.CSharp",
+  "groupIdentity": "Humidifier.Solution.Template",
+  "shortName": "humidifier.sln",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "ProjectBaseName",
+  "preferNameDirectory": true
+}
