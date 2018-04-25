@@ -15,5 +15,50 @@
     "type": "project"
   },
   "sourceName": "ProjectBaseName",
-  "preferNameDirectory": true
+  "preferNameDirectory": true,
+  "symbols": {
+    "env": {
+      "type": "parameter",
+      "datatype": "text",
+      "replaces": "$env",
+      "defaultValue": "test",
+      "fileRename": "$env"
+    },
+    "region": {
+      "type": "parameter",
+      "datatype": "text",
+      "replaces": "$region",
+      "defaultValue": "us-west-2"
+    },
+    "stack": {
+      "type": "parameter",
+      "datatype": "text",
+      "replaces": "$stack",
+      "defaultValue": "stack"
+    },
+    "profile": {
+      "type": "parameter",
+      "datatype": "text",
+      "replaces": "$profile",
+      "defaultValue": "default"
+    },
+    "build_config": {
+      "type": "parameter",
+      "datatype": "text",
+      "replaces": "$build_config",
+      "defaultValue": "Release"
+    },
+    "team": {
+      "type": "parameter",
+      "datatype": "text",
+      "replaces": "$team",
+      "defaultValue": "team"
+    },
+    "email": {
+      "type": "parameter",
+      "datatype": "text",
+      "replaces": "$email",
+      "defaultValue": "email@example.com"
+    }    
+  }
 }

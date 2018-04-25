@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "deploy-base-$env": {
+      "commandName": "Project",
+      "commandLineArgs": "deploy-base --env=$env"
+    },
+    "deploy-lambda-$env": {
+      "commandName": "Project",
+      "commandLineArgs": "deploy-lambda --env=$env"
+    }
+  }
+}
