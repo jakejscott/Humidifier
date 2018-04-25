@@ -35,7 +35,9 @@ namespace ProjectBaseName.DeployTool
                 cli.HelpOption("-?|-h|--help");
 
                 Register(cli, log, "deploy-base", async context => await BaseStack.Deploy(log, context));
-                // Register(cli, log, "deploy-lambda", async context => await BaseStack.Deploy(log, context));
+                Register(cli, log, "deploy-simple", async context => await SimpleStack.Deploy(log, context));
+
+                Register(cli, log, "invoke-simple", async context => await SimpleStack.Invoke(log, context));
 
                 Register(cli, log, "secrets-encrypt", async context => await Secrets.Encrypt(log, context), login: false);
                 Register(cli, log, "secrets-decrypt", async context => await Secrets.Decrypt(log, context), login: false);

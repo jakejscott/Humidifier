@@ -4,9 +4,13 @@
       "commandName": "Project",
       "commandLineArgs": "deploy-base --env=$env"
     },
-    "deploy-lambda-$env": {
+    "deploy-simple-$env": {
       "commandName": "Project",
-      "commandLineArgs": "deploy-lambda --env=$env"
+      "commandLineArgs": "deploy-simple --env=$env"
+    },
+    "invoke-simple-$env": {
+      "commandName": "Project",
+      "commandLineArgs": "invoke-simple --env=$env"
     }
   }
 }

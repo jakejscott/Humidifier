@@ -28,6 +28,10 @@
     <PackageReference Include="Humidifier" Version="0.2.5" />
     <PackageReference Include="Humidifier.Json" Version="0.2.5" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectBaseName.Lambda.Common\ProjectBaseName.Lambda.Common.csproj" />
+  </ItemGroup>
   
 
 </Project>

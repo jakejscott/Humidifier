@@ -10,7 +10,7 @@ namespace ProjectBaseName.DeployTool.Stacks
 {
     public static class BaseStack
     {
-        static string Name(Config config) => config.Stack + "-base-" + config.Env;
+        public static string Name(Config config) => config.Stack + "-base-" + config.Env;
 
         public static async Task<bool> Deploy(ILogger log, Context context)
         {

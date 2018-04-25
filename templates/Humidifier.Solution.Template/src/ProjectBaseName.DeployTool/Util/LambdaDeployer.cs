@@ -21,7 +21,7 @@ namespace ProjectBaseName.DeployTool.Util
             var zipPath = Path.Combine(cwd, zipName);
             var templateName = $"{stackName}-{ticks}.template";
 
-            parameters["CodeS3Key"] = zipName;
+            parameters["DeploymentsKey"] = zipName;
 
             try
             {

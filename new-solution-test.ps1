@@ -7,7 +7,7 @@ $build_config = "Debug"
 $team = "example"
 $email = "example@example.com"
 
-Remove-Item $projectName -ErrorAction Ignore -Recurse
+Remove-Item $projectName -ErrorAction Ignore -Force -Recurse
 
 dotnet new humidifier.sln --name $projectName --output $projectName --env $env --region $region --stack $stack --profile $profile --build_config $build_config --team $team --email $email
 # dotnet new humidifier.sln --name $projectName --output $projectName

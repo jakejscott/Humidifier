@@ -6,7 +6,9 @@ param(
   [parameter(position = 1, mandatory = $true)]
   [validateSet(
       'deploy-base',
-      'deploy-lambda',
+      'deploy-simple',
+      'invoke-simple',
+      
       'secrets-encrypt',
       'secrets-decrypt',
       'secrets-upload'
