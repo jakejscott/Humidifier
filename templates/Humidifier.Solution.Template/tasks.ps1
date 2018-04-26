@@ -8,7 +8,7 @@ param(
       'deploy-base',
       'deploy-simple',
       'invoke-simple',
-      
+      'tests',
       'secrets-encrypt',
       'secrets-decrypt',
       'secrets-upload'
@@ -16,7 +16,11 @@ param(
   [string] $command
 )
 
-$project = "./src/ProjectBaseName.DeployTool/ProjectBaseName.DeployTool.csproj"
-$cmd = "dotnet run --project $project $command --env=$_env --no-launch-profile"
-Write-Host "$cmd" -ForegroundColor GREEN
-Invoke-Expression $cmd
+if ($command -eq "tests") {
+  dotnet test .\src\ProjectBaseName.Tests
+} else {
+  $project = ".\src\ProjectBaseName.DeployTool\ProjectBaseName.DeployTool.csproj"
+  $cmd = "dotnet run --project $project $command --env=$_env --no-launch-profile"
+  Write-Host "$cmd" -ForegroundColor GREEN
+  Invoke-Expression $cmd
+}
