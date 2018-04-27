@@ -4,7 +4,7 @@
     <id>Humidifier.Templates</id>
     <version>1.0.0</version>
     <description>Humidifier templates.</description>
-    <authors>Humidifier</authors>
+    <authors>Jake Scott</authors>
     <packageTypes>
       <packageType name="Template" />
     </packageTypes>
