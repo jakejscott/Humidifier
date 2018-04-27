@@ -19,10 +19,10 @@ namespace ProjectBaseName.Tests
 
             var function = new Function(cloudwatch);
 
-            SimpleFunctionArgs args = new SimpleFunctionArgs { Name = "Bob" };
+            SimpleFunctionArgs args = new SimpleFunctionArgs { Name = "ProjectBaseName" };
             SimpleFunctionResult result = await function.Handler(args, context);
 
-            Assert.Equal("Hello, Bob", result.Message);
+            Assert.Equal("Hello, ProjectBaseName", result.Message);
         }
     }
 }

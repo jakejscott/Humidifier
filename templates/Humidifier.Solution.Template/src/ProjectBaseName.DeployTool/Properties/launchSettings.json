@@ -11,6 +11,14 @@
     "invoke-simple-$env": {
       "commandName": "Project",
       "commandLineArgs": "invoke-simple --env=$env"
+    },
+    "destroy-base-$env": {
+      "commandName": "Project",
+      "commandLineArgs": "destroy-base --env=$env"
+    },
+    "destroy-simple-$env": {
+      "commandName": "Project",
+      "commandLineArgs": "destroy-simple --env=$env"
     }
   }
 }

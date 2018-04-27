@@ -20,44 +20,44 @@
     "env": {
       "type": "parameter",
       "datatype": "text",
-      "replaces": "$env",
+      "replaces": "$env$",
       "defaultValue": "test",
-      "fileRename": "$env"
+      "fileRename": "$env$"
     },
     "region": {
       "type": "parameter",
       "datatype": "text",
-      "replaces": "$region",
+      "replaces": "$region$",
       "defaultValue": "us-west-2"
     },
     "stack": {
       "type": "parameter",
       "datatype": "text",
-      "replaces": "$stack",
+      "replaces": "$stack$",
       "defaultValue": "stack"
     },
     "profile": {
       "type": "parameter",
       "datatype": "text",
-      "replaces": "$profile",
+      "replaces": "$profile$",
       "defaultValue": "default"
     },
     "build_config": {
       "type": "parameter",
       "datatype": "text",
-      "replaces": "$build_config",
-      "defaultValue": "Release"
+      "replaces": "$build_config$",
+      "defaultValue": "Debug"
     },
     "team": {
       "type": "parameter",
       "datatype": "text",
-      "replaces": "$team",
+      "replaces": "$team$",
       "defaultValue": "team"
     },
     "email": {
       "type": "parameter",
       "datatype": "text",
-      "replaces": "$email",
+      "replaces": "$email$",
       "defaultValue": "email@example.com"
     }    
   }

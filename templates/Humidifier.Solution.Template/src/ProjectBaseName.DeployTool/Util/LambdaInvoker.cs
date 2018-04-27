@@ -9,12 +9,10 @@ using Serilog;
 
 namespace ProjectBaseName.DeployTool.Util
 {
-    public class LambdaInvoker
+    public static class LambdaInvoker
     {
         public static async Task<TResult> Invoke<TArgs, TResult>(ILogger log, Context context, TArgs args, string functionName)
         {
-            log.Information("Invoking lambda. Args: {@args}", args);
-
             var jsonSettings = new JsonSerializerSettings
             {
                 TypeNameHandling = TypeNameHandling.None,
@@ -39,7 +37,7 @@ namespace ProjectBaseName.DeployTool.Util
             var bytes = Convert.FromBase64String(response.LogResult);
             var logs = Encoding.UTF8.GetString(bytes);
 
-            log.Information("Logs:\n\n" + logs + "\n\n");
+            log.Information("Logs:\n" + logs);
 
             if (!string.IsNullOrWhiteSpace(response.FunctionError))
             {

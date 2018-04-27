@@ -37,6 +37,9 @@ namespace ProjectBaseName.DeployTool
                 Register(cli, log, "deploy-base", async context => await BaseStack.Deploy(log, context));
                 Register(cli, log, "deploy-simple", async context => await SimpleStack.Deploy(log, context));
 
+                Register(cli, log, "destroy-base", async context => await BaseStack.Destroy(log, context));
+                Register(cli, log, "destroy-simple", async context => await SimpleStack.Destroy(log, context));
+
                 Register(cli, log, "invoke-simple", async context => await SimpleStack.Invoke(log, context));
 
                 Register(cli, log, "secrets-encrypt", async context => await Secrets.Encrypt(log, context), login: false);

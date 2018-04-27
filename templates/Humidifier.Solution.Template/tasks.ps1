@@ -1,7 +1,7 @@
 param(
   [parameter(position = 0, mandatory = $true)]
-  [validateSet('$env')]
-  [string] $_env,
+  [validateSet('$env$')]
+  [string] $env,
   
   [parameter(position = 1, mandatory = $true)]
   [validateSet(
@@ -11,7 +11,9 @@ param(
       'tests',
       'secrets-encrypt',
       'secrets-decrypt',
-      'secrets-upload'
+      'secrets-upload',
+      'destroy-simple',
+      'destroy-base'
     )]
   [string] $command
 )
@@ -20,7 +22,7 @@ if ($command -eq "tests") {
   dotnet test .\src\ProjectBaseName.Tests
 } else {
   $project = ".\src\ProjectBaseName.DeployTool\ProjectBaseName.DeployTool.csproj"
-  $cmd = "dotnet run --project $project $command --env=$_env --no-launch-profile"
+  $cmd = "dotnet run --project $project $command --env=$env$ --no-launch-profile"
   Write-Host "$cmd" -ForegroundColor GREEN
   Invoke-Expression $cmd
 }

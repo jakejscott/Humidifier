@@ -1,12 +1,18 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
+using Amazon.CloudFormation.Model;
+using Amazon.S3.Util;
 using Humidifier;
 using Humidifier.IAM;
 using Humidifier.Lambda.FunctionTypes;
 using ProjectBaseName.DeployTool.Util;
 using ProjectBaseName.Lambda.Common;
 using Serilog;
+using Environment = Humidifier.Lambda.FunctionTypes.Environment;
+using Parameter = Humidifier.Parameter;
+using Stack = Humidifier.Stack;
 
 namespace ProjectBaseName.DeployTool.Stacks
 {
@@ -153,10 +159,41 @@ namespace ProjectBaseName.DeployTool.Stacks
 
         public static async Task<bool> Invoke(ILogger log, Context context)
         {
-            var command = new SimpleFunctionArgs { Name = "Bob" };
-            var result = await LambdaInvoker.Invoke<SimpleFunctionArgs, SimpleFunctionResult>(log, context, command, Name(context.Config));
-            log.Information("Message: {message}", result.Message);
-            return result?.Message != null;
+            var args = new SimpleFunctionArgs { Name = "ProjectBaseName" };
+            log.Information("Invoking lambda with args: {@args}", args);
+            var result = await LambdaInvoker.Invoke<SimpleFunctionArgs, SimpleFunctionResult>(log, context, args, Name(context.Config));
+            log.Information("Lambda result: {@result}", result);
+            return true;
+        }
+
+        public static async Task<bool> Destroy(ILogger log, Context context)
+        {
+            var baseStack = await Cloudformation.GetExistingStackAsync(context.Cloudformation, BaseStack.Name(context.Config)).ConfigureAwait(false);
+            if (baseStack == null)
+            {
+                log.Error("Deploy the {stackName} stack first.", BaseStack.Name(context.Config));
+                return false;
+            }
+
+            var role = baseStack.GetStackOutput("CloudFormationServiceRole");
+
+            var request = new DeleteStackRequest
+            {
+                StackName = Name(context.Config),
+                RoleARN = role
+            };
+
+            try
+            {
+                await context.Cloudformation.DeleteStackAsync(request).ConfigureAwait(false);
+                log.Information("CloudFormation stack {stackName} deleted", request.StackName);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex, "Error deleting Cloudformation stack {stackName}", request.StackName);
+                return false;
+            }
         }
     }
 };
