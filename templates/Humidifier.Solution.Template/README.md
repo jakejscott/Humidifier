@@ -13,7 +13,7 @@ dotnet build .\ProjectBaseName.sln
 Step 2: Run the unit tests:
 
 ```ps
-dotnet test .\src\ExampleProject.Tests
+dotnet test .\src\ProjectBaseName.Tests
 ```
 
 You should see xunits console test runner output:
