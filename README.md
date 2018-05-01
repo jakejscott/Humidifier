@@ -49,7 +49,7 @@ dotnet new humidifier.sln --name Example --output Example --env test --region us
 
 This will generate the solution in the `--output` folder. The `--profile` flag is your AWS credential profile.
 
-Step 3: The template generates a README that has a quickstart with all the commands for building, testing, deploying and destorying your stacks! You can look at the template [README](/templates/Humidifier.Soluition.Template/README.md) if your just reading this on Github to see an example.
+Step 3: The template generates a README that has a quickstart with all the commands for building, testing, deploying and destorying your stacks! You can look at the template [README](templates/Humidifier.Soluition.Template/README.md) if your just reading this on Github to see an example.
 
 -----------------
 
