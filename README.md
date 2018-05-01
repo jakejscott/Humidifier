@@ -58,7 +58,7 @@ Step 3: Create your project
 dotnet new humidifier.sln --name Example --output Example --env test --region us-west-2 --stack example --profile default
 ```
 
-This will generate the solution in the `--output` folder. The `--profile` flag is your AWS credential profile.
+This will generate the solution in the `--output` folder. The `--profile` flag is your AWS credential profile. To setup a AWS profile, follow the docs on how to [configure the AWS Cli](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) here.
 
 Step 3: Read the generated README.
 
