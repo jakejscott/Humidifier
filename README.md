@@ -61,7 +61,7 @@ This will generate the solution in the `--output` folder. The `--profile` flag i
 
 Step 3: Read the generated README.
 
-The template generates a README that has a quickstart with all the commands for building, testing, deploying and destroying your stacks. If your reading this on Github, browe to the [template README](templates/Humidifier.Solution.Template/README.md) to see what's included.
+The template generates a README that has a quickstart with all the commands for building, testing, deploying and destroying your stacks. If your reading this on Github, browse to the [template README](templates/Humidifier.Solution.Template/README.md) to see what's included.
  
 -----------------
 
