@@ -19,6 +19,7 @@ Features:
 - Cloudformation stacks are defined in strongly typed C# using Humidifer of course.
 - A README that has a quickstart with commands generated for you to get up and running quickly.
 - Includes a simple Lambda function that can be deployed in seconds, configured with Serilog and Cloudwatch metrics.
+- Includes code for invoking the Lambda function, tailing the log and viewing the response.
 - Config using .env files and environment variables for CI/CD.
 - Secrets management using .aes files (encrypt/decrypt) and sync to parameter store.
 - Unit test project
