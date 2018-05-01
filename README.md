@@ -19,7 +19,7 @@ Step 1: Install the template
 dotnet new -i Humidifier.Templates::*
 ```
 
-This will download the template from https://www.nuget.org/packages/Humidifier.Templates and install it into the dotnet cli template cache. If sucessful you should see a new template called: `Humidifier Solution Template`. 
+This will download the template from https://www.nuget.org/packages/Humidifier.Templates and install it into the dotnet cli template cache.
 
 Step 2: Check to see the template is installed
 
