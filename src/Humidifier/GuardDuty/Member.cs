@@ -65,6 +65,19 @@ namespace Humidifier.GuardDuty
         }
 
         /// <summary>
+        /// DisableEmailNotification
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-member.html#cfn-guardduty-member-disableemailnotification
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Boolean
+        /// </summary>
+        public dynamic DisableEmailNotification
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// DetectorId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-member.html#cfn-guardduty-member-detectorid
         /// Required: True

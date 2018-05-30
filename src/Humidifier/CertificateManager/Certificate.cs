@@ -67,6 +67,19 @@ namespace Humidifier.CertificateManager
             get;
             set;
         }
+
+        /// <summary>
+        /// ValidationMethod
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html#cfn-certificatemanager-certificate-validationmethod
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic ValidationMethod
+        {
+            get;
+            set;
+        }
     }
 
     namespace CertificateTypes

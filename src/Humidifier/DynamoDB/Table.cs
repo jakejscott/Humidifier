@@ -76,6 +76,19 @@ namespace Humidifier.DynamoDB
         }
 
         /// <summary>
+        /// PointInTimeRecoverySpecification
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-pointintimerecoveryspecification
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: PointInTimeRecoverySpecification
+        /// </summary>
+        public PointInTimeRecoverySpecification PointInTimeRecoverySpecification
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// ProvisionedThroughput
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-provisionedthroughput
         /// Required: True
@@ -396,6 +409,22 @@ namespace Humidifier.DynamoDB
             /// PrimitiveType: String
             /// </summary>
             public dynamic ProjectionType
+            {
+                get;
+                set;
+            }
+        }
+
+        public class PointInTimeRecoverySpecification
+        {
+            /// <summary>
+            /// PointInTimeRecoveryEnabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-pointintimerecoveryspecification.html#cfn-dynamodb-table-pointintimerecoveryspecification-pointintimerecoveryenabled
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic PointInTimeRecoveryEnabled
             {
                 get;
                 set;

@@ -172,6 +172,19 @@ namespace Humidifier.AutoScaling
         }
 
         /// <summary>
+        /// LaunchConfigurationName
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-autoscaling-launchconfig-launchconfigurationname
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic LaunchConfigurationName
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// PlacementTenancy
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-placementtenancy
         /// Required: False

@@ -33,6 +33,19 @@ namespace Humidifier.DirectoryService
         }
 
         /// <summary>
+        /// Edition
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-edition
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic Edition
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// EnableSso
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-enablesso
         /// Required: False

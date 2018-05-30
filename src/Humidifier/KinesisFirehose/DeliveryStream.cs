@@ -108,6 +108,19 @@ namespace Humidifier.KinesisFirehose
             get;
             set;
         }
+
+        /// <summary>
+        /// SplunkDestinationConfiguration
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: SplunkDestinationConfiguration
+        /// </summary>
+        public SplunkDestinationConfiguration SplunkDestinationConfiguration
+        {
+            get;
+            set;
+        }
     }
 
     namespace DeliveryStreamTypes
@@ -287,6 +300,126 @@ namespace Humidifier.KinesisFirehose
             }
         }
 
+        public class SplunkDestinationConfiguration
+        {
+            /// <summary>
+            /// CloudWatchLoggingOptions
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-cloudwatchloggingoptions
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: CloudWatchLoggingOptions
+            /// </summary>
+            public CloudWatchLoggingOptions CloudWatchLoggingOptions
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// HECAcknowledgmentTimeoutInSeconds
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-hecacknowledgmenttimeoutinseconds
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic HECAcknowledgmentTimeoutInSeconds
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// HECEndpoint
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-hecendpoint
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic HECEndpoint
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// HECEndpointType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-hecendpointtype
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic HECEndpointType
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// HECToken
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-hectoken
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic HECToken
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ProcessingConfiguration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-processingconfiguration
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: ProcessingConfiguration
+            /// </summary>
+            public ProcessingConfiguration ProcessingConfiguration
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RetryOptions
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-retryoptions
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: SplunkRetryOptions
+            /// </summary>
+            public SplunkRetryOptions RetryOptions
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// S3BackupMode
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-s3backupmode
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic S3BackupMode
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// S3Configuration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-s3configuration
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: S3DestinationConfiguration
+            /// </summary>
+            public S3DestinationConfiguration S3Configuration
+            {
+                get;
+                set;
+            }
+        }
+
         public class EncryptionConfiguration
         {
             /// <summary>
@@ -363,7 +496,7 @@ namespace Humidifier.KinesisFirehose
             /// <summary>
             /// Enabled
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-processingconfiguration.html#cfn-kinesisfirehose-deliverystream-processingconfiguration-enabled
-            /// Required: True
+            /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
             /// </summary>
@@ -376,7 +509,7 @@ namespace Humidifier.KinesisFirehose
             /// <summary>
             /// Processors
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-processingconfiguration.html#cfn-kinesisfirehose-deliverystream-processingconfiguration-processors
-            /// Required: True
+            /// Required: False
             /// UpdateType: Mutable
             /// Type: List
             /// ItemType: Processor
@@ -411,6 +544,22 @@ namespace Humidifier.KinesisFirehose
             /// PrimitiveType: Integer
             /// </summary>
             public dynamic SizeInMBs
+            {
+                get;
+                set;
+            }
+        }
+
+        public class SplunkRetryOptions
+        {
+            /// <summary>
+            /// DurationInSeconds
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkretryoptions.html#cfn-kinesisfirehose-deliverystream-splunkretryoptions-durationinseconds
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic DurationInSeconds
             {
                 get;
                 set;

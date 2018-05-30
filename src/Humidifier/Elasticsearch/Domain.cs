@@ -100,6 +100,19 @@ namespace Humidifier.Elasticsearch
         }
 
         /// <summary>
+        /// EncryptionAtRestOptions
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-encryptionatrestoptions
+        /// Required: False
+        /// UpdateType: Immutable
+        /// Type: EncryptionAtRestOptions
+        /// </summary>
+        public EncryptionAtRestOptions EncryptionAtRestOptions
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// SnapshotOptions
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-snapshotoptions
         /// Required: False
@@ -319,6 +332,35 @@ namespace Humidifier.Elasticsearch
             /// PrimitiveType: String
             /// </summary>
             public dynamic VolumeType
+            {
+                get;
+                set;
+            }
+        }
+
+        public class EncryptionAtRestOptions
+        {
+            /// <summary>
+            /// Enabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-encryptionatrestoptions.html#cfn-elasticsearch-domain-encryptionatrestoptions-enabled
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Enabled
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// KmsKeyId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-encryptionatrestoptions.html#cfn-elasticsearch-domain-encryptionatrestoptions-kmskeyid
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic KmsKeyId
             {
                 get;
                 set;

@@ -59,6 +59,19 @@ namespace Humidifier.Logs
         public class MetricTransformation
         {
             /// <summary>
+            /// DefaultValue
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html#cfn-cwl-metricfilter-metrictransformation-defaultvalue
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Double
+            /// </summary>
+            public dynamic DefaultValue
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// MetricName
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html#cfn-cwl-metricfilter-metrictransformation-metricname
             /// Required: True

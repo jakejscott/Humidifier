@@ -304,6 +304,19 @@ namespace Humidifier.ECS
             }
 
             /// <summary>
+            /// HealthCheck
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html#cfn-ecs-taskdefinition-containerdefinition-healthcheck
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: HealthCheck
+            /// </summary>
+            public HealthCheck HealthCheck
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// Hostname
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html#cfn-ecs-taskdefinition-containerdefinition-hostname
             /// Required: False
@@ -802,6 +815,75 @@ namespace Humidifier.ECS
             /// PrimitiveType: String
             /// </summary>
             public dynamic Name
+            {
+                get;
+                set;
+            }
+        }
+
+        public class HealthCheck
+        {
+            /// <summary>
+            /// Command
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-command
+            /// Required: True
+            /// UpdateType: Immutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Command
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Interval
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-interval
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Interval
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Retries
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-retries
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Retries
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// StartPeriod
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-startperiod
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic StartPeriod
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Timeout
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-timeout
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Timeout
             {
                 get;
                 set;

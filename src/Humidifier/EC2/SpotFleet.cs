@@ -29,36 +29,6 @@ namespace Humidifier.EC2
 
     namespace SpotFleetTypes
     {
-        public class LaunchTemplateConfig
-        {
-            /// <summary>
-            /// LaunchTemplateSpecification
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateconfig.html#cfn-ec2-spotfleet-launchtemplateconfig-launchtemplatespecification
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: FleetLaunchTemplateSpecification
-            /// </summary>
-            public FleetLaunchTemplateSpecification LaunchTemplateSpecification
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Overrides
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateconfig.html#cfn-ec2-spotfleet-launchtemplateconfig-overrides
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: LaunchTemplateOverrides
-            /// </summary>
-            public List<LaunchTemplateOverrides> Overrides
-            {
-                get;
-                set;
-            }
-        }
-
         public class IamInstanceProfileSpecification
         {
             /// <summary>
@@ -582,20 +552,6 @@ namespace Humidifier.EC2
             }
 
             /// <summary>
-            /// LaunchTemplateConfigs
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchtemplateconfigs
-            /// Required: False
-            /// UpdateType: Immutable
-            /// Type: List
-            /// ItemType: LaunchTemplateConfig
-            /// </summary>
-            public List<LaunchTemplateConfig> LaunchTemplateConfigs
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
             /// ReplaceUnhealthyInstances
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-replaceunhealthyinstances
             /// Required: False
@@ -768,48 +724,6 @@ namespace Humidifier.EC2
             }
         }
 
-        public class FleetLaunchTemplateSpecification
-        {
-            /// <summary>
-            /// LaunchTemplateId
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplateid
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic LaunchTemplateId
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// LaunchTemplateName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplatename
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic LaunchTemplateName
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Version
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-version
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Version
-            {
-                get;
-                set;
-            }
-        }
-
         public class InstanceIpv6Address
         {
             /// <summary>
@@ -836,74 +750,6 @@ namespace Humidifier.EC2
             /// PrimitiveType: String
             /// </summary>
             public dynamic GroupId
-            {
-                get;
-                set;
-            }
-        }
-
-        public class LaunchTemplateOverrides
-        {
-            /// <summary>
-            /// AvailabilityZone
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-availabilityzone
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic AvailabilityZone
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// InstanceType
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-instancetype
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic InstanceType
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// SpotPrice
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-spotprice
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic SpotPrice
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// SubnetId
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-subnetid
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic SubnetId
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// WeightedCapacity
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-weightedcapacity
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Double
-            /// </summary>
-            public dynamic WeightedCapacity
             {
                 get;
                 set;

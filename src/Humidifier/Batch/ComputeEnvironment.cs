@@ -55,7 +55,7 @@ namespace Humidifier.Batch
         /// <summary>
         /// ComputeResources
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html#cfn-batch-computeenvironment-computeresources
-        /// Required: True
+        /// Required: False
         /// UpdateType: Mutable
         /// Type: ComputeResources
         /// </summary>

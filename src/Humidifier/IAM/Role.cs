@@ -8,6 +8,7 @@ namespace Humidifier.IAM
         public static class Attributes
         {
             public static string Arn =  "Arn" ;
+            public static string RoleId =  "RoleId" ;
         }
 
         public override string AWSTypeName
@@ -40,6 +41,19 @@ namespace Humidifier.IAM
         /// PrimitiveItemType: String
         /// </summary>
         public dynamic ManagedPolicyArns
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// MaxSessionDuration
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-maxsessionduration
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Integer
+        /// </summary>
+        public dynamic MaxSessionDuration
         {
             get;
             set;

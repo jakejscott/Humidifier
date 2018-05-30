@@ -162,6 +162,19 @@ namespace Humidifier.ApiGateway
             get;
             set;
         }
+
+        /// <summary>
+        /// Policy
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-policy
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Json
+        /// </summary>
+        public dynamic Policy
+        {
+            get;
+            set;
+        }
     }
 
     namespace RestApiTypes

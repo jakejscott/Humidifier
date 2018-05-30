@@ -40,6 +40,19 @@ namespace Humidifier.Batch
         }
 
         /// <summary>
+        /// Timeout
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-timeout
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: Timeout
+        /// </summary>
+        public Timeout Timeout
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// ContainerProperties
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-containerproperties
         /// Required: True
@@ -284,6 +297,22 @@ namespace Humidifier.Batch
             /// PrimitiveType: String
             /// </summary>
             public dynamic Image
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Timeout
+        {
+            /// <summary>
+            /// AttemptDurationSeconds
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-timeout.html#cfn-batch-jobdefinition-timeout-attemptdurationseconds
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic AttemptDurationSeconds
             {
                 get;
                 set;

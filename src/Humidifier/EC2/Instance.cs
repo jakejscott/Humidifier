@@ -157,7 +157,7 @@ namespace Humidifier.EC2
         /// <summary>
         /// ImageId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-imageid
-        /// Required: True
+        /// Required: False
         /// UpdateType: Immutable
         /// PrimitiveType: String
         /// </summary>
@@ -241,6 +241,19 @@ namespace Humidifier.EC2
         /// PrimitiveType: String
         /// </summary>
         public dynamic KeyName
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// LaunchTemplate
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-launchtemplate
+        /// Required: False
+        /// UpdateType: Immutable
+        /// Type: LaunchTemplateSpecification
+        /// </summary>
+        public LaunchTemplateSpecification LaunchTemplate
         {
             get;
             set;
@@ -684,6 +697,48 @@ namespace Humidifier.EC2
             /// PrimitiveItemType: String
             /// </summary>
             public dynamic Value
+            {
+                get;
+                set;
+            }
+        }
+
+        public class LaunchTemplateSpecification
+        {
+            /// <summary>
+            /// LaunchTemplateId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html#cfn-ec2-instance-launchtemplatespecification-launchtemplateid
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic LaunchTemplateId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// LaunchTemplateName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html#cfn-ec2-instance-launchtemplatespecification-launchtemplatename
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic LaunchTemplateName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Version
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html#cfn-ec2-instance-launchtemplatespecification-version
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Version
             {
                 get;
                 set;

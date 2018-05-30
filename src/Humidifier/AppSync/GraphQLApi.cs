@@ -21,6 +21,19 @@ namespace Humidifier.AppSync
         }
 
         /// <summary>
+        /// OpenIDConnectConfig
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-openidconnectconfig
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: OpenIDConnectConfig
+        /// </summary>
+        public OpenIDConnectConfig OpenIDConnectConfig
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// UserPoolConfig
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-userpoolconfig
         /// Required: False
@@ -75,6 +88,61 @@ namespace Humidifier.AppSync
 
     namespace GraphQLApiTypes
     {
+        public class OpenIDConnectConfig
+        {
+            /// <summary>
+            /// Issuer
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-issuer
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Issuer
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ClientId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-clientid
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ClientId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// AuthTTL
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-authttl
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Double
+            /// </summary>
+            public dynamic AuthTTL
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// IatTTL
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-iatttl
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Double
+            /// </summary>
+            public dynamic IatTTL
+            {
+                get;
+                set;
+            }
+        }
+
         public class LogConfig
         {
             /// <summary>
