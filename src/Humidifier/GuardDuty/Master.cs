@@ -41,7 +41,7 @@ namespace Humidifier.GuardDuty
         /// <summary>
         /// InvitationId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-master.html#cfn-guardduty-master-invitationid
-        /// Required: True
+        /// Required: False
         /// UpdateType: Immutable
         /// PrimitiveType: String
         /// </summary>
