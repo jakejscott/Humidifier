@@ -1,24 +1,24 @@
 {
   "profiles": {
-    "deploy-base-$env": {
+    "deploy-base-$env$": {
       "commandName": "Project",
-      "commandLineArgs": "deploy-base --env=$env"
+      "commandLineArgs": "deploy-base --env=$env$"
     },
-    "deploy-simple-$env": {
+    "deploy-simple-$env$": {
       "commandName": "Project",
-      "commandLineArgs": "deploy-simple --env=$env"
+      "commandLineArgs": "deploy-simple --env=$env$"
     },
-    "invoke-simple-$env": {
+    "invoke-simple-$env$": {
       "commandName": "Project",
-      "commandLineArgs": "invoke-simple --env=$env"
+      "commandLineArgs": "invoke-simple --env=$env$"
     },
-    "destroy-base-$env": {
+    "destroy-base-$env$": {
       "commandName": "Project",
-      "commandLineArgs": "destroy-base --env=$env"
+      "commandLineArgs": "destroy-base --env=$env$"
     },
-    "destroy-simple-$env": {
+    "destroy-simple-$env$": {
       "commandName": "Project",
-      "commandLineArgs": "destroy-simple --env=$env"
+      "commandLineArgs": "destroy-simple --env=$env$"
     }
   }
 }
