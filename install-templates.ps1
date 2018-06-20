@@ -2,7 +2,7 @@
 # dotnet new --debug:reinit
 
 Write-Host "Packaging templates..."
-nuget pack .\templates\Humidifier.Templates.nuspec -OutputDirectory .\templates
+tools\nuget pack .\templates\Humidifier.Templates.nuspec -OutputDirectory .\templates
 
 Write-Host "Uninstalling templates..."
 dotnet new -u .\templates
