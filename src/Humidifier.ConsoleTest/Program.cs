@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using Humidifier.Json;
 using Humidifier.Lambda.FunctionTypes;
@@ -322,7 +323,7 @@ namespace Humidifier.ConsoleTest
                     S3Bucket = Fn.ImportValue(Fn.Sub("${AutomationStack}-DeploymentBucket")),
                     S3Key = new { Ref = "CodeS3Key" },
                 },
-                Environment = new Environment
+                Environment = new Lambda.FunctionTypes.Environment
                 {
                     Variables = new Dictionary<string, dynamic>
                     {
@@ -421,16 +422,33 @@ namespace Humidifier.ConsoleTest
             }, 
             metadata: new { Key1 = "Value1", Key2 = "Value2" });
 
-
-            // TODO: Support Serverless Application Model
-            // https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md
-            // Example of a custom resource.
-
-            stack.Resources.Add("ServerlessFunction", new Humidifier.Serverless.Function
+            stack.Resources.Add("AspNetCoreFunction", new Humidifier.Serverless.Function
             {
-                Handler = "index.handler",
-                Runtime = "nodejs8.10",
-                CodeUri = "'s3://my-bucket/function.zip"
+                Handler = "MyCoolProject.Lambda.WebApi::MyCoolProject.Lambda.WebApi.LambdaEntryPoint::FunctionHandlerAsync",
+                Runtime = "dotnetcore2.0",
+                CodeUri = "",
+                MemorySize = 256,
+                Timeout = 30,
+                Role = null,
+                Policies = new [] { "AWSLambdaFullAccess" },
+                Environment = new Serverless.FunctionTypes.Environment
+                {
+                    Variables = new Dictionary<string, dynamic>
+                    {
+                        ["ENV"] = "test"
+                    }
+                },
+                Events = new Dictionary<string, Serverless.FunctionTypes.EventSource>
+                {
+                    ["Any"] = new Serverless.FunctionTypes.ApiEventSource
+                    {
+                        Properties = new Serverless.FunctionTypes.ApiEventSourceProperties
+                        {
+                            Path = "/{proxy+}",
+                            Method = "ANY"
+                        }
+                    }
+                }
             });
 
             return stack;

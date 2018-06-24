@@ -5,17 +5,11 @@ namespace Humidifier.Lambda
 
     public class Function : Humidifier.Resource
     {
+        public override string AWSTypeName => "AWS::Serverless::Function";
+
         public static class Attributes
         {
             public static string Arn =  "Arn" ;
-        }
-
-        public override string AWSTypeName
-        {
-            get
-            {
-                return @"AWS::Lambda::Function";
-            }
         }
 
         /// <summary>
