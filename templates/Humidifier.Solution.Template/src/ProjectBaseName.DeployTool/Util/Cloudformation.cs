@@ -394,5 +394,26 @@ namespace ProjectBaseName.DeployTool.Util
             var result = output.OutputValue;
             return result;
         }
+
+        public static async Task<bool> DeleteStackAsync(ILogger log, IAmazonCloudFormation cloudformation, string stackName, string roleArn)
+        {
+            var request = new DeleteStackRequest
+            {
+                StackName = stackName,
+                RoleARN = roleArn
+            };
+
+            try
+            {
+                await cloudformation.DeleteStackAsync(request).ConfigureAwait(false);
+                log.Information("CloudFormation stack {stackName} deleted", request.StackName);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex, "Error deleting Cloudformation stack {stackName}", request.StackName);
+                return false;
+            }
+        }
     }
 }

@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
-using Amazon.CloudFormation.Model;
-using Amazon.S3.Util;
 using Humidifier;
 using Humidifier.IAM;
 using Humidifier.Lambda.FunctionTypes;
 using ProjectBaseName.DeployTool.Util;
 using ProjectBaseName.Lambda.Common;
 using Serilog;
-using Environment = Humidifier.Lambda.FunctionTypes.Environment;
-using Parameter = Humidifier.Parameter;
-using Stack = Humidifier.Stack;
 
 namespace ProjectBaseName.DeployTool.Stacks
 {
@@ -177,23 +171,8 @@ namespace ProjectBaseName.DeployTool.Stacks
 
             var role = baseStack.GetStackOutput("CloudFormationServiceRole");
 
-            var request = new DeleteStackRequest
-            {
-                StackName = Name(context.Config),
-                RoleARN = role
-            };
-
-            try
-            {
-                await context.Cloudformation.DeleteStackAsync(request).ConfigureAwait(false);
-                log.Information("CloudFormation stack {stackName} deleted", request.StackName);
-                return true;
-            }
-            catch (Exception ex)
-            {
-                log.Error(ex, "Error deleting Cloudformation stack {stackName}", request.StackName);
-                return false;
-            }
+            var result = await Cloudformation.DeleteStackAsync(log, context.Cloudformation, Name(context.Config), role);
+            return result;
         }
     }
 };

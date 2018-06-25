@@ -8,7 +8,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectBaseName.Lambda.Comm
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectBaseName.Lambda.Simple", "src\ProjectBaseName.Lambda.Simple\ProjectBaseName.Lambda.Simple.csproj", "{10C72952-8FC5-4245-A077-C6D189FE3998}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectBaseName.Tests", "src\ProjectBaseName.Tests\ProjectBaseName.Tests.csproj", "{C5F41AB4-E9FD-4650-BAF1-ADC8B03846A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectBaseName.Tests", "src\ProjectBaseName.Tests\ProjectBaseName.Tests.csproj", "{C5F41AB4-E9FD-4650-BAF1-ADC8B03846A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A70EBC43-174C-43C2-8F93-D56D81352821}"
+	ProjectSection(SolutionItems) = preProject
+		..\Humidifier.Templates.nuspec = ..\Humidifier.Templates.nuspec
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
