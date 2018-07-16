@@ -59,6 +59,19 @@ namespace Humidifier.AppSync
         }
 
         /// <summary>
+        /// HttpConfig
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-httpconfig
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: HttpConfig
+        /// </summary>
+        public HttpConfig HttpConfig
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// LambdaConfig
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-lambdaconfig
         /// Required: False
@@ -136,6 +149,22 @@ namespace Humidifier.AppSync
             /// PrimitiveType: String
             /// </summary>
             public dynamic LambdaFunctionArn
+            {
+                get;
+                set;
+            }
+        }
+
+        public class HttpConfig
+        {
+            /// <summary>
+            /// Endpoint
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-httpconfig.html#cfn-appsync-datasource-httpconfig-endpoint
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Endpoint
             {
                 get;
                 set;

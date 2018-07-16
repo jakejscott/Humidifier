@@ -34,6 +34,19 @@ namespace Humidifier.ServiceDiscovery
         }
 
         /// <summary>
+        /// HealthCheckCustomConfig
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#cfn-servicediscovery-service-healthcheckcustomconfig
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: HealthCheckCustomConfig
+        /// </summary>
+        public HealthCheckCustomConfig HealthCheckCustomConfig
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// DnsConfig
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#cfn-servicediscovery-service-dnsconfig
         /// Required: True
@@ -92,6 +105,19 @@ namespace Humidifier.ServiceDiscovery
             }
 
             /// <summary>
+            /// RoutingPolicy
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-dnsconfig.html#cfn-servicediscovery-service-dnsconfig-routingpolicy
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RoutingPolicy
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// NamespaceId
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-dnsconfig.html#cfn-servicediscovery-service-dnsconfig-namespaceid
             /// Required: True
@@ -128,6 +154,22 @@ namespace Humidifier.ServiceDiscovery
             /// PrimitiveType: String
             /// </summary>
             public dynamic TTL
+            {
+                get;
+                set;
+            }
+        }
+
+        public class HealthCheckCustomConfig
+        {
+            /// <summary>
+            /// FailureThreshold
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-healthcheckcustomconfig.html#cfn-servicediscovery-service-healthcheckcustomconfig-failurethreshold
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Double
+            /// </summary>
+            public dynamic FailureThreshold
             {
                 get;
                 set;

@@ -13,13 +13,13 @@ namespace Humidifier.EC2
         }
 
         /// <summary>
-        /// PolicyDocument
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-policydocument
-        /// Required: False
-        /// UpdateType: Mutable
-        /// PrimitiveType: Json
+        /// VpcId
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-vpcid
+        /// Required: True
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
         /// </summary>
-        public dynamic PolicyDocument
+        public dynamic VpcId
         {
             get;
             set;
@@ -53,13 +53,67 @@ namespace Humidifier.EC2
         }
 
         /// <summary>
-        /// VpcId
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-vpcid
-        /// Required: True
-        /// UpdateType: Immutable
+        /// PolicyDocument
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-policydocument
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Json
+        /// </summary>
+        public dynamic PolicyDocument
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// IsPrivateDnsEnabled
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-isprivatednsenabled
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Boolean
+        /// </summary>
+        public dynamic IsPrivateDnsEnabled
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// SubnetIds
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-subnetids
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// PrimitiveItemType: String
+        /// </summary>
+        public dynamic SubnetIds
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// SecurityGroupIds
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-securitygroupids
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// PrimitiveItemType: String
+        /// </summary>
+        public dynamic SecurityGroupIds
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// VPCEndpointType
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-vpcendpointtype
+        /// Required: False
+        /// UpdateType: Mutable
         /// PrimitiveType: String
         /// </summary>
-        public dynamic VpcId
+        public dynamic VPCEndpointType
         {
             get;
             set;

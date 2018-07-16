@@ -329,6 +329,19 @@ namespace Humidifier.CloudFront
             }
 
             /// <summary>
+            /// FieldLevelEncryptionId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-fieldlevelencryptionid
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic FieldLevelEncryptionId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// AllowedMethods
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-allowedmethods
             /// Required: False
@@ -438,6 +451,86 @@ namespace Humidifier.CloudFront
             }
 
             /// <summary>
+            /// LambdaFunctionAssociations
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-lambdafunctionassociations
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: LambdaFunctionAssociation
+            /// </summary>
+            public List<LambdaFunctionAssociation> LambdaFunctionAssociations
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// TargetOriginId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-targetoriginid
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic TargetOriginId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ViewerProtocolPolicy
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-viewerprotocolpolicy
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ViewerProtocolPolicy
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// TrustedSigners
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-trustedsigners
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic TrustedSigners
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DefaultTTL
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-defaultttl
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Double
+            /// </summary>
+            public dynamic DefaultTTL
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// FieldLevelEncryptionId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-fieldlevelencryptionid
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic FieldLevelEncryptionId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// AllowedMethods
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-allowedmethods
             /// Required: False
@@ -466,20 +559,6 @@ namespace Humidifier.CloudFront
             }
 
             /// <summary>
-            /// LambdaFunctionAssociations
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-lambdafunctionassociations
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: LambdaFunctionAssociation
-            /// </summary>
-            public List<LambdaFunctionAssociation> LambdaFunctionAssociations
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
             /// SmoothStreaming
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-smoothstreaming
             /// Required: False
@@ -487,32 +566,6 @@ namespace Humidifier.CloudFront
             /// PrimitiveType: Boolean
             /// </summary>
             public dynamic SmoothStreaming
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// TargetOriginId
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-targetoriginid
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic TargetOriginId
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// ViewerProtocolPolicy
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-viewerprotocolpolicy
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic ViewerProtocolPolicy
             {
                 get;
                 set;
@@ -552,33 +605,6 @@ namespace Humidifier.CloudFront
             /// PrimitiveType: Double
             /// </summary>
             public dynamic MaxTTL
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// TrustedSigners
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-trustedsigners
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// PrimitiveItemType: String
-            /// </summary>
-            public dynamic TrustedSigners
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// DefaultTTL
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-defaultttl
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Double
-            /// </summary>
-            public dynamic DefaultTTL
             {
                 get;
                 set;

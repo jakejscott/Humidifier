@@ -368,6 +368,19 @@ namespace Humidifier.CodeBuild
                 get;
                 set;
             }
+
+            /// <summary>
+            /// Certificate
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-certificate
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Certificate
+            {
+                get;
+                set;
+            }
         }
 
         public class ProjectCache
@@ -511,6 +524,19 @@ namespace Humidifier.CodeBuild
             /// PrimitiveType: String
             /// </summary>
             public dynamic Type
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ReportBuildStatus
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-reportbuildstatus
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic ReportBuildStatus
             {
                 get;
                 set;
