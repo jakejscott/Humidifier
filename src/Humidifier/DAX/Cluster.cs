@@ -1,6 +1,7 @@
 namespace Humidifier.DAX
 {
     using System.Collections.Generic;
+    using ClusterTypes;
 
     public class Cluster : Humidifier.Resource
     {
@@ -16,6 +17,19 @@ namespace Humidifier.DAX
             {
                 return @"AWS::DAX::Cluster";
             }
+        }
+
+        /// <summary>
+        /// SSESpecification
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-ssespecification
+        /// Required: False
+        /// UpdateType: Immutable
+        /// Type: SSESpecification
+        /// </summary>
+        public SSESpecification SSESpecification
+        {
+            get;
+            set;
         }
 
         /// <summary>
@@ -72,19 +86,6 @@ namespace Humidifier.DAX
         }
 
         /// <summary>
-        /// NodeType
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-nodetype
-        /// Required: True
-        /// UpdateType: Immutable
-        /// PrimitiveType: String
-        /// </summary>
-        public dynamic NodeType
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
         /// IAMRoleARN
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-iamrolearn
         /// Required: True
@@ -105,19 +106,6 @@ namespace Humidifier.DAX
         /// PrimitiveType: String
         /// </summary>
         public dynamic SubnetGroupName
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// ClusterName
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-clustername
-        /// Required: False
-        /// UpdateType: Immutable
-        /// PrimitiveType: String
-        /// </summary>
-        public dynamic ClusterName
         {
             get;
             set;
@@ -164,6 +152,32 @@ namespace Humidifier.DAX
         }
 
         /// <summary>
+        /// NodeType
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-nodetype
+        /// Required: True
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic NodeType
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// ClusterName
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-clustername
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic ClusterName
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Tags
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-tags
         /// Required: False
@@ -174,6 +188,25 @@ namespace Humidifier.DAX
         {
             get;
             set;
+        }
+    }
+
+    namespace ClusterTypes
+    {
+        public class SSESpecification
+        {
+            /// <summary>
+            /// SSEEnabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dax-cluster-ssespecification.html#cfn-dax-cluster-ssespecification-sseenabled
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic SSEEnabled
+            {
+                get;
+                set;
+            }
         }
     }
 }

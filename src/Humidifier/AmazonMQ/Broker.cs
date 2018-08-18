@@ -72,19 +72,6 @@ namespace Humidifier.AmazonMQ
         }
 
         /// <summary>
-        /// DeploymentMode
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-deploymentmode
-        /// Required: True
-        /// UpdateType: Immutable
-        /// PrimitiveType: String
-        /// </summary>
-        public dynamic DeploymentMode
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
         /// HostInstanceType
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-hostinstancetype
         /// Required: True
@@ -92,19 +79,6 @@ namespace Humidifier.AmazonMQ
         /// PrimitiveType: String
         /// </summary>
         public dynamic HostInstanceType
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// EngineType
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-enginetype
-        /// Required: True
-        /// UpdateType: Immutable
-        /// PrimitiveType: String
-        /// </summary>
-        public dynamic EngineType
         {
             get;
             set;
@@ -138,13 +112,13 @@ namespace Humidifier.AmazonMQ
         }
 
         /// <summary>
-        /// PubliclyAccessible
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-publiclyaccessible
-        /// Required: True
-        /// UpdateType: Immutable
-        /// PrimitiveType: Boolean
+        /// Logs
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-logs
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: LogList
         /// </summary>
-        public dynamic PubliclyAccessible
+        public LogList Logs
         {
             get;
             set;
@@ -172,6 +146,45 @@ namespace Humidifier.AmazonMQ
         /// PrimitiveType: String
         /// </summary>
         public dynamic BrokerName
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// DeploymentMode
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-deploymentmode
+        /// Required: True
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic DeploymentMode
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// EngineType
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-enginetype
+        /// Required: True
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic EngineType
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// PubliclyAccessible
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-publiclyaccessible
+        /// Required: True
+        /// UpdateType: Immutable
+        /// PrimitiveType: Boolean
+        /// </summary>
+        public dynamic PubliclyAccessible
         {
             get;
             set;
@@ -272,6 +285,35 @@ namespace Humidifier.AmazonMQ
             /// PrimitiveType: String
             /// </summary>
             public dynamic TimeZone
+            {
+                get;
+                set;
+            }
+        }
+
+        public class LogList
+        {
+            /// <summary>
+            /// Audit
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-loglist.html#cfn-amazonmq-broker-loglist-audit
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Audit
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// General
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-loglist.html#cfn-amazonmq-broker-loglist-general
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic General
             {
                 get;
                 set;

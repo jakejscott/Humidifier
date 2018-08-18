@@ -67,6 +67,19 @@ namespace Humidifier.Glue
         }
 
         /// <summary>
+        /// Configuration
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-configuration
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic Configuration
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Schedule
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-schedule
         /// Required: False

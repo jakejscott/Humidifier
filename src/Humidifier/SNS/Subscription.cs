@@ -13,6 +13,19 @@ namespace Humidifier.SNS
         }
 
         /// <summary>
+        /// DeliveryPolicy
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-subscription-deliverypolicy
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Json
+        /// </summary>
+        public dynamic DeliveryPolicy
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Endpoint
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-endpoint
         /// Required: False
@@ -26,6 +39,19 @@ namespace Humidifier.SNS
         }
 
         /// <summary>
+        /// FilterPolicy
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-subscription-filterpolicy
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Json
+        /// </summary>
+        public dynamic FilterPolicy
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Protocol
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-protocol
         /// Required: False
@@ -33,6 +59,32 @@ namespace Humidifier.SNS
         /// PrimitiveType: String
         /// </summary>
         public dynamic Protocol
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// RawMessageDelivery
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-subscription-rawmessagedelivery
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Boolean
+        /// </summary>
+        public dynamic RawMessageDelivery
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Region
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-subscription-region
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic Region
         {
             get;
             set;

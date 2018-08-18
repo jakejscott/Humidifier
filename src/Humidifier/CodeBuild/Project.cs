@@ -220,6 +220,19 @@ namespace Humidifier.CodeBuild
             }
 
             /// <summary>
+            /// OverrideArtifactName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-overrideartifactname
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic OverrideArtifactName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// Packaging
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-packaging
             /// Required: False
@@ -227,6 +240,19 @@ namespace Humidifier.CodeBuild
             /// PrimitiveType: String
             /// </summary>
             public dynamic Packaging
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// EncryptionDisabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-encryptiondisabled
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic EncryptionDisabled
             {
                 get;
                 set;

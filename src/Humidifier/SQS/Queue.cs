@@ -149,6 +149,20 @@ namespace Humidifier.SQS
         }
 
         /// <summary>
+        /// Tags
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#cfn-sqs-queue-tags
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: Tag
+        /// </summary>
+        public List<Tag> Tags
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// VisibilityTimeout
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-visiblitytimeout
         /// Required: False

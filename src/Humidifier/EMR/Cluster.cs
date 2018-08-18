@@ -139,6 +139,19 @@ namespace Humidifier.EMR
         }
 
         /// <summary>
+        /// KerberosAttributes
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-kerberosattributes
+        /// Required: False
+        /// UpdateType: Immutable
+        /// Type: KerberosAttributes
+        /// </summary>
+        public KerberosAttributes KerberosAttributes
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// LogUri
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-loguri
         /// Required: False
@@ -733,6 +746,74 @@ namespace Humidifier.EMR
             /// Type: SimpleScalingPolicyConfiguration
             /// </summary>
             public SimpleScalingPolicyConfiguration SimpleScalingPolicyConfiguration
+            {
+                get;
+                set;
+            }
+        }
+
+        public class KerberosAttributes
+        {
+            /// <summary>
+            /// ADDomainJoinPassword
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-addomainjoinpassword
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ADDomainJoinPassword
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ADDomainJoinUser
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-addomainjoinuser
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ADDomainJoinUser
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// CrossRealmTrustPrincipalPassword
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-crossrealmtrustprincipalpassword
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic CrossRealmTrustPrincipalPassword
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// KdcAdminPassword
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-kdcadminpassword
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic KdcAdminPassword
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Realm
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-realm
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Realm
             {
                 get;
                 set;

@@ -5,6 +5,11 @@ namespace Humidifier.CodePipeline
 
     public class Pipeline : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string Version =  "Version" ;
+        }
+
         public override string AWSTypeName
         {
             get

@@ -27,9 +27,10 @@ namespace Humidifier.CodeGen
         {
             Console.WriteLine("Cleaning files");
 
-            var basePath = Environment.GetEnvironmentVariable("BUILD_PATH");
-            var humidifierPath = Path.Combine(basePath, "src", "Humidifier");
-            var codegenPath = Path.Combine(basePath, "src", "Humidifier.CodeGen");
+            var pwd = Directory.GetCurrentDirectory();
+            var srcPath = FindPath(pwd, "Humidifier.sln");
+            var humidifierPath = Path.Combine(srcPath, "Humidifier");
+            var codegenPath = Path.Combine(srcPath, "Humidifier.CodeGen");
 
             foreach (var directory in Directory.GetDirectories(humidifierPath))
             {
@@ -523,6 +524,15 @@ namespace Humidifier.CodeGen
             }
 
             return property;
+        }
+
+        static string FindPath(string path, string searchPattern)
+        {
+            var files = Directory.GetFiles(path, searchPattern, SearchOption.TopDirectoryOnly);
+            if (files.Any()) return path;
+            var parent = Directory.GetParent(path);
+            if (parent.Exists) return FindPath(parent.FullName, searchPattern);
+            return null;
         }
     }
 }

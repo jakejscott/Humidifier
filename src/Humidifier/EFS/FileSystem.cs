@@ -65,6 +65,32 @@ namespace Humidifier.EFS
             get;
             set;
         }
+
+        /// <summary>
+        /// ProvisionedThroughputInMibps
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-elasticfilesystem-filesystem-provisionedthroughputinmibps
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Double
+        /// </summary>
+        public dynamic ProvisionedThroughputInMibps
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// ThroughputMode
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-elasticfilesystem-filesystem-throughputmode
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic ThroughputMode
+        {
+            get;
+            set;
+        }
     }
 
     namespace FileSystemTypes

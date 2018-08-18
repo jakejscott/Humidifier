@@ -15,10 +15,22 @@
           "PrimitiveType": "String",
           "UpdateType": "Mutable"
         },
+        "OverrideArtifactName": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-overrideartifactname",
+          "PrimitiveType": "Boolean",
+          "UpdateType": "Mutable"
+        },
         "Packaging": {
           "Required": false,
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-packaging",
           "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "EncryptionDisabled": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-encryptiondisabled",
+          "PrimitiveType": "Boolean",
           "UpdateType": "Mutable"
         },
         "Location": {
@@ -5224,7 +5236,7 @@
       "Properties": {
         "Action": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-webacl-rules.html#cfn-waf-webacl-rules-action",
-          "Required": true,
+          "Required": false,
           "Type": "WafAction",
           "UpdateType": "Mutable"
         },
@@ -5236,6 +5248,41 @@
         },
         "RuleId": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-webacl-rules.html#cfn-waf-webacl-rules-ruleid",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::EMR::Cluster.KerberosAttributes": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html",
+      "Properties": {
+        "ADDomainJoinPassword": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-addomainjoinpassword",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "ADDomainJoinUser": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-addomainjoinuser",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "CrossRealmTrustPrincipalPassword": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-crossrealmtrustprincipalpassword",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "KdcAdminPassword": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-kdcadminpassword",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Mutable"
+        },
+        "Realm": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-realm",
           "PrimitiveType": "String",
           "Required": true,
           "UpdateType": "Mutable"
@@ -6735,6 +6782,29 @@
           "PrimitiveType": "String",
           "Required": true,
           "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::Glue::Classifier.XMLClassifier": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-xmlclassifier.html",
+      "Properties": {
+        "RowTag": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-xmlclassifier.html#cfn-glue-classifier-xmlclassifier-rowtag",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "Classification": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-xmlclassifier.html#cfn-glue-classifier-xmlclassifier-classification",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "Name": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-xmlclassifier.html#cfn-glue-classifier-xmlclassifier-name",
+          "PrimitiveType": "String",
+          "UpdateType": "Immutable"
         }
       }
     },
@@ -9735,6 +9805,23 @@
         }
       }
     },
+    "AWS::AmazonMQ::Broker.LogList": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-loglist.html",
+      "Properties": {
+        "Audit": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-loglist.html#cfn-amazonmq-broker-loglist-audit",
+          "PrimitiveType": "Boolean",
+          "UpdateType": "Mutable"
+        },
+        "General": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-loglist.html#cfn-amazonmq-broker-loglist-general",
+          "PrimitiveType": "Boolean",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
     "AWS::CloudTrail::Trail.DataResource": {
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-dataresource.html",
       "Properties": {
@@ -11734,6 +11821,23 @@
           "Required": false,
           "Type": "SqsAction",
           "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::Glue::Classifier.JsonClassifier": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-jsonclassifier.html",
+      "Properties": {
+        "JsonPath": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-jsonclassifier.html#cfn-glue-classifier-jsonclassifier-jsonpath",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "Name": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-jsonclassifier.html#cfn-glue-classifier-jsonclassifier-name",
+          "PrimitiveType": "String",
+          "UpdateType": "Immutable"
         }
       }
     },
@@ -14190,6 +14294,17 @@
         }
       }
     },
+    "AWS::DAX::Cluster.SSESpecification": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dax-cluster-ssespecification.html",
+      "Properties": {
+        "SSEEnabled": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dax-cluster-ssespecification.html#cfn-dax-cluster-ssespecification-sseenabled",
+          "PrimitiveType": "Boolean",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
     "AWS::ElastiCache::ReplicationGroup.NodeGroupConfiguration": {
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html",
       "Properties": {
@@ -14692,21 +14807,9 @@
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-maintenancewindowstarttime",
           "UpdateType": "Immutable"
         },
-        "DeploymentMode": {
-          "Required": true,
-          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-deploymentmode",
-          "PrimitiveType": "String",
-          "UpdateType": "Immutable"
-        },
         "HostInstanceType": {
           "Required": true,
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-hostinstancetype",
-          "PrimitiveType": "String",
-          "UpdateType": "Immutable"
-        },
-        "EngineType": {
-          "Required": true,
-          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-enginetype",
           "PrimitiveType": "String",
           "UpdateType": "Immutable"
         },
@@ -14723,11 +14826,11 @@
           "ItemType": "User",
           "UpdateType": "Mutable"
         },
-        "PubliclyAccessible": {
-          "Required": true,
-          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-publiclyaccessible",
-          "PrimitiveType": "Boolean",
-          "UpdateType": "Immutable"
+        "Logs": {
+          "Type": "LogList",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-logs",
+          "UpdateType": "Mutable"
         },
         "SubnetIds": {
           "PrimitiveItemType": "String",
@@ -14740,6 +14843,24 @@
           "Required": true,
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-brokername",
           "PrimitiveType": "String",
+          "UpdateType": "Immutable"
+        },
+        "DeploymentMode": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-deploymentmode",
+          "PrimitiveType": "String",
+          "UpdateType": "Immutable"
+        },
+        "EngineType": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-enginetype",
+          "PrimitiveType": "String",
+          "UpdateType": "Immutable"
+        },
+        "PubliclyAccessible": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-publiclyaccessible",
+          "PrimitiveType": "Boolean",
           "UpdateType": "Immutable"
         }
       }
@@ -15041,6 +15162,12 @@
       "Properties": {
         "PeerOwnerId": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html#cfn-ec2-vpcpeeringconnection-peerownerid",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "PeerRegion": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html#cfn-ec2-vpcpeeringconnection-peerregion",
           "PrimitiveType": "String",
           "Required": false,
           "UpdateType": "Immutable"
@@ -15667,6 +15794,14 @@
           "Required": false,
           "UpdateType": "Mutable"
         },
+        "Tags": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#cfn-sqs-queue-tags",
+          "DuplicatesAllowed": true,
+          "ItemType": "Tag",
+          "Required": false,
+          "Type": "List",
+          "UpdateType": "Mutable"
+        },
         "VisibilityTimeout": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-visiblitytimeout",
           "PrimitiveType": "Integer",
@@ -15754,6 +15889,24 @@
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscalingplans-scalingplan.html#cfn-autoscalingplans-scalingplan-scalinginstructions",
           "ItemType": "ScalingInstruction",
           "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::EC2::VPCEndpointServicePermissions": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservicepermissions.html",
+      "Properties": {
+        "AllowedPrincipals": {
+          "PrimitiveItemType": "String",
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservicepermissions.html#cfn-ec2-vpcendpointservicepermissions-allowedprincipals",
+          "UpdateType": "Mutable"
+        },
+        "ServiceId": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservicepermissions.html#cfn-ec2-vpcendpointservicepermissions-serviceid",
+          "PrimitiveType": "String",
+          "UpdateType": "Immutable"
         }
       }
     },
@@ -16453,6 +16606,12 @@
           "Required": true,
           "UpdateType": "Immutable"
         },
+        "KerberosAttributes": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-kerberosattributes",
+          "Required": false,
+          "Type": "KerberosAttributes",
+          "UpdateType": "Immutable"
+        },
         "LogUri": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-loguri",
           "PrimitiveType": "String",
@@ -16750,14 +16909,38 @@
     "AWS::SNS::Subscription": {
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html",
       "Properties": {
+        "DeliveryPolicy": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-subscription-deliverypolicy",
+          "PrimitiveType": "Json",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
         "Endpoint": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-endpoint",
           "PrimitiveType": "String",
           "Required": false,
           "UpdateType": "Immutable"
         },
+        "FilterPolicy": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-subscription-filterpolicy",
+          "PrimitiveType": "Json",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
         "Protocol": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-protocol",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "RawMessageDelivery": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-subscription-rawmessagedelivery",
+          "PrimitiveType": "Boolean",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "Region": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-subscription-region",
           "PrimitiveType": "String",
           "Required": false,
           "UpdateType": "Immutable"
@@ -20791,6 +20974,11 @@
       }
     },
     "AWS::CodePipeline::Pipeline": {
+      "Attributes": {
+        "Version": {
+          "PrimitiveType": "String"
+        }
+      },
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html",
       "Properties": {
         "ArtifactStore": {
@@ -22436,6 +22624,18 @@
           "PrimitiveType": "String",
           "Required": false,
           "UpdateType": "Immutable"
+        },
+        "ProvisionedThroughputInMibps": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-elasticfilesystem-filesystem-provisionedthroughputinmibps",
+          "PrimitiveType": "Double",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "ThroughputMode": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-elasticfilesystem-filesystem-throughputmode",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
         }
       }
     },
@@ -22450,6 +22650,12 @@
         }
       },
       "Properties": {
+        "SSESpecification": {
+          "Type": "SSESpecification",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-ssespecification",
+          "UpdateType": "Immutable"
+        },
         "Description": {
           "Required": false,
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-description",
@@ -22475,12 +22681,6 @@
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-availabilityzones",
           "UpdateType": "Mutable"
         },
-        "NodeType": {
-          "Required": true,
-          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-nodetype",
-          "PrimitiveType": "String",
-          "UpdateType": "Immutable"
-        },
         "IAMRoleARN": {
           "Required": true,
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-iamrolearn",
@@ -22490,12 +22690,6 @@
         "SubnetGroupName": {
           "Required": false,
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-subnetgroupname",
-          "PrimitiveType": "String",
-          "UpdateType": "Immutable"
-        },
-        "ClusterName": {
-          "Required": false,
-          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-clustername",
           "PrimitiveType": "String",
           "UpdateType": "Immutable"
         },
@@ -22517,6 +22711,18 @@
           "Required": false,
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-securitygroupids",
           "UpdateType": "Mutable"
+        },
+        "NodeType": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-nodetype",
+          "PrimitiveType": "String",
+          "UpdateType": "Immutable"
+        },
+        "ClusterName": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html#cfn-dax-cluster-clustername",
+          "PrimitiveType": "String",
+          "UpdateType": "Immutable"
         },
         "Tags": {
           "Required": false,
@@ -27189,6 +27395,12 @@
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-schemachangepolicy",
           "UpdateType": "Mutable"
         },
+        "Configuration": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-configuration",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
         "Schedule": {
           "Type": "Schedule",
           "Required": false,
@@ -27644,6 +27856,18 @@
     "AWS::Glue::Classifier": {
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-classifier.html",
       "Properties": {
+        "XMLClassifier": {
+          "Type": "XMLClassifier",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-classifier.html#cfn-glue-classifier-xmlclassifier",
+          "UpdateType": "Mutable"
+        },
+        "JsonClassifier": {
+          "Type": "JsonClassifier",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-classifier.html#cfn-glue-classifier-jsonclassifier",
+          "UpdateType": "Mutable"
+        },
         "GrokClassifier": {
           "Type": "GrokClassifier",
           "Required": false,
@@ -27653,5 +27877,5 @@
       }
     }
   },
-  "ResourceSpecificationVersion": "2.5.0"
+  "ResourceSpecificationVersion": "2.6.0"
 }

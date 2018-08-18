@@ -26,6 +26,19 @@ namespace Humidifier.EC2
         }
 
         /// <summary>
+        /// PeerRegion
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html#cfn-ec2-vpcpeeringconnection-peerregion
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic PeerRegion
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// PeerRoleArn
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html#cfn-ec2-vpcpeeringconnection-peerrolearn
         /// Required: False
