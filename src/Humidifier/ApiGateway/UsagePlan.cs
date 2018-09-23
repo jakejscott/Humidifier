@@ -109,6 +109,20 @@ namespace Humidifier.ApiGateway
                 get;
                 set;
             }
+
+            /// <summary>
+            /// Throttle
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-throttle
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: Map
+            /// ItemType: ThrottleSettings
+            /// </summary>
+            public Dictionary<string, ThrottleSettings> Throttle
+            {
+                get;
+                set;
+            }
         }
 
         public class ThrottleSettings

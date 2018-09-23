@@ -14,6 +14,19 @@ namespace Humidifier.ApiGateway
         }
 
         /// <summary>
+        /// DeploymentCanarySettings
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-deployment.html#cfn-apigateway-deployment-deploymentcanarysettings
+        /// Required: False
+        /// UpdateType: Immutable
+        /// Type: DeploymentCanarySettings
+        /// </summary>
+        public DeploymentCanarySettings DeploymentCanarySettings
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Description
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-deployment.html#cfn-apigateway-deployment-description
         /// Required: False
@@ -68,6 +81,49 @@ namespace Humidifier.ApiGateway
 
     namespace DeploymentTypes
     {
+        public class DeploymentCanarySettings
+        {
+            /// <summary>
+            /// PercentTraffic
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-deploymentcanarysettings.html#cfn-apigateway-deployment-deploymentcanarysettings-percenttraffic
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Double
+            /// </summary>
+            public dynamic PercentTraffic
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// StageVariableOverrides
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-deploymentcanarysettings.html#cfn-apigateway-deployment-deploymentcanarysettings-stagevariableoverrides
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: Map
+            /// PrimitiveItemType: String
+            /// </summary>
+            public Dictionary<string, dynamic> StageVariableOverrides
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// UseStageCache
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-deploymentcanarysettings.html#cfn-apigateway-deployment-deploymentcanarysettings-usestagecache
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic UseStageCache
+            {
+                get;
+                set;
+            }
+        }
+
         public class MethodSetting
         {
             /// <summary>
@@ -204,6 +260,19 @@ namespace Humidifier.ApiGateway
         public class StageDescription
         {
             /// <summary>
+            /// AccessLogSetting
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-accesslogsetting
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: AccessLogSetting
+            /// </summary>
+            public AccessLogSetting AccessLogSetting
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// CacheClusterEnabled
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-cacheclusterenabled
             /// Required: False
@@ -263,6 +332,19 @@ namespace Humidifier.ApiGateway
             /// PrimitiveType: Boolean
             /// </summary>
             public dynamic CachingEnabled
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// CanarySetting
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-canarysetting
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: CanarySetting
+            /// </summary>
+            public CanarySetting CanarySetting
             {
                 get;
                 set;
@@ -395,6 +477,78 @@ namespace Humidifier.ApiGateway
             /// PrimitiveItemType: String
             /// </summary>
             public Dictionary<string, dynamic> Variables
+            {
+                get;
+                set;
+            }
+        }
+
+        public class CanarySetting
+        {
+            /// <summary>
+            /// PercentTraffic
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html#cfn-apigateway-deployment-canarysetting-percenttraffic
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Double
+            /// </summary>
+            public dynamic PercentTraffic
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// StageVariableOverrides
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html#cfn-apigateway-deployment-canarysetting-stagevariableoverrides
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: Map
+            /// PrimitiveItemType: String
+            /// </summary>
+            public Dictionary<string, dynamic> StageVariableOverrides
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// UseStageCache
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html#cfn-apigateway-deployment-canarysetting-usestagecache
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic UseStageCache
+            {
+                get;
+                set;
+            }
+        }
+
+        public class AccessLogSetting
+        {
+            /// <summary>
+            /// DestinationArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-accesslogsetting.html#cfn-apigateway-deployment-accesslogsetting-destinationarn
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DestinationArn
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Format
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-accesslogsetting.html#cfn-apigateway-deployment-accesslogsetting-format
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Format
             {
                 get;
                 set;

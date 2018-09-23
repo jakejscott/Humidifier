@@ -150,6 +150,76 @@ namespace Humidifier.ECS
 
     namespace TaskDefinitionTypes
     {
+        public class DockerVolumeConfiguration
+        {
+            /// <summary>
+            /// Autoprovision
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-autoprovision
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Autoprovision
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Driver
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-driver
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Driver
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DriverOpts
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-driveropts
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: Map
+            /// PrimitiveItemType: String
+            /// </summary>
+            public Dictionary<string, dynamic> DriverOpts
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Labels
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-labels
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: Map
+            /// PrimitiveItemType: String
+            /// </summary>
+            public Dictionary<string, dynamic> Labels
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Scope
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-scope
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Scope
+            {
+                get;
+                set;
+            }
+        }
+
         public class ContainerDefinition
         {
             /// <summary>
@@ -476,6 +546,19 @@ namespace Humidifier.ECS
             }
 
             /// <summary>
+            /// RepositoryCredentials
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html#cfn-ecs-taskdefinition-containerdefinition-repositorycredentials
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: RepositoryCredentials
+            /// </summary>
+            public RepositoryCredentials RepositoryCredentials
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// Ulimits
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html#cfn-ecs-taskdefinition-containerdefinition-ulimits
             /// Required: False
@@ -795,6 +878,19 @@ namespace Humidifier.ECS
         public class Volume
         {
             /// <summary>
+            /// DockerVolumeConfiguration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumes.html#cfn-ecs-taskdefinition-volume-dockervolumeconfiguration
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: DockerVolumeConfiguration
+            /// </summary>
+            public DockerVolumeConfiguration DockerVolumeConfiguration
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// Host
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumes.html#cfn-ecs-taskdefinition-volumes-host
             /// Required: False
@@ -1015,6 +1111,33 @@ namespace Humidifier.ECS
                 get;
                 set;
             }
+
+            /// <summary>
+            /// SharedMemorySize
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-sharedmemorysize
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic SharedMemorySize
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Tmpfs
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-tmpfs
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: List
+            /// ItemType: Tmpfs
+            /// </summary>
+            public List<Tmpfs> Tmpfs
+            {
+                get;
+                set;
+            }
         }
 
         public class HostVolumeProperties
@@ -1027,6 +1150,65 @@ namespace Humidifier.ECS
             /// PrimitiveType: String
             /// </summary>
             public dynamic SourcePath
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Tmpfs
+        {
+            /// <summary>
+            /// ContainerPath
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-containerpath
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ContainerPath
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// MountOptions
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-mountoptions
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic MountOptions
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Size
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-size
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Size
+            {
+                get;
+                set;
+            }
+        }
+
+        public class RepositoryCredentials
+        {
+            /// <summary>
+            /// CredentialsParameter
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-repositorycredentials.html#cfn-ecs-taskdefinition-repositorycredentials-credentialsparameter
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic CredentialsParameter
             {
                 get;
                 set;

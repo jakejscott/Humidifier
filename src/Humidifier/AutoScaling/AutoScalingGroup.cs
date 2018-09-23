@@ -119,6 +119,19 @@ namespace Humidifier.AutoScaling
         }
 
         /// <summary>
+        /// LaunchTemplate
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-launchtemplate
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: LaunchTemplateSpecification
+        /// </summary>
+        public LaunchTemplateSpecification LaunchTemplate
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// LifecycleHookSpecificationList
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-autoscaling-autoscalinggroup-lifecyclehookspecificationlist
         /// Required: False
@@ -373,6 +386,48 @@ namespace Humidifier.AutoScaling
             /// PrimitiveType: String
             /// </summary>
             public dynamic RoleARN
+            {
+                get;
+                set;
+            }
+        }
+
+        public class LaunchTemplateSpecification
+        {
+            /// <summary>
+            /// LaunchTemplateId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-launchtemplateid
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic LaunchTemplateId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// LaunchTemplateName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-launchtemplatename
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic LaunchTemplateName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Version
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.html#cfn-autoscaling-autoscalinggroup-launchtemplatespecification-version
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Version
             {
                 get;
                 set;

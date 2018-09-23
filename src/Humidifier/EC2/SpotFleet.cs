@@ -29,6 +29,52 @@ namespace Humidifier.EC2
 
     namespace SpotFleetTypes
     {
+        public class ClassicLoadBalancer
+        {
+            /// <summary>
+            /// Name
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-classicloadbalancer.html#cfn-ec2-spotfleet-classicloadbalancer-name
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Name
+            {
+                get;
+                set;
+            }
+        }
+
+        public class LaunchTemplateConfig
+        {
+            /// <summary>
+            /// LaunchTemplateSpecification
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateconfig.html#cfn-ec2-spotfleet-launchtemplateconfig-launchtemplatespecification
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: FleetLaunchTemplateSpecification
+            /// </summary>
+            public FleetLaunchTemplateSpecification LaunchTemplateSpecification
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Overrides
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateconfig.html#cfn-ec2-spotfleet-launchtemplateconfig-overrides
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: LaunchTemplateOverrides
+            /// </summary>
+            public List<LaunchTemplateOverrides> Overrides
+            {
+                get;
+                set;
+            }
+        }
+
         public class IamInstanceProfileSpecification
         {
             /// <summary>
@@ -467,6 +513,23 @@ namespace Humidifier.EC2
             }
         }
 
+        public class ClassicLoadBalancersConfig
+        {
+            /// <summary>
+            /// ClassicLoadBalancers
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-classicloadbalancersconfig.html#cfn-ec2-spotfleet-classicloadbalancersconfig-classicloadbalancers
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: ClassicLoadBalancer
+            /// </summary>
+            public List<ClassicLoadBalancer> ClassicLoadBalancers
+            {
+                get;
+                set;
+            }
+        }
+
         public class SpotPlacement
         {
             /// <summary>
@@ -490,6 +553,19 @@ namespace Humidifier.EC2
             /// PrimitiveType: String
             /// </summary>
             public dynamic GroupName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Tenancy
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement.html#cfn-ec2-spotfleet-spotplacement-tenancy
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Tenancy
             {
                 get;
                 set;
@@ -538,6 +614,19 @@ namespace Humidifier.EC2
             }
 
             /// <summary>
+            /// InstanceInterruptionBehavior
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-instanceinterruptionbehavior
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic InstanceInterruptionBehavior
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// LaunchSpecifications
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications
             /// Required: False
@@ -546,6 +635,33 @@ namespace Humidifier.EC2
             /// ItemType: SpotFleetLaunchSpecification
             /// </summary>
             public List<SpotFleetLaunchSpecification> LaunchSpecifications
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// LaunchTemplateConfigs
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchtemplateconfigs
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: List
+            /// ItemType: LaunchTemplateConfig
+            /// </summary>
+            public List<LaunchTemplateConfig> LaunchTemplateConfigs
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// LoadBalancersConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-loadbalancersconfig
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: LoadBalancersConfig
+            /// </summary>
+            public LoadBalancersConfig LoadBalancersConfig
             {
                 get;
                 set;
@@ -724,6 +840,93 @@ namespace Humidifier.EC2
             }
         }
 
+        public class LoadBalancersConfig
+        {
+            /// <summary>
+            /// ClassicLoadBalancersConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-loadbalancersconfig.html#cfn-ec2-spotfleet-loadbalancersconfig-classicloadbalancersconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: ClassicLoadBalancersConfig
+            /// </summary>
+            public ClassicLoadBalancersConfig ClassicLoadBalancersConfig
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// TargetGroupsConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-loadbalancersconfig.html#cfn-ec2-spotfleet-loadbalancersconfig-targetgroupsconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: TargetGroupsConfig
+            /// </summary>
+            public TargetGroupsConfig TargetGroupsConfig
+            {
+                get;
+                set;
+            }
+        }
+
+        public class FleetLaunchTemplateSpecification
+        {
+            /// <summary>
+            /// LaunchTemplateId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplateid
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic LaunchTemplateId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// LaunchTemplateName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplatename
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic LaunchTemplateName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Version
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-version
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Version
+            {
+                get;
+                set;
+            }
+        }
+
+        public class TargetGroup
+        {
+            /// <summary>
+            /// Arn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-targetgroup.html#cfn-ec2-spotfleet-targetgroup-arn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Arn
+            {
+                get;
+                set;
+            }
+        }
+
         public class InstanceIpv6Address
         {
             /// <summary>
@@ -740,6 +943,23 @@ namespace Humidifier.EC2
             }
         }
 
+        public class TargetGroupsConfig
+        {
+            /// <summary>
+            /// TargetGroups
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-targetgroupsconfig.html#cfn-ec2-spotfleet-targetgroupsconfig-targetgroups
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: TargetGroup
+            /// </summary>
+            public List<TargetGroup> TargetGroups
+            {
+                get;
+                set;
+            }
+        }
+
         public class GroupIdentifier
         {
             /// <summary>
@@ -750,6 +970,74 @@ namespace Humidifier.EC2
             /// PrimitiveType: String
             /// </summary>
             public dynamic GroupId
+            {
+                get;
+                set;
+            }
+        }
+
+        public class LaunchTemplateOverrides
+        {
+            /// <summary>
+            /// AvailabilityZone
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-availabilityzone
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic AvailabilityZone
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// InstanceType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-instancetype
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic InstanceType
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SpotPrice
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-spotprice
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic SpotPrice
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SubnetId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-subnetid
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic SubnetId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// WeightedCapacity
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-weightedcapacity
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Double
+            /// </summary>
+            public dynamic WeightedCapacity
             {
                 get;
                 set;

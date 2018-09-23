@@ -133,6 +133,19 @@ namespace Humidifier.CodeDeploy
         }
 
         /// <summary>
+        /// Ec2TagSet
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-ec2tagset
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: EC2TagSet
+        /// </summary>
+        public EC2TagSet Ec2TagSet
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// LoadBalancerInfo
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-loadbalancerinfo
         /// Required: False
@@ -154,6 +167,19 @@ namespace Humidifier.CodeDeploy
         /// ItemType: TagFilter
         /// </summary>
         public List<TagFilter> OnPremisesInstanceTagFilters
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// OnPremisesTagSet
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-onpremisestagset
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: OnPremisesTagSet
+        /// </summary>
+        public OnPremisesTagSet OnPremisesTagSet
         {
             get;
             set;
@@ -377,7 +403,7 @@ namespace Humidifier.CodeDeploy
         {
             /// <summary>
             /// Key
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-onpremisesinstancetagfilters.html#cfn-properties-codedeploy-deploymentgroup-onpremisesinstancetagfilters-key
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-tagfilter.html#cfn-codedeploy-deploymentgroup-tagfilter-key
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -390,7 +416,7 @@ namespace Humidifier.CodeDeploy
 
             /// <summary>
             /// Type
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-onpremisesinstancetagfilters.html#cfn-properties-codedeploy-deploymentgroup-onpremisesinstancetagfilters-type
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-tagfilter.html#cfn-codedeploy-deploymentgroup-tagfilter-type
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -403,7 +429,7 @@ namespace Humidifier.CodeDeploy
 
             /// <summary>
             /// Value
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-onpremisesinstancetagfilters.html#cfn-properties-codedeploy-deploymentgroup-onpremisesinstancetagfilters-value
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-tagfilter.html#cfn-codedeploy-deploymentgroup-tagfilter-value
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -454,6 +480,23 @@ namespace Humidifier.CodeDeploy
             /// PrimitiveType: String
             /// </summary>
             public dynamic Name
+            {
+                get;
+                set;
+            }
+        }
+
+        public class EC2TagSet
+        {
+            /// <summary>
+            /// Ec2TagSetList
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagset.html#cfn-codedeploy-deploymentgroup-ec2tagset-ec2tagsetlist
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: EC2TagSetListObject
+            /// </summary>
+            public List<EC2TagSetListObject> Ec2TagSetList
             {
                 get;
                 set;
@@ -519,6 +562,23 @@ namespace Humidifier.CodeDeploy
             }
         }
 
+        public class OnPremisesTagSetListObject
+        {
+            /// <summary>
+            /// OnPremisesTagGroup
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-onpremisestagsetlistobject.html#cfn-codedeploy-deploymentgroup-onpremisestagsetlistobject-onpremisestaggroup
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: TagFilter
+            /// </summary>
+            public List<TagFilter> OnPremisesTagGroup
+            {
+                get;
+                set;
+            }
+        }
+
         public class DeploymentStyle
         {
             /// <summary>
@@ -568,7 +628,7 @@ namespace Humidifier.CodeDeploy
         {
             /// <summary>
             /// Key
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagfilters.html#cfn-properties-codedeploy-deploymentgroup-ec2tagfilters-key
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagfilter.html#cfn-codedeploy-deploymentgroup-ec2tagfilter-key
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -581,7 +641,7 @@ namespace Humidifier.CodeDeploy
 
             /// <summary>
             /// Type
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagfilters.html#cfn-properties-codedeploy-deploymentgroup-ec2tagfilters-type
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagfilter.html#cfn-codedeploy-deploymentgroup-ec2tagfilter-type
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String
@@ -594,12 +654,29 @@ namespace Humidifier.CodeDeploy
 
             /// <summary>
             /// Value
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagfilters.html#cfn-properties-codedeploy-deploymentgroup-ec2tagfilters-value
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagfilter.html#cfn-codedeploy-deploymentgroup-ec2tagfilter-value
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String
             /// </summary>
             public dynamic Value
+            {
+                get;
+                set;
+            }
+        }
+
+        public class OnPremisesTagSet
+        {
+            /// <summary>
+            /// OnPremisesTagSetList
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-onpremisestagset.html#cfn-codedeploy-deploymentgroup-onpremisestagset-onpremisestagsetlist
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: OnPremisesTagSetListObject
+            /// </summary>
+            public List<OnPremisesTagSetListObject> OnPremisesTagSetList
             {
                 get;
                 set;
@@ -672,6 +749,23 @@ namespace Humidifier.CodeDeploy
             /// Type: RevisionLocation
             /// </summary>
             public RevisionLocation Revision
+            {
+                get;
+                set;
+            }
+        }
+
+        public class EC2TagSetListObject
+        {
+            /// <summary>
+            /// Ec2TagGroup
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagsetlistobject.html#cfn-codedeploy-deploymentgroup-ec2tagsetlistobject-ec2taggroup
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: EC2TagFilter
+            /// </summary>
+            public List<EC2TagFilter> Ec2TagGroup
             {
                 get;
                 set;

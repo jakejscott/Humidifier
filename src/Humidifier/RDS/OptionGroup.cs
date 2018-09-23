@@ -146,9 +146,10 @@ namespace Humidifier.RDS
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html#cfn-rds-optiongroup-optionconfigurations-optionsettings
             /// Required: False
             /// UpdateType: Mutable
-            /// Type: OptionSetting
+            /// Type: List
+            /// ItemType: OptionSetting
             /// </summary>
-            public OptionSetting OptionSettings
+            public List<OptionSetting> OptionSettings
             {
                 get;
                 set;

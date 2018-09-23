@@ -152,7 +152,7 @@ namespace Humidifier.ElastiCache
         /// NodeGroupConfiguration
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-nodegroupconfiguration
         /// Required: False
-        /// UpdateType: Immutable
+        /// UpdateType: Conditional
         /// Type: List
         /// ItemType: NodeGroupConfiguration
         /// </summary>
@@ -192,7 +192,7 @@ namespace Humidifier.ElastiCache
         /// NumNodeGroups
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-numnodegroups
         /// Required: False
-        /// UpdateType: Immutable
+        /// UpdateType: Conditional
         /// PrimitiveType: Integer
         /// </summary>
         public dynamic NumNodeGroups
@@ -405,6 +405,19 @@ namespace Humidifier.ElastiCache
     {
         public class NodeGroupConfiguration
         {
+            /// <summary>
+            /// NodeGroupId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-nodegroupid
+            /// Required: False
+            /// UpdateType: Conditional
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic NodeGroupId
+            {
+                get;
+                set;
+            }
+
             /// <summary>
             /// PrimaryAvailabilityZone
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-primaryavailabilityzone
