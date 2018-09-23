@@ -529,7 +529,7 @@ namespace Humidifier.ElasticLoadBalancing
             /// Type: List
             /// PrimitiveItemType: Json
             /// </summary>
-            public List<dynamic> Attributes
+            public List<dynamic> Attributes_
             {
                 get;
                 set;

@@ -127,7 +127,7 @@ namespace Humidifier.CodeGen
                 }
 
                 {
-                    var propertyDecAWSType = PropertyDeclaration(ParseTypeName(@"string"), @"AWSTypeName")
+                    var propertyDecAWSType = PropertyDeclaration(ParseTypeName("string"), "AWSTypeName")
                             .AddModifiers(Token(SyntaxKind.PublicKeyword))
                             .AddModifiers(Token(SyntaxKind.OverrideKeyword))
                             .AddAccessorListAccessors(
@@ -150,7 +150,7 @@ namespace Humidifier.CodeGen
                     var typeName = GetTypeName(property);
 
                     var propertyName = property.Name;
-                    if (property.Name == resourceClassName)
+                    if (propertyName == resourceClassName || propertyName == "Attributes")
                     {
                         propertyName += "_";
                     }
@@ -184,7 +184,7 @@ namespace Humidifier.CodeGen
                         var typeName = GetTypeName(property);
 
                         var propertyName = property.Name;
-                        if (property.Name == propertyTypeClassName)
+                        if (property.Name == propertyTypeClassName || propertyName == "Attributes")
                         {
                             propertyName += "_";
                         }

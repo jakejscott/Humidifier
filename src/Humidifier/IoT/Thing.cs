@@ -52,7 +52,7 @@ namespace Humidifier.IoT
             /// Type: Map
             /// PrimitiveItemType: String
             /// </summary>
-            public Dictionary<string, dynamic> Attributes
+            public Dictionary<string, dynamic> Attributes_
             {
                 get;
                 set;

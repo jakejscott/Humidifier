@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using Humidifier.IoT1Click;
 using Humidifier.Json;
 using Humidifier.Lambda.FunctionTypes;
 
@@ -448,6 +449,14 @@ namespace Humidifier.ConsoleTest
                             Method = "ANY"
                         }
                     }
+                }
+            });
+
+            stack.Resources.Add("IoTPlacement", new Placement
+            {
+                Attributes_ = new
+                {
+                    Name = "Test"
                 }
             });
 

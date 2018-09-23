@@ -179,7 +179,7 @@ namespace Humidifier.DataPipeline
             /// Type: List
             /// ItemType: ParameterAttribute
             /// </summary>
-            public List<ParameterAttribute> Attributes
+            public List<ParameterAttribute> Attributes_
             {
                 get;
                 set;

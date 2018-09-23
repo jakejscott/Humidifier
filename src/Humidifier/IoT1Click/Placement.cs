@@ -64,7 +64,7 @@ namespace Humidifier.IoT1Click
         /// UpdateType: Mutable
         /// PrimitiveType: Json
         /// </summary>
-        public dynamic Attributes
+        public dynamic Attributes_
         {
             get;
             set;
