@@ -4,6 +4,7 @@ using System.IO;
 using Humidifier.IoT1Click;
 using Humidifier.Json;
 using Humidifier.Lambda.FunctionTypes;
+using Newtonsoft.Json;
 
 namespace Humidifier.ConsoleTest
 {
@@ -269,8 +270,8 @@ namespace Humidifier.ConsoleTest
                 BucketName = Fn.Join("", Fn.Ref("AWS::StackName"), "-images")
             });
 
-            stack.AddDelitionPolicy("ImageBucket", DeletionPolicy.Retain);
-            stack.AddMetadata("ImageBucket", new { Object1 = "Location1", Object2 = "Object2" });
+            stack.AddDeletionPolicy("ImageBucket", DeletionPolicy.Retain);
+            stack.AddResourceMetadata("ImageBucket", new { Object1 = "Location1", Object2 = "Object2" });
 
             stack.Add("DeploymentBucketPolicy", new S3.BucketPolicy
             {
@@ -420,7 +421,7 @@ namespace Humidifier.ConsoleTest
                     WaitOnResourceSignals = true,
                     PauseTime = "PT10M"
                 }
-            }, 
+            },
             metadata: new { Key1 = "Value1", Key2 = "Value2" });
 
             stack.Resources.Add("AspNetCoreFunction", new Humidifier.Serverless.Function
@@ -431,7 +432,7 @@ namespace Humidifier.ConsoleTest
                 MemorySize = 256,
                 Timeout = 30,
                 Role = null,
-                Policies = new [] { "AWSLambdaFullAccess" },
+                Policies = new[] { "AWSLambdaFullAccess" },
                 Environment = new Serverless.FunctionTypes.Environment
                 {
                     Variables = new Dictionary<string, dynamic>
@@ -459,6 +460,35 @@ namespace Humidifier.ConsoleTest
                     Name = "Test"
                 }
             });
+
+            stack.AddTemplateMetadata("AWS::CloudFormation::Interface", JsonConvert.DeserializeObject(@"{
+    'ParameterGroups': [
+        {
+            'Label': {
+                'default': 'Network Configuration'
+            },
+            'Parameters': [
+                'VPCID',
+                'SubnetId',
+                'SecurityGroupID'
+            ]
+        },
+        {
+            'Label': {
+                'default': 'Amazon EC2 Configuration'
+            },
+            'Parameters': [
+                'InstanceType',
+                'KeyName'
+            ]
+        }
+    ],
+    'ParameterLabels': {
+        'VPCID': {
+            'default': 'Which VPC should this be deployed to?'
+        }
+    }
+}"));
 
             return stack;
         }

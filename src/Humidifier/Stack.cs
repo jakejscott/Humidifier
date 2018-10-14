@@ -9,7 +9,6 @@ namespace Humidifier
         private Dictionary<string, DeletionPolicy> ResourceDeletionPolicies { get; } = new Dictionary<string, DeletionPolicy>();
         private Dictionary<string, CreationPolicy> ResourceCreationPolicies { get; } = new Dictionary<string, CreationPolicy>();
         private Dictionary<string, UpdatePolicy> ResourceUpdatePolicies { get; } = new Dictionary<string, UpdatePolicy>();
-        private Dictionary<string, dynamic> ResourceMetadata { get; } = new Dictionary<string, dynamic>();
         private Dictionary<string, HashSet<string>> ResourceDependsOn { get; } = new Dictionary<string, HashSet<string>>();
 
         public Stack(string awsTemplateFormatVersion = "2010-09-09")
@@ -26,6 +25,8 @@ namespace Humidifier
         public Dictionary<string, Mapping> Mappings { get; } = new Dictionary<string, Mapping>();
         public Dictionary<string, Resource> Resources { get; } = new Dictionary<string, Resource>();
         public Dictionary<string, Output> Outputs { get; } = new Dictionary<string, Output>();
+        public Dictionary<string, dynamic> ResourceMetadata { get; } = new Dictionary<string, dynamic>();
+        public Dictionary<string, dynamic> TemplateMetadata { get; } = new Dictionary<string, dynamic>();
 
         public void Add(string name, Parameter parameter) => Parameters.Add(name, parameter);
         public void Add(string name, Condition condition) => Conditions.Add(name, condition);
@@ -58,12 +59,12 @@ namespace Humidifier
 
             if (deletionPolicy != null)
             {
-                AddDelitionPolicy(name, deletionPolicy.Value);
+                AddDeletionPolicy(name, deletionPolicy.Value);
             }
 
             if (metadata != null)
             {
-                AddMetadata(name, metadata);
+                AddResourceMetadata(name, metadata);
             }
         }
 
@@ -118,7 +119,7 @@ namespace Humidifier
             }
         }
 
-        public void AddDelitionPolicy(string resource, DeletionPolicy policy)
+        public void AddDeletionPolicy(string resource, DeletionPolicy policy)
         {
             if (ResourceDeletionPolicies.ContainsKey(resource))
             {
@@ -130,7 +131,7 @@ namespace Humidifier
             }
         }
 
-        public void AddMetadata(string resource, dynamic metadata)
+        public void AddResourceMetadata(string resource, dynamic metadata)
         {
             if (ResourceMetadata.ContainsKey(resource))
             {
@@ -139,6 +140,18 @@ namespace Humidifier
             else
             {
                 ResourceMetadata.Add(resource, metadata);
+            }
+        }
+
+        public void AddTemplateMetadata(string resource, dynamic metadata)
+        {
+            if (TemplateMetadata.ContainsKey(resource))
+            {
+                TemplateMetadata[resource] = metadata;
+            }
+            else
+            {
+                TemplateMetadata.Add(resource, metadata);
             }
         }
 

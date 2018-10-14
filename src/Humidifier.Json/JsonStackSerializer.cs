@@ -76,6 +76,11 @@ namespace Humidifier.Json
                 stackJson.Conditions = stack.Conditions;
             }
 
+            if (stack.TemplateMetadata != null && stack.TemplateMetadata.Any())
+            {
+                stackJson.Metadata = stack.TemplateMetadata;
+            }
+
             if (stack.Resources != null && stack.Resources.Any())
             {
                 stackJson.Resources = new Dictionary<string, ResourceJson>();
@@ -155,6 +160,7 @@ namespace Humidifier.Json
             public Dictionary<string, Output> Outputs { get; set; }
             public Dictionary<string, Mapping> Mappings { get; set; }
             public Dictionary<string, Condition> Conditions { get; set; }
+            public Dictionary<string, dynamic> Metadata { get; set; }
         }
 
         private class ResourceJson
