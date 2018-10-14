@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Humidifier.Templates</id>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <description>Humidifier templates.</description>
     <authors>Jake Scott</authors>
     <packageTypes>
