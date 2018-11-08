@@ -36,7 +36,7 @@ namespace Humidifier.AmazonMQ
         /// EngineVersion
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-engineversion
         /// Required: True
-        /// UpdateType: Immutable
+        /// UpdateType: Mutable
         /// PrimitiveType: String
         /// </summary>
         public dynamic EngineVersion
@@ -88,7 +88,7 @@ namespace Humidifier.AmazonMQ
         /// AutoMinorVersionUpgrade
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-autominorversionupgrade
         /// Required: True
-        /// UpdateType: Immutable
+        /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
         public dynamic AutoMinorVersionUpgrade

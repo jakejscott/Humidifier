@@ -41,6 +41,19 @@ namespace Humidifier.SSM
         }
 
         /// <summary>
+        /// RejectedPatchesAction
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-rejectedpatchesaction
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic RejectedPatchesAction
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// PatchGroups
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-patchgroups
         /// Required: False
