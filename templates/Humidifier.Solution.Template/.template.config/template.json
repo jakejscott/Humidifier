@@ -9,7 +9,7 @@
   "name": "Humidifier Solution Template",
   "identity": "Humidifier.Solution.Template.CSharp",
   "groupIdentity": "Humidifier.Solution.Template",
-  "shortName": "humidifier.sln",
+  "shortName": "humidifier",
   "tags": {
     "language": "C#",
     "type": "project"
