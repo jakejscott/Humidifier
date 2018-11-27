@@ -72,6 +72,19 @@ namespace Humidifier.AppSync
         }
 
         /// <summary>
+        /// RelationalDatabaseConfig
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-relationaldatabaseconfig
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: RelationalDatabaseConfig
+        /// </summary>
+        public RelationalDatabaseConfig RelationalDatabaseConfig
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// LambdaConfig
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-lambdaconfig
         /// Required: False
@@ -139,6 +152,132 @@ namespace Humidifier.AppSync
 
     namespace DataSourceTypes
     {
+        public class AuthorizationConfig
+        {
+            /// <summary>
+            /// AwsIamConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-authorizationconfig.html#cfn-appsync-datasource-authorizationconfig-awsiamconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: AwsIamConfig
+            /// </summary>
+            public AwsIamConfig AwsIamConfig
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// AuthorizationType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-authorizationconfig.html#cfn-appsync-datasource-authorizationconfig-authorizationtype
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic AuthorizationType
+            {
+                get;
+                set;
+            }
+        }
+
+        public class RelationalDatabaseConfig
+        {
+            /// <summary>
+            /// RdsHttpEndpointConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-relationaldatabaseconfig.html#cfn-appsync-datasource-relationaldatabaseconfig-rdshttpendpointconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: RdsHttpEndpointConfig
+            /// </summary>
+            public RdsHttpEndpointConfig RdsHttpEndpointConfig
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RelationalDatabaseSourceType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-relationaldatabaseconfig.html#cfn-appsync-datasource-relationaldatabaseconfig-relationaldatabasesourcetype
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RelationalDatabaseSourceType
+            {
+                get;
+                set;
+            }
+        }
+
+        public class RdsHttpEndpointConfig
+        {
+            /// <summary>
+            /// AwsRegion
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-rdshttpendpointconfig.html#cfn-appsync-datasource-rdshttpendpointconfig-awsregion
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic AwsRegion
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Schema
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-rdshttpendpointconfig.html#cfn-appsync-datasource-rdshttpendpointconfig-schema
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Schema
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DatabaseName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-rdshttpendpointconfig.html#cfn-appsync-datasource-rdshttpendpointconfig-databasename
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DatabaseName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DbClusterIdentifier
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-rdshttpendpointconfig.html#cfn-appsync-datasource-rdshttpendpointconfig-dbclusteridentifier
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DbClusterIdentifier
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// AwsSecretStoreArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-rdshttpendpointconfig.html#cfn-appsync-datasource-rdshttpendpointconfig-awssecretstorearn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic AwsSecretStoreArn
+            {
+                get;
+                set;
+            }
+        }
+
         public class LambdaConfig
         {
             /// <summary>
@@ -155,6 +294,35 @@ namespace Humidifier.AppSync
             }
         }
 
+        public class AwsIamConfig
+        {
+            /// <summary>
+            /// SigningRegion
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-awsiamconfig.html#cfn-appsync-datasource-awsiamconfig-signingregion
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic SigningRegion
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SigningServiceName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-awsiamconfig.html#cfn-appsync-datasource-awsiamconfig-signingservicename
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic SigningServiceName
+            {
+                get;
+                set;
+            }
+        }
+
         public class HttpConfig
         {
             /// <summary>
@@ -165,6 +333,19 @@ namespace Humidifier.AppSync
             /// PrimitiveType: String
             /// </summary>
             public dynamic Endpoint
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// AuthorizationConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-httpconfig.html#cfn-appsync-datasource-httpconfig-authorizationconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: AuthorizationConfig
+            /// </summary>
+            public AuthorizationConfig AuthorizationConfig
             {
                 get;
                 set;

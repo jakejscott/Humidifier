@@ -300,6 +300,19 @@ namespace Humidifier.OpsWorks
         public class VolumeConfiguration
         {
             /// <summary>
+            /// Encrypted
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volumeconfiguration-encrypted
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Encrypted
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// Iops
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-iops
             /// Required: False

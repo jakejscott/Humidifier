@@ -177,6 +177,19 @@ namespace Humidifier.CodeBuild
         }
 
         /// <summary>
+        /// QueuedTimeoutInMinutes
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-queuedtimeoutinminutes
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Integer
+        /// </summary>
+        public dynamic QueuedTimeoutInMinutes
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Environment
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-environment
         /// Required: True

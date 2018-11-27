@@ -81,6 +81,48 @@ namespace Humidifier.Batch
 
     namespace ComputeEnvironmentTypes
     {
+        public class LaunchTemplateSpecification
+        {
+            /// <summary>
+            /// LaunchTemplateName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html#cfn-batch-computeenvironment-launchtemplatespecification-launchtemplatename
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic LaunchTemplateName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Version
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html#cfn-batch-computeenvironment-launchtemplatespecification-version
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Version
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// LaunchTemplateId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html#cfn-batch-computeenvironment-launchtemplatespecification-launchtemplateid
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic LaunchTemplateId
+            {
+                get;
+                set;
+            }
+        }
+
         public class ComputeResources
         {
             /// <summary>
@@ -177,6 +219,19 @@ namespace Humidifier.Batch
             }
 
             /// <summary>
+            /// LaunchTemplate
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html#cfn-batch-computeenvironment-computeresources-launchtemplate
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: LaunchTemplateSpecification
+            /// </summary>
+            public LaunchTemplateSpecification LaunchTemplate
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// ImageId
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html#cfn-batch-computeenvironment-computeresources-imageid
             /// Required: False
@@ -224,6 +279,19 @@ namespace Humidifier.Batch
             /// PrimitiveType: String
             /// </summary>
             public dynamic Ec2KeyPair
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// PlacementGroup
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html#cfn-batch-computeenvironment-computeresources-placementgroup
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic PlacementGroup
             {
                 get;
                 set;

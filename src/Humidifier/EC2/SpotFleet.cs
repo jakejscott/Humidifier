@@ -254,6 +254,20 @@ namespace Humidifier.EC2
                 get;
                 set;
             }
+
+            /// <summary>
+            /// Tags
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-tagspecifications.html#cfn-ec2-spotfleet-tags
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: Tag
+            /// </summary>
+            public List<Tag> Tags
+            {
+                get;
+                set;
+            }
         }
 
         public class PrivateIpAddressSpecification

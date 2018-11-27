@@ -32,6 +32,19 @@ namespace Humidifier.RDS
         }
 
         /// <summary>
+        /// BacktrackWindow
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-backtrackwindow
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Long
+        /// </summary>
+        public dynamic BacktrackWindow
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// BackupRetentionPeriod
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-backuprententionperiod
         /// Required: False
@@ -91,6 +104,46 @@ namespace Humidifier.RDS
         /// PrimitiveType: String
         /// </summary>
         public dynamic DatabaseName
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// DeletionProtection
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-deletionprotection
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Boolean
+        /// </summary>
+        public dynamic DeletionProtection
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// EnableCloudwatchLogsExports
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-enablecloudwatchlogsexports
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// PrimitiveItemType: String
+        /// </summary>
+        public dynamic EnableCloudwatchLogsExports
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// EnableIAMDatabaseAuthentication
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-enableiamdatabaseauthentication
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Boolean
+        /// </summary>
+        public dynamic EnableIAMDatabaseAuthentication
         {
             get;
             set;
@@ -338,13 +391,13 @@ namespace Humidifier.RDS
             }
 
             /// <summary>
-            /// SecondsBeforeAutoPause
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-scalingconfiguration.html#cfn-rds-dbcluster-scalingconfiguration-secondsbeforeautopause
+            /// SecondsUntilAutoPause
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-scalingconfiguration.html#cfn-rds-dbcluster-scalingconfiguration-secondsuntilautopause
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
-            public dynamic SecondsBeforeAutoPause
+            public dynamic SecondsUntilAutoPause
             {
                 get;
                 set;

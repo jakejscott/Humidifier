@@ -85,6 +85,19 @@ namespace Humidifier.CloudWatch
         }
 
         /// <summary>
+        /// DatapointsToAlarm
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarm-datapointstoalarm
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Integer
+        /// </summary>
+        public dynamic DatapointsToAlarm
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Dimensions
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-dimension
         /// Required: False
@@ -154,7 +167,7 @@ namespace Humidifier.CloudWatch
         /// <summary>
         /// MetricName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-metricname
-        /// Required: True
+        /// Required: False
         /// UpdateType: Mutable
         /// PrimitiveType: String
         /// </summary>
@@ -167,7 +180,7 @@ namespace Humidifier.CloudWatch
         /// <summary>
         /// Namespace
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-namespace
-        /// Required: True
+        /// Required: False
         /// UpdateType: Mutable
         /// PrimitiveType: String
         /// </summary>
@@ -194,7 +207,7 @@ namespace Humidifier.CloudWatch
         /// <summary>
         /// Period
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-period
-        /// Required: True
+        /// Required: False
         /// UpdateType: Mutable
         /// PrimitiveType: Integer
         /// </summary>

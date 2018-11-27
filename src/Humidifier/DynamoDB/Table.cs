@@ -91,7 +91,7 @@ namespace Humidifier.DynamoDB
         /// <summary>
         /// ProvisionedThroughput
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-provisionedthroughput
-        /// Required: True
+        /// Required: False
         /// UpdateType: Mutable
         /// Type: ProvisionedThroughput
         /// </summary>
@@ -345,7 +345,7 @@ namespace Humidifier.DynamoDB
             /// <summary>
             /// ProvisionedThroughput
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-gsi.html#cfn-dynamodb-gsi-provisionedthroughput
-            /// Required: True
+            /// Required: False
             /// UpdateType: Mutable
             /// Type: ProvisionedThroughput
             /// </summary>

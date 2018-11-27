@@ -443,6 +443,20 @@ namespace Humidifier.ApiGateway
             }
 
             /// <summary>
+            /// Tags
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-tags
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: Tag
+            /// </summary>
+            public List<Tag> Tags
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// ThrottlingBurstLimit
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-throttlingburstlimit
             /// Required: False
@@ -463,6 +477,19 @@ namespace Humidifier.ApiGateway
             /// PrimitiveType: Double
             /// </summary>
             public dynamic ThrottlingRateLimit
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// TracingEnabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html#cfn-apigateway-deployment-stagedescription-tracingenabled
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic TracingEnabled
             {
                 get;
                 set;

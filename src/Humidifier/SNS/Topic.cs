@@ -32,6 +32,19 @@ namespace Humidifier.SNS
         }
 
         /// <summary>
+        /// KmsMasterKeyId
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html#cfn-sns-topic-kmsmasterkeyid
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic KmsMasterKeyId
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Subscription
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html#cfn-sns-topic-subscription
         /// Required: False

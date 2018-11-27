@@ -73,6 +73,19 @@ namespace Humidifier.IAM
         }
 
         /// <summary>
+        /// PermissionsBoundary
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-permissionsboundary
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic PermissionsBoundary
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Policies
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-policies
         /// Required: False

@@ -105,6 +105,19 @@ namespace Humidifier.Route53
         }
 
         /// <summary>
+        /// MultiValueAnswer
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-multivalueanswer
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Boolean
+        /// </summary>
+        public dynamic MultiValueAnswer
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Name
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-name
         /// Required: True

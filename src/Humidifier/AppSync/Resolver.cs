@@ -1,6 +1,7 @@
 namespace Humidifier.AppSync
 {
     using System.Collections.Generic;
+    using ResolverTypes;
 
     public class Resolver : Humidifier.Resource
     {
@@ -46,9 +47,22 @@ namespace Humidifier.AppSync
         }
 
         /// <summary>
+        /// PipelineConfig
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-pipelineconfig
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: PipelineConfig
+        /// </summary>
+        public PipelineConfig PipelineConfig
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// DataSourceName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-datasourcename
-        /// Required: True
+        /// Required: False
         /// UpdateType: Mutable
         /// PrimitiveType: String
         /// </summary>
@@ -79,6 +93,19 @@ namespace Humidifier.AppSync
         /// PrimitiveType: String
         /// </summary>
         public dynamic ResponseMappingTemplate
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Kind
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-kind
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic Kind
         {
             get;
             set;
@@ -121,6 +148,26 @@ namespace Humidifier.AppSync
         {
             get;
             set;
+        }
+    }
+
+    namespace ResolverTypes
+    {
+        public class PipelineConfig
+        {
+            /// <summary>
+            /// Functions
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-pipelineconfig.html#cfn-appsync-resolver-pipelineconfig-functions
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Functions
+            {
+                get;
+                set;
+            }
         }
     }
 }

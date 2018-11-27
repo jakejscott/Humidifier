@@ -230,6 +230,20 @@ namespace Humidifier.EMR
         }
 
         /// <summary>
+        /// Steps
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-steps
+        /// Required: False
+        /// UpdateType: Immutable
+        /// Type: List
+        /// ItemType: StepConfig
+        /// </summary>
+        public List<StepConfig> Steps
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Tags
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-tags
         /// Required: False
@@ -658,6 +672,19 @@ namespace Humidifier.EMR
             }
 
             /// <summary>
+            /// KeepJobFlowAliveWhenNoSteps
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-keepjobflowalivewhennosteps
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic KeepJobFlowAliveWhenNoSteps
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// MasterInstanceFleet
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-masterinstancefleet
             /// Required: False
@@ -746,6 +773,48 @@ namespace Humidifier.EMR
             /// Type: SimpleScalingPolicyConfiguration
             /// </summary>
             public SimpleScalingPolicyConfiguration SimpleScalingPolicyConfiguration
+            {
+                get;
+                set;
+            }
+        }
+
+        public class StepConfig
+        {
+            /// <summary>
+            /// ActionOnFailure
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-stepconfig.html#cfn-elasticmapreduce-cluster-stepconfig-actiononfailure
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ActionOnFailure
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// HadoopJarStep
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-stepconfig.html#cfn-elasticmapreduce-cluster-stepconfig-hadoopjarstep
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: HadoopJarStepConfig
+            /// </summary>
+            public HadoopJarStepConfig HadoopJarStep
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Name
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-stepconfig.html#cfn-elasticmapreduce-cluster-stepconfig-name
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Name
             {
                 get;
                 set;
@@ -1244,6 +1313,35 @@ namespace Humidifier.EMR
             }
         }
 
+        public class KeyValue
+        {
+            /// <summary>
+            /// Key
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-keyvalue.html#cfn-elasticmapreduce-cluster-keyvalue-key
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Key
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Value
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-keyvalue.html#cfn-elasticmapreduce-cluster-keyvalue-value
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Value
+            {
+                get;
+                set;
+            }
+        }
+
         public class InstanceTypeConfig
         {
             /// <summary>
@@ -1437,6 +1535,63 @@ namespace Humidifier.EMR
             /// Type: SpotProvisioningSpecification
             /// </summary>
             public SpotProvisioningSpecification SpotSpecification
+            {
+                get;
+                set;
+            }
+        }
+
+        public class HadoopJarStepConfig
+        {
+            /// <summary>
+            /// Args
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-hadoopjarstepconfig.html#cfn-elasticmapreduce-cluster-hadoopjarstepconfig-args
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Args
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Jar
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-hadoopjarstepconfig.html#cfn-elasticmapreduce-cluster-hadoopjarstepconfig-jar
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Jar
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// MainClass
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-hadoopjarstepconfig.html#cfn-elasticmapreduce-cluster-hadoopjarstepconfig-mainclass
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic MainClass
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// StepProperties
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-hadoopjarstepconfig.html#cfn-elasticmapreduce-cluster-hadoopjarstepconfig-stepproperties
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: KeyValue
+            /// </summary>
+            public List<KeyValue> StepProperties
             {
                 get;
                 set;

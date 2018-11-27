@@ -1,6 +1,7 @@
 namespace Humidifier.WorkSpaces
 {
     using System.Collections.Generic;
+    using WorkspaceTypes;
 
     public class Workspace : Humidifier.Resource
     {
@@ -52,6 +53,20 @@ namespace Humidifier.WorkSpaces
         }
 
         /// <summary>
+        /// Tags
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-tags
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: Tag
+        /// </summary>
+        public List<Tag> Tags
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// UserName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-username
         /// Required: True
@@ -88,6 +103,90 @@ namespace Humidifier.WorkSpaces
         {
             get;
             set;
+        }
+
+        /// <summary>
+        /// WorkspaceProperties
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-workspaceproperties
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: WorkspaceProperties
+        /// </summary>
+        public WorkspaceProperties WorkspaceProperties
+        {
+            get;
+            set;
+        }
+    }
+
+    namespace WorkspaceTypes
+    {
+        public class WorkspaceProperties
+        {
+            /// <summary>
+            /// ComputeTypeName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspaces-workspace-workspaceproperties.html#cfn-workspaces-workspace-workspaceproperties-computetypename
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ComputeTypeName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RootVolumeSizeGib
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspaces-workspace-workspaceproperties.html#cfn-workspaces-workspace-workspaceproperties-rootvolumesizegib
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic RootVolumeSizeGib
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RunningMode
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspaces-workspace-workspaceproperties.html#cfn-workspaces-workspace-workspaceproperties-runningmode
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RunningMode
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RunningModeAutoStopTimeoutInMinutes
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspaces-workspace-workspaceproperties.html#cfn-workspaces-workspace-workspaceproperties-runningmodeautostoptimeoutinminutes
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic RunningModeAutoStopTimeoutInMinutes
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// UserVolumeSizeGib
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspaces-workspace-workspaceproperties.html#cfn-workspaces-workspace-workspaceproperties-uservolumesizegib
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic UserVolumeSizeGib
+            {
+                get;
+                set;
+            }
         }
     }
 }

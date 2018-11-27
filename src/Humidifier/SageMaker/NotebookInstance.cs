@@ -31,6 +31,19 @@ namespace Humidifier.SageMaker
         }
 
         /// <summary>
+        /// VolumeSizeInGB
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-volumesizeingb
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Integer
+        /// </summary>
+        public dynamic VolumeSizeInGB
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// DirectInternetAccess
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-directinternetaccess
         /// Required: False

@@ -83,6 +83,19 @@ namespace Humidifier.KMS
         }
 
         /// <summary>
+        /// PendingWindowInDays
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-pendingwindowindays
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Integer
+        /// </summary>
+        public dynamic PendingWindowInDays
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Tags
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-tags
         /// Required: False

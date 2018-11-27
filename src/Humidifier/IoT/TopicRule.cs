@@ -218,6 +218,48 @@ namespace Humidifier.IoT
             }
         }
 
+        public class StepFunctionsAction
+        {
+            /// <summary>
+            /// ExecutionNamePrefix
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-stepfunctionsaction.html#cfn-iot-topicrule-stepfunctionsaction-executionnameprefix
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ExecutionNamePrefix
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RoleArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-stepfunctionsaction.html#cfn-iot-topicrule-stepfunctionsaction-rolearn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RoleArn
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// StateMachineName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-stepfunctionsaction.html#cfn-iot-topicrule-stepfunctionsaction-statemachinename
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic StateMachineName
+            {
+                get;
+                set;
+            }
+        }
+
         public class FirehoseAction
         {
             /// <summary>
@@ -297,6 +339,19 @@ namespace Humidifier.IoT
             /// PrimitiveType: String
             /// </summary>
             public dynamic Description
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ErrorAction
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-topicrulepayload.html#cfn-iot-topicrule-topicrulepayload-erroraction
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: Action
+            /// </summary>
+            public Action ErrorAction
             {
                 get;
                 set;
@@ -740,6 +795,19 @@ namespace Humidifier.IoT
             }
 
             /// <summary>
+            /// IotAnalytics
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-iotanalytics
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: IotAnalyticsAction
+            /// </summary>
+            public IotAnalyticsAction IotAnalytics
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// Kinesis
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-kinesis
             /// Required: False
@@ -812,6 +880,48 @@ namespace Humidifier.IoT
             /// Type: SqsAction
             /// </summary>
             public SqsAction Sqs
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// StepFunctions
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-stepfunctions
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: StepFunctionsAction
+            /// </summary>
+            public StepFunctionsAction StepFunctions
+            {
+                get;
+                set;
+            }
+        }
+
+        public class IotAnalyticsAction
+        {
+            /// <summary>
+            /// ChannelName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-iotanalyticsaction.html#cfn-iot-topicrule-iotanalyticsaction-channelname
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ChannelName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RoleArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-iotanalyticsaction.html#cfn-iot-topicrule-iotanalyticsaction-rolearn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RoleArn
             {
                 get;
                 set;

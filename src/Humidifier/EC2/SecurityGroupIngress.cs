@@ -104,6 +104,19 @@ namespace Humidifier.EC2
         }
 
         /// <summary>
+        /// SourcePrefixListId
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-securitygroupingress-sourceprefixlistid
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic SourcePrefixListId
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// SourceSecurityGroupId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-sourcesecuritygroupid
         /// Required: False
