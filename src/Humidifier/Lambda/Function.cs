@@ -110,6 +110,20 @@ namespace Humidifier.Lambda
         }
 
         /// <summary>
+        /// Layers
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-layers
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// PrimitiveItemType: String
+        /// </summary>
+        public dynamic Layers
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// MemorySize
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-memorysize
         /// Required: False

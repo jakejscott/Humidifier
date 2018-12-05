@@ -34,6 +34,19 @@ namespace Humidifier.DynamoDB
         }
 
         /// <summary>
+        /// BillingMode
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-billingmode
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic BillingMode
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// GlobalSecondaryIndexes
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-gsi
         /// Required: False

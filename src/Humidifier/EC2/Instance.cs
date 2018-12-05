@@ -129,6 +129,20 @@ namespace Humidifier.EC2
         }
 
         /// <summary>
+        /// ElasticInferenceAccelerators
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-elasticinferenceaccelerators
+        /// Required: False
+        /// UpdateType: Immutable
+        /// Type: List
+        /// ItemType: ElasticInferenceAccelerator
+        /// </summary>
+        public List<ElasticInferenceAccelerator> ElasticInferenceAccelerators
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// HostId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-hostid
         /// Required: False
@@ -254,6 +268,20 @@ namespace Humidifier.EC2
         /// Type: LaunchTemplateSpecification
         /// </summary>
         public LaunchTemplateSpecification LaunchTemplate
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// LicenseSpecifications
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-licensespecifications
+        /// Required: False
+        /// UpdateType: Immutable
+        /// Type: List
+        /// ItemType: LicenseSpecification
+        /// </summary>
+        public List<LicenseSpecification> LicenseSpecifications
         {
             get;
             set;
@@ -826,6 +854,22 @@ namespace Humidifier.EC2
             }
         }
 
+        public class LicenseSpecification
+        {
+            /// <summary>
+            /// LicenseConfigurationArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-licensespecification.html#cfn-ec2-instance-licensespecification-licenseconfigurationarn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic LicenseConfigurationArn
+            {
+                get;
+                set;
+            }
+        }
+
         public class NoDevice
         {
         }
@@ -870,6 +914,22 @@ namespace Humidifier.EC2
             /// PrimitiveType: String
             /// </summary>
             public dynamic CPUCredits
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ElasticInferenceAccelerator
+        {
+            /// <summary>
+            /// Type
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-elasticinferenceaccelerator.html#cfn-ec2-instance-elasticinferenceaccelerator-type
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Type
             {
                 get;
                 set;
