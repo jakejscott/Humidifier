@@ -97,7 +97,7 @@ namespace Humidifier.EC2
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html#cfn-ec2-ec2fleet-validfrom
         /// Required: False
         /// UpdateType: Immutable
-        /// PrimitiveType: Integer
+        /// PrimitiveType: String
         /// </summary>
         public dynamic ValidFrom
         {
@@ -150,7 +150,7 @@ namespace Humidifier.EC2
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html#cfn-ec2-ec2fleet-validuntil
         /// Required: False
         /// UpdateType: Immutable
-        /// PrimitiveType: Integer
+        /// PrimitiveType: String
         /// </summary>
         public dynamic ValidUntil
         {

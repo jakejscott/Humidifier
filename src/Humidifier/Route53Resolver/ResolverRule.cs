@@ -12,6 +12,7 @@ namespace Humidifier.Route53Resolver
             public static string ResolverRuleId =  "ResolverRuleId" ;
             public static string Arn =  "Arn" ;
             public static string TargetIps =  "TargetIps" ;
+            public static string Name =  "Name" ;
         }
 
         public override string AWSTypeName

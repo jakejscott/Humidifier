@@ -17,7 +17,7 @@ namespace Humidifier.ServiceDiscovery
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-instance.html#cfn-servicediscovery-instance-instanceattributes
         /// Required: True
         /// UpdateType: Mutable
-        /// PrimitiveType: Json
+        /// PrimitiveType: Map
         /// </summary>
         public dynamic InstanceAttributes
         {

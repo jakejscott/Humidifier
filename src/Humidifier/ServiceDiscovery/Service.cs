@@ -37,7 +37,7 @@ namespace Humidifier.ServiceDiscovery
         /// HealthCheckCustomConfig
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#cfn-servicediscovery-service-healthcheckcustomconfig
         /// Required: False
-        /// UpdateType: Mutable
+        /// UpdateType: Immutable
         /// Type: HealthCheckCustomConfig
         /// </summary>
         public HealthCheckCustomConfig HealthCheckCustomConfig

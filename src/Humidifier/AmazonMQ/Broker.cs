@@ -7,7 +7,15 @@ namespace Humidifier.AmazonMQ
     {
         public static class Attributes
         {
-            public static string BrokerId =  "BrokerId" ;
+            public static string IpAddresses =  "IpAddresses" ;
+            public static string OpenWireEndpoints =  "OpenWireEndpoints" ;
+            public static string ConfigurationRevision =  "ConfigurationRevision" ;
+            public static string StompEndpoints =  "StompEndpoints" ;
+            public static string MqttEndpoints =  "MqttEndpoints" ;
+            public static string AmqpEndpoints =  "AmqpEndpoints" ;
+            public static string Arn =  "Arn" ;
+            public static string ConfigurationId =  "ConfigurationId" ;
+            public static string WssEndpoints =  "WssEndpoints" ;
         }
 
         public override string AWSTypeName
@@ -189,6 +197,20 @@ namespace Humidifier.AmazonMQ
             get;
             set;
         }
+
+        /// <summary>
+        /// Tags
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-tags
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: TagsEntry
+        /// </summary>
+        public List<TagsEntry> Tags
+        {
+            get;
+            set;
+        }
     }
 
     namespace BrokerTypes
@@ -314,6 +336,35 @@ namespace Humidifier.AmazonMQ
             /// PrimitiveType: Boolean
             /// </summary>
             public dynamic General
+            {
+                get;
+                set;
+            }
+        }
+
+        public class TagsEntry
+        {
+            /// <summary>
+            /// Value
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-tagsentry.html#cfn-amazonmq-broker-tagsentry-value
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Value
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Key
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-tagsentry.html#cfn-amazonmq-broker-tagsentry-key
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Key
             {
                 get;
                 set;

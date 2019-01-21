@@ -306,6 +306,19 @@ namespace Humidifier.RDS
         }
 
         /// <summary>
+        /// SourceRegion
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-sourceregion
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic SourceRegion
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// StorageEncrypted
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-storageencrypted
         /// Required: False

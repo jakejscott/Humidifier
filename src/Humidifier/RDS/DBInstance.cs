@@ -633,6 +633,19 @@ namespace Humidifier.RDS
         }
 
         /// <summary>
+        /// UseDefaultProcessorFeatures
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-usedefaultprocessorfeatures
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Boolean
+        /// </summary>
+        public dynamic UseDefaultProcessorFeatures
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// VPCSecurityGroups
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-vpcsecuritygroups
         /// Required: False

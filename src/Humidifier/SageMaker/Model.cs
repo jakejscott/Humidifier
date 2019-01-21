@@ -34,7 +34,7 @@ namespace Humidifier.SageMaker
         /// <summary>
         /// PrimaryContainer
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html#cfn-sagemaker-model-primarycontainer
-        /// Required: True
+        /// Required: False
         /// UpdateType: Immutable
         /// Type: ContainerDefinition
         /// </summary>
@@ -65,6 +65,20 @@ namespace Humidifier.SageMaker
         /// Type: VpcConfig
         /// </summary>
         public VpcConfig VpcConfig
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Containers
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html#cfn-sagemaker-model-containers
+        /// Required: False
+        /// UpdateType: Immutable
+        /// Type: List
+        /// ItemType: ContainerDefinition
+        /// </summary>
+        public List<ContainerDefinition> Containers
         {
             get;
             set;

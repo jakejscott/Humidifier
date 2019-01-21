@@ -91,6 +91,19 @@ namespace Humidifier.ApiGateway
             get;
             set;
         }
+
+        /// <summary>
+        /// Value
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-value
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic Value
+        {
+            get;
+            set;
+        }
     }
 
     namespace ApiKeyTypes

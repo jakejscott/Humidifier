@@ -113,6 +113,19 @@ namespace Humidifier.Elasticsearch
         }
 
         /// <summary>
+        /// NodeToNodeEncryptionOptions
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-nodetonodeencryptionoptions
+        /// Required: False
+        /// UpdateType: Immutable
+        /// Type: NodeToNodeEncryptionOptions
+        /// </summary>
+        public NodeToNodeEncryptionOptions NodeToNodeEncryptionOptions
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// SnapshotOptions
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-snapshotoptions
         /// Required: False
@@ -180,6 +193,22 @@ namespace Humidifier.Elasticsearch
             /// PrimitiveItemType: String
             /// </summary>
             public dynamic SubnetIds
+            {
+                get;
+                set;
+            }
+        }
+
+        public class NodeToNodeEncryptionOptions
+        {
+            /// <summary>
+            /// Enabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-nodetonodeencryptionoptions.html#cfn-elasticsearch-domain-nodetonodeencryptionoptions-enabled
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Enabled
             {
                 get;
                 set;

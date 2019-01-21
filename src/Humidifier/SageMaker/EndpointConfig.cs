@@ -130,6 +130,19 @@ namespace Humidifier.SageMaker
             }
 
             /// <summary>
+            /// AcceleratorType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-acceleratortype
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic AcceleratorType
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// InitialVariantWeight
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-initialvariantweight
             /// Required: True

@@ -58,6 +58,19 @@ namespace Humidifier.DMS
         }
 
         /// <summary>
+        /// ElasticsearchSettings
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-elasticsearchsettings
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: ElasticsearchSettings
+        /// </summary>
+        public ElasticsearchSettings ElasticsearchSettings
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// S3Settings
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-s3settings
         /// Required: False
@@ -91,6 +104,19 @@ namespace Humidifier.DMS
         /// Type: DynamoDbSettings
         /// </summary>
         public DynamoDbSettings DynamoDbSettings
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// KinesisSettings
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-kinesissettings
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: KinesisSettings
+        /// </summary>
+        public KinesisSettings KinesisSettings
         {
             get;
             set;
@@ -230,6 +256,48 @@ namespace Humidifier.DMS
 
     namespace EndpointTypes
     {
+        public class KinesisSettings
+        {
+            /// <summary>
+            /// MessageFormat
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-messageformat
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic MessageFormat
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// StreamArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-streamarn
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic StreamArn
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ServiceAccessRoleArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-serviceaccessrolearn
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ServiceAccessRoleArn
+            {
+                get;
+                set;
+            }
+        }
+
         public class S3Settings
         {
             /// <summary>
@@ -464,6 +532,61 @@ namespace Humidifier.DMS
             /// PrimitiveType: String
             /// </summary>
             public dynamic NestingLevel
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ElasticsearchSettings
+        {
+            /// <summary>
+            /// EndpointUri
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-elasticsearchsettings.html#cfn-dms-endpoint-elasticsearchsettings-endpointuri
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic EndpointUri
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// FullLoadErrorPercentage
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-elasticsearchsettings.html#cfn-dms-endpoint-elasticsearchsettings-fullloaderrorpercentage
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic FullLoadErrorPercentage
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ErrorRetryDuration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-elasticsearchsettings.html#cfn-dms-endpoint-elasticsearchsettings-errorretryduration
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic ErrorRetryDuration
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ServiceAccessRoleArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-elasticsearchsettings.html#cfn-dms-endpoint-elasticsearchsettings-serviceaccessrolearn
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ServiceAccessRoleArn
             {
                 get;
                 set;
