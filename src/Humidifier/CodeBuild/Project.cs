@@ -394,6 +394,35 @@ namespace Humidifier.CodeBuild
             }
         }
 
+        public class RegistryCredential
+        {
+            /// <summary>
+            /// Credential
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-registrycredential.html#cfn-codebuild-project-registrycredential-credential
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Credential
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// CredentialProvider
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-registrycredential.html#cfn-codebuild-project-registrycredential-credentialprovider
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic CredentialProvider
+            {
+                get;
+                set;
+            }
+        }
+
         public class SourceAuth
         {
             /// <summary>
@@ -466,6 +495,19 @@ namespace Humidifier.CodeBuild
             }
 
             /// <summary>
+            /// ImagePullCredentialsType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-imagepullcredentialstype
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ImagePullCredentialsType
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// Image
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-image
             /// Required: True
@@ -473,6 +515,19 @@ namespace Humidifier.CodeBuild
             /// PrimitiveType: String
             /// </summary>
             public dynamic Image
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RegistryCredential
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-registrycredential
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: RegistryCredential
+            /// </summary>
+            public RegistryCredential RegistryCredential
             {
                 get;
                 set;

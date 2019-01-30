@@ -58,6 +58,12 @@ namespace Humidifier.CodeGen
             var response = client.SendAsync(request).GetAwaiter().GetResult();
             var json = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
 
+            //
+            // https://github.com/jakejscott/Humidifier/issues/12
+            // 
+            json = json.Replace("VPCEndpointType", "VpcEndpointType");
+
+
             File.WriteAllText(Path.Combine(codegenPath, "Specification.json"), json);
 
             Console.WriteLine("Parsing spec");

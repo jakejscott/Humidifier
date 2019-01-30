@@ -101,13 +101,13 @@ namespace Humidifier.EC2
         }
 
         /// <summary>
-        /// VPCEndpointType
+        /// VpcEndpointType
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-vpcendpointtype
         /// Required: False
         /// UpdateType: Immutable
         /// PrimitiveType: String
         /// </summary>
-        public dynamic VPCEndpointType
+        public dynamic VpcEndpointType
         {
             get;
             set;
