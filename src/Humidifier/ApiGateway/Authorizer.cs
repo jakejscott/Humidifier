@@ -133,7 +133,7 @@ namespace Humidifier.ApiGateway
         /// <summary>
         /// Type
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html#cfn-apigateway-authorizer-type
-        /// Required: False
+        /// Required: True
         /// UpdateType: Mutable
         /// PrimitiveType: String
         /// </summary>

@@ -95,35 +95,6 @@ namespace Humidifier.Glue
 
     namespace TriggerTypes
     {
-        public class Action
-        {
-            /// <summary>
-            /// JobName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-action.html#cfn-glue-trigger-action-jobname
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic JobName
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Arguments
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-action.html#cfn-glue-trigger-action-arguments
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Json
-            /// </summary>
-            public dynamic Arguments
-            {
-                get;
-                set;
-            }
-        }
-
         public class Condition
         {
             /// <summary>
@@ -190,6 +161,35 @@ namespace Humidifier.Glue
             /// ItemType: Condition
             /// </summary>
             public List<Condition> Conditions
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Action
+        {
+            /// <summary>
+            /// JobName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-action.html#cfn-glue-trigger-action-jobname
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic JobName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Arguments
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-action.html#cfn-glue-trigger-action-arguments
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Json
+            /// </summary>
+            public dynamic Arguments
             {
                 get;
                 set;

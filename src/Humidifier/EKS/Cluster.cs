@@ -24,7 +24,7 @@ namespace Humidifier.EKS
         /// Version
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-version
         /// Required: False
-        /// UpdateType: Immutable
+        /// UpdateType: Mutable
         /// PrimitiveType: String
         /// </summary>
         public dynamic Version

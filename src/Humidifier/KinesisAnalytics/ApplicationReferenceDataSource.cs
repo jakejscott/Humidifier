@@ -42,6 +42,64 @@ namespace Humidifier.KinesisAnalytics
 
     namespace ApplicationReferenceDataSourceTypes
     {
+        public class RecordFormat
+        {
+            /// <summary>
+            /// MappingParameters
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-recordformat.html#cfn-kinesisanalytics-applicationreferencedatasource-recordformat-mappingparameters
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: MappingParameters
+            /// </summary>
+            public MappingParameters MappingParameters
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RecordFormatType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-recordformat.html#cfn-kinesisanalytics-applicationreferencedatasource-recordformat-recordformattype
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RecordFormatType
+            {
+                get;
+                set;
+            }
+        }
+
+        public class CSVMappingParameters
+        {
+            /// <summary>
+            /// RecordRowDelimiter
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-csvmappingparameters.html#cfn-kinesisanalytics-applicationreferencedatasource-csvmappingparameters-recordrowdelimiter
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RecordRowDelimiter
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RecordColumnDelimiter
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-csvmappingparameters.html#cfn-kinesisanalytics-applicationreferencedatasource-csvmappingparameters-recordcolumndelimiter
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RecordColumnDelimiter
+            {
+                get;
+                set;
+            }
+        }
+
         public class S3ReferenceDataSource
         {
             /// <summary>
@@ -129,35 +187,6 @@ namespace Humidifier.KinesisAnalytics
             }
         }
 
-        public class RecordFormat
-        {
-            /// <summary>
-            /// MappingParameters
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-recordformat.html#cfn-kinesisanalytics-applicationreferencedatasource-recordformat-mappingparameters
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: MappingParameters
-            /// </summary>
-            public MappingParameters MappingParameters
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// RecordFormatType
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-recordformat.html#cfn-kinesisanalytics-applicationreferencedatasource-recordformat-recordformattype
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic RecordFormatType
-            {
-                get;
-                set;
-            }
-        }
-
         public class RecordColumn
         {
             /// <summary>
@@ -194,35 +223,6 @@ namespace Humidifier.KinesisAnalytics
             /// PrimitiveType: String
             /// </summary>
             public dynamic Name
-            {
-                get;
-                set;
-            }
-        }
-
-        public class CSVMappingParameters
-        {
-            /// <summary>
-            /// RecordRowDelimiter
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-csvmappingparameters.html#cfn-kinesisanalytics-applicationreferencedatasource-csvmappingparameters-recordrowdelimiter
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic RecordRowDelimiter
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// RecordColumnDelimiter
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-csvmappingparameters.html#cfn-kinesisanalytics-applicationreferencedatasource-csvmappingparameters-recordcolumndelimiter
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic RecordColumnDelimiter
             {
                 get;
                 set;

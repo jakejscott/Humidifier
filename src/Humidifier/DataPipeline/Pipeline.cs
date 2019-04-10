@@ -111,6 +111,49 @@ namespace Humidifier.DataPipeline
 
     namespace PipelineTypes
     {
+        public class PipelineObject
+        {
+            /// <summary>
+            /// Fields
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects.html#cfn-datapipeline-pipeline-pipelineobjects-fields
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: Field
+            /// </summary>
+            public List<Field> Fields
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Id
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects.html#cfn-datapipeline-pipeline-pipelineobjects-id
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Id
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Name
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects.html#cfn-datapipeline-pipeline-pipelineobjects-name
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Name
+            {
+                get;
+                set;
+            }
+        }
+
         public class ParameterAttribute
         {
             /// <summary>
@@ -193,49 +236,6 @@ namespace Humidifier.DataPipeline
             /// PrimitiveType: String
             /// </summary>
             public dynamic Id
-            {
-                get;
-                set;
-            }
-        }
-
-        public class PipelineObject
-        {
-            /// <summary>
-            /// Fields
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects.html#cfn-datapipeline-pipeline-pipelineobjects-fields
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: Field
-            /// </summary>
-            public List<Field> Fields
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Id
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects.html#cfn-datapipeline-pipeline-pipelineobjects-id
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Id
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Name
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects.html#cfn-datapipeline-pipeline-pipelineobjects-name
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Name
             {
                 get;
                 set;

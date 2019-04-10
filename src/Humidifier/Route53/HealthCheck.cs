@@ -256,35 +256,6 @@ namespace Humidifier.Route53
             }
         }
 
-        public class HealthCheckTag
-        {
-            /// <summary>
-            /// Key
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthchecktag.html#cfn-route53-healthchecktags-key
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Key
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Value
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthchecktag.html#cfn-route53-healthchecktags-value
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Value
-            {
-                get;
-                set;
-            }
-        }
-
         public class AlarmIdentifier
         {
             /// <summary>
@@ -308,6 +279,35 @@ namespace Humidifier.Route53
             /// PrimitiveType: String
             /// </summary>
             public dynamic Region
+            {
+                get;
+                set;
+            }
+        }
+
+        public class HealthCheckTag
+        {
+            /// <summary>
+            /// Key
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthchecktag.html#cfn-route53-healthchecktags-key
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Key
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Value
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthchecktag.html#cfn-route53-healthchecktags-value
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Value
             {
                 get;
                 set;

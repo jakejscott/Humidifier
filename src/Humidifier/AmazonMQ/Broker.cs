@@ -215,62 +215,6 @@ namespace Humidifier.AmazonMQ
 
     namespace BrokerTypes
     {
-        public class User
-        {
-            /// <summary>
-            /// Username
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-username
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Username
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Groups
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-groups
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// PrimitiveItemType: String
-            /// </summary>
-            public dynamic Groups
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// ConsoleAccess
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-consoleaccess
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic ConsoleAccess
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Password
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-password
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Password
-            {
-                get;
-                set;
-            }
-        }
-
         public class MaintenanceWindow
         {
             /// <summary>
@@ -365,6 +309,62 @@ namespace Humidifier.AmazonMQ
             /// PrimitiveType: String
             /// </summary>
             public dynamic Key
+            {
+                get;
+                set;
+            }
+        }
+
+        public class User
+        {
+            /// <summary>
+            /// Username
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-username
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Username
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Groups
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-groups
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Groups
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ConsoleAccess
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-consoleaccess
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic ConsoleAccess
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Password
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-password
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Password
             {
                 get;
                 set;

@@ -108,48 +108,6 @@ namespace Humidifier.EMR
 
     namespace InstanceFleetConfigTypes
     {
-        public class VolumeSpecification
-        {
-            /// <summary>
-            /// Iops
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-volumespecification.html#cfn-elasticmapreduce-instancefleetconfig-volumespecification-iops
-            /// Required: False
-            /// UpdateType: Immutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic Iops
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// SizeInGB
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-volumespecification.html#cfn-elasticmapreduce-instancefleetconfig-volumespecification-sizeingb
-            /// Required: True
-            /// UpdateType: Immutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic SizeInGB
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// VolumeType
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-volumespecification.html#cfn-elasticmapreduce-instancefleetconfig-volumespecification-volumetype
-            /// Required: True
-            /// UpdateType: Immutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic VolumeType
-            {
-                get;
-                set;
-            }
-        }
-
         public class SpotProvisioningSpecification
         {
             /// <summary>
@@ -186,6 +144,78 @@ namespace Humidifier.EMR
             /// PrimitiveType: Integer
             /// </summary>
             public dynamic TimeoutDurationMinutes
+            {
+                get;
+                set;
+            }
+        }
+
+        public class EbsConfiguration
+        {
+            /// <summary>
+            /// EbsBlockDeviceConfigs
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-ebsconfiguration.html#cfn-elasticmapreduce-instancefleetconfig-ebsconfiguration-ebsblockdeviceconfigs
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: List
+            /// ItemType: EbsBlockDeviceConfig
+            /// </summary>
+            public List<EbsBlockDeviceConfig> EbsBlockDeviceConfigs
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// EbsOptimized
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-ebsconfiguration.html#cfn-elasticmapreduce-instancefleetconfig-ebsconfiguration-ebsoptimized
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic EbsOptimized
+            {
+                get;
+                set;
+            }
+        }
+
+        public class VolumeSpecification
+        {
+            /// <summary>
+            /// Iops
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-volumespecification.html#cfn-elasticmapreduce-instancefleetconfig-volumespecification-iops
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Iops
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SizeInGB
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-volumespecification.html#cfn-elasticmapreduce-instancefleetconfig-volumespecification-sizeingb
+            /// Required: True
+            /// UpdateType: Immutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic SizeInGB
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// VolumeType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-volumespecification.html#cfn-elasticmapreduce-instancefleetconfig-volumespecification-volumetype
+            /// Required: True
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic VolumeType
             {
                 get;
                 set;
@@ -230,36 +260,6 @@ namespace Humidifier.EMR
             /// ItemType: Configuration
             /// </summary>
             public List<Configuration> Configurations
-            {
-                get;
-                set;
-            }
-        }
-
-        public class EbsConfiguration
-        {
-            /// <summary>
-            /// EbsBlockDeviceConfigs
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-ebsconfiguration.html#cfn-elasticmapreduce-instancefleetconfig-ebsconfiguration-ebsblockdeviceconfigs
-            /// Required: False
-            /// UpdateType: Immutable
-            /// Type: List
-            /// ItemType: EbsBlockDeviceConfig
-            /// </summary>
-            public List<EbsBlockDeviceConfig> EbsBlockDeviceConfigs
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// EbsOptimized
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-ebsconfiguration.html#cfn-elasticmapreduce-instancefleetconfig-ebsconfiguration-ebsoptimized
-            /// Required: False
-            /// UpdateType: Immutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic EbsOptimized
             {
                 get;
                 set;

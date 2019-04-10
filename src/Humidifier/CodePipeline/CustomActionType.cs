@@ -108,61 +108,6 @@ namespace Humidifier.CodePipeline
 
     namespace CustomActionTypeTypes
     {
-        public class Settings
-        {
-            /// <summary>
-            /// EntityUrlTemplate
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-entityurltemplate
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic EntityUrlTemplate
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// ExecutionUrlTemplate
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-executionurltemplate
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic ExecutionUrlTemplate
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// RevisionUrlTemplate
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-revisionurltemplate
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic RevisionUrlTemplate
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// ThirdPartyConfigurationUrl
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-thirdpartyconfigurationurl
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic ThirdPartyConfigurationUrl
-            {
-                get;
-                set;
-            }
-        }
-
         public class ArtifactDetails
         {
             /// <summary>
@@ -280,6 +225,61 @@ namespace Humidifier.CodePipeline
             /// PrimitiveType: String
             /// </summary>
             public dynamic Type
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Settings
+        {
+            /// <summary>
+            /// EntityUrlTemplate
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-entityurltemplate
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic EntityUrlTemplate
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ExecutionUrlTemplate
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-executionurltemplate
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ExecutionUrlTemplate
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RevisionUrlTemplate
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-revisionurltemplate
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RevisionUrlTemplate
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ThirdPartyConfigurationUrl
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-thirdpartyconfigurationurl
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ThirdPartyConfigurationUrl
             {
                 get;
                 set;

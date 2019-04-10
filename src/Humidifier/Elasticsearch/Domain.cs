@@ -168,37 +168,6 @@ namespace Humidifier.Elasticsearch
 
     namespace DomainTypes
     {
-        public class VPCOptions
-        {
-            /// <summary>
-            /// SecurityGroupIds
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-vpcoptions.html#cfn-elasticsearch-domain-vpcoptions-securitygroupids
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// PrimitiveItemType: String
-            /// </summary>
-            public dynamic SecurityGroupIds
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// SubnetIds
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-vpcoptions.html#cfn-elasticsearch-domain-vpcoptions-subnetids
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// PrimitiveItemType: String
-            /// </summary>
-            public dynamic SubnetIds
-            {
-                get;
-                set;
-            }
-        }
-
         public class NodeToNodeEncryptionOptions
         {
             /// <summary>
@@ -306,6 +275,37 @@ namespace Humidifier.Elasticsearch
             /// PrimitiveType: Integer
             /// </summary>
             public dynamic AutomatedSnapshotStartHour
+            {
+                get;
+                set;
+            }
+        }
+
+        public class VPCOptions
+        {
+            /// <summary>
+            /// SecurityGroupIds
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-vpcoptions.html#cfn-elasticsearch-domain-vpcoptions-securitygroupids
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic SecurityGroupIds
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SubnetIds
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-vpcoptions.html#cfn-elasticsearch-domain-vpcoptions-subnetids
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic SubnetIds
             {
                 get;
                 set;

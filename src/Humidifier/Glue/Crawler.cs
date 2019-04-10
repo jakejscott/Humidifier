@@ -237,6 +237,35 @@ namespace Humidifier.Glue
             }
         }
 
+        public class SchemaChangePolicy
+        {
+            /// <summary>
+            /// UpdateBehavior
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-schemachangepolicy.html#cfn-glue-crawler-schemachangepolicy-updatebehavior
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic UpdateBehavior
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DeleteBehavior
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-schemachangepolicy.html#cfn-glue-crawler-schemachangepolicy-deletebehavior
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DeleteBehavior
+            {
+                get;
+                set;
+            }
+        }
+
         public class S3Target
         {
             /// <summary>
@@ -261,35 +290,6 @@ namespace Humidifier.Glue
             /// PrimitiveItemType: String
             /// </summary>
             public dynamic Exclusions
-            {
-                get;
-                set;
-            }
-        }
-
-        public class SchemaChangePolicy
-        {
-            /// <summary>
-            /// UpdateBehavior
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-schemachangepolicy.html#cfn-glue-crawler-schemachangepolicy-updatebehavior
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic UpdateBehavior
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// DeleteBehavior
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-schemachangepolicy.html#cfn-glue-crawler-schemachangepolicy-deletebehavior
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic DeleteBehavior
             {
                 get;
                 set;

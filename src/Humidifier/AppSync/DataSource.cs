@@ -152,35 +152,6 @@ namespace Humidifier.AppSync
 
     namespace DataSourceTypes
     {
-        public class AuthorizationConfig
-        {
-            /// <summary>
-            /// AwsIamConfig
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-authorizationconfig.html#cfn-appsync-datasource-authorizationconfig-awsiamconfig
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: AwsIamConfig
-            /// </summary>
-            public AwsIamConfig AwsIamConfig
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// AuthorizationType
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-authorizationconfig.html#cfn-appsync-datasource-authorizationconfig-authorizationtype
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic AuthorizationType
-            {
-                get;
-                set;
-            }
-        }
-
         public class RelationalDatabaseConfig
         {
             /// <summary>
@@ -204,6 +175,106 @@ namespace Humidifier.AppSync
             /// PrimitiveType: String
             /// </summary>
             public dynamic RelationalDatabaseSourceType
+            {
+                get;
+                set;
+            }
+        }
+
+        public class AwsIamConfig
+        {
+            /// <summary>
+            /// SigningRegion
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-awsiamconfig.html#cfn-appsync-datasource-awsiamconfig-signingregion
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic SigningRegion
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SigningServiceName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-awsiamconfig.html#cfn-appsync-datasource-awsiamconfig-signingservicename
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic SigningServiceName
+            {
+                get;
+                set;
+            }
+        }
+
+        public class DynamoDBConfig
+        {
+            /// <summary>
+            /// TableName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-tablename
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic TableName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// AwsRegion
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-awsregion
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic AwsRegion
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// UseCallerCredentials
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-usecallercredentials
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic UseCallerCredentials
+            {
+                get;
+                set;
+            }
+        }
+
+        public class AuthorizationConfig
+        {
+            /// <summary>
+            /// AwsIamConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-authorizationconfig.html#cfn-appsync-datasource-authorizationconfig-awsiamconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: AwsIamConfig
+            /// </summary>
+            public AwsIamConfig AwsIamConfig
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// AuthorizationType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-authorizationconfig.html#cfn-appsync-datasource-authorizationconfig-authorizationtype
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic AuthorizationType
             {
                 get;
                 set;
@@ -294,35 +365,6 @@ namespace Humidifier.AppSync
             }
         }
 
-        public class AwsIamConfig
-        {
-            /// <summary>
-            /// SigningRegion
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-awsiamconfig.html#cfn-appsync-datasource-awsiamconfig-signingregion
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic SigningRegion
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// SigningServiceName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-awsiamconfig.html#cfn-appsync-datasource-awsiamconfig-signingservicename
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic SigningServiceName
-            {
-                get;
-                set;
-            }
-        }
-
         public class HttpConfig
         {
             /// <summary>
@@ -346,48 +388,6 @@ namespace Humidifier.AppSync
             /// Type: AuthorizationConfig
             /// </summary>
             public AuthorizationConfig AuthorizationConfig
-            {
-                get;
-                set;
-            }
-        }
-
-        public class DynamoDBConfig
-        {
-            /// <summary>
-            /// TableName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-tablename
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic TableName
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// AwsRegion
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-awsregion
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic AwsRegion
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// UseCallerCredentials
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-usecallercredentials
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic UseCallerCredentials
             {
                 get;
                 set;

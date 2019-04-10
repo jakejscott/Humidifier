@@ -346,6 +346,77 @@ namespace Humidifier.OpsWorks
 
     namespace StackTypes
     {
+        public class StackConfigurationManager
+        {
+            /// <summary>
+            /// Name
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-stackconfigmanager.html#cfn-opsworks-configmanager-name
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Name
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Version
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-stackconfigmanager.html#cfn-opsworks-configmanager-version
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Version
+            {
+                get;
+                set;
+            }
+        }
+
+        public class RdsDbInstance
+        {
+            /// <summary>
+            /// DbPassword
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-dbpassword
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DbPassword
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DbUser
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-dbuser
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DbUser
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RdsDbInstanceArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-rdsdbinstancearn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RdsDbInstanceArn
+            {
+                get;
+                set;
+            }
+        }
+
         public class Source
         {
             /// <summary>
@@ -450,77 +521,6 @@ namespace Humidifier.OpsWorks
             /// PrimitiveType: Boolean
             /// </summary>
             public dynamic ManageBerkshelf
-            {
-                get;
-                set;
-            }
-        }
-
-        public class StackConfigurationManager
-        {
-            /// <summary>
-            /// Name
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-stackconfigmanager.html#cfn-opsworks-configmanager-name
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Name
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Version
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-stackconfigmanager.html#cfn-opsworks-configmanager-version
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Version
-            {
-                get;
-                set;
-            }
-        }
-
-        public class RdsDbInstance
-        {
-            /// <summary>
-            /// DbPassword
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-dbpassword
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic DbPassword
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// DbUser
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-dbuser
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic DbUser
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// RdsDbInstanceArn
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-rdsdbinstancearn
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic RdsDbInstanceArn
             {
                 get;
                 set;

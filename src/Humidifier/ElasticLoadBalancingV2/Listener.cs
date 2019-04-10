@@ -96,6 +96,208 @@ namespace Humidifier.ElasticLoadBalancingV2
 
     namespace ListenerTypes
     {
+        public class AuthenticateCognitoConfig
+        {
+            /// <summary>
+            /// AuthenticationRequestExtraParams
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-authenticationrequestextraparams
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: Map
+            /// PrimitiveItemType: String
+            /// </summary>
+            public Dictionary<string, dynamic> AuthenticationRequestExtraParams
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// OnUnauthenticatedRequest
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-onunauthenticatedrequest
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic OnUnauthenticatedRequest
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Scope
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-scope
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Scope
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SessionCookieName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-sessioncookiename
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic SessionCookieName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SessionTimeout
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-sessiontimeout
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Long
+            /// </summary>
+            public dynamic SessionTimeout
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// UserPoolArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpoolarn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic UserPoolArn
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// UserPoolClientId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpoolclientid
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic UserPoolClientId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// UserPoolDomain
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpooldomain
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic UserPoolDomain
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Action
+        {
+            /// <summary>
+            /// AuthenticateCognitoConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-defaultactions.html#cfn-elasticloadbalancingv2-listener-action-authenticatecognitoconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: AuthenticateCognitoConfig
+            /// </summary>
+            public AuthenticateCognitoConfig AuthenticateCognitoConfig
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// AuthenticateOidcConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-defaultactions.html#cfn-elasticloadbalancingv2-listener-action-authenticateoidcconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: AuthenticateOidcConfig
+            /// </summary>
+            public AuthenticateOidcConfig AuthenticateOidcConfig
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// FixedResponseConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-defaultactions.html#cfn-elasticloadbalancingv2-listener-action-fixedresponseconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: FixedResponseConfig
+            /// </summary>
+            public FixedResponseConfig FixedResponseConfig
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Order
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-defaultactions.html#cfn-elasticloadbalancingv2-listener-action-order
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Order
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RedirectConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-defaultactions.html#cfn-elasticloadbalancingv2-listener-action-redirectconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: RedirectConfig
+            /// </summary>
+            public RedirectConfig RedirectConfig
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// TargetGroupArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-defaultactions.html#cfn-elasticloadbalancingv2-listener-defaultactions-targetgrouparn
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic TargetGroupArn
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Type
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-defaultactions.html#cfn-elasticloadbalancingv2-listener-defaultactions-type
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Type
+            {
+                get;
+                set;
+            }
+        }
+
         public class AuthenticateOidcConfig
         {
             /// <summary>
@@ -243,114 +445,6 @@ namespace Humidifier.ElasticLoadBalancingV2
             }
         }
 
-        public class AuthenticateCognitoConfig
-        {
-            /// <summary>
-            /// AuthenticationRequestExtraParams
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-authenticationrequestextraparams
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: Map
-            /// PrimitiveItemType: String
-            /// </summary>
-            public Dictionary<string, dynamic> AuthenticationRequestExtraParams
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// OnUnauthenticatedRequest
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-onunauthenticatedrequest
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic OnUnauthenticatedRequest
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Scope
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-scope
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Scope
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// SessionCookieName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-sessioncookiename
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic SessionCookieName
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// SessionTimeout
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-sessiontimeout
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Long
-            /// </summary>
-            public dynamic SessionTimeout
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// UserPoolArn
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpoolarn
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic UserPoolArn
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// UserPoolClientId
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpoolclientid
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic UserPoolClientId
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// UserPoolDomain
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-authenticatecognitoconfig.html#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpooldomain
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic UserPoolDomain
-            {
-                get;
-                set;
-            }
-        }
-
         public class RedirectConfig
         {
             /// <summary>
@@ -426,100 +520,6 @@ namespace Humidifier.ElasticLoadBalancingV2
             /// PrimitiveType: String
             /// </summary>
             public dynamic StatusCode
-            {
-                get;
-                set;
-            }
-        }
-
-        public class Action
-        {
-            /// <summary>
-            /// AuthenticateCognitoConfig
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-defaultactions.html#cfn-elasticloadbalancingv2-listener-action-authenticatecognitoconfig
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: AuthenticateCognitoConfig
-            /// </summary>
-            public AuthenticateCognitoConfig AuthenticateCognitoConfig
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// AuthenticateOidcConfig
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-defaultactions.html#cfn-elasticloadbalancingv2-listener-action-authenticateoidcconfig
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: AuthenticateOidcConfig
-            /// </summary>
-            public AuthenticateOidcConfig AuthenticateOidcConfig
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// FixedResponseConfig
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-defaultactions.html#cfn-elasticloadbalancingv2-listener-action-fixedresponseconfig
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: FixedResponseConfig
-            /// </summary>
-            public FixedResponseConfig FixedResponseConfig
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Order
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-defaultactions.html#cfn-elasticloadbalancingv2-listener-action-order
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic Order
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// RedirectConfig
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-defaultactions.html#cfn-elasticloadbalancingv2-listener-action-redirectconfig
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: RedirectConfig
-            /// </summary>
-            public RedirectConfig RedirectConfig
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// TargetGroupArn
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-defaultactions.html#cfn-elasticloadbalancingv2-listener-defaultactions-targetgrouparn
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic TargetGroupArn
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Type
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-defaultactions.html#cfn-elasticloadbalancingv2-listener-defaultactions-type
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Type
             {
                 get;
                 set;

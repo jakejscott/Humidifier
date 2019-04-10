@@ -88,6 +88,61 @@ namespace Humidifier.AppSync
 
     namespace GraphQLApiTypes
     {
+        public class UserPoolConfig
+        {
+            /// <summary>
+            /// AppIdClientRegex
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-appidclientregex
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic AppIdClientRegex
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// UserPoolId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-userpoolid
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic UserPoolId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// AwsRegion
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-awsregion
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic AwsRegion
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DefaultAction
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-defaultaction
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DefaultAction
+            {
+                get;
+                set;
+            }
+        }
+
         public class OpenIDConnectConfig
         {
             /// <summary>
@@ -166,61 +221,6 @@ namespace Humidifier.AppSync
             /// PrimitiveType: String
             /// </summary>
             public dynamic FieldLogLevel
-            {
-                get;
-                set;
-            }
-        }
-
-        public class UserPoolConfig
-        {
-            /// <summary>
-            /// AppIdClientRegex
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-appidclientregex
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic AppIdClientRegex
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// UserPoolId
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-userpoolid
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic UserPoolId
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// AwsRegion
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-awsregion
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic AwsRegion
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// DefaultAction
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html#cfn-appsync-graphqlapi-userpoolconfig-defaultaction
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic DefaultAction
             {
                 get;
                 set;

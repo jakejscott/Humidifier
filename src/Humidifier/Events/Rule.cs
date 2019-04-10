@@ -113,22 +113,6 @@ namespace Humidifier.Events
 
     namespace RuleTypes
     {
-        public class SqsParameters
-        {
-            /// <summary>
-            /// MessageGroupId
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sqsparameters.html#cfn-events-rule-sqsparameters-messagegroupid
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic MessageGroupId
-            {
-                get;
-                set;
-            }
-        }
-
         public class RunCommandParameters
         {
             /// <summary>
@@ -140,6 +124,82 @@ namespace Humidifier.Events
             /// ItemType: RunCommandTarget
             /// </summary>
             public List<RunCommandTarget> RunCommandTargets
+            {
+                get;
+                set;
+            }
+        }
+
+        public class RunCommandTarget
+        {
+            /// <summary>
+            /// Key
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-runcommandtarget.html#cfn-events-rule-runcommandtarget-key
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Key
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Values
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-runcommandtarget.html#cfn-events-rule-runcommandtarget-values
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Values
+            {
+                get;
+                set;
+            }
+        }
+
+        public class InputTransformer
+        {
+            /// <summary>
+            /// InputPathsMap
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-inputtransformer.html#cfn-events-rule-inputtransformer-inputpathsmap
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: Map
+            /// PrimitiveItemType: String
+            /// </summary>
+            public Dictionary<string, dynamic> InputPathsMap
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// InputTemplate
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-inputtransformer.html#cfn-events-rule-inputtransformer-inputtemplate
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic InputTemplate
+            {
+                get;
+                set;
+            }
+        }
+
+        public class SqsParameters
+        {
+            /// <summary>
+            /// MessageGroupId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sqsparameters.html#cfn-events-rule-sqsparameters-messagegroupid
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic MessageGroupId
             {
                 get;
                 set;
@@ -273,66 +333,6 @@ namespace Humidifier.Events
             /// Type: SqsParameters
             /// </summary>
             public SqsParameters SqsParameters
-            {
-                get;
-                set;
-            }
-        }
-
-        public class RunCommandTarget
-        {
-            /// <summary>
-            /// Key
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-runcommandtarget.html#cfn-events-rule-runcommandtarget-key
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Key
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Values
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-runcommandtarget.html#cfn-events-rule-runcommandtarget-values
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: List
-            /// PrimitiveItemType: String
-            /// </summary>
-            public dynamic Values
-            {
-                get;
-                set;
-            }
-        }
-
-        public class InputTransformer
-        {
-            /// <summary>
-            /// InputPathsMap
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-inputtransformer.html#cfn-events-rule-inputtransformer-inputpathsmap
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: Map
-            /// PrimitiveItemType: String
-            /// </summary>
-            public Dictionary<string, dynamic> InputPathsMap
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// InputTemplate
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-inputtransformer.html#cfn-events-rule-inputtransformer-inputtemplate
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic InputTemplate
             {
                 get;
                 set;

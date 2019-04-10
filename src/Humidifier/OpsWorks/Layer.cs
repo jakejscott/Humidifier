@@ -391,6 +391,64 @@ namespace Humidifier.OpsWorks
             }
         }
 
+        public class LifecycleEventConfiguration
+        {
+            /// <summary>
+            /// ShutdownEventConfiguration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-lifecycleeventconfiguration.html#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: ShutdownEventConfiguration
+            /// </summary>
+            public ShutdownEventConfiguration ShutdownEventConfiguration
+            {
+                get;
+                set;
+            }
+        }
+
+        public class LoadBasedAutoScaling
+        {
+            /// <summary>
+            /// DownScaling
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-downscaling
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: AutoScalingThresholds
+            /// </summary>
+            public AutoScalingThresholds DownScaling
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Enable
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-enable
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Enable
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// UpScaling
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-upscaling
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: AutoScalingThresholds
+            /// </summary>
+            public AutoScalingThresholds UpScaling
+            {
+                get;
+                set;
+            }
+        }
+
         public class AutoScalingThresholds
         {
             /// <summary>
@@ -539,64 +597,6 @@ namespace Humidifier.OpsWorks
             /// PrimitiveItemType: String
             /// </summary>
             public dynamic Undeploy
-            {
-                get;
-                set;
-            }
-        }
-
-        public class LifecycleEventConfiguration
-        {
-            /// <summary>
-            /// ShutdownEventConfiguration
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-lifecycleeventconfiguration.html#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: ShutdownEventConfiguration
-            /// </summary>
-            public ShutdownEventConfiguration ShutdownEventConfiguration
-            {
-                get;
-                set;
-            }
-        }
-
-        public class LoadBasedAutoScaling
-        {
-            /// <summary>
-            /// DownScaling
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-downscaling
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: AutoScalingThresholds
-            /// </summary>
-            public AutoScalingThresholds DownScaling
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Enable
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-enable
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic Enable
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// UpScaling
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-upscaling
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: AutoScalingThresholds
-            /// </summary>
-            public AutoScalingThresholds UpScaling
             {
                 get;
                 set;

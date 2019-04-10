@@ -178,6 +178,20 @@ namespace Humidifier.CloudWatch
         }
 
         /// <summary>
+        /// Metrics
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarm-metrics
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: MetricDataQuery
+        /// </summary>
+        public List<MetricDataQuery> Metrics
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Namespace
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-namespace
         /// Required: False
@@ -272,6 +286,129 @@ namespace Humidifier.CloudWatch
 
     namespace AlarmTypes
     {
+        public class MetricStat
+        {
+            /// <summary>
+            /// Metric
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricstat.html#cfn-cloudwatch-alarm-metricstat-metric
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: Metric
+            /// </summary>
+            public Metric Metric
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Period
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricstat.html#cfn-cloudwatch-alarm-metricstat-period
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Period
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Stat
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricstat.html#cfn-cloudwatch-alarm-metricstat-stat
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Stat
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Unit
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricstat.html#cfn-cloudwatch-alarm-metricstat-unit
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Unit
+            {
+                get;
+                set;
+            }
+        }
+
+        public class MetricDataQuery
+        {
+            /// <summary>
+            /// Expression
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricdataquery.html#cfn-cloudwatch-alarm-metricdataquery-expression
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Expression
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Id
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricdataquery.html#cfn-cloudwatch-alarm-metricdataquery-id
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Id
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Label
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricdataquery.html#cfn-cloudwatch-alarm-metricdataquery-label
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Label
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// MetricStat
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricdataquery.html#cfn-cloudwatch-alarm-metricdataquery-metricstat
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: MetricStat
+            /// </summary>
+            public MetricStat MetricStat
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ReturnData
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricdataquery.html#cfn-cloudwatch-alarm-metricdataquery-returndata
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic ReturnData
+            {
+                get;
+                set;
+            }
+        }
+
         public class Dimension
         {
             /// <summary>
@@ -295,6 +432,49 @@ namespace Humidifier.CloudWatch
             /// PrimitiveType: String
             /// </summary>
             public dynamic Value
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Metric
+        {
+            /// <summary>
+            /// Dimensions
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metric.html#cfn-cloudwatch-alarm-metric-dimensions
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: Dimension
+            /// </summary>
+            public List<Dimension> Dimensions
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// MetricName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metric.html#cfn-cloudwatch-alarm-metric-metricname
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic MetricName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Namespace
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metric.html#cfn-cloudwatch-alarm-metric-namespace
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Namespace
             {
                 get;
                 set;

@@ -240,74 +240,6 @@ namespace Humidifier.ElasticLoadBalancing
 
     namespace LoadBalancerTypes
     {
-        public class HealthCheck
-        {
-            /// <summary>
-            /// HealthyThreshold
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-healthythreshold
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic HealthyThreshold
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Interval
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-interval
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Interval
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Target
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-target
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Target
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Timeout
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-timeout
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Timeout
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// UnhealthyThreshold
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-unhealthythreshold
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic UnhealthyThreshold
-            {
-                get;
-                set;
-            }
-        }
-
         public class AccessLoggingPolicy
         {
             /// <summary>
@@ -363,22 +295,6 @@ namespace Humidifier.ElasticLoadBalancing
             }
         }
 
-        public class ConnectionSettings
-        {
-            /// <summary>
-            /// IdleTimeout
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-connectionsettings.html#cfn-elb-connectionsettings-idletimeout
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic IdleTimeout
-            {
-                get;
-                set;
-            }
-        }
-
         public class LBCookieStickinessPolicy
         {
             /// <summary>
@@ -402,35 +318,6 @@ namespace Humidifier.ElasticLoadBalancing
             /// PrimitiveType: String
             /// </summary>
             public dynamic PolicyName
-            {
-                get;
-                set;
-            }
-        }
-
-        public class ConnectionDrainingPolicy
-        {
-            /// <summary>
-            /// Enabled
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-connectiondrainingpolicy.html#cfn-elb-connectiondrainingpolicy-enabled
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic Enabled
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Timeout
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-connectiondrainingpolicy.html#cfn-elb-connectiondrainingpolicy-timeout
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic Timeout
             {
                 get;
                 set;
@@ -513,6 +400,119 @@ namespace Humidifier.ElasticLoadBalancing
             /// PrimitiveType: String
             /// </summary>
             public dynamic SSLCertificateId
+            {
+                get;
+                set;
+            }
+        }
+
+        public class HealthCheck
+        {
+            /// <summary>
+            /// HealthyThreshold
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-healthythreshold
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic HealthyThreshold
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Interval
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-interval
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Interval
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Target
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-target
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Target
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Timeout
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-timeout
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Timeout
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// UnhealthyThreshold
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-unhealthythreshold
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic UnhealthyThreshold
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ConnectionSettings
+        {
+            /// <summary>
+            /// IdleTimeout
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-connectionsettings.html#cfn-elb-connectionsettings-idletimeout
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic IdleTimeout
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ConnectionDrainingPolicy
+        {
+            /// <summary>
+            /// Enabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-connectiondrainingpolicy.html#cfn-elb-connectiondrainingpolicy-enabled
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Enabled
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Timeout
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-connectiondrainingpolicy.html#cfn-elb-connectiondrainingpolicy-timeout
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Timeout
             {
                 get;
                 set;

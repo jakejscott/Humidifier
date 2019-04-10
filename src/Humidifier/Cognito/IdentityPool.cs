@@ -154,6 +154,48 @@ namespace Humidifier.Cognito
 
     namespace IdentityPoolTypes
     {
+        public class CognitoStreams
+        {
+            /// <summary>
+            /// StreamingStatus
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-streamingstatus
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic StreamingStatus
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// StreamName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-streamname
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic StreamName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RoleArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-rolearn
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RoleArn
+            {
+                get;
+                set;
+            }
+        }
+
         public class PushSync
         {
             /// <summary>
@@ -220,48 +262,6 @@ namespace Humidifier.Cognito
             /// PrimitiveType: String
             /// </summary>
             public dynamic ClientId
-            {
-                get;
-                set;
-            }
-        }
-
-        public class CognitoStreams
-        {
-            /// <summary>
-            /// StreamingStatus
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-streamingstatus
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic StreamingStatus
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// StreamName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-streamname
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic StreamName
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// RoleArn
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-rolearn
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic RoleArn
             {
                 get;
                 set;

@@ -123,64 +123,6 @@ namespace Humidifier.SES
             }
         }
 
-        public class WorkmailAction
-        {
-            /// <summary>
-            /// TopicArn
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-workmailaction.html#cfn-ses-receiptrule-workmailaction-topicarn
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic TopicArn
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// OrganizationArn
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-workmailaction.html#cfn-ses-receiptrule-workmailaction-organizationarn
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic OrganizationArn
-            {
-                get;
-                set;
-            }
-        }
-
-        public class StopAction
-        {
-            /// <summary>
-            /// Scope
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-stopaction.html#cfn-ses-receiptrule-stopaction-scope
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Scope
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// TopicArn
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-stopaction.html#cfn-ses-receiptrule-stopaction-topicarn
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic TopicArn
-            {
-                get;
-                set;
-            }
-        }
-
         public class Action
         {
             /// <summary>
@@ -269,6 +211,119 @@ namespace Humidifier.SES
             /// Type: LambdaAction
             /// </summary>
             public LambdaAction LambdaAction
+            {
+                get;
+                set;
+            }
+        }
+
+        public class S3Action
+        {
+            /// <summary>
+            /// BucketName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-s3action.html#cfn-ses-receiptrule-s3action-bucketname
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic BucketName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// KmsKeyArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-s3action.html#cfn-ses-receiptrule-s3action-kmskeyarn
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic KmsKeyArn
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// TopicArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-s3action.html#cfn-ses-receiptrule-s3action-topicarn
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic TopicArn
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ObjectKeyPrefix
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-s3action.html#cfn-ses-receiptrule-s3action-objectkeyprefix
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ObjectKeyPrefix
+            {
+                get;
+                set;
+            }
+        }
+
+        public class WorkmailAction
+        {
+            /// <summary>
+            /// TopicArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-workmailaction.html#cfn-ses-receiptrule-workmailaction-topicarn
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic TopicArn
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// OrganizationArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-workmailaction.html#cfn-ses-receiptrule-workmailaction-organizationarn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic OrganizationArn
+            {
+                get;
+                set;
+            }
+        }
+
+        public class StopAction
+        {
+            /// <summary>
+            /// Scope
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-stopaction.html#cfn-ses-receiptrule-stopaction-scope
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Scope
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// TopicArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-stopaction.html#cfn-ses-receiptrule-stopaction-topicarn
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic TopicArn
             {
                 get;
                 set;
@@ -423,61 +478,6 @@ namespace Humidifier.SES
             /// PrimitiveType: String
             /// </summary>
             public dynamic InvocationType
-            {
-                get;
-                set;
-            }
-        }
-
-        public class S3Action
-        {
-            /// <summary>
-            /// BucketName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-s3action.html#cfn-ses-receiptrule-s3action-bucketname
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic BucketName
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// KmsKeyArn
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-s3action.html#cfn-ses-receiptrule-s3action-kmskeyarn
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic KmsKeyArn
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// TopicArn
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-s3action.html#cfn-ses-receiptrule-s3action-topicarn
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic TopicArn
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// ObjectKeyPrefix
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-s3action.html#cfn-ses-receiptrule-s3action-objectkeyprefix
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic ObjectKeyPrefix
             {
                 get;
                 set;

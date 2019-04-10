@@ -111,6 +111,19 @@ namespace Humidifier.OpsWorksCM
         }
 
         /// <summary>
+        /// AssociatePublicIpAddress
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-associatepublicipaddress
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: Boolean
+        /// </summary>
+        public dynamic AssociatePublicIpAddress
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// InstanceProfileArn
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-instanceprofilearn
         /// Required: True

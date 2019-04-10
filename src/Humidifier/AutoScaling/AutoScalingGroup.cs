@@ -421,35 +421,6 @@ namespace Humidifier.AutoScaling
             }
         }
 
-        public class MixedInstancesPolicy
-        {
-            /// <summary>
-            /// InstancesDistribution
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-as-group-mixedinstancespolicy.html#cfn-as-mixedinstancespolicy-instancesdistribution
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: InstancesDistribution
-            /// </summary>
-            public InstancesDistribution InstancesDistribution
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// LaunchTemplate
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-as-group-mixedinstancespolicy.html#cfn-as-mixedinstancespolicy-launchtemplate
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: LaunchTemplate
-            /// </summary>
-            public LaunchTemplate LaunchTemplate
-            {
-                get;
-                set;
-            }
-        }
-
         public class LaunchTemplateSpecification
         {
             /// <summary>
@@ -486,6 +457,35 @@ namespace Humidifier.AutoScaling
             /// PrimitiveType: String
             /// </summary>
             public dynamic Version
+            {
+                get;
+                set;
+            }
+        }
+
+        public class MixedInstancesPolicy
+        {
+            /// <summary>
+            /// InstancesDistribution
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-as-group-mixedinstancespolicy.html#cfn-as-mixedinstancespolicy-instancesdistribution
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: InstancesDistribution
+            /// </summary>
+            public InstancesDistribution InstancesDistribution
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// LaunchTemplate
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-as-group-mixedinstancespolicy.html#cfn-as-mixedinstancespolicy-launchtemplate
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: LaunchTemplate
+            /// </summary>
+            public LaunchTemplate LaunchTemplate
             {
                 get;
                 set;

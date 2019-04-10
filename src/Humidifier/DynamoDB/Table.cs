@@ -183,6 +183,81 @@ namespace Humidifier.DynamoDB
 
     namespace TableTypes
     {
+        public class LocalSecondaryIndex
+        {
+            /// <summary>
+            /// IndexName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-lsi.html#cfn-dynamodb-lsi-indexname
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic IndexName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// KeySchema
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-lsi.html#cfn-dynamodb-lsi-keyschema
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: KeySchema
+            /// </summary>
+            public List<KeySchema> KeySchema
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Projection
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-lsi.html#cfn-dynamodb-lsi-projection
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: Projection
+            /// </summary>
+            public Projection Projection
+            {
+                get;
+                set;
+            }
+        }
+
+        public class PointInTimeRecoverySpecification
+        {
+            /// <summary>
+            /// PointInTimeRecoveryEnabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-pointintimerecoveryspecification.html#cfn-dynamodb-table-pointintimerecoveryspecification-pointintimerecoveryenabled
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic PointInTimeRecoveryEnabled
+            {
+                get;
+                set;
+            }
+        }
+
+        public class SSESpecification
+        {
+            /// <summary>
+            /// SSEEnabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-ssespecification.html#cfn-dynamodb-table-ssespecification-sseenabled
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic SSEEnabled
+            {
+                get;
+                set;
+            }
+        }
+
         public class TimeToLiveSpecification
         {
             /// <summary>
@@ -235,49 +310,6 @@ namespace Humidifier.DynamoDB
             /// PrimitiveType: String
             /// </summary>
             public dynamic AttributeType
-            {
-                get;
-                set;
-            }
-        }
-
-        public class LocalSecondaryIndex
-        {
-            /// <summary>
-            /// IndexName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-lsi.html#cfn-dynamodb-lsi-indexname
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic IndexName
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// KeySchema
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-lsi.html#cfn-dynamodb-lsi-keyschema
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: KeySchema
-            /// </summary>
-            public List<KeySchema> KeySchema
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Projection
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-lsi.html#cfn-dynamodb-lsi-projection
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: Projection
-            /// </summary>
-            public Projection Projection
             {
                 get;
                 set;
@@ -422,38 +454,6 @@ namespace Humidifier.DynamoDB
             /// PrimitiveType: String
             /// </summary>
             public dynamic ProjectionType
-            {
-                get;
-                set;
-            }
-        }
-
-        public class PointInTimeRecoverySpecification
-        {
-            /// <summary>
-            /// PointInTimeRecoveryEnabled
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-pointintimerecoveryspecification.html#cfn-dynamodb-table-pointintimerecoveryspecification-pointintimerecoveryenabled
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic PointInTimeRecoveryEnabled
-            {
-                get;
-                set;
-            }
-        }
-
-        public class SSESpecification
-        {
-            /// <summary>
-            /// SSEEnabled
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-ssespecification.html#cfn-dynamodb-table-ssespecification-sseenabled
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic SSEEnabled
             {
                 get;
                 set;

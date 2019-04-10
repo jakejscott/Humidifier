@@ -215,79 +215,6 @@ namespace Humidifier.CodeDeploy
 
     namespace DeploymentGroupTypes
     {
-        public class LoadBalancerInfo
-        {
-            /// <summary>
-            /// ElbInfoList
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.html#cfn-codedeploy-deploymentgroup-loadbalancerinfo-elbinfolist
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: ELBInfo
-            /// </summary>
-            public List<ELBInfo> ElbInfoList
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// TargetGroupInfoList
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.html#cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgroupinfolist
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: TargetGroupInfo
-            /// </summary>
-            public List<TargetGroupInfo> TargetGroupInfoList
-            {
-                get;
-                set;
-            }
-        }
-
-        public class RevisionLocation
-        {
-            /// <summary>
-            /// GitHubLocation
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision.html#cfn-properties-codedeploy-deploymentgroup-deployment-revision-githublocation
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: GitHubLocation
-            /// </summary>
-            public GitHubLocation GitHubLocation
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// RevisionType
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision.html#cfn-properties-codedeploy-deploymentgroup-deployment-revision-revisiontype
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic RevisionType
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// S3Location
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision.html#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: S3Location
-            /// </summary>
-            public S3Location S3Location
-            {
-                get;
-                set;
-            }
-        }
-
         public class S3Location
         {
             /// <summary>
@@ -350,49 +277,6 @@ namespace Humidifier.CodeDeploy
             /// PrimitiveType: String
             /// </summary>
             public dynamic Version
-            {
-                get;
-                set;
-            }
-        }
-
-        public class TriggerConfig
-        {
-            /// <summary>
-            /// TriggerEvents
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-triggerconfig.html#cfn-codedeploy-deploymentgroup-triggerconfig-triggerevents
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// PrimitiveItemType: String
-            /// </summary>
-            public dynamic TriggerEvents
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// TriggerName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-triggerconfig.html#cfn-codedeploy-deploymentgroup-triggerconfig-triggername
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic TriggerName
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// TriggerTargetArn
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-triggerconfig.html#cfn-codedeploy-deploymentgroup-triggerconfig-triggertargetarn
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic TriggerTargetArn
             {
                 get;
                 set;
@@ -486,23 +370,6 @@ namespace Humidifier.CodeDeploy
             }
         }
 
-        public class EC2TagSet
-        {
-            /// <summary>
-            /// Ec2TagSetList
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagset.html#cfn-codedeploy-deploymentgroup-ec2tagset-ec2tagsetlist
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: EC2TagSetListObject
-            /// </summary>
-            public List<EC2TagSetListObject> Ec2TagSetList
-            {
-                get;
-                set;
-            }
-        }
-
         public class ELBInfo
         {
             /// <summary>
@@ -513,49 +380,6 @@ namespace Humidifier.CodeDeploy
             /// PrimitiveType: String
             /// </summary>
             public dynamic Name
-            {
-                get;
-                set;
-            }
-        }
-
-        public class AlarmConfiguration
-        {
-            /// <summary>
-            /// Alarms
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarmconfiguration.html#cfn-codedeploy-deploymentgroup-alarmconfiguration-alarms
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: Alarm
-            /// </summary>
-            public List<Alarm> Alarms
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Enabled
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarmconfiguration.html#cfn-codedeploy-deploymentgroup-alarmconfiguration-enabled
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic Enabled
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// IgnorePollAlarmFailure
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarmconfiguration.html#cfn-codedeploy-deploymentgroup-alarmconfiguration-ignorepollalarmfailure
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic IgnorePollAlarmFailure
             {
                 get;
                 set;
@@ -683,36 +507,6 @@ namespace Humidifier.CodeDeploy
             }
         }
 
-        public class AutoRollbackConfiguration
-        {
-            /// <summary>
-            /// Enabled
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-autorollbackconfiguration.html#cfn-codedeploy-deploymentgroup-autorollbackconfiguration-enabled
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic Enabled
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Events
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-autorollbackconfiguration.html#cfn-codedeploy-deploymentgroup-autorollbackconfiguration-events
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// PrimitiveItemType: String
-            /// </summary>
-            public dynamic Events
-            {
-                get;
-                set;
-            }
-        }
-
         public class Deployment
         {
             /// <summary>
@@ -749,6 +543,212 @@ namespace Humidifier.CodeDeploy
             /// Type: RevisionLocation
             /// </summary>
             public RevisionLocation Revision
+            {
+                get;
+                set;
+            }
+        }
+
+        public class LoadBalancerInfo
+        {
+            /// <summary>
+            /// ElbInfoList
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.html#cfn-codedeploy-deploymentgroup-loadbalancerinfo-elbinfolist
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: ELBInfo
+            /// </summary>
+            public List<ELBInfo> ElbInfoList
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// TargetGroupInfoList
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.html#cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgroupinfolist
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: TargetGroupInfo
+            /// </summary>
+            public List<TargetGroupInfo> TargetGroupInfoList
+            {
+                get;
+                set;
+            }
+        }
+
+        public class RevisionLocation
+        {
+            /// <summary>
+            /// GitHubLocation
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision.html#cfn-properties-codedeploy-deploymentgroup-deployment-revision-githublocation
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: GitHubLocation
+            /// </summary>
+            public GitHubLocation GitHubLocation
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RevisionType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision.html#cfn-properties-codedeploy-deploymentgroup-deployment-revision-revisiontype
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RevisionType
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// S3Location
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision.html#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: S3Location
+            /// </summary>
+            public S3Location S3Location
+            {
+                get;
+                set;
+            }
+        }
+
+        public class TriggerConfig
+        {
+            /// <summary>
+            /// TriggerEvents
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-triggerconfig.html#cfn-codedeploy-deploymentgroup-triggerconfig-triggerevents
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic TriggerEvents
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// TriggerName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-triggerconfig.html#cfn-codedeploy-deploymentgroup-triggerconfig-triggername
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic TriggerName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// TriggerTargetArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-triggerconfig.html#cfn-codedeploy-deploymentgroup-triggerconfig-triggertargetarn
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic TriggerTargetArn
+            {
+                get;
+                set;
+            }
+        }
+
+        public class EC2TagSet
+        {
+            /// <summary>
+            /// Ec2TagSetList
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagset.html#cfn-codedeploy-deploymentgroup-ec2tagset-ec2tagsetlist
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: EC2TagSetListObject
+            /// </summary>
+            public List<EC2TagSetListObject> Ec2TagSetList
+            {
+                get;
+                set;
+            }
+        }
+
+        public class AlarmConfiguration
+        {
+            /// <summary>
+            /// Alarms
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarmconfiguration.html#cfn-codedeploy-deploymentgroup-alarmconfiguration-alarms
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: Alarm
+            /// </summary>
+            public List<Alarm> Alarms
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Enabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarmconfiguration.html#cfn-codedeploy-deploymentgroup-alarmconfiguration-enabled
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Enabled
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// IgnorePollAlarmFailure
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarmconfiguration.html#cfn-codedeploy-deploymentgroup-alarmconfiguration-ignorepollalarmfailure
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic IgnorePollAlarmFailure
+            {
+                get;
+                set;
+            }
+        }
+
+        public class AutoRollbackConfiguration
+        {
+            /// <summary>
+            /// Enabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-autorollbackconfiguration.html#cfn-codedeploy-deploymentgroup-autorollbackconfiguration-enabled
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Enabled
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Events
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-autorollbackconfiguration.html#cfn-codedeploy-deploymentgroup-autorollbackconfiguration-events
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Events
             {
                 get;
                 set;

@@ -121,6 +121,20 @@ namespace Humidifier.AppStream
         }
 
         /// <summary>
+        /// Tags
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-tags
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: Tag
+        /// </summary>
+        public List<Tag> Tags
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Name
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-name
         /// Required: False

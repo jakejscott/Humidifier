@@ -43,35 +43,6 @@ namespace Humidifier.WAFRegional
 
     namespace SqlInjectionMatchSetTypes
     {
-        public class FieldToMatch
-        {
-            /// <summary>
-            /// Type
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sqlinjectionmatchset-fieldtomatch.html#cfn-wafregional-sqlinjectionmatchset-fieldtomatch-type
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Type
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Data
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sqlinjectionmatchset-fieldtomatch.html#cfn-wafregional-sqlinjectionmatchset-fieldtomatch-data
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Data
-            {
-                get;
-                set;
-            }
-        }
-
         public class SqlInjectionMatchTuple
         {
             /// <summary>
@@ -95,6 +66,35 @@ namespace Humidifier.WAFRegional
             /// Type: FieldToMatch
             /// </summary>
             public FieldToMatch FieldToMatch
+            {
+                get;
+                set;
+            }
+        }
+
+        public class FieldToMatch
+        {
+            /// <summary>
+            /// Type
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sqlinjectionmatchset-fieldtomatch.html#cfn-wafregional-sqlinjectionmatchset-fieldtomatch-type
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Type
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Data
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sqlinjectionmatchset-fieldtomatch.html#cfn-wafregional-sqlinjectionmatchset-fieldtomatch-data
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Data
             {
                 get;
                 set;

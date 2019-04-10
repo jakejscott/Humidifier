@@ -278,22 +278,6 @@ namespace Humidifier.Lambda
             }
         }
 
-        public class TracingConfig
-        {
-            /// <summary>
-            /// Mode
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-tracingconfig.html#cfn-lambda-function-tracingconfig-mode
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Mode
-            {
-                get;
-                set;
-            }
-        }
-
         public class Code
         {
             /// <summary>
@@ -343,6 +327,22 @@ namespace Humidifier.Lambda
             /// PrimitiveType: String
             /// </summary>
             public dynamic ZipFile
+            {
+                get;
+                set;
+            }
+        }
+
+        public class TracingConfig
+        {
+            /// <summary>
+            /// Mode
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-tracingconfig.html#cfn-lambda-function-tracingconfig-mode
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Mode
             {
                 get;
                 set;

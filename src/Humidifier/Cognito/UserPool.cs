@@ -316,22 +316,6 @@ namespace Humidifier.Cognito
             }
         }
 
-        public class Policies
-        {
-            /// <summary>
-            /// PasswordPolicy
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-policies.html#cfn-cognito-userpool-policies-passwordpolicy
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: PasswordPolicy
-            /// </summary>
-            public PasswordPolicy PasswordPolicy
-            {
-                get;
-                set;
-            }
-        }
-
         public class EmailConfiguration
         {
             /// <summary>
@@ -355,113 +339,6 @@ namespace Humidifier.Cognito
             /// PrimitiveType: String
             /// </summary>
             public dynamic SourceArn
-            {
-                get;
-                set;
-            }
-        }
-
-        public class LambdaConfig
-        {
-            /// <summary>
-            /// CreateAuthChallenge
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-createauthchallenge
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic CreateAuthChallenge
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// PreAuthentication
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-preauthentication
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic PreAuthentication
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// DefineAuthChallenge
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-defineauthchallenge
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic DefineAuthChallenge
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// PreSignUp
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-presignup
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic PreSignUp
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// PostAuthentication
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-postauthentication
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic PostAuthentication
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// PostConfirmation
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-postconfirmation
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic PostConfirmation
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// CustomMessage
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-custommessage
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic CustomMessage
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// VerifyAuthChallengeResponse
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-verifyauthchallengeresponse
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic VerifyAuthChallengeResponse
             {
                 get;
                 set;
@@ -662,6 +539,158 @@ namespace Humidifier.Cognito
             }
         }
 
+        public class StringAttributeConstraints
+        {
+            /// <summary>
+            /// MinLength
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-stringattributeconstraints.html#cfn-cognito-userpool-stringattributeconstraints-minlength
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic MinLength
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// MaxLength
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-stringattributeconstraints.html#cfn-cognito-userpool-stringattributeconstraints-maxlength
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic MaxLength
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Policies
+        {
+            /// <summary>
+            /// PasswordPolicy
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-policies.html#cfn-cognito-userpool-policies-passwordpolicy
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: PasswordPolicy
+            /// </summary>
+            public PasswordPolicy PasswordPolicy
+            {
+                get;
+                set;
+            }
+        }
+
+        public class LambdaConfig
+        {
+            /// <summary>
+            /// CreateAuthChallenge
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-createauthchallenge
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic CreateAuthChallenge
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// PreAuthentication
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-preauthentication
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic PreAuthentication
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DefineAuthChallenge
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-defineauthchallenge
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DefineAuthChallenge
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// PreSignUp
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-presignup
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic PreSignUp
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// PostAuthentication
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-postauthentication
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic PostAuthentication
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// PostConfirmation
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-postconfirmation
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic PostConfirmation
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// CustomMessage
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-custommessage
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic CustomMessage
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// VerifyAuthChallengeResponse
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-verifyauthchallengeresponse
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic VerifyAuthChallengeResponse
+            {
+                get;
+                set;
+            }
+        }
+
         public class DeviceConfiguration
         {
             /// <summary>
@@ -727,35 +756,6 @@ namespace Humidifier.Cognito
             /// PrimitiveType: String
             /// </summary>
             public dynamic EmailSubject
-            {
-                get;
-                set;
-            }
-        }
-
-        public class StringAttributeConstraints
-        {
-            /// <summary>
-            /// MinLength
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-stringattributeconstraints.html#cfn-cognito-userpool-stringattributeconstraints-minlength
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic MinLength
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// MaxLength
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-stringattributeconstraints.html#cfn-cognito-userpool-stringattributeconstraints-maxlength
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic MaxLength
             {
                 get;
                 set;

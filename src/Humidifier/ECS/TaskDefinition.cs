@@ -121,20 +121,6 @@ namespace Humidifier.ECS
         }
 
         /// <summary>
-        /// Tags
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-tags
-        /// Required: False
-        /// UpdateType: Mutable
-        /// Type: List
-        /// ItemType: Tag
-        /// </summary>
-        public List<Tag> Tags
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
         /// TaskRoleArn
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-taskrolearn
         /// Required: False
@@ -164,6 +150,251 @@ namespace Humidifier.ECS
 
     namespace TaskDefinitionTypes
     {
+        public class LogConfiguration
+        {
+            /// <summary>
+            /// LogDriver
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-logconfiguration.html#cfn-ecs-taskdefinition-containerdefinition-logconfiguration-logdriver
+            /// Required: True
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic LogDriver
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Options
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-logconfiguration.html#cfn-ecs-taskdefinition-containerdefinition-logconfiguration-options
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: Map
+            /// PrimitiveItemType: String
+            /// </summary>
+            public Dictionary<string, dynamic> Options
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Device
+        {
+            /// <summary>
+            /// ContainerPath
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-device.html#cfn-ecs-taskdefinition-device-containerpath
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ContainerPath
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// HostPath
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-device.html#cfn-ecs-taskdefinition-device-hostpath
+            /// Required: True
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic HostPath
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Permissions
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-device.html#cfn-ecs-taskdefinition-device-permissions
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Permissions
+            {
+                get;
+                set;
+            }
+        }
+
+        public class VolumeFrom
+        {
+            /// <summary>
+            /// ReadOnly
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-volumesfrom.html#cfn-ecs-taskdefinition-containerdefinition-volumesfrom-readonly
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic ReadOnly
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SourceContainer
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-volumesfrom.html#cfn-ecs-taskdefinition-containerdefinition-volumesfrom-sourcecontainer
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic SourceContainer
+            {
+                get;
+                set;
+            }
+        }
+
+        public class HostEntry
+        {
+            /// <summary>
+            /// Hostname
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-hostentry.html#cfn-ecs-taskdefinition-containerdefinition-hostentry-hostname
+            /// Required: True
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Hostname
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// IpAddress
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-hostentry.html#cfn-ecs-taskdefinition-containerdefinition-hostentry-ipaddress
+            /// Required: True
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic IpAddress
+            {
+                get;
+                set;
+            }
+        }
+
+        public class TaskDefinitionPlacementConstraint
+        {
+            /// <summary>
+            /// Expression
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.html#cfn-ecs-taskdefinition-taskdefinitionplacementconstraint-expression
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Expression
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Type
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.html#cfn-ecs-taskdefinition-taskdefinitionplacementconstraint-type
+            /// Required: True
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Type
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Volume
+        {
+            /// <summary>
+            /// DockerVolumeConfiguration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumes.html#cfn-ecs-taskdefinition-volume-dockervolumeconfiguration
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: DockerVolumeConfiguration
+            /// </summary>
+            public DockerVolumeConfiguration DockerVolumeConfiguration
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Host
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumes.html#cfn-ecs-taskdefinition-volumes-host
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: HostVolumeProperties
+            /// </summary>
+            public HostVolumeProperties Host
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Name
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumes.html#cfn-ecs-taskdefinition-volumes-name
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Name
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Tmpfs
+        {
+            /// <summary>
+            /// ContainerPath
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-containerpath
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ContainerPath
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// MountOptions
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-mountoptions
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic MountOptions
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Size
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-size
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Size
+            {
+                get;
+                set;
+            }
+        }
+
         public class DockerVolumeConfiguration
         {
             /// <summary>
@@ -627,79 +858,6 @@ namespace Humidifier.ECS
             }
         }
 
-        public class LogConfiguration
-        {
-            /// <summary>
-            /// LogDriver
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-logconfiguration.html#cfn-ecs-taskdefinition-containerdefinition-logconfiguration-logdriver
-            /// Required: True
-            /// UpdateType: Immutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic LogDriver
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Options
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-logconfiguration.html#cfn-ecs-taskdefinition-containerdefinition-logconfiguration-options
-            /// Required: False
-            /// UpdateType: Immutable
-            /// Type: Map
-            /// PrimitiveItemType: String
-            /// </summary>
-            public Dictionary<string, dynamic> Options
-            {
-                get;
-                set;
-            }
-        }
-
-        public class Device
-        {
-            /// <summary>
-            /// ContainerPath
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-device.html#cfn-ecs-taskdefinition-device-containerpath
-            /// Required: False
-            /// UpdateType: Immutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic ContainerPath
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// HostPath
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-device.html#cfn-ecs-taskdefinition-device-hostpath
-            /// Required: True
-            /// UpdateType: Immutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic HostPath
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Permissions
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-device.html#cfn-ecs-taskdefinition-device-permissions
-            /// Required: False
-            /// UpdateType: Immutable
-            /// Type: List
-            /// PrimitiveItemType: String
-            /// </summary>
-            public dynamic Permissions
-            {
-                get;
-                set;
-            }
-        }
-
         public class KeyValuePair
         {
             /// <summary>
@@ -771,64 +929,6 @@ namespace Humidifier.ECS
             }
         }
 
-        public class VolumeFrom
-        {
-            /// <summary>
-            /// ReadOnly
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-volumesfrom.html#cfn-ecs-taskdefinition-containerdefinition-volumesfrom-readonly
-            /// Required: False
-            /// UpdateType: Immutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic ReadOnly
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// SourceContainer
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-volumesfrom.html#cfn-ecs-taskdefinition-containerdefinition-volumesfrom-sourcecontainer
-            /// Required: False
-            /// UpdateType: Immutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic SourceContainer
-            {
-                get;
-                set;
-            }
-        }
-
-        public class HostEntry
-        {
-            /// <summary>
-            /// Hostname
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-hostentry.html#cfn-ecs-taskdefinition-containerdefinition-hostentry-hostname
-            /// Required: True
-            /// UpdateType: Immutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Hostname
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// IpAddress
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-hostentry.html#cfn-ecs-taskdefinition-containerdefinition-hostentry-ipaddress
-            /// Required: True
-            /// UpdateType: Immutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic IpAddress
-            {
-                get;
-                set;
-            }
-        }
-
         public class KernelCapabilities
         {
             /// <summary>
@@ -854,77 +954,6 @@ namespace Humidifier.ECS
             /// PrimitiveItemType: String
             /// </summary>
             public dynamic Drop
-            {
-                get;
-                set;
-            }
-        }
-
-        public class TaskDefinitionPlacementConstraint
-        {
-            /// <summary>
-            /// Expression
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.html#cfn-ecs-taskdefinition-taskdefinitionplacementconstraint-expression
-            /// Required: False
-            /// UpdateType: Immutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Expression
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Type
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.html#cfn-ecs-taskdefinition-taskdefinitionplacementconstraint-type
-            /// Required: True
-            /// UpdateType: Immutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Type
-            {
-                get;
-                set;
-            }
-        }
-
-        public class Volume
-        {
-            /// <summary>
-            /// DockerVolumeConfiguration
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumes.html#cfn-ecs-taskdefinition-volume-dockervolumeconfiguration
-            /// Required: False
-            /// UpdateType: Immutable
-            /// Type: DockerVolumeConfiguration
-            /// </summary>
-            public DockerVolumeConfiguration DockerVolumeConfiguration
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Host
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumes.html#cfn-ecs-taskdefinition-volumes-host
-            /// Required: False
-            /// UpdateType: Immutable
-            /// Type: HostVolumeProperties
-            /// </summary>
-            public HostVolumeProperties Host
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Name
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumes.html#cfn-ecs-taskdefinition-volumes-name
-            /// Required: False
-            /// UpdateType: Immutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Name
             {
                 get;
                 set;
@@ -1164,49 +1193,6 @@ namespace Humidifier.ECS
             /// PrimitiveType: String
             /// </summary>
             public dynamic SourcePath
-            {
-                get;
-                set;
-            }
-        }
-
-        public class Tmpfs
-        {
-            /// <summary>
-            /// ContainerPath
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-containerpath
-            /// Required: False
-            /// UpdateType: Immutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic ContainerPath
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// MountOptions
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-mountoptions
-            /// Required: False
-            /// UpdateType: Immutable
-            /// Type: List
-            /// PrimitiveItemType: String
-            /// </summary>
-            public dynamic MountOptions
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Size
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-size
-            /// Required: False
-            /// UpdateType: Immutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic Size
             {
                 get;
                 set;

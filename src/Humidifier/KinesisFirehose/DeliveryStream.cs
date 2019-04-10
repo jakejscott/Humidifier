@@ -125,152 +125,6 @@ namespace Humidifier.KinesisFirehose
 
     namespace DeliveryStreamTypes
     {
-        public class ElasticsearchDestinationConfiguration
-        {
-            /// <summary>
-            /// BufferingHints
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-bufferinghints
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: ElasticsearchBufferingHints
-            /// </summary>
-            public ElasticsearchBufferingHints BufferingHints
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// CloudWatchLoggingOptions
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-cloudwatchloggingoptions
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: CloudWatchLoggingOptions
-            /// </summary>
-            public CloudWatchLoggingOptions CloudWatchLoggingOptions
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// DomainARN
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-domainarn
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic DomainARN
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// IndexName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-indexname
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic IndexName
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// IndexRotationPeriod
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-indexrotationperiod
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic IndexRotationPeriod
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// ProcessingConfiguration
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-processingconfiguration
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: ProcessingConfiguration
-            /// </summary>
-            public ProcessingConfiguration ProcessingConfiguration
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// RetryOptions
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-retryoptions
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: ElasticsearchRetryOptions
-            /// </summary>
-            public ElasticsearchRetryOptions RetryOptions
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// RoleARN
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-rolearn
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic RoleARN
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// S3BackupMode
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-s3backupmode
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic S3BackupMode
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// S3Configuration
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-s3configuration
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: S3DestinationConfiguration
-            /// </summary>
-            public S3DestinationConfiguration S3Configuration
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// TypeName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-typename
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic TypeName
-            {
-                get;
-                set;
-            }
-        }
-
         public class ElasticsearchBufferingHints
         {
             /// <summary>
@@ -550,51 +404,6 @@ namespace Humidifier.KinesisFirehose
             }
         }
 
-        public class SplunkRetryOptions
-        {
-            /// <summary>
-            /// DurationInSeconds
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkretryoptions.html#cfn-kinesisfirehose-deliverystream-splunkretryoptions-durationinseconds
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic DurationInSeconds
-            {
-                get;
-                set;
-            }
-        }
-
-        public class KinesisStreamSourceConfiguration
-        {
-            /// <summary>
-            /// KinesisStreamARN
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration.html#cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration-kinesisstreamarn
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic KinesisStreamARN
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// RoleARN
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration.html#cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration-rolearn
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic RoleARN
-            {
-                get;
-                set;
-            }
-        }
-
         public class ProcessorParameter
         {
             /// <summary>
@@ -648,6 +457,229 @@ namespace Humidifier.KinesisFirehose
             /// PrimitiveType: String
             /// </summary>
             public dynamic Type
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ElasticsearchRetryOptions
+        {
+            /// <summary>
+            /// DurationInSeconds
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchretryoptions.html#cfn-kinesisfirehose-deliverystream-elasticsearchretryoptions-durationinseconds
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic DurationInSeconds
+            {
+                get;
+                set;
+            }
+        }
+
+        public class KMSEncryptionConfig
+        {
+            /// <summary>
+            /// AWSKMSKeyARN
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-kmsencryptionconfig.html#cfn-kinesisfirehose-deliverystream-kmsencryptionconfig-awskmskeyarn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic AWSKMSKeyARN
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ElasticsearchDestinationConfiguration
+        {
+            /// <summary>
+            /// BufferingHints
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-bufferinghints
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: ElasticsearchBufferingHints
+            /// </summary>
+            public ElasticsearchBufferingHints BufferingHints
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// CloudWatchLoggingOptions
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-cloudwatchloggingoptions
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: CloudWatchLoggingOptions
+            /// </summary>
+            public CloudWatchLoggingOptions CloudWatchLoggingOptions
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DomainARN
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-domainarn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DomainARN
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// IndexName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-indexname
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic IndexName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// IndexRotationPeriod
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-indexrotationperiod
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic IndexRotationPeriod
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ProcessingConfiguration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-processingconfiguration
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: ProcessingConfiguration
+            /// </summary>
+            public ProcessingConfiguration ProcessingConfiguration
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RetryOptions
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-retryoptions
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: ElasticsearchRetryOptions
+            /// </summary>
+            public ElasticsearchRetryOptions RetryOptions
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RoleARN
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-rolearn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RoleARN
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// S3BackupMode
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-s3backupmode
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic S3BackupMode
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// S3Configuration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-s3configuration
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: S3DestinationConfiguration
+            /// </summary>
+            public S3DestinationConfiguration S3Configuration
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// TypeName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-typename
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic TypeName
+            {
+                get;
+                set;
+            }
+        }
+
+        public class SplunkRetryOptions
+        {
+            /// <summary>
+            /// DurationInSeconds
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkretryoptions.html#cfn-kinesisfirehose-deliverystream-splunkretryoptions-durationinseconds
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic DurationInSeconds
+            {
+                get;
+                set;
+            }
+        }
+
+        public class KinesisStreamSourceConfiguration
+        {
+            /// <summary>
+            /// KinesisStreamARN
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration.html#cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration-kinesisstreamarn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic KinesisStreamARN
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RoleARN
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration.html#cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration-rolearn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RoleARN
             {
                 get;
                 set;
@@ -784,38 +816,6 @@ namespace Humidifier.KinesisFirehose
             /// PrimitiveType: String
             /// </summary>
             public dynamic RoleARN
-            {
-                get;
-                set;
-            }
-        }
-
-        public class ElasticsearchRetryOptions
-        {
-            /// <summary>
-            /// DurationInSeconds
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchretryoptions.html#cfn-kinesisfirehose-deliverystream-elasticsearchretryoptions-durationinseconds
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic DurationInSeconds
-            {
-                get;
-                set;
-            }
-        }
-
-        public class KMSEncryptionConfig
-        {
-            /// <summary>
-            /// AWSKMSKeyARN
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-kmsencryptionconfig.html#cfn-kinesisfirehose-deliverystream-kmsencryptionconfig-awskmskeyarn
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic AWSKMSKeyARN
             {
                 get;
                 set;

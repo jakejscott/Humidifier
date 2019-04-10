@@ -69,6 +69,22 @@ namespace Humidifier.WAFRegional
 
     namespace WebACLTypes
     {
+        public class Action
+        {
+            /// <summary>
+            /// Type
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-action.html#cfn-wafregional-webacl-action-type
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Type
+            {
+                get;
+                set;
+            }
+        }
+
         public class Rule
         {
             /// <summary>
@@ -105,22 +121,6 @@ namespace Humidifier.WAFRegional
             /// PrimitiveType: String
             /// </summary>
             public dynamic RuleId
-            {
-                get;
-                set;
-            }
-        }
-
-        public class Action
-        {
-            /// <summary>
-            /// Type
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-action.html#cfn-wafregional-webacl-action-type
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Type
             {
                 get;
                 set;

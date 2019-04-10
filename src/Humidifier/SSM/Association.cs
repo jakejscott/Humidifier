@@ -122,6 +122,35 @@ namespace Humidifier.SSM
 
     namespace AssociationTypes
     {
+        public class S3OutputLocation
+        {
+            /// <summary>
+            /// OutputS3BucketName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-s3outputlocation.html#cfn-ssm-association-s3outputlocation-outputs3bucketname
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic OutputS3BucketName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// OutputS3KeyPrefix
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-s3outputlocation.html#cfn-ssm-association-s3outputlocation-outputs3keyprefix
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic OutputS3KeyPrefix
+            {
+                get;
+                set;
+            }
+        }
+
         public class InstanceAssociationOutputLocation
         {
             /// <summary>
@@ -179,35 +208,6 @@ namespace Humidifier.SSM
             /// PrimitiveItemType: String
             /// </summary>
             public dynamic ParameterValues_
-            {
-                get;
-                set;
-            }
-        }
-
-        public class S3OutputLocation
-        {
-            /// <summary>
-            /// OutputS3BucketName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-s3outputlocation.html#cfn-ssm-association-s3outputlocation-outputs3bucketname
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic OutputS3BucketName
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// OutputS3KeyPrefix
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-s3outputlocation.html#cfn-ssm-association-s3outputlocation-outputs3keyprefix
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic OutputS3KeyPrefix
             {
                 get;
                 set;

@@ -245,126 +245,6 @@ namespace Humidifier.CodeBuild
 
     namespace ProjectTypes
     {
-        public class Artifacts
-        {
-            /// <summary>
-            /// Path
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-path
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Path
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Type
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-type
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Type
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// ArtifactIdentifier
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-artifactidentifier
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic ArtifactIdentifier
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// OverrideArtifactName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-overrideartifactname
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic OverrideArtifactName
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Packaging
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-packaging
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Packaging
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// EncryptionDisabled
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-encryptiondisabled
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic EncryptionDisabled
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Location
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-location
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Location
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Name
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-name
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Name
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// NamespaceType
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-namespacetype
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic NamespaceType
-            {
-                get;
-                set;
-            }
-        }
-
         public class LogsConfig
         {
             /// <summary>
@@ -388,35 +268,6 @@ namespace Humidifier.CodeBuild
             /// Type: S3LogsConfig
             /// </summary>
             public S3LogsConfig S3Logs
-            {
-                get;
-                set;
-            }
-        }
-
-        public class RegistryCredential
-        {
-            /// <summary>
-            /// Credential
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-registrycredential.html#cfn-codebuild-project-registrycredential-credential
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Credential
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// CredentialProvider
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-registrycredential.html#cfn-codebuild-project-registrycredential-credentialprovider
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic CredentialProvider
             {
                 get;
                 set;
@@ -560,71 +411,16 @@ namespace Humidifier.CodeBuild
             }
         }
 
-        public class CloudWatchLogsConfig
+        public class GitSubmodulesConfig
         {
             /// <summary>
-            /// Status
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html#cfn-codebuild-project-cloudwatchlogsconfig-status
+            /// FetchSubmodules
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-gitsubmodulesconfig.html#cfn-codebuild-project-gitsubmodulesconfig-fetchsubmodules
             /// Required: True
             /// UpdateType: Mutable
-            /// PrimitiveType: String
+            /// PrimitiveType: Boolean
             /// </summary>
-            public dynamic Status
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// GroupName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html#cfn-codebuild-project-cloudwatchlogsconfig-groupname
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic GroupName
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// StreamName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html#cfn-codebuild-project-cloudwatchlogsconfig-streamname
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic StreamName
-            {
-                get;
-                set;
-            }
-        }
-
-        public class ProjectCache
-        {
-            /// <summary>
-            /// Type
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-type
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Type
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Location
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-location
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Location
+            public dynamic FetchSubmodules
             {
                 get;
                 set;
@@ -675,8 +471,344 @@ namespace Humidifier.CodeBuild
             }
         }
 
+        public class S3LogsConfig
+        {
+            /// <summary>
+            /// Status
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html#cfn-codebuild-project-s3logsconfig-status
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Status
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// EncryptionDisabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html#cfn-codebuild-project-s3logsconfig-encryptiondisabled
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic EncryptionDisabled
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Location
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html#cfn-codebuild-project-s3logsconfig-location
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Location
+            {
+                get;
+                set;
+            }
+        }
+
+        public class WebhookFilter
+        {
+            /// <summary>
+            /// Pattern
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-webhookfilter.html#cfn-codebuild-project-webhookfilter-pattern
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Pattern
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Type
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-webhookfilter.html#cfn-codebuild-project-webhookfilter-type
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Type
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ExcludeMatchedPattern
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-webhookfilter.html#cfn-codebuild-project-webhookfilter-excludematchedpattern
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic ExcludeMatchedPattern
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Artifacts
+        {
+            /// <summary>
+            /// Path
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-path
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Path
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Type
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-type
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Type
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ArtifactIdentifier
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-artifactidentifier
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ArtifactIdentifier
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// OverrideArtifactName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-overrideartifactname
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic OverrideArtifactName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Packaging
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-packaging
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Packaging
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// EncryptionDisabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-encryptiondisabled
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic EncryptionDisabled
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Location
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-location
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Location
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Name
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-name
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Name
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// NamespaceType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-artifacts.html#cfn-codebuild-project-artifacts-namespacetype
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic NamespaceType
+            {
+                get;
+                set;
+            }
+        }
+
+        public class RegistryCredential
+        {
+            /// <summary>
+            /// Credential
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-registrycredential.html#cfn-codebuild-project-registrycredential-credential
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Credential
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// CredentialProvider
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-registrycredential.html#cfn-codebuild-project-registrycredential-credentialprovider
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic CredentialProvider
+            {
+                get;
+                set;
+            }
+        }
+
+        public class CloudWatchLogsConfig
+        {
+            /// <summary>
+            /// Status
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html#cfn-codebuild-project-cloudwatchlogsconfig-status
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Status
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// GroupName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html#cfn-codebuild-project-cloudwatchlogsconfig-groupname
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic GroupName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// StreamName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-cloudwatchlogsconfig.html#cfn-codebuild-project-cloudwatchlogsconfig-streamname
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic StreamName
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ProjectCache
+        {
+            /// <summary>
+            /// Modes
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-modes
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Modes
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Type
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-type
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Type
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Location
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-location
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Location
+            {
+                get;
+                set;
+            }
+        }
+
+        public class FilterGroup
+        {
+        }
+
         public class ProjectTriggers
         {
+            /// <summary>
+            /// FilterGroups
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html#cfn-codebuild-project-projecttriggers-filtergroups
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: FilterGroup
+            /// </summary>
+            public List<FilterGroup> FilterGroups
+            {
+                get;
+                set;
+            }
+
             /// <summary>
             /// Webhook
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html#cfn-codebuild-project-projecttriggers-webhook
@@ -727,35 +859,6 @@ namespace Humidifier.CodeBuild
             /// PrimitiveType: String
             /// </summary>
             public dynamic Name
-            {
-                get;
-                set;
-            }
-        }
-
-        public class S3LogsConfig
-        {
-            /// <summary>
-            /// Status
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html#cfn-codebuild-project-s3logsconfig-status
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Status
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Location
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-s3logsconfig.html#cfn-codebuild-project-s3logsconfig-location
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Location
             {
                 get;
                 set;
@@ -837,6 +940,19 @@ namespace Humidifier.CodeBuild
             /// PrimitiveType: Integer
             /// </summary>
             public dynamic GitCloneDepth
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// GitSubmodulesConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-gitsubmodulesconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: GitSubmodulesConfig
+            /// </summary>
+            public GitSubmodulesConfig GitSubmodulesConfig
             {
                 get;
                 set;

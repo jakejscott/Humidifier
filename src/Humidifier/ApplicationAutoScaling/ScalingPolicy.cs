@@ -218,48 +218,6 @@ namespace Humidifier.ApplicationAutoScaling
             }
         }
 
-        public class StepAdjustment
-        {
-            /// <summary>
-            /// MetricIntervalLowerBound
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-stepadjustment.html#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-stepadjustment-metricintervallowerbound
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Double
-            /// </summary>
-            public dynamic MetricIntervalLowerBound
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// MetricIntervalUpperBound
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-stepadjustment.html#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-stepadjustment-metricintervalupperbound
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Double
-            /// </summary>
-            public dynamic MetricIntervalUpperBound
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// ScalingAdjustment
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-stepadjustment.html#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-stepadjustment-scalingadjustment
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic ScalingAdjustment
-            {
-                get;
-                set;
-            }
-        }
-
         public class PredefinedMetricSpecification
         {
             /// <summary>
@@ -352,6 +310,48 @@ namespace Humidifier.ApplicationAutoScaling
             /// PrimitiveType: String
             /// </summary>
             public dynamic Unit
+            {
+                get;
+                set;
+            }
+        }
+
+        public class StepAdjustment
+        {
+            /// <summary>
+            /// MetricIntervalLowerBound
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-stepadjustment.html#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-stepadjustment-metricintervallowerbound
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Double
+            /// </summary>
+            public dynamic MetricIntervalLowerBound
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// MetricIntervalUpperBound
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-stepadjustment.html#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-stepadjustment-metricintervalupperbound
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Double
+            /// </summary>
+            public dynamic MetricIntervalUpperBound
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ScalingAdjustment
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-stepadjustment.html#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-stepadjustment-scalingadjustment
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic ScalingAdjustment
             {
                 get;
                 set;

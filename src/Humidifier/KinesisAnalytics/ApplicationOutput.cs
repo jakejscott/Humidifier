@@ -71,35 +71,6 @@ namespace Humidifier.KinesisAnalytics
             }
         }
 
-        public class KinesisStreamsOutput
-        {
-            /// <summary>
-            /// ResourceARN
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisstreamsoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-resourcearn
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic ResourceARN
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// RoleARN
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisstreamsoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-rolearn
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic RoleARN
-            {
-                get;
-                set;
-            }
-        }
-
         public class Output
         {
             /// <summary>
@@ -168,6 +139,51 @@ namespace Humidifier.KinesisAnalytics
             }
         }
 
+        public class DestinationSchema
+        {
+            /// <summary>
+            /// RecordFormatType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-destinationschema.html#cfn-kinesisanalytics-applicationoutput-destinationschema-recordformattype
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RecordFormatType
+            {
+                get;
+                set;
+            }
+        }
+
+        public class KinesisStreamsOutput
+        {
+            /// <summary>
+            /// ResourceARN
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisstreamsoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-resourcearn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ResourceARN
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RoleARN
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisstreamsoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisstreamsoutput-rolearn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RoleARN
+            {
+                get;
+                set;
+            }
+        }
+
         public class LambdaOutput
         {
             /// <summary>
@@ -191,22 +207,6 @@ namespace Humidifier.KinesisAnalytics
             /// PrimitiveType: String
             /// </summary>
             public dynamic RoleARN
-            {
-                get;
-                set;
-            }
-        }
-
-        public class DestinationSchema
-        {
-            /// <summary>
-            /// RecordFormatType
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-destinationschema.html#cfn-kinesisanalytics-applicationoutput-destinationschema-recordformattype
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic RecordFormatType
             {
                 get;
                 set;

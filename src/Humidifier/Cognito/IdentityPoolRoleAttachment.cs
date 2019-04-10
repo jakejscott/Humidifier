@@ -55,23 +55,6 @@ namespace Humidifier.Cognito
 
     namespace IdentityPoolRoleAttachmentTypes
     {
-        public class RulesConfigurationType
-        {
-            /// <summary>
-            /// Rules
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rulesconfigurationtype.html#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-rules
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: MappingRule
-            /// </summary>
-            public List<MappingRule> Rules
-            {
-                get;
-                set;
-            }
-        }
-
         public class RoleMapping
         {
             /// <summary>
@@ -163,6 +146,23 @@ namespace Humidifier.Cognito
             /// PrimitiveType: String
             /// </summary>
             public dynamic RoleARN
+            {
+                get;
+                set;
+            }
+        }
+
+        public class RulesConfigurationType
+        {
+            /// <summary>
+            /// Rules
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rulesconfigurationtype.html#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-rules
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: MappingRule
+            /// </summary>
+            public List<MappingRule> Rules
             {
                 get;
                 set;

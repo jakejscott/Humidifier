@@ -170,6 +170,20 @@ namespace Humidifier.AppStream
         }
 
         /// <summary>
+        /// Tags
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html#cfn-appstream-fleet-tags
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: Tag
+        /// </summary>
+        public List<Tag> Tags
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// ImageArn
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html#cfn-appstream-fleet-imagearn
         /// Required: False
@@ -185,22 +199,6 @@ namespace Humidifier.AppStream
 
     namespace FleetTypes
     {
-        public class ComputeCapacity
-        {
-            /// <summary>
-            /// DesiredInstances
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-fleet-computecapacity.html#cfn-appstream-fleet-computecapacity-desiredinstances
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic DesiredInstances
-            {
-                get;
-                set;
-            }
-        }
-
         public class DomainJoinInfo
         {
             /// <summary>
@@ -224,6 +222,22 @@ namespace Humidifier.AppStream
             /// PrimitiveType: String
             /// </summary>
             public dynamic DirectoryName
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ComputeCapacity
+        {
+            /// <summary>
+            /// DesiredInstances
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-fleet-computecapacity.html#cfn-appstream-fleet-computecapacity-desiredinstances
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic DesiredInstances
             {
                 get;
                 set;

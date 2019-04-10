@@ -29,6 +29,359 @@ namespace Humidifier.EC2
 
     namespace SpotFleetTypes
     {
+        public class SpotFleetTagSpecification
+        {
+            /// <summary>
+            /// ResourceType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-tagspecifications.html#cfn-ec2-spotfleet-spotfleettagspecification-resourcetype
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ResourceType
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Tags
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-tagspecifications.html#cfn-ec2-spotfleet-tags
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: Tag
+            /// </summary>
+            public List<Tag> Tags
+            {
+                get;
+                set;
+            }
+        }
+
+        public class PrivateIpAddressSpecification
+        {
+            /// <summary>
+            /// Primary
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-privateipaddresses.html#cfn-ec2-spotfleet-privateipaddressspecification-primary
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Primary
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// PrivateIpAddress
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-privateipaddresses.html#cfn-ec2-spotfleet-privateipaddressspecification-privateipaddress
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic PrivateIpAddress
+            {
+                get;
+                set;
+            }
+        }
+
+        public class SpotPlacement
+        {
+            /// <summary>
+            /// AvailabilityZone
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement.html#cfn-ec2-spotfleet-spotplacement-availabilityzone
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic AvailabilityZone
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// GroupName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement.html#cfn-ec2-spotfleet-spotplacement-groupname
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic GroupName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Tenancy
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement.html#cfn-ec2-spotfleet-spotplacement-tenancy
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Tenancy
+            {
+                get;
+                set;
+            }
+        }
+
+        public class EbsBlockDevice
+        {
+            /// <summary>
+            /// DeleteOnTermination
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-deleteontermination
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic DeleteOnTermination
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Encrypted
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-encrypted
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Encrypted
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Iops
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-iops
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Iops
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SnapshotId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-snapshotid
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic SnapshotId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// VolumeSize
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-volumesize
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic VolumeSize
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// VolumeType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-volumetype
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic VolumeType
+            {
+                get;
+                set;
+            }
+        }
+
+        public class LoadBalancersConfig
+        {
+            /// <summary>
+            /// ClassicLoadBalancersConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-loadbalancersconfig.html#cfn-ec2-spotfleet-loadbalancersconfig-classicloadbalancersconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: ClassicLoadBalancersConfig
+            /// </summary>
+            public ClassicLoadBalancersConfig ClassicLoadBalancersConfig
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// TargetGroupsConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-loadbalancersconfig.html#cfn-ec2-spotfleet-loadbalancersconfig-targetgroupsconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: TargetGroupsConfig
+            /// </summary>
+            public TargetGroupsConfig TargetGroupsConfig
+            {
+                get;
+                set;
+            }
+        }
+
+        public class FleetLaunchTemplateSpecification
+        {
+            /// <summary>
+            /// LaunchTemplateId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplateid
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic LaunchTemplateId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// LaunchTemplateName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplatename
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic LaunchTemplateName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Version
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-version
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Version
+            {
+                get;
+                set;
+            }
+        }
+
+        public class TargetGroup
+        {
+            /// <summary>
+            /// Arn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-targetgroup.html#cfn-ec2-spotfleet-targetgroup-arn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Arn
+            {
+                get;
+                set;
+            }
+        }
+
+        public class LaunchTemplateOverrides
+        {
+            /// <summary>
+            /// AvailabilityZone
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-availabilityzone
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic AvailabilityZone
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// InstanceType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-instancetype
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic InstanceType
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SpotPrice
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-spotprice
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic SpotPrice
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SubnetId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-subnetid
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic SubnetId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// WeightedCapacity
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-weightedcapacity
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Double
+            /// </summary>
+            public dynamic WeightedCapacity
+            {
+                get;
+                set;
+            }
+        }
+
+        public class SpotFleetMonitoring
+        {
+            /// <summary>
+            /// Enabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-monitoring.html#cfn-ec2-spotfleet-spotfleetmonitoring-enabled
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Enabled
+            {
+                get;
+                set;
+            }
+        }
+
         public class ClassicLoadBalancer
         {
             /// <summary>
@@ -234,65 +587,6 @@ namespace Humidifier.EC2
             /// PrimitiveType: String
             /// </summary>
             public dynamic SubnetId
-            {
-                get;
-                set;
-            }
-        }
-
-        public class SpotFleetTagSpecification
-        {
-            /// <summary>
-            /// ResourceType
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-tagspecifications.html#cfn-ec2-spotfleet-spotfleettagspecification-resourcetype
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic ResourceType
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Tags
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-tagspecifications.html#cfn-ec2-spotfleet-tags
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: Tag
-            /// </summary>
-            public List<Tag> Tags
-            {
-                get;
-                set;
-            }
-        }
-
-        public class PrivateIpAddressSpecification
-        {
-            /// <summary>
-            /// Primary
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-privateipaddresses.html#cfn-ec2-spotfleet-privateipaddressspecification-primary
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic Primary
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// PrivateIpAddress
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-privateipaddresses.html#cfn-ec2-spotfleet-privateipaddressspecification-privateipaddress
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic PrivateIpAddress
             {
                 get;
                 set;
@@ -544,48 +838,6 @@ namespace Humidifier.EC2
             }
         }
 
-        public class SpotPlacement
-        {
-            /// <summary>
-            /// AvailabilityZone
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement.html#cfn-ec2-spotfleet-spotplacement-availabilityzone
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic AvailabilityZone
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// GroupName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement.html#cfn-ec2-spotfleet-spotplacement-groupname
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic GroupName
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Tenancy
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement.html#cfn-ec2-spotfleet-spotplacement-tenancy
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Tenancy
-            {
-                get;
-                set;
-            }
-        }
-
         public class SpotFleetRequestConfigData
         {
             /// <summary>
@@ -773,174 +1025,6 @@ namespace Humidifier.EC2
             }
         }
 
-        public class EbsBlockDevice
-        {
-            /// <summary>
-            /// DeleteOnTermination
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-deleteontermination
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic DeleteOnTermination
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Encrypted
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-encrypted
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic Encrypted
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Iops
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-iops
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic Iops
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// SnapshotId
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-snapshotid
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic SnapshotId
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// VolumeSize
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-volumesize
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic VolumeSize
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// VolumeType
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.html#cfn-ec2-spotfleet-ebsblockdevice-volumetype
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic VolumeType
-            {
-                get;
-                set;
-            }
-        }
-
-        public class LoadBalancersConfig
-        {
-            /// <summary>
-            /// ClassicLoadBalancersConfig
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-loadbalancersconfig.html#cfn-ec2-spotfleet-loadbalancersconfig-classicloadbalancersconfig
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: ClassicLoadBalancersConfig
-            /// </summary>
-            public ClassicLoadBalancersConfig ClassicLoadBalancersConfig
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// TargetGroupsConfig
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-loadbalancersconfig.html#cfn-ec2-spotfleet-loadbalancersconfig-targetgroupsconfig
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: TargetGroupsConfig
-            /// </summary>
-            public TargetGroupsConfig TargetGroupsConfig
-            {
-                get;
-                set;
-            }
-        }
-
-        public class FleetLaunchTemplateSpecification
-        {
-            /// <summary>
-            /// LaunchTemplateId
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplateid
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic LaunchTemplateId
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// LaunchTemplateName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplatename
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic LaunchTemplateName
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Version
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.html#cfn-ec2-spotfleet-fleetlaunchtemplatespecification-version
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Version
-            {
-                get;
-                set;
-            }
-        }
-
-        public class TargetGroup
-        {
-            /// <summary>
-            /// Arn
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-targetgroup.html#cfn-ec2-spotfleet-targetgroup-arn
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Arn
-            {
-                get;
-                set;
-            }
-        }
-
         public class InstanceIpv6Address
         {
             /// <summary>
@@ -984,90 +1068,6 @@ namespace Humidifier.EC2
             /// PrimitiveType: String
             /// </summary>
             public dynamic GroupId
-            {
-                get;
-                set;
-            }
-        }
-
-        public class LaunchTemplateOverrides
-        {
-            /// <summary>
-            /// AvailabilityZone
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-availabilityzone
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic AvailabilityZone
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// InstanceType
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-instancetype
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic InstanceType
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// SpotPrice
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-spotprice
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic SpotPrice
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// SubnetId
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-subnetid
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic SubnetId
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// WeightedCapacity
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-weightedcapacity
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Double
-            /// </summary>
-            public dynamic WeightedCapacity
-            {
-                get;
-                set;
-            }
-        }
-
-        public class SpotFleetMonitoring
-        {
-            /// <summary>
-            /// Enabled
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-monitoring.html#cfn-ec2-spotfleet-spotfleetmonitoring-enabled
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic Enabled
             {
                 get;
                 set;

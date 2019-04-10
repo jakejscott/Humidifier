@@ -186,6 +186,198 @@ namespace Humidifier.SSM
 
     namespace MaintenanceWindowTaskTypes
     {
+        public class LoggingInfo
+        {
+            /// <summary>
+            /// S3Bucket
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-s3bucket
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic S3Bucket
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Region
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-region
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Region
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// S3Prefix
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-s3prefix
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic S3Prefix
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Target
+        {
+            /// <summary>
+            /// Values
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-target.html#cfn-ssm-maintenancewindowtask-target-values
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Values
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Key
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-target.html#cfn-ssm-maintenancewindowtask-target-key
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Key
+            {
+                get;
+                set;
+            }
+        }
+
+        public class MaintenanceWindowRunCommandParameters
+        {
+            /// <summary>
+            /// TimeoutSeconds
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-timeoutseconds
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic TimeoutSeconds
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Comment
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-comment
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Comment
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// OutputS3KeyPrefix
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-outputs3keyprefix
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic OutputS3KeyPrefix
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Parameters
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-parameters
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Json
+            /// </summary>
+            public dynamic Parameters
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DocumentHashType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-documenthashtype
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DocumentHashType
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ServiceRoleArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-servicerolearn
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ServiceRoleArn
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// NotificationConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-notificationconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: NotificationConfig
+            /// </summary>
+            public NotificationConfig NotificationConfig
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// OutputS3BucketName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-outputs3bucketname
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic OutputS3BucketName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DocumentHash
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-documenthash
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DocumentHash
+            {
+                get;
+                set;
+            }
+        }
+
         public class MaintenanceWindowLambdaParameters
         {
             /// <summary>
@@ -355,78 +547,6 @@ namespace Humidifier.SSM
             }
         }
 
-        public class LoggingInfo
-        {
-            /// <summary>
-            /// S3Bucket
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-s3bucket
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic S3Bucket
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Region
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-region
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Region
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// S3Prefix
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-s3prefix
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic S3Prefix
-            {
-                get;
-                set;
-            }
-        }
-
-        public class Target
-        {
-            /// <summary>
-            /// Values
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-target.html#cfn-ssm-maintenancewindowtask-target-values
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// PrimitiveItemType: String
-            /// </summary>
-            public dynamic Values
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Key
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-target.html#cfn-ssm-maintenancewindowtask-target-key
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Key
-            {
-                get;
-                set;
-            }
-        }
-
         public class MaintenanceWindowStepFunctionsParameters
         {
             /// <summary>
@@ -450,126 +570,6 @@ namespace Humidifier.SSM
             /// PrimitiveType: String
             /// </summary>
             public dynamic Name
-            {
-                get;
-                set;
-            }
-        }
-
-        public class MaintenanceWindowRunCommandParameters
-        {
-            /// <summary>
-            /// TimeoutSeconds
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-timeoutseconds
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic TimeoutSeconds
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Comment
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-comment
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Comment
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// OutputS3KeyPrefix
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-outputs3keyprefix
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic OutputS3KeyPrefix
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Parameters
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-parameters
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Json
-            /// </summary>
-            public dynamic Parameters
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// DocumentHashType
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-documenthashtype
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic DocumentHashType
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// ServiceRoleArn
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-servicerolearn
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic ServiceRoleArn
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// NotificationConfig
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-notificationconfig
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: NotificationConfig
-            /// </summary>
-            public NotificationConfig NotificationConfig
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// OutputS3BucketName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-outputs3bucketname
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic OutputS3BucketName
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// DocumentHash
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-documenthash
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic DocumentHash
             {
                 get;
                 set;

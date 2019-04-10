@@ -43,120 +43,6 @@ namespace Humidifier.Budgets
 
     namespace BudgetTypes
     {
-        public class NotificationWithSubscribers
-        {
-            /// <summary>
-            /// Subscribers
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notificationwithsubscribers.html#cfn-budgets-budget-notificationwithsubscribers-subscribers
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: Subscriber
-            /// </summary>
-            public List<Subscriber> Subscribers
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Notification
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notificationwithsubscribers.html#cfn-budgets-budget-notificationwithsubscribers-notification
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: Notification
-            /// </summary>
-            public Notification Notification
-            {
-                get;
-                set;
-            }
-        }
-
-        public class Subscriber
-        {
-            /// <summary>
-            /// SubscriptionType
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-subscriber.html#cfn-budgets-budget-subscriber-subscriptiontype
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic SubscriptionType
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Address
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-subscriber.html#cfn-budgets-budget-subscriber-address
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Address
-            {
-                get;
-                set;
-            }
-        }
-
-        public class Notification
-        {
-            /// <summary>
-            /// ComparisonOperator
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notification.html#cfn-budgets-budget-notification-comparisonoperator
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic ComparisonOperator
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// NotificationType
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notification.html#cfn-budgets-budget-notification-notificationtype
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic NotificationType
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Threshold
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notification.html#cfn-budgets-budget-notification-threshold
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Double
-            /// </summary>
-            public dynamic Threshold
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// ThresholdType
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notification.html#cfn-budgets-budget-notification-thresholdtype
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic ThresholdType
-            {
-                get;
-                set;
-            }
-        }
-
         public class BudgetData
         {
             /// <summary>
@@ -391,6 +277,120 @@ namespace Humidifier.Budgets
             /// PrimitiveType: Boolean
             /// </summary>
             public dynamic IncludeRefund
+            {
+                get;
+                set;
+            }
+        }
+
+        public class NotificationWithSubscribers
+        {
+            /// <summary>
+            /// Subscribers
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notificationwithsubscribers.html#cfn-budgets-budget-notificationwithsubscribers-subscribers
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: Subscriber
+            /// </summary>
+            public List<Subscriber> Subscribers
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Notification
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notificationwithsubscribers.html#cfn-budgets-budget-notificationwithsubscribers-notification
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: Notification
+            /// </summary>
+            public Notification Notification
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Subscriber
+        {
+            /// <summary>
+            /// SubscriptionType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-subscriber.html#cfn-budgets-budget-subscriber-subscriptiontype
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic SubscriptionType
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Address
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-subscriber.html#cfn-budgets-budget-subscriber-address
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Address
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Notification
+        {
+            /// <summary>
+            /// ComparisonOperator
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notification.html#cfn-budgets-budget-notification-comparisonoperator
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ComparisonOperator
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// NotificationType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notification.html#cfn-budgets-budget-notification-notificationtype
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic NotificationType
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Threshold
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notification.html#cfn-budgets-budget-notification-threshold
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Double
+            /// </summary>
+            public dynamic Threshold
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ThresholdType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notification.html#cfn-budgets-budget-notification-thresholdtype
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ThresholdType
             {
                 get;
                 set;

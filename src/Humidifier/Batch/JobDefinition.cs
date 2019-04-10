@@ -107,49 +107,6 @@ namespace Humidifier.Batch
 
     namespace JobDefinitionTypes
     {
-        public class NodeProperties
-        {
-            /// <summary>
-            /// MainNode
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-nodeproperties.html#cfn-batch-jobdefinition-nodeproperties-mainnode
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic MainNode
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// NodeRangeProperties
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-nodeproperties.html#cfn-batch-jobdefinition-nodeproperties-noderangeproperties
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: NodeRangeProperty
-            /// </summary>
-            public List<NodeRangeProperty> NodeRangeProperties
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// NumNodes
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-nodeproperties.html#cfn-batch-jobdefinition-nodeproperties-numnodes
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic NumNodes
-            {
-                get;
-                set;
-            }
-        }
-
         public class Volumes
         {
             /// <summary>
@@ -173,22 +130,6 @@ namespace Humidifier.Batch
             /// PrimitiveType: String
             /// </summary>
             public dynamic Name
-            {
-                get;
-                set;
-            }
-        }
-
-        public class RetryStrategy
-        {
-            /// <summary>
-            /// Attempts
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-retrystrategy.html#cfn-batch-jobdefinition-retrystrategy-attempts
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic Attempts
             {
                 get;
                 set;
@@ -289,6 +230,20 @@ namespace Humidifier.Batch
             }
 
             /// <summary>
+            /// ResourceRequirements
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties.html#cfn-batch-jobdefinition-containerproperties-resourcerequirements
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: ResourceRequirement
+            /// </summary>
+            public List<ResourceRequirement> ResourceRequirements
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// MountPoints
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties.html#cfn-batch-jobdefinition-containerproperties-mountpoints
             /// Required: False
@@ -372,45 +327,29 @@ namespace Humidifier.Batch
             }
         }
 
-        public class Timeout
+        public class ResourceRequirement
         {
             /// <summary>
-            /// AttemptDurationSeconds
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-timeout.html#cfn-batch-jobdefinition-timeout-attemptdurationseconds
+            /// Type
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-resourcerequirement.html#cfn-batch-jobdefinition-resourcerequirement-type
             /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic AttemptDurationSeconds
-            {
-                get;
-                set;
-            }
-        }
-
-        public class NodeRangeProperty
-        {
-            /// <summary>
-            /// Container
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-noderangeproperty.html#cfn-batch-jobdefinition-noderangeproperty-container
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: ContainerProperties
-            /// </summary>
-            public ContainerProperties Container
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// TargetNodes
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-noderangeproperty.html#cfn-batch-jobdefinition-noderangeproperty-targetnodes
-            /// Required: True
             /// UpdateType: Mutable
             /// PrimitiveType: String
             /// </summary>
-            public dynamic TargetNodes
+            public dynamic Type
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Value
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-resourcerequirement.html#cfn-batch-jobdefinition-resourcerequirement-value
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Value
             {
                 get;
                 set;
@@ -540,6 +479,110 @@ namespace Humidifier.Batch
             /// PrimitiveType: String
             /// </summary>
             public dynamic SourcePath
+            {
+                get;
+                set;
+            }
+        }
+
+        public class NodeProperties
+        {
+            /// <summary>
+            /// MainNode
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-nodeproperties.html#cfn-batch-jobdefinition-nodeproperties-mainnode
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic MainNode
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// NodeRangeProperties
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-nodeproperties.html#cfn-batch-jobdefinition-nodeproperties-noderangeproperties
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: NodeRangeProperty
+            /// </summary>
+            public List<NodeRangeProperty> NodeRangeProperties
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// NumNodes
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-nodeproperties.html#cfn-batch-jobdefinition-nodeproperties-numnodes
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic NumNodes
+            {
+                get;
+                set;
+            }
+        }
+
+        public class RetryStrategy
+        {
+            /// <summary>
+            /// Attempts
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-retrystrategy.html#cfn-batch-jobdefinition-retrystrategy-attempts
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Attempts
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Timeout
+        {
+            /// <summary>
+            /// AttemptDurationSeconds
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-timeout.html#cfn-batch-jobdefinition-timeout-attemptdurationseconds
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic AttemptDurationSeconds
+            {
+                get;
+                set;
+            }
+        }
+
+        public class NodeRangeProperty
+        {
+            /// <summary>
+            /// Container
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-noderangeproperty.html#cfn-batch-jobdefinition-noderangeproperty-container
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: ContainerProperties
+            /// </summary>
+            public ContainerProperties Container
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// TargetNodes
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-noderangeproperty.html#cfn-batch-jobdefinition-noderangeproperty-targetnodes
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic TargetNodes
             {
                 get;
                 set;

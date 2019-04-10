@@ -254,22 +254,6 @@ namespace Humidifier.S3
             }
         }
 
-        public class NotificationFilter
-        {
-            /// <summary>
-            /// S3Key
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfiguration-config-filter.html#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: S3KeyFilter
-            /// </summary>
-            public S3KeyFilter S3Key
-            {
-                get;
-                set;
-            }
-        }
-
         public class RoutingRuleCondition
         {
             /// <summary>
@@ -310,116 +294,6 @@ namespace Humidifier.S3
             /// ItemType: Rule
             /// </summary>
             public List<Rule> Rules
-            {
-                get;
-                set;
-            }
-        }
-
-        public class LambdaConfiguration
-        {
-            /// <summary>
-            /// Event
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-lambdaconfig.html#cfn-s3-bucket-notificationconfig-lambdaconfig-event
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Event
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Filter
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-lambdaconfig.html#cfn-s3-bucket-notificationconfig-lambdaconfig-filter
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: NotificationFilter
-            /// </summary>
-            public NotificationFilter Filter
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Function
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-lambdaconfig.html#cfn-s3-bucket-notificationconfig-lambdaconfig-function
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Function
-            {
-                get;
-                set;
-            }
-        }
-
-        public class ReplicationRule
-        {
-            /// <summary>
-            /// Destination
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules.html#cfn-s3-bucket-replicationconfiguration-rules-destination
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: ReplicationDestination
-            /// </summary>
-            public ReplicationDestination Destination
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Id
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules.html#cfn-s3-bucket-replicationconfiguration-rules-id
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Id
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Prefix
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules.html#cfn-s3-bucket-replicationconfiguration-rules-prefix
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Prefix
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// SourceSelectionCriteria
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules.html#cfn-s3-bucket-replicationrule-sourceselectioncriteria
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: SourceSelectionCriteria
-            /// </summary>
-            public SourceSelectionCriteria SourceSelectionCriteria
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Status
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules.html#cfn-s3-bucket-replicationconfiguration-rules-status
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Status
             {
                 get;
                 set;
@@ -560,6 +434,668 @@ namespace Humidifier.S3
             /// PrimitiveType: String
             /// </summary>
             public dynamic Prefix
+            {
+                get;
+                set;
+            }
+        }
+
+        public class AccessControlTranslation
+        {
+            /// <summary>
+            /// Owner
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-accesscontroltranslation.html#cfn-s3-bucket-accesscontroltranslation-owner
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Owner
+            {
+                get;
+                set;
+            }
+        }
+
+        public class VersioningConfiguration
+        {
+            /// <summary>
+            /// Status
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-versioningconfig.html#cfn-s3-bucket-versioningconfig-status
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Status
+            {
+                get;
+                set;
+            }
+        }
+
+        public class NotificationConfiguration
+        {
+            /// <summary>
+            /// LambdaConfigurations
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig.html#cfn-s3-bucket-notificationconfig-lambdaconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: LambdaConfiguration
+            /// </summary>
+            public List<LambdaConfiguration> LambdaConfigurations
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// QueueConfigurations
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig.html#cfn-s3-bucket-notificationconfig-queueconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: QueueConfiguration
+            /// </summary>
+            public List<QueueConfiguration> QueueConfigurations
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// TopicConfigurations
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig.html#cfn-s3-bucket-notificationconfig-topicconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: TopicConfiguration
+            /// </summary>
+            public List<TopicConfiguration> TopicConfigurations
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ServerSideEncryptionByDefault
+        {
+            /// <summary>
+            /// KMSMasterKeyID
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-serversideencryptionbydefault.html#cfn-s3-bucket-serversideencryptionbydefault-kmsmasterkeyid
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic KMSMasterKeyID
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SSEAlgorithm
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-serversideencryptionbydefault.html#cfn-s3-bucket-serversideencryptionbydefault-ssealgorithm
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic SSEAlgorithm
+            {
+                get;
+                set;
+            }
+        }
+
+        public class RedirectAllRequestsTo
+        {
+            /// <summary>
+            /// HostName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-redirectallrequeststo.html#cfn-s3-websiteconfiguration-redirectallrequeststo-hostname
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic HostName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Protocol
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-redirectallrequeststo.html#cfn-s3-websiteconfiguration-redirectallrequeststo-protocol
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Protocol
+            {
+                get;
+                set;
+            }
+        }
+
+        public class S3KeyFilter
+        {
+            /// <summary>
+            /// Rules
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key.html#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key-rules
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: FilterRule
+            /// </summary>
+            public List<FilterRule> Rules
+            {
+                get;
+                set;
+            }
+        }
+
+        public class InventoryConfiguration
+        {
+            /// <summary>
+            /// Destination
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-destination
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: Destination
+            /// </summary>
+            public Destination Destination
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Enabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-enabled
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Enabled
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Id
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-id
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Id
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// IncludedObjectVersions
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-includedobjectversions
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic IncludedObjectVersions
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// OptionalFields
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-optionalfields
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic OptionalFields
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Prefix
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-prefix
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Prefix
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ScheduleFrequency
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-schedulefrequency
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ScheduleFrequency
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ReplicationConfiguration
+        {
+            /// <summary>
+            /// Role
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration.html#cfn-s3-bucket-replicationconfiguration-role
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Role
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Rules
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration.html#cfn-s3-bucket-replicationconfiguration-rules
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: ReplicationRule
+            /// </summary>
+            public List<ReplicationRule> Rules
+            {
+                get;
+                set;
+            }
+        }
+
+        public class SseKmsEncryptedObjects
+        {
+            /// <summary>
+            /// Status
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-ssekmsencryptedobjects.html#cfn-s3-bucket-ssekmsencryptedobjects-status
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Status
+            {
+                get;
+                set;
+            }
+        }
+
+        public class QueueConfiguration
+        {
+            /// <summary>
+            /// Event
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-queueconfig.html#cfn-s3-bucket-notificationconfig-queueconfig-event
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Event
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Filter
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-queueconfig.html#cfn-s3-bucket-notificationconfig-queueconfig-filter
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: NotificationFilter
+            /// </summary>
+            public NotificationFilter Filter
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Queue
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-queueconfig.html#cfn-s3-bucket-notificationconfig-queueconfig-queue
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Queue
+            {
+                get;
+                set;
+            }
+        }
+
+        public class CorsConfiguration
+        {
+            /// <summary>
+            /// CorsRules
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-cors.html#cfn-s3-bucket-cors-corsrule
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: CorsRule
+            /// </summary>
+            public List<CorsRule> CorsRules
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ReplicationDestination
+        {
+            /// <summary>
+            /// AccessControlTranslation
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules-destination.html#cfn-s3-bucket-replicationdestination-accesscontroltranslation
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: AccessControlTranslation
+            /// </summary>
+            public AccessControlTranslation AccessControlTranslation
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Account
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules-destination.html#cfn-s3-bucket-replicationdestination-account
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Account
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Bucket
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules-destination.html#cfn-s3-bucket-replicationconfiguration-rules-destination-bucket
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Bucket
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// EncryptionConfiguration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules-destination.html#cfn-s3-bucket-replicationdestination-encryptionconfiguration
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: EncryptionConfiguration
+            /// </summary>
+            public EncryptionConfiguration EncryptionConfiguration
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// StorageClass
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules-destination.html#cfn-s3-bucket-replicationconfiguration-rules-destination-storageclass
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic StorageClass
+            {
+                get;
+                set;
+            }
+        }
+
+        public class AccelerateConfiguration
+        {
+            /// <summary>
+            /// AccelerationStatus
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-accelerateconfiguration.html#cfn-s3-bucket-accelerateconfiguration-accelerationstatus
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic AccelerationStatus
+            {
+                get;
+                set;
+            }
+        }
+
+        public class NoncurrentVersionTransition
+        {
+            /// <summary>
+            /// StorageClass
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition.html#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition-storageclass
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic StorageClass
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// TransitionInDays
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition.html#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition-transitionindays
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic TransitionInDays
+            {
+                get;
+                set;
+            }
+        }
+
+        public class AbortIncompleteMultipartUpload
+        {
+            /// <summary>
+            /// DaysAfterInitiation
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-abortincompletemultipartupload.html#cfn-s3-bucket-abortincompletemultipartupload-daysafterinitiation
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic DaysAfterInitiation
+            {
+                get;
+                set;
+            }
+        }
+
+        public class PublicAccessBlockConfiguration
+        {
+            /// <summary>
+            /// BlockPublicAcls
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-publicaccessblockconfiguration.html#cfn-s3-bucket-publicaccessblockconfiguration-blockpublicacls
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic BlockPublicAcls
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// BlockPublicPolicy
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-publicaccessblockconfiguration.html#cfn-s3-bucket-publicaccessblockconfiguration-blockpublicpolicy
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic BlockPublicPolicy
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// IgnorePublicAcls
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-publicaccessblockconfiguration.html#cfn-s3-bucket-publicaccessblockconfiguration-ignorepublicacls
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic IgnorePublicAcls
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RestrictPublicBuckets
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-publicaccessblockconfiguration.html#cfn-s3-bucket-publicaccessblockconfiguration-restrictpublicbuckets
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic RestrictPublicBuckets
+            {
+                get;
+                set;
+            }
+        }
+
+        public class NotificationFilter
+        {
+            /// <summary>
+            /// S3Key
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfiguration-config-filter.html#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: S3KeyFilter
+            /// </summary>
+            public S3KeyFilter S3Key
+            {
+                get;
+                set;
+            }
+        }
+
+        public class LambdaConfiguration
+        {
+            /// <summary>
+            /// Event
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-lambdaconfig.html#cfn-s3-bucket-notificationconfig-lambdaconfig-event
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Event
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Filter
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-lambdaconfig.html#cfn-s3-bucket-notificationconfig-lambdaconfig-filter
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: NotificationFilter
+            /// </summary>
+            public NotificationFilter Filter
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Function
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-lambdaconfig.html#cfn-s3-bucket-notificationconfig-lambdaconfig-function
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Function
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ReplicationRule
+        {
+            /// <summary>
+            /// Destination
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules.html#cfn-s3-bucket-replicationconfiguration-rules-destination
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: ReplicationDestination
+            /// </summary>
+            public ReplicationDestination Destination
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Id
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules.html#cfn-s3-bucket-replicationconfiguration-rules-id
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Id
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Prefix
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules.html#cfn-s3-bucket-replicationconfiguration-rules-prefix
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Prefix
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SourceSelectionCriteria
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules.html#cfn-s3-bucket-replicationrule-sourceselectioncriteria
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: SourceSelectionCriteria
+            /// </summary>
+            public SourceSelectionCriteria SourceSelectionCriteria
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Status
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules.html#cfn-s3-bucket-replicationconfiguration-rules-status
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Status
             {
                 get;
                 set;
@@ -728,38 +1264,6 @@ namespace Humidifier.S3
             }
         }
 
-        public class AccessControlTranslation
-        {
-            /// <summary>
-            /// Owner
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-accesscontroltranslation.html#cfn-s3-bucket-accesscontroltranslation-owner
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Owner
-            {
-                get;
-                set;
-            }
-        }
-
-        public class VersioningConfiguration
-        {
-            /// <summary>
-            /// Status
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-versioningconfig.html#cfn-s3-bucket-versioningconfig-status
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Status
-            {
-                get;
-                set;
-            }
-        }
-
         public class EncryptionConfiguration
         {
             /// <summary>
@@ -770,80 +1274,6 @@ namespace Humidifier.S3
             /// PrimitiveType: String
             /// </summary>
             public dynamic ReplicaKmsKeyID
-            {
-                get;
-                set;
-            }
-        }
-
-        public class NotificationConfiguration
-        {
-            /// <summary>
-            /// LambdaConfigurations
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig.html#cfn-s3-bucket-notificationconfig-lambdaconfig
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: LambdaConfiguration
-            /// </summary>
-            public List<LambdaConfiguration> LambdaConfigurations
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// QueueConfigurations
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig.html#cfn-s3-bucket-notificationconfig-queueconfig
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: QueueConfiguration
-            /// </summary>
-            public List<QueueConfiguration> QueueConfigurations
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// TopicConfigurations
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig.html#cfn-s3-bucket-notificationconfig-topicconfig
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: TopicConfiguration
-            /// </summary>
-            public List<TopicConfiguration> TopicConfigurations
-            {
-                get;
-                set;
-            }
-        }
-
-        public class ServerSideEncryptionByDefault
-        {
-            /// <summary>
-            /// KMSMasterKeyID
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-serversideencryptionbydefault.html#cfn-s3-bucket-serversideencryptionbydefault-kmsmasterkeyid
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic KMSMasterKeyID
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// SSEAlgorithm
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-serversideencryptionbydefault.html#cfn-s3-bucket-serversideencryptionbydefault-ssealgorithm
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic SSEAlgorithm
             {
                 get;
                 set;
@@ -918,147 +1348,6 @@ namespace Humidifier.S3
             }
         }
 
-        public class RedirectAllRequestsTo
-        {
-            /// <summary>
-            /// HostName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-redirectallrequeststo.html#cfn-s3-websiteconfiguration-redirectallrequeststo-hostname
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic HostName
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Protocol
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-redirectallrequeststo.html#cfn-s3-websiteconfiguration-redirectallrequeststo-protocol
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Protocol
-            {
-                get;
-                set;
-            }
-        }
-
-        public class S3KeyFilter
-        {
-            /// <summary>
-            /// Rules
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key.html#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key-rules
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: FilterRule
-            /// </summary>
-            public List<FilterRule> Rules
-            {
-                get;
-                set;
-            }
-        }
-
-        public class InventoryConfiguration
-        {
-            /// <summary>
-            /// Destination
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-destination
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: Destination
-            /// </summary>
-            public Destination Destination
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Enabled
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-enabled
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic Enabled
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Id
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-id
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Id
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// IncludedObjectVersions
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-includedobjectversions
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic IncludedObjectVersions
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// OptionalFields
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-optionalfields
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// PrimitiveItemType: String
-            /// </summary>
-            public dynamic OptionalFields
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Prefix
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-prefix
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Prefix
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// ScheduleFrequency
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-schedulefrequency
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic ScheduleFrequency
-            {
-                get;
-                set;
-            }
-        }
-
         public class WebsiteConfiguration
         {
             /// <summary>
@@ -1109,52 +1398,6 @@ namespace Humidifier.S3
             /// ItemType: RoutingRule
             /// </summary>
             public List<RoutingRule> RoutingRules
-            {
-                get;
-                set;
-            }
-        }
-
-        public class ReplicationConfiguration
-        {
-            /// <summary>
-            /// Role
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration.html#cfn-s3-bucket-replicationconfiguration-role
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Role
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Rules
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration.html#cfn-s3-bucket-replicationconfiguration-rules
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: ReplicationRule
-            /// </summary>
-            public List<ReplicationRule> Rules
-            {
-                get;
-                set;
-            }
-        }
-
-        public class SseKmsEncryptedObjects
-        {
-            /// <summary>
-            /// Status
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-ssekmsencryptedobjects.html#cfn-s3-bucket-ssekmsencryptedobjects-status
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Status
             {
                 get;
                 set;
@@ -1317,48 +1560,6 @@ namespace Humidifier.S3
             /// ItemType: Transition
             /// </summary>
             public List<Transition> Transitions
-            {
-                get;
-                set;
-            }
-        }
-
-        public class QueueConfiguration
-        {
-            /// <summary>
-            /// Event
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-queueconfig.html#cfn-s3-bucket-notificationconfig-queueconfig-event
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Event
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Filter
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-queueconfig.html#cfn-s3-bucket-notificationconfig-queueconfig-filter
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: NotificationFilter
-            /// </summary>
-            public NotificationFilter Filter
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Queue
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-queueconfig.html#cfn-s3-bucket-notificationconfig-queueconfig-queue
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Queue
             {
                 get;
                 set;
@@ -1550,152 +1751,6 @@ namespace Humidifier.S3
             }
         }
 
-        public class CorsConfiguration
-        {
-            /// <summary>
-            /// CorsRules
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-cors.html#cfn-s3-bucket-cors-corsrule
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: CorsRule
-            /// </summary>
-            public List<CorsRule> CorsRules
-            {
-                get;
-                set;
-            }
-        }
-
-        public class ReplicationDestination
-        {
-            /// <summary>
-            /// AccessControlTranslation
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules-destination.html#cfn-s3-bucket-replicationdestination-accesscontroltranslation
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: AccessControlTranslation
-            /// </summary>
-            public AccessControlTranslation AccessControlTranslation
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Account
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules-destination.html#cfn-s3-bucket-replicationdestination-account
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Account
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Bucket
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules-destination.html#cfn-s3-bucket-replicationconfiguration-rules-destination-bucket
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Bucket
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// EncryptionConfiguration
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules-destination.html#cfn-s3-bucket-replicationdestination-encryptionconfiguration
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: EncryptionConfiguration
-            /// </summary>
-            public EncryptionConfiguration EncryptionConfiguration
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// StorageClass
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules-destination.html#cfn-s3-bucket-replicationconfiguration-rules-destination-storageclass
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic StorageClass
-            {
-                get;
-                set;
-            }
-        }
-
-        public class AccelerateConfiguration
-        {
-            /// <summary>
-            /// AccelerationStatus
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-accelerateconfiguration.html#cfn-s3-bucket-accelerateconfiguration-accelerationstatus
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic AccelerationStatus
-            {
-                get;
-                set;
-            }
-        }
-
-        public class NoncurrentVersionTransition
-        {
-            /// <summary>
-            /// StorageClass
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition.html#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition-storageclass
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic StorageClass
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// TransitionInDays
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition.html#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition-transitionindays
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic TransitionInDays
-            {
-                get;
-                set;
-            }
-        }
-
-        public class AbortIncompleteMultipartUpload
-        {
-            /// <summary>
-            /// DaysAfterInitiation
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-abortincompletemultipartupload.html#cfn-s3-bucket-abortincompletemultipartupload-daysafterinitiation
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic DaysAfterInitiation
-            {
-                get;
-                set;
-            }
-        }
-
         public class FilterRule
         {
             /// <summary>
@@ -1719,61 +1774,6 @@ namespace Humidifier.S3
             /// PrimitiveType: String
             /// </summary>
             public dynamic Value
-            {
-                get;
-                set;
-            }
-        }
-
-        public class PublicAccessBlockConfiguration
-        {
-            /// <summary>
-            /// BlockPublicAcls
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-publicaccessblockconfiguration.html#cfn-s3-bucket-publicaccessblockconfiguration-blockpublicacls
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic BlockPublicAcls
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// BlockPublicPolicy
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-publicaccessblockconfiguration.html#cfn-s3-bucket-publicaccessblockconfiguration-blockpublicpolicy
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic BlockPublicPolicy
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// IgnorePublicAcls
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-publicaccessblockconfiguration.html#cfn-s3-bucket-publicaccessblockconfiguration-ignorepublicacls
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic IgnorePublicAcls
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// RestrictPublicBuckets
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-publicaccessblockconfiguration.html#cfn-s3-bucket-publicaccessblockconfiguration-restrictpublicbuckets
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic RestrictPublicBuckets
             {
                 get;
                 set;

@@ -203,36 +203,6 @@ namespace Humidifier.EC2
             }
         }
 
-        public class FleetLaunchTemplateConfigRequest
-        {
-            /// <summary>
-            /// LaunchTemplateSpecification
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateconfigrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplateconfigrequest-launchtemplatespecification
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: FleetLaunchTemplateSpecificationRequest
-            /// </summary>
-            public FleetLaunchTemplateSpecificationRequest LaunchTemplateSpecification
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Overrides
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateconfigrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplateconfigrequest-overrides
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: FleetLaunchTemplateOverridesRequest
-            /// </summary>
-            public List<FleetLaunchTemplateOverridesRequest> Overrides
-            {
-                get;
-                set;
-            }
-        }
-
         public class OnDemandOptionsRequest
         {
             /// <summary>
@@ -408,6 +378,36 @@ namespace Humidifier.EC2
             /// PrimitiveType: String
             /// </summary>
             public dynamic MaxPrice
+            {
+                get;
+                set;
+            }
+        }
+
+        public class FleetLaunchTemplateConfigRequest
+        {
+            /// <summary>
+            /// LaunchTemplateSpecification
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateconfigrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplateconfigrequest-launchtemplatespecification
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: FleetLaunchTemplateSpecificationRequest
+            /// </summary>
+            public FleetLaunchTemplateSpecificationRequest LaunchTemplateSpecification
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Overrides
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateconfigrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplateconfigrequest-overrides
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: FleetLaunchTemplateOverridesRequest
+            /// </summary>
+            public List<FleetLaunchTemplateOverridesRequest> Overrides
             {
                 get;
                 set;

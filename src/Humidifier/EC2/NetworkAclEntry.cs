@@ -133,35 +133,6 @@ namespace Humidifier.EC2
 
     namespace NetworkAclEntryTypes
     {
-        public class Icmp
-        {
-            /// <summary>
-            /// Code
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkaclentry-icmp.html#cfn-ec2-networkaclentry-icmp-code
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic Code
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Type
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkaclentry-icmp.html#cfn-ec2-networkaclentry-icmp-type
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic Type
-            {
-                get;
-                set;
-            }
-        }
-
         public class PortRange
         {
             /// <summary>
@@ -185,6 +156,35 @@ namespace Humidifier.EC2
             /// PrimitiveType: Integer
             /// </summary>
             public dynamic To
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Icmp
+        {
+            /// <summary>
+            /// Code
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkaclentry-icmp.html#cfn-ec2-networkaclentry-icmp-code
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Code
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Type
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkaclentry-icmp.html#cfn-ec2-networkaclentry-icmp-type
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Type
             {
                 get;
                 set;

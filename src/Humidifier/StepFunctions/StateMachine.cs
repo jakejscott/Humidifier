@@ -1,6 +1,7 @@
 namespace Humidifier.StepFunctions
 {
     using System.Collections.Generic;
+    using StateMachineTypes;
 
     public class StateMachine : Humidifier.Resource
     {
@@ -54,6 +55,52 @@ namespace Humidifier.StepFunctions
         {
             get;
             set;
+        }
+
+        /// <summary>
+        /// Tags
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-tags
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: TagsEntry
+        /// </summary>
+        public List<TagsEntry> Tags
+        {
+            get;
+            set;
+        }
+    }
+
+    namespace StateMachineTypes
+    {
+        public class TagsEntry
+        {
+            /// <summary>
+            /// Value
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-tagsentry.html#cfn-stepfunctions-statemachine-tagsentry-value
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Value
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Key
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-tagsentry.html#cfn-stepfunctions-statemachine-tagsentry-key
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Key
+            {
+                get;
+                set;
+            }
         }
     }
 }

@@ -21,6 +21,19 @@ namespace Humidifier.ElasticLoadBalancingV2
         }
 
         /// <summary>
+        /// HealthCheckEnabled
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-healthcheckenabled
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Boolean
+        /// </summary>
+        public dynamic HealthCheckEnabled
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// HealthCheckIntervalSeconds
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-healthcheckintervalseconds
         /// Required: False
@@ -127,7 +140,7 @@ namespace Humidifier.ElasticLoadBalancingV2
         /// <summary>
         /// Port
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-port
-        /// Required: True
+        /// Required: False
         /// UpdateType: Immutable
         /// PrimitiveType: Integer
         /// </summary>
@@ -140,7 +153,7 @@ namespace Humidifier.ElasticLoadBalancingV2
         /// <summary>
         /// Protocol
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-protocol
-        /// Required: True
+        /// Required: False
         /// UpdateType: Immutable
         /// PrimitiveType: String
         /// </summary>
@@ -221,7 +234,7 @@ namespace Humidifier.ElasticLoadBalancingV2
         /// <summary>
         /// VpcId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-vpcid
-        /// Required: True
+        /// Required: False
         /// UpdateType: Immutable
         /// PrimitiveType: String
         /// </summary>

@@ -43,35 +43,6 @@ namespace Humidifier.WAF
 
     namespace XssMatchSetTypes
     {
-        public class FieldToMatch
-        {
-            /// <summary>
-            /// Data
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-xssmatchset-xssmatchtuple-fieldtomatch.html#cfn-waf-xssmatchset-xssmatchtuple-fieldtomatch-data
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Data
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Type
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-xssmatchset-xssmatchtuple-fieldtomatch.html#cfn-waf-xssmatchset-xssmatchtuple-fieldtomatch-type
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Type
-            {
-                get;
-                set;
-            }
-        }
-
         public class XssMatchTuple
         {
             /// <summary>
@@ -95,6 +66,35 @@ namespace Humidifier.WAF
             /// PrimitiveType: String
             /// </summary>
             public dynamic TextTransformation
+            {
+                get;
+                set;
+            }
+        }
+
+        public class FieldToMatch
+        {
+            /// <summary>
+            /// Data
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-xssmatchset-xssmatchtuple-fieldtomatch.html#cfn-waf-xssmatchset-xssmatchtuple-fieldtomatch-data
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Data
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Type
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-xssmatchset-xssmatchtuple-fieldtomatch.html#cfn-waf-xssmatchset-xssmatchtuple-fieldtomatch-type
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Type
             {
                 get;
                 set;

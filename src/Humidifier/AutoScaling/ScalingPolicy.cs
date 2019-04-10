@@ -147,35 +147,6 @@ namespace Humidifier.AutoScaling
 
     namespace ScalingPolicyTypes
     {
-        public class MetricDimension
-        {
-            /// <summary>
-            /// Name
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdimension.html#cfn-autoscaling-scalingpolicy-metricdimension-name
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Name
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Value
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdimension.html#cfn-autoscaling-scalingpolicy-metricdimension-value
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Value
-            {
-                get;
-                set;
-            }
-        }
-
         public class CustomizedMetricSpecification
         {
             /// <summary>
@@ -239,6 +210,77 @@ namespace Humidifier.AutoScaling
             /// PrimitiveType: String
             /// </summary>
             public dynamic Unit
+            {
+                get;
+                set;
+            }
+        }
+
+        public class StepAdjustment
+        {
+            /// <summary>
+            /// MetricIntervalLowerBound
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustments.html#cfn-autoscaling-scalingpolicy-stepadjustment-metricintervallowerbound
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Double
+            /// </summary>
+            public dynamic MetricIntervalLowerBound
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// MetricIntervalUpperBound
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustments.html#cfn-autoscaling-scalingpolicy-stepadjustment-metricintervalupperbound
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Double
+            /// </summary>
+            public dynamic MetricIntervalUpperBound
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ScalingAdjustment
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustments.html#cfn-autoscaling-scalingpolicy-stepadjustment-scalingadjustment
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic ScalingAdjustment
+            {
+                get;
+                set;
+            }
+        }
+
+        public class MetricDimension
+        {
+            /// <summary>
+            /// Name
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdimension.html#cfn-autoscaling-scalingpolicy-metricdimension-name
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Name
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Value
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdimension.html#cfn-autoscaling-scalingpolicy-metricdimension-value
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Value
             {
                 get;
                 set;
@@ -323,48 +365,6 @@ namespace Humidifier.AutoScaling
             /// PrimitiveType: Double
             /// </summary>
             public dynamic TargetValue
-            {
-                get;
-                set;
-            }
-        }
-
-        public class StepAdjustment
-        {
-            /// <summary>
-            /// MetricIntervalLowerBound
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustments.html#cfn-autoscaling-scalingpolicy-stepadjustment-metricintervallowerbound
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Double
-            /// </summary>
-            public dynamic MetricIntervalLowerBound
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// MetricIntervalUpperBound
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustments.html#cfn-autoscaling-scalingpolicy-stepadjustment-metricintervalupperbound
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Double
-            /// </summary>
-            public dynamic MetricIntervalUpperBound
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// ScalingAdjustment
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustments.html#cfn-autoscaling-scalingpolicy-stepadjustment-scalingadjustment
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic ScalingAdjustment
             {
                 get;
                 set;

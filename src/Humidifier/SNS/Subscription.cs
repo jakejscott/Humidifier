@@ -54,7 +54,7 @@ namespace Humidifier.SNS
         /// <summary>
         /// Protocol
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-protocol
-        /// Required: False
+        /// Required: True
         /// UpdateType: Immutable
         /// PrimitiveType: String
         /// </summary>
@@ -93,7 +93,7 @@ namespace Humidifier.SNS
         /// <summary>
         /// TopicArn
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#topicarn
-        /// Required: False
+        /// Required: True
         /// UpdateType: Immutable
         /// PrimitiveType: String
         /// </summary>

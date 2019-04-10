@@ -101,6 +101,22 @@ namespace Humidifier.ServiceDiscovery
 
     namespace ServiceTypes
     {
+        public class HealthCheckCustomConfig
+        {
+            /// <summary>
+            /// FailureThreshold
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-healthcheckcustomconfig.html#cfn-servicediscovery-service-healthcheckcustomconfig-failurethreshold
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Double
+            /// </summary>
+            public dynamic FailureThreshold
+            {
+                get;
+                set;
+            }
+        }
+
         public class DnsConfig
         {
             /// <summary>
@@ -164,25 +180,9 @@ namespace Humidifier.ServiceDiscovery
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-dnsrecord.html#cfn-servicediscovery-service-dnsrecord-ttl
             /// Required: True
             /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic TTL
-            {
-                get;
-                set;
-            }
-        }
-
-        public class HealthCheckCustomConfig
-        {
-            /// <summary>
-            /// FailureThreshold
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-healthcheckcustomconfig.html#cfn-servicediscovery-service-healthcheckcustomconfig-failurethreshold
-            /// Required: False
-            /// UpdateType: Mutable
             /// PrimitiveType: Double
             /// </summary>
-            public dynamic FailureThreshold
+            public dynamic TTL
             {
                 get;
                 set;

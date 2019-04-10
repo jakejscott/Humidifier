@@ -49,6 +49,174 @@ namespace Humidifier.AutoScalingPlans
 
     namespace ScalingPlanTypes
     {
+        public class CustomizedScalingMetricSpecification
+        {
+            /// <summary>
+            /// MetricName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-customizedscalingmetricspecification.html#cfn-autoscalingplans-scalingplan-customizedscalingmetricspecification-metricname
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic MetricName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Statistic
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-customizedscalingmetricspecification.html#cfn-autoscalingplans-scalingplan-customizedscalingmetricspecification-statistic
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Statistic
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Dimensions
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-customizedscalingmetricspecification.html#cfn-autoscalingplans-scalingplan-customizedscalingmetricspecification-dimensions
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: MetricDimension
+            /// </summary>
+            public List<MetricDimension> Dimensions
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Unit
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-customizedscalingmetricspecification.html#cfn-autoscalingplans-scalingplan-customizedscalingmetricspecification-unit
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Unit
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Namespace
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-customizedscalingmetricspecification.html#cfn-autoscalingplans-scalingplan-customizedscalingmetricspecification-namespace
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Namespace
+            {
+                get;
+                set;
+            }
+        }
+
+        public class TagFilter
+        {
+            /// <summary>
+            /// Values
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-tagfilter.html#cfn-autoscalingplans-scalingplan-tagfilter-values
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Values
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Key
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-tagfilter.html#cfn-autoscalingplans-scalingplan-tagfilter-key
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Key
+            {
+                get;
+                set;
+            }
+        }
+
+        public class CustomizedLoadMetricSpecification
+        {
+            /// <summary>
+            /// MetricName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-customizedloadmetricspecification.html#cfn-autoscalingplans-scalingplan-customizedloadmetricspecification-metricname
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic MetricName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Statistic
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-customizedloadmetricspecification.html#cfn-autoscalingplans-scalingplan-customizedloadmetricspecification-statistic
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Statistic
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Dimensions
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-customizedloadmetricspecification.html#cfn-autoscalingplans-scalingplan-customizedloadmetricspecification-dimensions
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: MetricDimension
+            /// </summary>
+            public List<MetricDimension> Dimensions
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Unit
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-customizedloadmetricspecification.html#cfn-autoscalingplans-scalingplan-customizedloadmetricspecification-unit
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Unit
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Namespace
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-customizedloadmetricspecification.html#cfn-autoscalingplans-scalingplan-customizedloadmetricspecification-namespace
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Namespace
+            {
+                get;
+                set;
+            }
+        }
+
         public class ApplicationSource
         {
             /// <summary>
@@ -359,75 +527,6 @@ namespace Humidifier.AutoScalingPlans
             }
         }
 
-        public class CustomizedScalingMetricSpecification
-        {
-            /// <summary>
-            /// MetricName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-customizedscalingmetricspecification.html#cfn-autoscalingplans-scalingplan-customizedscalingmetricspecification-metricname
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic MetricName
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Statistic
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-customizedscalingmetricspecification.html#cfn-autoscalingplans-scalingplan-customizedscalingmetricspecification-statistic
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Statistic
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Dimensions
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-customizedscalingmetricspecification.html#cfn-autoscalingplans-scalingplan-customizedscalingmetricspecification-dimensions
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: MetricDimension
-            /// </summary>
-            public List<MetricDimension> Dimensions
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Unit
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-customizedscalingmetricspecification.html#cfn-autoscalingplans-scalingplan-customizedscalingmetricspecification-unit
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Unit
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Namespace
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-customizedscalingmetricspecification.html#cfn-autoscalingplans-scalingplan-customizedscalingmetricspecification-namespace
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Namespace
-            {
-                get;
-                set;
-            }
-        }
-
         public class MetricDimension
         {
             /// <summary>
@@ -486,36 +585,6 @@ namespace Humidifier.AutoScalingPlans
             }
         }
 
-        public class TagFilter
-        {
-            /// <summary>
-            /// Values
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-tagfilter.html#cfn-autoscalingplans-scalingplan-tagfilter-values
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// PrimitiveItemType: String
-            /// </summary>
-            public dynamic Values
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Key
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-tagfilter.html#cfn-autoscalingplans-scalingplan-tagfilter-key
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Key
-            {
-                get;
-                set;
-            }
-        }
-
         public class PredefinedLoadMetricSpecification
         {
             /// <summary>
@@ -539,75 +608,6 @@ namespace Humidifier.AutoScalingPlans
             /// PrimitiveType: String
             /// </summary>
             public dynamic ResourceLabel
-            {
-                get;
-                set;
-            }
-        }
-
-        public class CustomizedLoadMetricSpecification
-        {
-            /// <summary>
-            /// MetricName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-customizedloadmetricspecification.html#cfn-autoscalingplans-scalingplan-customizedloadmetricspecification-metricname
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic MetricName
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Statistic
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-customizedloadmetricspecification.html#cfn-autoscalingplans-scalingplan-customizedloadmetricspecification-statistic
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Statistic
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Dimensions
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-customizedloadmetricspecification.html#cfn-autoscalingplans-scalingplan-customizedloadmetricspecification-dimensions
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: MetricDimension
-            /// </summary>
-            public List<MetricDimension> Dimensions
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Unit
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-customizedloadmetricspecification.html#cfn-autoscalingplans-scalingplan-customizedloadmetricspecification-unit
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Unit
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Namespace
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-customizedloadmetricspecification.html#cfn-autoscalingplans-scalingplan-customizedloadmetricspecification-namespace
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Namespace
             {
                 get;
                 set;

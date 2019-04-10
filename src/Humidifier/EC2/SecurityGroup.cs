@@ -103,6 +103,113 @@ namespace Humidifier.EC2
 
     namespace SecurityGroupTypes
     {
+        public class Egress
+        {
+            /// <summary>
+            /// CidrIp
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-rule.html#cfn-ec2-security-group-rule-cidrip
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic CidrIp
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// CidrIpv6
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-rule.html#cfn-ec2-security-group-rule-cidripv6
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic CidrIpv6
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Description
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-rule.html#cfn-ec2-security-group-rule-description
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Description
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DestinationPrefixListId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-rule.html#cfn-ec2-security-group-rule-destinationprefixlistid
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DestinationPrefixListId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DestinationSecurityGroupId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-rule.html#cfn-ec2-security-group-rule-destsecgroupid
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DestinationSecurityGroupId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// FromPort
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-rule.html#cfn-ec2-security-group-rule-fromport
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic FromPort
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// IpProtocol
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-rule.html#cfn-ec2-security-group-rule-ipprotocol
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic IpProtocol
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ToPort
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-rule.html#cfn-ec2-security-group-rule-toport
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic ToPort
+            {
+                get;
+                set;
+            }
+        }
+
         public class Ingress
         {
             /// <summary>
@@ -217,113 +324,6 @@ namespace Humidifier.EC2
             /// PrimitiveType: String
             /// </summary>
             public dynamic SourceSecurityGroupOwnerId
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// ToPort
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-rule.html#cfn-ec2-security-group-rule-toport
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic ToPort
-            {
-                get;
-                set;
-            }
-        }
-
-        public class Egress
-        {
-            /// <summary>
-            /// CidrIp
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-rule.html#cfn-ec2-security-group-rule-cidrip
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic CidrIp
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// CidrIpv6
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-rule.html#cfn-ec2-security-group-rule-cidripv6
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic CidrIpv6
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Description
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-rule.html#cfn-ec2-security-group-rule-description
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Description
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// DestinationPrefixListId
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-rule.html#cfn-ec2-security-group-rule-destinationprefixlistid
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic DestinationPrefixListId
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// DestinationSecurityGroupId
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-rule.html#cfn-ec2-security-group-rule-destsecgroupid
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic DestinationSecurityGroupId
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// FromPort
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-rule.html#cfn-ec2-security-group-rule-fromport
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic FromPort
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// IpProtocol
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-rule.html#cfn-ec2-security-group-rule-ipprotocol
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic IpProtocol
             {
                 get;
                 set;

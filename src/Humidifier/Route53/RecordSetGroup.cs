@@ -268,48 +268,6 @@ namespace Humidifier.Route53
             }
         }
 
-        public class GeoLocation
-        {
-            /// <summary>
-            /// ContinentCode
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordsetgroup-geolocation-continentcode
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic ContinentCode
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// CountryCode
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordset-geolocation-countrycode
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic CountryCode
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// SubdivisionCode
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordset-geolocation-subdivisioncode
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic SubdivisionCode
-            {
-                get;
-                set;
-            }
-        }
-
         public class AliasTarget
         {
             /// <summary>
@@ -346,6 +304,48 @@ namespace Humidifier.Route53
             /// PrimitiveType: String
             /// </summary>
             public dynamic HostedZoneId
+            {
+                get;
+                set;
+            }
+        }
+
+        public class GeoLocation
+        {
+            /// <summary>
+            /// ContinentCode
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordsetgroup-geolocation-continentcode
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ContinentCode
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// CountryCode
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordset-geolocation-countrycode
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic CountryCode
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SubdivisionCode
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordset-geolocation-subdivisioncode
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic SubdivisionCode
             {
                 get;
                 set;

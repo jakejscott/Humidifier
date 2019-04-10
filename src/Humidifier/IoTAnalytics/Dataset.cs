@@ -116,36 +116,6 @@ namespace Humidifier.IoTAnalytics
             }
         }
 
-        public class QueryAction
-        {
-            /// <summary>
-            /// Filters
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-queryaction.html#cfn-iotanalytics-dataset-queryaction-filters
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: Filter
-            /// </summary>
-            public List<Filter> Filters
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// SqlQuery
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-queryaction.html#cfn-iotanalytics-dataset-queryaction-sqlquery
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic SqlQuery
-            {
-                get;
-                set;
-            }
-        }
-
         public class Variable
         {
             /// <summary>
@@ -259,67 +229,6 @@ namespace Humidifier.IoTAnalytics
             }
         }
 
-        public class ResourceConfiguration
-        {
-            /// <summary>
-            /// VolumeSizeInGB
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-resourceconfiguration.html#cfn-iotanalytics-dataset-resourceconfiguration-volumesizeingb
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic VolumeSizeInGB
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// ComputeType
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-resourceconfiguration.html#cfn-iotanalytics-dataset-resourceconfiguration-computetype
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic ComputeType
-            {
-                get;
-                set;
-            }
-        }
-
-        public class TriggeringDataset
-        {
-            /// <summary>
-            /// DatasetName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-triggeringdataset.html#cfn-iotanalytics-dataset-triggeringdataset-datasetname
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic DatasetName
-            {
-                get;
-                set;
-            }
-        }
-
-        public class Schedule
-        {
-            /// <summary>
-            /// ScheduleExpression
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-trigger-schedule.html#cfn-iotanalytics-dataset-trigger-schedule-scheduleexpression
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic ScheduleExpression
-            {
-                get;
-                set;
-            }
-        }
-
         public class Trigger
         {
             /// <summary>
@@ -343,35 +252,6 @@ namespace Humidifier.IoTAnalytics
             /// Type: TriggeringDataset
             /// </summary>
             public TriggeringDataset TriggeringDataset
-            {
-                get;
-                set;
-            }
-        }
-
-        public class RetentionPeriod
-        {
-            /// <summary>
-            /// NumberOfDays
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-retentionperiod.html#cfn-iotanalytics-dataset-retentionperiod-numberofdays
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic NumberOfDays
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Unlimited
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-retentionperiod.html#cfn-iotanalytics-dataset-retentionperiod-unlimited
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic Unlimited
             {
                 get;
                 set;
@@ -470,6 +350,126 @@ namespace Humidifier.IoTAnalytics
             /// Type: ResourceConfiguration
             /// </summary>
             public ResourceConfiguration ResourceConfiguration
+            {
+                get;
+                set;
+            }
+        }
+
+        public class QueryAction
+        {
+            /// <summary>
+            /// Filters
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-queryaction.html#cfn-iotanalytics-dataset-queryaction-filters
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: Filter
+            /// </summary>
+            public List<Filter> Filters
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SqlQuery
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-queryaction.html#cfn-iotanalytics-dataset-queryaction-sqlquery
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic SqlQuery
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ResourceConfiguration
+        {
+            /// <summary>
+            /// VolumeSizeInGB
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-resourceconfiguration.html#cfn-iotanalytics-dataset-resourceconfiguration-volumesizeingb
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic VolumeSizeInGB
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ComputeType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-resourceconfiguration.html#cfn-iotanalytics-dataset-resourceconfiguration-computetype
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ComputeType
+            {
+                get;
+                set;
+            }
+        }
+
+        public class TriggeringDataset
+        {
+            /// <summary>
+            /// DatasetName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-triggeringdataset.html#cfn-iotanalytics-dataset-triggeringdataset-datasetname
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DatasetName
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Schedule
+        {
+            /// <summary>
+            /// ScheduleExpression
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-trigger-schedule.html#cfn-iotanalytics-dataset-trigger-schedule-scheduleexpression
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ScheduleExpression
+            {
+                get;
+                set;
+            }
+        }
+
+        public class RetentionPeriod
+        {
+            /// <summary>
+            /// NumberOfDays
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-retentionperiod.html#cfn-iotanalytics-dataset-retentionperiod-numberofdays
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic NumberOfDays
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Unlimited
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-retentionperiod.html#cfn-iotanalytics-dataset-retentionperiod-unlimited
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Unlimited
             {
                 get;
                 set;

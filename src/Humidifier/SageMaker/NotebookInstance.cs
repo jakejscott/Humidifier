@@ -18,6 +18,19 @@ namespace Humidifier.SageMaker
         }
 
         /// <summary>
+        /// RootAccess
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-rootaccess
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic RootAccess
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// KmsKeyId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-kmskeyid
         /// Required: False

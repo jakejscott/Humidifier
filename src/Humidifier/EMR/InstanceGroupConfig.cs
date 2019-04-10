@@ -176,6 +176,153 @@ namespace Humidifier.EMR
             }
         }
 
+        public class ScalingAction
+        {
+            /// <summary>
+            /// Market
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingaction.html#cfn-elasticmapreduce-instancegroupconfig-scalingaction-market
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Market
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SimpleScalingPolicyConfiguration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingaction.html#cfn-elasticmapreduce-instancegroupconfig-scalingaction-simplescalingpolicyconfiguration
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: SimpleScalingPolicyConfiguration
+            /// </summary>
+            public SimpleScalingPolicyConfiguration SimpleScalingPolicyConfiguration
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ScalingTrigger
+        {
+            /// <summary>
+            /// CloudWatchAlarmDefinition
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingtrigger.html#cfn-elasticmapreduce-instancegroupconfig-scalingtrigger-cloudwatchalarmdefinition
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: CloudWatchAlarmDefinition
+            /// </summary>
+            public CloudWatchAlarmDefinition CloudWatchAlarmDefinition
+            {
+                get;
+                set;
+            }
+        }
+
+        public class VolumeSpecification
+        {
+            /// <summary>
+            /// Iops
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification.html#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification-iops
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Iops
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SizeInGB
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification.html#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification-sizeingb
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic SizeInGB
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// VolumeType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification.html#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification-volumetype
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic VolumeType
+            {
+                get;
+                set;
+            }
+        }
+
+        public class AutoScalingPolicy
+        {
+            /// <summary>
+            /// Constraints
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy.html#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-constraints
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: ScalingConstraints
+            /// </summary>
+            public ScalingConstraints Constraints
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Rules
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy.html#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-rules
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: ScalingRule
+            /// </summary>
+            public List<ScalingRule> Rules
+            {
+                get;
+                set;
+            }
+        }
+
+        public class EbsConfiguration
+        {
+            /// <summary>
+            /// EbsBlockDeviceConfigs
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration.html#cfn-emr-ebsconfiguration-ebsblockdeviceconfigs
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: EbsBlockDeviceConfig
+            /// </summary>
+            public List<EbsBlockDeviceConfig> EbsBlockDeviceConfigs
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// EbsOptimized
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration.html#cfn-emr-ebsconfiguration-ebsoptimized
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic EbsOptimized
+            {
+                get;
+                set;
+            }
+        }
+
         public class Configuration
         {
             /// <summary>
@@ -346,51 +493,6 @@ namespace Humidifier.EMR
             }
         }
 
-        public class ScalingAction
-        {
-            /// <summary>
-            /// Market
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingaction.html#cfn-elasticmapreduce-instancegroupconfig-scalingaction-market
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Market
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// SimpleScalingPolicyConfiguration
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingaction.html#cfn-elasticmapreduce-instancegroupconfig-scalingaction-simplescalingpolicyconfiguration
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: SimpleScalingPolicyConfiguration
-            /// </summary>
-            public SimpleScalingPolicyConfiguration SimpleScalingPolicyConfiguration
-            {
-                get;
-                set;
-            }
-        }
-
-        public class ScalingTrigger
-        {
-            /// <summary>
-            /// CloudWatchAlarmDefinition
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingtrigger.html#cfn-elasticmapreduce-instancegroupconfig-scalingtrigger-cloudwatchalarmdefinition
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: CloudWatchAlarmDefinition
-            /// </summary>
-            public CloudWatchAlarmDefinition CloudWatchAlarmDefinition
-            {
-                get;
-                set;
-            }
-        }
-
         public class ScalingConstraints
         {
             /// <summary>
@@ -535,108 +637,6 @@ namespace Humidifier.EMR
             /// PrimitiveType: String
             /// </summary>
             public dynamic Unit
-            {
-                get;
-                set;
-            }
-        }
-
-        public class VolumeSpecification
-        {
-            /// <summary>
-            /// Iops
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification.html#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification-iops
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic Iops
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// SizeInGB
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification.html#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification-sizeingb
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic SizeInGB
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// VolumeType
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification.html#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification-volumetype
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic VolumeType
-            {
-                get;
-                set;
-            }
-        }
-
-        public class AutoScalingPolicy
-        {
-            /// <summary>
-            /// Constraints
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy.html#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-constraints
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: ScalingConstraints
-            /// </summary>
-            public ScalingConstraints Constraints
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Rules
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy.html#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-rules
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: ScalingRule
-            /// </summary>
-            public List<ScalingRule> Rules
-            {
-                get;
-                set;
-            }
-        }
-
-        public class EbsConfiguration
-        {
-            /// <summary>
-            /// EbsBlockDeviceConfigs
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration.html#cfn-emr-ebsconfiguration-ebsblockdeviceconfigs
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: EbsBlockDeviceConfig
-            /// </summary>
-            public List<EbsBlockDeviceConfig> EbsBlockDeviceConfigs
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// EbsOptimized
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration.html#cfn-emr-ebsconfiguration-ebsoptimized
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic EbsOptimized
             {
                 get;
                 set;

@@ -107,145 +107,6 @@ namespace Humidifier.CloudFront
             }
         }
 
-        public class CustomOriginConfig
-        {
-            /// <summary>
-            /// OriginReadTimeout
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customoriginconfig.html#cfn-cloudfront-distribution-customoriginconfig-originreadtimeout
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic OriginReadTimeout
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// HTTPSPort
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customoriginconfig.html#cfn-cloudfront-distribution-customoriginconfig-httpsport
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic HTTPSPort
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// OriginKeepaliveTimeout
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customoriginconfig.html#cfn-cloudfront-distribution-customoriginconfig-originkeepalivetimeout
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic OriginKeepaliveTimeout
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// OriginSSLProtocols
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customoriginconfig.html#cfn-cloudfront-distribution-customoriginconfig-originsslprotocols
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// PrimitiveItemType: String
-            /// </summary>
-            public dynamic OriginSSLProtocols
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// HTTPPort
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customoriginconfig.html#cfn-cloudfront-distribution-customoriginconfig-httpport
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic HTTPPort
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// OriginProtocolPolicy
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customoriginconfig.html#cfn-cloudfront-distribution-customoriginconfig-originprotocolpolicy
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic OriginProtocolPolicy
-            {
-                get;
-                set;
-            }
-        }
-
-        public class ForwardedValues
-        {
-            /// <summary>
-            /// Cookies
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-forwardedvalues.html#cfn-cloudfront-distribution-forwardedvalues-cookies
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: Cookies
-            /// </summary>
-            public Cookies Cookies
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Headers
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-forwardedvalues.html#cfn-cloudfront-distribution-forwardedvalues-headers
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// PrimitiveItemType: String
-            /// </summary>
-            public dynamic Headers
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// QueryString
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-forwardedvalues.html#cfn-cloudfront-distribution-forwardedvalues-querystring
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic QueryString
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// QueryStringCacheKeys
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-forwardedvalues.html#cfn-cloudfront-distribution-forwardedvalues-querystringcachekeys
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// PrimitiveItemType: String
-            /// </summary>
-            public dynamic QueryStringCacheKeys
-            {
-                get;
-                set;
-            }
-        }
-
         public class CacheBehavior
         {
             /// <summary>
@@ -709,217 +570,6 @@ namespace Humidifier.CloudFront
             }
         }
 
-        public class GeoRestriction
-        {
-            /// <summary>
-            /// Locations
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-georestriction.html#cfn-cloudfront-distribution-georestriction-locations
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// PrimitiveItemType: String
-            /// </summary>
-            public dynamic Locations
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// RestrictionType
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-georestriction.html#cfn-cloudfront-distribution-georestriction-restrictiontype
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic RestrictionType
-            {
-                get;
-                set;
-            }
-        }
-
-        public class ViewerCertificate
-        {
-            /// <summary>
-            /// IamCertificateId
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-viewercertificate.html#cfn-cloudfront-distribution-viewercertificate-iamcertificateid
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic IamCertificateId
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// SslSupportMethod
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-viewercertificate.html#cfn-cloudfront-distribution-viewercertificate-sslsupportmethod
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic SslSupportMethod
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// MinimumProtocolVersion
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-viewercertificate.html#cfn-cloudfront-distribution-viewercertificate-minimumprotocolversion
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic MinimumProtocolVersion
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// CloudFrontDefaultCertificate
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-viewercertificate.html#cfn-cloudfront-distribution-viewercertificate-cloudfrontdefaultcertificate
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic CloudFrontDefaultCertificate
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// AcmCertificateArn
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-viewercertificate.html#cfn-cloudfront-distribution-viewercertificate-acmcertificatearn
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic AcmCertificateArn
-            {
-                get;
-                set;
-            }
-        }
-
-        public class S3OriginConfig
-        {
-            /// <summary>
-            /// OriginAccessIdentity
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-s3originconfig.html#cfn-cloudfront-distribution-s3originconfig-originaccessidentity
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic OriginAccessIdentity
-            {
-                get;
-                set;
-            }
-        }
-
-        public class CustomErrorResponse
-        {
-            /// <summary>
-            /// ResponseCode
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customerrorresponse.html#cfn-cloudfront-distribution-customerrorresponse-responsecode
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic ResponseCode
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// ErrorCachingMinTTL
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customerrorresponse.html#cfn-cloudfront-distribution-customerrorresponse-errorcachingminttl
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Double
-            /// </summary>
-            public dynamic ErrorCachingMinTTL
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// ErrorCode
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customerrorresponse.html#cfn-cloudfront-distribution-customerrorresponse-errorcode
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic ErrorCode
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// ResponsePagePath
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customerrorresponse.html#cfn-cloudfront-distribution-customerrorresponse-responsepagepath
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic ResponsePagePath
-            {
-                get;
-                set;
-            }
-        }
-
-        public class Logging
-        {
-            /// <summary>
-            /// IncludeCookies
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-logging.html#cfn-cloudfront-distribution-logging-includecookies
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic IncludeCookies
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Bucket
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-logging.html#cfn-cloudfront-distribution-logging-bucket
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Bucket
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Prefix
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-logging.html#cfn-cloudfront-distribution-logging-prefix
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Prefix
-            {
-                get;
-                set;
-            }
-        }
-
         public class DistributionConfig
         {
             /// <summary>
@@ -1145,6 +795,356 @@ namespace Humidifier.CloudFront
             /// PrimitiveType: String
             /// </summary>
             public dynamic HeaderName
+            {
+                get;
+                set;
+            }
+        }
+
+        public class CustomOriginConfig
+        {
+            /// <summary>
+            /// OriginReadTimeout
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customoriginconfig.html#cfn-cloudfront-distribution-customoriginconfig-originreadtimeout
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic OriginReadTimeout
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// HTTPSPort
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customoriginconfig.html#cfn-cloudfront-distribution-customoriginconfig-httpsport
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic HTTPSPort
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// OriginKeepaliveTimeout
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customoriginconfig.html#cfn-cloudfront-distribution-customoriginconfig-originkeepalivetimeout
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic OriginKeepaliveTimeout
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// OriginSSLProtocols
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customoriginconfig.html#cfn-cloudfront-distribution-customoriginconfig-originsslprotocols
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic OriginSSLProtocols
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// HTTPPort
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customoriginconfig.html#cfn-cloudfront-distribution-customoriginconfig-httpport
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic HTTPPort
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// OriginProtocolPolicy
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customoriginconfig.html#cfn-cloudfront-distribution-customoriginconfig-originprotocolpolicy
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic OriginProtocolPolicy
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ForwardedValues
+        {
+            /// <summary>
+            /// Cookies
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-forwardedvalues.html#cfn-cloudfront-distribution-forwardedvalues-cookies
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: Cookies
+            /// </summary>
+            public Cookies Cookies
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Headers
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-forwardedvalues.html#cfn-cloudfront-distribution-forwardedvalues-headers
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Headers
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// QueryString
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-forwardedvalues.html#cfn-cloudfront-distribution-forwardedvalues-querystring
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic QueryString
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// QueryStringCacheKeys
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-forwardedvalues.html#cfn-cloudfront-distribution-forwardedvalues-querystringcachekeys
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic QueryStringCacheKeys
+            {
+                get;
+                set;
+            }
+        }
+
+        public class GeoRestriction
+        {
+            /// <summary>
+            /// Locations
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-georestriction.html#cfn-cloudfront-distribution-georestriction-locations
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Locations
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RestrictionType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-georestriction.html#cfn-cloudfront-distribution-georestriction-restrictiontype
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RestrictionType
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ViewerCertificate
+        {
+            /// <summary>
+            /// IamCertificateId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-viewercertificate.html#cfn-cloudfront-distribution-viewercertificate-iamcertificateid
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic IamCertificateId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SslSupportMethod
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-viewercertificate.html#cfn-cloudfront-distribution-viewercertificate-sslsupportmethod
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic SslSupportMethod
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// MinimumProtocolVersion
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-viewercertificate.html#cfn-cloudfront-distribution-viewercertificate-minimumprotocolversion
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic MinimumProtocolVersion
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// CloudFrontDefaultCertificate
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-viewercertificate.html#cfn-cloudfront-distribution-viewercertificate-cloudfrontdefaultcertificate
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic CloudFrontDefaultCertificate
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// AcmCertificateArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-viewercertificate.html#cfn-cloudfront-distribution-viewercertificate-acmcertificatearn
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic AcmCertificateArn
+            {
+                get;
+                set;
+            }
+        }
+
+        public class S3OriginConfig
+        {
+            /// <summary>
+            /// OriginAccessIdentity
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-s3originconfig.html#cfn-cloudfront-distribution-s3originconfig-originaccessidentity
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic OriginAccessIdentity
+            {
+                get;
+                set;
+            }
+        }
+
+        public class CustomErrorResponse
+        {
+            /// <summary>
+            /// ResponseCode
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customerrorresponse.html#cfn-cloudfront-distribution-customerrorresponse-responsecode
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic ResponseCode
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ErrorCachingMinTTL
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customerrorresponse.html#cfn-cloudfront-distribution-customerrorresponse-errorcachingminttl
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Double
+            /// </summary>
+            public dynamic ErrorCachingMinTTL
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ErrorCode
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customerrorresponse.html#cfn-cloudfront-distribution-customerrorresponse-errorcode
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic ErrorCode
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ResponsePagePath
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customerrorresponse.html#cfn-cloudfront-distribution-customerrorresponse-responsepagepath
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ResponsePagePath
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Logging
+        {
+            /// <summary>
+            /// IncludeCookies
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-logging.html#cfn-cloudfront-distribution-logging-includecookies
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic IncludeCookies
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Bucket
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-logging.html#cfn-cloudfront-distribution-logging-bucket
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Bucket
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Prefix
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-logging.html#cfn-cloudfront-distribution-logging-prefix
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Prefix
             {
                 get;
                 set;

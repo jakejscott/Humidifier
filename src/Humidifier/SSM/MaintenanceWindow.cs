@@ -104,6 +104,20 @@ namespace Humidifier.SSM
         }
 
         /// <summary>
+        /// Tags
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindow.html#cfn-ssm-maintenancewindow-tags
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: Tag
+        /// </summary>
+        public List<Tag> Tags
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Name
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindow.html#cfn-ssm-maintenancewindow-name
         /// Required: True

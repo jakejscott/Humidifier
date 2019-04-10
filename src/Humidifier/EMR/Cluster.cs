@@ -273,114 +273,6 @@ namespace Humidifier.EMR
 
     namespace ClusterTypes
     {
-        public class InstanceGroupConfig
-        {
-            /// <summary>
-            /// AutoScalingPolicy
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-autoscalingpolicy
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: AutoScalingPolicy
-            /// </summary>
-            public AutoScalingPolicy AutoScalingPolicy
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// BidPrice
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-bidprice
-            /// Required: False
-            /// UpdateType: Immutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic BidPrice
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Configurations
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-configurations
-            /// Required: False
-            /// UpdateType: Immutable
-            /// Type: List
-            /// ItemType: Configuration
-            /// </summary>
-            public List<Configuration> Configurations
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// EbsConfiguration
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-ebsconfiguration
-            /// Required: False
-            /// UpdateType: Immutable
-            /// Type: EbsConfiguration
-            /// </summary>
-            public EbsConfiguration EbsConfiguration
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// InstanceCount
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-instancecount
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic InstanceCount
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// InstanceType
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-instancetype
-            /// Required: True
-            /// UpdateType: Immutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic InstanceType
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Market
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-market
-            /// Required: False
-            /// UpdateType: Immutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Market
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Name
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-name
-            /// Required: False
-            /// UpdateType: Immutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Name
-            {
-                get;
-                set;
-            }
-        }
-
         public class SpotProvisioningSpecification
         {
             /// <summary>
@@ -446,35 +338,6 @@ namespace Humidifier.EMR
             /// Type: ScriptBootstrapActionConfig
             /// </summary>
             public ScriptBootstrapActionConfig ScriptBootstrapAction
-            {
-                get;
-                set;
-            }
-        }
-
-        public class ScalingConstraints
-        {
-            /// <summary>
-            /// MaxCapacity
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-scalingconstraints.html#cfn-elasticmapreduce-cluster-scalingconstraints-maxcapacity
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic MaxCapacity
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// MinCapacity
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-scalingconstraints.html#cfn-elasticmapreduce-cluster-scalingconstraints-mincapacity
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic MinCapacity
             {
                 get;
                 set;
@@ -750,35 +613,6 @@ namespace Humidifier.EMR
             }
         }
 
-        public class ScalingAction
-        {
-            /// <summary>
-            /// Market
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-scalingaction.html#cfn-elasticmapreduce-cluster-scalingaction-market
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Market
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// SimpleScalingPolicyConfiguration
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-scalingaction.html#cfn-elasticmapreduce-cluster-scalingaction-simplescalingpolicyconfiguration
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: SimpleScalingPolicyConfiguration
-            /// </summary>
-            public SimpleScalingPolicyConfiguration SimpleScalingPolicyConfiguration
-            {
-                get;
-                set;
-            }
-        }
-
         public class StepConfig
         {
             /// <summary>
@@ -815,6 +649,409 @@ namespace Humidifier.EMR
             /// PrimitiveType: String
             /// </summary>
             public dynamic Name
+            {
+                get;
+                set;
+            }
+        }
+
+        public class EbsBlockDeviceConfig
+        {
+            /// <summary>
+            /// VolumeSpecification
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-ebsblockdeviceconfig.html#cfn-elasticmapreduce-cluster-ebsblockdeviceconfig-volumespecification
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: VolumeSpecification
+            /// </summary>
+            public VolumeSpecification VolumeSpecification
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// VolumesPerInstance
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-ebsblockdeviceconfig.html#cfn-elasticmapreduce-cluster-ebsblockdeviceconfig-volumesperinstance
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic VolumesPerInstance
+            {
+                get;
+                set;
+            }
+        }
+
+        public class CloudWatchAlarmDefinition
+        {
+            /// <summary>
+            /// ComparisonOperator
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-comparisonoperator
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ComparisonOperator
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Dimensions
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-dimensions
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: MetricDimension
+            /// </summary>
+            public List<MetricDimension> Dimensions
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// EvaluationPeriods
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-evaluationperiods
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic EvaluationPeriods
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// MetricName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-metricname
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic MetricName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Namespace
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-namespace
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Namespace
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Period
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-period
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Period
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Statistic
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-statistic
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Statistic
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Threshold
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-threshold
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Double
+            /// </summary>
+            public dynamic Threshold
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Unit
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-unit
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Unit
+            {
+                get;
+                set;
+            }
+        }
+
+        public class KeyValue
+        {
+            /// <summary>
+            /// Key
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-keyvalue.html#cfn-elasticmapreduce-cluster-keyvalue-key
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Key
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Value
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-keyvalue.html#cfn-elasticmapreduce-cluster-keyvalue-value
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Value
+            {
+                get;
+                set;
+            }
+        }
+
+        public class VolumeSpecification
+        {
+            /// <summary>
+            /// Iops
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-volumespecification.html#cfn-elasticmapreduce-cluster-volumespecification-iops
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Iops
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SizeInGB
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-volumespecification.html#cfn-elasticmapreduce-cluster-volumespecification-sizeingb
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic SizeInGB
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// VolumeType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-volumespecification.html#cfn-elasticmapreduce-cluster-volumespecification-volumetype
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic VolumeType
+            {
+                get;
+                set;
+            }
+        }
+
+        public class InstanceFleetProvisioningSpecifications
+        {
+            /// <summary>
+            /// SpotSpecification
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancefleetprovisioningspecifications.html#cfn-elasticmapreduce-cluster-instancefleetprovisioningspecifications-spotspecification
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: SpotProvisioningSpecification
+            /// </summary>
+            public SpotProvisioningSpecification SpotSpecification
+            {
+                get;
+                set;
+            }
+        }
+
+        public class InstanceGroupConfig
+        {
+            /// <summary>
+            /// AutoScalingPolicy
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-autoscalingpolicy
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: AutoScalingPolicy
+            /// </summary>
+            public AutoScalingPolicy AutoScalingPolicy
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// BidPrice
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-bidprice
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic BidPrice
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Configurations
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-configurations
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: List
+            /// ItemType: Configuration
+            /// </summary>
+            public List<Configuration> Configurations
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// EbsConfiguration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-ebsconfiguration
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: EbsConfiguration
+            /// </summary>
+            public EbsConfiguration EbsConfiguration
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// InstanceCount
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-instancecount
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic InstanceCount
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// InstanceType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-instancetype
+            /// Required: True
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic InstanceType
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Market
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-market
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Market
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Name
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-name
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Name
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ScalingConstraints
+        {
+            /// <summary>
+            /// MaxCapacity
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-scalingconstraints.html#cfn-elasticmapreduce-cluster-scalingconstraints-maxcapacity
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic MaxCapacity
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// MinCapacity
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-scalingconstraints.html#cfn-elasticmapreduce-cluster-scalingconstraints-mincapacity
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic MinCapacity
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ScalingAction
+        {
+            /// <summary>
+            /// Market
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-scalingaction.html#cfn-elasticmapreduce-cluster-scalingaction-market
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Market
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SimpleScalingPolicyConfiguration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-scalingaction.html#cfn-elasticmapreduce-cluster-scalingaction-simplescalingpolicyconfiguration
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: SimpleScalingPolicyConfiguration
+            /// </summary>
+            public SimpleScalingPolicyConfiguration SimpleScalingPolicyConfiguration
             {
                 get;
                 set;
@@ -988,35 +1225,6 @@ namespace Humidifier.EMR
             }
         }
 
-        public class EbsBlockDeviceConfig
-        {
-            /// <summary>
-            /// VolumeSpecification
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-ebsblockdeviceconfig.html#cfn-elasticmapreduce-cluster-ebsblockdeviceconfig-volumespecification
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: VolumeSpecification
-            /// </summary>
-            public VolumeSpecification VolumeSpecification
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// VolumesPerInstance
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-ebsblockdeviceconfig.html#cfn-elasticmapreduce-cluster-ebsblockdeviceconfig-volumesperinstance
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic VolumesPerInstance
-            {
-                get;
-                set;
-            }
-        }
-
         public class PlacementType
         {
             /// <summary>
@@ -1107,127 +1315,6 @@ namespace Humidifier.EMR
             }
         }
 
-        public class CloudWatchAlarmDefinition
-        {
-            /// <summary>
-            /// ComparisonOperator
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-comparisonoperator
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic ComparisonOperator
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Dimensions
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-dimensions
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// ItemType: MetricDimension
-            /// </summary>
-            public List<MetricDimension> Dimensions
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// EvaluationPeriods
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-evaluationperiods
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic EvaluationPeriods
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// MetricName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-metricname
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic MetricName
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Namespace
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-namespace
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Namespace
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Period
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-period
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic Period
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Statistic
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-statistic
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Statistic
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Threshold
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-threshold
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Double
-            /// </summary>
-            public dynamic Threshold
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Unit
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-unit
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Unit
-            {
-                get;
-                set;
-            }
-        }
-
         public class EbsConfiguration
         {
             /// <summary>
@@ -1307,35 +1394,6 @@ namespace Humidifier.EMR
             /// Type: ScalingTrigger
             /// </summary>
             public ScalingTrigger Trigger
-            {
-                get;
-                set;
-            }
-        }
-
-        public class KeyValue
-        {
-            /// <summary>
-            /// Key
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-keyvalue.html#cfn-elasticmapreduce-cluster-keyvalue-key
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Key
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Value
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-keyvalue.html#cfn-elasticmapreduce-cluster-keyvalue-value
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Value
             {
                 get;
                 set;
@@ -1453,48 +1511,6 @@ namespace Humidifier.EMR
             }
         }
 
-        public class VolumeSpecification
-        {
-            /// <summary>
-            /// Iops
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-volumespecification.html#cfn-elasticmapreduce-cluster-volumespecification-iops
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic Iops
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// SizeInGB
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-volumespecification.html#cfn-elasticmapreduce-cluster-volumespecification-sizeingb
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic SizeInGB
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// VolumeType
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-volumespecification.html#cfn-elasticmapreduce-cluster-volumespecification-volumetype
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic VolumeType
-            {
-                get;
-                set;
-            }
-        }
-
         public class AutoScalingPolicy
         {
             /// <summary>
@@ -1519,22 +1535,6 @@ namespace Humidifier.EMR
             /// ItemType: ScalingRule
             /// </summary>
             public List<ScalingRule> Rules
-            {
-                get;
-                set;
-            }
-        }
-
-        public class InstanceFleetProvisioningSpecifications
-        {
-            /// <summary>
-            /// SpotSpecification
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancefleetprovisioningspecifications.html#cfn-elasticmapreduce-cluster-instancefleetprovisioningspecifications-spotspecification
-            /// Required: True
-            /// UpdateType: Mutable
-            /// Type: SpotProvisioningSpecification
-            /// </summary>
-            public SpotProvisioningSpecification SpotSpecification
             {
                 get;
                 set;

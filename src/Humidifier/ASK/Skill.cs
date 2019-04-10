@@ -123,22 +123,6 @@ namespace Humidifier.ASK
             }
         }
 
-        public class Overrides
-        {
-            /// <summary>
-            /// Manifest
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-overrides.html#cfn-ask-skill-overrides-manifest
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Json
-            /// </summary>
-            public dynamic Manifest
-            {
-                get;
-                set;
-            }
-        }
-
         public class AuthenticationConfiguration
         {
             /// <summary>
@@ -175,6 +159,22 @@ namespace Humidifier.ASK
             /// PrimitiveType: String
             /// </summary>
             public dynamic ClientId
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Overrides
+        {
+            /// <summary>
+            /// Manifest
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-overrides.html#cfn-ask-skill-overrides-manifest
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Json
+            /// </summary>
+            public dynamic Manifest
             {
                 get;
                 set;

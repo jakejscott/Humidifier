@@ -111,6 +111,48 @@ namespace Humidifier.SES
             }
         }
 
+        public class DimensionConfiguration
+        {
+            /// <summary>
+            /// DimensionValueSource
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-dimensionconfiguration.html#cfn-ses-configurationseteventdestination-dimensionconfiguration-dimensionvaluesource
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DimensionValueSource
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DefaultDimensionValue
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-dimensionconfiguration.html#cfn-ses-configurationseteventdestination-dimensionconfiguration-defaultdimensionvalue
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DefaultDimensionValue
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DimensionName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-dimensionconfiguration.html#cfn-ses-configurationseteventdestination-dimensionconfiguration-dimensionname
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DimensionName
+            {
+                get;
+                set;
+            }
+        }
+
         public class CloudWatchDestination
         {
             /// <summary>
@@ -151,48 +193,6 @@ namespace Humidifier.SES
             /// PrimitiveType: String
             /// </summary>
             public dynamic DeliveryStreamARN
-            {
-                get;
-                set;
-            }
-        }
-
-        public class DimensionConfiguration
-        {
-            /// <summary>
-            /// DimensionValueSource
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-dimensionconfiguration.html#cfn-ses-configurationseteventdestination-dimensionconfiguration-dimensionvaluesource
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic DimensionValueSource
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// DefaultDimensionValue
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-dimensionconfiguration.html#cfn-ses-configurationseteventdestination-dimensionconfiguration-defaultdimensionvalue
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic DefaultDimensionValue
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// DimensionName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-dimensionconfiguration.html#cfn-ses-configurationseteventdestination-dimensionconfiguration-dimensionname
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic DimensionName
             {
                 get;
                 set;

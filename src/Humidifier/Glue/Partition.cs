@@ -110,6 +110,91 @@ namespace Humidifier.Glue
             }
         }
 
+        public class Column
+        {
+            /// <summary>
+            /// Comment
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-column.html#cfn-glue-partition-column-comment
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Comment
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Type
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-column.html#cfn-glue-partition-column-type
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Type
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Name
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-column.html#cfn-glue-partition-column-name
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Name
+            {
+                get;
+                set;
+            }
+        }
+
+        public class PartitionInput
+        {
+            /// <summary>
+            /// Parameters
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-partitioninput.html#cfn-glue-partition-partitioninput-parameters
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Json
+            /// </summary>
+            public dynamic Parameters
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// StorageDescriptor
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-partitioninput.html#cfn-glue-partition-partitioninput-storagedescriptor
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: StorageDescriptor
+            /// </summary>
+            public StorageDescriptor StorageDescriptor
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Values
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-partitioninput.html#cfn-glue-partition-partitioninput-values
+            /// Required: True
+            /// UpdateType: Immutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Values
+            {
+                get;
+                set;
+            }
+        }
+
         public class StorageDescriptor
         {
             /// <summary>
@@ -339,91 +424,6 @@ namespace Humidifier.Glue
             /// PrimitiveType: Json
             /// </summary>
             public dynamic SkewedColumnValueLocationMaps
-            {
-                get;
-                set;
-            }
-        }
-
-        public class Column
-        {
-            /// <summary>
-            /// Comment
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-column.html#cfn-glue-partition-column-comment
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Comment
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Type
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-column.html#cfn-glue-partition-column-type
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Type
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Name
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-column.html#cfn-glue-partition-column-name
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Name
-            {
-                get;
-                set;
-            }
-        }
-
-        public class PartitionInput
-        {
-            /// <summary>
-            /// Parameters
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-partitioninput.html#cfn-glue-partition-partitioninput-parameters
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Json
-            /// </summary>
-            public dynamic Parameters
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// StorageDescriptor
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-partitioninput.html#cfn-glue-partition-partitioninput-storagedescriptor
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: StorageDescriptor
-            /// </summary>
-            public StorageDescriptor StorageDescriptor
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Values
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-partitioninput.html#cfn-glue-partition-partitioninput-values
-            /// Required: True
-            /// UpdateType: Immutable
-            /// Type: List
-            /// PrimitiveItemType: String
-            /// </summary>
-            public dynamic Values
             {
                 get;
                 set;

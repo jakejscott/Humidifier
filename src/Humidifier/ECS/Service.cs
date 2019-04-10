@@ -205,20 +205,6 @@ namespace Humidifier.ECS
         }
 
         /// <summary>
-        /// Tags
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-tags
-        /// Required: False
-        /// UpdateType: Mutable
-        /// Type: List
-        /// ItemType: Tag
-        /// </summary>
-        public List<Tag> Tags
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
         /// TaskDefinition
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-taskdefinition
         /// Required: True
@@ -312,61 +298,6 @@ namespace Humidifier.ECS
             /// PrimitiveType: String
             /// </summary>
             public dynamic Type
-            {
-                get;
-                set;
-            }
-        }
-
-        public class ServiceRegistry
-        {
-            /// <summary>
-            /// ContainerName
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-containername
-            /// Required: False
-            /// UpdateType: Immutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic ContainerName
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// ContainerPort
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-containerport
-            /// Required: False
-            /// UpdateType: Immutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic ContainerPort
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Port
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-port
-            /// Required: False
-            /// UpdateType: Immutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic Port
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// RegistryArn
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-registryarn
-            /// Required: False
-            /// UpdateType: Immutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic RegistryArn
             {
                 get;
                 set;
@@ -485,6 +416,61 @@ namespace Humidifier.ECS
             /// Type: AwsVpcConfiguration
             /// </summary>
             public AwsVpcConfiguration AwsvpcConfiguration
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ServiceRegistry
+        {
+            /// <summary>
+            /// ContainerName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-containername
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ContainerName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ContainerPort
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-containerport
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic ContainerPort
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Port
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-port
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Port
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RegistryArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-registryarn
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RegistryArn
             {
                 get;
                 set;

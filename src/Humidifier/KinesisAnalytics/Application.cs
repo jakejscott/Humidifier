@@ -69,35 +69,6 @@ namespace Humidifier.KinesisAnalytics
 
     namespace ApplicationTypes
     {
-        public class MappingParameters
-        {
-            /// <summary>
-            /// JSONMappingParameters
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-mappingparameters.html#cfn-kinesisanalytics-application-mappingparameters-jsonmappingparameters
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: JSONMappingParameters
-            /// </summary>
-            public JSONMappingParameters JSONMappingParameters
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// CSVMappingParameters
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-mappingparameters.html#cfn-kinesisanalytics-application-mappingparameters-csvmappingparameters
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: CSVMappingParameters
-            /// </summary>
-            public CSVMappingParameters CSVMappingParameters
-            {
-                get;
-                set;
-            }
-        }
-
         public class CSVMappingParameters
         {
             /// <summary>
@@ -121,35 +92,6 @@ namespace Humidifier.KinesisAnalytics
             /// PrimitiveType: String
             /// </summary>
             public dynamic RecordColumnDelimiter
-            {
-                get;
-                set;
-            }
-        }
-
-        public class KinesisStreamsInput
-        {
-            /// <summary>
-            /// ResourceARN
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisstreamsinput.html#cfn-kinesisanalytics-application-kinesisstreamsinput-resourcearn
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic ResourceARN
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// RoleARN
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisstreamsinput.html#cfn-kinesisanalytics-application-kinesisstreamsinput-rolearn
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic RoleARN
             {
                 get;
                 set;
@@ -274,6 +216,80 @@ namespace Humidifier.KinesisAnalytics
             /// Type: RecordFormat
             /// </summary>
             public RecordFormat RecordFormat
+            {
+                get;
+                set;
+            }
+        }
+
+        public class JSONMappingParameters
+        {
+            /// <summary>
+            /// RecordRowPath
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-jsonmappingparameters.html#cfn-kinesisanalytics-application-jsonmappingparameters-recordrowpath
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RecordRowPath
+            {
+                get;
+                set;
+            }
+        }
+
+        public class MappingParameters
+        {
+            /// <summary>
+            /// JSONMappingParameters
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-mappingparameters.html#cfn-kinesisanalytics-application-mappingparameters-jsonmappingparameters
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: JSONMappingParameters
+            /// </summary>
+            public JSONMappingParameters JSONMappingParameters
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// CSVMappingParameters
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-mappingparameters.html#cfn-kinesisanalytics-application-mappingparameters-csvmappingparameters
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: CSVMappingParameters
+            /// </summary>
+            public CSVMappingParameters CSVMappingParameters
+            {
+                get;
+                set;
+            }
+        }
+
+        public class KinesisStreamsInput
+        {
+            /// <summary>
+            /// ResourceARN
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisstreamsinput.html#cfn-kinesisanalytics-application-kinesisstreamsinput-resourcearn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ResourceARN
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RoleARN
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisstreamsinput.html#cfn-kinesisanalytics-application-kinesisstreamsinput-rolearn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RoleARN
             {
                 get;
                 set;
@@ -406,22 +422,6 @@ namespace Humidifier.KinesisAnalytics
             /// Type: InputLambdaProcessor
             /// </summary>
             public InputLambdaProcessor InputLambdaProcessor
-            {
-                get;
-                set;
-            }
-        }
-
-        public class JSONMappingParameters
-        {
-            /// <summary>
-            /// RecordRowPath
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-jsonmappingparameters.html#cfn-kinesisanalytics-application-jsonmappingparameters-recordrowpath
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic RecordRowPath
             {
                 get;
                 set;

@@ -113,48 +113,6 @@ namespace Humidifier.ElasticBeanstalk
             }
         }
 
-        public class MaxCountRule
-        {
-            /// <summary>
-            /// DeleteSourceFromS3
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-deletesourcefroms3
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic DeleteSourceFromS3
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Enabled
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-enabled
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Boolean
-            /// </summary>
-            public dynamic Enabled
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// MaxCount
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-maxcount
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic MaxCount
-            {
-                get;
-                set;
-            }
-        }
-
         public class MaxAgeRule
         {
             /// <summary>
@@ -191,6 +149,48 @@ namespace Humidifier.ElasticBeanstalk
             /// PrimitiveType: Integer
             /// </summary>
             public dynamic MaxAgeInDays
+            {
+                get;
+                set;
+            }
+        }
+
+        public class MaxCountRule
+        {
+            /// <summary>
+            /// DeleteSourceFromS3
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-deletesourcefroms3
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic DeleteSourceFromS3
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Enabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-enabled
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Enabled
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// MaxCount
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html#cfn-elasticbeanstalk-application-maxcountrule-maxcount
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic MaxCount
             {
                 get;
                 set;

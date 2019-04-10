@@ -538,6 +538,22 @@ namespace Humidifier.DMS
             }
         }
 
+        public class DynamoDbSettings
+        {
+            /// <summary>
+            /// ServiceAccessRoleArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-dynamodbsettings.html#cfn-dms-endpoint-dynamodbsettings-serviceaccessrolearn
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ServiceAccessRoleArn
+            {
+                get;
+                set;
+            }
+        }
+
         public class ElasticsearchSettings
         {
             /// <summary>
@@ -582,22 +598,6 @@ namespace Humidifier.DMS
             /// <summary>
             /// ServiceAccessRoleArn
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-elasticsearchsettings.html#cfn-dms-endpoint-elasticsearchsettings-serviceaccessrolearn
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic ServiceAccessRoleArn
-            {
-                get;
-                set;
-            }
-        }
-
-        public class DynamoDbSettings
-        {
-            /// <summary>
-            /// ServiceAccessRoleArn
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-dynamodbsettings.html#cfn-dms-endpoint-dynamodbsettings-serviceaccessrolearn
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String
