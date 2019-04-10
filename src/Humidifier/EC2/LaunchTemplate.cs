@@ -849,7 +849,7 @@ namespace Humidifier.EC2
             /// UpdateType: Mutable
             /// Type: CapacityReservationPreference
             /// </summary>
-            public CapacityReservationPreference CapacityReservationPreference
+            public dynamic CapacityReservationPreference
             {
                 get;
                 set;
