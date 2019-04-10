@@ -185,28 +185,31 @@ namespace Humidifier.CodeGen
                     var propertyTypeClassDecl = ClassDeclaration(propertyTypeClassName)
                         .AddModifiers(Token(SyntaxKind.PublicKeyword));
 
-                    foreach (var property in propertyType.Properties)
+                    if (propertyType.Properties != null)
                     {
-                        var typeName = GetTypeName(property);
-
-                        var propertyName = property.Name;
-                        if (property.Name == propertyTypeClassName || propertyName == "Attributes")
+                        foreach (var property in propertyType.Properties)
                         {
-                            propertyName += "_";
+                            var typeName = GetTypeName(property);
+
+                            var propertyName = property.Name;
+                            if (property.Name == propertyTypeClassName || propertyName == "Attributes")
+                            {
+                                propertyName += "_";
+                            }
+
+                            var commentDecl = ParseLeadingTrivia(GetComment(property));
+
+                            PropertyDeclarationSyntax propertyDecl = PropertyDeclaration(ParseTypeName(typeName), propertyName)
+                                    .AddModifiers(Token(SyntaxKind.PublicKeyword))
+                                    .AddAccessorListAccessors(
+                                        AccessorDeclaration(SyntaxKind.GetAccessorDeclaration).WithSemicolonToken(Token(SyntaxKind.SemicolonToken)),
+                                        AccessorDeclaration(SyntaxKind.SetAccessorDeclaration).WithSemicolonToken(Token(SyntaxKind.SemicolonToken))
+                                    )
+                                    .WithLeadingTrivia(TriviaList(commentDecl))
+                                ;
+
+                            propertyTypeClassDecl = propertyTypeClassDecl.AddMembers(propertyDecl);
                         }
-
-                        var commentDecl = ParseLeadingTrivia(GetComment(property));
-
-                        PropertyDeclarationSyntax propertyDecl = PropertyDeclaration(ParseTypeName(typeName), propertyName)
-                                .AddModifiers(Token(SyntaxKind.PublicKeyword))
-                                .AddAccessorListAccessors(
-                                    AccessorDeclaration(SyntaxKind.GetAccessorDeclaration).WithSemicolonToken(Token(SyntaxKind.SemicolonToken)),
-                                    AccessorDeclaration(SyntaxKind.SetAccessorDeclaration).WithSemicolonToken(Token(SyntaxKind.SemicolonToken))
-                                )
-                                .WithLeadingTrivia(TriviaList(commentDecl))
-                            ;
-
-                        propertyTypeClassDecl = propertyTypeClassDecl.AddMembers(propertyDecl);
                     }
 
                     propertyTypesNamespace = propertyTypesNamespace.AddMembers(propertyTypeClassDecl);
