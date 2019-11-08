@@ -76,6 +76,19 @@ namespace Humidifier.EC2
         }
 
         /// <summary>
+        /// CpuOptions
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-cpuoptions
+        /// Required: False
+        /// UpdateType: Immutable
+        /// Type: CpuOptions
+        /// </summary>
+        public CpuOptions CpuOptions
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// CreditSpecification
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-creditspecification
         /// Required: False
@@ -549,6 +562,19 @@ namespace Humidifier.EC2
             }
 
             /// <summary>
+            /// KmsKeyId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-blockdev-template.html#cfn-ec2-instance-ebs-kmskeyid
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic KmsKeyId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// SnapshotId
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-blockdev-template.html#cfn-ec2-blockdev-template-snapshotid
             /// Required: False
@@ -826,6 +852,35 @@ namespace Humidifier.EC2
             /// PrimitiveItemType: String
             /// </summary>
             public dynamic Value
+            {
+                get;
+                set;
+            }
+        }
+
+        public class CpuOptions
+        {
+            /// <summary>
+            /// CoreCount
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-cpuoptions.html#cfn-ec2-instance-cpuoptions-corecount
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic CoreCount
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ThreadsPerCore
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-cpuoptions.html#cfn-ec2-instance-cpuoptions-threadspercore
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic ThreadsPerCore
             {
                 get;
                 set;

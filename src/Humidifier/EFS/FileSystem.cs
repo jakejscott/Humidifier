@@ -54,6 +54,20 @@ namespace Humidifier.EFS
         }
 
         /// <summary>
+        /// LifecyclePolicies
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-elasticfilesystem-filesystem-lifecyclepolicies
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: LifecyclePolicy
+        /// </summary>
+        public List<LifecyclePolicy> LifecyclePolicies
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// PerformanceMode
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-performancemode
         /// Required: False
@@ -118,6 +132,22 @@ namespace Humidifier.EFS
             /// PrimitiveType: String
             /// </summary>
             public dynamic Value
+            {
+                get;
+                set;
+            }
+        }
+
+        public class LifecyclePolicy
+        {
+            /// <summary>
+            /// TransitionToIA
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticfilesystem-filesystem-lifecyclepolicy.html#cfn-elasticfilesystem-filesystem-lifecyclepolicy-transitiontoia
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic TransitionToIA
             {
                 get;
                 set;

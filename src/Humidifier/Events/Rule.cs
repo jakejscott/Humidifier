@@ -32,6 +32,19 @@ namespace Humidifier.Events
         }
 
         /// <summary>
+        /// EventBusName
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html#cfn-events-rule-eventbusname
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic EventBusName
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// EventPattern
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html#cfn-events-rule-eventpattern
         /// Required: False
@@ -130,6 +143,22 @@ namespace Humidifier.Events
             }
         }
 
+        public class NetworkConfiguration
+        {
+            /// <summary>
+            /// AwsVpcConfiguration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-networkconfiguration.html#cfn-events-rule-networkconfiguration-awsvpcconfiguration
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: AwsVpcConfiguration
+            /// </summary>
+            public AwsVpcConfiguration AwsVpcConfiguration
+            {
+                get;
+                set;
+            }
+        }
+
         public class RunCommandTarget
         {
             /// <summary>
@@ -190,6 +219,22 @@ namespace Humidifier.Events
             }
         }
 
+        public class BatchRetryStrategy
+        {
+            /// <summary>
+            /// Attempts
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchretrystrategy.html#cfn-events-rule-batchretrystrategy-attempts
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Attempts
+            {
+                get;
+                set;
+            }
+        }
+
         public class SqsParameters
         {
             /// <summary>
@@ -216,6 +261,19 @@ namespace Humidifier.Events
             /// PrimitiveType: String
             /// </summary>
             public dynamic Arn
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// BatchParameters
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html#cfn-events-rule-target-batchparameters
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: BatchParameters
+            /// </summary>
+            public BatchParameters BatchParameters
             {
                 get;
                 set;
@@ -355,8 +413,76 @@ namespace Humidifier.Events
             }
         }
 
+        public class BatchArrayProperties
+        {
+            /// <summary>
+            /// Size
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batcharrayproperties.html#cfn-events-rule-batcharrayproperties-size
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Size
+            {
+                get;
+                set;
+            }
+        }
+
         public class EcsParameters
         {
+            /// <summary>
+            /// Group
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-ecsparameters.html#cfn-events-rule-ecsparameters-group
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Group
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// LaunchType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-ecsparameters.html#cfn-events-rule-ecsparameters-launchtype
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic LaunchType
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// NetworkConfiguration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-ecsparameters.html#cfn-events-rule-ecsparameters-networkconfiguration
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: NetworkConfiguration
+            /// </summary>
+            public NetworkConfiguration NetworkConfiguration
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// PlatformVersion
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-ecsparameters.html#cfn-events-rule-ecsparameters-platformversion
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic PlatformVersion
+            {
+                get;
+                set;
+            }
+
             /// <summary>
             /// TaskCount
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-ecsparameters.html#cfn-events-rule-ecsparameters-taskcount
@@ -378,6 +504,105 @@ namespace Humidifier.Events
             /// PrimitiveType: String
             /// </summary>
             public dynamic TaskDefinitionArn
+            {
+                get;
+                set;
+            }
+        }
+
+        public class AwsVpcConfiguration
+        {
+            /// <summary>
+            /// AssignPublicIp
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-awsvpcconfiguration.html#cfn-events-rule-awsvpcconfiguration-assignpublicip
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic AssignPublicIp
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SecurityGroups
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-awsvpcconfiguration.html#cfn-events-rule-awsvpcconfiguration-securitygroups
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic SecurityGroups
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Subnets
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-awsvpcconfiguration.html#cfn-events-rule-awsvpcconfiguration-subnets
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Subnets
+            {
+                get;
+                set;
+            }
+        }
+
+        public class BatchParameters
+        {
+            /// <summary>
+            /// ArrayProperties
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchparameters.html#cfn-events-rule-batchparameters-arrayproperties
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: BatchArrayProperties
+            /// </summary>
+            public BatchArrayProperties ArrayProperties
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// JobDefinition
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchparameters.html#cfn-events-rule-batchparameters-jobdefinition
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic JobDefinition
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// JobName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchparameters.html#cfn-events-rule-batchparameters-jobname
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic JobName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RetryStrategy
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchparameters.html#cfn-events-rule-batchparameters-retrystrategy
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: BatchRetryStrategy
+            /// </summary>
+            public BatchRetryStrategy RetryStrategy
             {
                 get;
                 set;

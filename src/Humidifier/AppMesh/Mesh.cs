@@ -52,9 +52,9 @@ namespace Humidifier.AppMesh
         /// Required: False
         /// UpdateType: Mutable
         /// Type: List
-        /// ItemType: TagRef
+        /// ItemType: Tag
         /// </summary>
-        public List<TagRef> Tags
+        public List<Tag> Tags
         {
             get;
             set;
@@ -63,35 +63,6 @@ namespace Humidifier.AppMesh
 
     namespace MeshTypes
     {
-        public class TagRef
-        {
-            /// <summary>
-            /// Value
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-mesh-tagref.html#cfn-appmesh-mesh-tagref-value
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Value
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Key
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-mesh-tagref.html#cfn-appmesh-mesh-tagref-key
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Key
-            {
-                get;
-                set;
-            }
-        }
-
         public class MeshSpec
         {
             /// <summary>

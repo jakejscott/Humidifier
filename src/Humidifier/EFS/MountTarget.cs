@@ -4,6 +4,11 @@ namespace Humidifier.EFS
 
     public class MountTarget : Humidifier.Resource
     {
+        public static class Attributes
+        {
+            public static string IpAddress =  "IpAddress" ;
+        }
+
         public override string AWSTypeName
         {
             get

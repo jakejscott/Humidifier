@@ -45,6 +45,19 @@ namespace Humidifier.SSM
         }
 
         /// <summary>
+        /// Policies
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html#cfn-ssm-parameter-policies
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic Policies
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// AllowedPattern
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html#cfn-ssm-parameter-allowedpattern
         /// Required: False
@@ -58,6 +71,19 @@ namespace Humidifier.SSM
         }
 
         /// <summary>
+        /// Tier
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html#cfn-ssm-parameter-tier
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic Tier
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Value
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html#cfn-ssm-parameter-value
         /// Required: True
@@ -65,6 +91,19 @@ namespace Humidifier.SSM
         /// PrimitiveType: String
         /// </summary>
         public dynamic Value
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Tags
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html#cfn-ssm-parameter-tags
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Json
+        /// </summary>
+        public dynamic Tags
         {
             get;
             set;

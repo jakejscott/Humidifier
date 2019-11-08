@@ -117,6 +117,19 @@ namespace Humidifier.EC2
         }
 
         /// <summary>
+        /// TransitGatewayId
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-transitgatewayid
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic TransitGatewayId
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// VpcPeeringConnectionId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-vpcpeeringconnectionid
         /// Required: False

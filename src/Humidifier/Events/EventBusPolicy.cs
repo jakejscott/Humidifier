@@ -14,6 +14,19 @@ namespace Humidifier.Events
         }
 
         /// <summary>
+        /// EventBusName
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbuspolicy.html#cfn-events-eventbuspolicy-eventbusname
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic EventBusName
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Condition
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbuspolicy.html#cfn-events-eventbuspolicy-condition
         /// Required: False

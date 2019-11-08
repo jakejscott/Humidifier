@@ -131,6 +131,19 @@ namespace Humidifier.AppStream
         }
 
         /// <summary>
+        /// IdleDisconnectTimeoutInSeconds
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html#cfn-appstream-fleet-idledisconnecttimeoutinseconds
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Integer
+        /// </summary>
+        public dynamic IdleDisconnectTimeoutInSeconds
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// DisconnectTimeoutInSeconds
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html#cfn-appstream-fleet-disconnecttimeoutinseconds
         /// Required: False

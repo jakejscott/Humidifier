@@ -66,9 +66,9 @@ namespace Humidifier.AppMesh
         /// Required: False
         /// UpdateType: Mutable
         /// Type: List
-        /// ItemType: TagRef
+        /// ItemType: Tag
         /// </summary>
-        public List<TagRef> Tags
+        public List<Tag> Tags
         {
             get;
             set;
@@ -103,35 +103,6 @@ namespace Humidifier.AppMesh
             /// PrimitiveType: String
             /// </summary>
             public dynamic VirtualRouterName
-            {
-                get;
-                set;
-            }
-        }
-
-        public class TagRef
-        {
-            /// <summary>
-            /// Value
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualservice-tagref.html#cfn-appmesh-virtualservice-tagref-value
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Value
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Key
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualservice-tagref.html#cfn-appmesh-virtualservice-tagref-key
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Key
             {
                 get;
                 set;

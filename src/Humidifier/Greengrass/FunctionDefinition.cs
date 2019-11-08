@@ -35,6 +35,19 @@ namespace Humidifier.Greengrass
         }
 
         /// <summary>
+        /// Tags
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinition.html#cfn-greengrass-functiondefinition-tags
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Json
+        /// </summary>
+        public dynamic Tags
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Name
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinition.html#cfn-greengrass-functiondefinition-name
         /// Required: True
@@ -84,7 +97,7 @@ namespace Humidifier.Greengrass
             /// <summary>
             /// MemorySize
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-functionconfiguration.html#cfn-greengrass-functiondefinition-functionconfiguration-memorysize
-            /// Required: True
+            /// Required: False
             /// UpdateType: Immutable
             /// PrimitiveType: Integer
             /// </summary>
@@ -123,7 +136,7 @@ namespace Humidifier.Greengrass
             /// <summary>
             /// Timeout
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-functionconfiguration.html#cfn-greengrass-functiondefinition-functionconfiguration-timeout
-            /// Required: True
+            /// Required: False
             /// UpdateType: Immutable
             /// PrimitiveType: Integer
             /// </summary>

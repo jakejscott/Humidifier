@@ -95,7 +95,7 @@ namespace Humidifier.Glue
         /// <summary>
         /// DatabaseName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-databasename
-        /// Required: True
+        /// Required: False
         /// UpdateType: Mutable
         /// PrimitiveType: String
         /// </summary>
@@ -119,6 +119,19 @@ namespace Humidifier.Glue
         }
 
         /// <summary>
+        /// CrawlerSecurityConfiguration
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-crawlersecurityconfiguration
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic CrawlerSecurityConfiguration
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// TablePrefix
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-tableprefix
         /// Required: False
@@ -126,6 +139,19 @@ namespace Humidifier.Glue
         /// PrimitiveType: String
         /// </summary>
         public dynamic TablePrefix
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Tags
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-tags
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Json
+        /// </summary>
+        public dynamic Tags
         {
             get;
             set;
@@ -164,6 +190,20 @@ namespace Humidifier.Glue
             }
 
             /// <summary>
+            /// CatalogTargets
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-targets.html#cfn-glue-crawler-targets-catalogtargets
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: CatalogTarget
+            /// </summary>
+            public List<CatalogTarget> CatalogTargets
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// JdbcTargets
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-targets.html#cfn-glue-crawler-targets-jdbctargets
             /// Required: False
@@ -172,6 +212,50 @@ namespace Humidifier.Glue
             /// ItemType: JdbcTarget
             /// </summary>
             public List<JdbcTarget> JdbcTargets
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DynamoDBTargets
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-targets.html#cfn-glue-crawler-targets-dynamodbtargets
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: DynamoDBTarget
+            /// </summary>
+            public List<DynamoDBTarget> DynamoDBTargets
+            {
+                get;
+                set;
+            }
+        }
+
+        public class CatalogTarget
+        {
+            /// <summary>
+            /// DatabaseName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-catalogtarget.html#cfn-glue-crawler-catalogtarget-databasename
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DatabaseName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Tables
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-catalogtarget.html#cfn-glue-crawler-catalogtarget-tables
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Tables
             {
                 get;
                 set;
@@ -231,6 +315,22 @@ namespace Humidifier.Glue
             /// PrimitiveType: String
             /// </summary>
             public dynamic ScheduleExpression
+            {
+                get;
+                set;
+            }
+        }
+
+        public class DynamoDBTarget
+        {
+            /// <summary>
+            /// Path
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-dynamodbtarget.html#cfn-glue-crawler-dynamodbtarget-path
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Path
             {
                 get;
                 set;

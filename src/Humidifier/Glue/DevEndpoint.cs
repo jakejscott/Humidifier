@@ -26,22 +26,9 @@ namespace Humidifier.Glue
         }
 
         /// <summary>
-        /// EndpointName
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html#cfn-glue-devendpoint-endpointname
-        /// Required: False
-        /// UpdateType: Immutable
-        /// PrimitiveType: String
-        /// </summary>
-        public dynamic EndpointName
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
         /// PublicKey
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html#cfn-glue-devendpoint-publickey
-        /// Required: True
+        /// Required: False
         /// UpdateType: Mutable
         /// PrimitiveType: String
         /// </summary>
@@ -65,6 +52,19 @@ namespace Humidifier.Glue
         }
 
         /// <summary>
+        /// Arguments
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html#cfn-glue-devendpoint-arguments
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Json
+        /// </summary>
+        public dynamic Arguments
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// SubnetId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html#cfn-glue-devendpoint-subnetid
         /// Required: False
@@ -72,19 +72,6 @@ namespace Humidifier.Glue
         /// PrimitiveType: String
         /// </summary>
         public dynamic SubnetId
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// ExtraPythonLibsS3Path
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html#cfn-glue-devendpoint-extrapythonlibss3path
-        /// Required: False
-        /// UpdateType: Mutable
-        /// PrimitiveType: String
-        /// </summary>
-        public dynamic ExtraPythonLibsS3Path
         {
             get;
             set;
@@ -112,6 +99,97 @@ namespace Humidifier.Glue
         /// PrimitiveType: String
         /// </summary>
         public dynamic RoleArn
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// WorkerType
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html#cfn-glue-devendpoint-workertype
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic WorkerType
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// EndpointName
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html#cfn-glue-devendpoint-endpointname
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic EndpointName
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// GlueVersion
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html#cfn-glue-devendpoint-glueversion
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic GlueVersion
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// ExtraPythonLibsS3Path
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html#cfn-glue-devendpoint-extrapythonlibss3path
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic ExtraPythonLibsS3Path
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// SecurityConfiguration
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html#cfn-glue-devendpoint-securityconfiguration
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic SecurityConfiguration
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// NumberOfWorkers
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html#cfn-glue-devendpoint-numberofworkers
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Integer
+        /// </summary>
+        public dynamic NumberOfWorkers
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Tags
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html#cfn-glue-devendpoint-tags
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Json
+        /// </summary>
+        public dynamic Tags
         {
             get;
             set;

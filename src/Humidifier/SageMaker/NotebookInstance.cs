@@ -18,19 +18,6 @@ namespace Humidifier.SageMaker
         }
 
         /// <summary>
-        /// RootAccess
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-rootaccess
-        /// Required: False
-        /// UpdateType: Immutable
-        /// PrimitiveType: String
-        /// </summary>
-        public dynamic RootAccess
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
         /// KmsKeyId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-kmskeyid
         /// Required: False
@@ -57,6 +44,33 @@ namespace Humidifier.SageMaker
         }
 
         /// <summary>
+        /// AdditionalCodeRepositories
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-additionalcoderepositories
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// PrimitiveItemType: String
+        /// </summary>
+        public dynamic AdditionalCodeRepositories
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// DefaultCodeRepository
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-defaultcoderepository
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic DefaultCodeRepository
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// DirectInternetAccess
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-directinternetaccess
         /// Required: False
@@ -70,6 +84,20 @@ namespace Humidifier.SageMaker
         }
 
         /// <summary>
+        /// AcceleratorTypes
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-acceleratortypes
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// PrimitiveItemType: String
+        /// </summary>
+        public dynamic AcceleratorTypes
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// SubnetId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-subnetid
         /// Required: False
@@ -77,6 +105,46 @@ namespace Humidifier.SageMaker
         /// PrimitiveType: String
         /// </summary>
         public dynamic SubnetId
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// SecurityGroupIds
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-securitygroupids
+        /// Required: False
+        /// UpdateType: Immutable
+        /// Type: List
+        /// PrimitiveItemType: String
+        /// </summary>
+        public dynamic SecurityGroupIds
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// RoleArn
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-rolearn
+        /// Required: True
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic RoleArn
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// RootAccess
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-rootaccess
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic RootAccess
         {
             get;
             set;
@@ -116,33 +184,6 @@ namespace Humidifier.SageMaker
         /// PrimitiveType: String
         /// </summary>
         public dynamic LifecycleConfigName
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// SecurityGroupIds
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-securitygroupids
-        /// Required: False
-        /// UpdateType: Immutable
-        /// Type: List
-        /// PrimitiveItemType: String
-        /// </summary>
-        public dynamic SecurityGroupIds
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// RoleArn
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-rolearn
-        /// Required: True
-        /// UpdateType: Mutable
-        /// PrimitiveType: String
-        /// </summary>
-        public dynamic RoleArn
         {
             get;
             set;

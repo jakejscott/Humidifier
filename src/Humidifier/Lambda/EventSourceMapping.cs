@@ -65,6 +65,19 @@ namespace Humidifier.Lambda
         }
 
         /// <summary>
+        /// MaximumBatchingWindowInSeconds
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-maximumbatchingwindowinseconds
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Integer
+        /// </summary>
+        public dynamic MaximumBatchingWindowInSeconds
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// StartingPosition
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-startingposition
         /// Required: False

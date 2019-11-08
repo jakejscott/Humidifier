@@ -178,6 +178,19 @@ namespace Humidifier.Batch
             }
 
             /// <summary>
+            /// LinuxParameters
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties.html#cfn-batch-jobdefinition-containerproperties-linuxparameters
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: LinuxParameters
+            /// </summary>
+            public LinuxParameters LinuxParameters
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// JobRoleArn
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties.html#cfn-batch-jobdefinition-containerproperties-jobrolearn
             /// Required: False
@@ -485,6 +498,23 @@ namespace Humidifier.Batch
             }
         }
 
+        public class LinuxParameters
+        {
+            /// <summary>
+            /// Devices
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties-linuxparameters.html#cfn-batch-jobdefinition-containerproperties-linuxparameters-devices
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: Device
+            /// </summary>
+            public List<Device> Devices
+            {
+                get;
+                set;
+            }
+        }
+
         public class NodeProperties
         {
             /// <summary>
@@ -583,6 +613,49 @@ namespace Humidifier.Batch
             /// PrimitiveType: String
             /// </summary>
             public dynamic TargetNodes
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Device
+        {
+            /// <summary>
+            /// HostPath
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-device.html#cfn-batch-jobdefinition-device-hostpath
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic HostPath
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Permissions
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-device.html#cfn-batch-jobdefinition-device-permissions
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Permissions
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ContainerPath
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-device.html#cfn-batch-jobdefinition-device-containerpath
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ContainerPath
             {
                 get;
                 set;

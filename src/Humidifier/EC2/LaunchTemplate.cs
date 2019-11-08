@@ -172,6 +172,32 @@ namespace Humidifier.EC2
                 get;
                 set;
             }
+
+            /// <summary>
+            /// BlockDurationMinutes
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions.html#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-blockdurationminutes
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic BlockDurationMinutes
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ValidUntil
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions.html#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-validuntil
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ValidUntil
+            {
+                get;
+                set;
+            }
         }
 
         public class ElasticGpuSpecification
@@ -849,7 +875,7 @@ namespace Humidifier.EC2
             /// UpdateType: Mutable
             /// Type: CapacityReservationPreference
             /// </summary>
-            public dynamic CapacityReservationPreference
+            public CapacityReservationPreference CapacityReservationPreference
             {
                 get;
                 set;
@@ -957,33 +983,6 @@ namespace Humidifier.EC2
             }
 
             /// <summary>
-            /// Ipv6AddressCount
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterface.html#cfn-ec2-launchtemplate-networkinterface-ipv6addresscount
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: Integer
-            /// </summary>
-            public dynamic Ipv6AddressCount
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Groups
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterface.html#cfn-ec2-launchtemplate-networkinterface-groups
-            /// Required: False
-            /// UpdateType: Mutable
-            /// Type: List
-            /// PrimitiveItemType: String
-            /// </summary>
-            public dynamic Groups
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
             /// DeviceIndex
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterface.html#cfn-ec2-launchtemplate-networkinterface-deviceindex
             /// Required: False
@@ -1044,6 +1043,46 @@ namespace Humidifier.EC2
             /// PrimitiveType: String
             /// </summary>
             public dynamic NetworkInterfaceId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// InterfaceType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterface.html#cfn-ec2-launchtemplate-networkinterface-interfacetype
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic InterfaceType
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Ipv6AddressCount
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterface.html#cfn-ec2-launchtemplate-networkinterface-ipv6addresscount
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Ipv6AddressCount
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Groups
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterface.html#cfn-ec2-launchtemplate-networkinterface-groups
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Groups
             {
                 get;
                 set;

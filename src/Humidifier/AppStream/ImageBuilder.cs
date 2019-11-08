@@ -161,6 +161,20 @@ namespace Humidifier.AppStream
             get;
             set;
         }
+
+        /// <summary>
+        /// AccessEndpoints
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-imagebuilder.html#cfn-appstream-imagebuilder-accessendpoints
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: AccessEndpoint
+        /// </summary>
+        public List<AccessEndpoint> AccessEndpoints
+        {
+            get;
+            set;
+        }
     }
 
     namespace ImageBuilderTypes
@@ -190,6 +204,35 @@ namespace Humidifier.AppStream
             /// PrimitiveItemType: String
             /// </summary>
             public dynamic SubnetIds
+            {
+                get;
+                set;
+            }
+        }
+
+        public class AccessEndpoint
+        {
+            /// <summary>
+            /// EndpointType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-imagebuilder-accessendpoint.html#cfn-appstream-imagebuilder-accessendpoint-endpointtype
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic EndpointType
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// VpceId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-imagebuilder-accessendpoint.html#cfn-appstream-imagebuilder-accessendpoint-vpceid
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic VpceId
             {
                 get;
                 set;

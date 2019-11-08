@@ -125,6 +125,140 @@ namespace Humidifier.KinesisFirehose
 
     namespace DeliveryStreamTypes
     {
+        public class OrcSerDe
+        {
+            /// <summary>
+            /// BlockSizeBytes
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-orcserde.html#cfn-kinesisfirehose-deliverystream-orcserde-blocksizebytes
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic BlockSizeBytes
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// BloomFilterColumns
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-orcserde.html#cfn-kinesisfirehose-deliverystream-orcserde-bloomfiltercolumns
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic BloomFilterColumns
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// BloomFilterFalsePositiveProbability
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-orcserde.html#cfn-kinesisfirehose-deliverystream-orcserde-bloomfilterfalsepositiveprobability
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Double
+            /// </summary>
+            public dynamic BloomFilterFalsePositiveProbability
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Compression
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-orcserde.html#cfn-kinesisfirehose-deliverystream-orcserde-compression
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Compression
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DictionaryKeyThreshold
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-orcserde.html#cfn-kinesisfirehose-deliverystream-orcserde-dictionarykeythreshold
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Double
+            /// </summary>
+            public dynamic DictionaryKeyThreshold
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// EnablePadding
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-orcserde.html#cfn-kinesisfirehose-deliverystream-orcserde-enablepadding
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic EnablePadding
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// FormatVersion
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-orcserde.html#cfn-kinesisfirehose-deliverystream-orcserde-formatversion
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic FormatVersion
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// PaddingTolerance
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-orcserde.html#cfn-kinesisfirehose-deliverystream-orcserde-paddingtolerance
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Double
+            /// </summary>
+            public dynamic PaddingTolerance
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RowIndexStride
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-orcserde.html#cfn-kinesisfirehose-deliverystream-orcserde-rowindexstride
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic RowIndexStride
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// StripeSizeBytes
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-orcserde.html#cfn-kinesisfirehose-deliverystream-orcserde-stripesizebytes
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic StripeSizeBytes
+            {
+                get;
+                set;
+            }
+        }
+
         public class ElasticsearchBufferingHints
         {
             /// <summary>
@@ -345,6 +479,22 @@ namespace Humidifier.KinesisFirehose
             }
         }
 
+        public class InputFormatConfiguration
+        {
+            /// <summary>
+            /// Deserializer
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-inputformatconfiguration.html#cfn-kinesisfirehose-deliverystream-inputformatconfiguration-deserializer
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: Deserializer
+            /// </summary>
+            public Deserializer Deserializer
+            {
+                get;
+                set;
+            }
+        }
+
         public class ProcessingConfiguration
         {
             /// <summary>
@@ -433,6 +583,23 @@ namespace Humidifier.KinesisFirehose
             }
         }
 
+        public class HiveJsonSerDe
+        {
+            /// <summary>
+            /// TimestampFormats
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-hivejsonserde.html#cfn-kinesisfirehose-deliverystream-hivejsonserde-timestampformats
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic TimestampFormats
+            {
+                get;
+                set;
+            }
+        }
+
         public class Processor
         {
             /// <summary>
@@ -479,6 +646,61 @@ namespace Humidifier.KinesisFirehose
             }
         }
 
+        public class DataFormatConversionConfiguration
+        {
+            /// <summary>
+            /// Enabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-dataformatconversionconfiguration.html#cfn-kinesisfirehose-deliverystream-dataformatconversionconfiguration-enabled
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Enabled
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// InputFormatConfiguration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-dataformatconversionconfiguration.html#cfn-kinesisfirehose-deliverystream-dataformatconversionconfiguration-inputformatconfiguration
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: InputFormatConfiguration
+            /// </summary>
+            public InputFormatConfiguration InputFormatConfiguration
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// OutputFormatConfiguration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-dataformatconversionconfiguration.html#cfn-kinesisfirehose-deliverystream-dataformatconversionconfiguration-outputformatconfiguration
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: OutputFormatConfiguration
+            /// </summary>
+            public OutputFormatConfiguration OutputFormatConfiguration
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SchemaConfiguration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-dataformatconversionconfiguration.html#cfn-kinesisfirehose-deliverystream-dataformatconversionconfiguration-schemaconfiguration
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: SchemaConfiguration
+            /// </summary>
+            public SchemaConfiguration SchemaConfiguration
+            {
+                get;
+                set;
+            }
+        }
+
         public class KMSEncryptionConfig
         {
             /// <summary>
@@ -489,6 +711,22 @@ namespace Humidifier.KinesisFirehose
             /// PrimitiveType: String
             /// </summary>
             public dynamic AWSKMSKeyARN
+            {
+                get;
+                set;
+            }
+        }
+
+        public class OutputFormatConfiguration
+        {
+            /// <summary>
+            /// Serializer
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-outputformatconfiguration.html#cfn-kinesisfirehose-deliverystream-outputformatconfiguration-serializer
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: Serializer
+            /// </summary>
+            public Serializer Serializer
             {
                 get;
                 set;
@@ -641,6 +879,87 @@ namespace Humidifier.KinesisFirehose
             }
         }
 
+        public class SchemaConfiguration
+        {
+            /// <summary>
+            /// CatalogId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-schemaconfiguration.html#cfn-kinesisfirehose-deliverystream-schemaconfiguration-catalogid
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic CatalogId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DatabaseName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-schemaconfiguration.html#cfn-kinesisfirehose-deliverystream-schemaconfiguration-databasename
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DatabaseName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Region
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-schemaconfiguration.html#cfn-kinesisfirehose-deliverystream-schemaconfiguration-region
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Region
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RoleARN
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-schemaconfiguration.html#cfn-kinesisfirehose-deliverystream-schemaconfiguration-rolearn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RoleARN
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// TableName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-schemaconfiguration.html#cfn-kinesisfirehose-deliverystream-schemaconfiguration-tablename
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic TableName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// VersionId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-schemaconfiguration.html#cfn-kinesisfirehose-deliverystream-schemaconfiguration-versionid
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic VersionId
+            {
+                get;
+                set;
+            }
+        }
+
         public class SplunkRetryOptions
         {
             /// <summary>
@@ -651,6 +970,35 @@ namespace Humidifier.KinesisFirehose
             /// PrimitiveType: Integer
             /// </summary>
             public dynamic DurationInSeconds
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Deserializer
+        {
+            /// <summary>
+            /// HiveJsonSerDe
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-deserializer.html#cfn-kinesisfirehose-deliverystream-deserializer-hivejsonserde
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: HiveJsonSerDe
+            /// </summary>
+            public HiveJsonSerDe HiveJsonSerDe
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// OpenXJsonSerDe
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-deserializer.html#cfn-kinesisfirehose-deliverystream-deserializer-openxjsonserde
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: OpenXJsonSerDe
+            /// </summary>
+            public OpenXJsonSerDe OpenXJsonSerDe
             {
                 get;
                 set;
@@ -680,6 +1028,116 @@ namespace Humidifier.KinesisFirehose
             /// PrimitiveType: String
             /// </summary>
             public dynamic RoleARN
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ParquetSerDe
+        {
+            /// <summary>
+            /// BlockSizeBytes
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-parquetserde.html#cfn-kinesisfirehose-deliverystream-parquetserde-blocksizebytes
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic BlockSizeBytes
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Compression
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-parquetserde.html#cfn-kinesisfirehose-deliverystream-parquetserde-compression
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Compression
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// EnableDictionaryCompression
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-parquetserde.html#cfn-kinesisfirehose-deliverystream-parquetserde-enabledictionarycompression
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic EnableDictionaryCompression
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// MaxPaddingBytes
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-parquetserde.html#cfn-kinesisfirehose-deliverystream-parquetserde-maxpaddingbytes
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic MaxPaddingBytes
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// PageSizeBytes
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-parquetserde.html#cfn-kinesisfirehose-deliverystream-parquetserde-pagesizebytes
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic PageSizeBytes
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// WriterVersion
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-parquetserde.html#cfn-kinesisfirehose-deliverystream-parquetserde-writerversion
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic WriterVersion
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Serializer
+        {
+            /// <summary>
+            /// OrcSerDe
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-serializer.html#cfn-kinesisfirehose-deliverystream-serializer-orcserde
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: OrcSerDe
+            /// </summary>
+            public OrcSerDe OrcSerDe
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ParquetSerDe
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-serializer.html#cfn-kinesisfirehose-deliverystream-serializer-parquetserde
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: ParquetSerDe
+            /// </summary>
+            public ParquetSerDe ParquetSerDe
             {
                 get;
                 set;
@@ -722,6 +1180,49 @@ namespace Humidifier.KinesisFirehose
             /// PrimitiveType: String
             /// </summary>
             public dynamic DataTableName
+            {
+                get;
+                set;
+            }
+        }
+
+        public class OpenXJsonSerDe
+        {
+            /// <summary>
+            /// CaseInsensitive
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-openxjsonserde.html#cfn-kinesisfirehose-deliverystream-openxjsonserde-caseinsensitive
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic CaseInsensitive
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ColumnToJsonKeyMappings
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-openxjsonserde.html#cfn-kinesisfirehose-deliverystream-openxjsonserde-columntojsonkeymappings
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: Map
+            /// PrimitiveItemType: String
+            /// </summary>
+            public Dictionary<string, dynamic> ColumnToJsonKeyMappings
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ConvertDotsInJsonKeysToUnderscores
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-openxjsonserde.html#cfn-kinesisfirehose-deliverystream-openxjsonserde-convertdotsinjsonkeystounderscores
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic ConvertDotsInJsonKeysToUnderscores
             {
                 get;
                 set;
@@ -790,6 +1291,19 @@ namespace Humidifier.KinesisFirehose
             /// Type: EncryptionConfiguration
             /// </summary>
             public EncryptionConfiguration EncryptionConfiguration
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ErrorOutputPrefix
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-erroroutputprefix
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ErrorOutputPrefix
             {
                 get;
                 set;
@@ -877,6 +1391,19 @@ namespace Humidifier.KinesisFirehose
             }
 
             /// <summary>
+            /// DataFormatConversionConfiguration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-dataformatconversionconfiguration
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: DataFormatConversionConfiguration
+            /// </summary>
+            public DataFormatConversionConfiguration DataFormatConversionConfiguration
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// EncryptionConfiguration
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-encryptionconfiguration
             /// Required: False
@@ -890,9 +1417,22 @@ namespace Humidifier.KinesisFirehose
             }
 
             /// <summary>
+            /// ErrorOutputPrefix
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-erroroutputprefix
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ErrorOutputPrefix
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// Prefix
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-prefix
-            /// Required: True
+            /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: String
             /// </summary>

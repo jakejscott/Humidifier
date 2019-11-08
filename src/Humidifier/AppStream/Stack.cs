@@ -14,19 +14,6 @@ namespace Humidifier.AppStream
         }
 
         /// <summary>
-        /// ApplicationSettings
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-applicationsettings
-        /// Required: False
-        /// UpdateType: Mutable
-        /// Type: ApplicationSettings
-        /// </summary>
-        public ApplicationSettings ApplicationSettings
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
         /// Description
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-description
         /// Required: False
@@ -67,6 +54,20 @@ namespace Humidifier.AppStream
         }
 
         /// <summary>
+        /// EmbedHostDomains
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-embedhostdomains
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// PrimitiveItemType: String
+        /// </summary>
+        public dynamic EmbedHostDomains
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// UserSettings
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-usersettings
         /// Required: False
@@ -95,19 +96,6 @@ namespace Humidifier.AppStream
         }
 
         /// <summary>
-        /// DisplayName
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-displayname
-        /// Required: False
-        /// UpdateType: Mutable
-        /// PrimitiveType: String
-        /// </summary>
-        public dynamic DisplayName
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
         /// RedirectURL
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-redirecturl
         /// Required: False
@@ -115,20 +103,6 @@ namespace Humidifier.AppStream
         /// PrimitiveType: String
         /// </summary>
         public dynamic RedirectURL
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Tags
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-tags
-        /// Required: False
-        /// UpdateType: Mutable
-        /// Type: List
-        /// ItemType: Tag
-        /// </summary>
-        public List<Tag> Tags
         {
             get;
             set;
@@ -155,6 +129,60 @@ namespace Humidifier.AppStream
         /// PrimitiveType: String
         /// </summary>
         public dynamic FeedbackURL
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// ApplicationSettings
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-applicationsettings
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: ApplicationSettings
+        /// </summary>
+        public ApplicationSettings ApplicationSettings
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// DisplayName
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-displayname
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic DisplayName
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Tags
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-tags
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: Tag
+        /// </summary>
+        public List<Tag> Tags
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// AccessEndpoints
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-accessendpoints
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: AccessEndpoint
+        /// </summary>
+        public List<AccessEndpoint> AccessEndpoints
         {
             get;
             set;
@@ -186,6 +214,35 @@ namespace Humidifier.AppStream
             /// PrimitiveType: Boolean
             /// </summary>
             public dynamic Enabled
+            {
+                get;
+                set;
+            }
+        }
+
+        public class AccessEndpoint
+        {
+            /// <summary>
+            /// EndpointType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-accessendpoint.html#cfn-appstream-stack-accessendpoint-endpointtype
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic EndpointType
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// VpceId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-accessendpoint.html#cfn-appstream-stack-accessendpoint-vpceid
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic VpceId
             {
                 get;
                 set;

@@ -113,6 +113,20 @@ namespace Humidifier.Elasticsearch
         }
 
         /// <summary>
+        /// LogPublishingOptions
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-logpublishingoptions
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: Map
+        /// ItemType: LogPublishingOption
+        /// </summary>
+        public Dictionary<string, LogPublishingOption> LogPublishingOptions
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// NodeToNodeEncryptionOptions
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-nodetonodeencryptionoptions
         /// Required: False
@@ -252,6 +266,19 @@ namespace Humidifier.Elasticsearch
             }
 
             /// <summary>
+            /// ZoneAwarenessConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-elasticsearchclusterconfig.html#cfn-elasticsearch-domain-elasticsearchclusterconfig-zoneawarenessconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: ZoneAwarenessConfig
+            /// </summary>
+            public ZoneAwarenessConfig ZoneAwarenessConfig
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// ZoneAwarenessEnabled
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-elasticsearchclusterconfig.html#cfn-elasticsearch-domain-elasticseachclusterconfig-zoneawarenessenabled
             /// Required: False
@@ -306,6 +333,51 @@ namespace Humidifier.Elasticsearch
             /// PrimitiveItemType: String
             /// </summary>
             public dynamic SubnetIds
+            {
+                get;
+                set;
+            }
+        }
+
+        public class LogPublishingOption
+        {
+            /// <summary>
+            /// CloudWatchLogsLogGroupArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-logpublishingoption.html#cfn-elasticsearch-domain-logpublishingoption-cloudwatchlogsloggrouparn
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic CloudWatchLogsLogGroupArn
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Enabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-logpublishingoption.html#cfn-elasticsearch-domain-logpublishingoption-enabled
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Enabled
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ZoneAwarenessConfig
+        {
+            /// <summary>
+            /// AvailabilityZoneCount
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-zoneawarenessconfig.html#cfn-elasticsearch-domain-zoneawarenessconfig-availabilityzonecount
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic AvailabilityZoneCount
             {
                 get;
                 set;

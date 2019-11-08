@@ -204,5 +204,19 @@ namespace Humidifier.Neptune
             get;
             set;
         }
+
+        /// <summary>
+        /// EnableCloudwatchLogsExports
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-enablecloudwatchlogsexports
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// PrimitiveItemType: String
+        /// </summary>
+        public dynamic EnableCloudwatchLogsExports
+        {
+            get;
+            set;
+        }
     }
 }
