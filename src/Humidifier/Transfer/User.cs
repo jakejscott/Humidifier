@@ -92,7 +92,7 @@ namespace Humidifier.Transfer
         /// Type: List
         /// ItemType: SshPublicKey
         /// </summary>
-        public List<SshPublicKey> SshPublicKeys
+        public List<dynamic> SshPublicKeys
         {
             get;
             set;

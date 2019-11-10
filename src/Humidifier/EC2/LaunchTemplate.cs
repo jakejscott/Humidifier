@@ -873,9 +873,9 @@ namespace Humidifier.EC2
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification.html#cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-capacityreservationpreference
             /// Required: False
             /// UpdateType: Mutable
-            /// Type: CapacityReservationPreference
+            /// Type: dynamic
             /// </summary>
-            public CapacityReservationPreference CapacityReservationPreference
+            public dynamic CapacityReservationPreference
             {
                 get;
                 set;
