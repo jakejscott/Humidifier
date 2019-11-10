@@ -67,6 +67,33 @@ namespace Humidifier.ECS
         }
 
         /// <summary>
+        /// InferenceAccelerators
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-inferenceaccelerators
+        /// Required: False
+        /// UpdateType: Immutable
+        /// Type: List
+        /// ItemType: InferenceAccelerator
+        /// </summary>
+        public List<InferenceAccelerator> InferenceAccelerators
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// IpcMode
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-ipcmode
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic IpcMode
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Memory
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-memory
         /// Required: False
@@ -93,6 +120,19 @@ namespace Humidifier.ECS
         }
 
         /// <summary>
+        /// PidMode
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-pidmode
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic PidMode
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// PlacementConstraints
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-placementconstraints
         /// Required: False
@@ -107,6 +147,19 @@ namespace Humidifier.ECS
         }
 
         /// <summary>
+        /// ProxyConfiguration
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-proxyconfiguration
+        /// Required: False
+        /// UpdateType: Immutable
+        /// Type: ProxyConfiguration
+        /// </summary>
+        public ProxyConfiguration ProxyConfiguration
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// RequiresCompatibilities
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-requirescompatibilities
         /// Required: False
@@ -115,6 +168,20 @@ namespace Humidifier.ECS
         /// PrimitiveItemType: String
         /// </summary>
         public dynamic RequiresCompatibilities
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Tags
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-tags
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: Tag
+        /// </summary>
+        public List<Tag> Tags
         {
             get;
             set;
@@ -137,7 +204,7 @@ namespace Humidifier.ECS
         /// Volumes
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-volumes
         /// Required: False
-        /// UpdateType: Mutable
+        /// UpdateType: Immutable
         /// Type: List
         /// ItemType: Volume
         /// </summary>
@@ -174,6 +241,20 @@ namespace Humidifier.ECS
             /// PrimitiveItemType: String
             /// </summary>
             public Dictionary<string, dynamic> Options
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SecretOptions
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-logconfiguration.html#cfn-ecs-taskdefinition-logconfiguration-secretoptions
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: List
+            /// ItemType: Secret
+            /// </summary>
+            public List<Secret> SecretOptions
             {
                 get;
                 set;
@@ -217,6 +298,64 @@ namespace Humidifier.ECS
             /// PrimitiveItemType: String
             /// </summary>
             public dynamic Permissions
+            {
+                get;
+                set;
+            }
+        }
+
+        public class InferenceAccelerator
+        {
+            /// <summary>
+            /// DeviceName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-inferenceaccelerator.html#cfn-ecs-taskdefinition-inferenceaccelerator-devicename
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DeviceName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DeviceType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-inferenceaccelerator.html#cfn-ecs-taskdefinition-inferenceaccelerator-devicetype
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DeviceType
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Secret
+        {
+            /// <summary>
+            /// Name
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-secret.html#cfn-ecs-taskdefinition-secret-name
+            /// Required: True
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Name
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ValueFrom
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-secret.html#cfn-ecs-taskdefinition-secret-valuefrom
+            /// Required: True
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ValueFrom
             {
                 get;
                 set;
@@ -310,6 +449,35 @@ namespace Humidifier.ECS
             }
         }
 
+        public class SystemControl
+        {
+            /// <summary>
+            /// Namespace
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-systemcontrol.html#cfn-ecs-taskdefinition-systemcontrol-namespace
+            /// Required: True
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Namespace
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Value
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-systemcontrol.html#cfn-ecs-taskdefinition-systemcontrol-value
+            /// Required: True
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Value
+            {
+                get;
+                set;
+            }
+        }
+
         public class Volume
         {
             /// <summary>
@@ -384,11 +552,40 @@ namespace Humidifier.ECS
             /// <summary>
             /// Size
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-size
-            /// Required: False
+            /// Required: True
             /// UpdateType: Immutable
             /// PrimitiveType: Integer
             /// </summary>
             public dynamic Size
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ResourceRequirement
+        {
+            /// <summary>
+            /// Type
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-resourcerequirement.html#cfn-ecs-taskdefinition-resourcerequirement-type
+            /// Required: True
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Type
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Value
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-resourcerequirement.html#cfn-ecs-taskdefinition-resourcerequirement-value
+            /// Required: True
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Value
             {
                 get;
                 set;
@@ -489,6 +686,20 @@ namespace Humidifier.ECS
             /// PrimitiveType: Integer
             /// </summary>
             public dynamic Cpu
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DependsOn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html#cfn-ecs-taskdefinition-containerdefinition-dependson
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: List
+            /// ItemType: ContainerDependency
+            /// </summary>
+            public List<ContainerDependency> DependsOn
             {
                 get;
                 set;
@@ -658,6 +869,19 @@ namespace Humidifier.ECS
             }
 
             /// <summary>
+            /// Interactive
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html#cfn-ecs-taskdefinition-containerdefinition-interactive
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Interactive
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// Links
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html#cfn-ecs-taskdefinition-containerdefinition-links
             /// Required: False
@@ -778,6 +1002,19 @@ namespace Humidifier.ECS
             }
 
             /// <summary>
+            /// PseudoTerminal
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html#cfn-ecs-taskdefinition-containerdefinition-pseudoterminal
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic PseudoTerminal
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// ReadonlyRootFilesystem
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html#cfn-ecs-taskdefinition-containerdefinition-readonlyrootfilesystem
             /// Required: False
@@ -798,6 +1035,74 @@ namespace Humidifier.ECS
             /// Type: RepositoryCredentials
             /// </summary>
             public RepositoryCredentials RepositoryCredentials
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ResourceRequirements
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html#cfn-ecs-taskdefinition-containerdefinition-resourcerequirements
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: List
+            /// ItemType: ResourceRequirement
+            /// </summary>
+            public List<ResourceRequirement> ResourceRequirements
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Secrets
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html#cfn-ecs-taskdefinition-containerdefinition-secrets
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: List
+            /// ItemType: Secret
+            /// </summary>
+            public List<Secret> Secrets
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// StartTimeout
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html#cfn-ecs-taskdefinition-containerdefinition-starttimeout
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic StartTimeout
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// StopTimeout
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html#cfn-ecs-taskdefinition-containerdefinition-stoptimeout
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic StopTimeout
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SystemControls
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html#cfn-ecs-taskdefinition-containerdefinition-systemcontrols
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: List
+            /// ItemType: SystemControl
+            /// </summary>
+            public List<SystemControl> SystemControls
             {
                 get;
                 set;
@@ -1177,6 +1482,78 @@ namespace Humidifier.ECS
             /// ItemType: Tmpfs
             /// </summary>
             public List<Tmpfs> Tmpfs
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ContainerDependency
+        {
+            /// <summary>
+            /// Condition
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdependency.html#cfn-ecs-taskdefinition-containerdependency-condition
+            /// Required: True
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Condition
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ContainerName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdependency.html#cfn-ecs-taskdefinition-containerdependency-containername
+            /// Required: True
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ContainerName
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ProxyConfiguration
+        {
+            /// <summary>
+            /// ContainerName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-proxyconfiguration.html#cfn-ecs-taskdefinition-proxyconfiguration-containername
+            /// Required: True
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ContainerName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ProxyConfigurationProperties
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-proxyconfiguration.html#cfn-ecs-taskdefinition-proxyconfiguration-proxyconfigurationproperties
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: List
+            /// ItemType: KeyValuePair
+            /// </summary>
+            public List<KeyValuePair> ProxyConfigurationProperties
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Type
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-proxyconfiguration.html#cfn-ecs-taskdefinition-proxyconfiguration-type
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Type
             {
                 get;
                 set;

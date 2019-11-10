@@ -49,6 +49,19 @@ namespace Humidifier.CodeCommit
         }
 
         /// <summary>
+        /// Code
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codecommit-repository.html#cfn-codecommit-repository-code
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: Code
+        /// </summary>
+        public Code Code
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// RepositoryDescription
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codecommit-repository.html#cfn-codecommit-repository-repositorydescription
         /// Required: False
@@ -60,16 +73,88 @@ namespace Humidifier.CodeCommit
             get;
             set;
         }
+
+        /// <summary>
+        /// Tags
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codecommit-repository.html#cfn-codecommit-repository-tags
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: Tag
+        /// </summary>
+        public List<Tag> Tags
+        {
+            get;
+            set;
+        }
     }
 
     namespace RepositoryTypes
     {
+        public class Code
+        {
+            /// <summary>
+            /// S3
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-code.html#cfn-codecommit-repository-code-s3
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: S3
+            /// </summary>
+            public S3 S3
+            {
+                get;
+                set;
+            }
+        }
+
+        public class S3
+        {
+            /// <summary>
+            /// ObjectVersion
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-s3.html#cfn-codecommit-repository-s3-objectversion
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ObjectVersion
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Bucket
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-s3.html#cfn-codecommit-repository-s3-bucket
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Bucket
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Key
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-s3.html#cfn-codecommit-repository-s3-key
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Key
+            {
+                get;
+                set;
+            }
+        }
+
         public class RepositoryTrigger
         {
             /// <summary>
             /// Events
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html#cfn-codecommit-repository-repositorytrigger-events
-            /// Required: False
+            /// Required: True
             /// UpdateType: Mutable
             /// Type: List
             /// PrimitiveItemType: String
@@ -110,7 +195,7 @@ namespace Humidifier.CodeCommit
             /// <summary>
             /// DestinationArn
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html#cfn-codecommit-repository-repositorytrigger-destinationarn
-            /// Required: False
+            /// Required: True
             /// UpdateType: Mutable
             /// PrimitiveType: String
             /// </summary>
@@ -123,7 +208,7 @@ namespace Humidifier.CodeCommit
             /// <summary>
             /// Name
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html#cfn-codecommit-repository-repositorytrigger-name
-            /// Required: False
+            /// Required: True
             /// UpdateType: Mutable
             /// PrimitiveType: String
             /// </summary>

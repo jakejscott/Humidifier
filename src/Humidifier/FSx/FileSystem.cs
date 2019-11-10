@@ -42,7 +42,7 @@ namespace Humidifier.FSx
         /// <summary>
         /// FileSystemType
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-filesystemtype
-        /// Required: False
+        /// Required: True
         /// UpdateType: Immutable
         /// PrimitiveType: String
         /// </summary>
@@ -81,7 +81,7 @@ namespace Humidifier.FSx
         /// <summary>
         /// SubnetIds
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-subnetids
-        /// Required: False
+        /// Required: True
         /// UpdateType: Immutable
         /// Type: List
         /// PrimitiveItemType: String
@@ -112,9 +112,9 @@ namespace Humidifier.FSx
         /// Required: False
         /// UpdateType: Mutable
         /// Type: List
-        /// ItemType: TagEntry
+        /// ItemType: Tag
         /// </summary>
-        public List<TagEntry> Tags
+        public List<Tag> Tags
         {
             get;
             set;
@@ -136,35 +136,6 @@ namespace Humidifier.FSx
 
     namespace FileSystemTypes
     {
-        public class TagEntry
-        {
-            /// <summary>
-            /// Value
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-tagentry.html#cfn-fsx-filesystem-tagentry-value
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Value
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Key
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-tagentry.html#cfn-fsx-filesystem-tagentry-key
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Key
-            {
-                get;
-                set;
-            }
-        }
-
         public class LustreConfiguration
         {
             /// <summary>
@@ -220,8 +191,103 @@ namespace Humidifier.FSx
             }
         }
 
+        public class SelfManagedActiveDirectoryConfiguration
+        {
+            /// <summary>
+            /// FileSystemAdministratorsGroup
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-filesystemadministratorsgroup
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic FileSystemAdministratorsGroup
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// UserName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-username
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic UserName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DomainName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-domainname
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DomainName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// OrganizationalUnitDistinguishedName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-organizationalunitdistinguishedname
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic OrganizationalUnitDistinguishedName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DnsIps
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-dnsips
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic DnsIps
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Password
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-password
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Password
+            {
+                get;
+                set;
+            }
+        }
+
         public class WindowsConfiguration
         {
+            /// <summary>
+            /// SelfManagedActiveDirectoryConfiguration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: SelfManagedActiveDirectoryConfiguration
+            /// </summary>
+            public SelfManagedActiveDirectoryConfiguration SelfManagedActiveDirectoryConfiguration
+            {
+                get;
+                set;
+            }
+
             /// <summary>
             /// WeeklyMaintenanceStartTime
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-weeklymaintenancestarttime

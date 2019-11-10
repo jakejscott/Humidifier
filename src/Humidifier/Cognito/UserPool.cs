@@ -47,6 +47,19 @@ namespace Humidifier.Cognito
         }
 
         /// <summary>
+        /// VerificationMessageTemplate
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-verificationmessagetemplate
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: VerificationMessageTemplate
+        /// </summary>
+        public VerificationMessageTemplate VerificationMessageTemplate
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// MfaConfiguration
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-mfaconfiguration
         /// Required: False
@@ -63,7 +76,7 @@ namespace Humidifier.Cognito
         /// Schema
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-schema
         /// Required: False
-        /// UpdateType: Immutable
+        /// UpdateType: Mutable
         /// Type: List
         /// ItemType: SchemaAttribute
         /// </summary>
@@ -103,7 +116,7 @@ namespace Humidifier.Cognito
         /// UserPoolName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-userpoolname
         /// Required: False
-        /// UpdateType: Immutable
+        /// UpdateType: Mutable
         /// PrimitiveType: String
         /// </summary>
         public dynamic UserPoolName
@@ -120,6 +133,19 @@ namespace Humidifier.Cognito
         /// PrimitiveType: String
         /// </summary>
         public dynamic SmsVerificationMessage
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// UserPoolAddOns
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-userpooladdons
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: UserPoolAddOns
+        /// </summary>
+        public UserPoolAddOns UserPoolAddOns
         {
             get;
             set;
@@ -155,11 +181,25 @@ namespace Humidifier.Cognito
         /// AliasAttributes
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-aliasattributes
         /// Required: False
-        /// UpdateType: Immutable
+        /// UpdateType: Mutable
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
         public dynamic AliasAttributes
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// EnabledMfas
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-enabledmfas
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// PrimitiveItemType: String
+        /// </summary>
+        public dynamic EnabledMfas
         {
             get;
             set;
@@ -195,7 +235,7 @@ namespace Humidifier.Cognito
         /// UsernameAttributes
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-usernameattributes
         /// Required: False
-        /// UpdateType: Immutable
+        /// UpdateType: Mutable
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
@@ -277,6 +317,19 @@ namespace Humidifier.Cognito
             }
 
             /// <summary>
+            /// TemporaryPasswordValidityDays
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-temporarypasswordvaliditydays
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic TemporaryPasswordValidityDays
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// RequireUppercase
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-requireuppercase
             /// Required: False
@@ -332,6 +385,19 @@ namespace Humidifier.Cognito
             }
 
             /// <summary>
+            /// EmailSendingAccount
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-emailconfiguration.html#cfn-cognito-userpool-emailconfiguration-emailsendingaccount
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic EmailSendingAccount
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// SourceArn
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-emailconfiguration.html#cfn-cognito-userpool-emailconfiguration-sourcearn
             /// Required: False
@@ -365,7 +431,7 @@ namespace Humidifier.Cognito
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-admincreateuserconfig.html#cfn-cognito-userpool-admincreateuserconfig-unusedaccountvaliditydays
             /// Required: False
             /// UpdateType: Mutable
-            /// PrimitiveType: Double
+            /// PrimitiveType: Integer
             /// </summary>
             public dynamic UnusedAccountValidityDays
             {
@@ -568,6 +634,103 @@ namespace Humidifier.Cognito
             }
         }
 
+        public class VerificationMessageTemplate
+        {
+            /// <summary>
+            /// EmailMessageByLink
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-emailmessagebylink
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic EmailMessageByLink
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// EmailMessage
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-emailmessage
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic EmailMessage
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SmsMessage
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-smsmessage
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic SmsMessage
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// EmailSubject
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-emailsubject
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic EmailSubject
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DefaultEmailOption
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-defaultemailoption
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DefaultEmailOption
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// EmailSubjectByLink
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-emailsubjectbylink
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic EmailSubjectByLink
+            {
+                get;
+                set;
+            }
+        }
+
+        public class UserPoolAddOns
+        {
+            /// <summary>
+            /// AdvancedSecurityMode
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-userpooladdons.html#cfn-cognito-userpool-userpooladdons-advancedsecuritymode
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic AdvancedSecurityMode
+            {
+                get;
+                set;
+            }
+        }
+
         public class Policies
         {
             /// <summary>
@@ -633,6 +796,32 @@ namespace Humidifier.Cognito
             /// PrimitiveType: String
             /// </summary>
             public dynamic PreSignUp
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// PreTokenGeneration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-pretokengeneration
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic PreTokenGeneration
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// UserMigration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-usermigration
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic UserMigration
             {
                 get;
                 set;

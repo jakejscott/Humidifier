@@ -66,9 +66,9 @@ namespace Humidifier.AppMesh
         /// Required: False
         /// UpdateType: Mutable
         /// Type: List
-        /// ItemType: TagRef
+        /// ItemType: Tag
         /// </summary>
-        public List<TagRef> Tags
+        public List<Tag> Tags
         {
             get;
             set;
@@ -98,11 +98,24 @@ namespace Humidifier.AppMesh
             /// <summary>
             /// DNS
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-servicediscovery.html#cfn-appmesh-virtualnode-servicediscovery-dns
-            /// Required: True
+            /// Required: False
             /// UpdateType: Mutable
             /// Type: DnsServiceDiscovery
             /// </summary>
             public DnsServiceDiscovery DNS
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// AWSCloudMap
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-servicediscovery.html#cfn-appmesh-virtualnode-servicediscovery-awscloudmap
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: AwsCloudMapServiceDiscovery
+            /// </summary>
+            public AwsCloudMapServiceDiscovery AWSCloudMap
             {
                 get;
                 set;
@@ -119,6 +132,35 @@ namespace Humidifier.AppMesh
             /// PrimitiveType: String
             /// </summary>
             public dynamic Path
+            {
+                get;
+                set;
+            }
+        }
+
+        public class AwsCloudMapInstanceAttribute
+        {
+            /// <summary>
+            /// Value
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-awscloudmapinstanceattribute.html#cfn-appmesh-virtualnode-awscloudmapinstanceattribute-value
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Value
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Key
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-awscloudmapinstanceattribute.html#cfn-appmesh-virtualnode-awscloudmapinstanceattribute-key
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Key
             {
                 get;
                 set;
@@ -180,35 +222,6 @@ namespace Humidifier.AppMesh
             /// PrimitiveType: String
             /// </summary>
             public dynamic VirtualServiceName
-            {
-                get;
-                set;
-            }
-        }
-
-        public class TagRef
-        {
-            /// <summary>
-            /// Value
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-tagref.html#cfn-appmesh-virtualnode-tagref-value
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Value
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Key
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-tagref.html#cfn-appmesh-virtualnode-tagref-key
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Key
             {
                 get;
                 set;
@@ -303,6 +316,49 @@ namespace Humidifier.AppMesh
             /// PrimitiveType: Integer
             /// </summary>
             public dynamic IntervalMillis
+            {
+                get;
+                set;
+            }
+        }
+
+        public class AwsCloudMapServiceDiscovery
+        {
+            /// <summary>
+            /// NamespaceName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-awscloudmapservicediscovery.html#cfn-appmesh-virtualnode-awscloudmapservicediscovery-namespacename
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic NamespaceName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ServiceName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-awscloudmapservicediscovery.html#cfn-appmesh-virtualnode-awscloudmapservicediscovery-servicename
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ServiceName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Attributes
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-awscloudmapservicediscovery.html#cfn-appmesh-virtualnode-awscloudmapservicediscovery-attributes
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: AwsCloudMapInstanceAttribute
+            /// </summary>
+            public List<AwsCloudMapInstanceAttribute> Attributes_
             {
                 get;
                 set;

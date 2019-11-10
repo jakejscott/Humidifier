@@ -247,11 +247,24 @@ namespace Humidifier.CloudWatch
         /// <summary>
         /// Threshold
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-threshold
-        /// Required: True
+        /// Required: False
         /// UpdateType: Mutable
         /// PrimitiveType: Double
         /// </summary>
         public dynamic Threshold
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// ThresholdMetricId
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-dynamic-threshold
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic ThresholdMetricId
         {
             get;
             set;

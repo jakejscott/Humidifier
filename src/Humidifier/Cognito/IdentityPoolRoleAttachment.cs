@@ -95,6 +95,19 @@ namespace Humidifier.Cognito
                 get;
                 set;
             }
+
+            /// <summary>
+            /// IdentityProvider
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html#cfn-cognito-identitypoolroleattachment-rolemapping-identityprovider
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic IdentityProvider
+            {
+                get;
+                set;
+            }
         }
 
         public class MappingRule

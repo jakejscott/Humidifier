@@ -245,6 +245,19 @@ namespace Humidifier.DynamoDB
         public class SSESpecification
         {
             /// <summary>
+            /// KMSMasterKeyId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-ssespecification.html#cfn-dynamodb-table-ssespecification-kmsmasterkeyid
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic KMSMasterKeyId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// SSEEnabled
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-ssespecification.html#cfn-dynamodb-table-ssespecification-sseenabled
             /// Required: True
@@ -252,6 +265,19 @@ namespace Humidifier.DynamoDB
             /// PrimitiveType: Boolean
             /// </summary>
             public dynamic SSEEnabled
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SSEType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-ssespecification.html#cfn-dynamodb-table-ssespecification-ssetype
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic SSEType
             {
                 get;
                 set;

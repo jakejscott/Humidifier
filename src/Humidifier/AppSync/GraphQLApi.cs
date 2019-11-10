@@ -47,6 +47,19 @@ namespace Humidifier.AppSync
         }
 
         /// <summary>
+        /// Tags
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-tags
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: Tags
+        /// </summary>
+        public Tags Tags
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Name
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-name
         /// Required: True
@@ -84,10 +97,27 @@ namespace Humidifier.AppSync
             get;
             set;
         }
+
+        /// <summary>
+        /// AdditionalAuthenticationProviders
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-additionalauthenticationproviders
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: AdditionalAuthenticationProviders
+        /// </summary>
+        public AdditionalAuthenticationProviders AdditionalAuthenticationProviders
+        {
+            get;
+            set;
+        }
     }
 
     namespace GraphQLApiTypes
     {
+        public class Tags
+        {
+        }
+
         public class UserPoolConfig
         {
             /// <summary>
@@ -214,6 +244,19 @@ namespace Humidifier.AppSync
             }
 
             /// <summary>
+            /// ExcludeVerboseContent
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-excludeverbosecontent
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic ExcludeVerboseContent
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// FieldLogLevel
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-fieldloglevel
             /// Required: False
@@ -221,6 +264,94 @@ namespace Humidifier.AppSync
             /// PrimitiveType: String
             /// </summary>
             public dynamic FieldLogLevel
+            {
+                get;
+                set;
+            }
+        }
+
+        public class CognitoUserPoolConfig
+        {
+            /// <summary>
+            /// AppIdClientRegex
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-cognitouserpoolconfig.html#cfn-appsync-graphqlapi-cognitouserpoolconfig-appidclientregex
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic AppIdClientRegex
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// UserPoolId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-cognitouserpoolconfig.html#cfn-appsync-graphqlapi-cognitouserpoolconfig-userpoolid
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic UserPoolId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// AwsRegion
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-cognitouserpoolconfig.html#cfn-appsync-graphqlapi-cognitouserpoolconfig-awsregion
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic AwsRegion
+            {
+                get;
+                set;
+            }
+        }
+
+        public class AdditionalAuthenticationProviders
+        {
+        }
+
+        public class AdditionalAuthenticationProvider
+        {
+            /// <summary>
+            /// OpenIDConnectConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-additionalauthenticationprovider.html#cfn-appsync-graphqlapi-additionalauthenticationprovider-openidconnectconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: OpenIDConnectConfig
+            /// </summary>
+            public OpenIDConnectConfig OpenIDConnectConfig
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// UserPoolConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-additionalauthenticationprovider.html#cfn-appsync-graphqlapi-additionalauthenticationprovider-userpoolconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: CognitoUserPoolConfig
+            /// </summary>
+            public CognitoUserPoolConfig UserPoolConfig
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// AuthenticationType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-additionalauthenticationprovider.html#cfn-appsync-graphqlapi-additionalauthenticationprovider-authenticationtype
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic AuthenticationType
             {
                 get;
                 set;

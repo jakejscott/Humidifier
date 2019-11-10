@@ -29,7 +29,7 @@ namespace Humidifier.ServiceCatalog
         /// NotificationArns
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchnotificationconstraint.html#cfn-servicecatalog-launchnotificationconstraint-notificationarns
         /// Required: True
-        /// UpdateType: Immutable
+        /// UpdateType: Mutable
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>

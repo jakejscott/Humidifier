@@ -85,6 +85,19 @@ namespace Humidifier.Budgets
             }
 
             /// <summary>
+            /// PlannedBudgetLimits
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-budgetdata.html#cfn-budgets-budget-budgetdata-plannedbudgetlimits
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Json
+            /// </summary>
+            public dynamic PlannedBudgetLimits
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// CostFilters
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-budgetdata.html#cfn-budgets-budget-budgetdata-costfilters
             /// Required: False

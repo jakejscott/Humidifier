@@ -70,6 +70,23 @@ namespace Humidifier.ElasticLoadBalancingV2
 
     namespace ListenerRuleTypes
     {
+        public class SourceIpConfig
+        {
+            /// <summary>
+            /// Values
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-sourceipconfig.html#cfn-elasticloadbalancingv2-listenerrule-sourceipconfig-values
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Values
+            {
+                get;
+                set;
+            }
+        }
+
         public class AuthenticateOidcConfig
         {
             /// <summary>
@@ -367,6 +384,35 @@ namespace Humidifier.ElasticLoadBalancingV2
             }
         }
 
+        public class QueryStringKeyValue
+        {
+            /// <summary>
+            /// Key
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-querystringkeyvalue.html#cfn-elasticloadbalancingv2-listenerrule-querystringkeyvalue-key
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Key
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Value
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-querystringkeyvalue.html#cfn-elasticloadbalancingv2-listenerrule-querystringkeyvalue-value
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Value
+            {
+                get;
+                set;
+            }
+        }
+
         public class Action
         {
             /// <summary>
@@ -461,6 +507,87 @@ namespace Humidifier.ElasticLoadBalancingV2
             }
         }
 
+        public class QueryStringConfig
+        {
+            /// <summary>
+            /// Values
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-querystringconfig.html#cfn-elasticloadbalancingv2-listenerrule-querystringconfig-values
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: QueryStringKeyValue
+            /// </summary>
+            public List<QueryStringKeyValue> Values
+            {
+                get;
+                set;
+            }
+        }
+
+        public class PathPatternConfig
+        {
+            /// <summary>
+            /// Values
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-pathpatternconfig.html#cfn-elasticloadbalancingv2-listenerrule-pathpatternconfig-values
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Values
+            {
+                get;
+                set;
+            }
+        }
+
+        public class HttpHeaderConfig
+        {
+            /// <summary>
+            /// HttpHeaderName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-httpheaderconfig.html#cfn-elasticloadbalancingv2-listenerrule-httpheaderconfig-httpheadername
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic HttpHeaderName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Values
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-httpheaderconfig.html#cfn-elasticloadbalancingv2-listenerrule-httpheaderconfig-values
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Values
+            {
+                get;
+                set;
+            }
+        }
+
+        public class HttpRequestMethodConfig
+        {
+            /// <summary>
+            /// Values
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-httprequestmethodconfig.html#cfn-elasticloadbalancingv2-listenerrule-httprequestmethodconfig-values
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Values
+            {
+                get;
+                set;
+            }
+        }
+
         public class RuleCondition
         {
             /// <summary>
@@ -471,6 +598,84 @@ namespace Humidifier.ElasticLoadBalancingV2
             /// PrimitiveType: String
             /// </summary>
             public dynamic Field
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// HostHeaderConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-conditions.html#cfn-elasticloadbalancingv2-listenerrule-rulecondition-hostheaderconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: HostHeaderConfig
+            /// </summary>
+            public HostHeaderConfig HostHeaderConfig
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// HttpHeaderConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-conditions.html#cfn-elasticloadbalancingv2-listenerrule-rulecondition-httpheaderconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: HttpHeaderConfig
+            /// </summary>
+            public HttpHeaderConfig HttpHeaderConfig
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// HttpRequestMethodConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-conditions.html#cfn-elasticloadbalancingv2-listenerrule-rulecondition-httprequestmethodconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: HttpRequestMethodConfig
+            /// </summary>
+            public HttpRequestMethodConfig HttpRequestMethodConfig
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// PathPatternConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-conditions.html#cfn-elasticloadbalancingv2-listenerrule-rulecondition-pathpatternconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: PathPatternConfig
+            /// </summary>
+            public PathPatternConfig PathPatternConfig
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// QueryStringConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-conditions.html#cfn-elasticloadbalancingv2-listenerrule-rulecondition-querystringconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: QueryStringConfig
+            /// </summary>
+            public QueryStringConfig QueryStringConfig
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SourceIpConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-conditions.html#cfn-elasticloadbalancingv2-listenerrule-rulecondition-sourceipconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: SourceIpConfig
+            /// </summary>
+            public SourceIpConfig SourceIpConfig
             {
                 get;
                 set;
@@ -566,6 +771,23 @@ namespace Humidifier.ElasticLoadBalancingV2
             /// PrimitiveType: String
             /// </summary>
             public dynamic StatusCode
+            {
+                get;
+                set;
+            }
+        }
+
+        public class HostHeaderConfig
+        {
+            /// <summary>
+            /// Values
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-hostheaderconfig.html#cfn-elasticloadbalancingv2-listenerrule-hostheaderconfig-values
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Values
             {
                 get;
                 set;

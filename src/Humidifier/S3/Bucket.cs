@@ -169,6 +169,32 @@ namespace Humidifier.S3
         }
 
         /// <summary>
+        /// ObjectLockConfiguration
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-objectlockconfiguration
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: ObjectLockConfiguration
+        /// </summary>
+        public ObjectLockConfiguration ObjectLockConfiguration
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// ObjectLockEnabled
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-objectlockenabled
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: Boolean
+        /// </summary>
+        public dynamic ObjectLockEnabled
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// PublicAccessBlockConfiguration
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-publicaccessblockconfiguration
         /// Required: False
@@ -775,6 +801,35 @@ namespace Humidifier.S3
             }
         }
 
+        public class ObjectLockConfiguration
+        {
+            /// <summary>
+            /// ObjectLockEnabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-objectlockconfiguration.html#cfn-s3-bucket-objectlockconfiguration-objectlockenabled
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ObjectLockEnabled
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Rule
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-objectlockconfiguration.html#cfn-s3-bucket-objectlockconfiguration-rule
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: ObjectLockRule
+            /// </summary>
+            public ObjectLockRule Rule
+            {
+                get;
+                set;
+            }
+        }
+
         public class CorsConfiguration
         {
             /// <summary>
@@ -970,6 +1025,48 @@ namespace Humidifier.S3
             /// PrimitiveType: Boolean
             /// </summary>
             public dynamic RestrictPublicBuckets
+            {
+                get;
+                set;
+            }
+        }
+
+        public class DefaultRetention
+        {
+            /// <summary>
+            /// Days
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-defaultretention.html#cfn-s3-bucket-defaultretention-days
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Days
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Mode
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-defaultretention.html#cfn-s3-bucket-defaultretention-mode
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Mode
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Years
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-defaultretention.html#cfn-s3-bucket-defaultretention-years
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Years
             {
                 get;
                 set;
@@ -1342,6 +1439,22 @@ namespace Humidifier.S3
             /// PrimitiveType: String
             /// </summary>
             public dynamic ReplaceKeyWith
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ObjectLockRule
+        {
+            /// <summary>
+            /// DefaultRetention
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-objectlockrule.html#cfn-s3-bucket-objectlockrule-defaultretention
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: DefaultRetention
+            /// </summary>
+            public DefaultRetention DefaultRetention
             {
                 get;
                 set;

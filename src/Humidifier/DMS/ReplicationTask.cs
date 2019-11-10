@@ -39,6 +39,19 @@ namespace Humidifier.DMS
         }
 
         /// <summary>
+        /// CdcStartPosition
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-cdcstartposition
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic CdcStartPosition
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// ReplicationTaskIdentifier
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-replicationtaskidentifier
         /// Required: False
@@ -46,6 +59,19 @@ namespace Humidifier.DMS
         /// PrimitiveType: String
         /// </summary>
         public dynamic ReplicationTaskIdentifier
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// CdcStopPosition
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-cdcstopposition
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic CdcStopPosition
         {
             get;
             set;

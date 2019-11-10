@@ -41,6 +41,20 @@ namespace Humidifier.IoTAnalytics
         }
 
         /// <summary>
+        /// ContentDeliveryRules
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-dataset.html#cfn-iotanalytics-dataset-contentdeliveryrules
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: DatasetContentDeliveryRule
+        /// </summary>
+        public List<DatasetContentDeliveryRule> ContentDeliveryRules
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Triggers
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-dataset.html#cfn-iotanalytics-dataset-triggers
         /// Required: False
@@ -49,6 +63,19 @@ namespace Humidifier.IoTAnalytics
         /// ItemType: Trigger
         /// </summary>
         public List<Trigger> Triggers
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// VersioningConfiguration
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-dataset.html#cfn-iotanalytics-dataset-versioningconfiguration
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: VersioningConfiguration
+        /// </summary>
+        public VersioningConfiguration VersioningConfiguration
         {
             get;
             set;
@@ -94,6 +121,35 @@ namespace Humidifier.IoTAnalytics
             /// PrimitiveType: String
             /// </summary>
             public dynamic DatasetName
+            {
+                get;
+                set;
+            }
+        }
+
+        public class GlueConfiguration
+        {
+            /// <summary>
+            /// TableName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-glueconfiguration.html#cfn-iotanalytics-dataset-glueconfiguration-tablename
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic TableName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DatabaseName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-glueconfiguration.html#cfn-iotanalytics-dataset-glueconfiguration-databasename
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DatabaseName
             {
                 get;
                 set;
@@ -229,6 +285,35 @@ namespace Humidifier.IoTAnalytics
             }
         }
 
+        public class DatasetContentDeliveryRule
+        {
+            /// <summary>
+            /// Destination
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-datasetcontentdeliveryrule.html#cfn-iotanalytics-dataset-datasetcontentdeliveryrule-destination
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: DatasetContentDeliveryRuleDestination
+            /// </summary>
+            public DatasetContentDeliveryRuleDestination Destination
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// EntryName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-datasetcontentdeliveryrule.html#cfn-iotanalytics-dataset-datasetcontentdeliveryrule-entryname
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic EntryName
+            {
+                get;
+                set;
+            }
+        }
+
         public class Trigger
         {
             /// <summary>
@@ -252,6 +337,35 @@ namespace Humidifier.IoTAnalytics
             /// Type: TriggeringDataset
             /// </summary>
             public TriggeringDataset TriggeringDataset
+            {
+                get;
+                set;
+            }
+        }
+
+        public class IotEventsDestinationConfiguration
+        {
+            /// <summary>
+            /// InputName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-ioteventsdestinationconfiguration.html#cfn-iotanalytics-dataset-ioteventsdestinationconfiguration-inputname
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic InputName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RoleArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-ioteventsdestinationconfiguration.html#cfn-iotanalytics-dataset-ioteventsdestinationconfiguration-rolearn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RoleArn
             {
                 get;
                 set;
@@ -386,6 +500,64 @@ namespace Humidifier.IoTAnalytics
             }
         }
 
+        public class DatasetContentDeliveryRuleDestination
+        {
+            /// <summary>
+            /// IotEventsDestinationConfiguration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-datasetcontentdeliveryruledestination.html#cfn-iotanalytics-dataset-datasetcontentdeliveryruledestination-ioteventsdestinationconfiguration
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: IotEventsDestinationConfiguration
+            /// </summary>
+            public IotEventsDestinationConfiguration IotEventsDestinationConfiguration
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// S3DestinationConfiguration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-datasetcontentdeliveryruledestination.html#cfn-iotanalytics-dataset-datasetcontentdeliveryruledestination-s3destinationconfiguration
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: S3DestinationConfiguration
+            /// </summary>
+            public S3DestinationConfiguration S3DestinationConfiguration
+            {
+                get;
+                set;
+            }
+        }
+
+        public class VersioningConfiguration
+        {
+            /// <summary>
+            /// MaxVersions
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-versioningconfiguration.html#cfn-iotanalytics-dataset-versioningconfiguration-maxversions
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic MaxVersions
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Unlimited
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-versioningconfiguration.html#cfn-iotanalytics-dataset-versioningconfiguration-unlimited
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Unlimited
+            {
+                get;
+                set;
+            }
+        }
+
         public class ResourceConfiguration
         {
             /// <summary>
@@ -470,6 +642,61 @@ namespace Humidifier.IoTAnalytics
             /// PrimitiveType: Boolean
             /// </summary>
             public dynamic Unlimited
+            {
+                get;
+                set;
+            }
+        }
+
+        public class S3DestinationConfiguration
+        {
+            /// <summary>
+            /// GlueConfiguration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-s3destinationconfiguration.html#cfn-iotanalytics-dataset-s3destinationconfiguration-glueconfiguration
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: GlueConfiguration
+            /// </summary>
+            public GlueConfiguration GlueConfiguration
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Bucket
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-s3destinationconfiguration.html#cfn-iotanalytics-dataset-s3destinationconfiguration-bucket
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Bucket
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Key
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-s3destinationconfiguration.html#cfn-iotanalytics-dataset-s3destinationconfiguration-key
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Key
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RoleArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-s3destinationconfiguration.html#cfn-iotanalytics-dataset-s3destinationconfiguration-rolearn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RoleArn
             {
                 get;
                 set;

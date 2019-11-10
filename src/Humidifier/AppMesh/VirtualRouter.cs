@@ -66,9 +66,9 @@ namespace Humidifier.AppMesh
         /// Required: False
         /// UpdateType: Mutable
         /// Type: List
-        /// ItemType: TagRef
+        /// ItemType: Tag
         /// </summary>
-        public List<TagRef> Tags
+        public List<Tag> Tags
         {
             get;
             set;
@@ -116,35 +116,6 @@ namespace Humidifier.AppMesh
             /// Type: PortMapping
             /// </summary>
             public PortMapping PortMapping
-            {
-                get;
-                set;
-            }
-        }
-
-        public class TagRef
-        {
-            /// <summary>
-            /// Value
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-tagref.html#cfn-appmesh-virtualrouter-tagref-value
-            /// Required: False
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Value
-            {
-                get;
-                set;
-            }
-
-            /// <summary>
-            /// Key
-            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-tagref.html#cfn-appmesh-virtualrouter-tagref-key
-            /// Required: True
-            /// UpdateType: Mutable
-            /// PrimitiveType: String
-            /// </summary>
-            public dynamic Key
             {
                 get;
                 set;

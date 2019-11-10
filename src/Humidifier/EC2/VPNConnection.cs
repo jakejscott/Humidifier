@@ -54,6 +54,19 @@ namespace Humidifier.EC2
         }
 
         /// <summary>
+        /// TransitGatewayId
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection.html#cfn-ec2-vpnconnection-transitgatewayid
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic TransitGatewayId
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Type
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection.html#cfn-ec2-vpnconnection-type
         /// Required: True
@@ -69,7 +82,7 @@ namespace Humidifier.EC2
         /// <summary>
         /// VpnGatewayId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection.html#cfn-ec2-vpnconnection-vpngatewayid
-        /// Required: True
+        /// Required: False
         /// UpdateType: Immutable
         /// PrimitiveType: String
         /// </summary>

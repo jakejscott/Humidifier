@@ -72,6 +72,19 @@ namespace Humidifier.CodeBuild
         }
 
         /// <summary>
+        /// SourceVersion
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-sourceversion
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic SourceVersion
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Triggers
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-triggers
         /// Required: False
@@ -203,6 +216,20 @@ namespace Humidifier.CodeBuild
         }
 
         /// <summary>
+        /// SecondarySourceVersions
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-secondarysourceversions
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: ProjectSourceVersion
+        /// </summary>
+        public List<ProjectSourceVersion> SecondarySourceVersions
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Tags
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-tags
         /// Required: False
@@ -245,6 +272,35 @@ namespace Humidifier.CodeBuild
 
     namespace ProjectTypes
     {
+        public class ProjectSourceVersion
+        {
+            /// <summary>
+            /// SourceIdentifier
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectsourceversion.html#cfn-codebuild-project-projectsourceversion-sourceidentifier
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic SourceIdentifier
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SourceVersion
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectsourceversion.html#cfn-codebuild-project-projectsourceversion-sourceversion
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic SourceVersion
+            {
+                get;
+                set;
+            }
+        }
+
         public class LogsConfig
         {
             /// <summary>

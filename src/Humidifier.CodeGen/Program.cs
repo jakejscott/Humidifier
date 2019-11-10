@@ -347,8 +347,8 @@ namespace Humidifier.CodeGen
                         }
                         else
                         {
-                            // Hack
-                            if (property.ItemType == "PatchGroup")
+                            // Hack, SshPublicKey contains object of primitive type String
+                            if (property.ItemType == "SshPublicKey")
                             {
                                 Console.ForegroundColor = ConsoleColor.Red;
                                 Console.WriteLine("WARN::Property name: " + property.Name + " is a primitive type: " + property.ItemType);
@@ -516,6 +516,12 @@ namespace Humidifier.CodeGen
                 ItemType = prop.Value.SelectToken("ItemType")?.Value<string>(),
                 DuplicatesAllowed = prop.Value.SelectToken("DuplicatesAllowed")?.Value<bool>()
             };
+
+            // Hack, CapacityReservationPreference has no properties
+            if (string.Equals(property.Name, "CapacityReservationPreference"))
+            {
+                property.Type = "dynamic";
+            }
 
             if (property.PrimitiveType == null)
             {

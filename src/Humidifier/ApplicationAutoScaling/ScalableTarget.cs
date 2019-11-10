@@ -104,10 +104,65 @@ namespace Humidifier.ApplicationAutoScaling
             get;
             set;
         }
+
+        /// <summary>
+        /// SuspendedState
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html#cfn-applicationautoscaling-scalabletarget-suspendedstate
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: SuspendedState
+        /// </summary>
+        public SuspendedState SuspendedState
+        {
+            get;
+            set;
+        }
     }
 
     namespace ScalableTargetTypes
     {
+        public class SuspendedState
+        {
+            /// <summary>
+            /// DynamicScalingInSuspended
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-suspendedstate.html#cfn-applicationautoscaling-scalabletarget-suspendedstate-dynamicscalinginsuspended
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic DynamicScalingInSuspended
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DynamicScalingOutSuspended
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-suspendedstate.html#cfn-applicationautoscaling-scalabletarget-suspendedstate-dynamicscalingoutsuspended
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic DynamicScalingOutSuspended
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ScheduledScalingSuspended
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-suspendedstate.html#cfn-applicationautoscaling-scalabletarget-suspendedstate-scheduledscalingsuspended
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic ScheduledScalingSuspended
+            {
+                get;
+                set;
+            }
+        }
+
         public class ScheduledAction
         {
             /// <summary>

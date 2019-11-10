@@ -14,32 +14,6 @@ namespace Humidifier.Glue
         }
 
         /// <summary>
-        /// Role
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-role
-        /// Required: True
-        /// UpdateType: Mutable
-        /// PrimitiveType: String
-        /// </summary>
-        public dynamic Role
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// DefaultArguments
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-defaultarguments
-        /// Required: False
-        /// UpdateType: Mutable
-        /// PrimitiveType: Json
-        /// </summary>
-        public dynamic DefaultArguments
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
         /// Connections
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-connections
         /// Required: False
@@ -79,6 +53,97 @@ namespace Humidifier.Glue
         }
 
         /// <summary>
+        /// Timeout
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-timeout
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Integer
+        /// </summary>
+        public dynamic Timeout
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// AllocatedCapacity
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-allocatedcapacity
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Double
+        /// </summary>
+        public dynamic AllocatedCapacity
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Name
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-name
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic Name
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Role
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-role
+        /// Required: True
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic Role
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// DefaultArguments
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-defaultarguments
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Json
+        /// </summary>
+        public dynamic DefaultArguments
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// NotificationProperty
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-notificationproperty
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: NotificationProperty
+        /// </summary>
+        public NotificationProperty NotificationProperty
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// WorkerType
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-workertype
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic WorkerType
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// LogUri
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-loguri
         /// Required: False
@@ -105,13 +170,13 @@ namespace Humidifier.Glue
         }
 
         /// <summary>
-        /// AllocatedCapacity
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-allocatedcapacity
+        /// GlueVersion
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-glueversion
         /// Required: False
         /// UpdateType: Mutable
-        /// PrimitiveType: Double
+        /// PrimitiveType: String
         /// </summary>
-        public dynamic AllocatedCapacity
+        public dynamic GlueVersion
         {
             get;
             set;
@@ -131,13 +196,52 @@ namespace Humidifier.Glue
         }
 
         /// <summary>
-        /// Name
-        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-name
+        /// SecurityConfiguration
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-securityconfiguration
         /// Required: False
-        /// UpdateType: Immutable
+        /// UpdateType: Mutable
         /// PrimitiveType: String
         /// </summary>
-        public dynamic Name
+        public dynamic SecurityConfiguration
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// NumberOfWorkers
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-numberofworkers
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Integer
+        /// </summary>
+        public dynamic NumberOfWorkers
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Tags
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-tags
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Json
+        /// </summary>
+        public dynamic Tags
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// MaxCapacity
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-maxcapacity
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Double
+        /// </summary>
+        public dynamic MaxCapacity
         {
             get;
             set;
@@ -148,6 +252,19 @@ namespace Humidifier.Glue
     {
         public class JobCommand
         {
+            /// <summary>
+            /// PythonVersion
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-jobcommand.html#cfn-glue-job-jobcommand-pythonversion
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic PythonVersion
+            {
+                get;
+                set;
+            }
+
             /// <summary>
             /// ScriptLocation
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-jobcommand.html#cfn-glue-job-jobcommand-scriptlocation
@@ -186,6 +303,22 @@ namespace Humidifier.Glue
             /// PrimitiveItemType: String
             /// </summary>
             public dynamic Connections
+            {
+                get;
+                set;
+            }
+        }
+
+        public class NotificationProperty
+        {
+            /// <summary>
+            /// NotifyDelayAfter
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-notificationproperty.html#cfn-glue-job-notificationproperty-notifydelayafter
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic NotifyDelayAfter
             {
                 get;
                 set;

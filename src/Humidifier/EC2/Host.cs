@@ -39,6 +39,19 @@ namespace Humidifier.EC2
         }
 
         /// <summary>
+        /// HostRecovery
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html#cfn-ec2-host-hostrecovery
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic HostRecovery
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// InstanceType
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html#cfn-ec2-host-instancetype
         /// Required: True

@@ -44,6 +44,20 @@ namespace Humidifier.RDS
         }
 
         /// <summary>
+        /// AssociatedRoles
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-associatedroles
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: DBInstanceRole
+        /// </summary>
+        public List<DBInstanceRole> AssociatedRoles
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// AutoMinorVersionUpgrade
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-autominorversionupgrade
         /// Required: False
@@ -74,7 +88,7 @@ namespace Humidifier.RDS
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-backupretentionperiod
         /// Required: False
         /// UpdateType: Conditional
-        /// PrimitiveType: String
+        /// PrimitiveType: Integer
         /// </summary>
         public dynamic BackupRetentionPeriod
         {
@@ -662,6 +676,35 @@ namespace Humidifier.RDS
 
     namespace DBInstanceTypes
     {
+        public class DBInstanceRole
+        {
+            /// <summary>
+            /// FeatureName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-dbinstancerole.html#cfn-rds-dbinstance-dbinstancerole-featurename
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic FeatureName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RoleArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-dbinstancerole.html#cfn-rds-dbinstance-dbinstancerole-rolearn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RoleArn
+            {
+                get;
+                set;
+            }
+        }
+
         public class ProcessorFeature
         {
             /// <summary>

@@ -103,6 +103,20 @@ namespace Humidifier.DLM
             }
 
             /// <summary>
+            /// VariableTags
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-schedule.html#cfn-dlm-lifecyclepolicy-schedule-variabletags
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: Tag
+            /// </summary>
+            public List<Tag> VariableTags
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// RetainRule
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-schedule.html#cfn-dlm-lifecyclepolicy-schedule-retainrule
             /// Required: False
@@ -232,6 +246,32 @@ namespace Humidifier.DLM
             }
 
             /// <summary>
+            /// PolicyType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-policydetails.html#cfn-dlm-lifecyclepolicy-policydetails-policytype
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic PolicyType
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Parameters
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-policydetails.html#cfn-dlm-lifecyclepolicy-policydetails-parameters
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: Parameters
+            /// </summary>
+            public Parameters Parameters
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// TargetTags
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-policydetails.html#cfn-dlm-lifecyclepolicy-policydetails-targettags
             /// Required: False
@@ -240,6 +280,22 @@ namespace Humidifier.DLM
             /// ItemType: Tag
             /// </summary>
             public List<Tag> TargetTags
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Parameters
+        {
+            /// <summary>
+            /// ExcludeBootVolume
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-parameters.html#cfn-dlm-lifecyclepolicy-parameters-excludebootvolume
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic ExcludeBootVolume
             {
                 get;
                 set;

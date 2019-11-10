@@ -27,6 +27,19 @@ namespace Humidifier.Glue
         }
 
         /// <summary>
+        /// StartOnCreation
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html#cfn-glue-trigger-startoncreation
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Boolean
+        /// </summary>
+        public dynamic StartOnCreation
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Description
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html#cfn-glue-trigger-description
         /// Required: False
@@ -54,6 +67,19 @@ namespace Humidifier.Glue
         }
 
         /// <summary>
+        /// WorkflowName
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html#cfn-glue-trigger-workflowname
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic WorkflowName
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Schedule
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html#cfn-glue-trigger-schedule
         /// Required: False
@@ -61,6 +87,19 @@ namespace Humidifier.Glue
         /// PrimitiveType: String
         /// </summary>
         public dynamic Schedule
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Tags
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html#cfn-glue-trigger-tags
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Json
+        /// </summary>
+        public dynamic Tags
         {
             get;
             set;
@@ -98,6 +137,19 @@ namespace Humidifier.Glue
         public class Condition
         {
             /// <summary>
+            /// CrawlerName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-condition.html#cfn-glue-trigger-condition-crawlername
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic CrawlerName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// State
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-condition.html#cfn-glue-trigger-condition-state
             /// Required: False
@@ -105,6 +157,19 @@ namespace Humidifier.Glue
             /// PrimitiveType: String
             /// </summary>
             public dynamic State
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// CrawlState
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-condition.html#cfn-glue-trigger-condition-crawlstate
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic CrawlState
             {
                 get;
                 set;
@@ -170,6 +235,45 @@ namespace Humidifier.Glue
         public class Action
         {
             /// <summary>
+            /// NotificationProperty
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-action.html#cfn-glue-trigger-action-notificationproperty
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: NotificationProperty
+            /// </summary>
+            public NotificationProperty NotificationProperty
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// CrawlerName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-action.html#cfn-glue-trigger-action-crawlername
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic CrawlerName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Timeout
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-action.html#cfn-glue-trigger-action-timeout
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Timeout
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// JobName
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-action.html#cfn-glue-trigger-action-jobname
             /// Required: False
@@ -190,6 +294,35 @@ namespace Humidifier.Glue
             /// PrimitiveType: Json
             /// </summary>
             public dynamic Arguments
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SecurityConfiguration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-action.html#cfn-glue-trigger-action-securityconfiguration
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic SecurityConfiguration
+            {
+                get;
+                set;
+            }
+        }
+
+        public class NotificationProperty
+        {
+            /// <summary>
+            /// NotifyDelayAfter
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-notificationproperty.html#cfn-glue-trigger-notificationproperty-notifydelayafter
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic NotifyDelayAfter
             {
                 get;
                 set;

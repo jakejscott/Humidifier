@@ -58,6 +58,19 @@ namespace Humidifier.ECS
         }
 
         /// <summary>
+        /// EnableECSManagedTags
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-enableecsmanagedtags
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: Boolean
+        /// </summary>
+        public dynamic EnableECSManagedTags
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// HealthCheckGracePeriodSeconds
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-healthcheckgraceperiodseconds
         /// Required: False
@@ -152,6 +165,19 @@ namespace Humidifier.ECS
         }
 
         /// <summary>
+        /// PropagateTags
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-propagatetags
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic PropagateTags
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Role
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-role
         /// Required: False
@@ -199,6 +225,20 @@ namespace Humidifier.ECS
         /// ItemType: ServiceRegistry
         /// </summary>
         public List<ServiceRegistry> ServiceRegistries
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Tags
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-tags
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: Tag
+        /// </summary>
+        public List<Tag> Tags
         {
             get;
             set;

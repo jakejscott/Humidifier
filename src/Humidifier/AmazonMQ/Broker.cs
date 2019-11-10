@@ -30,7 +30,7 @@ namespace Humidifier.AmazonMQ
         /// SecurityGroups
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-securitygroups
         /// Required: False
-        /// UpdateType: Immutable
+        /// UpdateType: Mutable
         /// Type: List
         /// PrimitiveItemType: String
         /// </summary>
@@ -83,7 +83,7 @@ namespace Humidifier.AmazonMQ
         /// HostInstanceType
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-hostinstancetype
         /// Required: True
-        /// UpdateType: Immutable
+        /// UpdateType: Mutable
         /// PrimitiveType: String
         /// </summary>
         public dynamic HostInstanceType
@@ -199,6 +199,19 @@ namespace Humidifier.AmazonMQ
         }
 
         /// <summary>
+        /// EncryptionOptions
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-encryptionoptions
+        /// Required: False
+        /// UpdateType: Immutable
+        /// Type: EncryptionOptions
+        /// </summary>
+        public EncryptionOptions EncryptionOptions
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Tags
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-tags
         /// Required: False
@@ -215,6 +228,35 @@ namespace Humidifier.AmazonMQ
 
     namespace BrokerTypes
     {
+        public class EncryptionOptions
+        {
+            /// <summary>
+            /// KmsKeyId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-encryptionoptions.html#cfn-amazonmq-broker-encryptionoptions-kmskeyid
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic KmsKeyId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// UseAwsOwnedKey
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-encryptionoptions.html#cfn-amazonmq-broker-encryptionoptions-useawsownedkey
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic UseAwsOwnedKey
+            {
+                get;
+                set;
+            }
+        }
+
         public class MaintenanceWindow
         {
             /// <summary>

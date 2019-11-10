@@ -42,7 +42,7 @@ namespace Humidifier.SSM
         /// <summary>
         /// ServiceRoleArn
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-servicerolearn
-        /// Required: True
+        /// Required: False
         /// UpdateType: Mutable
         /// PrimitiveType: String
         /// </summary>
@@ -134,7 +134,7 @@ namespace Humidifier.SSM
         /// <summary>
         /// WindowId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-windowid
-        /// Required: False
+        /// Required: True
         /// UpdateType: Immutable
         /// PrimitiveType: String
         /// </summary>
