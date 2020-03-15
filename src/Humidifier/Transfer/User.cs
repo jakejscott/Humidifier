@@ -1,6 +1,7 @@
 namespace Humidifier.Transfer
 {
     using System.Collections.Generic;
+    using UserTypes;
 
     public class User : Humidifier.Resource
     {
@@ -59,6 +60,19 @@ namespace Humidifier.Transfer
         }
 
         /// <summary>
+        /// HomeDirectoryType
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html#cfn-transfer-user-homedirectorytype
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic HomeDirectoryType
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// ServerId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html#cfn-transfer-user-serverid
         /// Required: True
@@ -79,6 +93,20 @@ namespace Humidifier.Transfer
         /// PrimitiveType: String
         /// </summary>
         public dynamic UserName
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// HomeDirectoryMappings
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html#cfn-transfer-user-homedirectorymappings
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: HomeDirectoryMapEntry
+        /// </summary>
+        public List<HomeDirectoryMapEntry> HomeDirectoryMappings
         {
             get;
             set;
@@ -110,6 +138,38 @@ namespace Humidifier.Transfer
         {
             get;
             set;
+        }
+    }
+
+    namespace UserTypes
+    {
+        public class HomeDirectoryMapEntry
+        {
+            /// <summary>
+            /// Entry
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-homedirectorymapentry.html#cfn-transfer-user-homedirectorymapentry-entry
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Entry
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Target
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-homedirectorymapentry.html#cfn-transfer-user-homedirectorymapentry-target
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Target
+            {
+                get;
+                set;
+            }
         }
     }
 }

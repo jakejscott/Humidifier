@@ -9,6 +9,8 @@ namespace Humidifier.AppMesh
         {
             public static string Uid =  "Uid" ;
             public static string MeshName =  "MeshName" ;
+            public static string MeshOwner =  "MeshOwner" ;
+            public static string ResourceOwner =  "ResourceOwner" ;
             public static string Arn =  "Arn" ;
         }
 

@@ -45,6 +45,19 @@ namespace Humidifier.ECS
         }
 
         /// <summary>
+        /// DeploymentController
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-deploymentcontroller
+        /// Required: False
+        /// UpdateType: Immutable
+        /// Type: DeploymentController
+        /// </summary>
+        public DeploymentController DeploymentController
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// DesiredCount
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-desiredcount
         /// Required: False
@@ -247,7 +260,7 @@ namespace Humidifier.ECS
         /// <summary>
         /// TaskDefinition
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-taskdefinition
-        /// Required: True
+        /// Required: False
         /// UpdateType: Mutable
         /// PrimitiveType: String
         /// </summary>
@@ -367,6 +380,22 @@ namespace Humidifier.ECS
             /// PrimitiveType: Integer
             /// </summary>
             public dynamic MinimumHealthyPercent
+            {
+                get;
+                set;
+            }
+        }
+
+        public class DeploymentController
+        {
+            /// <summary>
+            /// Type
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentcontroller.html#cfn-ecs-service-deploymentcontroller-type
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Type
             {
                 get;
                 set;

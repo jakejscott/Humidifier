@@ -34,6 +34,19 @@ namespace Humidifier.Neptune
         }
 
         /// <summary>
+        /// EngineVersion
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-engineversion
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic EngineVersion
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// KmsKeyId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-kmskeyid
         /// Required: False
@@ -133,6 +146,19 @@ namespace Humidifier.Neptune
         /// PrimitiveType: String
         /// </summary>
         public dynamic DBSubnetGroupName
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// DeletionProtection
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-deletionprotection
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Boolean
+        /// </summary>
+        public dynamic DeletionProtection
         {
             get;
             set;

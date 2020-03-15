@@ -27,6 +27,19 @@ namespace Humidifier.IoTEvents
         }
 
         /// <summary>
+        /// EvaluationMethod
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotevents-detectormodel.html#cfn-iotevents-detectormodel-evaluationmethod
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic EvaluationMethod
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// DetectorModelName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotevents-detectormodel.html#cfn-iotevents-detectormodel-detectormodelname
         /// Required: False

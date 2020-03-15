@@ -48,6 +48,19 @@ namespace Humidifier.Elasticsearch
         }
 
         /// <summary>
+        /// CognitoOptions
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-cognitooptions
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: CognitoOptions
+        /// </summary>
+        public CognitoOptions CognitoOptions
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// DomainName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-domainname
         /// Required: False
@@ -90,7 +103,7 @@ namespace Humidifier.Elasticsearch
         /// ElasticsearchVersion
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-elasticsearchversion
         /// Required: False
-        /// UpdateType: Immutable
+        /// UpdateType: Conditional
         /// PrimitiveType: String
         /// </summary>
         public dynamic ElasticsearchVersion
@@ -302,6 +315,61 @@ namespace Humidifier.Elasticsearch
             /// PrimitiveType: Integer
             /// </summary>
             public dynamic AutomatedSnapshotStartHour
+            {
+                get;
+                set;
+            }
+        }
+
+        public class CognitoOptions
+        {
+            /// <summary>
+            /// Enabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-cognitooptions.html#cfn-elasticsearch-domain-cognitooptions-enabled
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Enabled
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// IdentityPoolId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-cognitooptions.html#cfn-elasticsearch-domain-cognitooptions-identitypoolid
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic IdentityPoolId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RoleArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-cognitooptions.html#cfn-elasticsearch-domain-cognitooptions-rolearn
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic RoleArn
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// UserPoolId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-cognitooptions.html#cfn-elasticsearch-domain-cognitooptions-userpoolid
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic UserPoolId
             {
                 get;
                 set;

@@ -150,6 +150,19 @@ namespace Humidifier.Cognito
             get;
             set;
         }
+
+        /// <summary>
+        /// AllowClassicFlow
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-allowclassicflow
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Boolean
+        /// </summary>
+        public dynamic AllowClassicFlow
+        {
+            get;
+            set;
+        }
     }
 
     namespace IdentityPoolTypes

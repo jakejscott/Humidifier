@@ -29,7 +29,7 @@ namespace Humidifier.ApiGatewayV2
         /// <summary>
         /// DeploymentId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-stage.html#cfn-apigatewayv2-stage-deploymentid
-        /// Required: True
+        /// Required: False
         /// UpdateType: Mutable
         /// PrimitiveType: String
         /// </summary>
@@ -60,6 +60,19 @@ namespace Humidifier.ApiGatewayV2
         /// Type: AccessLogSettings
         /// </summary>
         public AccessLogSettings AccessLogSettings
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// AutoDeploy
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-stage.html#cfn-apigatewayv2-stage-autodeploy
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Boolean
+        /// </summary>
+        public dynamic AutoDeploy
         {
             get;
             set;

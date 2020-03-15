@@ -67,6 +67,19 @@ namespace Humidifier.Cognito
         }
 
         /// <summary>
+        /// ClientMetadata
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-clientmetadata
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: Json
+        /// </summary>
+        public dynamic ClientMetadata
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// DesiredDeliveryMediums
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-desireddeliverymediums
         /// Required: False

@@ -178,6 +178,19 @@ namespace Humidifier.FSx
             }
 
             /// <summary>
+            /// DeploymentType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-deploymenttype
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DeploymentType
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// ExportPath
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-exportpath
             /// Required: False
@@ -185,6 +198,19 @@ namespace Humidifier.FSx
             /// PrimitiveType: String
             /// </summary>
             public dynamic ExportPath
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// PerUnitStorageThroughput
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-perunitstoragethroughput
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic PerUnitStorageThroughput
             {
                 get;
                 set;
@@ -315,6 +341,19 @@ namespace Humidifier.FSx
             }
 
             /// <summary>
+            /// DeploymentType
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-deploymenttype
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DeploymentType
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// ThroughputCapacity
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-throughputcapacity
             /// Required: False
@@ -361,6 +400,19 @@ namespace Humidifier.FSx
             /// PrimitiveType: Integer
             /// </summary>
             public dynamic AutomaticBackupRetentionDays
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// PreferredSubnetId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-preferredsubnetid
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic PreferredSubnetId
             {
                 get;
                 set;

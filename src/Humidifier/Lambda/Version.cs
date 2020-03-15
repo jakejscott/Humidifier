@@ -1,6 +1,7 @@
 namespace Humidifier.Lambda
 {
     using System.Collections.Generic;
+    using VersionTypes;
 
     public class Version : Humidifier.Resource
     {
@@ -54,6 +55,38 @@ namespace Humidifier.Lambda
         {
             get;
             set;
+        }
+
+        /// <summary>
+        /// ProvisionedConcurrencyConfig
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html#cfn-lambda-version-provisionedconcurrencyconfig
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: ProvisionedConcurrencyConfiguration
+        /// </summary>
+        public ProvisionedConcurrencyConfiguration ProvisionedConcurrencyConfig
+        {
+            get;
+            set;
+        }
+    }
+
+    namespace VersionTypes
+    {
+        public class ProvisionedConcurrencyConfiguration
+        {
+            /// <summary>
+            /// ProvisionedConcurrentExecutions
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-version-provisionedconcurrencyconfiguration.html#cfn-lambda-version-provisionedconcurrencyconfiguration-provisionedconcurrentexecutions
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic ProvisionedConcurrentExecutions
+            {
+                get;
+                set;
+            }
         }
     }
 }

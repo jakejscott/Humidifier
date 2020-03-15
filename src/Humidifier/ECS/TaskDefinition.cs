@@ -261,6 +261,36 @@ namespace Humidifier.ECS
             }
         }
 
+        public class FirelensConfiguration
+        {
+            /// <summary>
+            /// Options
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-firelensconfiguration.html#cfn-ecs-taskdefinition-firelensconfiguration-options
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: Map
+            /// PrimitiveItemType: String
+            /// </summary>
+            public Dictionary<string, dynamic> Options
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Type
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-firelensconfiguration.html#cfn-ecs-taskdefinition-firelensconfiguration-type
+            /// Required: True
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Type
+            {
+                get;
+                set;
+            }
+        }
+
         public class Device
         {
             /// <summary>
@@ -314,6 +344,19 @@ namespace Humidifier.ECS
             /// PrimitiveType: String
             /// </summary>
             public dynamic DeviceName
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DevicePolicy
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-inferenceaccelerator.html#cfn-ecs-taskdefinition-inferenceaccelerator-devicepolicy
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DevicePolicy
             {
                 get;
                 set;
@@ -824,6 +867,19 @@ namespace Humidifier.ECS
             /// ItemType: HostEntry
             /// </summary>
             public List<HostEntry> ExtraHosts
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// FirelensConfiguration
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html#cfn-ecs-taskdefinition-containerdefinition-firelensconfiguration
+            /// Required: False
+            /// UpdateType: Immutable
+            /// Type: FirelensConfiguration
+            /// </summary>
+            public FirelensConfiguration FirelensConfiguration
             {
                 get;
                 set;
@@ -1461,6 +1517,19 @@ namespace Humidifier.ECS
             }
 
             /// <summary>
+            /// MaxSwap
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-maxswap
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic MaxSwap
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// SharedMemorySize
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-sharedmemorysize
             /// Required: False
@@ -1468,6 +1537,19 @@ namespace Humidifier.ECS
             /// PrimitiveType: Integer
             /// </summary>
             public dynamic SharedMemorySize
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Swappiness
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-swappiness
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Swappiness
             {
                 get;
                 set;

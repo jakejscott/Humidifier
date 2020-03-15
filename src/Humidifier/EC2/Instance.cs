@@ -156,6 +156,19 @@ namespace Humidifier.EC2
         }
 
         /// <summary>
+        /// HibernationOptions
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-hibernationoptions
+        /// Required: False
+        /// UpdateType: Immutable
+        /// Type: HibernationOptions
+        /// </summary>
+        public HibernationOptions HibernationOptions
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// HostId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-hostid
         /// Required: False
@@ -163,6 +176,19 @@ namespace Humidifier.EC2
         /// PrimitiveType: String
         /// </summary>
         public dynamic HostId
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// HostResourceGroupArn
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-hostresourcegrouparn
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic HostResourceGroupArn
         {
             get;
             set;
@@ -491,6 +517,22 @@ namespace Humidifier.EC2
 
     namespace InstanceTypes
     {
+        public class HibernationOptions
+        {
+            /// <summary>
+            /// Configured
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-hibernationoptions.html#cfn-ec2-instance-hibernationoptions-configured
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Configured
+            {
+                get;
+                set;
+            }
+        }
+
         public class Volume
         {
             /// <summary>
@@ -977,6 +1019,19 @@ namespace Humidifier.EC2
 
         public class ElasticInferenceAccelerator
         {
+            /// <summary>
+            /// Count
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-elasticinferenceaccelerator.html#cfn-ec2-instance-elasticinferenceaccelerator-count
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Count
+            {
+                get;
+                set;
+            }
+
             /// <summary>
             /// Type
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-elasticinferenceaccelerator.html#cfn-ec2-instance-elasticinferenceaccelerator-type

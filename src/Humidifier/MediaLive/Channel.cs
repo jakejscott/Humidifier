@@ -270,6 +270,35 @@ namespace Humidifier.MediaLive
             }
         }
 
+        public class MultiplexProgramChannelDestinationSettings
+        {
+            /// <summary>
+            /// MultiplexId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexprogramchanneldestinationsettings.html#cfn-medialive-channel-multiplexprogramchanneldestinationsettings-multiplexid
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic MultiplexId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ProgramName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexprogramchanneldestinationsettings.html#cfn-medialive-channel-multiplexprogramchanneldestinationsettings-programname
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ProgramName
+            {
+                get;
+                set;
+            }
+        }
+
         public class EmbeddedSourceSettings
         {
             /// <summary>
@@ -927,6 +956,19 @@ namespace Humidifier.MediaLive
 
         public class OutputDestination
         {
+            /// <summary>
+            /// MultiplexSettings
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputdestination.html#cfn-medialive-channel-outputdestination-multiplexsettings
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: MultiplexProgramChannelDestinationSettings
+            /// </summary>
+            public MultiplexProgramChannelDestinationSettings MultiplexSettings
+            {
+                get;
+                set;
+            }
+
             /// <summary>
             /// Id
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputdestination.html#cfn-medialive-channel-outputdestination-id

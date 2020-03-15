@@ -455,6 +455,19 @@ namespace Humidifier.ElasticLoadBalancingV2
             }
 
             /// <summary>
+            /// ForwardConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-actions.html#cfn-elasticloadbalancingv2-listenerrule-action-forwardconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: ForwardConfig
+            /// </summary>
+            public ForwardConfig ForwardConfig
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// Order
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-actions.html#cfn-elasticloadbalancingv2-listenerrule-action-order
             /// Required: False
@@ -565,6 +578,65 @@ namespace Humidifier.ElasticLoadBalancingV2
             /// PrimitiveItemType: String
             /// </summary>
             public dynamic Values
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ForwardConfig
+        {
+            /// <summary>
+            /// TargetGroupStickinessConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-forwardconfig.html#cfn-elasticloadbalancingv2-listenerrule-forwardconfig-targetgroupstickinessconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: TargetGroupStickinessConfig
+            /// </summary>
+            public TargetGroupStickinessConfig TargetGroupStickinessConfig
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// TargetGroups
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-forwardconfig.html#cfn-elasticloadbalancingv2-listenerrule-forwardconfig-targetgroups
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: TargetGroupTuple
+            /// </summary>
+            public List<TargetGroupTuple> TargetGroups
+            {
+                get;
+                set;
+            }
+        }
+
+        public class TargetGroupTuple
+        {
+            /// <summary>
+            /// TargetGroupArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-targetgrouptuple.html#cfn-elasticloadbalancingv2-listenerrule-targetgrouptuple-targetgrouparn
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic TargetGroupArn
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Weight
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-targetgrouptuple.html#cfn-elasticloadbalancingv2-listenerrule-targetgrouptuple-weight
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Weight
             {
                 get;
                 set;
@@ -771,6 +843,35 @@ namespace Humidifier.ElasticLoadBalancingV2
             /// PrimitiveType: String
             /// </summary>
             public dynamic StatusCode
+            {
+                get;
+                set;
+            }
+        }
+
+        public class TargetGroupStickinessConfig
+        {
+            /// <summary>
+            /// DurationSeconds
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-targetgroupstickinessconfig.html#cfn-elasticloadbalancingv2-listenerrule-targetgroupstickinessconfig-durationseconds
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic DurationSeconds
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Enabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-targetgroupstickinessconfig.html#cfn-elasticloadbalancingv2-listenerrule-targetgroupstickinessconfig-enabled
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Enabled
             {
                 get;
                 set;

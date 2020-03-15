@@ -49,6 +49,35 @@ namespace Humidifier.Backup
 
     namespace BackupPlanTypes
     {
+        public class CopyActionResourceType
+        {
+            /// <summary>
+            /// Lifecycle
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-copyactionresourcetype.html#cfn-backup-backupplan-copyactionresourcetype-lifecycle
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: LifecycleResourceType
+            /// </summary>
+            public LifecycleResourceType Lifecycle
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DestinationBackupVaultArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-copyactionresourcetype.html#cfn-backup-backupplan-copyactionresourcetype-destinationbackupvaultarn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DestinationBackupVaultArn
+            {
+                get;
+                set;
+            }
+        }
+
         public class LifecycleResourceType
         {
             /// <summary>
@@ -114,6 +143,20 @@ namespace Humidifier.Backup
             /// PrimitiveType: Json
             /// </summary>
             public dynamic RecoveryPointTags
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// CopyActions
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupruleresourcetype.html#cfn-backup-backupplan-backupruleresourcetype-copyactions
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: CopyActionResourceType
+            /// </summary>
+            public List<CopyActionResourceType> CopyActions
             {
                 get;
                 set;

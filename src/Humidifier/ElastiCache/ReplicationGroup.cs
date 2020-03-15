@@ -34,7 +34,7 @@ namespace Humidifier.ElastiCache
         /// AuthToken
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-authtoken
         /// Required: False
-        /// UpdateType: Immutable
+        /// UpdateType: Conditional
         /// PrimitiveType: String
         /// </summary>
         public dynamic AuthToken
