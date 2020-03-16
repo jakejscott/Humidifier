@@ -9,6 +9,8 @@ namespace Humidifier.AppMesh
         {
             public static string Uid =  "Uid" ;
             public static string MeshName =  "MeshName" ;
+            public static string MeshOwner =  "MeshOwner" ;
+            public static string ResourceOwner =  "ResourceOwner" ;
             public static string Arn =  "Arn" ;
             public static string VirtualNodeName =  "VirtualNodeName" ;
         }
@@ -29,6 +31,19 @@ namespace Humidifier.AppMesh
         /// PrimitiveType: String
         /// </summary>
         public dynamic MeshName
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// MeshOwner
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualnode.html#cfn-appmesh-virtualnode-meshowner
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic MeshOwner
         {
             get;
             set;
@@ -122,6 +137,49 @@ namespace Humidifier.AppMesh
             }
         }
 
+        public class ClientPolicyTls
+        {
+            /// <summary>
+            /// Validation
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-clientpolicytls.html#cfn-appmesh-virtualnode-clientpolicytls-validation
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: TlsValidationContext
+            /// </summary>
+            public TlsValidationContext Validation
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Enforce
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-clientpolicytls.html#cfn-appmesh-virtualnode-clientpolicytls-enforce
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Enforce
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Ports
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-clientpolicytls.html#cfn-appmesh-virtualnode-clientpolicytls-ports
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: Integer
+            /// </summary>
+            public List<int> Ports
+            {
+                get;
+                set;
+            }
+        }
+
         public class FileAccessLog
         {
             /// <summary>
@@ -132,6 +190,35 @@ namespace Humidifier.AppMesh
             /// PrimitiveType: String
             /// </summary>
             public dynamic Path
+            {
+                get;
+                set;
+            }
+        }
+
+        public class TlsValidationContextTrust
+        {
+            /// <summary>
+            /// ACM
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-tlsvalidationcontexttrust.html#cfn-appmesh-virtualnode-tlsvalidationcontexttrust-acm
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: TlsValidationContextAcmTrust
+            /// </summary>
+            public TlsValidationContextAcmTrust ACM
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// File
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-tlsvalidationcontexttrust.html#cfn-appmesh-virtualnode-tlsvalidationcontexttrust-file
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: TlsValidationContextFileTrust
+            /// </summary>
+            public TlsValidationContextFileTrust File
             {
                 get;
                 set;
@@ -161,6 +248,51 @@ namespace Humidifier.AppMesh
             /// PrimitiveType: String
             /// </summary>
             public dynamic Key
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ListenerTlsAcmCertificate
+        {
+            /// <summary>
+            /// CertificateArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listenertlsacmcertificate.html#cfn-appmesh-virtualnode-listenertlsacmcertificate-certificatearn
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic CertificateArn
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ListenerTlsCertificate
+        {
+            /// <summary>
+            /// ACM
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listenertlscertificate.html#cfn-appmesh-virtualnode-listenertlscertificate-acm
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: ListenerTlsAcmCertificate
+            /// </summary>
+            public ListenerTlsAcmCertificate ACM
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// File
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listenertlscertificate.html#cfn-appmesh-virtualnode-listenertlscertificate-file
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: ListenerTlsFileCertificate
+            /// </summary>
+            public ListenerTlsFileCertificate File
             {
                 get;
                 set;
@@ -212,8 +344,50 @@ namespace Humidifier.AppMesh
             }
         }
 
+        public class ListenerTls
+        {
+            /// <summary>
+            /// Mode
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listenertls.html#cfn-appmesh-virtualnode-listenertls-mode
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Mode
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Certificate
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listenertls.html#cfn-appmesh-virtualnode-listenertls-certificate
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: ListenerTlsCertificate
+            /// </summary>
+            public ListenerTlsCertificate Certificate
+            {
+                get;
+                set;
+            }
+        }
+
         public class VirtualServiceBackend
         {
+            /// <summary>
+            /// ClientPolicy
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-virtualservicebackend.html#cfn-appmesh-virtualnode-virtualservicebackend-clientpolicy
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: ClientPolicy
+            /// </summary>
+            public ClientPolicy ClientPolicy
+            {
+                get;
+                set;
+            }
+
             /// <summary>
             /// VirtualServiceName
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-virtualservicebackend.html#cfn-appmesh-virtualnode-virtualservicebackend-virtualservicename
@@ -222,6 +396,22 @@ namespace Humidifier.AppMesh
             /// PrimitiveType: String
             /// </summary>
             public dynamic VirtualServiceName
+            {
+                get;
+                set;
+            }
+        }
+
+        public class BackendDefaults
+        {
+            /// <summary>
+            /// ClientPolicy
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-backenddefaults.html#cfn-appmesh-virtualnode-backenddefaults-clientpolicy
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: ClientPolicy
+            /// </summary>
+            public ClientPolicy ClientPolicy
             {
                 get;
                 set;
@@ -365,6 +555,84 @@ namespace Humidifier.AppMesh
             }
         }
 
+        public class TlsValidationContextAcmTrust
+        {
+            /// <summary>
+            /// CertificateAuthorityArns
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-tlsvalidationcontextacmtrust.html#cfn-appmesh-virtualnode-tlsvalidationcontextacmtrust-certificateauthorityarns
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic CertificateAuthorityArns
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ClientPolicy
+        {
+            /// <summary>
+            /// TLS
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-clientpolicy.html#cfn-appmesh-virtualnode-clientpolicy-tls
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: ClientPolicyTls
+            /// </summary>
+            public ClientPolicyTls TLS
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ListenerTlsFileCertificate
+        {
+            /// <summary>
+            /// PrivateKey
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listenertlsfilecertificate.html#cfn-appmesh-virtualnode-listenertlsfilecertificate-privatekey
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic PrivateKey
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// CertificateChain
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listenertlsfilecertificate.html#cfn-appmesh-virtualnode-listenertlsfilecertificate-certificatechain
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic CertificateChain
+            {
+                get;
+                set;
+            }
+        }
+
+        public class TlsValidationContext
+        {
+            /// <summary>
+            /// Trust
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-tlsvalidationcontext.html#cfn-appmesh-virtualnode-tlsvalidationcontext-trust
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: TlsValidationContextTrust
+            /// </summary>
+            public TlsValidationContextTrust Trust
+            {
+                get;
+                set;
+            }
+        }
+
         public class AccessLog
         {
             /// <summary>
@@ -425,6 +693,19 @@ namespace Humidifier.AppMesh
             }
 
             /// <summary>
+            /// BackendDefaults
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-virtualnodespec.html#cfn-appmesh-virtualnode-virtualnodespec-backenddefaults
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: BackendDefaults
+            /// </summary>
+            public BackendDefaults BackendDefaults
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// ServiceDiscovery
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-virtualnodespec.html#cfn-appmesh-virtualnode-virtualnodespec-servicediscovery
             /// Required: False
@@ -454,6 +735,19 @@ namespace Humidifier.AppMesh
             }
 
             /// <summary>
+            /// TLS
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listener.html#cfn-appmesh-virtualnode-listener-tls
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: ListenerTls
+            /// </summary>
+            public ListenerTls TLS
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// PortMapping
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listener.html#cfn-appmesh-virtualnode-listener-portmapping
             /// Required: True
@@ -477,6 +771,22 @@ namespace Humidifier.AppMesh
             /// PrimitiveType: String
             /// </summary>
             public dynamic Hostname
+            {
+                get;
+                set;
+            }
+        }
+
+        public class TlsValidationContextFileTrust
+        {
+            /// <summary>
+            /// CertificateChain
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-tlsvalidationcontextfiletrust.html#cfn-appmesh-virtualnode-tlsvalidationcontextfiletrust-certificatechain
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic CertificateChain
             {
                 get;
                 set;

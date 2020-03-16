@@ -81,6 +81,19 @@ namespace Humidifier.CloudFront
         public class LambdaFunctionAssociation
         {
             /// <summary>
+            /// IncludeBody
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-lambdafunctionassociation.html#cfn-cloudfront-distribution-lambdafunctionassociation-includebody
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic IncludeBody
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// EventType
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-lambdafunctionassociation.html#cfn-cloudfront-distribution-lambdafunctionassociation-eventtype
             /// Required: False
@@ -101,6 +114,22 @@ namespace Humidifier.CloudFront
             /// PrimitiveType: String
             /// </summary>
             public dynamic LambdaFunctionARN
+            {
+                get;
+                set;
+            }
+        }
+
+        public class OriginGroupMember
+        {
+            /// <summary>
+            /// OriginId
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origingroupmember.html#cfn-cloudfront-distribution-origingroupmember-originid
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic OriginId
             {
                 get;
                 set;
@@ -679,6 +708,19 @@ namespace Humidifier.CloudFront
             }
 
             /// <summary>
+            /// OriginGroups
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-origingroups
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: OriginGroups
+            /// </summary>
+            public OriginGroups OriginGroups
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// Enabled
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-enabled
             /// Required: True
@@ -772,6 +814,36 @@ namespace Humidifier.CloudFront
             }
         }
 
+        public class StatusCodes
+        {
+            /// <summary>
+            /// Quantity
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-statuscodes.html#cfn-cloudfront-distribution-statuscodes-quantity
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Quantity
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Items
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-statuscodes.html#cfn-cloudfront-distribution-statuscodes-items
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: Integer
+            /// </summary>
+            public List<int> Items
+            {
+                get;
+                set;
+            }
+        }
+
         public class OriginCustomHeader
         {
             /// <summary>
@@ -795,6 +867,64 @@ namespace Humidifier.CloudFront
             /// PrimitiveType: String
             /// </summary>
             public dynamic HeaderName
+            {
+                get;
+                set;
+            }
+        }
+
+        public class OriginGroup
+        {
+            /// <summary>
+            /// Id
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origingroup.html#cfn-cloudfront-distribution-origingroup-id
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Id
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// FailoverCriteria
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origingroup.html#cfn-cloudfront-distribution-origingroup-failovercriteria
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: OriginGroupFailoverCriteria
+            /// </summary>
+            public OriginGroupFailoverCriteria FailoverCriteria
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Members
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origingroup.html#cfn-cloudfront-distribution-origingroup-members
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: OriginGroupMembers
+            /// </summary>
+            public OriginGroupMembers Members
+            {
+                get;
+                set;
+            }
+        }
+
+        public class OriginGroupFailoverCriteria
+        {
+            /// <summary>
+            /// StatusCodes
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origingroupfailovercriteria.html#cfn-cloudfront-distribution-origingroupfailovercriteria-statuscodes
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: StatusCodes
+            /// </summary>
+            public StatusCodes StatusCodes
             {
                 get;
                 set;
@@ -877,6 +1007,66 @@ namespace Humidifier.CloudFront
             /// PrimitiveType: String
             /// </summary>
             public dynamic OriginProtocolPolicy
+            {
+                get;
+                set;
+            }
+        }
+
+        public class OriginGroups
+        {
+            /// <summary>
+            /// Quantity
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origingroups.html#cfn-cloudfront-distribution-origingroups-quantity
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Quantity
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Items
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origingroups.html#cfn-cloudfront-distribution-origingroups-items
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: OriginGroup
+            /// </summary>
+            public List<OriginGroup> Items
+            {
+                get;
+                set;
+            }
+        }
+
+        public class OriginGroupMembers
+        {
+            /// <summary>
+            /// Quantity
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origingroupmembers.html#cfn-cloudfront-distribution-origingroupmembers-quantity
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Quantity
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Items
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origingroupmembers.html#cfn-cloudfront-distribution-origingroupmembers-items
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: OriginGroupMember
+            /// </summary>
+            public List<OriginGroupMember> Items
             {
                 get;
                 set;

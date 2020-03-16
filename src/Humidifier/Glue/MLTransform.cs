@@ -79,6 +79,19 @@ namespace Humidifier.Glue
         }
 
         /// <summary>
+        /// GlueVersion
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-mltransform.html#cfn-glue-mltransform-glueversion
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic GlueVersion
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// TransformParameters
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-mltransform.html#cfn-glue-mltransform-transformparameters
         /// Required: True

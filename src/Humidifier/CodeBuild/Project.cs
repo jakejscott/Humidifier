@@ -203,6 +203,20 @@ namespace Humidifier.CodeBuild
         }
 
         /// <summary>
+        /// FileSystemLocations
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-filesystemlocations
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: ProjectFileSystemLocation
+        /// </summary>
+        public List<ProjectFileSystemLocation> FileSystemLocations
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Environment
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-environment
         /// Required: True
@@ -521,6 +535,74 @@ namespace Humidifier.CodeBuild
             /// PrimitiveItemType: String
             /// </summary>
             public dynamic SecurityGroupIds
+            {
+                get;
+                set;
+            }
+        }
+
+        public class ProjectFileSystemLocation
+        {
+            /// <summary>
+            /// MountPoint
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectfilesystemlocation.html#cfn-codebuild-project-projectfilesystemlocation-mountpoint
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic MountPoint
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Type
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectfilesystemlocation.html#cfn-codebuild-project-projectfilesystemlocation-type
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Type
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Identifier
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectfilesystemlocation.html#cfn-codebuild-project-projectfilesystemlocation-identifier
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Identifier
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// MountOptions
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectfilesystemlocation.html#cfn-codebuild-project-projectfilesystemlocation-mountoptions
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic MountOptions
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Location
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectfilesystemlocation.html#cfn-codebuild-project-projectfilesystemlocation-location
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Location
             {
                 get;
                 set;

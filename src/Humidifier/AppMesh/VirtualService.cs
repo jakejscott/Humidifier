@@ -9,6 +9,8 @@ namespace Humidifier.AppMesh
         {
             public static string Uid =  "Uid" ;
             public static string MeshName =  "MeshName" ;
+            public static string MeshOwner =  "MeshOwner" ;
+            public static string ResourceOwner =  "ResourceOwner" ;
             public static string VirtualServiceName =  "VirtualServiceName" ;
             public static string Arn =  "Arn" ;
         }
@@ -29,6 +31,19 @@ namespace Humidifier.AppMesh
         /// PrimitiveType: String
         /// </summary>
         public dynamic MeshName
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// MeshOwner
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualservice.html#cfn-appmesh-virtualservice-meshowner
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic MeshOwner
         {
             get;
             set;

@@ -30,7 +30,7 @@ namespace Humidifier.MSK
         /// EnhancedMonitoring
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-enhancedmonitoring
         /// Required: False
-        /// UpdateType: Immutable
+        /// UpdateType: Mutable
         /// PrimitiveType: String
         /// </summary>
         public dynamic EnhancedMonitoring
@@ -79,6 +79,19 @@ namespace Humidifier.MSK
         }
 
         /// <summary>
+        /// OpenMonitoring
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-openmonitoring
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: OpenMonitoring
+        /// </summary>
+        public OpenMonitoring OpenMonitoring
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// ClusterName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-clustername
         /// Required: True
@@ -99,6 +112,19 @@ namespace Humidifier.MSK
         /// Type: ClientAuthentication
         /// </summary>
         public ClientAuthentication ClientAuthentication
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// LoggingInfo
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-logginginfo
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: LoggingInfo
+        /// </summary>
+        public LoggingInfo LoggingInfo
         {
             get;
             set;
@@ -261,6 +287,93 @@ namespace Humidifier.MSK
             }
         }
 
+        public class S3
+        {
+            /// <summary>
+            /// Bucket
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-s3.html#cfn-msk-cluster-s3-bucket
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Bucket
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Enabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-s3.html#cfn-msk-cluster-s3-enabled
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Enabled
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Prefix
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-s3.html#cfn-msk-cluster-s3-prefix
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Prefix
+            {
+                get;
+                set;
+            }
+        }
+
+        public class CloudWatchLogs
+        {
+            /// <summary>
+            /// LogGroup
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-cloudwatchlogs.html#cfn-msk-cluster-cloudwatchlogs-loggroup
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic LogGroup
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Enabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-cloudwatchlogs.html#cfn-msk-cluster-cloudwatchlogs-enabled
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Enabled
+            {
+                get;
+                set;
+            }
+        }
+
+        public class JmxExporter
+        {
+            /// <summary>
+            /// EnabledInBroker
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-jmxexporter.html#cfn-msk-cluster-jmxexporter-enabledinbroker
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic EnabledInBroker
+            {
+                get;
+                set;
+            }
+        }
+
         public class StorageInfo
         {
             /// <summary>
@@ -293,6 +406,64 @@ namespace Humidifier.MSK
             }
         }
 
+        public class BrokerLogs
+        {
+            /// <summary>
+            /// S3
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-brokerlogs.html#cfn-msk-cluster-brokerlogs-s3
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: S3
+            /// </summary>
+            public S3 S3
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Firehose
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-brokerlogs.html#cfn-msk-cluster-brokerlogs-firehose
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: Firehose
+            /// </summary>
+            public Firehose Firehose
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// CloudWatchLogs
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-brokerlogs.html#cfn-msk-cluster-brokerlogs-cloudwatchlogs
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: CloudWatchLogs
+            /// </summary>
+            public CloudWatchLogs CloudWatchLogs
+            {
+                get;
+                set;
+            }
+        }
+
+        public class NodeExporter
+        {
+            /// <summary>
+            /// EnabledInBroker
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-nodeexporter.html#cfn-msk-cluster-nodeexporter-enabledinbroker
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic EnabledInBroker
+            {
+                get;
+                set;
+            }
+        }
+
         public class EBSStorageInfo
         {
             /// <summary>
@@ -303,6 +474,35 @@ namespace Humidifier.MSK
             /// PrimitiveType: Integer
             /// </summary>
             public dynamic VolumeSize
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Firehose
+        {
+            /// <summary>
+            /// DeliveryStream
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-firehose.html#cfn-msk-cluster-firehose-deliverystream
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DeliveryStream
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Enabled
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-firehose.html#cfn-msk-cluster-firehose-enabled
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Enabled
             {
                 get;
                 set;
@@ -354,6 +554,35 @@ namespace Humidifier.MSK
             }
         }
 
+        public class Prometheus
+        {
+            /// <summary>
+            /// JmxExporter
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-prometheus.html#cfn-msk-cluster-prometheus-jmxexporter
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: JmxExporter
+            /// </summary>
+            public JmxExporter JmxExporter
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// NodeExporter
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-prometheus.html#cfn-msk-cluster-prometheus-nodeexporter
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: NodeExporter
+            /// </summary>
+            public NodeExporter NodeExporter
+            {
+                get;
+                set;
+            }
+        }
+
         public class Tls
         {
             /// <summary>
@@ -365,6 +594,38 @@ namespace Humidifier.MSK
             /// PrimitiveItemType: String
             /// </summary>
             public dynamic CertificateAuthorityArnList
+            {
+                get;
+                set;
+            }
+        }
+
+        public class OpenMonitoring
+        {
+            /// <summary>
+            /// Prometheus
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-openmonitoring.html#cfn-msk-cluster-openmonitoring-prometheus
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: Prometheus
+            /// </summary>
+            public Prometheus Prometheus
+            {
+                get;
+                set;
+            }
+        }
+
+        public class LoggingInfo
+        {
+            /// <summary>
+            /// BrokerLogs
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-logginginfo.html#cfn-msk-cluster-logginginfo-brokerlogs
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: BrokerLogs
+            /// </summary>
+            public BrokerLogs BrokerLogs
             {
                 get;
                 set;

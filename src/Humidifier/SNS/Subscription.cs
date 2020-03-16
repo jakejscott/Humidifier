@@ -78,6 +78,19 @@ namespace Humidifier.SNS
         }
 
         /// <summary>
+        /// RedrivePolicy
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-subscription-redrivepolicy
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Json
+        /// </summary>
+        public dynamic RedrivePolicy
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Region
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-subscription-region
         /// Required: False

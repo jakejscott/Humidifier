@@ -325,6 +325,19 @@ namespace Humidifier.AutoScaling
                 get;
                 set;
             }
+
+            /// <summary>
+            /// WeightedCapacity
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-as-mixedinstancespolicy-launchtemplateoverrides.html#cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-weightedcapacity
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic WeightedCapacity
+            {
+                get;
+                set;
+            }
         }
 
         public class LifecycleHookSpecification

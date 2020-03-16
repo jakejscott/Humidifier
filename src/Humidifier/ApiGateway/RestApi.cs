@@ -263,6 +263,20 @@ namespace Humidifier.ApiGateway
                 get;
                 set;
             }
+
+            /// <summary>
+            /// VpcEndpointIds
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-endpointconfiguration.html#cfn-apigateway-restapi-endpointconfiguration-vpcendpointids
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic VpcEndpointIds
+            {
+                get;
+                set;
+            }
         }
     }
 }

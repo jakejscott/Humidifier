@@ -132,6 +132,19 @@ namespace Humidifier.EC2
             get;
             set;
         }
+
+        /// <summary>
+        /// VpnPort
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-vpnport
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Integer
+        /// </summary>
+        public dynamic VpnPort
+        {
+            get;
+            set;
+        }
     }
 
     namespace ClientVpnEndpointTypes

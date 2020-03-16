@@ -91,7 +91,7 @@ namespace Humidifier.Cognito
         /// AllowedOAuthFlowsUserPoolClient
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-allowedoauthflowsuserpoolclient
         /// Required: False
-        /// UpdateType: Immutable
+        /// UpdateType: Mutable
         /// PrimitiveType: Boolean
         /// </summary>
         public dynamic AllowedOAuthFlowsUserPoolClient
@@ -217,6 +217,19 @@ namespace Humidifier.Cognito
         /// PrimitiveItemType: String
         /// </summary>
         public dynamic WriteAttributes
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// PreventUserExistenceErrors
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-preventuserexistenceerrors
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic PreventUserExistenceErrors
         {
             get;
             set;

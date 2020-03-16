@@ -34,7 +34,7 @@ namespace Humidifier.EC2
         /// InstanceId
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip.html#cfn-ec2-eip-instanceid
         /// Required: False
-        /// UpdateType: Mutable
+        /// UpdateType: Conditional
         /// PrimitiveType: String
         /// </summary>
         public dynamic InstanceId
@@ -47,10 +47,24 @@ namespace Humidifier.EC2
         /// PublicIpv4Pool
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip.html#cfn-ec2-eip-publicipv4pool
         /// Required: False
-        /// UpdateType: Mutable
+        /// UpdateType: Conditional
         /// PrimitiveType: String
         /// </summary>
         public dynamic PublicIpv4Pool
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Tags
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip.html#cfn-ec2-eip-tags
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: Tag
+        /// </summary>
+        public List<Tag> Tags
         {
             get;
             set;

@@ -27,6 +27,19 @@ namespace Humidifier.GameLift
         }
 
         /// <summary>
+        /// OperatingSystem
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html#cfn-gamelift-build-operatingsystem
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic OperatingSystem
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// StorageLocation
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html#cfn-gamelift-build-storagelocation
         /// Required: False
@@ -78,6 +91,19 @@ namespace Humidifier.GameLift
             /// PrimitiveType: String
             /// </summary>
             public dynamic Key
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ObjectVersion
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-build-storagelocation.html#cfn-gamelift-build-object-verison
+            /// Required: False
+            /// UpdateType: Immutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ObjectVersion
             {
                 get;
                 set;

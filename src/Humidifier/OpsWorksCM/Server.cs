@@ -137,6 +137,19 @@ namespace Humidifier.OpsWorksCM
         }
 
         /// <summary>
+        /// CustomCertificate
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-customcertificate
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic CustomCertificate
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// PreferredBackupWindow
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-preferredbackupwindow
         /// Required: False
@@ -172,6 +185,32 @@ namespace Humidifier.OpsWorksCM
         /// PrimitiveItemType: String
         /// </summary>
         public dynamic SubnetIds
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// CustomDomain
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-customdomain
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic CustomDomain
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// CustomPrivateKey
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-customprivatekey
+        /// Required: False
+        /// UpdateType: Immutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic CustomPrivateKey
         {
             get;
             set;
@@ -225,6 +264,20 @@ namespace Humidifier.OpsWorksCM
         /// PrimitiveType: String
         /// </summary>
         public dynamic InstanceType
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Tags
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-tags
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: List
+        /// ItemType: Tag
+        /// </summary>
+        public List<Tag> Tags
         {
             get;
             set;

@@ -605,6 +605,19 @@ namespace Humidifier.EC2
             }
 
             /// <summary>
+            /// MetadataOptions
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-metadataoptions
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: MetadataOptions
+            /// </summary>
+            public MetadataOptions MetadataOptions
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// LicenseSpecifications
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-licensespecifications
             /// Required: False
@@ -798,6 +811,48 @@ namespace Humidifier.EC2
             }
         }
 
+        public class MetadataOptions
+        {
+            /// <summary>
+            /// HttpPutResponseHopLimit
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-metadataoptions.html#cfn-ec2-launchtemplate-launchtemplatedata-metadataoptions-httpputresponsehoplimit
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic HttpPutResponseHopLimit
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// HttpTokens
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-metadataoptions.html#cfn-ec2-launchtemplate-launchtemplatedata-metadataoptions-httptokens
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic HttpTokens
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// HttpEndpoint
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-metadataoptions.html#cfn-ec2-launchtemplate-launchtemplatedata-metadataoptions-httpendpoint
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic HttpEndpoint
+            {
+                get;
+                set;
+            }
+        }
+
         public class Placement
         {
             /// <summary>
@@ -821,6 +876,32 @@ namespace Humidifier.EC2
             /// PrimitiveType: String
             /// </summary>
             public dynamic Tenancy
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// SpreadDomain
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-placement.html#cfn-ec2-launchtemplate-launchtemplatedata-placement-spreaddomain
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic SpreadDomain
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// PartitionNumber
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-placement.html#cfn-ec2-launchtemplate-launchtemplatedata-placement-partitionnumber
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic PartitionNumber
             {
                 get;
                 set;
@@ -860,6 +941,19 @@ namespace Humidifier.EC2
             /// PrimitiveType: String
             /// </summary>
             public dynamic HostId
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// HostResourceGroupArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-placement.html#cfn-ec2-launchtemplate-launchtemplatedata-placement-hostresourcegrouparn
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic HostResourceGroupArn
             {
                 get;
                 set;
@@ -1141,6 +1235,19 @@ namespace Humidifier.EC2
             /// PrimitiveType: String
             /// </summary>
             public dynamic Type
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Count
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplateelasticinferenceaccelerator.html#cfn-ec2-launchtemplate-launchtemplateelasticinferenceaccelerator-count
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Count
             {
                 get;
                 set;

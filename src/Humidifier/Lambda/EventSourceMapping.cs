@@ -1,6 +1,7 @@
 namespace Humidifier.Lambda
 {
     using System.Collections.Generic;
+    using EventSourceMappingTypes;
 
     public class EventSourceMapping : Humidifier.Resource
     {
@@ -20,6 +21,32 @@ namespace Humidifier.Lambda
         /// PrimitiveType: Integer
         /// </summary>
         public dynamic BatchSize
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// BisectBatchOnFunctionError
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-bisectbatchonfunctionerror
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Boolean
+        /// </summary>
+        public dynamic BisectBatchOnFunctionError
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// DestinationConfig
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-destinationconfig
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: DestinationConfig
+        /// </summary>
+        public DestinationConfig DestinationConfig
         {
             get;
             set;
@@ -78,6 +105,45 @@ namespace Humidifier.Lambda
         }
 
         /// <summary>
+        /// MaximumRecordAgeInSeconds
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-maximumrecordageinseconds
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Integer
+        /// </summary>
+        public dynamic MaximumRecordAgeInSeconds
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// MaximumRetryAttempts
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-maximumretryattempts
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Integer
+        /// </summary>
+        public dynamic MaximumRetryAttempts
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// ParallelizationFactor
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-parallelizationfactor
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Integer
+        /// </summary>
+        public dynamic ParallelizationFactor
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// StartingPosition
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-startingposition
         /// Required: False
@@ -88,6 +154,41 @@ namespace Humidifier.Lambda
         {
             get;
             set;
+        }
+    }
+
+    namespace EventSourceMappingTypes
+    {
+        public class OnFailure
+        {
+            /// <summary>
+            /// Destination
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-onfailure.html#cfn-lambda-eventsourcemapping-onfailure-destination
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Destination
+            {
+                get;
+                set;
+            }
+        }
+
+        public class DestinationConfig
+        {
+            /// <summary>
+            /// OnFailure
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-destinationconfig.html#cfn-lambda-eventsourcemapping-destinationconfig-onfailure
+            /// Required: True
+            /// UpdateType: Mutable
+            /// Type: OnFailure
+            /// </summary>
+            public OnFailure OnFailure
+            {
+                get;
+                set;
+            }
         }
     }
 }

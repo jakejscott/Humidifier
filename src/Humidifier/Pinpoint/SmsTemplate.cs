@@ -31,6 +31,32 @@ namespace Humidifier.Pinpoint
         }
 
         /// <summary>
+        /// TemplateDescription
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-smstemplate.html#cfn-pinpoint-smstemplate-templatedescription
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic TemplateDescription
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// DefaultSubstitutions
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-smstemplate.html#cfn-pinpoint-smstemplate-defaultsubstitutions
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic DefaultSubstitutions
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Body
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-smstemplate.html#cfn-pinpoint-smstemplate-body
         /// Required: True

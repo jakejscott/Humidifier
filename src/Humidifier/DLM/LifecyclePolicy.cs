@@ -73,6 +73,62 @@ namespace Humidifier.DLM
 
     namespace LifecyclePolicyTypes
     {
+        public class FastRestoreRule
+        {
+            /// <summary>
+            /// IntervalUnit
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-fastrestorerule.html#cfn-dlm-lifecyclepolicy-fastrestorerule-intervalunit
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic IntervalUnit
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// AvailabilityZones
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-fastrestorerule.html#cfn-dlm-lifecyclepolicy-fastrestorerule-availabilityzones
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic AvailabilityZones
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Count
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-fastrestorerule.html#cfn-dlm-lifecyclepolicy-fastrestorerule-count
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Count
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Interval
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-fastrestorerule.html#cfn-dlm-lifecyclepolicy-fastrestorerule-interval
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Interval
+            {
+                get;
+                set;
+            }
+        }
+
         public class Schedule
         {
             /// <summary>
@@ -117,6 +173,19 @@ namespace Humidifier.DLM
             }
 
             /// <summary>
+            /// FastRestoreRule
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-schedule.html#cfn-dlm-lifecyclepolicy-schedule-fastrestorerule
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: FastRestoreRule
+            /// </summary>
+            public FastRestoreRule FastRestoreRule
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// RetainRule
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-schedule.html#cfn-dlm-lifecyclepolicy-schedule-retainrule
             /// Required: False
@@ -124,6 +193,20 @@ namespace Humidifier.DLM
             /// Type: RetainRule
             /// </summary>
             public RetainRule RetainRule
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// CrossRegionCopyRules
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-schedule.html#cfn-dlm-lifecyclepolicy-schedule-crossregioncopyrules
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: CrossRegionCopyRule
+            /// </summary>
+            public List<CrossRegionCopyRule> CrossRegionCopyRules
             {
                 get;
                 set;
@@ -145,6 +228,103 @@ namespace Humidifier.DLM
             /// <summary>
             /// CopyTags
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-schedule.html#cfn-dlm-lifecyclepolicy-schedule-copytags
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic CopyTags
+            {
+                get;
+                set;
+            }
+        }
+
+        public class CrossRegionCopyRetainRule
+        {
+            /// <summary>
+            /// IntervalUnit
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-crossregioncopyretainrule.html#cfn-dlm-lifecyclepolicy-crossregioncopyretainrule-intervalunit
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic IntervalUnit
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Interval
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-crossregioncopyretainrule.html#cfn-dlm-lifecyclepolicy-crossregioncopyretainrule-interval
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Interval
+            {
+                get;
+                set;
+            }
+        }
+
+        public class CrossRegionCopyRule
+        {
+            /// <summary>
+            /// TargetRegion
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-crossregioncopyrule.html#cfn-dlm-lifecyclepolicy-crossregioncopyrule-targetregion
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic TargetRegion
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Encrypted
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-crossregioncopyrule.html#cfn-dlm-lifecyclepolicy-crossregioncopyrule-encrypted
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Encrypted
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// CmkArn
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-crossregioncopyrule.html#cfn-dlm-lifecyclepolicy-crossregioncopyrule-cmkarn
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic CmkArn
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// RetainRule
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-crossregioncopyrule.html#cfn-dlm-lifecyclepolicy-crossregioncopyrule-retainrule
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: CrossRegionCopyRetainRule
+            /// </summary>
+            public CrossRegionCopyRetainRule RetainRule
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// CopyTags
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-crossregioncopyrule.html#cfn-dlm-lifecyclepolicy-crossregioncopyrule-copytags
             /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: Boolean
@@ -202,13 +382,39 @@ namespace Humidifier.DLM
         public class RetainRule
         {
             /// <summary>
+            /// IntervalUnit
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-retainrule.html#cfn-dlm-lifecyclepolicy-retainrule-intervalunit
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic IntervalUnit
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// Count
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-retainrule.html#cfn-dlm-lifecyclepolicy-retainrule-count
-            /// Required: True
+            /// Required: False
             /// UpdateType: Mutable
             /// PrimitiveType: Integer
             /// </summary>
             public dynamic Count
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Interval
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-retainrule.html#cfn-dlm-lifecyclepolicy-retainrule-interval
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Interval
             {
                 get;
                 set;
@@ -220,7 +426,7 @@ namespace Humidifier.DLM
             /// <summary>
             /// ResourceTypes
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-policydetails.html#cfn-dlm-lifecyclepolicy-policydetails-resourcetypes
-            /// Required: False
+            /// Required: True
             /// UpdateType: Mutable
             /// Type: List
             /// PrimitiveItemType: String
@@ -234,7 +440,7 @@ namespace Humidifier.DLM
             /// <summary>
             /// Schedules
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-policydetails.html#cfn-dlm-lifecyclepolicy-policydetails-schedules
-            /// Required: False
+            /// Required: True
             /// UpdateType: Mutable
             /// Type: List
             /// ItemType: Schedule
@@ -274,7 +480,7 @@ namespace Humidifier.DLM
             /// <summary>
             /// TargetTags
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-policydetails.html#cfn-dlm-lifecyclepolicy-policydetails-targettags
-            /// Required: False
+            /// Required: True
             /// UpdateType: Mutable
             /// Type: List
             /// ItemType: Tag

@@ -97,6 +97,19 @@ namespace Humidifier.RDS
         }
 
         /// <summary>
+        /// CACertificateIdentifier
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-cacertificateidentifier
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic CACertificateIdentifier
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// CharacterSetName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-charactersetname
         /// Required: False
@@ -405,6 +418,19 @@ namespace Humidifier.RDS
         /// PrimitiveType: String
         /// </summary>
         public dynamic MasterUsername
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// MaxAllocatedStorage
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-maxallocatedstorage
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Integer
+        /// </summary>
+        public dynamic MaxAllocatedStorage
         {
             get;
             set;

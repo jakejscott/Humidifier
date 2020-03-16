@@ -151,6 +151,19 @@ namespace Humidifier.RDS
         }
 
         /// <summary>
+        /// EnableHttpEndpoint
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-enablehttpendpoint
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Boolean
+        /// </summary>
+        public dynamic EnableHttpEndpoint
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// EnableIAMDatabaseAuthentication
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-enableiamdatabaseauthentication
         /// Required: False

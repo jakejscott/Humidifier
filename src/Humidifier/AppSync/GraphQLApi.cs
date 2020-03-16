@@ -34,6 +34,19 @@ namespace Humidifier.AppSync
         }
 
         /// <summary>
+        /// XrayEnabled
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-xrayenabled
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: Boolean
+        /// </summary>
+        public dynamic XrayEnabled
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// UserPoolConfig
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-userpoolconfig
         /// Required: False

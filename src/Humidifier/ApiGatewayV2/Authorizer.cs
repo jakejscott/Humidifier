@@ -1,6 +1,7 @@
 namespace Humidifier.ApiGatewayV2
 {
     using System.Collections.Generic;
+    using AuthorizerTypes;
 
     public class Authorizer : Humidifier.Resource
     {
@@ -28,7 +29,7 @@ namespace Humidifier.ApiGatewayV2
         /// <summary>
         /// AuthorizerUri
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-authorizer.html#cfn-apigatewayv2-authorizer-authorizeruri
-        /// Required: True
+        /// Required: False
         /// UpdateType: Mutable
         /// PrimitiveType: String
         /// </summary>
@@ -59,6 +60,19 @@ namespace Humidifier.ApiGatewayV2
         /// PrimitiveType: String
         /// </summary>
         public dynamic AuthorizerType
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// JwtConfiguration
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-authorizer.html#cfn-apigatewayv2-authorizer-jwtconfiguration
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: JWTConfiguration
+        /// </summary>
+        public JWTConfiguration JwtConfiguration
         {
             get;
             set;
@@ -115,6 +129,39 @@ namespace Humidifier.ApiGatewayV2
         {
             get;
             set;
+        }
+    }
+
+    namespace AuthorizerTypes
+    {
+        public class JWTConfiguration
+        {
+            /// <summary>
+            /// Issuer
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-authorizer-jwtconfiguration.html#cfn-apigatewayv2-authorizer-jwtconfiguration-issuer
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Issuer
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Audience
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-authorizer-jwtconfiguration.html#cfn-apigatewayv2-authorizer-jwtconfiguration-audience
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// PrimitiveItemType: String
+            /// </summary>
+            public dynamic Audience
+            {
+                get;
+                set;
+            }
         }
     }
 }

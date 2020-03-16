@@ -113,6 +113,19 @@ namespace Humidifier.Cognito
         }
 
         /// <summary>
+        /// UsernameConfiguration
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-usernameconfiguration
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: UsernameConfiguration
+        /// </summary>
+        public UsernameConfiguration UsernameConfiguration
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// UserPoolName
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-userpoolname
         /// Required: False
@@ -284,6 +297,19 @@ namespace Humidifier.Cognito
             get;
             set;
         }
+
+        /// <summary>
+        /// AccountRecoverySetting
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-accountrecoverysetting
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: AccountRecoverySetting
+        /// </summary>
+        public AccountRecoverySetting AccountRecoverySetting
+        {
+            get;
+            set;
+        }
     }
 
     namespace UserPoolTypes
@@ -369,6 +395,35 @@ namespace Humidifier.Cognito
             }
         }
 
+        public class RecoveryOption
+        {
+            /// <summary>
+            /// Priority
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-recoveryoption.html#cfn-cognito-userpool-recoveryoption-priority
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Integer
+            /// </summary>
+            public dynamic Priority
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// Name
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-recoveryoption.html#cfn-cognito-userpool-recoveryoption-name
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic Name
+            {
+                get;
+                set;
+            }
+        }
+
         public class EmailConfiguration
         {
             /// <summary>
@@ -379,6 +434,19 @@ namespace Humidifier.Cognito
             /// PrimitiveType: String
             /// </summary>
             public dynamic ReplyToEmailAddress
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// ConfigurationSet
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-emailconfiguration.html#cfn-cognito-userpool-emailconfiguration-configurationset
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ConfigurationSet
             {
                 get;
                 set;
@@ -405,6 +473,19 @@ namespace Humidifier.Cognito
             /// PrimitiveType: String
             /// </summary>
             public dynamic SourceArn
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// From
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-emailconfiguration.html#cfn-cognito-userpool-emailconfiguration-from
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic From
             {
                 get;
                 set;
@@ -599,6 +680,23 @@ namespace Humidifier.Cognito
             /// PrimitiveType: String
             /// </summary>
             public dynamic SnsCallerArn
+            {
+                get;
+                set;
+            }
+        }
+
+        public class AccountRecoverySetting
+        {
+            /// <summary>
+            /// RecoveryMechanisms
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-accountrecoverysetting.html#cfn-cognito-userpool-accountrecoverysetting-recoverymechanisms
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: List
+            /// ItemType: RecoveryOption
+            /// </summary>
+            public List<RecoveryOption> RecoveryMechanisms
             {
                 get;
                 set;
@@ -945,6 +1043,22 @@ namespace Humidifier.Cognito
             /// PrimitiveType: String
             /// </summary>
             public dynamic EmailSubject
+            {
+                get;
+                set;
+            }
+        }
+
+        public class UsernameConfiguration
+        {
+            /// <summary>
+            /// CaseSensitive
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-usernameconfiguration.html#cfn-cognito-userpool-usernameconfiguration-casesensitive
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic CaseSensitive
             {
                 get;
                 set;

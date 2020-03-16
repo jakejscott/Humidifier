@@ -1,6 +1,7 @@
 namespace Humidifier.ApiGatewayV2
 {
     using System.Collections.Generic;
+    using IntegrationTypes;
 
     public class Integration : Humidifier.Resource
     {
@@ -104,6 +105,19 @@ namespace Humidifier.ApiGatewayV2
         }
 
         /// <summary>
+        /// PayloadFormatVersion
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integration.html#cfn-apigatewayv2-integration-payloadformatversion
+        /// Required: False
+        /// UpdateType: Mutable
+        /// PrimitiveType: String
+        /// </summary>
+        public dynamic PayloadFormatVersion
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// CredentialsArn
         /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integration.html#cfn-apigatewayv2-integration-credentialsarn
         /// Required: False
@@ -137,6 +151,19 @@ namespace Humidifier.ApiGatewayV2
         /// PrimitiveType: Integer
         /// </summary>
         public dynamic TimeoutInMillis
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// TlsConfig
+        /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integration.html#cfn-apigatewayv2-integration-tlsconfig
+        /// Required: False
+        /// UpdateType: Mutable
+        /// Type: TlsConfig
+        /// </summary>
+        public TlsConfig TlsConfig
         {
             get;
             set;
@@ -179,6 +206,25 @@ namespace Humidifier.ApiGatewayV2
         {
             get;
             set;
+        }
+    }
+
+    namespace IntegrationTypes
+    {
+        public class TlsConfig
+        {
+            /// <summary>
+            /// ServerNameToVerify
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-integration-tlsconfig.html#cfn-apigatewayv2-integration-tlsconfig-servernametoverify
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic ServerNameToVerify
+            {
+                get;
+                set;
+            }
         }
     }
 }

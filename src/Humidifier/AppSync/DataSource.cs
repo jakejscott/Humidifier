@@ -239,6 +239,32 @@ namespace Humidifier.AppSync
             }
 
             /// <summary>
+            /// Versioned
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-versioned
+            /// Required: False
+            /// UpdateType: Mutable
+            /// PrimitiveType: Boolean
+            /// </summary>
+            public dynamic Versioned
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DeltaSyncConfig
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-deltasyncconfig
+            /// Required: False
+            /// UpdateType: Mutable
+            /// Type: DeltaSyncConfig
+            /// </summary>
+            public DeltaSyncConfig DeltaSyncConfig
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
             /// UseCallerCredentials
             /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-usecallercredentials
             /// Required: False
@@ -417,6 +443,48 @@ namespace Humidifier.AppSync
             /// PrimitiveType: String
             /// </summary>
             public dynamic Endpoint
+            {
+                get;
+                set;
+            }
+        }
+
+        public class DeltaSyncConfig
+        {
+            /// <summary>
+            /// BaseTableTTL
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-deltasyncconfig.html#cfn-appsync-datasource-deltasyncconfig-basetablettl
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic BaseTableTTL
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DeltaSyncTableTTL
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-deltasyncconfig.html#cfn-appsync-datasource-deltasyncconfig-deltasynctablettl
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DeltaSyncTableTTL
+            {
+                get;
+                set;
+            }
+
+            /// <summary>
+            /// DeltaSyncTableName
+            /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-deltasyncconfig.html#cfn-appsync-datasource-deltasyncconfig-deltasynctablename
+            /// Required: True
+            /// UpdateType: Mutable
+            /// PrimitiveType: String
+            /// </summary>
+            public dynamic DeltaSyncTableName
             {
                 get;
                 set;
